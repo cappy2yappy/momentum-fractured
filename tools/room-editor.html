@@ -152,9 +152,20 @@ body {
     <h3>🛠️ Tools</h3>
     <div class="tool-grid">
       <div class="tool-btn active" onclick="setTool('platform')">Platform</div>
-      <div class="tool-btn" onclick="setTool('enemy')">Enemy Spawn</div>
-      <div class="tool-btn" onclick="setTool('grapple')">Grapple Point</div>
+      <div class="tool-btn" onclick="setTool('enemy')">Enemy</div>
+      <div class="tool-btn" onclick="setTool('grapple')">Grapple</div>
       <div class="tool-btn" onclick="setTool('hazard')">Hazard</div>
+      <div class="tool-btn" onclick="setTool('moving')">Moving Plat</div>
+      <div class="tool-btn" onclick="setTool('breakable')">Breakable</div>
+      <div class="tool-btn" onclick="setTool('oneway')">One-Way</div>
+      <div class="tool-btn" onclick="setTool('checkpoint')">Checkpoint</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h3>📦 Object Type</h3>
+    <div id="subtype-picker" style="display: none;">
+      <!-- Dynamically populated -->
     </div>
   </div>
 
@@ -207,10 +218,15 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let currentTool = 'platform';
+let currentSubtype = null;
 let objects = [];
 let selectedObject = null;
 let isDragging = false;
 let dragStart = null;
+
+const ENEMY_TYPES = ['Echo', 'Guardian', 'Drone', 'Ninja', 'Golem', 'Sentry'];
+const HAZARD_TYPES = ['Saw', 'Laser', 'Spikes', 'Fire', 'Electric', 'Crusher'];
+const PLATFORM_TYPES = ['Solid', 'Wood', 'Stone', 'Metal', 'Ice', 'Bamboo'];
 
 // Grid snap
 function snap(val) { return Math.round(val / 10) * 10; }
@@ -220,6 +236,28 @@ function setTool(tool) {
   currentTool = tool;
   document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
   event.target.classList.add('active');
+  
+  // Show subtype picker for certain tools
+  const picker = document.getElementById('subtype-picker');
+  if (tool === 'enemy') {
+    picker.style.display = 'block';
+    picker.innerHTML = '<select id="enemy-type" onchange="currentSubtype=this.value">' +
+      ENEMY_TYPES.map(t => `<option>${t}</option>`).join('') + '</select>';
+    currentSubtype = ENEMY_TYPES[0];
+  } else if (tool === 'hazard') {
+    picker.style.display = 'block';
+    picker.innerHTML = '<select id="hazard-type" onchange="currentSubtype=this.value">' +
+      HAZARD_TYPES.map(t => `<option>${t}</option>`).join('') + '</select>';
+    currentSubtype = HAZARD_TYPES[0];
+  } else if (tool === 'platform') {
+    picker.style.display = 'block';
+    picker.innerHTML = '<select id="platform-type" onchange="currentSubtype=this.value">' +
+      PLATFORM_TYPES.map(t => `<option>${t}</option>`).join('') + '</select>';
+    currentSubtype = PLATFORM_TYPES[0];
+  } else {
+    picker.style.display = 'none';
+    currentSubtype = null;
+  }
 }
 
 // Resize canvas
@@ -248,17 +286,21 @@ canvas.addEventListener('mousedown', e => {
     return;
   }
   
-  if (currentTool === 'platform') {
+  if (currentTool === 'platform' || currentTool === 'moving' || currentTool === 'breakable' || currentTool === 'oneway') {
     isDragging = true;
     dragStart = { x, y };
   } else {
-    objects.push({
+    const obj = {
       type: currentTool,
       x: x,
-      y: y,
-      enemyType: currentTool === 'enemy' ? 'Echo' : undefined,
-      hazardType: currentTool === 'hazard' ? 'Saw' : undefined
-    });
+      y: y
+    };
+    
+    if (currentTool === 'enemy') obj.enemyType = currentSubtype || 'Echo';
+    if (currentTool === 'hazard') obj.hazardType = currentSubtype || 'Saw';
+    if (currentTool === 'moving') obj.moveX = 100; // default movement
+    
+    objects.push(obj);
     render();
   }
 });
@@ -285,13 +327,19 @@ canvas.addEventListener('mouseup', e => {
   const h = Math.abs(y - dragStart.y);
   
   if (w > 20 && h > 10) {
-    objects.push({
-      type: 'platform',
+    const obj = {
+      type: currentTool,
       x: Math.min(dragStart.x, x),
       y: Math.min(dragStart.y, y),
       w: w,
       h: h
-    });
+    };
+    
+    if (currentTool === 'platform') obj.platformType = currentSubtype || 'Solid';
+    if (currentTool === 'moving') { obj.moveX = 100; obj.speed = 1; }
+    if (currentTool === 'breakable') obj.health = 1;
+    
+    objects.push(obj);
   }
   
   isDragging = false;
@@ -323,20 +371,49 @@ function render() {
   
   // Objects
   objects.forEach(obj => {
-    if (obj.type === 'platform') {
-      ctx.fillStyle = '#0f3460';
+    if (obj.type === 'platform' || obj.type === 'moving' || obj.type === 'breakable' || obj.type === 'oneway') {
+      // Platform colors by type
+      const colors = {
+        'platform': '#0f3460',
+        'moving': '#4a1b8c',
+        'breakable': '#8b4513',
+        'oneway': '#1b4a4a'
+      };
+      ctx.fillStyle = colors[obj.type] || '#0f3460';
       ctx.fillRect(obj.x, obj.y, obj.w, obj.h);
-      ctx.strokeStyle = '#4ecca3';
+      ctx.strokeStyle = obj.type === 'moving' ? '#9d4edd' : 
+                       obj.type === 'breakable' ? '#d4a056' :
+                       obj.type === 'oneway' ? '#4ecca3' : '#4ecca3';
       ctx.lineWidth = 2;
       ctx.strokeRect(obj.x, obj.y, obj.w, obj.h);
+      
+      // Labels
+      if (obj.type === 'moving') {
+        ctx.fillStyle = '#fff';
+        ctx.font = '10px sans-serif';
+        ctx.fillText('MOVE', obj.x + 5, obj.y + obj.h/2 + 3);
+      } else if (obj.type === 'oneway') {
+        ctx.fillStyle = '#fff';
+        ctx.font = '16px sans-serif';
+        ctx.fillText('↑', obj.x + obj.w/2 - 5, obj.y + obj.h/2 + 5);
+      }
     } else if (obj.type === 'enemy') {
-      ctx.fillStyle = '#e94560';
+      // Enemy colors by type
+      const colors = {
+        'Echo': '#e94560',
+        'Guardian': '#ff8c42',
+        'Drone': '#6a4c93',
+        'Ninja': '#1b263b',
+        'Golem': '#8d99ae',
+        'Sentry': '#c9184a'
+      };
+      ctx.fillStyle = colors[obj.enemyType] || '#e94560';
       ctx.beginPath();
       ctx.arc(obj.x, obj.y, 15, 0, Math.PI * 2);
       ctx.fill();
       ctx.fillStyle = '#fff';
       ctx.font = '12px sans-serif';
-      ctx.fillText('E', obj.x - 4, obj.y + 4);
+      ctx.fillText(obj.enemyType?.[0] || 'E', obj.x - 4, obj.y + 4);
     } else if (obj.type === 'grapple') {
       ctx.strokeStyle = '#d4a056';
       ctx.lineWidth = 3;
@@ -344,13 +421,27 @@ function render() {
       ctx.arc(obj.x, obj.y, 12, 0, Math.PI * 2);
       ctx.stroke();
     } else if (obj.type === 'hazard') {
-      ctx.fillStyle = '#ff6b6b';
+      const colors = {
+        'Saw': '#ff6b6b',
+        'Laser': '#e63946',
+        'Spikes': '#8b0000',
+        'Fire': '#ff6500',
+        'Electric': '#ffb703',
+        'Crusher': '#606060'
+      };
+      ctx.fillStyle = colors[obj.hazardType] || '#ff6b6b';
       ctx.beginPath();
       ctx.arc(obj.x, obj.y, 20, 0, Math.PI * 2);
       ctx.fill();
       ctx.fillStyle = '#fff';
       ctx.font = '16px sans-serif';
       ctx.fillText('⚠', obj.x - 7, obj.y + 6);
+    } else if (obj.type === 'checkpoint') {
+      ctx.fillStyle = '#4ecca3';
+      ctx.fillRect(obj.x - 15, obj.y - 30, 30, 30);
+      ctx.fillStyle = '#fff';
+      ctx.font = '20px sans-serif';
+      ctx.fillText('✓', obj.x - 7, obj.y - 5);
     }
   });
 }
@@ -362,6 +453,17 @@ function exportRoom() {
     width: canvas.width,
     height: canvas.height,
     platforms: objects.filter(o => o.type === 'platform').map(p => ({
+      type: p.platformType || 'Solid',
+      x: p.x, y: p.y, w: p.w, h: p.h
+    })),
+    movingPlatforms: objects.filter(o => o.type === 'moving').map(p => ({
+      x: p.x, y: p.y, w: p.w, h: p.h,
+      moveX: p.moveX || 100, speed: p.speed || 1
+    })),
+    breakablePlatforms: objects.filter(o => o.type === 'breakable').map(p => ({
+      x: p.x, y: p.y, w: p.w, h: p.h, health: p.health || 1
+    })),
+    onewayPlatforms: objects.filter(o => o.type === 'oneway').map(p => ({
       x: p.x, y: p.y, w: p.w, h: p.h
     })),
     enemies: objects.filter(o => o.type === 'enemy').map(e => ({
@@ -374,6 +476,9 @@ function exportRoom() {
     hazards: objects.filter(o => o.type === 'hazard').map(h => ({
       type: h.hazardType || 'Saw',
       x: h.x, y: h.y
+    })),
+    checkpoints: objects.filter(o => o.type === 'checkpoint').map(c => ({
+      x: c.x, y: c.y
     }))
   };
   
