@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FRACTURED Room Editor</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+#toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #16213e;
+  border-bottom: 2px solid #0f3460;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+  z-index: 100;
+}
+.btn {
+  padding: 8px 16px;
+  background: #0f3460;
+  border: none;
+  border-radius: 4px;
+  color: #e94560;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn:hover { background: #e94560; color: #fff; }
+.btn.active { background: #e94560; color: #fff; }
+#canvas-container {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 300px;
+  bottom: 0;
+  overflow: auto;
+  background: #0f0f1e;
+}
+#canvas {
+  display: block;
+  cursor: crosshair;
+}
+#sidebar {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  bottom: 0;
+  background: #16213e;
+  border-left: 2px solid #0f3460;
+  padding: 20px;
+  overflow-y: auto;
+}
+.section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0f3460;
+}
+.section h3 {
+  color: #e94560;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.prop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.prop label { color: #888; }
+.prop input, .prop select {
+  width: 120px;
+  padding: 4px 8px;
+  background: #0f0f1e;
+  border: 1px solid #0f3460;
+  border-radius: 3px;
+  color: #e0e0e0;
+}
+#export-output {
+  width: 100%;
+  height: 150px;
+  background: #0f0f1e;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  padding: 10px;
+  color: #4ecca3;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  resize: vertical;
+}
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+.tool-btn {
+  padding: 10px;
+  background: #0f3460;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #e0e0e0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+.tool-btn:hover { border-color: #e94560; }
+.tool-btn.active { background: #e94560; border-color: #e94560; color: #fff; }
+#help {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(22, 33, 62, 0.9);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #888;
+  max-width: 400px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button class="btn" onclick="clearRoom()">Clear</button>
+  <button class="btn" onclick="exportRoom()">Export JSON</button>
+  <button class="btn" onclick="loadExample()">Load Example</button>
+  <span style="flex: 1"></span>
+  <span style="color: #888; font-size: 13px;">FRACTURED Room Editor</span>
+</div>
+
+<div id="canvas-container">
+  <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+
+<div id="sidebar">
+  <div class="section">
+    <h3>🛠️ Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-btn active" onclick="setTool('platform')">Platform</div>
+      <div class="tool-btn" onclick="setTool('enemy')">Enemy Spawn</div>
+      <div class="tool-btn" onclick="setTool('grapple')">Grapple Point</div>
+      <div class="tool-btn" onclick="setTool('hazard')">Hazard</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>📐 Room Settings</h3>
+    <div class="prop">
+      <label>Width</label>
+      <input type="number" id="room-width" value="800" onchange="resizeCanvas()">
+    </div>
+    <div class="prop">
+      <label>Height</label>
+      <input type="number" id="room-height" value="600" onchange="resizeCanvas()">
+    </div>
+    <div class="prop">
+      <label>Biome</label>
+      <select id="biome">
+        <option>Shibuya</option>
+        <option>Temple</option>
+        <option>Metro</option>
+        <option>Rooftops</option>
+        <option>Docks</option>
+        <option>Core</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>📦 Selected Object</h3>
+    <div id="object-props">
+      <p style="color: #888; font-size: 12px;">Click an object to edit</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>📤 Export</h3>
+    <textarea id="export-output" readonly></textarea>
+  </div>
+</div>
+
+<div id="help">
+  <b>Controls:</b><br>
+  • Click & drag to create platforms<br>
+  • Click to place enemies/grapple points<br>
+  • Right-click object to delete<br>
+  • Grid snaps to 10px
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let currentTool = 'platform';
+let objects = [];
+let selectedObject = null;
+let isDragging = false;
+let dragStart = null;
+
+// Grid snap
+function snap(val) { return Math.round(val / 10) * 10; }
+
+// Set tool
+function setTool(tool) {
+  currentTool = tool;
+  document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Resize canvas
+function resizeCanvas() {
+  canvas.width = parseInt(document.getElementById('room-width').value);
+  canvas.height = parseInt(document.getElementById('room-height').value);
+  render();
+}
+
+// Mouse events
+canvas.addEventListener('mousedown', e => {
+  const rect = canvas.getBoundingClientRect();
+  const x = snap(e.clientX - rect.left);
+  const y = snap(e.clientY - rect.top);
+  
+  if (e.button === 2) { // Right-click = delete
+    objects = objects.filter(obj => {
+      if (obj.type === 'platform') {
+        return !(x >= obj.x && x <= obj.x + obj.w && y >= obj.y && y <= obj.y + obj.h);
+      } else {
+        const dist = Math.hypot(x - obj.x, y - obj.y);
+        return dist > 20;
+      }
+    });
+    render();
+    return;
+  }
+  
+  if (currentTool === 'platform') {
+    isDragging = true;
+    dragStart = { x, y };
+  } else {
+    objects.push({
+      type: currentTool,
+      x: x,
+      y: y,
+      enemyType: currentTool === 'enemy' ? 'Echo' : undefined,
+      hazardType: currentTool === 'hazard' ? 'Saw' : undefined
+    });
+    render();
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = snap(e.clientX - rect.left);
+  const y = snap(e.clientY - rect.top);
+  
+  render();
+  ctx.strokeStyle = '#e94560';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(dragStart.x, dragStart.y, x - dragStart.x, y - dragStart.y);
+});
+
+canvas.addEventListener('mouseup', e => {
+  if (!isDragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = snap(e.clientX - rect.left);
+  const y = snap(e.clientY - rect.top);
+  
+  const w = Math.abs(x - dragStart.x);
+  const h = Math.abs(y - dragStart.y);
+  
+  if (w > 20 && h > 10) {
+    objects.push({
+      type: 'platform',
+      x: Math.min(dragStart.x, x),
+      y: Math.min(dragStart.y, y),
+      w: w,
+      h: h
+    });
+  }
+  
+  isDragging = false;
+  render();
+});
+
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+// Render
+function render() {
+  ctx.fillStyle = '#0f0f1e';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+  // Grid
+  ctx.strokeStyle = '#1a1a2e';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < canvas.width; x += 50) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas.height);
+    ctx.stroke();
+  }
+  for (let y = 0; y < canvas.height; y += 50) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(canvas.width, y);
+    ctx.stroke();
+  }
+  
+  // Objects
+  objects.forEach(obj => {
+    if (obj.type === 'platform') {
+      ctx.fillStyle = '#0f3460';
+      ctx.fillRect(obj.x, obj.y, obj.w, obj.h);
+      ctx.strokeStyle = '#4ecca3';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(obj.x, obj.y, obj.w, obj.h);
+    } else if (obj.type === 'enemy') {
+      ctx.fillStyle = '#e94560';
+      ctx.beginPath();
+      ctx.arc(obj.x, obj.y, 15, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = '12px sans-serif';
+      ctx.fillText('E', obj.x - 4, obj.y + 4);
+    } else if (obj.type === 'grapple') {
+      ctx.strokeStyle = '#d4a056';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(obj.x, obj.y, 12, 0, Math.PI * 2);
+      ctx.stroke();
+    } else if (obj.type === 'hazard') {
+      ctx.fillStyle = '#ff6b6b';
+      ctx.beginPath();
+      ctx.arc(obj.x, obj.y, 20, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = '16px sans-serif';
+      ctx.fillText('⚠', obj.x - 7, obj.y + 6);
+    }
+  });
+}
+
+// Export
+function exportRoom() {
+  const room = {
+    biome: document.getElementById('biome').value,
+    width: canvas.width,
+    height: canvas.height,
+    platforms: objects.filter(o => o.type === 'platform').map(p => ({
+      x: p.x, y: p.y, w: p.w, h: p.h
+    })),
+    enemies: objects.filter(o => o.type === 'enemy').map(e => ({
+      type: e.enemyType || 'Echo',
+      x: e.x, y: e.y
+    })),
+    grapplePoints: objects.filter(o => o.type === 'grapple').map(g => ({
+      x: g.x, y: g.y
+    })),
+    hazards: objects.filter(o => o.type === 'hazard').map(h => ({
+      type: h.hazardType || 'Saw',
+      x: h.x, y: h.y
+    }))
+  };
+  
+  const json = JSON.stringify(room, null, 2);
+  document.getElementById('export-output').value = json;
+  
+  // Auto-copy to clipboard
+  navigator.clipboard.writeText(json);
+  alert('Room JSON copied to clipboard!');
+}
+
+// Clear
+function clearRoom() {
+  if (confirm('Clear all objects?')) {
+    objects = [];
+    render();
+  }
+}
+
+// Load example
+function loadExample() {
+  objects = [
+    { type: 'platform', x: 0, y: 580, w: 800, h: 20 },
+    { type: 'platform', x: 100, y: 450, w: 150, h: 15 },
+    { type: 'platform', x: 400, y: 350, w: 180, h: 15 },
+    { type: 'platform', x: 650, y: 450, w: 150, h: 15 },
+    { type: 'enemy', x: 150, y: 430, enemyType: 'Echo' },
+    { type: 'enemy', x: 480, y: 330, enemyType: 'Echo' },
+    { type: 'grapple', x: 300, y: 350 },
+    { type: 'hazard', x: 550, y: 400, hazardType: 'Saw' }
+  ];
+  render();
+}
+
+// Init
+render();
+</script>
+
+</body>
+</html>
