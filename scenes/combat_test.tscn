@@ -1,42 +1,147 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqvxpwx4xajn4"]
+[gd_scene load_steps=4 format=3 uid="uid://dqvxpwx4xajn4"]
 
 [ext_resource type="PackedScene" uid="uid://bsuvfr3xm2h3j" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://cnwj8xm3kp0yv" path="res://scenes/enemies/echo.tscn" id="2"]
+[ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="3"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(800, 64)
+size = Vector2(1200, 64)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 640)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(64, 400)
 
 [node name="CombatTest" type="Node2D"]
+script = ExtResource("3")
+enemies_node = NodePath("Enemies")
+door_barriers = [NodePath("Environment/LeftDoorBarrier")]
+door_exits = [NodePath("Environment/LeftDoorExit")]
+enemy_counter_label = NodePath("UI/EnemyCounter")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
 
-[node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(640, 600)
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Environment"]
+position = Vector2(640, 680)
 collision_layer = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
 shape = SubResource("1")
 
-[node name="ColorRect" type="ColorRect" parent="Platform"]
-offset_left = -400.0
+[node name="ColorRect" type="ColorRect" parent="Environment/Floor"]
+offset_left = -600.0
 offset_top = -32.0
-offset_right = 400.0
+offset_right = 600.0
 offset_bottom = 32.0
-color = Color(0.3, 0.3, 0.3, 1)
+color = Color(0.2, 0.2, 0.25, 1)
+
+[node name="Ceiling" type="StaticBody2D" parent="Environment"]
+position = Vector2(640, 40)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ceiling"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Ceiling"]
+offset_left = -600.0
+offset_top = -32.0
+offset_right = 600.0
+offset_bottom = 32.0
+color = Color(0.2, 0.2, 0.25, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(40, 360)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftWall"]
+shape = SubResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftWall"]
+offset_left = -32.0
+offset_top = -320.0
+offset_right = 32.0
+offset_bottom = 320.0
+color = Color(0.2, 0.2, 0.25, 1)
+
+[node name="RightWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(1240, 360)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightWall"]
+shape = SubResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightWall"]
+offset_left = -32.0
+offset_top = -320.0
+offset_right = 32.0
+offset_bottom = 320.0
+color = Color(0.2, 0.2, 0.25, 1)
+
+[node name="LeftDoorBarrier" type="StaticBody2D" parent="Environment"]
+position = Vector2(40, 160)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoorBarrier"]
+shape = SubResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftDoorBarrier"]
+offset_left = -32.0
+offset_top = -200.0
+offset_right = 32.0
+offset_bottom = 200.0
+color = Color(0.8, 0.2, 0.2, 0.6)
+
+[node name="LeftDoorExit" type="Area2D" parent="Environment"]
+position = Vector2(72, 460)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoorExit"]
+shape = SubResource("3")
+
+[node name="Label" type="Label" parent="Environment/LeftDoorExit"]
+offset_left = -40.0
+offset_top = -240.0
+offset_right = 40.0
+offset_bottom = -190.0
+text = "← EXIT
+(locked)"
+horizontal_alignment = 1
 
 [node name="Kaze" parent="." instance=ExtResource("1")]
-position = Vector2(400, 500)
+position = Vector2(200, 600)
 
-[node name="Echo" parent="." instance=ExtResource("2")]
-position = Vector2(800, 500)
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="DebugLabel" type="Label" parent="."]
+[node name="Echo1" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(500, 600)
+
+[node name="Echo2" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(800, 600)
+
+[node name="Echo3" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(1000, 600)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DebugLabel" type="Label" parent="UI"]
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 400.0
-offset_bottom = 120.0
-text = "MOMENTUM: FRACTURED - Combat Test
-WASD/Arrows: Move | Space: Jump | Shift: Dash
-Left Click: Light Attack
+offset_right = 500.0
+offset_bottom = 140.0
+text = "MOMENTUM: FRACTURED - Combat Test Room
+WASD/Arrows: Move | Space: Jump | Shift: Dash | Left Click: Attack
+
+Defeat all enemies to unlock the exit door!
 "
+
+[node name="EnemyCounter" type="Label" parent="UI"]
+offset_left = 20.0
+offset_top = 140.0
+offset_right = 400.0
+offset_bottom = 180.0
+text = "Enemies Remaining: 3"

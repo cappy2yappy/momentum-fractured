@@ -17,9 +17,9 @@ var current_patrol_index: int = 0
 var hitstun_timer: float = 0.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hitbox: Hitbox = $Hitbox
-@onready var hurtbox: Hurtbox = $Hurtbox
-@onready var health: Health = $Health
+@onready var hitbox: Area2D = $Hitbox
+@onready var hurtbox: Area2D = $Hurtbox
+@onready var health: Node = $Health
 
 const GRAVITY = 1980.0
 
@@ -109,7 +109,7 @@ func _state_dead(delta):
 	# TODO: Play death animation, then queue_free()
 	queue_free()
 
-func _on_hit(damage: float, knockback: Vector2, hitbox_node: Hitbox):
+func _on_hit(damage: float, knockback: Vector2, hitbox_node: Area2D):
 	velocity = knockback
 	hitstun_timer = 0.3
 	if health and not health.is_dead:

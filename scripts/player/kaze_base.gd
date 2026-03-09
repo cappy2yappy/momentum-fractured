@@ -59,7 +59,7 @@ var attack_cooldown_timer := 0.0
 var is_attacking := false
 
 # NODES
-@onready var hitbox: Hitbox = $Hitbox
+@onready var hitbox: Area2D = $Hitbox
 
 # SIGNALS
 signal died
