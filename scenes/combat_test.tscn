@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqvxpwx4xajn4"]
+
+[ext_resource type="PackedScene" uid="uid://bsuvfr3xm2h3j" path="res://scenes/kaze.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cnwj8xm3kp0yv" path="res://scenes/enemies/echo.tscn" id="2"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(800, 64)
+
+[node name="CombatTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(640, 600)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Platform"]
+offset_left = -400.0
+offset_top = -32.0
+offset_right = 400.0
+offset_bottom = 32.0
+color = Color(0.3, 0.3, 0.3, 1)
+
+[node name="Kaze" parent="." instance=ExtResource("1")]
+position = Vector2(400, 500)
+
+[node name="Echo" parent="." instance=ExtResource("2")]
+position = Vector2(800, 500)
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 120.0
+text = "MOMENTUM: FRACTURED - Combat Test
+WASD/Arrows: Move | Space: Jump | Shift: Dash
+Left Click: Light Attack
+"

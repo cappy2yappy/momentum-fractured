@@ -38,6 +38,11 @@ const DASH_COOLDOWN := 0.2
 const COYOTE_TIME := 0.2
 const JUMP_BUFFER_TIME := 0.2
 
+# COMBAT
+const ATTACK_COOLDOWN := 0.3
+const ATTACK_DAMAGE := 15.0
+const ATTACK_KNOCKBACK := 400.0
+
 # STATE
 var facing_dir := 1
 var is_touching_wall := 0
@@ -50,6 +55,11 @@ var dash_count := MAX_AIR_DASHES
 var is_dashing := false
 var is_dead := false
 var _was_on_floor := false
+var attack_cooldown_timer := 0.0
+var is_attacking := false
+
+# NODES
+@onready var hitbox: Hitbox = $Hitbox
 
 # SIGNALS
 signal died
@@ -66,6 +76,11 @@ func _physics_process(delta: float) -> void:
 	jump_buffer_timer = max(0.0, jump_buffer_timer - delta)
 	dash_buffer_timer = max(0.0, dash_buffer_timer - delta)
 	dash_cooldown_timer = max(0.0, dash_cooldown_timer - delta)
+	attack_cooldown_timer = max(0.0, attack_cooldown_timer - delta)
+	
+	# ATTACK
+	if Input.is_action_just_pressed("attack_light") and attack_cooldown_timer <= 0:
+		_perform_attack()
 	
 	# DASH
 	if is_dashing:
@@ -203,3 +218,21 @@ func get_dash_cooldown_ratio() -> float:
 	if DASH_COOLDOWN <= 0.0:
 		return 1.0
 	return clampf(1.0 - dash_cooldown_timer / DASH_COOLDOWN, 0.0, 1.0)
+
+func _perform_attack() -> void:
+	if not hitbox:
+		return
+	
+	is_attacking = true
+	attack_cooldown_timer = ATTACK_COOLDOWN
+	
+	# Set hitbox properties
+	hitbox.damage = ATTACK_DAMAGE
+	hitbox.set_knockback_direction(Vector2(facing_dir, -0.3), ATTACK_KNOCKBACK)
+	
+	# Activate hitbox
+	hitbox.activate()
+	
+	# Reset attacking flag after a short delay
+	await get_tree().create_timer(0.15).timeout
+	is_attacking = false

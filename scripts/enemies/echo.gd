@@ -15,11 +15,11 @@ enum State { IDLE, PATROL, ALERT, CHARGE, ATTACK, HITSTUN, DEAD }
 var state: State = State.PATROL
 var current_patrol_index: int = 0
 var hitstun_timer: float = 0.0
-var health: float = 50.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hitbox: Area2D = $Hitbox
-@onready var hurtbox: Area2D = $Hurtbox
+@onready var hitbox: Hitbox = $Hitbox
+@onready var hurtbox: Hurtbox = $Hurtbox
+@onready var health: Health = $Health
 
 const GRAVITY = 1980.0
 
@@ -28,9 +28,12 @@ func _ready():
 	if patrol_points.is_empty():
 		patrol_points = [global_position - Vector2(100, 0), global_position + Vector2(100, 0)]
 	
-	# Connect hurtbox signal
+	# Connect combat signals
 	if hurtbox:
 		hurtbox.hit_received.connect(_on_hit)
+	
+	if health:
+		health.died.connect(_on_death)
 
 func _physics_process(delta):
 	# Apply gravity
@@ -106,8 +109,13 @@ func _state_dead(delta):
 	# TODO: Play death animation, then queue_free()
 	queue_free()
 
-func _on_hit(damage: float, knockback: Vector2):
-	health -= damage
+func _on_hit(damage: float, knockback: Vector2, hitbox_node: Hitbox):
 	velocity = knockback
 	hitstun_timer = 0.3
-	state = State.HITSTUN if health > 0 else State.DEAD
+	if health and not health.is_dead:
+		state = State.HITSTUN
+	else:
+		state = State.DEAD
+
+func _on_death():
+	state = State.DEAD
