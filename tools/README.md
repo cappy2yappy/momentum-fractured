@@ -19,15 +19,17 @@ Two ways to create rooms for MOMENTUM: FRACTURED:
 5. Save as `tools/room_import.json` in this project
 6. In Godot: **File → Run** → Select `tools/import_room_json.gd`
 7. Your room appears in `scenes/rooms/[room_name].tscn`
+8. If this is a fresh checkout, open the project in Godot once first so sprite imports are generated before running the importer
 
 **Pros:**
 - Fast (5 minutes per room)
 - Visual, intuitive
+- Generates a playable room shell (camera, player, HUD, room bounds)
 - No Godot knowledge needed
 
 **Cons:**
 - Manual import step
-- Can't test immediately
+- Door links still need to be set manually after import
 
 ---
 
