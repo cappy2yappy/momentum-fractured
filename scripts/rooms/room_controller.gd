@@ -28,15 +28,17 @@ func _ready() -> void:
 
 	_player = get_node_or_null(player_node) if not player_node.is_empty() else _find_player()
 	_connect_player_signals()
-	if _player:
-		GameState.capture_player_state(_player)
+	var game_state := _game_state()
+	if _player and game_state:
+		game_state.capture_player_state(_player)
 
 	_initialize_room_state()
 	_update_ui()
 
 
 func _initialize_room_state() -> void:
-	if not room_id.is_empty() and GameState.is_room_cleared(room_id):
+	var game_state := _game_state()
+	if not room_id.is_empty() and game_state and game_state.is_room_cleared(room_id):
 		is_cleared = true
 		_remove_enemies()
 		_unlock_doors()
@@ -45,8 +47,8 @@ func _initialize_room_state() -> void:
 	_setup_enemies()
 	if total_enemies <= 0:
 		is_cleared = true
-		if not room_id.is_empty():
-			GameState.mark_room_cleared(room_id)
+		if not room_id.is_empty() and game_state:
+			game_state.mark_room_cleared(room_id)
 		_unlock_doors()
 	else:
 		_lock_doors()
@@ -86,7 +88,9 @@ func _setup_enemies() -> void:
 
 func _on_enemy_died(enemy_node: Node) -> void:
 	remaining_enemies = max(0, remaining_enemies - 1)
-	GameState.add_cells(cells_per_enemy)
+	var game_state := _game_state()
+	if game_state:
+		game_state.add_cells(cells_per_enemy)
 
 	emit_signal("enemy_defeated", remaining_enemies)
 	_update_ui()
@@ -106,7 +110,9 @@ func _clear_room() -> void:
 	emit_signal("room_cleared")
 
 	if not room_id.is_empty():
-		GameState.mark_room_cleared(room_id)
+		var game_state := _game_state()
+		if game_state:
+			game_state.mark_room_cleared(room_id)
 
 	if door_unlock_delay > 0.0:
 		await get_tree().create_timer(door_unlock_delay).timeout
@@ -164,16 +170,24 @@ func _on_legacy_exit_triggered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 
-	GameState.capture_player_state(body)
-	SceneNavigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
+	var game_state := _game_state()
+	if game_state:
+		game_state.capture_player_state(body)
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
 
 
 func _on_player_died() -> void:
-	SceneNavigator.respawn_from_checkpoint()
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.respawn_from_checkpoint()
 
 
 func _on_player_health_changed(current: float, max_health: float) -> void:
-	GameState.set_player_health(current, max_health)
+	var game_state := _game_state()
+	if game_state:
+		game_state.set_player_health(current, max_health)
 
 
 func _remove_enemies() -> void:
@@ -205,3 +219,11 @@ func _update_ui() -> void:
 	else:
 		counter.text = "Enemies Remaining: %d" % remaining_enemies
 		counter.modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")
+
+
+func _scene_navigator() -> Node:
+	return get_node_or_null("/root/SceneNavigator")

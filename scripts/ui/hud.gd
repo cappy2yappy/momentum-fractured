@@ -13,14 +13,17 @@ var _player: Node = null
 
 
 func _ready() -> void:
-	if not GameState.cells_changed.is_connected(_on_cells_changed):
-		GameState.cells_changed.connect(_on_cells_changed)
-	if not GameState.player_health_changed.is_connected(_on_player_health_changed):
-		GameState.player_health_changed.connect(_on_player_health_changed)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	if not game_state.cells_changed.is_connected(_on_cells_changed):
+		game_state.cells_changed.connect(_on_cells_changed)
+	if not game_state.player_health_changed.is_connected(_on_player_health_changed):
+		game_state.player_health_changed.connect(_on_player_health_changed)
 
 	_resolve_player()
-	_on_cells_changed(GameState.cells)
-	_on_player_health_changed(GameState.player_health, GameState.player_max_health)
+	_on_cells_changed(game_state.cells)
+	_on_player_health_changed(game_state.player_health, game_state.player_max_health)
 
 
 func _resolve_player() -> void:
@@ -45,3 +48,7 @@ func _on_player_health_changed(current: float, max_health: float) -> void:
 	_health_bar.max_value = clamped_max
 	_health_bar.value = clampf(current, 0.0, clamped_max)
 	_health_value_label.text = "%d / %d" % [roundi(current), roundi(clamped_max)]
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")

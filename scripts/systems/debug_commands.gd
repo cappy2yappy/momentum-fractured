@@ -30,19 +30,29 @@ func _input(event: InputEvent) -> void:
 
 
 func debug_reset_progress() -> void:
-	GameState.reset_progress()
-	SceneNavigator.goto_scene(GameState.checkpoint_scene_path, GameState.checkpoint_spawn_marker)
+	var game_state := _game_state()
+	var scene_navigator := _scene_navigator()
+	if game_state == null or scene_navigator == null:
+		return
+	game_state.reset_progress()
+	scene_navigator.goto_scene(game_state.checkpoint_scene_path, game_state.checkpoint_spawn_marker)
 	print("[Debug] Progress reset to default start.")
 
 
 func debug_respawn_checkpoint() -> void:
-	SceneNavigator.respawn_from_checkpoint()
+	var scene_navigator := _scene_navigator()
+	if scene_navigator == null:
+		return
+	scene_navigator.respawn_from_checkpoint()
 	print("[Debug] Respawning at checkpoint.")
 
 
 func debug_add_cells(amount: int) -> void:
-	GameState.add_cells(amount)
-	print("[Debug] Added %d cells (total: %d)." % [amount, GameState.cells])
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.add_cells(amount)
+	print("[Debug] Added %d cells (total: %d)." % [amount, game_state.cells])
 
 
 func debug_set_checkpoint_here() -> void:
@@ -58,13 +68,19 @@ func debug_set_checkpoint_here() -> void:
 	if marker_name.is_empty():
 		marker_name = "spawn_default"
 
-	GameState.capture_player_state(player)
-	GameState.set_checkpoint(scene.scene_file_path, marker_name)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.capture_player_state(player)
+	game_state.set_checkpoint(scene.scene_file_path, marker_name)
 	print("[Debug] Checkpoint updated: %s @ %s" % [scene.scene_file_path, marker_name])
 
 
 func debug_print_state() -> void:
-	print("[Debug] %s" % JSON.stringify(GameState.get_debug_snapshot()))
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	print("[Debug] %s" % JSON.stringify(game_state.get_debug_snapshot()))
 
 
 func _find_player(scene: Node) -> Node2D:
@@ -93,3 +109,11 @@ func _nearest_spawn_marker_name(scene: Node, from_position: Vector2) -> String:
 
 func _debug_enabled() -> bool:
 	return OS.is_debug_build() or enabled_in_non_debug_builds
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")
+
+
+func _scene_navigator() -> Node:
+	return get_node_or_null("/root/SceneNavigator")

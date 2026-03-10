@@ -22,8 +22,14 @@ func _on_body_entered(body: Node2D) -> void:
 
 	if body.has_method("take_damage"):
 		body.call("take_damage", damage)
-		GameState.capture_player_state(body)
+		var game_state := _game_state()
+		if game_state:
+			game_state.capture_player_state(body)
 		return
 
 	if body.has_method("die"):
 		body.call("die")
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")

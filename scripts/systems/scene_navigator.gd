@@ -30,7 +30,9 @@ func goto_scene(scene_path: String, spawn_marker: String) -> void:
 		return
 
 	is_transitioning = true
-	GameState.set_pending_spawn(spawn_marker)
+	var game_state := _game_state()
+	if game_state:
+		game_state.set_pending_spawn(spawn_marker)
 
 	await _fade_to_alpha(1.0)
 	var err := get_tree().change_scene_to_file(scene_path)
@@ -50,8 +52,11 @@ func respawn_from_checkpoint() -> void:
 	if is_transitioning:
 		return
 
-	GameState.restore_from_checkpoint()
-	goto_scene(GameState.checkpoint_scene_path, GameState.checkpoint_spawn_marker)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.restore_from_checkpoint()
+	goto_scene(game_state.checkpoint_scene_path, game_state.checkpoint_spawn_marker)
 
 
 func _fade_to_alpha(target_alpha: float) -> void:
@@ -72,12 +77,15 @@ func _restore_player_in_current_scene() -> void:
 	if player == null:
 		return
 
-	var spawn_marker_name := GameState.consume_pending_spawn()
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	var spawn_marker_name: String = String(game_state.consume_pending_spawn())
 	var marker := _find_spawn_marker(current_scene, spawn_marker_name)
 	if marker:
 		player.global_position = marker.global_position
 
-	GameState.apply_player_state(player)
+	game_state.apply_player_state(player)
 
 
 func _find_player_in_scene(current_scene: Node) -> Node2D:
@@ -107,3 +115,7 @@ func _find_spawn_marker(current_scene: Node, marker_name: String) -> Marker2D:
 
 	push_warning("Spawn marker '%s' not found in scene '%s'" % [marker_name, current_scene.name])
 	return null
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")

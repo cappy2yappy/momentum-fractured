@@ -22,8 +22,9 @@ var _cooldown_timer: float = 0.0
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	_cooldown_timer = transition_cooldown
-	if requires_room_clear and not room_id.is_empty():
-		is_locked = not GameState.is_room_cleared(room_id)
+	var game_state := _game_state()
+	if requires_room_clear and not room_id.is_empty() and game_state:
+		is_locked = not game_state.is_room_cleared(room_id)
 	_update_label()
 
 
@@ -38,8 +39,9 @@ func set_locked(locked: bool) -> void:
 
 
 func refresh_locked_from_state() -> void:
-	if requires_room_clear and not room_id.is_empty():
-		is_locked = not GameState.is_room_cleared(room_id)
+	var game_state := _game_state()
+	if requires_room_clear and not room_id.is_empty() and game_state:
+		is_locked = not game_state.is_room_cleared(room_id)
 	else:
 		is_locked = false
 	_update_label()
@@ -55,8 +57,12 @@ func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 
-	GameState.capture_player_state(body)
-	SceneNavigator.goto_scene(target_scene_path, target_spawn_marker)
+	var game_state := _game_state()
+	if game_state:
+		game_state.capture_player_state(body)
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.goto_scene(target_scene_path, target_spawn_marker)
 
 
 func _update_label() -> void:
@@ -65,3 +71,11 @@ func _update_label() -> void:
 
 	var state_text := locked_text if is_locked else unlocked_text
 	_label.text = "%s\n%s" % [door_prompt_text, state_text]
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")
+
+
+func _scene_navigator() -> Node:
+	return get_node_or_null("/root/SceneNavigator")

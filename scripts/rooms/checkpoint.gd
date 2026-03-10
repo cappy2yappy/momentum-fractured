@@ -27,11 +27,18 @@ func _on_body_entered(body: Node2D) -> void:
 		var max_health := float(body.call("get_max_health"))
 		body.call("set_health_values", max_health, max_health)
 
-	GameState.capture_player_state(body)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.capture_player_state(body)
 	var scene_path := body.get_tree().current_scene.scene_file_path
-	GameState.set_checkpoint(scene_path, checkpoint_spawn_marker)
+	game_state.set_checkpoint(scene_path, checkpoint_spawn_marker)
 
 	_activated = true
 	modulate = Color(0.5, 1.0, 0.7, 1.0)
 	if _label:
 		_label.text = "CHECKPOINT\n(activated)"
+
+
+func _game_state() -> Node:
+	return get_node_or_null("/root/GameState")
