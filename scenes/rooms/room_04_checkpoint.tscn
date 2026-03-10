@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="2"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(1200, 64)
+size = Vector2(1280, 64)
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(64, 640)
@@ -19,9 +19,12 @@ size = Vector2(64, 400)
 [sub_resource type="RectangleShape2D" id="4"]
 size = Vector2(220, 160)
 
-[node name="Room03Safe" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(180, 220)
+
+[node name="Room04Checkpoint" type="Node2D"]
 script = ExtResource("2")
-room_id = "room_03_safe"
+room_id = "room_04_checkpoint"
 player_node = NodePath("Kaze")
 door_exits = [NodePath("Environment/LeftDoor")]
 enemy_counter_label = NodePath("HUD/EnemyCounter")
@@ -38,7 +41,7 @@ follow_speed = 7.0
 [node name="spawn_default" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(220, 600)
 
-[node name="entry_from_room2" type="Marker2D" parent="SpawnPoints"]
+[node name="entry_from_room3" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(220, 600)
 
 [node name="spawn_checkpoint" type="Marker2D" parent="SpawnPoints"]
@@ -54,11 +57,11 @@ collision_layer = 1
 shape = SubResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="Environment/Floor"]
-offset_left = -600.0
+offset_left = -640.0
 offset_top = -32.0
-offset_right = 600.0
+offset_right = 640.0
 offset_bottom = 32.0
-color = Color(0.12, 0.29, 0.2, 1)
+color = Color(0.11, 0.29, 0.24, 1)
 
 [node name="Ceiling" type="StaticBody2D" parent="Environment"]
 position = Vector2(640, 40)
@@ -68,11 +71,11 @@ collision_layer = 1
 shape = SubResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="Environment/Ceiling"]
-offset_left = -600.0
+offset_left = -640.0
 offset_top = -32.0
-offset_right = 600.0
+offset_right = 640.0
 offset_bottom = 32.0
-color = Color(0.12, 0.29, 0.2, 1)
+color = Color(0.11, 0.29, 0.24, 1)
 
 [node name="LeftWall" type="StaticBody2D" parent="Environment"]
 position = Vector2(40, 360)
@@ -86,7 +89,7 @@ offset_left = -32.0
 offset_top = -320.0
 offset_right = 32.0
 offset_bottom = 320.0
-color = Color(0.12, 0.29, 0.2, 1)
+color = Color(0.11, 0.29, 0.24, 1)
 
 [node name="RightWall" type="StaticBody2D" parent="Environment"]
 position = Vector2(1240, 360)
@@ -100,27 +103,27 @@ offset_left = -32.0
 offset_top = -320.0
 offset_right = 32.0
 offset_bottom = 320.0
-color = Color(0.12, 0.29, 0.2, 1)
+color = Color(0.11, 0.29, 0.24, 1)
 
 [node name="LeftDoor" type="Area2D" parent="Environment"]
 position = Vector2(72, 460)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3")
-target_scene_path = "res://scenes/rooms/room_02_platforming.tscn"
-target_spawn_marker = "entry_from_room3"
-door_prompt_text = "← BACK"
+target_scene_path = "res://scenes/rooms/room_01_combat.tscn"
+target_spawn_marker = "entry_from_room4"
+door_prompt_text = "← BACKTRACK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoor"]
 shape = SubResource("3")
 
 [node name="Label" type="Label" parent="Environment/LeftDoor"]
-offset_left = -52.0
+offset_left = -72.0
 offset_top = -236.0
-offset_right = 52.0
+offset_right = 72.0
 offset_bottom = -178.0
 horizontal_alignment = 1
-text = "← BACK\n(open)"
+text = "← BACKTRACK\n(open)"
 
 [node name="Checkpoint" type="Area2D" parent="Environment"]
 position = Vector2(640, 560)
@@ -148,6 +151,46 @@ offset_bottom = 70.0
 horizontal_alignment = 1
 vertical_alignment = 1
 text = "CHECKPOINT\n(stand here)"
+
+[node name="RefillStation" type="Area2D" parent="Environment"]
+position = Vector2(930, 548)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RefillStation"]
+shape = SubResource("5")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RefillStation"]
+offset_left = -90.0
+offset_top = -110.0
+offset_right = 90.0
+offset_bottom = 110.0
+color = Color(0.22, 0.75, 0.95, 0.25)
+
+[node name="Label" type="Label" parent="Environment/RefillStation"]
+offset_left = -88.0
+offset_top = -56.0
+offset_right = 88.0
+offset_bottom = 56.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "REFILL\n(visual)"
+
+[node name="FutureDoorLocked" type="Area2D" parent="Environment"]
+position = Vector2(1208, 460)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/FutureDoorLocked"]
+shape = SubResource("3")
+
+[node name="Label" type="Label" parent="Environment/FutureDoorLocked"]
+offset_left = -78.0
+offset_top = -236.0
+offset_right = 78.0
+offset_bottom = -178.0
+horizontal_alignment = 1
+text = "→ ROOM 5\n(locked)"
 
 [node name="Kaze" parent="." instance=ExtResource("1")]
 position = Vector2(220, 600)

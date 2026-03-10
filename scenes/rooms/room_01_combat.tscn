@@ -41,6 +41,9 @@ position = Vector2(200, 600)
 [node name="entry_from_room2" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(1030, 600)
 
+[node name="entry_from_room4" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(320, 600)
+
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Floor" type="StaticBody2D" parent="Environment"]
