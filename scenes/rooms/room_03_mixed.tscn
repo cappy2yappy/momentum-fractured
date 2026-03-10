@@ -1,0 +1,297 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/rooms/hazard_zone.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6"]
+[ext_resource type="Script" path="res://scripts/rooms/moving_platform.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="8"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(420, 64)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(280, 40)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(220, 40)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(140, 28)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(64, 640)
+
+[sub_resource type="RectangleShape2D" id="6"]
+size = Vector2(1840, 64)
+
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(64, 400)
+
+[sub_resource type="RectangleShape2D" id="8"]
+size = Vector2(220, 120)
+
+[sub_resource type="RectangleShape2D" id="9"]
+size = Vector2(2000, 160)
+
+[node name="Room03Mixed" type="Node2D"]
+script = ExtResource("2")
+room_id = "room_03_mixed"
+player_node = NodePath("Kaze")
+enemies_node = NodePath("Enemies")
+door_barriers = [NodePath("Environment/LeftDoorBarrier"), NodePath("Environment/RightDoorBarrier")]
+door_exits = [NodePath("Environment/LeftDoor"), NodePath("Environment/RightDoor")]
+enemy_counter_label = NodePath("HUD/EnemyCounter")
+cells_per_enemy = 5
+
+[node name="RoomCamera" type="Camera2D" parent="."]
+position = Vector2(960, 360)
+script = ExtResource("5")
+player_path = NodePath("../Kaze")
+room_bounds = Rect2(0, 0, 1920, 720)
+follow_speed = 8.0
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="spawn_default" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(180, 600)
+
+[node name="entry_from_room2" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(180, 600)
+
+[node name="entry_from_room4" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1680, 600)
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="FloorStart" type="StaticBody2D" parent="Environment"]
+position = Vector2(260, 680)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/FloorStart"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/FloorStart"]
+offset_left = -210.0
+offset_top = -32.0
+offset_right = 210.0
+offset_bottom = 32.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="PlatformLeft" type="StaticBody2D" parent="Environment"]
+position = Vector2(560, 520)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/PlatformLeft"]
+shape = SubResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/PlatformLeft"]
+offset_left = -140.0
+offset_top = -20.0
+offset_right = 140.0
+offset_bottom = 20.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="PlatformRight" type="StaticBody2D" parent="Environment"]
+position = Vector2(1440, 420)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/PlatformRight"]
+shape = SubResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/PlatformRight"]
+offset_left = -110.0
+offset_top = -20.0
+offset_right = 110.0
+offset_bottom = 20.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="MovingPlatformCenter" type="AnimatableBody2D" parent="Environment"]
+position = Vector2(990, 520)
+collision_layer = 1
+script = ExtResource("7")
+travel_offset = Vector2(210, 0)
+cycle_duration = 2.4
+start_phase = 0.15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/MovingPlatformCenter"]
+shape = SubResource("4")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/MovingPlatformCenter"]
+offset_left = -70.0
+offset_top = -14.0
+offset_right = 70.0
+offset_bottom = 14.0
+color = Color(0.24, 0.62, 0.72, 1)
+
+[node name="FloorEnd" type="StaticBody2D" parent="Environment"]
+position = Vector2(1680, 680)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/FloorEnd"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/FloorEnd"]
+offset_left = -210.0
+offset_top = -32.0
+offset_right = 210.0
+offset_bottom = 32.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="Ceiling" type="StaticBody2D" parent="Environment"]
+position = Vector2(960, 40)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ceiling"]
+shape = SubResource("6")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Ceiling"]
+offset_left = -920.0
+offset_top = -32.0
+offset_right = 920.0
+offset_bottom = 32.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(40, 360)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftWall"]
+shape = SubResource("5")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftWall"]
+offset_left = -32.0
+offset_top = -320.0
+offset_right = 32.0
+offset_bottom = 320.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="RightWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(1880, 360)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightWall"]
+shape = SubResource("5")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightWall"]
+offset_left = -32.0
+offset_top = -320.0
+offset_right = 32.0
+offset_bottom = 320.0
+color = Color(0.22, 0.18, 0.3, 1)
+
+[node name="LeftDoorBarrier" type="StaticBody2D" parent="Environment"]
+position = Vector2(40, 160)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoorBarrier"]
+shape = SubResource("7")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftDoorBarrier"]
+offset_left = -32.0
+offset_top = -200.0
+offset_right = 32.0
+offset_bottom = 200.0
+color = Color(0.85, 0.2, 0.2, 0.65)
+
+[node name="RightDoorBarrier" type="StaticBody2D" parent="Environment"]
+position = Vector2(1880, 160)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoorBarrier"]
+shape = SubResource("7")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightDoorBarrier"]
+offset_left = -32.0
+offset_top = -200.0
+offset_right = 32.0
+offset_bottom = 200.0
+color = Color(0.85, 0.2, 0.2, 0.65)
+
+[node name="LeftDoor" type="Area2D" parent="Environment"]
+position = Vector2(72, 460)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_02_platforming.tscn"
+target_spawn_marker = "entry_from_room3"
+door_prompt_text = "← PLATFORM"
+requires_room_clear = true
+room_id = "room_03_mixed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoor"]
+shape = SubResource("7")
+
+[node name="Label" type="Label" parent="Environment/LeftDoor"]
+offset_left = -68.0
+offset_top = -236.0
+offset_right = 68.0
+offset_bottom = -178.0
+horizontal_alignment = 1
+text = "← PLATFORM\n(locked)"
+
+[node name="RightDoor" type="Area2D" parent="Environment"]
+position = Vector2(1848, 460)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_04_checkpoint.tscn"
+target_spawn_marker = "entry_from_room3"
+door_prompt_text = "→ CHECKPOINT"
+requires_room_clear = true
+room_id = "room_03_mixed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoor"]
+shape = SubResource("7")
+
+[node name="Label" type="Label" parent="Environment/RightDoor"]
+offset_left = -78.0
+offset_top = -236.0
+offset_right = 78.0
+offset_bottom = -178.0
+horizontal_alignment = 1
+text = "→ CHECKPOINT\n(locked)"
+
+[node name="SpikePit" type="Area2D" parent="Environment"]
+position = Vector2(1000, 760)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4")
+instant_kill = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/SpikePit"]
+shape = SubResource("8")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/SpikePit"]
+offset_left = -110.0
+offset_top = -60.0
+offset_right = 110.0
+offset_bottom = 60.0
+color = Color(0.82, 0.18, 0.24, 0.72)
+
+[node name="BottomVoid" type="Area2D" parent="Environment"]
+position = Vector2(960, 930)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4")
+instant_kill = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/BottomVoid"]
+shape = SubResource("9")
+
+[node name="Kaze" parent="." instance=ExtResource("1")]
+position = Vector2(180, 600)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Echo1" parent="Enemies" instance=ExtResource("8")]
+position = Vector2(560, 460)
+patrol_points = Array[Vector2]([Vector2(470, 460), Vector2(650, 460)])
+
+[node name="Echo2" parent="Enemies" instance=ExtResource("8")]
+position = Vector2(1440, 360)
+patrol_points = Array[Vector2]([Vector2(1360, 360), Vector2(1520, 360)])
+
+[node name="HUD" parent="." instance=ExtResource("6")]
