@@ -78,34 +78,69 @@
 
 ---
 
-## PRIORITY 4: Room Transitions
+## PRIORITY 4: Room Creator Tool + 4 Base Rooms
 
-**Goal:** Multi-room progression (see GDD.md Section 3.2)
+**Goal:** Build room design workflow + 4 playable rooms
 
-### Current State:
-- Room 1 exists with combat encounter
-- DoorExit script exists but untested
-- No Room 2 yet
+### Part A: Room Creator Tool
 
-### Tasks:
-- [ ] Create `room_02_platforming.tscn`
-  - No enemies, just platforming challenge
-  - Spikes hazard (use `hazard_zone.gd`)
-  - Moving platforms (basic timer-based movement)
-  - Exit to Room 3
-- [ ] Create `room_03_checkpoint.tscn`
-  - Safe room (no combat)
-  - Checkpoint (saves progress)
-  - Exit back to Room 1 OR to Room 4
-- [ ] Test room flow:
-  1. Room 1 (combat) → kill enemies → door unlocks
-  2. Room 2 (platforming) → navigate hazards
-  3. Room 3 (checkpoint) → save game
-  4. Can backtrack to Room 1
+**Web-based editor exists:** https://laibyrinth.com/fractured-room-editor.html
+
+**Tasks:**
+- [ ] Test web room editor
+  - Opens in browser
+  - Can place platforms, enemies, hazards
+  - Export to JSON works
+- [ ] Create Godot import script
+  - `tools/import_room_json.gd`
+  - Reads JSON from web editor
+  - Generates .tscn file automatically
+  - Places platforms, spawn points, enemies, hazards
+- [ ] OR: Create Godot editor plugin
+  - Room design tool inside Godot editor
+  - Drag-drop prefabs (platforms, enemies, hazards)
+  - Snap to grid (10px)
+  - Auto-generate collision shapes
+
+**Deliverable:** Cap can design rooms in <5 minutes each
+
+---
+
+### Part B: Build 4 Rooms (REQUIRED)
+
+**Room 1: Combat Arena** (already exists)
+- [x] `room_01_combat.tscn`
+- [x] 3 Echo enemies
+- [x] Flat floor, basic walls
+- [x] Door unlocks when cleared
+
+**Room 2: Platforming Challenge** (NEW)
+- [ ] `room_02_platforming.tscn`
+- [ ] No enemies
+- [ ] Hazards: Spikes (2 pits), Saws (1 rotating)
+- [ ] Moving platforms (3 platforms, horizontal movement)
+- [ ] Requires jump timing, no combat
+- [ ] Exit to Room 3
+
+**Room 3: Mixed Combat + Platforming** (NEW)
+- [ ] `room_03_mixed.tscn`
+- [ ] 2 Echo enemies on platforms
+- [ ] 1 moving platform over spike pit
+- [ ] Player must fight while platforming
+- [ ] Exit to Room 4
+
+**Room 4: Checkpoint Safe Room** (NEW)
+- [ ] `room_04_checkpoint.tscn`
+- [ ] No enemies, no hazards
+- [ ] Checkpoint node (saves progress)
+- [ ] Health refill station (optional)
+- [ ] 2 exits:
+  - Back to Room 1 (backtrack)
+  - Forward to future Room 5 (locked for now)
 
 **Reference:** GDD.md Section 3 (Room Structure)
 
-**Test:** Complete 3-room sequence without crashing
+**Test:** Complete all 4 rooms in sequence without dying
 
 ---
 
@@ -255,15 +290,16 @@ Post in Discord thread when you need:
 **Phase 3 Complete (Current Goal):**
 - [x] Combat system working
 - [ ] Compile errors fixed
-- [ ] 3-room sequence playable
+- [ ] **4 rooms built and playable**
+- [ ] **Room creator tool functional**
 - [ ] Checkpoint system functional
 - [ ] Combat feels satisfying
 
 **Phase 4 (Next):**
-- More enemy types
-- Better visuals
-- First boss fight
-- Ability unlock (grapple)
+- More enemy types (Drone, Guardian)
+- Better visuals (sprite replacements, animations)
+- First boss fight (Echo Amalgam)
+- Ability unlock (grapple hook)
 
 ---
 
