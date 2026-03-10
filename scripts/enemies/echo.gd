@@ -19,7 +19,7 @@ var hitstun_timer: float = 0.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
 @onready var hurtbox: Area2D = $Hurtbox
-@onready var health: Node = $Health
+@onready var health = $Health
 
 const GRAVITY = 1980.0
 
@@ -30,10 +30,14 @@ func _ready():
 	
 	# Connect combat signals
 	if hurtbox:
-		hurtbox.hit_received.connect(_on_hit)
+		var on_hit := Callable(self, "_on_hit")
+		if hurtbox.has_signal("hit_received") and not hurtbox.is_connected("hit_received", on_hit):
+			hurtbox.connect("hit_received", on_hit)
 	
 	if health:
-		health.died.connect(_on_death)
+		var on_death := Callable(self, "_on_death")
+		if health.has_signal("died") and not health.is_connected("died", on_death):
+			health.connect("died", on_death)
 
 func _physics_process(delta):
 	# Apply gravity
@@ -102,7 +106,7 @@ func _state_hitstun(delta):
 	velocity.x = 0
 	hitstun_timer -= delta
 	if hitstun_timer <= 0:
-		state = State.CHARGE if health > 0 else State.DEAD
+		state = State.CHARGE if health and not health.is_dead else State.DEAD
 
 func _state_dead(delta):
 	velocity.x = 0

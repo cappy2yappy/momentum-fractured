@@ -2,62 +2,59 @@ extends Area2D
 class_name Hurtbox
 
 ## Hurtbox - damage receiver component
-## Detects hitboxes and takes damage
+## Detects hitboxes and forwards damage to a Health node.
 
-signal hit_received(damage: float, knockback: Vector2, hitbox: Hitbox)
+signal hit_received(damage: float, knockback: Vector2, hitbox: Area2D)
 
 @export var health_component: NodePath
 @export var knockback_multiplier: float = 1.0
 @export var invincibility_duration: float = 0.0
 
 var invincibility_timer: float = 0.0
-var health: Health = null
+var health: Node = null
 
-func _ready():
-	# Connect to hitboxes
+
+func _ready() -> void:
 	area_entered.connect(_on_area_entered)
-	
-	# Get health component
 	if not health_component.is_empty():
 		health = get_node_or_null(health_component)
 
-func _process(delta):
-	if invincibility_timer > 0:
+
+func _process(delta: float) -> void:
+	if invincibility_timer > 0.0:
 		invincibility_timer -= delta
 
-func _on_area_entered(area: Area2D):
-	if area is Hitbox:
-		_take_hit(area)
 
-func _take_hit(hitbox: Hitbox):
-	# Skip if invincible
-	if invincibility_timer > 0:
+func _on_area_entered(area: Area2D) -> void:
+	if not area.has_method("deactivate"):
 		return
-	
-	# Skip if hitbox is disabled or from same owner
-	if not hitbox.is_active:
+	_take_hit(area)
+
+
+func _take_hit(hitbox: Area2D) -> void:
+	if invincibility_timer > 0.0:
 		return
-	
-	if hitbox.owner_node and owner == hitbox.owner_node:
+	if not bool(hitbox.get("is_active")):
 		return
-	
-	# Calculate knockback
-	var knockback = hitbox.knockback * knockback_multiplier
-	
-	# Apply damage to health component if available
-	if health:
-		health.take_damage(hitbox.damage)
-	
-	# Emit signal
-	emit_signal("hit_received", hitbox.damage, knockback, hitbox)
-	
-	# Start invincibility
-	if invincibility_duration > 0:
+
+	var owner_node = hitbox.get("owner_node")
+	if owner_node and owner == owner_node:
+		return
+
+	var damage := float(hitbox.get("damage"))
+	var knockback: Vector2 = hitbox.get("knockback") * knockback_multiplier
+
+	if health and health.has_method("take_damage"):
+		health.call("take_damage", damage)
+
+	emit_signal("hit_received", damage, knockback, hitbox)
+
+	if invincibility_duration > 0.0:
 		invincibility_timer = invincibility_duration
-	
-	# Disable hitbox if it's single-hit
-	if hitbox.single_hit:
-		hitbox.deactivate()
+
+	if bool(hitbox.get("single_hit")) and hitbox.has_method("deactivate"):
+		hitbox.call("deactivate")
+
 
 func is_invincible() -> bool:
-	return invincibility_timer > 0
+	return invincibility_timer > 0.0

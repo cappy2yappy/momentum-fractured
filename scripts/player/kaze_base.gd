@@ -60,11 +60,22 @@ var is_attacking := false
 
 # NODES
 @onready var hitbox: Area2D = $Hitbox
+@onready var health = get_node_or_null("Health")
 
 # SIGNALS
 signal died
+signal health_changed(current: float, max_health: float)
 
 func _ready() -> void:
+	add_to_group("player")
+	if health:
+		var on_health_changed := Callable(self, "_on_health_node_changed")
+		if health.has_signal("health_changed") and not health.is_connected("health_changed", on_health_changed):
+			health.connect("health_changed", on_health_changed)
+		var on_health_died := Callable(self, "_on_health_depleted")
+		if health.has_signal("died") and not health.is_connected("died", on_health_died):
+			health.connect("died", on_health_died)
+		emit_signal("health_changed", get_current_health(), get_max_health())
 	_was_on_floor = is_on_floor()
 
 func _physics_process(delta: float) -> void:
@@ -213,6 +224,9 @@ func respawn(pos: Vector2) -> void:
 	jump_buffer_timer = 0
 	dash_cooldown_timer = 0
 	_was_on_floor = false
+	if health:
+		health.is_dead = false
+		emit_signal("health_changed", health.current_health, health.max_health)
 
 func get_dash_cooldown_ratio() -> float:
 	if DASH_COOLDOWN <= 0.0:
@@ -236,3 +250,44 @@ func _perform_attack() -> void:
 	# Reset attacking flag after a short delay
 	await get_tree().create_timer(0.15).timeout
 	is_attacking = false
+
+
+func take_damage(amount: float) -> void:
+	if is_dead or amount <= 0.0:
+		return
+
+	if health:
+		health.take_damage(amount)
+		emit_signal("health_changed", health.current_health, health.max_health)
+		if health.current_health <= 0.0:
+			die()
+	else:
+		die()
+
+
+func set_health_values(current: float, max_health_value: float) -> void:
+	if health:
+		health.max_health = maxf(max_health_value, 1.0)
+		health.current_health = clampf(current, 0.0, health.max_health)
+		health.is_dead = health.current_health <= 0.0
+	emit_signal("health_changed", get_current_health(), get_max_health())
+
+
+func get_current_health() -> float:
+	if health:
+		return health.current_health
+	return 0.0 if is_dead else 100.0
+
+
+func get_max_health() -> float:
+	if health:
+		return health.max_health
+	return 100.0
+
+
+func _on_health_node_changed(_old_value: float, new_value: float) -> void:
+	emit_signal("health_changed", new_value, get_max_health())
+
+
+func _on_health_depleted() -> void:
+	die()

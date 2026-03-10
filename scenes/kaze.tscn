@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsuvfr3xm2h3j"]
+[gd_scene load_steps=11 format=3 uid="uid://bsuvfr3xm2h3j"]
 
 [ext_resource type="Script" path="res://scripts/player/kaze_base.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/combat/hitbox.gd" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/kaze/run_strip.png" id="4"]
 [ext_resource type="Texture2D" path="res://assets/sprites/kaze/jump_strip.png" id="5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/kaze/attack_strip.png" id="6"]
+[ext_resource type="Script" path="res://scripts/combat/health.gd" id="7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 64)
@@ -71,3 +72,7 @@ damage = 15.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(30, 0)
 shape = SubResource("2")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("7")
+max_health = 100.0

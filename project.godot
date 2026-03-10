@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="MOMENTUM: FRACTURED"
-run/main_scene="res://scenes/combat_test.tscn"
+run/main_scene="res://scenes/rooms/room_01_combat.tscn"
 config/features=PackedStringArray("4.6")
+
+[autoload]
+
+GameState="*res://scripts/systems/game_state.gd"
+SceneNavigator="*res://scripts/systems/scene_navigator.gd"
+DebugCommands="*res://scripts/systems/debug_commands.gd"
 
 [display]
 

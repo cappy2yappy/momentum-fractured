@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctbkv2m8rxwyk"
-path="res://.godot/imported/idle_strip.png-6f58eca4854903e3035fb6ec357f6aec.ctex"
+uid="uid://dies6urm5cnla"
+path="res://.godot/imported/attack_strip.png-282a3b0ce89d770efaa94d4e0bda6e8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/kaze/idle_strip.png"
-dest_files=["res://.godot/imported/idle_strip.png-6f58eca4854903e3035fb6ec357f6aec.ctex"]
+source_file="res://assets/sprites/kaze/attack_strip.png"
+dest_files=["res://.godot/imported/attack_strip.png-282a3b0ce89d770efaa94d4e0bda6e8c.ctex"]
 
 [params]
 
