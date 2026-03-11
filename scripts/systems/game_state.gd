@@ -11,10 +11,12 @@ signal cells_changed(total_cells: int)
 signal player_health_changed(current: float, max_health: float)
 signal checkpoint_updated(scene_path: String, spawn_marker: String)
 signal room_cleared(room_id: String)
+signal combo_changed(combo_count: int)
 signal state_reset
 
 var cleared_rooms: Dictionary = {}
 var cells: int = 0
+var combo_count: int = 0
 
 var player_health: float = 100.0
 var player_max_health: float = 100.0
@@ -43,12 +45,14 @@ func _set_defaults() -> void:
 	checkpoint_scene_path = DEFAULT_START_SCENE
 	checkpoint_spawn_marker = DEFAULT_START_SPAWN
 	pending_spawn_marker = DEFAULT_START_SPAWN
+	combo_count = 0
 
 
 func _emit_runtime_signals() -> void:
 	emit_signal("cells_changed", cells)
 	emit_signal("player_health_changed", player_health, player_max_health)
 	emit_signal("checkpoint_updated", checkpoint_scene_path, checkpoint_spawn_marker)
+	emit_signal("combo_changed", combo_count)
 
 
 func is_room_cleared(room_id: String) -> bool:
@@ -130,6 +134,22 @@ func consume_pending_spawn() -> String:
 	return marker
 
 
+func register_combo_hit() -> void:
+	combo_count += 1
+	emit_signal("combo_changed", combo_count)
+
+
+func reset_combo() -> void:
+	if combo_count == 0:
+		return
+	combo_count = 0
+	emit_signal("combo_changed", combo_count)
+
+
+func get_combo_count() -> int:
+	return combo_count
+
+
 func reset_progress() -> void:
 	_set_defaults()
 	save_to_disk()
@@ -146,6 +166,7 @@ func get_debug_snapshot() -> Dictionary:
 		"checkpoint_spawn_marker": checkpoint_spawn_marker,
 		"pending_spawn_marker": pending_spawn_marker,
 		"cleared_room_count": cleared_rooms.size(),
+		"combo_count": combo_count,
 	}
 
 

@@ -256,6 +256,8 @@ func take_damage(amount: float) -> void:
 	if is_dead or amount <= 0.0:
 		return
 
+	GameState.reset_combo()
+
 	if health:
 		health.take_damage(amount)
 		emit_signal("health_changed", health.current_health, health.max_health)

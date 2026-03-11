@@ -86,7 +86,8 @@ func _setup_enemies() -> void:
 
 func _on_enemy_died(enemy_node: Node) -> void:
 	remaining_enemies = max(0, remaining_enemies - 1)
-	GameState.add_cells(cells_per_enemy)
+	var reward := cells_per_enemy * _get_combo_multiplier()
+	GameState.add_cells(reward)
 
 	emit_signal("enemy_defeated", remaining_enemies)
 	_update_ui()
@@ -205,3 +206,15 @@ func _update_ui() -> void:
 	else:
 		counter.text = "Enemies Remaining: %d" % remaining_enemies
 		counter.modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+
+func _get_combo_multiplier() -> int:
+	if not GameState.has_method("get_combo_count"):
+		return 1
+
+	var combo_count := int(GameState.call("get_combo_count"))
+	if combo_count >= 10:
+		return 3
+	if combo_count >= 5:
+		return 2
+	return 1

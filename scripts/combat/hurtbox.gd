@@ -69,14 +69,17 @@ func is_invincible() -> bool:
 
 
 func _apply_hit_feedback(attacker: Node, damage: float) -> void:
-	if attacker == null or not attacker.is_in_group("player"):
+	if attacker and attacker.is_in_group("player"):
+		GameState.register_combo_hit()
+		_trigger_hit_pause()
+		if damage >= heavy_hit_threshold:
+			var camera := get_viewport().get_camera_2d()
+			if camera and camera.has_method("shake"):
+				camera.call("shake", screen_shake_duration, screen_shake_strength)
 		return
 
-	_trigger_hit_pause()
-	if damage >= heavy_hit_threshold:
-		var camera := get_viewport().get_camera_2d()
-		if camera and camera.has_method("shake"):
-			camera.call("shake", screen_shake_duration, screen_shake_strength)
+	if owner and owner.is_in_group("player"):
+		GameState.reset_combo()
 
 
 func _trigger_hit_pause() -> void:
