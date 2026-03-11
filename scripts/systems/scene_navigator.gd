@@ -105,5 +105,5 @@ func _find_spawn_marker(current_scene: Node, marker_name: String) -> Marker2D:
 	if fallback is Marker2D:
 		return fallback
 
-	push_warning("Spawn marker '%s' not found in scene '%s'" % [marker_name, current_scene.name])
+	# Legacy scenes may not define spawn markers; keep current player placement.
 	return null

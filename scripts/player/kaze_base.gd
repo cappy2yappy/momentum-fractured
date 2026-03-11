@@ -39,9 +39,9 @@ const COYOTE_TIME := 0.2
 const JUMP_BUFFER_TIME := 0.2
 
 # COMBAT
-const ATTACK_COOLDOWN := 0.3
-const ATTACK_DAMAGE := 15.0
-const ATTACK_KNOCKBACK := 400.0
+const ATTACK_COOLDOWN := 0.24
+const ATTACK_DAMAGE := 18.0
+const ATTACK_KNOCKBACK := 340.0
 
 # STATE
 var facing_dir := 1

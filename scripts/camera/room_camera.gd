@@ -9,6 +9,9 @@ class_name RoomCamera
 @export var follow_speed: float = 8.0
 
 var _player: Node2D
+var _shake_timer: float = 0.0
+var _shake_duration: float = 0.0
+var _shake_strength: float = 0.0
 
 
 func _ready() -> void:
@@ -40,6 +43,7 @@ func _physics_process(delta: float) -> void:
 
 	var weight := clampf(delta * follow_speed, 0.0, 1.0)
 	global_position = global_position.lerp(target, weight)
+	_apply_shake(delta)
 
 
 func _resolve_player() -> void:
@@ -48,7 +52,30 @@ func _resolve_player() -> void:
 		if _player:
 			return
 
-	for candidate in get_tree().get_nodes_in_group("player"):
-		if candidate is Node2D:
-			_player = candidate
-			return
+		for candidate in get_tree().get_nodes_in_group("player"):
+			if candidate is Node2D:
+				_player = candidate
+				return
+
+
+func shake(duration: float = 0.08, strength: float = 4.0) -> void:
+	_shake_duration = maxf(_shake_duration, duration)
+	_shake_timer = maxf(_shake_timer, duration)
+	_shake_strength = maxf(_shake_strength, strength)
+
+
+func _apply_shake(delta: float) -> void:
+	if _shake_timer <= 0.0:
+		return
+
+	_shake_timer = maxf(0.0, _shake_timer - delta)
+	var falloff := _shake_timer / maxf(_shake_duration, 0.0001)
+	var jitter := Vector2(
+		randf_range(-_shake_strength, _shake_strength),
+		randf_range(-_shake_strength, _shake_strength)
+	) * falloff
+	global_position += jitter
+
+	if _shake_timer <= 0.0:
+		_shake_strength = 0.0
+		_shake_duration = 0.0
