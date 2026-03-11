@@ -131,7 +131,8 @@ color = Color(0.21, 0.18, 0.26, 1)
 position = Vector2(1020, 540)
 collision_layer = 1
 script = ExtResource("8")
-move_distance = 120.0
+pattern = 0
+move_distance = Vector2(120, 70)
 move_speed = 1.35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/MovingPlatform"]

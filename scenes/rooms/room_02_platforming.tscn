@@ -128,7 +128,8 @@ color = Color(0.13, 0.24, 0.29, 1)
 position = Vector2(700, 540)
 collision_layer = 1
 script = ExtResource("7")
-move_distance = 140.0
+pattern = 0
+move_distance = Vector2(140, 70)
 move_speed = 1.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/MovingPlatform1"]
@@ -145,7 +146,8 @@ color = Color(0.23, 0.41, 0.5, 1)
 position = Vector2(1120, 500)
 collision_layer = 1
 script = ExtResource("7")
-move_distance = 160.0
+pattern = 2
+move_distance = Vector2(160, 70)
 move_speed = 1.5
 phase_offset = 1.4
 
@@ -163,8 +165,8 @@ color = Color(0.23, 0.41, 0.5, 1)
 position = Vector2(1460, 450)
 collision_layer = 1
 script = ExtResource("7")
-move_axis = Vector2(0, 1)
-move_distance = 90.0
+pattern = 1
+move_distance = Vector2(90, 90)
 move_speed = 1.1
 phase_offset = 0.8
 
