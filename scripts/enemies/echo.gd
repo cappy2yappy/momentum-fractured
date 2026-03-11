@@ -203,7 +203,6 @@ func _on_hit(damage: float, knockback: Vector2, _hitbox_node: Area2D) -> void:
 
 	velocity = knockback
 	_hitstun_timer = hitstun_duration
-	_show_hit_feedback(damage)
 
 	if health and health.is_dead:
 		state = State.DEAD
@@ -230,36 +229,6 @@ func _on_death() -> void:
 	tween.tween_property(self, "modulate:a", 0.0, 0.22)
 	await tween.finished
 	queue_free()
-
-
-func _show_hit_feedback(damage: float) -> void:
-	if body_rect:
-		body_rect.color = Color(1.0, 1.0, 1.0, 1.0)
-		var flash_tween := create_tween()
-		flash_tween.tween_property(body_rect, "color", Color(1.0, 0.3, 0.3, 1.0), 0.1)
-
-	_spawn_damage_popup(damage)
-
-
-func _spawn_damage_popup(damage: float) -> void:
-	var camera := get_viewport().get_camera_2d()
-	if camera == null:
-		return
-
-	var popup := Label.new()
-	popup.text = "-%d" % roundi(damage)
-	popup.modulate = Color(1.0, 0.95, 0.95, 1.0)
-	popup.z_index = 500
-	popup.top_level = true
-	get_tree().root.add_child(popup)
-
-	var world_origin := global_position + Vector2(randf_range(-10.0, 10.0), -56.0)
-	popup.position = camera.unproject_position(world_origin)
-
-	var popup_tween := popup.create_tween()
-	popup_tween.tween_property(popup, "position:y", popup.position.y - 28.0, 0.35)
-	popup_tween.parallel().tween_property(popup, "modulate:a", 0.0, 0.35)
-	popup_tween.finished.connect(popup.queue_free)
 
 
 func _acquire_player_if_needed() -> void:

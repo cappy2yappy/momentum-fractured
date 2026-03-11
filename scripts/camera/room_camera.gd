@@ -12,6 +12,7 @@ var _player: Node2D
 var _shake_timer: float = 0.0
 var _shake_duration: float = 0.0
 var _shake_strength: float = 0.0
+var _shake_offset: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
@@ -42,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	target.y = clampf(target.y, min_y, max_y)
 
 	var weight := clampf(delta * follow_speed, 0.0, 1.0)
-	global_position = global_position.lerp(target, weight)
+	global_position = global_position.lerp(target, weight) - _shake_offset
 	_apply_shake(delta)
 
 
@@ -52,10 +53,10 @@ func _resolve_player() -> void:
 		if _player:
 			return
 
-		for candidate in get_tree().get_nodes_in_group("player"):
-			if candidate is Node2D:
-				_player = candidate
-				return
+	for candidate in get_tree().get_nodes_in_group("player"):
+		if candidate is Node2D:
+			_player = candidate
+			return
 
 
 func shake(duration: float = 0.08, strength: float = 4.0) -> void:
@@ -70,12 +71,13 @@ func _apply_shake(delta: float) -> void:
 
 	_shake_timer = maxf(0.0, _shake_timer - delta)
 	var falloff := _shake_timer / maxf(_shake_duration, 0.0001)
-	var jitter := Vector2(
+	_shake_offset = Vector2(
 		randf_range(-_shake_strength, _shake_strength),
 		randf_range(-_shake_strength, _shake_strength)
 	) * falloff
-	global_position += jitter
+	global_position += _shake_offset
 
 	if _shake_timer <= 0.0:
 		_shake_strength = 0.0
 		_shake_duration = 0.0
+		_shake_offset = Vector2.ZERO

@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.6")
 GameState="*res://scripts/systems/game_state.gd"
 SceneNavigator="*res://scripts/systems/scene_navigator.gd"
 DebugCommands="*res://scripts/systems/debug_commands.gd"
+CombatFeedback="*res://scripts/systems/combat_feedback.gd"
 
 [display]
 
