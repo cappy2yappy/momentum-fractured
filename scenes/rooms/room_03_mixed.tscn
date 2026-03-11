@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3]
+[gd_scene load_steps=20 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="7"]
 [ext_resource type="Script" path="res://scripts/rooms/moving_platform.gd" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/drone.tscn" id="9"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(420, 64)
@@ -278,5 +279,11 @@ position = Vector2(760, 560)
 
 [node name="Echo2" parent="Enemies" instance=ExtResource("2")]
 position = Vector2(1210, 450)
+
+[node name="Drone1" parent="Enemies" instance=ExtResource("9")]
+position = Vector2(910, 300)
+
+[node name="Drone2" parent="Enemies" instance=ExtResource("9")]
+position = Vector2(1260, 280)
 
 [node name="HUD" parent="." instance=ExtResource("7")]
