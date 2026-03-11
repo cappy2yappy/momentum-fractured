@@ -16,6 +16,7 @@ enum State { IDLE, PATROL, ALERT, SHOOT, RETREAT, DEAD }
 @export var hover_amplitude: float = 12.0
 @export var hover_speed: float = 2.2
 @export var projectile_scene: PackedScene = preload("res://scenes/enemies/drone_projectile.tscn")
+@export var cell_pickup_scene: PackedScene = preload("res://scenes/pickups/cell_pickup.tscn")
 
 var state: State = State.PATROL
 var _player: Node2D = null
@@ -207,3 +208,16 @@ func _player_in_range() -> bool:
 
 func _hover_target_y() -> float:
 	return _base_position.y + sin(_hover_time) * hover_amplitude
+
+
+func spawn_cell_drop(total_cells: int) -> void:
+	if total_cells <= 0 or cell_pickup_scene == null:
+		return
+
+	var pickup = cell_pickup_scene.instantiate()
+	if pickup == null:
+		return
+
+	pickup.amount = total_cells
+	pickup.global_position = global_position + Vector2(0.0, -18.0)
+	get_tree().current_scene.add_child(pickup)

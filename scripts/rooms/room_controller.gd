@@ -87,19 +87,16 @@ func _setup_enemies() -> void:
 func _on_enemy_died(enemy_node: Node) -> void:
 	remaining_enemies = max(0, remaining_enemies - 1)
 	var reward := cells_per_enemy * _get_combo_multiplier()
-	GameState.add_cells(reward)
+	if is_instance_valid(enemy_node) and enemy_node.has_method("spawn_cell_drop"):
+		enemy_node.call("spawn_cell_drop", reward)
+	else:
+		GameState.add_cells(reward)
 
 	emit_signal("enemy_defeated", remaining_enemies)
 	_update_ui()
 
 	if remaining_enemies <= 0 and not is_cleared:
 		_clear_room()
-
-	# Let the enemy finish its own death flow first, then free if still present.
-	if is_instance_valid(enemy_node):
-		await get_tree().process_frame
-		if is_instance_valid(enemy_node):
-			enemy_node.queue_free()
 
 
 func _clear_room() -> void:

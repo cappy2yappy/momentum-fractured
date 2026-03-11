@@ -7,16 +7,22 @@ class_name Echo
 enum State { IDLE, PATROL, ALERT, CHARGE, ATTACK, HITSTUN, DEAD }
 
 @export var patrol_points: Array[Vector2] = []
+@export var patrol_wait_duration: float = 1.0
 @export var detection_range: float = 240.0
 @export var attack_range: float = 48.0
 @export var move_speed: float = 95.0
+@export var move_accel: float = 480.0
 @export var charge_speed: float = 180.0
+@export var charge_accel: float = 640.0
 @export var alert_duration: float = 0.2
 @export var attack_damage: float = 10.0
 @export var attack_knockback: float = 300.0
 @export var attack_duration: float = 0.28
+@export var attack_hitbox_start: float = 0.12
+@export var attack_hitbox_duration: float = 0.1
 @export var attack_cooldown: float = 0.8
-@export var hitstun_duration: float = 0.22
+@export var hitstun_duration: float = 0.3
+@export var cell_pickup_scene: PackedScene = preload("res://scenes/pickups/cell_pickup.tscn")
 
 var state: State = State.PATROL
 var current_patrol_index: int = 0
@@ -25,6 +31,7 @@ var _alert_timer: float = 0.0
 var _attack_timer: float = 0.0
 var _attack_cooldown_timer: float = 0.0
 var _hitstun_timer: float = 0.0
+var _patrol_wait_timer: float = 0.0
 var _is_dying: bool = false
 
 var _player: Node2D = null
@@ -64,11 +71,11 @@ func _physics_process(delta: float) -> void:
 		State.IDLE:
 			_state_idle()
 		State.PATROL:
-			_state_patrol()
+			_state_patrol(delta)
 		State.ALERT:
 			_state_alert(delta)
 		State.CHARGE:
-			_state_charge()
+			_state_charge(delta)
 		State.ATTACK:
 			_state_attack(delta)
 		State.HITSTUN:
@@ -80,35 +87,42 @@ func _physics_process(delta: float) -> void:
 
 
 func _state_idle() -> void:
-	velocity.x = 0.0
+	velocity.x = move_toward(velocity.x, 0.0, move_accel * get_physics_process_delta_time())
 	if _is_player_in_detection_range():
 		_enter_alert_state()
 
 
-func _state_patrol() -> void:
+func _state_patrol(delta: float) -> void:
 	if _is_player_in_detection_range():
 		_enter_alert_state()
 		return
 
 	if patrol_points.is_empty():
-		velocity.x = 0.0
+		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
+		return
+
+	if _patrol_wait_timer > 0.0:
+		_patrol_wait_timer = maxf(0.0, _patrol_wait_timer - delta)
+		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
 		return
 
 	var target: Vector2 = patrol_points[current_patrol_index]
-	var dir: float = sign(target.x - global_position.x)
+	var x_delta: float = target.x - global_position.x
+	var dir: float = sign(x_delta)
 
-	if absf(target.x - global_position.x) < 8.0:
+	if absf(x_delta) < 8.0:
 		current_patrol_index = (current_patrol_index + 1) % patrol_points.size()
-		velocity.x = 0.0
+		_patrol_wait_timer = patrol_wait_duration
+		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
 	else:
-		velocity.x = dir * move_speed
+		velocity.x = move_toward(velocity.x, dir * move_speed, move_accel * delta)
 
 	if sprite and dir != 0.0:
 		sprite.flip_h = dir < 0.0
 
 
 func _state_alert(delta: float) -> void:
-	velocity.x = 0.0
+	velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
 	if not _has_valid_player():
 		state = State.PATROL
 		return
@@ -122,7 +136,7 @@ func _state_alert(delta: float) -> void:
 		state = State.CHARGE
 
 
-func _state_charge() -> void:
+func _state_charge(delta: float) -> void:
 	if not _has_valid_player():
 		state = State.PATROL
 		return
@@ -140,22 +154,22 @@ func _state_charge() -> void:
 	if sprite:
 		sprite.flip_h = direction < 0.0
 
-	if abs_delta_x <= attack_range and _attack_cooldown_timer <= 0.0:
+	if abs_delta_x <= attack_range and _attack_cooldown_timer <= 0.0 and _is_player_in_front(direction):
 		_start_attack(direction)
 		return
 
-	velocity.x = direction * charge_speed
+	velocity.x = move_toward(velocity.x, direction * charge_speed, charge_accel * delta)
 
 
 func _state_attack(delta: float) -> void:
-	velocity.x = 0.0
+	velocity.x = move_toward(velocity.x, 0.0, charge_accel * delta)
 	_attack_timer = maxf(0.0, _attack_timer - delta)
 	if _attack_timer <= 0.0:
 		state = State.CHARGE
 
 
 func _state_hitstun(delta: float) -> void:
-	velocity.x = 0.0
+	velocity.x = move_toward(velocity.x, 0.0, charge_accel * delta)
 	_hitstun_timer = maxf(0.0, _hitstun_timer - delta)
 	if _hitstun_timer > 0.0:
 		return
@@ -169,7 +183,7 @@ func _state_hitstun(delta: float) -> void:
 
 
 func _state_dead() -> void:
-	velocity.x = 0.0
+	velocity.x = move_toward(velocity.x, 0.0, charge_accel * get_physics_process_delta_time())
 
 
 func _start_attack(direction: float) -> void:
@@ -181,12 +195,14 @@ func _start_attack(direction: float) -> void:
 	if hitbox and hitbox.has_method("set_knockback_direction"):
 		hitbox.damage = attack_damage
 		hitbox.set_knockback_direction(Vector2(direction, -0.1), attack_knockback)
+		_enable_hitbox_timed(attack_hitbox_start, attack_hitbox_duration)
+
+
+func _enable_hitbox_timed(delay_before: float, active_duration: float) -> void:
+	await get_tree().create_timer(delay_before).timeout
+	if hitbox and hitbox.has_method("activate") and state == State.ATTACK:
 		hitbox.activate()
-		_disable_hitbox_after(0.12)
-
-
-func _disable_hitbox_after(duration: float) -> void:
-	await get_tree().create_timer(duration).timeout
+	await get_tree().create_timer(active_duration).timeout
 	if hitbox and hitbox.has_method("deactivate"):
 		hitbox.deactivate()
 
@@ -197,12 +213,16 @@ func _enter_alert_state() -> void:
 	velocity.x = 0.0
 
 
-func _on_hit(damage: float, knockback: Vector2, _hitbox_node: Area2D) -> void:
+func _on_hit(_damage: float, knockback: Vector2, _hitbox_node: Area2D) -> void:
 	if _is_dying:
 		return
 
 	velocity = knockback
 	_hitstun_timer = hitstun_duration
+	if body_rect:
+		body_rect.color = Color(1.0, 0.2, 0.2, 1.0)
+		var tween := create_tween()
+		tween.tween_property(body_rect, "color", Color(1.0, 0.3, 0.3, 1.0), 0.12)
 
 	if health and health.is_dead:
 		state = State.DEAD
@@ -227,9 +247,22 @@ func _on_death() -> void:
 		hurtbox.monitoring = false
 
 	var tween := create_tween()
-	tween.tween_property(self, "modulate:a", 0.0, 0.22)
+	tween.tween_property(self, "modulate:a", 0.0, 0.5)
 	await tween.finished
 	queue_free()
+
+
+func spawn_cell_drop(total_cells: int) -> void:
+	if total_cells <= 0 or cell_pickup_scene == null:
+		return
+
+	var pickup = cell_pickup_scene.instantiate()
+	if pickup == null:
+		return
+
+	pickup.amount = total_cells
+	pickup.global_position = global_position + Vector2(0.0, -24.0)
+	get_tree().current_scene.add_child(pickup)
 
 
 func _acquire_player_if_needed() -> void:
@@ -255,3 +288,9 @@ func _is_player_in_detection_range() -> bool:
 		return false
 
 	return global_position.distance_to(_player.global_position) <= detection_range
+
+
+func _is_player_in_front(direction_to_player: float) -> bool:
+	if direction_to_player == 0.0:
+		return true
+	return not (sprite and sprite.flip_h and direction_to_player > 0.0) and not (sprite and not sprite.flip_h and direction_to_player < 0.0)
