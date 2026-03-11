@@ -155,6 +155,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			if velocity.y > JUMP_MIN_VELOCITY:
 				velocity.y = JUMP_MIN_VELOCITY
+			AudioManager.play_sfx("jump")
 			coyote_timer = 0
 			jump_buffer_timer = 0
 		elif is_touching_wall != 0:
@@ -164,6 +165,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			velocity.x = WALL_JUMP_FORCE_X * -is_touching_wall
 			facing_dir = -is_touching_wall
+			AudioManager.play_sfx("jump")
 			is_touching_wall = 0
 			jump_buffer_timer = 0
 	
@@ -263,6 +265,7 @@ func _perform_attack() -> void:
 	
 	# Activate hitbox
 	hitbox.activate()
+	AudioManager.play_sfx("attack_swing")
 	
 	# Reset attacking flag after a short delay
 	await get_tree().create_timer(0.15).timeout

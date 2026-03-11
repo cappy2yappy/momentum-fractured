@@ -139,6 +139,7 @@ func _unlock_doors() -> void:
 				barrier.set_collision_mask_value(1, false)
 
 	_set_exits_locked(false)
+	AudioManager.play_sfx("door_unlock")
 
 
 func _set_exits_locked(locked: bool) -> void:

@@ -13,16 +13,11 @@ var _activated: bool = false
 
 @onready var _label: Label = get_node_or_null("Label")
 @onready var _glow_rect: ColorRect = get_node_or_null("ColorRect")
-@onready var _audio_player: AudioStreamPlayer = AudioStreamPlayer.new()
 
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	_setup_glow()
-
-	_audio_player.name = "CheckpointPing"
-	_audio_player.volume_db = -8.0
-	add_child(_audio_player)
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -45,7 +40,7 @@ func _on_body_entered(body: Node2D) -> void:
 		_label.text = "CHECKPOINT\n(activated)"
 
 	_show_checkpoint_notification(body)
-	_play_checkpoint_ping()
+	AudioManager.play_sfx("checkpoint")
 
 
 func _setup_glow() -> void:
@@ -68,22 +63,3 @@ func _show_checkpoint_notification(body: Node2D) -> void:
 	if hud and hud.has_method("show_notification"):
 		hud.call("show_notification", checkpoint_notification_text, Color(0.76, 1.0, 0.8, 1.0), 1.1)
 
-
-func _play_checkpoint_ping() -> void:
-	var stream := AudioStreamGenerator.new()
-	stream.mix_rate = 44100
-	stream.buffer_length = 0.25
-	_audio_player.stream = stream
-	_audio_player.play()
-
-	var playback = _audio_player.get_stream_playback()
-	if playback == null:
-		return
-
-	var duration := 0.18
-	var total_samples := int(stream.mix_rate * duration)
-	for i in total_samples:
-		var t := float(i) / stream.mix_rate
-		var envelope := 1.0 - (t / duration)
-		var sample := sin(TAU * 880.0 * t) * envelope * 0.25
-		playback.push_frame(Vector2(sample, sample))

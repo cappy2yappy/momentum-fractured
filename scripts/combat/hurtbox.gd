@@ -61,6 +61,7 @@ func _take_hit(hitbox: Area2D) -> void:
 	if bool(hitbox.get("single_hit")) and hitbox.has_method("deactivate"):
 		hitbox.call("deactivate")
 
+	AudioManager.play_sfx("hit_impact")
 	_apply_hit_feedback(owner_node, damage, hitbox)
 
 

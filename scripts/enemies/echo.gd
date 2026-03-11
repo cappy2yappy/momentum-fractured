@@ -216,6 +216,7 @@ func _on_death() -> void:
 
 	state = State.DEAD
 	_is_dying = true
+	AudioManager.play_sfx("enemy_death")
 	velocity = Vector2.ZERO
 	collision_layer = 0
 	collision_mask = 0
