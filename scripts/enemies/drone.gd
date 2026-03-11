@@ -17,6 +17,7 @@ enum State { IDLE, PATROL, ALERT, SHOOT, RETREAT, DEAD }
 @export var hover_speed: float = 2.2
 @export var projectile_scene: PackedScene = preload("res://scenes/enemies/drone_projectile.tscn")
 @export var cell_pickup_scene: PackedScene = preload("res://scenes/pickups/cell_pickup.tscn")
+@export var ai_sleep_distance: float = 960.0
 
 var state: State = State.PATROL
 var _player: Node2D = null
@@ -56,6 +57,12 @@ func _physics_process(delta: float) -> void:
 	_shoot_cooldown_timer = maxf(0.0, _shoot_cooldown_timer - delta)
 	_hover_time += delta * hover_speed
 	_acquire_player_if_needed()
+
+	if _has_valid_player() and global_position.distance_to(_player.global_position) > ai_sleep_distance:
+		state = State.PATROL
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 
 	match state:
 		State.IDLE:
@@ -148,15 +155,18 @@ func _state_retreat(delta: float) -> void:
 func _fire_projectile() -> void:
 	if not _has_valid_player() or projectile_scene == null:
 		return
-
-	var projectile := projectile_scene.instantiate()
-	if projectile == null:
+	if not ProjectilePool.can_spawn_projectile():
 		return
 
 	var spawn_position := muzzle.global_position if muzzle else global_position
-	projectile.global_position = spawn_position
-	projectile.direction = (_player.global_position - spawn_position).normalized()
-	get_tree().current_scene.add_child(projectile)
+	ProjectilePool.spawn_drone_projectile(
+		get_tree().current_scene,
+		spawn_position,
+		(_player.global_position - spawn_position).normalized(),
+		300.0,
+		5.0,
+		3.0
+	)
 
 
 func _on_hit(_damage: float, knockback: Vector2, _hitbox_node: Area2D) -> void:

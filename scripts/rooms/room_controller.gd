@@ -188,7 +188,14 @@ func _remove_enemies() -> void:
 
 
 func _find_player() -> Node:
-	for candidate in get_tree().get_nodes_in_group("player"):
+	if not is_inside_tree():
+		return null
+
+	var tree := get_tree()
+	if tree == null:
+		return null
+
+	for candidate in tree.get_nodes_in_group("player"):
 		return candidate
 	return null
 

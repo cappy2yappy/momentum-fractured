@@ -23,6 +23,7 @@ enum State { IDLE, PATROL, ALERT, CHARGE, ATTACK, HITSTUN, DEAD }
 @export var attack_cooldown: float = 0.8
 @export var hitstun_duration: float = 0.3
 @export var cell_pickup_scene: PackedScene = preload("res://scenes/pickups/cell_pickup.tscn")
+@export var ai_sleep_distance: float = 960.0
 
 var state: State = State.PATROL
 var current_patrol_index: int = 0
@@ -66,6 +67,12 @@ func _physics_process(delta: float) -> void:
 	_player_search_timer = maxf(0.0, _player_search_timer - delta)
 	_attack_cooldown_timer = maxf(0.0, _attack_cooldown_timer - delta)
 	_acquire_player_if_needed()
+
+	if _has_valid_player() and global_position.distance_to(_player.global_position) > ai_sleep_distance:
+		state = State.PATROL
+		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
+		move_and_slide()
+		return
 
 	match state:
 		State.IDLE:

@@ -19,6 +19,14 @@ func _ready() -> void:
 		_particles.emitting = false
 
 
+func _process(_delta: float) -> void:
+	if _particles == null:
+		return
+
+	# Keep particle cost modest if frame rate drops.
+	_particles.amount = 16 if Engine.get_frames_per_second() < 55.0 else 32
+
+
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
