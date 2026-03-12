@@ -222,6 +222,7 @@ func save_to_disk() -> void:
 		"checkpoint_scene_path": checkpoint_scene_path,
 		"checkpoint_spawn_marker": checkpoint_spawn_marker,
 		"pending_spawn_marker": pending_spawn_marker,
+		"abilities_unlocked": abilities_unlocked,
 	}
 	file.store_string(JSON.stringify(payload))
 
