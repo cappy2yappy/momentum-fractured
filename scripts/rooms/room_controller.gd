@@ -173,6 +173,7 @@ func _on_legacy_exit_triggered(body: Node2D) -> void:
 
 
 func _on_player_died() -> void:
+	GameState.register_death()
 	SceneNavigator.respawn_from_checkpoint()
 
 

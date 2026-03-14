@@ -13,6 +13,7 @@ signal checkpoint_updated(scene_path: String, spawn_marker: String)
 signal room_cleared(room_id: String)
 signal combo_changed(combo_count: int)
 signal abilities_changed(abilities: Array[String])
+signal stats_changed(deaths: int, run_time_seconds: int)
 signal state_reset
 
 var cleared_rooms: Dictionary = {}
@@ -31,6 +32,8 @@ var checkpoint_scene_path: String = DEFAULT_START_SCENE
 var checkpoint_spawn_marker: String = DEFAULT_START_SPAWN
 
 var pending_spawn_marker: String = DEFAULT_START_SPAWN
+var death_count: int = 0
+var run_start_unix: int = 0
 
 
 func _ready() -> void:
@@ -55,6 +58,8 @@ func _set_defaults() -> void:
 	combo_count = 0
 	abilities_unlocked.clear()
 	seen_tutorials.clear()
+	death_count = 0
+	run_start_unix = int(Time.get_unix_time_from_system())
 
 
 func _emit_runtime_signals() -> void:
@@ -63,6 +68,7 @@ func _emit_runtime_signals() -> void:
 	emit_signal("checkpoint_updated", checkpoint_scene_path, checkpoint_spawn_marker)
 	emit_signal("combo_changed", combo_count)
 	emit_signal("abilities_changed", abilities_unlocked)
+	emit_signal("stats_changed", death_count, get_run_time_seconds())
 
 
 func is_room_cleared(room_id: String) -> bool:
@@ -185,6 +191,19 @@ func mark_tutorial_seen(tutorial_id: String) -> void:
 	save_to_disk()
 
 
+func register_death() -> void:
+	death_count += 1
+	emit_signal("stats_changed", death_count, get_run_time_seconds())
+	save_to_disk()
+
+
+func get_run_time_seconds() -> int:
+	var start_time: int = run_start_unix
+	if start_time <= 0:
+		start_time = int(Time.get_unix_time_from_system())
+	return max(0, int(Time.get_unix_time_from_system()) - start_time)
+
+
 func reset_progress() -> void:
 	_set_defaults()
 	loaded_from_disk = false
@@ -218,6 +237,8 @@ func get_debug_snapshot() -> Dictionary:
 		"combo_count": combo_count,
 		"abilities_unlocked": abilities_unlocked,
 		"seen_tutorial_count": seen_tutorials.size(),
+		"death_count": death_count,
+		"run_time_seconds": get_run_time_seconds(),
 		"loaded_from_disk": loaded_from_disk,
 	}
 
@@ -240,6 +261,8 @@ func save_to_disk() -> void:
 		"pending_spawn_marker": pending_spawn_marker,
 		"abilities_unlocked": abilities_unlocked,
 		"seen_tutorials": seen_tutorials,
+		"death_count": death_count,
+		"run_start_unix": run_start_unix,
 	}
 	file.store_string(JSON.stringify(payload))
 
@@ -267,6 +290,8 @@ func load_from_disk() -> bool:
 	checkpoint_spawn_marker = String(data.get("checkpoint_spawn_marker", DEFAULT_START_SPAWN))
 	pending_spawn_marker = String(data.get("pending_spawn_marker", checkpoint_spawn_marker))
 	seen_tutorials = data.get("seen_tutorials", {})
+	death_count = int(data.get("death_count", 0))
+	run_start_unix = int(data.get("run_start_unix", int(Time.get_unix_time_from_system())))
 	abilities_unlocked.clear()
 	for ability in data.get("abilities_unlocked", []):
 		abilities_unlocked.append(String(ability))

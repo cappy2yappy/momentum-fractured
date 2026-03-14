@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/rooms/ability_unlock_trigger.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/ui/victory_screen.tscn" id="7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(1200, 64)
@@ -132,3 +133,5 @@ position = Vector2(640, 560)
 position = Vector2(220, 600)
 
 [node name="HUD" parent="." instance=ExtResource("5")]
+
+[node name="VictoryScreen" parent="." instance=ExtResource("7")]
