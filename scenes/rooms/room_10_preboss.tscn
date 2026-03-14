@@ -1,0 +1,227 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
+[ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(1700, 64)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 760)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(64, 420)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(220, 40)
+
+[node name="Room10PreBoss" type="Node2D"]
+script = ExtResource("3")
+room_id = "room_10_preboss"
+player_node = NodePath("Kaze")
+enemies_node = NodePath("Enemies")
+door_barriers = [NodePath("Environment/RightDoorBarrier")]
+door_exits = [NodePath("Environment/LeftDoor"), NodePath("Environment/RightDoor")]
+enemy_counter_label = NodePath("HUD/EnemyCounter")
+cells_per_enemy = 10
+door_unlock_delay = 0.35
+
+[node name="RoomCamera" type="Camera2D" parent="."]
+position = Vector2(900, 410)
+script = ExtResource("5")
+player_path = NodePath("../Kaze")
+room_bounds = Rect2(0, 0, 1800, 820)
+follow_speed = 8.0
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="spawn_default" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(220, 700)
+
+[node name="entry_from_room9" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(220, 700)
+
+[node name="entry_from_room11" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1540, 700)
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Environment"]
+position = Vector2(900, 780)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Floor"]
+offset_left = -850.0
+offset_top = -32.0
+offset_right = 850.0
+offset_bottom = 32.0
+color = Color(0.2, 0.14, 0.2, 1)
+
+[node name="Ceiling" type="StaticBody2D" parent="Environment"]
+position = Vector2(900, 40)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ceiling"]
+shape = SubResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Ceiling"]
+offset_left = -850.0
+offset_top = -32.0
+offset_right = 850.0
+offset_bottom = 32.0
+color = Color(0.2, 0.14, 0.2, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(40, 410)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftWall"]
+shape = SubResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/LeftWall"]
+offset_left = -32.0
+offset_top = -380.0
+offset_right = 32.0
+offset_bottom = 380.0
+color = Color(0.2, 0.14, 0.2, 1)
+
+[node name="RightWall" type="StaticBody2D" parent="Environment"]
+position = Vector2(1760, 410)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightWall"]
+shape = SubResource("2")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightWall"]
+offset_left = -32.0
+offset_top = -380.0
+offset_right = 32.0
+offset_bottom = 380.0
+color = Color(0.2, 0.14, 0.2, 1)
+
+[node name="RightDoorBarrier" type="StaticBody2D" parent="Environment"]
+position = Vector2(1760, 210)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoorBarrier"]
+shape = SubResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/RightDoorBarrier"]
+offset_left = -32.0
+offset_top = -210.0
+offset_right = 32.0
+offset_bottom = 210.0
+color = Color(0.85, 0.2, 0.2, 0.65)
+
+[node name="PlatformLeft" type="StaticBody2D" parent="Environment"]
+position = Vector2(560, 610)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/PlatformLeft"]
+shape = SubResource("4")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/PlatformLeft"]
+offset_left = -150.0
+offset_top = -20.0
+offset_right = 150.0
+offset_bottom = 20.0
+color = Color(0.35, 0.24, 0.34, 1)
+
+[node name="PlatformRight" type="StaticBody2D" parent="Environment"]
+position = Vector2(1240, 610)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/PlatformRight"]
+shape = SubResource("4")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/PlatformRight"]
+offset_left = -150.0
+offset_top = -20.0
+offset_right = 150.0
+offset_bottom = 20.0
+color = Color(0.35, 0.24, 0.34, 1)
+
+[node name="CenterPlatform" type="StaticBody2D" parent="Environment"]
+position = Vector2(900, 500)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/CenterPlatform"]
+shape = SubResource("5")
+
+[node name="ColorRect" type="ColorRect" parent="Environment/CenterPlatform"]
+offset_left = -110.0
+offset_top = -20.0
+offset_right = 110.0
+offset_bottom = 20.0
+color = Color(0.35, 0.24, 0.34, 1)
+
+[node name="LeftDoor" type="Area2D" parent="Environment"]
+position = Vector2(72, 560)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4")
+target_scene_path = "res://scenes/rooms/room_09_breather.tscn"
+target_spawn_marker = "entry_from_room10"
+door_prompt_text = "← SAFE ROOM"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoor"]
+shape = SubResource("3")
+
+[node name="Label" type="Label" parent="Environment/LeftDoor"]
+offset_left = -84.0
+offset_top = -236.0
+offset_right = 84.0
+offset_bottom = -178.0
+horizontal_alignment = 1
+text = "← SAFE ROOM\n(open)"
+
+[node name="RightDoor" type="Area2D" parent="Environment"]
+position = Vector2(1728, 560)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4")
+target_scene_path = "res://scenes/rooms/room_11_boss.tscn"
+target_spawn_marker = "entry_from_room10"
+door_prompt_text = "→ BOSS"
+requires_room_clear = true
+room_id = "room_10_preboss"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoor"]
+shape = SubResource("3")
+
+[node name="Label" type="Label" parent="Environment/RightDoor"]
+offset_left = -64.0
+offset_top = -236.0
+offset_right = 64.0
+offset_bottom = -178.0
+horizontal_alignment = 1
+text = "→ BOSS\n(locked)"
+
+[node name="Kaze" parent="." instance=ExtResource("1")]
+position = Vector2(220, 700)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Echo1" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(560, 570)
+
+[node name="Echo2" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(900, 470)
+
+[node name="Echo3" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(1240, 570)
+
+[node name="Echo4" parent="Enemies" instance=ExtResource("2")]
+position = Vector2(900, 700)
+
+[node name="HUD" parent="." instance=ExtResource("6")]

@@ -15,7 +15,7 @@ size = Vector2(1200, 64)
 size = Vector2(64, 640)
 
 [sub_resource type="RectangleShape2D" id="3"]
-size = Vector2(64, 400)
+size = Vector2(64, 360)
 
 [sub_resource type="RectangleShape2D" id="4"]
 size = Vector2(220, 160)
@@ -23,9 +23,9 @@ size = Vector2(220, 160)
 [sub_resource type="RectangleShape2D" id="5"]
 size = Vector2(180, 120)
 
-[node name="Room04Checkpoint" type="Node2D"]
+[node name="Room09Breather" type="Node2D"]
 script = ExtResource("2")
-room_id = "room_04_checkpoint"
+room_id = "room_09_breather"
 player_node = NodePath("Kaze")
 door_exits = [NodePath("Environment/LeftDoor"), NodePath("Environment/RightDoor")]
 enemy_counter_label = NodePath("HUD/EnemyCounter")
@@ -42,14 +42,14 @@ follow_speed = 7.0
 [node name="spawn_default" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(220, 600)
 
-[node name="entry_from_room3" type="Marker2D" parent="SpawnPoints"]
+[node name="entry_from_room8" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(220, 600)
+
+[node name="entry_from_room10" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1040, 600)
 
 [node name="spawn_checkpoint" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(640, 600)
-
-[node name="entry_from_room5" type="Marker2D" parent="SpawnPoints"]
-position = Vector2(1030, 600)
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -65,7 +65,7 @@ offset_left = -600.0
 offset_top = -32.0
 offset_right = 600.0
 offset_bottom = 32.0
-color = Color(0.11, 0.27, 0.22, 1)
+color = Color(0.1, 0.25, 0.23, 1)
 
 [node name="Ceiling" type="StaticBody2D" parent="Environment"]
 position = Vector2(640, 40)
@@ -79,7 +79,7 @@ offset_left = -600.0
 offset_top = -32.0
 offset_right = 600.0
 offset_bottom = 32.0
-color = Color(0.11, 0.27, 0.22, 1)
+color = Color(0.1, 0.25, 0.23, 1)
 
 [node name="LeftWall" type="StaticBody2D" parent="Environment"]
 position = Vector2(40, 360)
@@ -93,7 +93,7 @@ offset_left = -32.0
 offset_top = -320.0
 offset_right = 32.0
 offset_bottom = 320.0
-color = Color(0.11, 0.27, 0.22, 1)
+color = Color(0.1, 0.25, 0.23, 1)
 
 [node name="RightWall" type="StaticBody2D" parent="Environment"]
 position = Vector2(1240, 360)
@@ -107,47 +107,47 @@ offset_left = -32.0
 offset_top = -320.0
 offset_right = 32.0
 offset_bottom = 320.0
-color = Color(0.11, 0.27, 0.22, 1)
+color = Color(0.1, 0.25, 0.23, 1)
 
 [node name="LeftDoor" type="Area2D" parent="Environment"]
 position = Vector2(72, 460)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3")
-target_scene_path = "res://scenes/rooms/room_01_combat.tscn"
-target_spawn_marker = "entry_from_room4"
-door_prompt_text = "← BACKTRACK"
+target_scene_path = "res://scenes/rooms/room_08_mixed_mayhem.tscn"
+target_spawn_marker = "entry_from_room9"
+door_prompt_text = "← MAYHEM"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/LeftDoor"]
 shape = SubResource("3")
 
 [node name="Label" type="Label" parent="Environment/LeftDoor"]
-offset_left = -76.0
+offset_left = -72.0
 offset_top = -236.0
-offset_right = 76.0
+offset_right = 72.0
 offset_bottom = -178.0
 horizontal_alignment = 1
-text = "← BACKTRACK\n(open)"
+text = "← MAYHEM\n(open)"
 
 [node name="RightDoor" type="Area2D" parent="Environment"]
 position = Vector2(1208, 460)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3")
-target_scene_path = "res://scenes/rooms/room_05_vertical_combat.tscn"
-target_spawn_marker = "entry_from_room4"
-door_prompt_text = "→ ROOM 5"
+target_scene_path = "res://scenes/rooms/room_10_preboss.tscn"
+target_spawn_marker = "entry_from_room9"
+door_prompt_text = "→ PRE-BOSS"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoor"]
 shape = SubResource("3")
 
 [node name="Label" type="Label" parent="Environment/RightDoor"]
-offset_left = -60.0
+offset_left = -74.0
 offset_top = -236.0
-offset_right = 60.0
+offset_right = 74.0
 offset_bottom = -178.0
 horizontal_alignment = 1
-text = "→ ROOM 5\n(locked)"
+text = "→ PRE-BOSS\n(open)"
 
 [node name="Checkpoint" type="Area2D" parent="Environment"]
 position = Vector2(640, 560)
@@ -177,7 +177,7 @@ vertical_alignment = 1
 text = "CHECKPOINT\n(stand here)"
 
 [node name="HealthRefill" type="Area2D" parent="Environment"]
-position = Vector2(980, 560)
+position = Vector2(920, 560)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7")
