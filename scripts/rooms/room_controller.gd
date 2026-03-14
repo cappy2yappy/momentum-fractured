@@ -28,17 +28,15 @@ func _ready() -> void:
 
 	_player = get_node_or_null(player_node) if not player_node.is_empty() else _find_player()
 	_connect_player_signals()
-	var game_state := _game_state()
-	if _player and game_state:
-		game_state.capture_player_state(_player)
+	if _player:
+		GameState.capture_player_state(_player)
 
 	_initialize_room_state()
 	_update_ui()
 
 
 func _initialize_room_state() -> void:
-	var game_state := _game_state()
-	if not room_id.is_empty() and game_state and game_state.is_room_cleared(room_id):
+	if not room_id.is_empty() and GameState.is_room_cleared(room_id):
 		is_cleared = true
 		_remove_enemies()
 		_unlock_doors()
@@ -47,8 +45,8 @@ func _initialize_room_state() -> void:
 	_setup_enemies()
 	if total_enemies <= 0:
 		is_cleared = true
-		if not room_id.is_empty() and game_state:
-			game_state.mark_room_cleared(room_id)
+		if not room_id.is_empty():
+			GameState.mark_room_cleared(room_id)
 		_unlock_doors()
 	else:
 		_lock_doors()
@@ -88,9 +86,11 @@ func _setup_enemies() -> void:
 
 func _on_enemy_died(enemy_node: Node) -> void:
 	remaining_enemies = max(0, remaining_enemies - 1)
-	var game_state := _game_state()
-	if game_state:
-		game_state.add_cells(cells_per_enemy)
+	var reward := cells_per_enemy * _get_combo_multiplier()
+	if is_instance_valid(enemy_node) and enemy_node.has_method("spawn_cell_drop"):
+		enemy_node.call("spawn_cell_drop", reward)
+	else:
+		GameState.add_cells(reward)
 
 	emit_signal("enemy_defeated", remaining_enemies)
 	_update_ui()
@@ -98,21 +98,13 @@ func _on_enemy_died(enemy_node: Node) -> void:
 	if remaining_enemies <= 0 and not is_cleared:
 		_clear_room()
 
-	# Let the enemy finish its own death flow first, then free if still present.
-	if is_instance_valid(enemy_node):
-		await get_tree().process_frame
-		if is_instance_valid(enemy_node):
-			enemy_node.queue_free()
-
 
 func _clear_room() -> void:
 	is_cleared = true
 	emit_signal("room_cleared")
 
 	if not room_id.is_empty():
-		var game_state := _game_state()
-		if game_state:
-			game_state.mark_room_cleared(room_id)
+		GameState.mark_room_cleared(room_id)
 
 	if door_unlock_delay > 0.0:
 		await get_tree().create_timer(door_unlock_delay).timeout
@@ -144,6 +136,7 @@ func _unlock_doors() -> void:
 				barrier.set_collision_mask_value(1, false)
 
 	_set_exits_locked(false)
+	AudioManager.play_sfx("door_unlock")
 
 
 func _set_exits_locked(locked: bool) -> void:
@@ -170,24 +163,16 @@ func _on_legacy_exit_triggered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 
-	var game_state := _game_state()
-	if game_state:
-		game_state.capture_player_state(body)
-	var scene_navigator := _scene_navigator()
-	if scene_navigator:
-		scene_navigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
+	GameState.capture_player_state(body)
+	SceneNavigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
 
 
 func _on_player_died() -> void:
-	var scene_navigator := _scene_navigator()
-	if scene_navigator:
-		scene_navigator.respawn_from_checkpoint()
+	SceneNavigator.respawn_from_checkpoint()
 
 
 func _on_player_health_changed(current: float, max_health: float) -> void:
-	var game_state := _game_state()
-	if game_state:
-		game_state.set_player_health(current, max_health)
+	GameState.set_player_health(current, max_health)
 
 
 func _remove_enemies() -> void:
@@ -203,7 +188,14 @@ func _remove_enemies() -> void:
 
 
 func _find_player() -> Node:
-	for candidate in get_tree().get_nodes_in_group("player"):
+	if not is_inside_tree():
+		return null
+
+	var tree := get_tree()
+	if tree == null:
+		return null
+
+	for candidate in tree.get_nodes_in_group("player"):
 		return candidate
 	return null
 
@@ -221,9 +213,13 @@ func _update_ui() -> void:
 		counter.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 
-func _game_state() -> Node:
-	return get_node_or_null("/root/GameState")
+func _get_combo_multiplier() -> int:
+	if not GameState.has_method("get_combo_count"):
+		return 1
 
-
-func _scene_navigator() -> Node:
-	return get_node_or_null("/root/SceneNavigator")
+	var combo_count := int(GameState.call("get_combo_count"))
+	if combo_count >= 10:
+		return 3
+	if combo_count >= 5:
+		return 2
+	return 1

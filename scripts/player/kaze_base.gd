@@ -39,9 +39,12 @@ const COYOTE_TIME := 0.2
 const JUMP_BUFFER_TIME := 0.2
 
 # COMBAT
-const ATTACK_COOLDOWN := 0.3
-const ATTACK_DAMAGE := 15.0
-const ATTACK_KNOCKBACK := 400.0
+const ATTACK_COOLDOWN := 0.24
+const ATTACK_DAMAGE := 14.0
+const ATTACK_DAMAGE_2 := 17.0
+const ATTACK_DAMAGE_3 := 22.0
+const ATTACK_KNOCKBACK := 340.0
+const COMBO_RESET_WINDOW := 0.5
 
 # STATE
 var facing_dir := 1
@@ -57,6 +60,8 @@ var is_dead := false
 var _was_on_floor := false
 var attack_cooldown_timer := 0.0
 var is_attacking := false
+var combo_reset_timer := 0.0
+var combo_step := 0
 
 # NODES
 @onready var hitbox: Area2D = $Hitbox
@@ -88,6 +93,7 @@ func _physics_process(delta: float) -> void:
 	dash_buffer_timer = max(0.0, dash_buffer_timer - delta)
 	dash_cooldown_timer = max(0.0, dash_cooldown_timer - delta)
 	attack_cooldown_timer = max(0.0, attack_cooldown_timer - delta)
+	combo_reset_timer = max(0.0, combo_reset_timer - delta)
 	
 	# ATTACK
 	if Input.is_action_just_pressed("attack_light") and attack_cooldown_timer <= 0:
@@ -149,6 +155,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			if velocity.y > JUMP_MIN_VELOCITY:
 				velocity.y = JUMP_MIN_VELOCITY
+			AudioManager.play_sfx("jump")
 			coyote_timer = 0
 			jump_buffer_timer = 0
 		elif is_touching_wall != 0:
@@ -158,6 +165,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			velocity.x = WALL_JUMP_FORCE_X * -is_touching_wall
 			facing_dir = -is_touching_wall
+			AudioManager.play_sfx("jump")
 			is_touching_wall = 0
 			jump_buffer_timer = 0
 	
@@ -239,13 +247,25 @@ func _perform_attack() -> void:
 	
 	is_attacking = true
 	attack_cooldown_timer = ATTACK_COOLDOWN
+	combo_step = combo_step + 1 if combo_reset_timer > 0.0 else 1
+	if combo_step > 3:
+		combo_step = 1
+	combo_reset_timer = COMBO_RESET_WINDOW
 	
 	# Set hitbox properties
-	hitbox.damage = ATTACK_DAMAGE
+	match combo_step:
+		1:
+			hitbox.damage = ATTACK_DAMAGE
+		2:
+			hitbox.damage = ATTACK_DAMAGE_2
+		_:
+			hitbox.damage = ATTACK_DAMAGE_3
 	hitbox.set_knockback_direction(Vector2(facing_dir, -0.3), ATTACK_KNOCKBACK)
+	hitbox.set_meta("is_final_combo_hit", combo_step == 3)
 	
 	# Activate hitbox
 	hitbox.activate()
+	AudioManager.play_sfx("attack_swing")
 	
 	# Reset attacking flag after a short delay
 	await get_tree().create_timer(0.15).timeout
@@ -255,6 +275,8 @@ func _perform_attack() -> void:
 func take_damage(amount: float) -> void:
 	if is_dead or amount <= 0.0:
 		return
+
+	GameState.reset_combo()
 
 	if health:
 		health.take_damage(amount)

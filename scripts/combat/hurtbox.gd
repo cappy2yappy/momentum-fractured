@@ -9,6 +9,12 @@ signal hit_received(damage: float, knockback: Vector2, hitbox: Area2D)
 @export var health_component: NodePath
 @export var knockback_multiplier: float = 1.0
 @export var invincibility_duration: float = 0.0
+@export var hit_pause_duration: float = 0.05
+@export var heavy_hit_threshold: float = 20.0
+@export var player_damage_shake_duration: float = 0.2
+@export var player_damage_shake_strength: float = 5.0
+@export var heavy_hit_shake_duration: float = 0.1
+@export var heavy_hit_shake_strength: float = 6.0
 
 var invincibility_timer: float = 0.0
 var health: Node = null
@@ -55,6 +61,38 @@ func _take_hit(hitbox: Area2D) -> void:
 	if bool(hitbox.get("single_hit")) and hitbox.has_method("deactivate"):
 		hitbox.call("deactivate")
 
+	AudioManager.play_sfx("hit_impact")
+	_apply_hit_feedback(owner_node, damage, hitbox)
+
 
 func is_invincible() -> bool:
 	return invincibility_timer > 0.0
+
+
+func _apply_hit_feedback(attacker: Node, damage: float, hitbox: Area2D) -> void:
+	CombatFeedback.flash_target(owner)
+	CombatFeedback.spawn_damage_number(_damage_number_position(), damage, damage >= heavy_hit_threshold)
+
+	if attacker and attacker.is_in_group("player"):
+		GameState.register_combo_hit()
+		var is_final_combo_hit := bool(hitbox.get_meta("is_final_combo_hit", false))
+		if damage >= heavy_hit_threshold and is_final_combo_hit:
+			CombatFeedback.hit_pause(hit_pause_duration)
+			var camera := get_viewport().get_camera_2d()
+			if camera and camera.has_method("shake"):
+				camera.call("shake", heavy_hit_shake_duration, heavy_hit_shake_strength)
+		return
+
+	if owner and owner.is_in_group("player"):
+		GameState.reset_combo()
+		var camera := get_viewport().get_camera_2d()
+		if camera and camera.has_method("shake"):
+			camera.call("shake", player_damage_shake_duration, player_damage_shake_strength)
+
+
+func _damage_number_position() -> Vector2:
+	if owner and owner is Node2D:
+		return (owner as Node2D).global_position
+	if get_parent() and get_parent() is Node2D:
+		return (get_parent() as Node2D).global_position
+	return global_position
