@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="4"]
 [ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/guardian.tscn" id="7"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(1200, 64)
@@ -149,7 +150,7 @@ position = Vector2(500, 600)
 [node name="Echo2" parent="Enemies" instance=ExtResource("2")]
 position = Vector2(760, 600)
 
-[node name="Echo3" parent="Enemies" instance=ExtResource("2")]
+[node name="Guardian1" parent="Enemies" instance=ExtResource("7")]
 position = Vector2(980, 600)
 
 [node name="HUD" parent="." instance=ExtResource("6")]
