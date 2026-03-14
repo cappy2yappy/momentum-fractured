@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6")
 [autoload]
 
 GameState="*res://scripts/systems/game_state.gd"
+AbilityManager="*res://scripts/systems/ability_manager.gd"
 SceneNavigator="*res://scripts/systems/scene_navigator.gd"
 DebugCommands="*res://scripts/systems/debug_commands.gd"
 CombatFeedback="*res://scripts/systems/combat_feedback.gd"
