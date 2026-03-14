@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3]
+[gd_scene load_steps=22 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/rooms/moving_platform.gd" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/drone.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://scenes/hazards/crusher.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/guardian.tscn" id="11"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(420, 64)
@@ -283,7 +284,7 @@ position = Vector2(160, 600)
 [node name="Echo1" parent="Enemies" instance=ExtResource("2")]
 position = Vector2(760, 560)
 
-[node name="Echo2" parent="Enemies" instance=ExtResource("2")]
+[node name="Guardian1" parent="Enemies" instance=ExtResource("11")]
 position = Vector2(1210, 450)
 
 [node name="Drone1" parent="Enemies" instance=ExtResource("9")]

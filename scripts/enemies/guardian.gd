@@ -23,6 +23,7 @@ enum State { IDLE, APPROACH, WINDUP, ATTACK, COUNTER, HITSTUN, DEAD }
 @export var heavy_slash_knockback: float = 560.0
 @export var counter_knockback: float = 470.0
 @export var hitstun_duration: float = 0.22
+@export var enrage_health_ratio: float = 0.3
 @export_range(30.0, 180.0, 1.0) var shield_block_angle_degrees: float = 120.0
 
 const GRAVITY: float = 1980.0
@@ -47,6 +48,7 @@ var _anim_timer: float = 0.0
 var _player: Node2D = null
 
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var shield_indicator: Polygon2D = get_node_or_null("ShieldIndicator")
 @onready var hurtbox: Area2D = $Hurtbox
 @onready var health: Health = $Health
 
@@ -295,7 +297,7 @@ func _update_enrage_state() -> void:
 	if health == null or is_enraged:
 		return
 
-	if health.current_health <= health.max_health * 0.5:
+	if health.current_health <= health.max_health * enrage_health_ratio:
 		is_enraged = true
 		shield_raised = false
 
@@ -388,3 +390,8 @@ func _animate_sprite(delta: float) -> void:
 		sprite.modulate = Color(1.0, 0.42, 0.35, 1.0)
 	else:
 		sprite.modulate = Color(0.97, 0.6, 0.35, 1.0)
+
+	if shield_indicator:
+		shield_indicator.visible = shield_raised and state != State.DEAD
+		shield_indicator.scale.x = 1.0 if facing_dir > 0 else -1.0
+		shield_indicator.position.x = 20.0 * facing_dir
