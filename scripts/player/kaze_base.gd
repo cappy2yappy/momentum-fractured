@@ -277,6 +277,7 @@ func take_damage(amount: float) -> void:
 		return
 
 	GameState.reset_combo()
+	AudioManager.play_sfx("damage_taken")
 
 	if health:
 		health.take_damage(amount)

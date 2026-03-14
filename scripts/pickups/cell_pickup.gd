@@ -45,7 +45,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _collect() -> void:
 	GameState.add_cells(amount)
-	AudioManager.play_sfx("checkpoint")
+	AudioManager.play_sfx("cell_pickup")
 	queue_free()
 
 

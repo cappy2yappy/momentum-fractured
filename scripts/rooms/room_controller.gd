@@ -15,6 +15,8 @@ signal enemy_defeated(remaining: int)
 @export var enemy_counter_label: NodePath
 @export var cells_per_enemy: int = 5
 @export var door_unlock_delay: float = 0.2
+@export var combat_music_track: String = "combat_theme"
+@export var cleared_music_track: String = "exploration_theme"
 
 var total_enemies: int = 0
 var remaining_enemies: int = 0
@@ -33,13 +35,14 @@ func _ready() -> void:
 
 	_initialize_room_state()
 	_update_ui()
+	_play_room_music()
 
 
 func _initialize_room_state() -> void:
 	if not room_id.is_empty() and GameState.is_room_cleared(room_id):
 		is_cleared = true
 		_remove_enemies()
-		_unlock_doors()
+		_unlock_doors(false)
 		return
 
 	_setup_enemies()
@@ -47,7 +50,7 @@ func _initialize_room_state() -> void:
 		is_cleared = true
 		if not room_id.is_empty():
 			GameState.mark_room_cleared(room_id)
-		_unlock_doors()
+		_unlock_doors(false)
 	else:
 		_lock_doors()
 
@@ -108,8 +111,9 @@ func _clear_room() -> void:
 
 	if door_unlock_delay > 0.0:
 		await get_tree().create_timer(door_unlock_delay).timeout
-	_unlock_doors()
+	_unlock_doors(true)
 	_update_ui()
+	_play_room_music()
 
 
 func _lock_doors() -> void:
@@ -125,7 +129,7 @@ func _lock_doors() -> void:
 	_set_exits_locked(true)
 
 
-func _unlock_doors() -> void:
+func _unlock_doors(play_unlock_sfx: bool = true) -> void:
 	for barrier_path in door_barriers:
 		var barrier := get_node_or_null(barrier_path)
 		if barrier:
@@ -136,7 +140,8 @@ func _unlock_doors() -> void:
 				barrier.set_collision_mask_value(1, false)
 
 	_set_exits_locked(false)
-	AudioManager.play_sfx("door_unlock")
+	if play_unlock_sfx:
+		AudioManager.play_sfx("door_unlock")
 
 
 func _set_exits_locked(locked: bool) -> void:
@@ -223,3 +228,14 @@ func _get_combo_multiplier() -> int:
 	if combo_count >= 5:
 		return 2
 	return 1
+
+
+func _play_room_music() -> void:
+	if total_enemies > 0 and not is_cleared:
+		var track := combat_music_track
+		if room_id == "room_11_boss" and combat_music_track == "combat_theme":
+			track = "boss_theme"
+		AudioManager.play_music(track)
+		return
+
+	AudioManager.play_music(cleared_music_track)

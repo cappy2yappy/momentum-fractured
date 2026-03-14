@@ -307,6 +307,7 @@ func _on_death() -> void:
 	velocity = Vector2.ZERO
 	collision_layer = 0
 	collision_mask = 0
+	AudioManager.play_sfx("enemy_death")
 
 	if hurtbox:
 		hurtbox.set_deferred("monitoring", false)
