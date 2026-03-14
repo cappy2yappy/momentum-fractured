@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3]
+[gd_scene load_steps=24 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="2"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" path="res://scenes/hazards/saw.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/hazards/laser.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://scenes/hazards/fire_pit.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/ui/tutorial_popup.tscn" id="11"]
+[ext_resource type="Script" path="res://scripts/ui/tutorial_trigger.gd" id="12"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(520, 64)
@@ -40,6 +42,9 @@ size = Vector2(2200, 160)
 
 [sub_resource type="RectangleShape2D" id="10"]
 size = Vector2(180, 40)
+
+[sub_resource type="RectangleShape2D" id="11"]
+size = Vector2(260, 160)
 
 [node name="Room02Platforming" type="Node2D"]
 script = ExtResource("2")
@@ -319,7 +324,19 @@ instant_kill = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/BottomVoid"]
 shape = SubResource("9")
 
+[node name="TutorialHazard" type="Area2D" parent="Environment"]
+position = Vector2(620, 690)
+script = ExtResource("12")
+tutorial_id = "room02_hazards"
+message = "Avoid hazards or respawn at checkpoint."
+popup_path = NodePath("../../TutorialPopup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/TutorialHazard"]
+shape = SubResource("11")
+
 [node name="Kaze" parent="." instance=ExtResource("1")]
 position = Vector2(140, 600)
 
 [node name="HUD" parent="." instance=ExtResource("6")]
+
+[node name="TutorialPopup" parent="." instance=ExtResource("11")]

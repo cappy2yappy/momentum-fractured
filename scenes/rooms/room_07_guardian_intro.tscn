@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=17 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="5"]
 [ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="6"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/ui/tutorial_popup.tscn" id="8"]
+[ext_resource type="Script" path="res://scripts/ui/tutorial_trigger.gd" id="9"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(1320, 64)
@@ -25,6 +27,9 @@ size = Vector2(220, 42)
 
 [sub_resource type="RectangleShape2D" id="6"]
 size = Vector2(240, 42)
+
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(260, 180)
 
 [node name="Room07GuardianIntro" type="Node2D"]
 script = ExtResource("4")
@@ -211,6 +216,16 @@ offset_bottom = -158.0
 horizontal_alignment = 1
 text = "→ MAYHEM\n(locked)"
 
+[node name="TutorialGuardian" type="Area2D" parent="Environment"]
+position = Vector2(920, 620)
+script = ExtResource("9")
+tutorial_id = "room07_guardian"
+message = "Some enemies block frontal attacks - attack from behind."
+popup_path = NodePath("../../TutorialPopup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/TutorialGuardian"]
+shape = SubResource("7")
+
 [node name="Kaze" parent="." instance=ExtResource("1")]
 position = Vector2(180, 600)
 
@@ -223,3 +238,5 @@ position = Vector2(920, 620)
 position = Vector2(560, 520)
 
 [node name="HUD" parent="." instance=ExtResource("7")]
+
+[node name="TutorialPopup" parent="." instance=ExtResource("8")]

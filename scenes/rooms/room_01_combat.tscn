@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="2"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="4"]
 [ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="5"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/ui/tutorial_popup.tscn" id="7"]
+[ext_resource type="Script" path="res://scripts/ui/tutorial_trigger.gd" id="8"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(1200, 64)
@@ -15,6 +17,12 @@ size = Vector2(64, 640)
 
 [sub_resource type="RectangleShape2D" id="3"]
 size = Vector2(64, 400)
+
+[sub_resource type="RectangleShape2D" id="4"]
+size = Vector2(240, 160)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(260, 180)
 
 [node name="Room01Combat" type="Node2D"]
 script = ExtResource("3")
@@ -138,6 +146,42 @@ offset_bottom = -178.0
 horizontal_alignment = 1
 text = "→ NEXT\n(locked)"
 
+[node name="TutorialMoveStart" type="Area2D" parent="Environment"]
+script = ExtResource("8")
+tutorial_id = "room01_move_jump"
+message = "WASD to move, SPACE to jump."
+popup_path = NodePath("../../TutorialPopup")
+show_on_ready = true
+trigger_on_body_enter = false
+
+[node name="TutorialAttack" type="Area2D" parent="Environment"]
+position = Vector2(540, 560)
+script = ExtResource("8")
+tutorial_id = "room01_attack"
+message = "Left Click to attack."
+popup_path = NodePath("../../TutorialPopup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/TutorialAttack"]
+shape = SubResource("4")
+
+[node name="TutorialFirstKill" type="Area2D" parent="Environment"]
+script = ExtResource("8")
+tutorial_id = "room01_first_kill"
+message = "Defeat all enemies to unlock doors."
+popup_path = NodePath("../../TutorialPopup")
+trigger_on_body_enter = false
+show_after_first_enemy_defeat = true
+room_controller_path = NodePath("../..")
+
+[node name="TutorialRoomClear" type="Area2D" parent="Environment"]
+script = ExtResource("8")
+tutorial_id = "room01_room_clear"
+message = "Walk into the door to continue."
+popup_path = NodePath("../../TutorialPopup")
+trigger_on_body_enter = false
+show_on_room_clear = true
+room_controller_path = NodePath("../..")
+
 [node name="Kaze" parent="." instance=ExtResource("1")]
 position = Vector2(200, 600)
 
@@ -153,3 +197,5 @@ position = Vector2(760, 600)
 position = Vector2(980, 600)
 
 [node name="HUD" parent="." instance=ExtResource("6")]
+
+[node name="TutorialPopup" parent="." instance=ExtResource("7")]

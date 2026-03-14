@@ -19,6 +19,7 @@ var cleared_rooms: Dictionary = {}
 var cells: int = 0
 var combo_count: int = 0
 var abilities_unlocked: Array[String] = []
+var seen_tutorials: Dictionary = {}
 var loaded_from_disk: bool = false
 
 var player_health: float = 100.0
@@ -53,6 +54,7 @@ func _set_defaults() -> void:
 	pending_spawn_marker = DEFAULT_START_SPAWN
 	combo_count = 0
 	abilities_unlocked.clear()
+	seen_tutorials.clear()
 
 
 func _emit_runtime_signals() -> void:
@@ -170,6 +172,19 @@ func unlock_ability(ability_id: String) -> void:
 	save_to_disk()
 
 
+func has_seen_tutorial(tutorial_id: String) -> bool:
+	if tutorial_id.is_empty():
+		return true
+	return bool(seen_tutorials.get(tutorial_id, false))
+
+
+func mark_tutorial_seen(tutorial_id: String) -> void:
+	if tutorial_id.is_empty() or has_seen_tutorial(tutorial_id):
+		return
+	seen_tutorials[tutorial_id] = true
+	save_to_disk()
+
+
 func reset_progress() -> void:
 	_set_defaults()
 	loaded_from_disk = false
@@ -202,6 +217,7 @@ func get_debug_snapshot() -> Dictionary:
 		"cleared_room_count": cleared_rooms.size(),
 		"combo_count": combo_count,
 		"abilities_unlocked": abilities_unlocked,
+		"seen_tutorial_count": seen_tutorials.size(),
 		"loaded_from_disk": loaded_from_disk,
 	}
 
@@ -223,6 +239,7 @@ func save_to_disk() -> void:
 		"checkpoint_spawn_marker": checkpoint_spawn_marker,
 		"pending_spawn_marker": pending_spawn_marker,
 		"abilities_unlocked": abilities_unlocked,
+		"seen_tutorials": seen_tutorials,
 	}
 	file.store_string(JSON.stringify(payload))
 
@@ -249,6 +266,7 @@ func load_from_disk() -> bool:
 	checkpoint_scene_path = String(data.get("checkpoint_scene_path", DEFAULT_START_SCENE))
 	checkpoint_spawn_marker = String(data.get("checkpoint_spawn_marker", DEFAULT_START_SPAWN))
 	pending_spawn_marker = String(data.get("pending_spawn_marker", checkpoint_spawn_marker))
+	seen_tutorials = data.get("seen_tutorials", {})
 	abilities_unlocked.clear()
 	for ability in data.get("abilities_unlocked", []):
 		abilities_unlocked.append(String(ability))
