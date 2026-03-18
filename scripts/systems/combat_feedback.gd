@@ -36,7 +36,8 @@ func spawn_damage_number(world_position: Vector2, damage: float, critical: bool 
 	label.visible = true
 	label.text = "%d" % roundi(damage)
 	label.modulate = Color(1.0, 0.95, 0.35, 1.0) if critical else Color(1.0, 1.0, 1.0, 1.0)
-	label.position = camera.unproject_position(world_position + Vector2(randf_range(-8.0, 8.0), -42.0))
+	# For Camera2D, use world position directly (labels are top_level in CanvasLayer)
+	label.position = world_position + Vector2(randf_range(-8.0, 8.0), -42.0)
 
 	var tween := label.create_tween()
 	tween.tween_property(label, "position:y", label.position.y - 26.0, 0.42)
