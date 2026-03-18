@@ -155,7 +155,9 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			if velocity.y > JUMP_MIN_VELOCITY:
 				velocity.y = JUMP_MIN_VELOCITY
-			AudioManager.play_sfx("jump")
+			var audio_manager := _audio_manager()
+			if audio_manager:
+				audio_manager.play_sfx("jump")
 			coyote_timer = 0
 			jump_buffer_timer = 0
 		elif is_touching_wall != 0:
@@ -165,7 +167,9 @@ func _physics_process(delta: float) -> void:
 				velocity.y = MAX_UPWARD_SPEED
 			velocity.x = WALL_JUMP_FORCE_X * -is_touching_wall
 			facing_dir = -is_touching_wall
-			AudioManager.play_sfx("jump")
+			var audio_manager := _audio_manager()
+			if audio_manager:
+				audio_manager.play_sfx("jump")
 			is_touching_wall = 0
 			jump_buffer_timer = 0
 	
@@ -265,7 +269,9 @@ func _perform_attack() -> void:
 	
 	# Activate hitbox
 	hitbox.activate()
-	AudioManager.play_sfx("attack_swing")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("attack_swing")
 	
 	# Reset attacking flag after a short delay
 	await get_tree().create_timer(0.15).timeout
@@ -276,8 +282,12 @@ func take_damage(amount: float) -> void:
 	if is_dead or amount <= 0.0:
 		return
 
-	GameState.reset_combo()
-	AudioManager.play_sfx("damage_taken")
+	var game_state := _game_state()
+	if game_state:
+		game_state.reset_combo()
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("damage_taken")
 
 	if health:
 		health.take_damage(amount)
@@ -314,3 +324,17 @@ func _on_health_node_changed(_old_value: float, new_value: float) -> void:
 
 func _on_health_depleted() -> void:
 	die()
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

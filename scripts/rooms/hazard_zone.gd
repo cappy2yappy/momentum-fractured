@@ -32,4 +32,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _game_state() -> Node:
-	return get_node_or_null("/root/GameState")
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

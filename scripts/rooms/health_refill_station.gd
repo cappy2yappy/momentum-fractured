@@ -36,7 +36,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("get_max_health") and body.has_method("set_health_values"):
 		var max_health := float(body.call("get_max_health"))
 		body.call("set_health_values", max_health, max_health)
-		GameState.capture_player_state(body)
+		var game_state := _game_state()
+		if game_state:
+			game_state.capture_player_state(body)
 
 	_used_this_visit = true
 	if _label:
@@ -58,3 +60,10 @@ func _show_notification(body: Node2D) -> void:
 	var hud := scene.find_child("HUD", true, false)
 	if hud and hud.has_method("show_notification"):
 		hud.call("show_notification", heal_notification_text, Color(0.8, 1.0, 0.9, 1.0), 0.9)
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

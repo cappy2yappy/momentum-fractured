@@ -30,8 +30,9 @@ func _ready() -> void:
 
 	_player = get_node_or_null(player_node) if not player_node.is_empty() else _find_player()
 	_connect_player_signals()
-	if _player:
-		GameState.capture_player_state(_player)
+	var game_state := _game_state()
+	if _player and game_state:
+		game_state.capture_player_state(_player)
 
 	_initialize_room_state()
 	_update_ui()
@@ -39,7 +40,8 @@ func _ready() -> void:
 
 
 func _initialize_room_state() -> void:
-	if not room_id.is_empty() and GameState.is_room_cleared(room_id):
+	var game_state := _game_state()
+	if not room_id.is_empty() and game_state and game_state.is_room_cleared(room_id):
 		is_cleared = true
 		_remove_enemies()
 		_unlock_doors(false)
@@ -48,8 +50,8 @@ func _initialize_room_state() -> void:
 	_setup_enemies()
 	if total_enemies <= 0:
 		is_cleared = true
-		if not room_id.is_empty():
-			GameState.mark_room_cleared(room_id)
+		if not room_id.is_empty() and game_state:
+			game_state.mark_room_cleared(room_id)
 		_unlock_doors(false)
 	else:
 		_lock_doors()
@@ -93,7 +95,9 @@ func _on_enemy_died(enemy_node: Node) -> void:
 	if is_instance_valid(enemy_node) and enemy_node.has_method("spawn_cell_drop"):
 		enemy_node.call("spawn_cell_drop", reward)
 	else:
-		GameState.add_cells(reward)
+		var game_state := _game_state()
+		if game_state:
+			game_state.add_cells(reward)
 
 	emit_signal("enemy_defeated", remaining_enemies)
 	_update_ui()
@@ -107,7 +111,9 @@ func _clear_room() -> void:
 	emit_signal("room_cleared")
 
 	if not room_id.is_empty():
-		GameState.mark_room_cleared(room_id)
+		var game_state := _game_state()
+		if game_state:
+			game_state.mark_room_cleared(room_id)
 
 	if door_unlock_delay > 0.0:
 		await get_tree().create_timer(door_unlock_delay).timeout
@@ -141,7 +147,9 @@ func _unlock_doors(play_unlock_sfx: bool = true) -> void:
 
 	_set_exits_locked(false)
 	if play_unlock_sfx:
-		AudioManager.play_sfx("door_unlock")
+		var audio_manager := _audio_manager()
+		if audio_manager:
+			audio_manager.play_sfx("door_unlock")
 
 
 func _set_exits_locked(locked: bool) -> void:
@@ -168,17 +176,27 @@ func _on_legacy_exit_triggered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 
-	GameState.capture_player_state(body)
-	SceneNavigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
+	var game_state := _game_state()
+	if game_state:
+		game_state.capture_player_state(body)
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.goto_scene(get_tree().current_scene.scene_file_path, "spawn_default")
 
 
 func _on_player_died() -> void:
-	GameState.register_death()
-	SceneNavigator.respawn_from_checkpoint()
+	var game_state := _game_state()
+	if game_state:
+		game_state.register_death()
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.respawn_from_checkpoint()
 
 
 func _on_player_health_changed(current: float, max_health: float) -> void:
-	GameState.set_player_health(current, max_health)
+	var game_state := _game_state()
+	if game_state:
+		game_state.set_player_health(current, max_health)
 
 
 func _remove_enemies() -> void:
@@ -220,10 +238,11 @@ func _update_ui() -> void:
 
 
 func _get_combo_multiplier() -> int:
-	if not GameState.has_method("get_combo_count"):
+	var game_state := _game_state()
+	if game_state == null or not game_state.has_method("get_combo_count"):
 		return 1
 
-	var combo_count := int(GameState.call("get_combo_count"))
+	var combo_count := int(game_state.call("get_combo_count"))
 	if combo_count >= 10:
 		return 3
 	if combo_count >= 5:
@@ -236,7 +255,32 @@ func _play_room_music() -> void:
 		var track := combat_music_track
 		if room_id == "room_11_boss" and combat_music_track == "combat_theme":
 			track = "boss_theme"
-		AudioManager.play_music(track)
+		var audio_manager := _audio_manager()
+		if audio_manager:
+			audio_manager.play_music(track)
 		return
 
-	AudioManager.play_music(cleared_music_track)
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_music(cleared_music_track)
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _scene_navigator() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("SceneNavigator") if tree else null
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

@@ -307,7 +307,9 @@ func _on_death() -> void:
 	velocity = Vector2.ZERO
 	collision_layer = 0
 	collision_mask = 0
-	AudioManager.play_sfx("enemy_death")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("enemy_death")
 
 	if hurtbox:
 		hurtbox.set_deferred("monitoring", false)
@@ -396,3 +398,10 @@ func _animate_sprite(delta: float) -> void:
 		shield_indicator.visible = shield_raised and state != State.DEAD
 		shield_indicator.scale.x = 1.0 if facing_dir > 0 else -1.0
 		shield_indicator.position.x = 20.0 * facing_dir
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

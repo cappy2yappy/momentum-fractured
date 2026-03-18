@@ -61,7 +61,9 @@ func _take_hit(hitbox: Area2D) -> void:
 	if bool(hitbox.get("single_hit")) and hitbox.has_method("deactivate"):
 		hitbox.call("deactivate")
 
-	AudioManager.play_sfx("hit_impact")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("hit_impact")
 	_apply_hit_feedback(owner_node, damage, hitbox)
 
 
@@ -70,21 +72,26 @@ func is_invincible() -> bool:
 
 
 func _apply_hit_feedback(attacker: Node, damage: float, hitbox: Area2D) -> void:
-	CombatFeedback.flash_target(owner)
-	CombatFeedback.spawn_damage_number(_damage_number_position(), damage, damage >= heavy_hit_threshold)
+	var combat_feedback := _combat_feedback()
+	if combat_feedback:
+		combat_feedback.flash_target(owner)
+		combat_feedback.spawn_damage_number(_damage_number_position(), damage, damage >= heavy_hit_threshold)
 
+	var game_state := _game_state()
 	if attacker and attacker.is_in_group("player"):
-		GameState.register_combo_hit()
+		if game_state:
+			game_state.register_combo_hit()
 		var is_final_combo_hit := bool(hitbox.get_meta("is_final_combo_hit", false))
-		if damage >= heavy_hit_threshold and is_final_combo_hit:
-			CombatFeedback.hit_pause(hit_pause_duration)
+		if damage >= heavy_hit_threshold and is_final_combo_hit and combat_feedback:
+			combat_feedback.hit_pause(hit_pause_duration)
 			var camera := get_viewport().get_camera_2d()
 			if camera and camera.has_method("shake"):
 				camera.call("shake", heavy_hit_shake_duration, heavy_hit_shake_strength)
 		return
 
 	if owner and owner.is_in_group("player"):
-		GameState.reset_combo()
+		if game_state:
+			game_state.reset_combo()
 		var camera := get_viewport().get_camera_2d()
 		if camera and camera.has_method("shake"):
 			camera.call("shake", player_damage_shake_duration, player_damage_shake_strength)
@@ -96,3 +103,24 @@ func _damage_number_position() -> Vector2:
 	if get_parent() and get_parent() is Node2D:
 		return (get_parent() as Node2D).global_position
 	return global_position
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null
+
+
+func _combat_feedback() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("CombatFeedback") if tree else null

@@ -44,8 +44,12 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _collect() -> void:
-	GameState.add_cells(amount)
-	AudioManager.play_sfx("cell_pickup")
+	var game_state := _game_state()
+	if game_state:
+		game_state.add_cells(amount)
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("cell_pickup")
 	queue_free()
 
 
@@ -56,3 +60,17 @@ func _find_player_magnet_target() -> void:
 			if distance <= magnet_radius:
 				_target_player = candidate
 				return
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

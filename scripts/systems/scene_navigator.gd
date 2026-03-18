@@ -23,15 +23,17 @@ func _ready() -> void:
 	# Apply checkpoint scene/spawn when booting the first room.
 	await get_tree().process_frame
 	var current_scene := get_tree().current_scene
+	var game_state := _game_state()
 	if (
-		GameState.loaded_from_disk
+		game_state
+		and game_state.loaded_from_disk
 		and current_scene
-		and current_scene.scene_file_path != GameState.checkpoint_scene_path
+		and current_scene.scene_file_path != game_state.checkpoint_scene_path
 	):
-		GameState.set_pending_spawn(GameState.checkpoint_spawn_marker)
-		var err := get_tree().change_scene_to_file(GameState.checkpoint_scene_path)
+		game_state.set_pending_spawn(game_state.checkpoint_spawn_marker)
+		var err := get_tree().change_scene_to_file(game_state.checkpoint_scene_path)
 		if err != OK:
-			push_error("Failed to restore checkpoint scene '%s' (error %d)" % [GameState.checkpoint_scene_path, err])
+			push_error("Failed to restore checkpoint scene '%s' (error %d)" % [game_state.checkpoint_scene_path, err])
 		await get_tree().process_frame
 
 	_restore_player_in_current_scene()
@@ -130,4 +132,7 @@ func _find_spawn_marker(current_scene: Node, marker_name: String) -> Marker2D:
 
 
 func _game_state() -> Node:
-	return get_node_or_null("/root/GameState")
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

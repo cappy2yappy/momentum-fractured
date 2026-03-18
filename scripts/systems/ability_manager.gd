@@ -20,7 +20,10 @@ func unlock_ability(ability_name: String) -> void:
 	if has_ability(ability_name):
 		return
 
-	GameState.unlock_ability(ability_name)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.unlock_ability(ability_name)
 	emit_signal("ability_unlocked", ability_name)
 	_show_unlock_notification(ability_name)
 
@@ -28,7 +31,8 @@ func unlock_ability(ability_name: String) -> void:
 func has_ability(ability_name: String) -> bool:
 	if ability_name.is_empty():
 		return false
-	return GameState.has_ability(ability_name)
+	var game_state := _game_state()
+	return game_state != null and game_state.has_ability(ability_name)
 
 
 func get_unlocked_map() -> Dictionary:
@@ -47,3 +51,10 @@ func _show_unlock_notification(ability_name: String) -> void:
 	if hud and hud.has_method("show_notification"):
 		var label := String(ABILITY_LABELS.get(ability_name, ability_name.capitalize()))
 		hud.call("show_notification", "%s unlocked!" % label, Color(0.72, 1.0, 0.8, 1.0), 1.6)
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

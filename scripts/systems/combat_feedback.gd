@@ -26,17 +26,15 @@ func spawn_damage_number(world_position: Vector2, damage: float, critical: bool 
 	if _pool.is_empty():
 		return
 
-	var camera := get_viewport().get_camera_2d()
-	if camera == null:
-		return
-
 	var label := _pool[_pool_index]
 	_pool_index = (_pool_index + 1) % _pool.size()
 
 	label.visible = true
 	label.text = "%d" % roundi(damage)
 	label.modulate = Color(1.0, 0.95, 0.35, 1.0) if critical else Color(1.0, 1.0, 1.0, 1.0)
-	label.position = camera.unproject_position(world_position + Vector2(randf_range(-8.0, 8.0), -42.0))
+	# Convert world coordinates to viewport-space for HUD-layer labels.
+	var viewport_pos := get_viewport().get_canvas_transform() * (world_position + Vector2(randf_range(-8.0, 8.0), -42.0))
+	label.position = viewport_pos
 
 	var tween := label.create_tween()
 	tween.tween_property(label, "position:y", label.position.y - 26.0, 0.42)

@@ -155,11 +155,14 @@ func _state_retreat(delta: float) -> void:
 func _fire_projectile() -> void:
 	if not _has_valid_player() or projectile_scene == null:
 		return
-	if not ProjectilePool.can_spawn_projectile():
+	var projectile_pool := _projectile_pool()
+	if projectile_pool == null:
+		return
+	if not projectile_pool.can_spawn_projectile():
 		return
 
 	var spawn_position := muzzle.global_position if muzzle else global_position
-	ProjectilePool.spawn_drone_projectile(
+	projectile_pool.spawn_drone_projectile(
 		get_tree().current_scene,
 		spawn_position,
 		(_player.global_position - spawn_position).normalized(),
@@ -182,7 +185,9 @@ func _on_death() -> void:
 		return
 
 	_is_dying = true
-	AudioManager.play_sfx("enemy_death")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("enemy_death")
 	state = State.DEAD
 	collision_layer = 0
 	collision_mask = 0
@@ -231,3 +236,17 @@ func spawn_cell_drop(total_cells: int) -> void:
 	pickup.amount = total_cells
 	pickup.global_position = global_position + Vector2(0.0, -18.0)
 	get_tree().current_scene.add_child(pickup)
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null
+
+
+func _projectile_pool() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("ProjectilePool") if tree else null

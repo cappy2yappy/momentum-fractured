@@ -30,9 +30,12 @@ func _on_body_entered(body: Node2D) -> void:
 		var max_health := float(body.call("get_max_health"))
 		body.call("set_health_values", max_health, max_health)
 
-	GameState.capture_player_state(body)
+	var game_state := _game_state()
+	if game_state == null:
+		return
+	game_state.capture_player_state(body)
 	var scene_path := body.get_tree().current_scene.scene_file_path
-	GameState.set_checkpoint(scene_path, checkpoint_spawn_marker)
+	game_state.set_checkpoint(scene_path, checkpoint_spawn_marker)
 
 	_activated = true
 	modulate = Color(0.5, 1.0, 0.7, 1.0)
@@ -40,7 +43,9 @@ func _on_body_entered(body: Node2D) -> void:
 		_label.text = "CHECKPOINT\n(activated)"
 
 	_show_checkpoint_notification(body)
-	AudioManager.play_sfx("checkpoint")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("checkpoint")
 
 
 func _setup_glow() -> void:
@@ -63,3 +68,16 @@ func _show_checkpoint_notification(body: Node2D) -> void:
 	if hud and hud.has_method("show_notification"):
 		hud.call("show_notification", checkpoint_notification_text, Color(0.76, 1.0, 0.8, 1.0), 1.1)
 
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

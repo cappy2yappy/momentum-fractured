@@ -24,11 +24,14 @@ func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return
 
-	if AbilityManager.has_ability(ability_id):
+	var ability_manager := _ability_manager()
+	if ability_manager == null:
+		return
+	if ability_manager.has_ability(ability_id):
 		_consume()
 		return
 
-	AbilityManager.unlock_ability(ability_id)
+	ability_manager.unlock_ability(ability_id)
 	_show_custom_notification_if_needed()
 	_consume()
 
@@ -62,5 +65,13 @@ func _consume() -> void:
 
 
 func _refresh_visual_state() -> void:
-	if AbilityManager.has_ability(ability_id):
+	var ability_manager := _ability_manager()
+	if ability_manager and ability_manager.has_ability(ability_id):
 		_consume()
+
+
+func _ability_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AbilityManager") if tree else null

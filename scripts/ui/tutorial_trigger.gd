@@ -63,7 +63,8 @@ func _trigger_tutorial() -> void:
 	if tutorial_id.is_empty() or message.strip_edges().is_empty():
 		return
 
-	if GameState.has_method("has_seen_tutorial") and bool(GameState.call("has_seen_tutorial", tutorial_id)):
+	var game_state := _game_state()
+	if game_state and game_state.has_method("has_seen_tutorial") and bool(game_state.call("has_seen_tutorial", tutorial_id)):
 		_triggered = true
 		_disable_trigger()
 		return
@@ -73,8 +74,8 @@ func _trigger_tutorial() -> void:
 		return
 
 	popup.call("show_message", message, duration, dismiss_on_action)
-	if GameState.has_method("mark_tutorial_seen"):
-		GameState.call("mark_tutorial_seen", tutorial_id)
+	if game_state and game_state.has_method("mark_tutorial_seen"):
+		game_state.call("mark_tutorial_seen", tutorial_id)
 
 	_triggered = true
 	_disable_trigger()
@@ -104,3 +105,10 @@ func _disable_trigger() -> void:
 	var shape: CollisionShape2D = get_node_or_null("CollisionShape2D")
 	if shape:
 		shape.set_deferred("disabled", true)
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

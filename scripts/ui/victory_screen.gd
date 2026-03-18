@@ -21,10 +21,17 @@ func _ready() -> void:
 
 
 func _refresh_stats() -> void:
-	rooms_value.text = str(GameState.cleared_rooms.size())
-	cells_value.text = str(GameState.cells)
-	deaths_value.text = str(GameState.death_count)
-	time_value.text = _format_time(GameState.get_run_time_seconds())
+	var game_state := _game_state()
+	if game_state == null:
+		rooms_value.text = "0"
+		cells_value.text = "0"
+		deaths_value.text = "0"
+		time_value.text = "00:00"
+		return
+	rooms_value.text = str(game_state.cleared_rooms.size())
+	cells_value.text = str(game_state.cells)
+	deaths_value.text = str(game_state.death_count)
+	time_value.text = _format_time(game_state.get_run_time_seconds())
 
 
 func _format_time(total_seconds: int) -> String:
@@ -35,8 +42,24 @@ func _format_time(total_seconds: int) -> String:
 
 
 func _on_continue_pressed() -> void:
-	SceneNavigator.goto_scene(restart_scene_path, restart_spawn_marker)
+	var scene_navigator := _scene_navigator()
+	if scene_navigator:
+		scene_navigator.goto_scene(restart_scene_path, restart_spawn_marker)
 
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
+
+
+func _scene_navigator() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("SceneNavigator") if tree else null

@@ -17,18 +17,21 @@ var _combo_hide_timer: float = 0.0
 
 
 func _ready() -> void:
-	if not GameState.cells_changed.is_connected(_on_cells_changed):
-		GameState.cells_changed.connect(_on_cells_changed)
-	if not GameState.player_health_changed.is_connected(_on_player_health_changed):
-		GameState.player_health_changed.connect(_on_player_health_changed)
-	if GameState.has_signal("combo_changed") and not GameState.combo_changed.is_connected(_on_combo_changed):
-		GameState.combo_changed.connect(_on_combo_changed)
+	var game_state := _game_state()
+	if game_state:
+		if not game_state.cells_changed.is_connected(_on_cells_changed):
+			game_state.cells_changed.connect(_on_cells_changed)
+		if not game_state.player_health_changed.is_connected(_on_player_health_changed):
+			game_state.player_health_changed.connect(_on_player_health_changed)
+		if game_state.has_signal("combo_changed") and not game_state.combo_changed.is_connected(_on_combo_changed):
+			game_state.combo_changed.connect(_on_combo_changed)
 
 	_resolve_player()
-	_on_cells_changed(GameState.cells)
-	_on_player_health_changed(GameState.player_health, GameState.player_max_health)
-	if GameState.has_method("get_combo_count"):
-		_on_combo_changed(int(GameState.call("get_combo_count")))
+	if game_state:
+		_on_cells_changed(game_state.cells)
+		_on_player_health_changed(game_state.player_health, game_state.player_max_health)
+		if game_state.has_method("get_combo_count"):
+			_on_combo_changed(int(game_state.call("get_combo_count")))
 	_update_room_name()
 
 
@@ -102,3 +105,10 @@ func show_notification(message: String, color: Color = Color(0.8, 1.0, 0.85, 1.0
 	_notification_tween.tween_property(_notification_label, "modulate:a", 0.0, 0.3)
 	await _notification_tween.finished
 	_notification_label.visible = false
+
+
+func _game_state() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null

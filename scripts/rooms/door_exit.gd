@@ -74,8 +74,14 @@ func _update_label() -> void:
 
 
 func _game_state() -> Node:
-	return get_node_or_null("/root/GameState")
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("GameState") if tree else null
 
 
 func _scene_navigator() -> Node:
-	return get_node_or_null("/root/SceneNavigator")
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("SceneNavigator") if tree else null

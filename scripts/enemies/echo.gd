@@ -243,7 +243,9 @@ func _on_death() -> void:
 
 	state = State.DEAD
 	_is_dying = true
-	AudioManager.play_sfx("enemy_death")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("enemy_death")
 	velocity = Vector2.ZERO
 	collision_layer = 0
 	collision_mask = 0
@@ -288,6 +290,13 @@ func _has_valid_player() -> bool:
 	if _player == null or not is_instance_valid(_player):
 		return false
 	return not bool(_player.get("is_dead"))
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null
 
 
 func _is_player_in_detection_range() -> bool:

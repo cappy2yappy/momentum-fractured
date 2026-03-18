@@ -152,7 +152,7 @@ offset_top = -236.0
 offset_right = 60.0
 offset_bottom = -178.0
 horizontal_alignment = 1
-text = "→ ROOM 5\n(locked)"
+text = "→ ROOM 5\n(open)"
 
 [node name="Checkpoint" type="Area2D" parent="Environment"]
 position = Vector2(640, 560)

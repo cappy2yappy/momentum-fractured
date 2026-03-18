@@ -380,7 +380,9 @@ func _on_death() -> void:
 		hurtbox.monitoring = false
 		hurtbox.monitorable = false
 	velocity = Vector2.ZERO
-	AudioManager.play_sfx("enemy_death")
+	var audio_manager := _audio_manager()
+	if audio_manager:
+		audio_manager.play_sfx("enemy_death")
 
 	var hud: Node = get_tree().current_scene.get_node_or_null("HUD")
 	if hud and hud.has_method("show_notification"):
@@ -406,3 +408,10 @@ func spawn_cell_drop(_total_cells: int) -> void:
 		(pickup as Node2D).global_position = global_position + Vector2(0.0, -36.0)
 
 	get_tree().current_scene.add_child(pickup)
+
+
+func _audio_manager() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("AudioManager") if tree else null

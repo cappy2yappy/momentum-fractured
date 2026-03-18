@@ -58,7 +58,15 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _recycle() -> void:
-	if ProjectilePool:
-		ProjectilePool.recycle_projectile(self)
+	var projectile_pool := _projectile_pool()
+	if projectile_pool:
+		projectile_pool.recycle_projectile(self)
 	else:
 		queue_free()
+
+
+func _projectile_pool() -> Node:
+	if not is_inside_tree():
+		return null
+	var tree := get_tree()
+	return tree.root.get_node_or_null("ProjectilePool") if tree else null
