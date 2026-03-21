@@ -54,8 +54,11 @@ godot project.godot
 
 ## 📂 Key Documents
 
+**For Codex (Autonomous Mission):**
+- **`CODEX_AUTONOMOUS_MISSION.md`** ← **START HERE** (Complete mission brief)
+
 **For developers:**
-- **`CODEX_START_HERE.md`** ← Read this first
+- **`CODEX_START_HERE.md`** ← Quick onboarding
 - **`PHASE_4_TASKS.md`** ← Work queue (10 tasks)
 - **`GDD.md`** ← Full game design document
 
