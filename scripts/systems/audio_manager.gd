@@ -69,6 +69,19 @@ func _ready() -> void:
 		_sfx_players.append(player)
 
 
+func _exit_tree() -> void:
+	_music_fallback_playback = null
+	if _music_player:
+		_music_player.stop()
+		_music_player.stream = null
+
+	for player in _sfx_players:
+		if player == null:
+			continue
+		player.stop()
+		player.stream = null
+
+
 func _process(_delta: float) -> void:
 	if _music_fallback_playback == null:
 		return
