@@ -44,3 +44,14 @@ Keep source commits in GitHub at every working milestone.
 - Profile frame-time distribution with a 16.7 ms target on named Windows/mobile devices.
 - Expand only after this loop passes: distinct enemies, five boss encounters, larger connected regions,
   secrets and earned movement abilities. This recovery milestone is not the full alpha.
+
+## macOS playtest
+Download the Kaze-macOS-recovery artifact from a successful Actions run.
+Extract the downloaded artifact ZIP, then extract Kaze-macOS.zip inside it.
+Open the resulting .app. The official Universal 2 template supports Intel and Apple Silicon.
+This development build uses ad-hoc signing and is not Apple-notarized.
+If macOS blocks it, use System Settings > Privacy & Security > Open Anyway
+after attempting to open this specific downloaded app. Do not disable Gatekeeper globally.
+See https://docs.godotengine.org/en/stable/tutorials/export/running_on_macos.html
+Build validation checks both architectures and executable permissions; this does not
+replace a real Mac graphics, input, and performance playtest.

@@ -23,13 +23,13 @@ jobs:
           echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
           curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
           mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
-          unzip -j -q "$RUNNER_TEMP/godot/templates.tpz" 'templates/windows_release_x86_64.exe' 'templates/web_nothreads_release.zip' 'templates/version.txt' -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -j -q "$RUNNER_TEMP/godot/templates.tpz" 'templates/windows_release_x86_64.exe' 'templates/web_nothreads_release.zip' 'templates/version.txt' 'templates/macos.zip' -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
       - name: Import, play through, and export
         shell: bash
         working-directory: rebuild
         run: |
           set -euo pipefail
-          mkdir -p build/windows build/web
+          mkdir -p build/windows build/web build/macos
           GODOT=Godot_v4.6.1-stable_linux.x86_64
           "$GODOT" --headless --editor --import 2>&1 | tee build/import.log
           ! grep -E 'SCRIPT ERROR|Parse Error|ERROR:' build/import.log
@@ -40,7 +40,11 @@ jobs:
           ! grep -E 'SCRIPT ERROR|ERROR:' build/windows-export.log
           "$GODOT" --headless --export-release Web build/web/index.html 2>&1 | tee build/web-export.log
           ! grep -E 'SCRIPT ERROR|ERROR:' build/web-export.log
+          "$GODOT" --headless --export-release macOS build/macos/Kaze-macOS.zip 2>&1 | tee build/macos-export.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' build/macos-export.log
+          python3 -c 'import zipfile, struct; z=zipfile.ZipFile("build/macos/Kaze-macOS.zip"); n=next(n for n in z.namelist() if "/Contents/MacOS/" in n and not n.endswith("/")); data=z.read(n); magic,count=struct.unpack(">II",data[:8]); assert magic==0xcafebabe and count==2, "Expected universal Intel/Apple Silicon binary"; assert z.getinfo(n).external_attr>>16 & 0o111, "Missing executable permission"; print("Universal macOS bundle verified")'
           cp README.md build/windows/README.md
+          cp README.md build/macos/README.md
       - name: Retain test logs
         if: always()
         uses: actions/upload-artifact@v4
@@ -59,4 +63,10 @@ jobs:
         with:
           name: Kaze-Web-recovery
           path: rebuild/build/web/
+          retention-days: 14
+      - name: macOS playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-macOS-recovery
+          path: rebuild/build/macos/
           retention-days: 14
