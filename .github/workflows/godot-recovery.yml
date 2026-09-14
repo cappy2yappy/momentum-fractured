@@ -1,0 +1,62 @@
+name: Godot recovery build
+on:
+  push:
+    branches: ["godot-recovery"]
+    paths: ["rebuild/**", ".github/workflows/godot-recovery.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  playtest-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official Godot 4.6.1 and export templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -j -q "$RUNNER_TEMP/godot/templates.tpz" 'templates/windows_release_x86_64.exe' 'templates/web_nothreads_release.zip' 'templates/version.txt' -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+      - name: Import, play through, and export
+        shell: bash
+        working-directory: rebuild
+        run: |
+          set -euo pipefail
+          mkdir -p build/windows build/web
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --editor --import 2>&1 | tee build/import.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|ERROR:' build/import.log
+          timeout 180 "$GODOT" --headless --script tests/playthrough.gd -- --test 2>&1 | tee build/playthrough.log
+          grep -q 'RESULT: 0 failures' build/playthrough.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' build/playthrough.log
+          "$GODOT" --headless --export-release Windows build/windows/Kaze.exe 2>&1 | tee build/windows-export.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' build/windows-export.log
+          "$GODOT" --headless --export-release Web build/web/index.html 2>&1 | tee build/web-export.log
+          ! grep -E 'SCRIPT ERROR|ERROR:' build/web-export.log
+          cp README.md build/windows/README.md
+      - name: Retain test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-test-logs
+          path: rebuild/build/*.log
+          retention-days: 14
+      - name: Windows playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-Windows-recovery
+          path: rebuild/build/windows/
+          retention-days: 14
+      - name: Browser export
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-Web-recovery
+          path: rebuild/build/web/
+          retention-days: 14
