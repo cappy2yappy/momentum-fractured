@@ -1,6 +1,9 @@
 extends Node2D
 class_name RoomController
 
+const DISTRICT_TEXTURE := preload("res://rebuild/assets/district.png")
+const TERRAIN_TEXTURE := preload("res://rebuild/assets/terrain.png")
+
 ## Room Controller - combat encounter flow + persistence glue.
 ## Handles enemy clear state, door lock/unlock, and player death respawn.
 
@@ -24,6 +27,9 @@ var _player: Node = null
 
 
 func _ready() -> void:
+	GameState.visit_room(room_id)
+	_build_web_parity_environment()
+	_spawn_default_grapple_anchors()
 	await get_tree().process_frame
 
 	_player = get_node_or_null(player_node) if not player_node.is_empty() else _find_player()
@@ -33,6 +39,73 @@ func _ready() -> void:
 
 	_initialize_room_state()
 	_update_ui()
+
+
+func _build_web_parity_environment() -> void:
+	var background := Sprite2D.new()
+	background.name = "PaintedDistrictBackdrop"
+	background.texture = DISTRICT_TEXTURE
+	background.position = Vector2(640, 360)
+	background.scale = Vector2(1280.0 / 1536.0, 720.0 / 1024.0)
+	background.modulate = Color(0.48, 0.43, 0.66, 0.88)
+	background.z_index = -20
+	add_child(background)
+
+	var shade := ColorRect.new()
+	shade.name = "AtmosphereShade"
+	shade.position = Vector2.ZERO
+	shade.size = Vector2(1280, 720)
+	shade.color = Color(0.015, 0.02, 0.07, 0.32)
+	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	shade.z_index = -19
+	add_child(shade)
+
+	var environment := get_node_or_null("Environment")
+	if environment:
+		for child in environment.get_children():
+			if child is StaticBody2D:
+				_texture_static_body(child)
+
+	var location := Label.new()
+	location.position = Vector2(76, 62)
+	location.size = Vector2(520, 42)
+	location.text = "SILENT DISTRICT  •  %s" % room_id.replace("room_", "").replace("_", " ").to_upper()
+	location.add_theme_font_size_override("font_size", 19)
+	location.modulate = Color(0.72, 0.94, 1.0, 0.90)
+	location.z_index = 5
+	add_child(location)
+
+
+func _texture_static_body(body: StaticBody2D) -> void:
+	var collision := body.get_node_or_null("CollisionShape2D") as CollisionShape2D
+	if collision == null or not (collision.shape is RectangleShape2D):
+		return
+	var rectangle := collision.shape as RectangleShape2D
+	var texture_layer := Sprite2D.new()
+	texture_layer.name = "TerrainTexture"
+	texture_layer.texture = TERRAIN_TEXTURE
+	texture_layer.region_enabled = true
+	texture_layer.region_rect = Rect2(512, 0, 512, 512)
+	texture_layer.scale = rectangle.size / Vector2(512.0, 512.0)
+	texture_layer.modulate = Color(0.54, 0.62, 0.78, 0.98)
+	texture_layer.z_index = -1
+	body.add_child(texture_layer)
+	for visual in body.get_children():
+		if visual is ColorRect:
+			visual.modulate.a = 0.16
+
+
+func _spawn_default_grapple_anchors() -> void:
+	var anchor_positions: Array[Vector2] = [Vector2(420, 220), Vector2(720, 150), Vector2(1010, 260)]
+	if "02" in room_id:
+		anchor_positions = [Vector2(330, 250), Vector2(620, 120), Vector2(930, 230)]
+	elif "03" in room_id:
+		anchor_positions = [Vector2(280, 190), Vector2(590, 280), Vector2(920, 130)]
+	for anchor_position in anchor_positions:
+		var anchor := Node2D.new()
+		anchor.set_script(preload("res://scripts/rooms/grapple_anchor.gd"))
+		anchor.position = anchor_position
+		add_child(anchor)
 
 
 func _initialize_room_state() -> void:
@@ -59,11 +132,6 @@ func _connect_player_signals() -> void:
 	var on_player_died := Callable(self, "_on_player_died")
 	if _player.has_signal("died") and not _player.is_connected("died", on_player_died):
 		_player.connect("died", on_player_died)
-
-	var on_player_health_changed := Callable(self, "_on_player_health_changed")
-	if _player.has_signal("health_changed") and not _player.is_connected("health_changed", on_player_health_changed):
-		_player.connect("health_changed", on_player_health_changed)
-
 
 func _setup_enemies() -> void:
 	total_enemies = 0
@@ -169,10 +237,6 @@ func _on_legacy_exit_triggered(body: Node2D) -> void:
 
 func _on_player_died() -> void:
 	SceneNavigator.respawn_from_checkpoint()
-
-
-func _on_player_health_changed(current: float, max_health: float) -> void:
-	GameState.set_player_health(current, max_health)
 
 
 func _remove_enemies() -> void:

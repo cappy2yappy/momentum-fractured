@@ -40,6 +40,8 @@ func _on_area_entered(area: Area2D) -> void:
 func _take_hit(hitbox: Area2D) -> void:
 	if invincibility_timer > 0.0:
 		return
+	if owner and owner.has_method("is_guard_veil_active") and owner.call("is_guard_veil_active"):
+		return
 	if not bool(hitbox.get("is_active")):
 		return
 

@@ -46,6 +46,36 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 3. **Ability-gated exploration** - New powers unlock shortcuts and secrets
 4. **Interconnected world** - Backtracking reveals new paths
 
+### Canonical Web-Parity Direction (September 2026)
+
+The playable web version is the canonical benchmark for the Godot build's game feel, visual language, interface, and world structure. A Godot feature does not count as parity merely because a rough mechanical substitute exists.
+
+**Accepted campaign benchmark:** 21 areas, 5 regions, and 5 keeper encounters. Alpha milestones may expose a smaller slice, but every shipped room must feel authored and belong to the eventual interconnected world.
+
+**Non-negotiable parity requirements:**
+
+- Kaze's acceleration, reversal, jump arc, coyote time, jump buffering, dash timing, animation alignment, and action cancellation must be tuned against the web version.
+- Wind Tether connects only to visible authored anchor points inside a deliberately limited range. Holding the input creates a pendulum constraint; directional input pumps the swing; releasing preserves tangential momentum. Q and Middle Mouse are equivalent inputs.
+- The tether must have a readable wind-energy strand, anchor contact, and motion pulses. A plain debug line is not final presentation.
+- Dash creates a readable, short-lived afterimage trail without concealing Kaze or nearby hazards.
+- The room map and character/loadout menu are core systems, not optional placeholders. The map records explored rooms and current position; loadout shows HP, traversal abilities, the equipped kunai, and Guard Veil state.
+- Water is traversable and changes movement physics. It is not an automatic death plane. Surface, underground, and aquatic routes must connect coherently.
+- Wind, Fire, and Electric kunai support combat and explicit ability gates. Locked paths visually communicate which element is required.
+- Rooms alternate intimate corridors, compact encounters, purposeful vertical climbs, subterranean passages, aquatic spaces, and selected open vistas. Empty height is not content.
+- Exits may occur at lower, middle, or upper elevations. Their placement must continue the spatial logic of the route instead of defaulting to the lower-right corner.
+- Encounters use enough enemies to activate the geometry, with reliable player/enemy hitboxes and readable damage feedback.
+- Power-ups appear in authored reliquaries or equivalent world objects rather than unframed blocks.
+
+**Visual language:** painted Tokyo-noir environments, deep indigo and violet shadows, cyan wind energy, warm window light, moss/roots in reclaimed spaces, and textured architecture. Flat rectangles may remain as collision geometry during development but must be covered by coherent environmental art before a playtest candidate is labeled parity-ready.
+
+**Canonical Kaze design:** the purple-and-green Kaze shown in the web benchmark and the source sheets under `rebuild/assets/idle.png` and `rebuild/assets/run.png` is the active character design. Her defining features are dark skin, long dark-purple hair, a large vivid-green hair ribbon, fitted purple jacket with white cuffs/collar, green chest bow, dark pleated skirt, purple thigh-high stockings, and purple ankle boots. The red-scarf, cropped-top, loose-pants sprite set under `assets/sprites/kaze/` is a deprecated legacy design and must not be used as an identity reference for new art. The recovered Godot scene currently points at that legacy set and must be migrated only after clean production-ready sheets for canonical Kaze are prepared.
+
+**Character-art pipeline:** concept sheets and generated pose studies are references, not automatically shippable sprites. Production assets require consistent proportions, costume details, frame scale, transparent backgrounds, clean silhouettes, and animation continuity. Required movement coverage includes idle, run, crouch, slide, jump start, rise, fall, wall slide, wall jump, dash, tether attach/swing/release, attack, kunai throw, hurt, and death.
+
+**Current recovery warning:** the first recovery-labeled Alpha 0.8 package was rebuilt on the older four-room foundation and is not a parity baseline. It regressed movement tuning, replaced authored environments with repeated procedural layouts, used an overlong tether range, and reduced the map to a placeholder. Do not use that package as the design reference.
+
+**Next acceptance slice:** one representative route must combine a compact surface approach, purposeful vertical traversal, an underground entrance, contained traversable water, at least one ability-gated return path, functioning map/loadout UI, and an encounter that uses the room geometry. Only after that slice passes movement and presentation review should the treatment expand across the campaign.
+
 ---
 
 ## Core Mechanics
@@ -55,18 +85,24 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 - **Jump** - Space (variable height based on hold)
 - **Wall Jump** - Jump while touching wall (maintains momentum)
 - **Wall Slide** - Hold against wall to slow descent
+- **Crouch** - Hold Down/S while grounded
+  - Uses a reduced collision profile to pass beneath low hazards and geometry
+  - Cannot stand when overhead clearance is blocked
+  - Requires dedicated enter, hold, and exit animation coverage
+- **Momentum Dash** - Shift; available in the baseline kit
+  - Can be used once in mid-air before landing
+  - Preserves greater incoming horizontal momentum and meaningful vertical momentum
+  - Produces a short cyan afterimage trail
+- **Wind Tether** - Hold Q or Middle Mouse; available in the baseline kit
+  - Attaches only to visible authored anchors within limited range
+  - Directional input pumps the pendulum swing
+  - Release preserves tangential momentum
+- **Wind Kunai** - F; available in the baseline kit
 
 ### Unlockable Abilities (Progression-Gated)
-- **Grapple Hook** - Unlocked after Temple District boss
-  - Aim with mouse, shoot grapple point
-  - Swing momentum-based
-  - Grapple-slam attack when releasing near enemy
-  
-- **Dash** - Unlocked after Underground Metro boss
-  - Shift key, 8-direction
-  - Can be used mid-air
-  - Invincibility frames during dash
-  - Can chain into attacks (dash-strike)
+- **Fire Kunai** - Opens Fire seals and gains a distinct fire interaction set
+- **Electric Kunai** - Opens Electric seals and gains a distinct electric interaction set
+- **Guard Veil** - Timed defensive wind state earned from The Borrowed Face
   
 - **Double Jump** - Unlocked after Rooftop Gardens boss
   - Press Space again in mid-air
@@ -76,6 +112,9 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
   - Crouch + Dash
   - Pass under low obstacles
   - Maintain speed through tight spaces
+  - Preserve meaningful incoming horizontal momentum instead of snapping to a fixed speed
+  - Use the crouched collision profile for the full slide
+  - Transition cleanly into jump, attack, or tether where geometry permits
 
 ### Combat Actions
 - **Light Attack** - Left mouse click (3-hit combo)
@@ -139,13 +178,14 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 ## Player Character
 
 ### Kaze (Protagonist)
-**Appearance:** Sleek, athletic build (Zero Suit Samus energy, NOT chibi)  
+**Appearance:** Sleek, athletic build (Zero Suit Samus energy, NOT chibi). Canonical costume and silhouette use the purple-and-green web/rebuild design documented above; legacy red-scarf artwork is deprecated.  
 **Personality:** Silent protagonist (environmental storytelling)  
 **Backstory:** A fractured soul navigating a shattered reality
 
 ### Sprite Specs
-- **Source:** Original M0M3NTUM sprite (already created)
-- **Location:** `~/Documents/Playground/m0m3ntum/godot-project/assets/sprites/kira/`
+- **Source:** Canonical purple-and-green Kaze web/rebuild art (already created)
+- **Current source references:** `rebuild/assets/idle.png`, `rebuild/assets/run.png`
+- **Legacy warning:** `assets/sprites/kaze/` currently contains the deprecated red-scarf design and is not authoritative
 - **Format:** Horizontal sprite strips (frames side-by-side)
 - **Size:** 64×64 per frame (scalable)
 
@@ -157,7 +197,8 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 - fall (4 frames)
 - dash (6 frames)
 - wall_slide (4 frames)
-- crouch (2 frames)
+- crouch enter / hold / exit
+- slide
 - land (3 frames)
 
 **Combat (to be added):**
@@ -369,8 +410,8 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 - Larger combat arenas (4-5 enemies)
 
 **Boss:** Kitsune Matriarch (teleport, multi-phase)  
-**Ability unlock:** Grapple Hook  
-**Progression gate:** Grapple required to access Metro
+**Ability unlock:** To be reassigned during campaign restructuring
+**Progression gate:** Must build on the baseline Wind Tether rather than withholding it
 
 ---
 
@@ -384,11 +425,11 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 - Moving platforms (trains on tracks)
 - Environmental hazards (electrified rails, steam vents)
 - Drone swarms (3-4 at once)
-- Grapple hook shortcuts back to Hub
+- Wind Tether shortcuts back to Hub
 
 **Boss:** Steel Serpent (chase sequence + arena fight)  
-**Ability unlock:** Dash (mid-air)  
-**Progression gate:** Dash required to cross large gaps to Rooftops
+**Ability unlock:** To be reassigned during campaign restructuring
+**Progression gate:** Must build on the baseline Momentum Dash rather than withholding it
 
 ---
 
@@ -451,14 +492,14 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 ### Ability Gating (Metroidvania Standard)
 
 **Early game (Shibuya + Temple):**
-- Available: Run, Jump, Wall Jump, Wall Slide, Basic Attack
-- Unlock: Grapple Hook (Temple boss)
-- Gates: Grapple points are visible but unreachable
+- Available: Run, Jump, Wall Jump, Wall Slide, Crouch, Momentum Dash, Wind Tether, Wind Kunai, Basic Attack
+- Unlock: Fire Kunai during the first authored progression loop
+- Gates: Authored anchors teach Wind Tether routes; discovered Fire seals preview return paths
 
 **Mid-game (Metro + Rooftops):**
-- Available: + Grapple Hook
-- Unlock: Dash (Metro boss), Double Jump (Rooftops boss)
-- Gates: Wide gaps require dash, tall shafts need double jump
+- Available: Baseline movement kit + Fire Kunai
+- Unlock: Electric Kunai and Double Jump (exact campaign milestones pending restructure)
+- Gates: Elemental circuits, chained tether routes, and tall shafts
 
 **Late-game (Docks + Core):**
 - Available: Full movement kit
@@ -466,8 +507,9 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 - Gates: Low crawl spaces, speed-based platforming
 
 ### Backtracking Rewards
-- **After Grapple unlock:** Return to Shibuya/Temple for hidden rooms
-- **After Dash unlock:** Shortcuts through Metro, skip sections
+- **With baseline Wind Tether:** Authored anchors expose skill routes and later shortcuts
+- **With baseline Momentum Dash:** Movement mastery creates optional speed routes
+- **After Fire/Electric unlocks:** Return to earlier elemental seals for shortcuts and secrets
 - **After Double Jump:** Access rooftop secrets in all previous areas
 - **After Slide:** Speed-run optimizations
 
@@ -591,7 +633,7 @@ You play as Kaze, a fractured soul navigating a shattered neon metropolis. Each 
 ## Technical Specs
 
 ### Engine
-**Godot 4.3** (GDScript)
+**Godot 4.6.1** (GDScript)
 
 ### Project Structure
 ```
@@ -701,8 +743,9 @@ momentum-fractured/
 - [ ] Health/stamina UI
 
 ### Phase 5: Core Abilities (6 weeks)
-- [ ] Grapple Hook (Temple boss unlock)
-- [ ] Dash (Metro boss unlock)
+- [x] Wind Tether baseline implementation
+- [x] Momentum Dash baseline implementation
+- [ ] Fire and Electric Kunai progression routes
 - [ ] Double Jump (Rooftops boss unlock)
 - [ ] Ability tutorial rooms
 
@@ -786,3 +829,34 @@ momentum-fractured/
 ---
 
 *This GDD is a working document. Mechanics, numbers, and features may change during development. Refer to GitHub commit history for latest updates.*
+
+---
+
+## Alpha 0.8 Playtest Milestone — September 2026
+
+Alpha 0.8 rebuilds the playable campaign on the retained GitHub foundation and makes clean checkout/export reliability part of the milestone definition.
+
+### Playable Scope
+- 12 connected rooms: four original combat/platforming rooms plus Broken Span, Wind Relay, Reliquary Approach, Canal Undercroft, Conservatory Walk, The Rootwell, Hall of Borrowed Faces, and Borrowed Face Sanctum.
+- Two boss milestones: Storm Reliquary and The Borrowed Face.
+- Vertical rooms use elevated exits, compact platform clusters, and visible tether anchors.
+- Water is traversable. Entering water applies drag, lowers gravity and fall speed, and Space provides a swim stroke.
+
+### Traversal and Combat
+- Wind Tether: hold Q or Middle Mouse. The rope constrains distance while preserving tangential velocity, allowing momentum-based swings.
+- Momentum Dash: Shift. Dash produces a short cyan afterimage trail.
+- Elemental Kunai: F throws; mouse wheel cycles unlocked Wind, Fire, and Electric variants.
+- Fire and Electric seals are physical route gates and only open when struck with their matching kunai.
+- Guard Veil: C grants a three-second defensive state with an eight-second cooldown after the Borrowed Face reward.
+
+### Progression
+- Wind Kunai is available from the start.
+- Storm Reliquary unlocks Fire Kunai.
+- Clearing the Hall of Borrowed Faces unlocks Electric Kunai.
+- Defeating The Borrowed Face unlocks Guard Veil.
+- Room clears, health, cells, checkpoints, and ability unlocks persist in the save file.
+
+### UI and Testing
+- I opens the character/loadout screen with HP, traversal tools, equipped kunai, and Guard Veil state.
+- HUD displays tether/kunai/veil controls, encounter state, and boss framing.
+- Automated Alpha 0.8 smoke coverage loads all 12 rooms, validates player systems and animation slicing, verifies grapple anchors, and exercises all three progression rewards.

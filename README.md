@@ -1,8 +1,8 @@
 # MOMENTUM: FRACTURED
 
 **Genre:** 2D Metroidvania Action-Platformer  
-**Engine:** Godot 4.3  
-**Status:** Phase 4 - Shibuya Biome Vertical Slice
+**Engine:** Godot 4.6.1
+**Status:** Alpha 0.8 playtest candidate
 
 Metroid-style room-to-room combat in a shattered Tokyo metropolis.
 
@@ -10,20 +10,14 @@ Metroid-style room-to-room combat in a shattered Tokyo metropolis.
 
 ## 🎮 Current Build
 
-**Phase 3 Complete ✅**
-- Combat system working
-- 4 playable rooms
-- 2 enemy types (Echo, Drone)
-- Checkpoint save/load
-- HUD and pause menu
-- Performance optimized
-
-**Phase 4 In Progress 🚧**
-- Building 12-room Shibuya biome
-- Adding Guardian enemy
-- Echo Amalgam boss fight
-- Audio system
-- Tutorial messaging
+**Alpha 0.8 Candidate**
+- 12 connected playable rooms across the district, undercroft, and conservatory route
+- Two boss milestones: Storm Reliquary and The Borrowed Face
+- Momentum Wind Tether with visible rope and grapple anchors
+- Dash afterimages, swimming physics, and vertical traversal rooms
+- Wind, Fire, and Electric kunai with progression-locked elemental seals
+- Guard Veil boss reward and character/loadout screen
+- Checkpoint save/load, persistent room clears, combat HUD, and room transitions
 
 ---
 
@@ -41,6 +35,11 @@ godot project.godot
 - **Space** - Jump
 - **Shift** - Dash
 - **Left Click** - Attack
+- **Q / Middle Mouse** - Hold Wind Tether and swing
+- **F** - Throw equipped kunai
+- **Mouse Wheel** - Cycle unlocked kunai elements
+- **C** - Guard Veil after it is unlocked
+- **I** - Character/loadout screen
 - **Esc** - Pause menu
 
 ### Debug Hotkeys:
@@ -54,22 +53,18 @@ godot project.godot
 
 ## 📂 Key Documents
 
-**For Codex (Autonomous Mission):**
-- **`CODEX_AUTONOMOUS_MISSION.md`** ← **START HERE** (Complete mission brief)
-
-**For developers:**
-- **`CODEX_START_HERE.md`** ← Quick onboarding
-- **`PHASE_4_TASKS.md`** ← Work queue (10 tasks)
-- **`GDD.md`** ← Full game design document
+**Current direction:**
+- **`GDD.md`** ← Canonical game design document
+- **`docs/GAMEPLAY_PARITY_MATRIX.md`** ← P0/P1/P2 gaps and acceptance tests
+- **`docs/ART_BIBLE.md`** ← Canonical visual language and asset backlog
+- **`docs/DEVELOPMENT_ROADMAP.md`** ← Current milestones and exit criteria
+- **`docs/DOCUMENT_STATUS.md`** ← Current versus historical document index
+- **`AGENTS.md`** ← Lead/specialist working agreement
 
 **Status docs:**
-- **`OVERNIGHT_REPORT.md`** ← Last session summary
-- **`PLAYTEST_REPORT_2026-03-12.md`** ← Known issues
+- **`RELEASE_NOTES_ALPHA_0.8.0.md`** ← Recovery build notes
 
-**Design docs:**
-- `DESIGN_UPDATE.md` - Metroidvania structure
-- `ENEMY_ASSETS.md` - Sprite sourcing guide
-- `ASSET_GUIDE.md` - Asset recommendations
+Older root-level mission, phase, report, and asset documents are historical references; see `docs/DOCUMENT_STATUS.md` before using them.
 
 ---
 
@@ -90,7 +85,7 @@ godot project.godot
 ### Phase 5 - Temple District
 - Second biome (15-20 rooms)
 - Kitsune Matriarch boss
-- Grapple Hook ability (functional)
+- Build progression on the baseline Wind Tether and Momentum Dash
 - More enemy types
 
 ### Phase 6+ - Remaining Biomes
@@ -106,7 +101,7 @@ godot project.godot
 
 ## 🛠️ Tech Stack
 
-- **Engine:** Godot 4.3
+- **Engine:** Godot 4.6.1
 - **Language:** GDScript
 - **Player sprite:** Custom (from M0M3NTUM prototype)
 - **Enemy sprites:** Placeholders (upgrade in Phase 4)
@@ -121,7 +116,7 @@ scenes/
   ├── kaze.tscn              ← Player
   ├── enemies/               ← Echo, Drone (Guardian coming)
   ├── hazards/               ← Saw, laser, crusher, fire
-  ├── rooms/                 ← 4 rooms (need 8 more)
+  ├── rooms/                 ← 12-room systems prototype; authored parity slice in progress
   └── ui/                    ← HUD, pause menu
 
 scripts/
@@ -197,5 +192,5 @@ TBD (project in early development)
 
 ---
 
-**Last updated:** 2026-03-14  
-**Version:** Phase 4 (In Progress)
+**Last updated:** 2026-09-20
+**Version:** Alpha 0.8 recovery / web-parity restoration

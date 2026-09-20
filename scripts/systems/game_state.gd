@@ -6,6 +6,12 @@ extends Node
 const SAVE_PATH := "user://fractured_save.dat"
 const DEFAULT_START_SCENE := "res://scenes/rooms/room_01_combat.tscn"
 const DEFAULT_START_SPAWN := "spawn_default"
+const ABILITY_DASH := "dash"
+const ABILITY_TETHER := "tether"
+const ABILITY_WIND_KUNAI := "wind_kunai"
+const ABILITY_FIRE_KUNAI := "fire_kunai"
+const ABILITY_ELECTRIC_KUNAI := "electric_kunai"
+const BASELINE_ABILITIES: Array[String] = [ABILITY_DASH, ABILITY_TETHER, ABILITY_WIND_KUNAI]
 
 signal cells_changed(total_cells: int)
 signal player_health_changed(current: float, max_health: float)
@@ -13,12 +19,14 @@ signal checkpoint_updated(scene_path: String, spawn_marker: String)
 signal room_cleared(room_id: String)
 signal combo_changed(combo_count: int)
 signal abilities_changed(abilities: Array[String])
+signal map_changed
 signal state_reset
 
 var cleared_rooms: Dictionary = {}
 var cells: int = 0
 var combo_count: int = 0
 var abilities_unlocked: Array[String] = []
+var visited_rooms: Array[String] = []
 var loaded_from_disk: bool = false
 
 var player_health: float = 100.0
@@ -52,7 +60,8 @@ func _set_defaults() -> void:
 	checkpoint_spawn_marker = DEFAULT_START_SPAWN
 	pending_spawn_marker = DEFAULT_START_SPAWN
 	combo_count = 0
-	abilities_unlocked.clear()
+	abilities_unlocked.assign(BASELINE_ABILITIES)
+	visited_rooms.clear()
 
 
 func _emit_runtime_signals() -> void:
@@ -61,6 +70,19 @@ func _emit_runtime_signals() -> void:
 	emit_signal("checkpoint_updated", checkpoint_scene_path, checkpoint_spawn_marker)
 	emit_signal("combo_changed", combo_count)
 	emit_signal("abilities_changed", abilities_unlocked)
+	emit_signal("map_changed")
+
+
+func visit_room(room_id: String) -> void:
+	if room_id.is_empty() or room_id in visited_rooms:
+		return
+	visited_rooms.append(room_id)
+	emit_signal("map_changed")
+	save_to_disk()
+
+
+func has_visited_room(room_id: String) -> bool:
+	return room_id in visited_rooms
 
 
 func is_room_cleared(room_id: String) -> bool:
@@ -202,6 +224,7 @@ func get_debug_snapshot() -> Dictionary:
 		"cleared_room_count": cleared_rooms.size(),
 		"combo_count": combo_count,
 		"abilities_unlocked": abilities_unlocked,
+		"visited_rooms": visited_rooms,
 		"loaded_from_disk": loaded_from_disk,
 	}
 
@@ -223,6 +246,7 @@ func save_to_disk() -> void:
 		"checkpoint_spawn_marker": checkpoint_spawn_marker,
 		"pending_spawn_marker": pending_spawn_marker,
 		"abilities_unlocked": abilities_unlocked,
+		"visited_rooms": visited_rooms,
 	}
 	file.store_string(JSON.stringify(payload))
 
@@ -252,6 +276,10 @@ func load_from_disk() -> bool:
 	abilities_unlocked.clear()
 	for ability in data.get("abilities_unlocked", []):
 		abilities_unlocked.append(String(ability))
+	_ensure_baseline_abilities()
+	visited_rooms.clear()
+	for room_id in data.get("visited_rooms", []):
+		visited_rooms.append(String(room_id))
 
 	player_health = clampf(player_health, 0.0, player_max_health)
 	checkpoint_health = clampf(checkpoint_health, 0.0, checkpoint_max_health)
@@ -263,3 +291,11 @@ func load_from_disk() -> bool:
 		pending_spawn_marker = checkpoint_spawn_marker
 
 	return true
+
+
+func _ensure_baseline_abilities() -> void:
+	# Older Alpha saves predate explicit gating. Preserve their playable base kit
+	# while keeping later elemental unlocks intact.
+	for ability_id in BASELINE_ABILITIES:
+		if ability_id not in abilities_unlocked:
+			abilities_unlocked.append(ability_id)

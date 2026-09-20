@@ -10,6 +10,10 @@ extends CanvasLayer
 @onready var _combo_label: Label = $ComboLabel
 @onready var _notification_label: Label = $NotificationLabel
 @onready var _room_name_label: Label = $MiniMapPanel/VBox/RoomName
+@onready var _ability_status: Label = $AbilityStatus
+@onready var _character_panel: PanelContainer = $CharacterPanel
+@onready var _character_stats: Label = $CharacterPanel/Content/Stats
+@onready var _map_overlay: PanelContainer = $MapOverlay
 
 var _player: Node = null
 var _notification_tween: Tween = null
@@ -17,6 +21,7 @@ var _combo_hide_timer: float = 0.0
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	if not GameState.cells_changed.is_connected(_on_cells_changed):
 		GameState.cells_changed.connect(_on_cells_changed)
 	if not GameState.player_health_changed.is_connected(_on_player_health_changed):
@@ -33,12 +38,37 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("character_menu"):
+		_map_overlay.visible = false
+		_character_panel.visible = not _character_panel.visible
+		get_tree().paused = _character_panel.visible
+	if Input.is_action_just_pressed("map"):
+		_character_panel.visible = false
+		_map_overlay.visible = not _map_overlay.visible
+		get_tree().paused = _map_overlay.visible
+	_update_ability_status()
 	if _combo_hide_timer <= 0.0:
 		return
 
 	_combo_hide_timer = maxf(0.0, _combo_hide_timer - delta)
 	if _combo_hide_timer <= 0.0:
 		_combo_label.visible = false
+
+
+func _update_ability_status() -> void:
+	if _player == null or not is_instance_valid(_player):
+		_resolve_player()
+	if _player == null:
+		return
+	var element := "wind"
+	var veil_ratio := 1.0
+	if _player.has_method("get_current_kunai_element"):
+		element = String(_player.call("get_current_kunai_element"))
+	if _player.has_method("get_guard_veil_ratio"):
+		veil_ratio = float(_player.call("get_guard_veil_ratio"))
+	var veil_text := "READY" if veil_ratio >= 0.999 else "%d%%" % roundi(veil_ratio * 100.0)
+	_ability_status.text = "TETHER: Q / MMB   KUNAI: F [%s]\nVEIL: C [%s]   MAP: M   LOADOUT: I" % [element.to_upper(), veil_text]
+	_character_stats.text = "HP %d / %d\n\nTRAVERSAL\nWind Tether — Q or Middle Mouse\nMomentum Dash — Shift\n\nEQUIPPED KUNAI\n%s\n\nGUARD VEIL\n%s" % [roundi(GameState.player_health), roundi(GameState.player_max_health), element.capitalize(), veil_text]
 
 
 func _resolve_player() -> void:
@@ -48,11 +78,6 @@ func _resolve_player() -> void:
 		for candidate in get_tree().get_nodes_in_group("player"):
 			_player = candidate
 			break
-
-	var on_player_health_changed := Callable(self, "_on_player_health_changed")
-	if _player and _player.has_signal("health_changed") and not _player.is_connected("health_changed", on_player_health_changed):
-		_player.connect("health_changed", on_player_health_changed)
-
 
 func _on_cells_changed(total_cells: int) -> void:
 	if _cell_counter and _cell_counter.has_method("set_cells"):

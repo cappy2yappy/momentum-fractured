@@ -198,6 +198,9 @@ func _start_attack(direction: float) -> void:
 	_attack_timer = attack_duration
 	_attack_cooldown_timer = attack_cooldown
 	velocity.x = 0.0
+	var attack_shape := hitbox.get_node_or_null("CollisionShape2D") as CollisionShape2D
+	if attack_shape:
+		attack_shape.position.x = absf(attack_shape.position.x) * direction
 
 	if hitbox and hitbox.has_method("set_knockback_direction"):
 		hitbox.damage = attack_damage
@@ -226,7 +229,7 @@ func _on_hit(_damage: float, knockback: Vector2, _hitbox_node: Area2D) -> void:
 
 	velocity = knockback
 	_hitstun_timer = hitstun_duration
-	if body_rect:
+	if body_rect and body_rect.visible:
 		body_rect.color = Color(1.0, 0.2, 0.2, 1.0)
 		var tween := create_tween()
 		tween.tween_property(body_rect, "color", Color(1.0, 0.3, 0.3, 1.0), 0.12)

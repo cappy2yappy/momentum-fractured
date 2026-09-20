@@ -24,13 +24,17 @@ func _process(delta):
 		if auto_disable_timer <= 0:
 			deactivate()
 
-func activate():
-	if is_active:
+func activate(duration: float = -1.0, restart: bool = false) -> void:
+	if is_active and not restart:
 		return
-	
+
+	# A restarted window is a new attack, so previously hit targets must not
+	# leak into the next combo step.
+	if restart:
+		monitoring = false
 	is_active = true
 	monitoring = true
-	auto_disable_timer = auto_disable_time
+	auto_disable_timer = duration if duration >= 0.0 else auto_disable_time
 	hit_targets.clear()
 
 func deactivate():

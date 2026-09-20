@@ -1282,7 +1282,7 @@ By end of autonomous session, repo should have:
 Before beginning:
 
 - [ ] Fresh clone of repo
-- [ ] Godot 4.3+ installed
+- [ ] Godot 4.6.1 installed
 - [ ] Git configured (can commit/push)
 - [ ] Read this file completely
 - [ ] Understand all 4 phases

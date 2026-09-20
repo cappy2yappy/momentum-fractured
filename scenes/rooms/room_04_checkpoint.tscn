@@ -131,9 +131,10 @@ position = Vector2(1208, 460)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_05_route.tscn"
+target_spawn_marker = "spawn_default"
 door_prompt_text = "→ ROOM 5"
-requires_room_clear = true
-room_id = "room_05_future"
+requires_room_clear = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/RightDoor"]
 shape = SubResource("3")

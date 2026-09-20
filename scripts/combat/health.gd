@@ -38,6 +38,16 @@ func heal(amount: float) -> void:
 	
 	emit_signal("health_changed", old_health, current_health)
 
+
+func set_health_values(current: float, max_value: float) -> void:
+	var old_health := current_health
+	var old_max_health := max_health
+	max_health = maxf(max_value, 1.0)
+	current_health = clampf(current, 0.0, max_health)
+	is_dead = current_health <= 0.0
+	if not is_equal_approx(old_health, current_health) or not is_equal_approx(old_max_health, max_health):
+		emit_signal("health_changed", old_health, current_health)
+
 func die() -> void:
 	if is_dead:
 		return
