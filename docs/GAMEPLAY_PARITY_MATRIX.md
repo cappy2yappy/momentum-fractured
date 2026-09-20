@@ -2,7 +2,7 @@
 
 **Project:** Momentum: Fractured / Kaze
 **Baseline branch:** `codex/web-parity-restoration`
-**Baseline commit:** `4f9315b`
+**Baseline commit:** `298faee`
 **Canonical benchmark:** [Rush Line web build](https://rush-line.thacap.chatgpt.site)
 **Audit type:** Static scene, script, progression, map, and test review
 **Last updated:** September 20, 2026
@@ -39,34 +39,39 @@ The current recovered branch restores important systems, but rooms 5–12 remain
 | Enemies | Rooms 5–11 request four to six enemies; Echo/Drone mix; rooms 7 and 12 request one scaled Echo boss | Partial | Generated positions follow a formula rather than platform geometry or encounter purpose. Ground enemies can fall or cluster instead of occupying intended lanes. There are no aquatic enemies, tether-pressure enemies, or bespoke boss moves/phases. | Do enemies remain on intended platforms? Do attacks connect from both facings and elevations? Does each encounter activate the room's geometry? | P0 |
 | Room density | Four explicit early-room scenes and eight generated route-room layouts | Below parity | Rooms 5–12 share boundaries, spawn logic, anchor patterns, environmental treatment, and progression logic. Most are open single-screen boxes with sparse platforms. Intimate corridors, authored shortcuts, reliquaries, secrets, and route choices are absent. | Can the purpose of each room be stated in one sentence? Does each room introduce, combine, or test a meaningful idea? | P0 |
 
-## Confirmed Topology and Spawn Defects
+## Topology and Spawn Status
 
-These issues are file-verifiable and do not require subjective playtesting.
+These findings are file-verifiable and do not require subjective playtesting.
 
-### P0 — Fix before building the authored slice
+### Resolved in the recovery baseline
 
-1. **Generated-room backtracking uses the wrong spawn side.**
-   Every generated door sets `target_spawn_marker` to `spawn_default`. Moving left into the previous room therefore places Kaze at that room's left-side default position rather than the corresponding right-side entrance. This breaks spatial continuity and makes backtracking unreliable. See `scripts/rooms/route_room.gd`, `_add_exit()`.
+1. **Generated-room backtracking now uses directional arrival markers.**
+   Rooms 5–12 create `entry_from_roomN` markers for every incoming connection. Forward traversal arrives at the left side and backtracking arrives at the right side.
 
-2. **Room 4's left door disagrees with the forward route and map.**
-   Runtime progression moves from Room 3 Mixed to Room 4 Checkpoint, but Room 4's left door targets Room 1. The map displays Room 3 connected to Room 4. See `scenes/rooms/room_04_checkpoint.tscn` and `scripts/ui/map_display.gd`.
+2. **Room 4 now returns to Room 3 and accepts Room 5 backtracking.**
+   Its explicit scene data matches the canonical graph and includes `entry_from_room5`.
 
-3. **The map graph disagrees with generated-room transitions.**
-   Runtime creates the linear sequence Room 8 → Room 9 → Room 10 and loops Room 12 → Room 5. The map instead draws Room 8 → Room 10, omits Room 9 → Room 10, and omits Room 12 → Room 5.
+3. **Runtime transitions and the map now consume one authoritative graph.**
+   `scripts/rooms/room_graph.gd` defines canonical scenes, positions, connections, and marker naming. The map now includes Room 9 → Room 10 and the one-way Room 12 → Room 5 prototype loop.
 
-4. **Room 3 Safe is orphaned.**
-   `room_03_safe` has a map position but no map link and no current inbound runtime transition.
+4. **Topology integrity is covered by automated checks.**
+   The smoke suite verifies canonical targets, valid arrival markers, reciprocal standard links, and the intentional one-way loop across all twelve rooms.
 
-5. **Starting-ability documentation remains contradictory.**
-   Runtime input now gates Dash and Wind Tether through canonical `GameState` ability IDs, and a new game grants both as baseline abilities. Older GDD progression language still describes them as later unlocks and must be reconciled with the intended campaign progression.
+### Remaining confirmed limitations
 
-6. **There is no ability-gated return path.**
+1. **Room 3 Safe remains historical and unused.**
+   `room_03_safe.tscn` is excluded from the canonical twelve-room graph and has no current inbound runtime transition.
+
+2. **The Room 12 → Room 5 prototype loop is intentionally one-way.**
+   The map shows the connection as an undirected line because it does not yet render directional arrows. The authored parity slice must replace or deliberately justify this structure.
+
+3. **There is no ability-gated return path.**
    The current Fire and Electric gates are mandatory forward blockers. They do not satisfy the GDD requirement for an unlock that changes an earlier route, reveals a shortcut, or rewards backtracking.
 
-7. **Room 8 silently becomes a checkpoint on entry.**
+4. **Room 8 silently becomes a checkpoint on entry.**
    `route_room.gd` sets the checkpoint during `_ready()` without an authored checkpoint object, interaction, or clear player-facing confirmation.
 
-8. **Generated enemy placement is disconnected from layout geometry.**
+5. **Generated enemy placement is disconnected from layout geometry.**
    Enemy positions are produced by one formula instead of authored spawn markers. The formula does not verify ground beneath Echoes or reserve meaningful positions for Drones.
 
 ## Confirmed System and Test Gaps
@@ -90,8 +95,6 @@ These issues are file-verifiable and do not require subjective playtesting.
 
 `tests/alpha_08_smoke.gd` currently verifies scene loading, method presence, selected constants, run-animation slicing, anchor presence, rewards, ability save/load, dash momentum preservation, restartable melee windows, and single health-event propagation. It directly calls room death handlers to simulate progression. It does **not** verify:
 
-- Bidirectional transition targets and spawn markers
-- Runtime/map graph agreement
 - Player reachability through a room
 - Movement distances or timings
 - Measured dash distance or live tether momentum
@@ -177,8 +180,8 @@ The route must connect back toward the surface after the Fire unlock, demonstrat
 
 ### P0 — Truthful foundation
 
-1. Correct all bidirectional door targets and directional spawn markers.
-2. Define one authoritative room graph used by both transitions and the map.
+1. ~~Correct all bidirectional door targets and directional spawn markers.~~ Completed in `298faee`.
+2. ~~Define one authoritative room graph used by both transitions and the map.~~ Completed in `298faee`.
 3. Fix tether collision/aiming and validate the corrected dash/combat behavior through direct playtesting.
 4. Resolve starting-ability versus unlock contradictions.
 5. Author the five-room geometry and entrance/exit metadata.

@@ -2,36 +2,7 @@ extends Control
 class_name KazeMapDisplay
 
 @export var compact := false
-
-const ROOM_POSITIONS := {
-	"room_01_combat": Vector2i(0, 2),
-	"room_02_platforming": Vector2i(1, 2),
-	"room_03_mixed": Vector2i(2, 2),
-	"room_03_safe": Vector2i(2, 3),
-	"room_04_checkpoint": Vector2i(3, 2),
-	"room_05_route": Vector2i(4, 2),
-	"room_06_route": Vector2i(4, 1),
-	"room_07_route": Vector2i(5, 1),
-	"room_08_route": Vector2i(5, 2),
-	"room_09_route": Vector2i(6, 2),
-	"room_10_route": Vector2i(5, 3),
-	"room_11_route": Vector2i(6, 3),
-	"room_12_route": Vector2i(7, 3),
-}
-
-const LINKS := [
-	["room_01_combat", "room_02_platforming"],
-	["room_02_platforming", "room_03_mixed"],
-	["room_03_mixed", "room_04_checkpoint"],
-	["room_04_checkpoint", "room_05_route"],
-	["room_05_route", "room_06_route"],
-	["room_06_route", "room_07_route"],
-	["room_07_route", "room_08_route"],
-	["room_08_route", "room_09_route"],
-	["room_08_route", "room_10_route"],
-	["room_10_route", "room_11_route"],
-	["room_11_route", "room_12_route"],
-]
+const ROOM_GRAPH := preload("res://scripts/rooms/room_graph.gd")
 
 var current_room_id := ""
 
@@ -57,21 +28,21 @@ func _draw() -> void:
 	var step := Vector2(21, 17) if compact else Vector2(70, 62)
 	var origin := Vector2(10, 4) if compact else Vector2(48, 42)
 	var room_size := Vector2(15, 11) if compact else Vector2(47, 31)
-	for link in LINKS:
-		var from_id: String = link[0]
-		var to_id: String = link[1]
+	for connection in ROOM_GRAPH.CONNECTIONS:
+		var from_id: String = connection.from
+		var to_id: String = connection.to
 		if not GameState.has_visited_room(from_id) or not GameState.has_visited_room(to_id):
 			continue
-		var from_center := origin + Vector2(ROOM_POSITIONS[from_id]) * step + room_size * 0.5
-		var to_center := origin + Vector2(ROOM_POSITIONS[to_id]) * step + room_size * 0.5
+		var from_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[from_id]) * step + room_size * 0.5
+		var to_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[to_id]) * step + room_size * 0.5
 		draw_line(from_center, to_center, Color(0.23, 0.68, 0.77, 0.72), 3.0 if not compact else 1.4)
 
-	for key in ROOM_POSITIONS:
+	for key in ROOM_GRAPH.ROOM_POSITIONS:
 		var room_id := String(key)
 		var visited := GameState.has_visited_room(room_id)
 		if not visited and room_id != current_room_id:
 			continue
-		var room_rect := Rect2(origin + Vector2(ROOM_POSITIONS[room_id]) * step, room_size)
+		var room_rect := Rect2(origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[room_id]) * step, room_size)
 		var is_current := room_id == current_room_id
 		var fill := Color(0.14, 0.76, 0.89, 0.94) if is_current else Color(0.09, 0.20, 0.30, 0.96)
 		var outline := Color(0.82, 1.0, 1.0, 1.0) if is_current else Color(0.27, 0.72, 0.80, 0.88)

@@ -1,5 +1,7 @@
 extends SceneTree
 
+const ROOM_GRAPH := preload("res://scripts/rooms/room_graph.gd")
+
 var failures := 0
 
 
@@ -62,6 +64,7 @@ func _run() -> void:
 
 	await _check_anchor_only_tether()
 	await _check_mechanical_integrity()
+	await _check_room_topology()
 
 	if game_state:
 		game_state.call("new_game")
@@ -159,6 +162,64 @@ func _check_mechanical_integrity() -> void:
 	game_state.disconnect("player_health_changed", on_game_state_health)
 	player.queue_free()
 	await process_frame
+
+
+func _check_room_topology() -> void:
+	var markers_by_room := {}
+	var transitions: Array[Dictionary] = []
+	var observed_transitions := {}
+
+	for room_key in ROOM_GRAPH.ROOM_SCENES:
+		var room_id := String(room_key)
+		var scene_path := ROOM_GRAPH.scene_for_room(room_id)
+		var packed := load(scene_path) as PackedScene
+		_check(packed != null, "%s topology scene loads" % room_id)
+		if packed == null:
+			continue
+		var room := packed.instantiate()
+		root.add_child(room)
+		await process_frame
+
+		var marker_names: Array[String] = []
+		var spawn_points := room.get_node_or_null("SpawnPoints")
+		_check(spawn_points != null, "%s defines SpawnPoints" % room_id)
+		if spawn_points:
+			for marker in spawn_points.get_children():
+				if marker is Marker2D:
+					marker_names.append(String(marker.name))
+		markers_by_room[room_id] = marker_names
+		_check("spawn_default" in marker_names, "%s defines spawn_default" % room_id)
+
+		for exit_node in room.find_children("*", "DoorExit", true, false):
+			var target_scene := String(exit_node.get("target_scene_path"))
+			var target_room_id := ROOM_GRAPH.room_id_from_scene(target_scene)
+			var target_spawn := String(exit_node.get("target_spawn_marker"))
+			transitions.append({
+				"source": room_id,
+				"target": target_room_id,
+				"target_scene": target_scene,
+				"target_spawn": target_spawn,
+			})
+			observed_transitions["%s>%s" % [room_id, target_room_id]] = true
+		room.queue_free()
+		await process_frame
+
+	for transition in transitions:
+		var source_id := String(transition.source)
+		var target_id := String(transition.target)
+		var target_scene := String(transition.target_scene)
+		var target_spawn := String(transition.target_spawn)
+		_check(not target_id.is_empty(), "%s exit targets a canonical room scene" % source_id)
+		_check(ROOM_GRAPH.has_transition(source_id, target_id), "%s → %s exists in the canonical graph" % [source_id, target_id])
+		_check(target_scene == ROOM_GRAPH.scene_for_room(target_id), "%s → %s uses the canonical target scene" % [source_id, target_id])
+		_check(markers_by_room.has(target_id) and target_spawn in markers_by_room[target_id], "%s → %s arrives at valid marker %s" % [source_id, target_id, target_spawn])
+
+	for connection in ROOM_GRAPH.CONNECTIONS:
+		var from_id := String(connection.from)
+		var to_id := String(connection.to)
+		_check(observed_transitions.has("%s>%s" % [from_id, to_id]), "%s → %s transition is implemented" % [from_id, to_id])
+		if connection.bidirectional:
+			_check(observed_transitions.has("%s>%s" % [to_id, from_id]), "%s → %s reciprocal transition is implemented" % [to_id, from_id])
 
 
 func _clear_progression_room(room_index: int) -> void:

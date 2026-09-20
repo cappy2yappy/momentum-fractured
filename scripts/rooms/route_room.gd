@@ -10,6 +10,7 @@ const DOOR_SCRIPT := preload("res://scripts/rooms/door_exit.gd")
 const ANCHOR_SCRIPT := preload("res://scripts/rooms/grapple_anchor.gd")
 const WATER_SCRIPT := preload("res://scripts/rooms/water_zone.gd")
 const KUNAI_GATE_SCRIPT := preload("res://scripts/rooms/kunai_gate.gd")
+const ROOM_GRAPH := preload("res://scripts/rooms/room_graph.gd")
 
 @export_range(5, 12) var room_index := 5
 
@@ -27,6 +28,7 @@ var enemy_counts := {5: 4, 6: 4, 7: 1, 8: 4, 9: 5, 10: 5, 11: 6, 12: 1}
 var remaining_enemies := 0
 var right_exit: Area2D
 var room_id := ""
+const EXIT_HEIGHTS := {5: 360.0, 6: 190.0, 7: 510.0, 8: 340.0, 9: 210.0, 10: 180.0, 11: 500.0, 12: 510.0}
 
 
 func _ready() -> void:
@@ -39,6 +41,7 @@ func _ready() -> void:
 	_build_anchors()
 	_build_water_if_needed()
 	_build_kunai_gate_if_needed()
+	_build_spawn_points()
 	_build_player()
 	_build_exits()
 	_build_hud()
@@ -213,26 +216,44 @@ func _build_player() -> void:
 	add_child(camera)
 
 
+func _build_spawn_points() -> void:
+	var spawn_points := Node2D.new()
+	spawn_points.name = "SpawnPoints"
+	add_child(spawn_points)
+	_add_spawn_marker(spawn_points, "spawn_default", Vector2(105, 625))
+	for source_room_id in ROOM_GRAPH.incoming_rooms(room_id):
+		var source_number := ROOM_GRAPH.room_number(source_room_id)
+		var spawn_position := Vector2(105, 625)
+		if source_number > room_index:
+			spawn_position = Vector2(1175, EXIT_HEIGHTS[room_index])
+		_add_spawn_marker(spawn_points, ROOM_GRAPH.entry_marker_from(source_room_id), spawn_position)
+
+
+func _add_spawn_marker(parent: Node2D, marker_name: String, marker_position: Vector2) -> void:
+	var marker := Marker2D.new()
+	marker.name = marker_name
+	marker.position = marker_position
+	parent.add_child(marker)
+
+
 func _build_exits() -> void:
-	var exit_heights := {5: 360.0, 6: 190.0, 7: 510.0, 8: 340.0, 9: 210.0, 10: 180.0, 11: 500.0, 12: 510.0}
-	_add_exit(Vector2(32, 560), room_index - 1, "← BACK")
+	var previous_room_id := ROOM_GRAPH.room_id_for_index(room_index - 1)
+	_add_exit(Vector2(32, 560), previous_room_id, "← BACK")
 	if room_index < 12:
-		right_exit = _add_exit(Vector2(1248, exit_heights[room_index]), room_index + 1, "NEXT →")
+		var next_room_id := ROOM_GRAPH.room_id_for_index(room_index + 1)
+		right_exit = _add_exit(Vector2(1248, EXIT_HEIGHTS[room_index]), next_room_id, "NEXT →")
 	else:
-		right_exit = _add_exit(Vector2(1248, exit_heights[room_index]), 5, "LOOP →")
+		right_exit = _add_exit(Vector2(1248, EXIT_HEIGHTS[room_index]), ROOM_GRAPH.room_id_for_index(5), "LOOP →")
 
 
-func _add_exit(position_value: Vector2, target_index: int, prompt: String) -> Area2D:
+func _add_exit(position_value: Vector2, target_room_id: String, prompt: String) -> Area2D:
 	var exit := Area2D.new()
 	exit.set_script(DOOR_SCRIPT)
 	exit.position = position_value
 	exit.collision_layer = 0
 	exit.collision_mask = 2
-	var target_path := "res://scenes/rooms/room_%02d_route.tscn" % target_index
-	if target_index == 4:
-		target_path = "res://scenes/rooms/room_04_checkpoint.tscn"
-	exit.set("target_scene_path", target_path)
-	exit.set("target_spawn_marker", "spawn_default")
+	exit.set("target_scene_path", ROOM_GRAPH.scene_for_room(target_room_id))
+	exit.set("target_spawn_marker", ROOM_GRAPH.entry_marker_from(room_id))
 	exit.set("door_prompt_text", prompt)
 	var collision := CollisionShape2D.new()
 	var shape := RectangleShape2D.new()
