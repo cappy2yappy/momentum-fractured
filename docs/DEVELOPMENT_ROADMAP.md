@@ -8,10 +8,10 @@ The canonical web build is the quality target for feel, presentation, density, i
 
 **Exit criteria:** the recovered branch is published, boots in Godot 4.6.1, loads every room, and has reproducible Windows/macOS export settings.
 
-- Publish `codex/web-parity-restoration`.
-- Keep engine and build documentation on Godot 4.6.1.
-- Preserve the current smoke suite and add focused regression tests with each system fix.
-- Identify generated metadata that belongs in source control.
+- [x] Publish `codex/web-parity-restoration`.
+- [x] Keep engine and build documentation on Godot 4.6.1.
+- [x] Preserve the current smoke suite and add focused regression tests with each system fix.
+- [x] Identify generated metadata that belongs in source control.
 
 ## Milestone 1 — Five-room parity slice
 
@@ -22,6 +22,16 @@ Build one authored, connected loop that proves the game's intended identity:
 3. subterranean checkpoint/reliquary room;
 4. traversable aquatic chamber with distinct physics;
 5. elemental-gated return shortcut to the surface route.
+
+Implementation status:
+
+- [x] Authoritative graph and reciprocal directional spawns.
+- [x] Wind Tether aim, line-of-sight, and collision-safety hardening.
+- [x] Compact Surface Approach first authored conversion (`room_05_route.tscn`).
+- [ ] Multi-screen Wind Relay Shaft.
+- [ ] Underground Threshold and authored reliquary/checkpoint.
+- [ ] Deep traversable Canal Chamber.
+- [ ] Persistent Fire-sealed return shortcut.
 
 **Exit criteria:** correct bidirectional spawns and map links; reliable damage; authored enemy placement; visible tether anchors and elemental locks; working map/loadout UI; no automatic-death water; movement accepted through direct playtesting.
 
@@ -49,4 +59,4 @@ Build one authored, connected loop that proves the game's intended identity:
 - **P1:** required for the five-room parity slice or core presentation.
 - **P2:** campaign expansion, polish, and optional depth after the slice is accepted.
 
-The next implementation task after baseline publication is the five-room loop's authoritative topology and spawn contract, followed by the first compact surface room.
+The next implementation task is the multi-screen Wind Relay Shaft, using the authored anchor route and recovery placements in `docs/levels/PARITY_SLICE_LAYOUT.md`.

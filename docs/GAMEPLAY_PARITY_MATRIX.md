@@ -28,9 +28,9 @@ The current recovered branch restores important systems, but rooms 5–12 remain
 | Movement | Run, variable jump, wall jump, wall slide, coyote time, jump buffering, ground/air acceleration | Partial | No dedicated movement test room or recorded reference metrics. Controller only reads horizontal movement outside water. Action-cancel rules are not formally defined. | Does acceleration, reversal, short/full jump, apex, landing, and wall-jump response match the web build? | P0 |
 | Dash | Ground/air dash, one air charge, cooldown, cyan afterimages, ability gating, and preserved greater incoming horizontal/vertical momentum | Partial | The P0 momentum snap and gating regressions are fixed and covered by smoke tests. Dash still uses facing direction rather than directional aiming, and no dash invulnerability is implemented although the GDD promises it. | Is the dash distance, duration, recovery, afterimage density, direction, and cancel behavior correct? Should dash retain web-build invulnerability? | P0 |
 | Combat | Three-step light combo, facing-aware restartable 0.15-second hit windows, knockback, combo counter, Echo melee, Drone ranged | Partial | Fresh combo windows and single health-state signaling are now regression-tested. Only two true enemy archetypes exist. Bosses are enlarged Echo instances. Heavy attack, dodge, parry, aerial attack, and dash-strike described in the GDD are absent. | Does every visible player and enemy strike register exactly once during live collisions? Are active frames readable? Are damage, recovery, hitstun, and knockback comparable to the web build? | P0 |
-| Wind Tether | Q/Middle Mouse hold, authored anchors, 410-pixel range, tangent pumping, momentum release, animated energy strand | Partial | Tether is always unlocked. It has no line-of-sight or obstruction check and no maximum cursor-to-anchor aim tolerance. Rope correction directly rewrites `global_position` after `move_and_slide()`, which can bypass collision resolution. | Does tether ever select an unintended anchor? Can it attach through walls? Does pumping build momentum naturally in both directions? Is release speed preserved without jitter or clipping? | P0 |
+| Wind Tether | Q/Middle Mouse hold, authored anchors, 410-pixel range, 120-pixel aim acceptance, obstruction checks, collision-safe constraint correction, tangent pumping, momentum release, animated energy strand | Partial | The confirmed through-wall, off-target, and direct-position correction defects are fixed and covered by smoke tests. Final feel still depends on authored-room playtesting. | Is 120-pixel aim acceptance comfortable at gameplay scale? Does the correction cap avoid visible rope stretch at extreme speed? Does pumping build momentum naturally in both directions? | P0 |
 | Water | Water Areas in rooms 8 and 10, reduced gravity, drag, fall-speed cap, Space swim stroke | Partial | Each water area is a shallow 150-pixel strip at the bottom of a one-screen room. There is no descend input, directional swim, stable buoyancy behavior, water animation, or meaningful aquatic route. | Can Kaze descend, hover, surface, and exit consistently? Which actions should work underwater? Does entering water at speed feel coherent? | P1 |
-| Map | Persistent visited-room data, always-visible mini-map, M-key full overlay, current-room highlight | Partial | The drawn graph does not match runtime transitions. It lacks doors, elevations, gates, shortcuts, secrets, and region information. | Is the current room immediately readable? Does exploration reveal information at the right time? Is the full map useful for navigation without overexplaining? | P0 |
+| Map | Persistent visited-room data, always-visible mini-map, M-key full overlay, current-room highlight, and shared runtime topology | Partial | Runtime and map now share one graph, but the display still lacks door elevations, directional edges, gates, shortcuts, secrets, and region information. | Is the current room immediately readable? Does exploration reveal information at the right time? Is the full map useful for navigation without overexplaining? | P0 |
 | Character/loadout | I-key panel showing HP, tether, dash, current kunai, and Guard Veil status | Partial | It is a text readout rather than a loadout interface. It has no character presentation, icons, locked slots, descriptions, selection controls, or meaningful equipment decisions. | Is the panel readable during play? Does it provide enough information to support switching and progression decisions? | P1 |
 | Verticality | Elevated exits, stepped platforms, visible anchors, wall movement | Partial | Generated rooms remain one 1280×720 screen with three or four staircase-like platforms. There are no multi-screen shafts, meaningful vertical camera travel, branching elevations, fall recovery routes, or layered encounters. | Does each rise create a traversal decision? Is height filled with meaningful movement and encounter pressure rather than empty space? | P0 |
 | Subterranean routes | Rooms 8, 10, 11, and 12 use darker terrain crops and overlays | Missing as level structure | “Subterranean” is currently a visual treatment on the same one-screen room generator. There is no authored descent, tunnel topology, underground landmarking, or coherent surface-to-water geography. | Is the transition underground spatially understandable? Does the underground area feel distinct without losing the established visual identity? | P1 |
@@ -78,8 +78,6 @@ These findings are file-verifiable and do not require subjective playtesting.
 
 ### P0
 
-- Replace direct tether position teleportation with a collision-safe rope constraint.
-- Add tether line-of-sight and aiming acceptance checks.
 - Validate the new restartable melee windows through live collision playtests, not only direct regression calls.
 - Reconcile the GDD's later-unlock language with the current baseline Dash and Wind Tether decision.
 - Persist gate state and make the room graph authoritative rather than maintaining separate, contradictory transition and map definitions.
@@ -93,12 +91,12 @@ These findings are file-verifiable and do not require subjective playtesting.
 
 ### Automated coverage gap
 
-`tests/alpha_08_smoke.gd` currently verifies scene loading, method presence, selected constants, run-animation slicing, anchor presence, rewards, ability save/load, dash momentum preservation, restartable melee windows, and single health-event propagation. It directly calls room death handlers to simulate progression. It does **not** verify:
+`tests/alpha_08_smoke.gd` currently verifies scene loading, method presence, selected constants, run-animation slicing, anchor presence, rewards, ability save/load, dash momentum preservation, restartable melee windows, single health-event propagation, tether aim acceptance, obstruction rejection, collision-safe rope correction, and authored Room 5 structure. It directly calls room death handlers to simulate progression. It does **not** verify:
 
 - Player reachability through a room
 - Movement distances or timings
 - Measured dash distance or live tether momentum
-- Tether collision or line-of-sight
+- Full-speed tether corner cases during real input play
 - Water entry, exit, descent, and surfacing
 - Gate persistence or bypass resistance
 - Actual player/enemy collision registration
@@ -182,9 +180,9 @@ The route must connect back toward the surface after the Fire unlock, demonstrat
 
 1. ~~Correct all bidirectional door targets and directional spawn markers.~~ Completed in `298faee`.
 2. ~~Define one authoritative room graph used by both transitions and the map.~~ Completed in `298faee`.
-3. Fix tether collision/aiming and validate the corrected dash/combat behavior through direct playtesting.
+3. ~~Fix tether collision/aiming.~~ Automated hardening completed in `8d65c94`; direct feel validation remains required.
 4. Resolve starting-ability versus unlock contradictions.
-5. Author the five-room geometry and entrance/exit metadata.
+5. Author the five-room geometry and entrance/exit metadata. Room 5 / Compact Surface Approach is the first converted authored room.
 6. Move the Fire gate from the mandatory forward line to the return shortcut.
 7. Place enemies with explicit encounter spawn markers.
 

@@ -65,6 +65,7 @@ func _run() -> void:
 	await _check_anchor_only_tether()
 	await _check_mechanical_integrity()
 	await _check_room_topology()
+	await _check_authored_surface_room()
 
 	if game_state:
 		game_state.call("new_game")
@@ -86,16 +87,57 @@ func _check_anchor_only_tether() -> void:
 	root.add_child(player)
 	player.position = Vector2(300, 400)
 	await process_frame
-	player.call("_start_grapple")
+	player.set_physics_process(false)
+	player.call("_try_start_grapple", player.global_position + Vector2(100.0, -100.0))
 	_check(not bool(player.get("grapple_active")), "Wind Tether cannot attach to empty space")
 	var anchor := Node2D.new()
 	anchor.position = Vector2(420, 220)
 	anchor.add_to_group("grapple_anchor")
 	root.add_child(anchor)
 	await process_frame
-	player.call("_start_grapple")
+	var off_target_aim := anchor.global_position + Vector2(240.0, 0.0)
+	_check(not bool(player.call("_try_start_grapple", off_target_aim)), "Wind Tether rejects an anchor when aim is clearly elsewhere")
+	_check(not bool(player.get("grapple_active")), "Rejected aim leaves Wind Tether inactive")
+	player.call("_try_start_grapple", anchor.global_position)
 	_check(bool(player.get("grapple_active")), "Wind Tether attaches to an in-range authored anchor")
 	_check(player.get("grapple_anchor") == anchor, "Wind Tether stores the authored anchor target")
+
+	player.velocity = Vector2(420.0, -260.0)
+	player.call("_release_grapple")
+	_check(player.velocity == Vector2(420.0, -260.0), "Wind Tether release preserves swing momentum")
+
+	var blocker := StaticBody2D.new()
+	blocker.position = (player.global_position + anchor.global_position) * 0.5
+	var blocker_shape := CollisionShape2D.new()
+	var blocker_rectangle := RectangleShape2D.new()
+	blocker_rectangle.size = Vector2(120.0, 24.0)
+	blocker_shape.shape = blocker_rectangle
+	blocker.add_child(blocker_shape)
+	root.add_child(blocker)
+	await physics_frame
+	_check(not bool(player.call("_try_start_grapple", anchor.global_position)), "Wind Tether cannot attach through solid geometry")
+
+	player.global_position = Vector2(300.0, 500.0)
+	anchor.global_position = Vector2(300.0, 100.0)
+	blocker.global_position = Vector2(300.0, 420.0)
+	blocker_rectangle.size = Vector2(160.0, 20.0)
+	await physics_frame
+	player.grapple_active = true
+	player.grapple_anchor = anchor
+	player.grapple_point = anchor.global_position
+	player.grapple_length = 300.0
+	player.velocity = Vector2(0.0, 240.0)
+	player.call("_apply_grapple_constraint")
+	_check(player.global_position.y >= 461.0, "Rope correction stops at blocking geometry instead of teleporting through it")
+	_check(player.velocity.y <= 0.0, "Rope constraint removes outward radial velocity after a collision-safe correction")
+
+	player.global_position = Vector2(420.0, 300.0)
+	player.grapple_point = anchor.global_position
+	player.velocity = Vector2.ZERO
+	player.call("_apply_grapple_pump", 1.0, 1.0 / 60.0)
+	_check(player.velocity.length() > 0.0, "Wind Tether pumping still adds tangential momentum")
+
+	blocker.queue_free()
 	anchor.queue_free()
 	player.queue_free()
 	await process_frame
@@ -220,6 +262,27 @@ func _check_room_topology() -> void:
 		_check(observed_transitions.has("%s>%s" % [from_id, to_id]), "%s → %s transition is implemented" % [from_id, to_id])
 		if connection.bidirectional:
 			_check(observed_transitions.has("%s>%s" % [to_id, from_id]), "%s → %s reciprocal transition is implemented" % [to_id, from_id])
+
+
+func _check_authored_surface_room() -> void:
+	var room := (load("res://scenes/rooms/room_05_route.tscn") as PackedScene).instantiate()
+	root.add_child(room)
+	await process_frame
+	var platforms := room.get_node_or_null("Platforms")
+	var anchors := room.get_node_or_null("GrappleAnchors")
+	var enemies := room.get_node_or_null("Enemies")
+	var spawn_points := room.get_node_or_null("SpawnPoints")
+	var camera := room.get_node_or_null("RoomCamera") as Camera2D
+	_check(room.name == "CompactSurfaceApproach", "Room 5 is the first authored parity-slice room")
+	_check(not bool(room.get("build_default_environment")), "Authored surface room disables the prototype environment generator")
+	_check(not bool(room.get("spawn_default_grapple_anchors")), "Authored surface room uses explicit anchors")
+	_check(platforms != null and platforms.get_child_count() >= 10, "Compact Surface Approach has dense authored collision geometry")
+	_check(anchors != null and anchors.get_child_count() == 3, "Compact Surface Approach has three intentional tether anchors")
+	_check(enemies != null and enemies.get_child_count() == 3, "Compact Surface Approach has a three-lane encounter")
+	_check(spawn_points != null and spawn_points.has_node("entry_shortcut"), "Compact Surface Approach reserves the Fire-return arrival landmark")
+	_check(camera != null and camera.get("room_bounds") == Rect2(0, 0, 1920, 720), "Compact Surface Approach uses authored 1920×720 camera bounds")
+	room.queue_free()
+	await process_frame
 
 
 func _clear_progression_room(room_index: int) -> void:

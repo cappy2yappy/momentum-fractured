@@ -18,6 +18,9 @@ signal enemy_defeated(remaining: int)
 @export var enemy_counter_label: NodePath
 @export var cells_per_enemy: int = 5
 @export var door_unlock_delay: float = 0.2
+@export_category("Prototype presentation helpers")
+@export var build_default_environment: bool = true
+@export var spawn_default_grapple_anchors: bool = true
 
 var total_enemies: int = 0
 var remaining_enemies: int = 0
@@ -28,8 +31,10 @@ var _player: Node = null
 
 func _ready() -> void:
 	GameState.visit_room(room_id)
-	_build_web_parity_environment()
-	_spawn_default_grapple_anchors()
+	if build_default_environment:
+		_build_web_parity_environment()
+	if spawn_default_grapple_anchors:
+		_spawn_default_grapple_anchors()
 	await get_tree().process_frame
 
 	_player = get_node_or_null(player_node) if not player_node.is_empty() else _find_player()

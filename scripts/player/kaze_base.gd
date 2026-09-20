@@ -44,6 +44,10 @@ const GRAPPLE_GRAVITY_MULT := 0.86
 const GRAPPLE_PUMP_ACCEL := 820.0
 const GRAPPLE_MAX_SPEED := 900.0
 const GRAPPLE_BELOW_ALLOWANCE := 54.0
+const GRAPPLE_AIM_RADIUS := 120.0
+const GRAPPLE_OBSTRUCTION_MASK := 1
+const GRAPPLE_LOS_ENDPOINT_MARGIN := 12.0
+const GRAPPLE_MAX_CONSTRAINT_CORRECTION := 48.0
 const KUNAI_COOLDOWN := 0.32
 const GUARD_VEIL_DURATION := 3.0
 const GUARD_VEIL_COOLDOWN := 8.0
@@ -143,9 +147,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("grapple") and GameState.has_ability(GameState.ABILITY_TETHER):
 		_start_grapple()
 	if grapple_active and not Input.is_action_pressed("grapple"):
-		grapple_active = false
-		grapple_anchor = null
-		queue_redraw()
+		_release_grapple()
 	
 	# ATTACK
 	if Input.is_action_just_pressed("attack_light") and attack_cooldown_timer <= 0:
@@ -415,11 +417,14 @@ func _available_kunai_elements() -> Array[String]:
 
 
 func _start_grapple() -> void:
+	_try_start_grapple(get_global_mouse_position())
+
+
+func _try_start_grapple(aim_point: Vector2) -> bool:
 	if not GameState.has_ability(GameState.ABILITY_TETHER):
-		return
+		return false
 	var best_anchor: Node2D = null
 	var best_score := INF
-	var aim_point := get_global_mouse_position()
 	for anchor in get_tree().get_nodes_in_group("grapple_anchor"):
 		if anchor is Node2D:
 			var player_distance := global_position.distance_to(anchor.global_position)
@@ -428,6 +433,10 @@ func _start_grapple() -> void:
 			if anchor.global_position.y > global_position.y + GRAPPLE_BELOW_ALLOWANCE:
 				continue
 			var cursor_distance := aim_point.distance_to(anchor.global_position)
+			if cursor_distance > GRAPPLE_AIM_RADIUS:
+				continue
+			if not _has_grapple_line_of_sight(anchor.global_position):
+				continue
 			var forward_penalty := 0.0
 			if signf(anchor.global_position.x - global_position.x) != float(facing_dir):
 				forward_penalty = 70.0
@@ -436,11 +445,29 @@ func _start_grapple() -> void:
 				best_anchor = anchor
 				best_score = score
 	if best_anchor == null:
-		return
+		return false
 	grapple_anchor = best_anchor
 	grapple_active = true
 	grapple_point = best_anchor.global_position
 	grapple_length = maxf(GRAPPLE_MIN_LENGTH, global_position.distance_to(grapple_point))
+	queue_redraw()
+	return true
+
+
+func _has_grapple_line_of_sight(target_point: Vector2) -> bool:
+	var to_target := target_point - global_position
+	if to_target.length_squared() <= GRAPPLE_LOS_ENDPOINT_MARGIN * GRAPPLE_LOS_ENDPOINT_MARGIN:
+		return true
+	var ray_end := target_point - to_target.normalized() * GRAPPLE_LOS_ENDPOINT_MARGIN
+	var query := PhysicsRayQueryParameters2D.create(global_position, ray_end, GRAPPLE_OBSTRUCTION_MASK)
+	query.exclude = [get_rid()]
+	query.collide_with_areas = false
+	return get_world_2d().direct_space_state.intersect_ray(query).is_empty()
+
+
+func _release_grapple() -> void:
+	grapple_active = false
+	grapple_anchor = null
 	queue_redraw()
 
 
@@ -457,7 +484,11 @@ func _apply_grapple_constraint() -> void:
 	if distance <= grapple_length or distance <= 0.001:
 		return
 	var rope_direction := offset / distance
-	global_position = grapple_point + rope_direction * grapple_length
+	var correction := -rope_direction * (distance - grapple_length)
+	move_and_collide(correction.limit_length(GRAPPLE_MAX_CONSTRAINT_CORRECTION))
+	var corrected_offset := global_position - grapple_point
+	if corrected_offset.length_squared() > 0.001:
+		rope_direction = corrected_offset.normalized()
 	var outward_speed := velocity.dot(rope_direction)
 	if outward_speed > 0.0:
 		velocity -= rope_direction * outward_speed
