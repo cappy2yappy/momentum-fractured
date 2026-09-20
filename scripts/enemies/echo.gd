@@ -8,6 +8,12 @@ enum State { IDLE, PATROL, ALERT, CHARGE, ATTACK, HITSTUN, DEAD }
 
 @export var patrol_points: Array[Vector2] = []
 @export var patrol_wait_duration: float = 1.0
+@export_group("Ground Territory")
+@export var territory_min_x: float = 0.0
+@export var territory_max_x: float = 0.0
+@export var ledge_probe_forward: float = 22.0
+@export var ledge_probe_depth: float = 56.0
+@export_group("")
 @export var detection_range: float = 240.0
 @export var attack_range: float = 48.0
 @export var move_speed: float = 95.0
@@ -71,6 +77,7 @@ func _physics_process(delta: float) -> void:
 	if _has_valid_player() and global_position.distance_to(_player.global_position) > ai_sleep_distance:
 		state = State.PATROL
 		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
+		_stop_ai_at_territory_edge(delta)
 		move_and_slide()
 		return
 
@@ -90,6 +97,7 @@ func _physics_process(delta: float) -> void:
 		State.DEAD:
 			_state_dead()
 
+	_stop_ai_at_territory_edge(delta)
 	move_and_slide()
 
 
@@ -121,6 +129,10 @@ func _state_patrol(delta: float) -> void:
 		current_patrol_index = (current_patrol_index + 1) % patrol_points.size()
 		_patrol_wait_timer = patrol_wait_duration
 		velocity.x = move_toward(velocity.x, 0.0, move_accel * delta)
+	elif not _can_move_horizontally(dir, delta):
+		current_patrol_index = (current_patrol_index + 1) % patrol_points.size()
+		_patrol_wait_timer = patrol_wait_duration
+		velocity.x = 0.0
 	else:
 		velocity.x = move_toward(velocity.x, dir * move_speed, move_accel * delta)
 
@@ -165,7 +177,10 @@ func _state_charge(delta: float) -> void:
 		_start_attack(direction)
 		return
 
-	velocity.x = move_toward(velocity.x, direction * charge_speed, charge_accel * delta)
+	if _can_move_horizontally(direction, delta):
+		velocity.x = move_toward(velocity.x, direction * charge_speed, charge_accel * delta)
+	else:
+		velocity.x = 0.0
 
 
 func _state_attack(delta: float) -> void:
@@ -304,3 +319,34 @@ func _is_player_in_front(direction_to_player: float) -> bool:
 	if direction_to_player == 0.0:
 		return true
 	return not (sprite and sprite.flip_h and direction_to_player > 0.0) and not (sprite and not sprite.flip_h and direction_to_player < 0.0)
+
+
+func _can_move_horizontally(direction: float, delta: float) -> bool:
+	# Unset or inverted bounds opt out completely so legacy Echo scenes retain
+	# their existing movement, including any intentionally fallable platforms.
+	if territory_max_x <= territory_min_x or direction == 0.0:
+		return true
+
+	var stopping_step: float = maxf(1.0, absf(velocity.x) * delta)
+	var next_x: float = global_position.x + signf(direction) * stopping_step
+	if next_x < territory_min_x or next_x > territory_max_x:
+		return false
+
+	return _has_floor_ahead(signf(direction))
+
+
+func _stop_ai_at_territory_edge(delta: float) -> void:
+	if state == State.HITSTUN or state == State.DEAD or velocity.x == 0.0:
+		return
+	if not _can_move_horizontally(signf(velocity.x), delta):
+		velocity.x = 0.0
+
+
+func _has_floor_ahead(direction: float) -> bool:
+	if not is_inside_tree():
+		return false
+
+	var probe_origin := global_position + Vector2(direction * ledge_probe_forward, 0.0)
+	var probe_end := probe_origin + Vector2(0.0, ledge_probe_depth)
+	var query := PhysicsRayQueryParameters2D.create(probe_origin, probe_end, collision_mask, [get_rid()])
+	return not get_world_2d().direct_space_state.intersect_ray(query).is_empty()

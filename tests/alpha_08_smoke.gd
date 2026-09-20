@@ -66,6 +66,7 @@ func _run() -> void:
 	await _check_mechanical_integrity()
 	await _check_room_topology()
 	await _check_authored_surface_room()
+	await _check_authored_wind_relay_shaft()
 
 	if game_state:
 		game_state.call("new_game")
@@ -281,6 +282,35 @@ func _check_authored_surface_room() -> void:
 	_check(enemies != null and enemies.get_child_count() == 3, "Compact Surface Approach has a three-lane encounter")
 	_check(spawn_points != null and spawn_points.has_node("entry_shortcut"), "Compact Surface Approach reserves the Fire-return arrival landmark")
 	_check(camera != null and camera.get("room_bounds") == Rect2(0, 0, 1920, 720), "Compact Surface Approach uses authored 1920×720 camera bounds")
+	room.queue_free()
+	await process_frame
+
+
+func _check_authored_wind_relay_shaft() -> void:
+	var room := (load("res://scenes/rooms/room_06_route.tscn") as PackedScene).instantiate()
+	root.add_child(room)
+	await process_frame
+	var platforms := room.get_node_or_null("Platforms")
+	var anchors := room.get_node_or_null("GrappleAnchors")
+	var enemies := room.get_node_or_null("Enemies")
+	var spawn_points := room.get_node_or_null("SpawnPoints")
+	var recovery := room.get_node_or_null("Recovery")
+	var landmarks := room.get_node_or_null("Landmarks")
+	var camera := room.get_node_or_null("RoomCamera") as Camera2D
+	_check(room.name == "WindRelayShaft", "Room 6 is the authored Wind Relay Shaft")
+	_check(not bool(room.get("build_default_environment")), "Authored shaft disables the prototype environment generator")
+	_check(not bool(room.get("spawn_default_grapple_anchors")), "Authored shaft uses explicit anchors")
+	_check(platforms != null and platforms.get_child_count() >= 18, "Wind Relay Shaft has explicit ascent, descent, and boundary geometry")
+	_check(anchors != null and anchors.get_child_count() == 10, "Wind Relay Shaft has seven route anchors and three recovery anchors")
+	if anchors:
+		for anchor in anchors.get_children():
+			_check(int(anchor.get_meta("max_intended_attach_distance", 9999)) <= 410, "%s stays within the authored tether budget" % anchor.name)
+	_check(enemies != null and enemies.get_child_count() == 1 and enemies.get_child(0).name == "shaft_drone_mid", "Wind Relay Shaft has one authored Drone pressure enemy")
+	_check(spawn_points != null and spawn_points.has_node("entry_from_room5"), "Wind Relay Shaft defines the Room 5 arrival marker")
+	_check(spawn_points != null and spawn_points.has_node("entry_from_room7"), "Wind Relay Shaft defines the Room 7 arrival marker")
+	_check(recovery != null and recovery.get_child_count() == 4, "Wind Relay Shaft exposes four safe recovery markers")
+	_check(landmarks != null and landmarks.has_node("RelayAssembly") and landmarks.has_node("LowerHatch"), "Wind Relay Shaft authors relay and lower-hatch landmarks")
+	_check(camera != null and camera.get("room_bounds") == Rect2(0, 0, 1280, 2160), "Wind Relay Shaft uses authored 1280×2160 camera bounds")
 	room.queue_free()
 	await process_frame
 

@@ -28,7 +28,7 @@ Implementation status:
 - [x] Authoritative graph and reciprocal directional spawns.
 - [x] Wind Tether aim, line-of-sight, and collision-safety hardening.
 - [x] Compact Surface Approach first authored conversion (`room_05_route.tscn`).
-- [ ] Multi-screen Wind Relay Shaft.
+- [x] Multi-screen Wind Relay Shaft (`room_06_route.tscn`).
 - [ ] Underground Threshold and authored reliquary/checkpoint.
 - [ ] Deep traversable Canal Chamber.
 - [ ] Persistent Fire-sealed return shortcut.
@@ -59,4 +59,4 @@ Implementation status:
 - **P1:** required for the five-room parity slice or core presentation.
 - **P2:** campaign expansion, polish, and optional depth after the slice is accepted.
 
-The next implementation task is the multi-screen Wind Relay Shaft, using the authored anchor route and recovery placements in `docs/levels/PARITY_SLICE_LAYOUT.md`.
+The next implementation task is the Underground Threshold: a compressed descent, explicit checkpoint/reliquary interaction, and Fire Kunai reward presentation.
