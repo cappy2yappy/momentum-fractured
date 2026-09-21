@@ -189,7 +189,7 @@ The route must connect back toward the surface after the Fire unlock, demonstrat
 ### P1 — Complete the experience
 
 1. Build the full vertical shaft with camera travel and recovery routes.
-2. Build the underground transition and authored checkpoint/reliquary.
+2. ~~Build the underground transition and authored checkpoint/reliquary.~~ Completed in the authored `room_07_route.tscn`: Fire Kunai requires encounter clear plus an explicit `E` claim, activates `spawn_checkpoint`, and opens the canal route.
 3. Implement complete water traversal and the Canal Chamber.
 4. Persist gate state and show gates/shortcuts on the map.
 5. Upgrade the character/loadout interface.

@@ -4,6 +4,19 @@ Alpha 0.8 is a recovery build made from the retained GitHub combat foundation. I
 
 Development has moved to the `codex/web-parity-restoration` line. The next candidate must pass the GDD's web-parity acceptance slice before it is packaged.
 
+## Web-Parity Restoration Candidate
+
+The current candidate now includes three authored rooms from the five-room acceptance slice:
+
+- Compact Surface Approach with a denser three-lane encounter and raised exits.
+- Wind Relay Shaft with a three-screen ascent, deliberate tether anchors, and recovery routes.
+- Underground Threshold with a compressed descent, two grounded enemies, one aerial threat, and a visible Fire Reliquary.
+- Fire Kunai is no longer silently awarded for clearing Room 7. Clear the chamber, approach the reliquary, and press **E** to claim it.
+- Claiming Fire Kunai activates the Underground Threshold checkpoint and opens the canal route.
+- Wind Tether targeting is limited to nearby visible anchors and no longer attaches through walls.
+
+The Canal Chamber and Fire-sealed return shortcut are still prototype/generated rooms. This build is a playtest candidate for the restored movement and first three authored rooms, not final visual parity.
+
 ## Highlights
 
 - 12 connected rooms with compact, vertical, subterranean, aquatic, and conservatory layouts.
@@ -25,6 +38,7 @@ Development has moved to the `codex/web-parity-restoration` line. The next candi
 4. Enemy hit registration and encounter density.
 5. Elemental gate clarity and unlock pacing.
 6. Boss health, pressure, and reward communication.
+7. Underground Threshold encounter density, reliquary clarity, and **E** interaction reliability.
 
 ## macOS Note
 

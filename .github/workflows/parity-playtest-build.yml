@@ -1,0 +1,77 @@
+name: Kaze parity playtest builds
+
+on:
+  push:
+    branches: ["codex/web-parity-restoration"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install official Godot 4.6.1 and export templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -j -q "$RUNNER_TEMP/godot/templates.tpz" \
+            'templates/windows_release_x86_64.exe' \
+            'templates/macos.zip' \
+            'templates/version.txt' \
+            -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+
+      - name: Import and validate parity restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --path . --import --quit
+          "$GODOT" --headless --path . --script res://tests/alpha_08_smoke.gd 2>&1 | tee alpha-smoke.log
+          grep -q 'ALPHA 0.8 SMOKE TEST: 0 failure(s), 12 rooms' alpha-smoke.log
+          "$GODOT" --headless --path . --script res://tests/echo_territory_regression.gd 2>&1 | tee echo-regression.log
+          grep -q 'ECHO TERRITORY REGRESSION: 0 failure(s)' echo-regression.log
+
+      - name: Export Windows and macOS playtests
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          mkdir -p build/windows build/macos
+          "$GODOT" --headless --path . --export-release "Windows Desktop" build/windows/Kaze-Alpha-0.8.0.exe
+          "$GODOT" --headless --path . --export-release "macOS" build/macos/Kaze-Alpha-0.8.0-macOS.zip
+          cp README.md RELEASE_NOTES_ALPHA_0.8.0.md build/windows/
+          cp README.md RELEASE_NOTES_ALPHA_0.8.0.md build/macos/
+
+      - name: Test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-parity-test-logs
+          path: "*-*.log"
+          retention-days: 14
+
+      - name: Windows playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-Windows-parity-playtest
+          path: build/windows/
+          retention-days: 14
+
+      - name: macOS playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-macOS-parity-playtest
+          path: build/macos/
+          retention-days: 14

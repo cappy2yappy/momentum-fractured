@@ -67,6 +67,7 @@ func _run() -> void:
 	await _check_room_topology()
 	await _check_authored_surface_room()
 	await _check_authored_wind_relay_shaft()
+	await _check_authored_underground_threshold()
 
 	if game_state:
 		game_state.call("new_game")
@@ -315,11 +316,55 @@ func _check_authored_wind_relay_shaft() -> void:
 	await process_frame
 
 
+func _check_authored_underground_threshold() -> void:
+	var game_state := root.get_node("GameState")
+	game_state.call("new_game")
+	var room := (load("res://scenes/rooms/room_07_route.tscn") as PackedScene).instantiate()
+	root.add_child(room)
+	await process_frame
+	var platforms := room.get_node_or_null("Platforms")
+	var anchors := room.get_node_or_null("GrappleAnchors")
+	var enemies := room.get_node_or_null("Enemies")
+	var spawn_points := room.get_node_or_null("SpawnPoints")
+	var gates := room.get_node_or_null("Gates")
+	var reliquary := room.get_node_or_null("Reliquary")
+	var player := room.get_node_or_null("Kaze")
+	var camera := room.get_node_or_null("RoomCamera") as Camera2D
+	_check(room.name == "UndergroundThreshold", "Room 7 is the authored Underground Threshold")
+	_check(not bool(room.get("build_default_environment")), "Underground Threshold disables the prototype environment generator")
+	_check(platforms != null and platforms.get_child_count() >= 10, "Underground Threshold has a compressed authored descent and corridor")
+	_check(anchors != null and anchors.get_child_count() == 3, "Underground Threshold has three intentional tether anchors")
+	_check(enemies != null and enemies.get_child_count() == 3, "Underground Threshold has two grounded lanes and one aerial threat")
+	_check(spawn_points != null and spawn_points.has_node("spawn_checkpoint"), "Underground Threshold defines the reliquary checkpoint spawn")
+	_check(spawn_points != null and spawn_points.has_node("entry_from_room6") and spawn_points.has_node("entry_from_room8"), "Underground Threshold defines both directional arrivals")
+	_check(gates != null and gates.has_node("ReliquarySeal") and gates.has_node("CanalClaimGate"), "Underground Threshold separates encounter, reward, and canal progression")
+	_check(camera != null and camera.get("room_bounds") == Rect2(0, 0, 1600, 900), "Underground Threshold uses authored 1600×900 camera bounds")
+	_check(reliquary != null and not bool(reliquary.call("claim_reward", player)), "Fire Reliquary rejects claims before the encounter is clear")
+	_check(not game_state.call("has_ability", "fire_kunai"), "Fire Kunai is not granted by room entry")
+	game_state.call("mark_room_cleared", "room_07_route")
+	_check(reliquary != null and bool(reliquary.call("claim_reward", player)), "Cleared Fire Reliquary accepts an explicit claim")
+	_check(game_state.call("has_ability", "fire_kunai"), "Explicit reliquary claim unlocks Fire Kunai")
+	_check(game_state.checkpoint_scene_path == "res://scenes/rooms/room_07_route.tscn" and game_state.checkpoint_spawn_marker == "spawn_checkpoint", "Fire Reliquary claim activates the authored checkpoint")
+	var canal_gate := gates.get_node_or_null("CanalClaimGate") if gates else null
+	_check(canal_gate != null and not canal_gate.visible and canal_gate.collision_layer == 0, "Fire Reliquary claim opens the canal route")
+	room.queue_free()
+	await process_frame
+
+
 func _clear_progression_room(room_index: int) -> void:
 	var path := "res://scenes/rooms/room_%02d_route.tscn" % room_index
 	var room := (load(path) as PackedScene).instantiate()
 	root.add_child(room)
 	await process_frame
+	if room_index == 7:
+		var game_state := root.get_node("GameState")
+		game_state.call("mark_room_cleared", "room_07_route")
+		var reliquary := room.get_node("Reliquary")
+		var player := room.get_node("Kaze")
+		reliquary.call("claim_reward", player)
+		room.queue_free()
+		await process_frame
+		return
 	var count: int = room.enemy_counts[room_index]
 	for _enemy in count:
 		room.call("_on_enemy_died")

@@ -29,7 +29,7 @@ Implementation status:
 - [x] Wind Tether aim, line-of-sight, and collision-safety hardening.
 - [x] Compact Surface Approach first authored conversion (`room_05_route.tscn`).
 - [x] Multi-screen Wind Relay Shaft (`room_06_route.tscn`).
-- [ ] Underground Threshold and authored reliquary/checkpoint.
+- [x] Underground Threshold and explicit Fire Reliquary/checkpoint (`room_07_route.tscn`).
 - [ ] Deep traversable Canal Chamber.
 - [ ] Persistent Fire-sealed return shortcut.
 
@@ -59,4 +59,4 @@ Implementation status:
 - **P1:** required for the five-room parity slice or core presentation.
 - **P2:** campaign expansion, polish, and optional depth after the slice is accepted.
 
-The next implementation task is the Underground Threshold: a compressed descent, explicit checkpoint/reliquary interaction, and Fire Kunai reward presentation.
+The next implementation task is the Canal Chamber: traversable deep water, explicit underwater movement behavior, dry recovery ledges, and a water-specific threat without an automatic-death plane.
