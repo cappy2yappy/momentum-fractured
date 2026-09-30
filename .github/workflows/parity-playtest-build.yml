@@ -2,7 +2,7 @@ name: Kaze parity playtest builds
 
 on:
   push:
-    branches: ["codex/web-parity-restoration"]
+    branches: ["codex/web-parity-restoration", "codex/parity-validation-2026-09-30"]
   workflow_dispatch:
 
 permissions:
@@ -37,11 +37,17 @@ jobs:
         run: |
           set -euo pipefail
           GODOT=Godot_v4.6.1-stable_linux.x86_64
-          "$GODOT" --headless --path . --import --quit
+          "$GODOT" --headless --path . --import --quit 2>&1 | tee import.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|ERROR:' import.log
           "$GODOT" --headless --path . --script res://tests/alpha_08_smoke.gd 2>&1 | tee alpha-smoke.log
           grep -q 'ALPHA 0.8 SMOKE TEST: 0 failure(s), 12 rooms' alpha-smoke.log
           "$GODOT" --headless --path . --script res://tests/echo_territory_regression.gd 2>&1 | tee echo-regression.log
           grep -q 'ECHO TERRITORY REGRESSION: 0 failure(s)' echo-regression.log
+          "$GODOT" --headless --path . --script res://tests/swimming_regression.gd 2>&1 | tee swimming-regression.log
+          grep -q 'SWIMMING REGRESSION: 0 failure(s)' swimming-regression.log
+          "$GODOT" --headless --path . --script res://tests/canal_chamber_regression.gd 2>&1 | tee canal-regression.log
+          grep -q 'CANAL CHAMBER REGRESSION: 0 failure(s)' canal-regression.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|ERROR:' alpha-smoke.log echo-regression.log swimming-regression.log canal-regression.log
 
       - name: Export Windows and macOS playtests
         shell: bash
@@ -59,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Kaze-parity-test-logs
-          path: "*-*.log"
+          path: "*.log"
           retention-days: 14
 
       - name: Windows playtest

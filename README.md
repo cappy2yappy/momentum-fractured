@@ -32,7 +32,8 @@ godot project.godot
 
 ### Controls:
 - **WASD** - Move
-- **Space** - Jump
+- **Space** - Jump / swim stroke
+- **W / S** - Swim up / down; release to hold depth
 - **Shift** - Dash
 - **Left Click** - Attack
 - **Q / Middle Mouse** - Hold Wind Tether and swing
@@ -192,5 +193,5 @@ TBD (project in early development)
 
 ---
 
-**Last updated:** 2026-09-20
+**Last updated:** 2026-09-30
 **Version:** Alpha 0.8 recovery / web-parity restoration

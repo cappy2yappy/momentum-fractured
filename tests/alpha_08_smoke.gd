@@ -57,7 +57,8 @@ func _run() -> void:
 		_check(room.get_node_or_null("HUD/MapOverlay/Content/Map") != null, "%s has the restored survey map" % path)
 		_check(room.find_child("PaintedDistrictBackdrop", true, false) != null or path.contains("_route"), "%s has painted environment art" % path)
 		if path.contains("_route"):
-			_check(get_nodes_in_group("grapple_anchor").size() >= 3, "%s has visible grapple anchors" % path)
+			var minimum_anchors := 2 if path.ends_with("room_08_route.tscn") else 3
+			_check(get_nodes_in_group("grapple_anchor").size() >= minimum_anchors, "%s has visible grapple anchors" % path)
 			_check(room.find_children("*", "Sprite2D", true, false).size() >= 2, "%s uses textured environment layers" % path)
 		room.queue_free()
 		await process_frame

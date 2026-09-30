@@ -30,7 +30,7 @@ Implementation status:
 - [x] Compact Surface Approach first authored conversion (`room_05_route.tscn`).
 - [x] Multi-screen Wind Relay Shaft (`room_06_route.tscn`).
 - [x] Underground Threshold and explicit Fire Reliquary/checkpoint (`room_07_route.tscn`).
-- [ ] Deep traversable Canal Chamber.
+- [x] Authored deep traversable Canal Chamber with dry recovery shores and timed current hazards; visual/audio polish remains.
 - [ ] Persistent Fire-sealed return shortcut.
 
 **Exit criteria:** correct bidirectional spawns and map links; reliable damage; authored enemy placement; visible tether anchors and elemental locks; working map/loadout UI; no automatic-death water; movement accepted through direct playtesting.
@@ -59,4 +59,4 @@ Implementation status:
 - **P1:** required for the five-room parity slice or core presentation.
 - **P2:** campaign expansion, polish, and optional depth after the slice is accepted.
 
-The next implementation task is the Canal Chamber: traversable deep water, explicit underwater movement behavior, dry recovery ledges, and a water-specific threat without an automatic-death plane.
+The next implementation task is the persistent Fire-sealed return shortcut. Canal geometry and controlled swimming are implemented; direct playtesting, gradual underwater treatment, optional deep pickup, and out-of-bounds recovery remain acceptance work.
