@@ -43,3 +43,14 @@ The Canal Chamber and Fire-sealed return shortcut are still prototype/generated 
 ## macOS Note
 
 This playtest build is not Apple-notarized. Control-click the app and choose Open. If macOS still blocks it, use System Settings > Privacy & Security > Open Anyway.
+
+
+## September 30 development session — canal integration
+
+- Replaced generated Room 8 with an authored 1920×1080 Canal Chamber, deep alternate route, solid bottom floor, and dry recovery shores.
+- Added reciprocal Threshold/return entrances, surface Drone pressure, and two survivable timed current jets with warnings and safe intervals.
+- Added W/S swimming, neutral depth hold, time-based acceleration/drag, overlap-safe water detection, and respawn cleanup.
+- Prevented tether attachment while fully submerged while retaining surface-band attachment.
+- Added swimming and canal regression checks to the Windows/macOS build workflow.
+
+This remains a parity-slice candidate, not an accepted alpha. Current-jet art is provisional. Canonical character art, the Fire return shortcut, underwater presentation, direct playtesting and device-specific 60 FPS validation remain open. Existing smoke/scene shutdown may emit ObjectDB leak warnings.

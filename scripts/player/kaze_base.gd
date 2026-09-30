@@ -94,6 +94,11 @@ var afterimage_timer := 0.0
 var current_kunai_element := 0
 var kunai_elements: Array[String] = ["wind", "fire", "electric"]
 var in_water := false
+var water_surfaces: Dictionary = {}
+const SWIM_SPEED := 230.0
+const SWIM_VERTICAL_SPEED := 180.0
+const SWIM_ACCEL := 1000.0
+const SWIM_DRAG := 600.0
 
 # NODES
 @onready var hitbox: Area2D = $Hitbox
@@ -146,7 +151,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("grapple") and GameState.has_ability(GameState.ABILITY_TETHER):
 		_start_grapple()
-	if grapple_active and not Input.is_action_pressed("grapple"):
+	if grapple_active and (not Input.is_action_pressed("grapple") or _is_fully_submerged()):
 		_release_grapple()
 	
 	# ATTACK
@@ -179,10 +184,11 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = facing_dir < 0
 	
 	if input_dir != 0:
-		var accel := MOVE_ACCEL if is_on_floor() else AIR_ACCEL
-		velocity.x = move_toward(velocity.x, input_dir * MAX_MOVE_SPEED, accel * delta)
+		var accel := SWIM_ACCEL if in_water else (MOVE_ACCEL if is_on_floor() else AIR_ACCEL)
+		var move_speed := SWIM_SPEED if in_water else MAX_MOVE_SPEED
+		velocity.x = move_toward(velocity.x, input_dir * move_speed, accel * delta)
 	else:
-		var decel := GROUND_DECEL if is_on_floor() else AIR_DECEL
+		var decel := SWIM_DRAG if in_water else (GROUND_DECEL if is_on_floor() else AIR_DECEL)
 		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
 	
 	# COYOTE TIME
@@ -236,10 +242,12 @@ func _physics_process(delta: float) -> void:
 	elif velocity.y > 0:
 		gravity_mult = FALL_GRAVITY_MULT
 	
-	var medium_gravity := 0.22 if in_water else 1.0
-	velocity.y += GRAVITY * gravity_mult * (GRAPPLE_GRAVITY_MULT if grapple_active else 1.0) * medium_gravity * delta
 	if in_water:
-		velocity *= Vector2(0.985, 0.94)
+		_apply_swim_vertical(delta)
+	else:
+		velocity.y += GRAVITY * gravity_mult * (GRAPPLE_GRAVITY_MULT if grapple_active else 1.0) * delta
+	if _is_fully_submerged() and grapple_active:
+		_release_grapple()
 	
 	# WALL SLIDE
 	if is_touching_wall != 0 and velocity.y > 0 and not is_on_floor():
@@ -288,6 +296,8 @@ func respawn(pos: Vector2) -> void:
 	_was_on_floor = false
 	grapple_active = false
 	grapple_anchor = null
+	water_surfaces.clear()
+	in_water = false
 	guard_veil_timer = 0.0
 	modulate = Color.WHITE
 	if health:
@@ -380,6 +390,31 @@ func set_in_water(value: bool) -> void:
 	in_water = value
 
 
+func set_water_zone(zone: Node, entered: bool, surface_y: float) -> void:
+	if entered:
+		water_surfaces[zone.get_instance_id()] = surface_y
+	else:
+		water_surfaces.erase(zone.get_instance_id())
+	in_water = not water_surfaces.is_empty()
+
+
+func _is_fully_submerged() -> bool:
+	for surface_y in water_surfaces.values():
+		if global_position.y > float(surface_y) + 24.0:
+			return true
+	return false
+
+
+func _apply_swim_vertical(delta: float) -> void:
+	# Pixels/second and pixels/second squared; independent of physics tick rate.
+	var direction := Input.get_axis("swim_up", "swim_down")
+	if not is_zero_approx(direction):
+		velocity.y = move_toward(velocity.y, direction * SWIM_VERTICAL_SPEED, SWIM_ACCEL * delta)
+	elif not Input.is_action_pressed("jump"):
+		velocity.y = move_toward(velocity.y, 0.0, SWIM_DRAG * delta)
+
+
+
 func get_guard_veil_ratio() -> float:
 	if guard_veil_timer > 0.0:
 		return 1.0
@@ -421,6 +456,8 @@ func _start_grapple() -> void:
 
 
 func _try_start_grapple(aim_point: Vector2) -> bool:
+	if _is_fully_submerged():
+		return false
 	if not GameState.has_ability(GameState.ABILITY_TETHER):
 		return false
 	var best_anchor: Node2D = null
