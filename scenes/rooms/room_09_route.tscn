@@ -1,5 +1,536 @@
-[gd_scene load_steps=2 format=3]
-[ext_resource type="Script" path="res://scripts/rooms/route_room.gd" id="1"]
-[node name="ConservatoryWalk" type="Node2D"]
-script = ExtResource("1")
-room_index = 9
+[gd_scene load_steps=28 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/kaze.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/rooms/room_controller.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/rooms/door_exit.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/camera/room_camera.gd" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="5"]
+[ext_resource type="Script" path="res://scripts/rooms/grapple_anchor.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/rooms/kunai_gate.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/echo.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/drone.tscn" id="9"]
+[ext_resource type="Texture2D" path="res://rebuild/assets/terrain.png" id="10"]
+
+[sub_resource type="RectangleShape2D" id="intake_floor"]
+size = Vector2(500, 40)
+
+[sub_resource type="RectangleShape2D" id="climb_01"]
+size = Vector2(240, 24)
+
+[sub_resource type="RectangleShape2D" id="climb_02"]
+size = Vector2(220, 24)
+
+[sub_resource type="RectangleShape2D" id="seal_overlook"]
+size = Vector2(300, 26)
+
+[sub_resource type="RectangleShape2D" id="gate_floor_east"]
+size = Vector2(500, 34)
+
+[sub_resource type="RectangleShape2D" id="gate_floor_west"]
+size = Vector2(260, 34)
+
+[sub_resource type="RectangleShape2D" id="shortcut_step"]
+size = Vector2(220, 24)
+
+[sub_resource type="RectangleShape2D" id="shortcut_landing"]
+size = Vector2(300, 28)
+
+[sub_resource type="RectangleShape2D" id="ceiling_frame"]
+size = Vector2(1280, 20)
+
+[sub_resource type="RectangleShape2D" id="bottom_floor"]
+size = Vector2(1280, 40)
+
+[sub_resource type="RectangleShape2D" id="left_wall"]
+size = Vector2(20, 1080)
+
+[sub_resource type="RectangleShape2D" id="right_wall"]
+size = Vector2(20, 1080)
+
+[sub_resource type="RectangleShape2D" id="seal_upper_partition"]
+size = Vector2(42, 500)
+
+[sub_resource type="RectangleShape2D" id="seal_lower_partition"]
+size = Vector2(42, 260)
+
+[sub_resource type="RectangleShape2D" id="Gate"]
+size = Vector2(42, 260)
+
+[sub_resource type="RectangleShape2D" id="IntakeDoor"]
+size = Vector2(54, 230)
+
+[sub_resource type="RectangleShape2D" id="ShortcutDoor"]
+size = Vector2(54, 190)
+
+[node name="FireSealedReturn" type="Node2D"]
+script = ExtResource("2")
+room_id = "room_09_route"
+player_node = NodePath("Kaze")
+enemies_node = NodePath("Enemies")
+enemy_counter_label = NodePath("HUD/EnemyCounter")
+build_default_environment = false
+spawn_default_grapple_anchors = false
+metadata/authored_slice = "Fire-Sealed Return greybox; temporary architecture and elemental seal artwork"
+metadata/room_bounds = Rect2(0, 0, 1280, 1080)
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(640, 540)
+texture = ExtResource("10")
+region_enabled = true
+region_rect = Rect2(512, 0, 1280, 1080)
+modulate = Color(0.22, 0.16, 0.25, 1)
+z_index = -20
+
+[node name="IntakeWarmReflection" type="Sprite2D" parent="."]
+position = Vector2(855, 820)
+texture = ExtResource("10")
+region_enabled = true
+region_rect = Rect2(512, 0, 800, 520)
+scale = Vector2(1, -1)
+modulate = Color(0.55, 0.2, 0.12, 0.22)
+z_index = -15
+metadata/role = "warm emergency light reflected on dry canal intake masonry"
+
+[node name="RoomCamera" type="Camera2D" parent="."]
+position = Vector2(640, 720)
+script = ExtResource("4")
+player_path = NodePath("../Kaze")
+room_bounds = Rect2(0, 0, 1280, 1080)
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="spawn_default" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1160, 936)
+
+[node name="entry_water" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1160, 936)
+
+[node name="entry_from_room8" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1160, 936)
+
+[node name="entry_from_room10" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(910, 936)
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="intake_floor" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1030, 1020)
+collision_layer = 1
+metadata/platform_id = "intake_floor"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/intake_floor"]
+shape = SubResource("intake_floor")
+[node name="Visual" type="ColorRect" parent="Platforms/intake_floor"]
+offset_left = -250.0
+offset_top = -20.0
+offset_right = 250.0
+offset_bottom = 20.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/intake_floor"]
+offset_left = -250.0
+offset_top = -20.0
+offset_right = 250.0
+offset_bottom = -15.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="climb_01" type="StaticBody2D" parent="Platforms"]
+position = Vector2(930, 845)
+collision_layer = 1
+metadata/platform_id = "climb_01"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/climb_01"]
+shape = SubResource("climb_01")
+[node name="Visual" type="ColorRect" parent="Platforms/climb_01"]
+offset_left = -120.0
+offset_top = -12.0
+offset_right = 120.0
+offset_bottom = 12.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/climb_01"]
+offset_left = -120.0
+offset_top = -12.0
+offset_right = 120.0
+offset_bottom = -7.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="climb_02" type="StaticBody2D" parent="Platforms"]
+position = Vector2(700, 690)
+collision_layer = 1
+metadata/platform_id = "climb_02"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/climb_02"]
+shape = SubResource("climb_02")
+[node name="Visual" type="ColorRect" parent="Platforms/climb_02"]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 12.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/climb_02"]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = -7.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="seal_overlook" type="StaticBody2D" parent="Platforms"]
+position = Vector2(520, 545)
+collision_layer = 1
+metadata/platform_id = "seal_overlook"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/seal_overlook"]
+shape = SubResource("seal_overlook")
+[node name="Visual" type="ColorRect" parent="Platforms/seal_overlook"]
+offset_left = -150.0
+offset_top = -13.0
+offset_right = 150.0
+offset_bottom = 13.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/seal_overlook"]
+offset_left = -150.0
+offset_top = -13.0
+offset_right = 150.0
+offset_bottom = -8.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="gate_floor_east" type="StaticBody2D" parent="Platforms"]
+position = Vector2(570, 780)
+collision_layer = 1
+metadata/platform_id = "gate_floor_east"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/gate_floor_east"]
+shape = SubResource("gate_floor_east")
+[node name="Visual" type="ColorRect" parent="Platforms/gate_floor_east"]
+offset_left = -250.0
+offset_top = -17.0
+offset_right = 250.0
+offset_bottom = 17.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/gate_floor_east"]
+offset_left = -250.0
+offset_top = -17.0
+offset_right = 250.0
+offset_bottom = -12.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="gate_floor_west" type="StaticBody2D" parent="Platforms"]
+position = Vector2(250, 780)
+collision_layer = 1
+metadata/platform_id = "gate_floor_west"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/gate_floor_west"]
+shape = SubResource("gate_floor_west")
+[node name="Visual" type="ColorRect" parent="Platforms/gate_floor_west"]
+offset_left = -130.0
+offset_top = -17.0
+offset_right = 130.0
+offset_bottom = 17.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/gate_floor_west"]
+offset_left = -130.0
+offset_top = -17.0
+offset_right = 130.0
+offset_bottom = -12.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="shortcut_step" type="StaticBody2D" parent="Platforms"]
+position = Vector2(250, 560)
+collision_layer = 1
+metadata/platform_id = "shortcut_step"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/shortcut_step"]
+shape = SubResource("shortcut_step")
+[node name="Visual" type="ColorRect" parent="Platforms/shortcut_step"]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 12.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/shortcut_step"]
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = -7.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="shortcut_landing" type="StaticBody2D" parent="Platforms"]
+position = Vector2(160, 260)
+collision_layer = 1
+metadata/platform_id = "shortcut_landing"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/shortcut_landing"]
+shape = SubResource("shortcut_landing")
+[node name="Visual" type="ColorRect" parent="Platforms/shortcut_landing"]
+offset_left = -150.0
+offset_top = -14.0
+offset_right = 150.0
+offset_bottom = 14.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/shortcut_landing"]
+offset_left = -150.0
+offset_top = -14.0
+offset_right = 150.0
+offset_bottom = -9.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="ceiling_frame" type="StaticBody2D" parent="Platforms"]
+position = Vector2(640, 10)
+collision_layer = 1
+metadata/platform_id = "ceiling_frame"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/ceiling_frame"]
+shape = SubResource("ceiling_frame")
+[node name="Visual" type="ColorRect" parent="Platforms/ceiling_frame"]
+offset_left = -640.0
+offset_top = -10.0
+offset_right = 640.0
+offset_bottom = 10.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/ceiling_frame"]
+offset_left = -640.0
+offset_top = -10.0
+offset_right = 640.0
+offset_bottom = -5.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="bottom_floor" type="StaticBody2D" parent="Platforms"]
+position = Vector2(640, 1060)
+collision_layer = 1
+metadata/platform_id = "bottom_floor"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/bottom_floor"]
+shape = SubResource("bottom_floor")
+[node name="Visual" type="ColorRect" parent="Platforms/bottom_floor"]
+offset_left = -640.0
+offset_top = -20.0
+offset_right = 640.0
+offset_bottom = 20.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/bottom_floor"]
+offset_left = -640.0
+offset_top = -20.0
+offset_right = 640.0
+offset_bottom = -15.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="left_wall" type="StaticBody2D" parent="Platforms"]
+position = Vector2(10, 540)
+collision_layer = 1
+metadata/platform_id = "left_wall"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/left_wall"]
+shape = SubResource("left_wall")
+[node name="Visual" type="ColorRect" parent="Platforms/left_wall"]
+offset_left = -10.0
+offset_top = -540.0
+offset_right = 10.0
+offset_bottom = 540.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/left_wall"]
+offset_left = -10.0
+offset_top = -540.0
+offset_right = 10.0
+offset_bottom = -535.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="right_wall" type="StaticBody2D" parent="Platforms"]
+position = Vector2(1270, 540)
+collision_layer = 1
+metadata/platform_id = "right_wall"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/right_wall"]
+shape = SubResource("right_wall")
+[node name="Visual" type="ColorRect" parent="Platforms/right_wall"]
+offset_left = -10.0
+offset_top = -540.0
+offset_right = 10.0
+offset_bottom = 540.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/right_wall"]
+offset_left = -10.0
+offset_top = -540.0
+offset_right = 10.0
+offset_bottom = -535.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="seal_upper_partition" type="StaticBody2D" parent="Platforms"]
+position = Vector2(430, 270)
+collision_layer = 1
+metadata/platform_id = "seal_upper_partition"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/seal_upper_partition"]
+shape = SubResource("seal_upper_partition")
+[node name="Visual" type="ColorRect" parent="Platforms/seal_upper_partition"]
+offset_left = -21.0
+offset_top = -250.0
+offset_right = 21.0
+offset_bottom = 250.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/seal_upper_partition"]
+offset_left = -21.0
+offset_top = -250.0
+offset_right = 21.0
+offset_bottom = -245.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="seal_lower_partition" type="StaticBody2D" parent="Platforms"]
+position = Vector2(430, 910)
+collision_layer = 1
+metadata/platform_id = "seal_lower_partition"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/seal_lower_partition"]
+shape = SubResource("seal_lower_partition")
+[node name="Visual" type="ColorRect" parent="Platforms/seal_lower_partition"]
+offset_left = -21.0
+offset_top = -130.0
+offset_right = 21.0
+offset_bottom = 130.0
+color = Color(0.15, 0.1, 0.18, 1)
+mouse_filter = 2
+[node name="Cap" type="ColorRect" parent="Platforms/seal_lower_partition"]
+offset_left = -21.0
+offset_top = -130.0
+offset_right = 21.0
+offset_bottom = -125.0
+color = Color(0.56, 0.31, 0.24, 1)
+mouse_filter = 2
+
+[node name="GrappleAnchors" type="Node2D" parent="."]
+
+[node name="return_anchor_01" type="Node2D" parent="GrappleAnchors"]
+position = Vector2(940, 690)
+script = ExtResource("6")
+metadata/anchor_id = "return_anchor_01"
+metadata/role = "intake climb"
+
+[node name="return_anchor_02" type="Node2D" parent="GrappleAnchors"]
+position = Vector2(690, 530)
+script = ExtResource("6")
+metadata/anchor_id = "return_anchor_02"
+metadata/role = "seal approach"
+
+[node name="return_anchor_03" type="Node2D" parent="GrappleAnchors"]
+position = Vector2(270, 390)
+script = ExtResource("6")
+metadata/anchor_id = "return_anchor_03"
+metadata/role = "post-gate shortcut; sealed partition blocks pre-unlock line of sight"
+
+[node name="Gates" type="Node2D" parent="."]
+
+[node name="FireSeal" type="Area2D" parent="Gates"]
+position = Vector2(430, 650)
+collision_layer = 4
+collision_mask = 16
+script = ExtResource("7")
+required_element = "fire"
+gate_id = "gate_fire_return"
+blocker_size = Vector2(42, 260)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gates/FireSeal"]
+shape = SubResource("Gate")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="ExitWater" type="Area2D" parent="Doors"]
+position = Vector2(1248, 900)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_08_route.tscn"
+target_spawn_marker = "entry_from_room9"
+door_prompt_text = "CANAL →"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/ExitWater"]
+shape = SubResource("IntakeDoor")
+[node name="Label" type="Label" parent="Doors/ExitWater"]
+offset_left = -140.0
+offset_top = -155.0
+offset_right = 140.0
+offset_bottom = -115.0
+text = "CANAL →"
+horizontal_alignment = 1
+
+[node name="ExitCampaign" type="Area2D" parent="Doors"]
+position = Vector2(980, 900)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_10_route.tscn"
+target_spawn_marker = "entry_from_room9"
+door_prompt_text = "CONSERVATORY →"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/ExitCampaign"]
+shape = SubResource("IntakeDoor")
+[node name="Label" type="Label" parent="Doors/ExitCampaign"]
+offset_left = -140.0
+offset_top = -155.0
+offset_right = 140.0
+offset_bottom = -115.0
+text = "CONSERVATORY →"
+horizontal_alignment = 1
+
+[node name="ExitShortcut" type="Area2D" parent="Doors"]
+position = Vector2(32, 170)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3")
+target_scene_path = "res://scenes/rooms/room_05_route.tscn"
+target_spawn_marker = "entry_shortcut"
+door_prompt_text = "SURFACE ← • FIRE"
+required_gate_id = "gate_fire_return"
+metadata/one_way = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/ExitShortcut"]
+shape = SubResource("ShortcutDoor")
+[node name="Label" type="Label" parent="Doors/ExitShortcut"]
+offset_left = -140.0
+offset_top = -155.0
+offset_right = 140.0
+offset_bottom = -115.0
+text = "SURFACE ← • FIRE"
+horizontal_alignment = 1
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="return_echo_guard" parent="Enemies" instance=ExtResource("8")]
+position = Vector2(1060, 968)
+territory_min_x = 830.0
+territory_max_x = 1130.0
+detection_range = 160.0
+metadata/activation_group = "return_intake"
+metadata/permitted_bounds = Rect2(830, 930, 300, 90)
+metadata/allow_fall = false
+
+[node name="return_drone_guard" parent="Enemies" instance=ExtResource("9")]
+position = Vector2(920, 610)
+patrol_distance = 90.0
+detection_range = 180.0
+metadata/activation_group = "return_climb"
+metadata/permitted_bounds = Rect2(830, 560, 180, 100)
+metadata/allow_fall = false
+
+[node name="Recovery" type="Node2D" parent="."]
+[node name="recover_intake" type="Marker2D" parent="Recovery"]
+position = Vector2(1160, 936)
+[node name="recover_gate_east" type="Marker2D" parent="Recovery"]
+position = Vector2(570, 729)
+
+[node name="Landmarks" type="Node2D" parent="."]
+[node name="FirePlaque" type="Label" parent="Landmarks"]
+offset_left = 470.0
+offset_top = 575.0
+offset_right = 790.0
+offset_bottom = 610.0
+text = "FIRE SEAL • SURFACE SHORTCUT"
+modulate = Color(1, 0.6, 0.3, 1)
+[node name="Kaze" parent="." instance=ExtResource("1")]
+position = Vector2(1160, 936)
+[node name="HUD" parent="." instance=ExtResource("5")]

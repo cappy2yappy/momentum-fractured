@@ -13,6 +13,8 @@ TESTS = {
     'swimming_regression': 'SWIMMING REGRESSION: 0 failure(s)',
     'canal_chamber_regression': 'CANAL CHAMBER REGRESSION: 0 failure(s)',
     'recovery_regression': 'RECOVERY REGRESSION: 0 failure(s)',
+    'live_motion_regression': 'LIVE MOTION REGRESSION: 0 failure(s)',
+    'fire_return_regression': 'FIRE RETURN REGRESSION: 0 failure(s)',
 }
 
 def main():

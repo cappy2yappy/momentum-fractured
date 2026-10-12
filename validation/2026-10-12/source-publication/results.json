@@ -1,0 +1,55 @@
+{
+  "engine": "4.6.1.stable.official.14d19694e",
+  "results": [
+    {
+      "test": "recovery_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "RECOVERY REGRESSION: 0 failure(s), 43 checks"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/source-publication/recovery_regression.engine.log",
+        "--script",
+        "res://tests/recovery_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/source-publication/recovery_regression.save.json"
+      ]
+    },
+    {
+      "test": "fire_return_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "FIRE RETURN REGRESSION: 0 failure(s), 37 checks"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/source-publication/fire_return_regression.engine.log",
+        "--script",
+        "res://tests/fire_return_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/source-publication/fire_return_regression.save.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source_commit_at_export": "84f82ee",
+  "windows": {
+    "path": "build/windows/Kaze-Recovery-2026-10-12.exe",
+    "bytes": 117951840,
+    "sha256": "88c39ba3130ae61fe2c0d32e666e1d5a7f941d2bbe35500ab875b7fd032d6c56",
+    "PE_machine": "0x8664",
+    "native_runtime": "NOT RUN: no Windows host available"
+  },
+  "macos": {
+    "path": "build/macos/Kaze-Recovery-2026-10-12-macOS.zip",
+    "bytes": 74180071,
+    "sha256": "6aff1e228d07a3c5c990f4bd6fdc6ac307ad6566d6b3c040188b0157b3f9fefd",
+    "zip_crc": "PASS"
+  }
+}

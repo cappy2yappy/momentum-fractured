@@ -1,0 +1,179 @@
+{
+  "engine": "4.6.1.stable.official.14d19694e",
+  "results": [
+    {
+      "test": "alpha_08_smoke",
+      "exit": 1,
+      "passed": false,
+      "errors": [
+        "ERROR: FAIL: res://scenes/rooms/room_09_route.tscn uses textured environment layers"
+      ],
+      "summary": [
+        "ALPHA 0.8 SMOKE TEST: 1 failure(s), 12 rooms"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/alpha_08_smoke.engine.log",
+        "--script",
+        "res://tests/alpha_08_smoke.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/alpha_08_smoke.save.json"
+      ]
+    },
+    {
+      "test": "echo_territory_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "ECHO TERRITORY REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/echo_territory_regression.engine.log",
+        "--script",
+        "res://tests/echo_territory_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/echo_territory_regression.save.json"
+      ]
+    },
+    {
+      "test": "swimming_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "SWIMMING REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/swimming_regression.engine.log",
+        "--script",
+        "res://tests/swimming_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/swimming_regression.save.json"
+      ]
+    },
+    {
+      "test": "canal_chamber_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "CANAL CHAMBER REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/canal_chamber_regression.engine.log",
+        "--script",
+        "res://tests/canal_chamber_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/canal_chamber_regression.save.json"
+      ]
+    },
+    {
+      "test": "recovery_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "RECOVERY REGRESSION: 0 failure(s), 43 checks"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/recovery_regression.engine.log",
+        "--script",
+        "res://tests/recovery_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/recovery_regression.save.json"
+      ]
+    },
+    {
+      "test": "live_motion_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "LIVE MOTION REGRESSION: 0 failure(s), 37 checks; input/physics only, subjective feel and rendered FPS unassessed"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/live_motion_regression.engine.log",
+        "--script",
+        "res://tests/live_motion_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/live_motion_regression.save.json"
+      ]
+    },
+    {
+      "test": "fire_return_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "FIRE RETURN REGRESSION: 0 failure(s), 31 checks"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/fire_return_regression.engine.log",
+        "--script",
+        "res://tests/fire_return_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/continuation/fire_return_regression.save.json"
+      ]
+    }
+  ]
+}

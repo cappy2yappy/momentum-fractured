@@ -31,7 +31,7 @@ Implementation status:
 - [x] Multi-screen Wind Relay Shaft (`room_06_route.tscn`).
 - [x] Underground Threshold and explicit Fire Reliquary/checkpoint (`room_07_route.tscn`).
 - [x] Authored deep traversable Canal Chamber with dry recovery shores and timed current hazards; visual/audio polish remains.
-- [ ] Persistent Fire-sealed return shortcut.
+- [x] Persistent Fire-sealed return shortcut (October 12, 37 real-physics/persistence checks; direct feel acceptance pending).
 
 **Exit criteria:** correct bidirectional spawns and map links; reliable damage; authored enemy placement; visible tether anchors and elemental locks; working map/loadout UI; no automatic-death water; movement accepted through direct playtesting.
 
@@ -59,4 +59,4 @@ Implementation status:
 - **P1:** required for the five-room parity slice or core presentation.
 - **P2:** campaign expansion, polish, and optional depth after the slice is accepted.
 
-The next implementation task is the persistent Fire-sealed return shortcut. Canal geometry and controlled swimming are implemented; direct playtesting, gradual underwater treatment, optional deep pickup, and out-of-bounds recovery remain acceptance work.
+The next acceptance task is a direct five-room loop playthrough and canonical character presentation. Canal geometry and controlled swimming are implemented; direct playtesting, gradual underwater treatment, optional deep pickup, and out-of-bounds recovery remain acceptance work.

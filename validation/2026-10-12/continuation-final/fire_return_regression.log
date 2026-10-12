@@ -1,0 +1,44 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Authored Fire Return has 1280x1080 camera bounds
+PASS: Room creates no procedural geometry or anchors
+PASS: Dense authored traversal and seal partitions are explicit
+PASS: Three deliberate return grapple anchors exist
+PASS: Canal intake default is exact
+PASS: Canal directional arrival is exact
+PASS: Campaign arrival remains east of the seal
+PASS: Fire gate spans the full 42x260 shortcut passage
+PASS: Projectile detection covers entire Fire seal
+PASS: Shortcut requires persistent Fire gate and named Surface balcony
+PASS: Both required campaign exits remain on intake side
+PASS: New game physically seals and locks shortcut
+PASS: Canal retreat and forward campaign route remain open before Fire
+PASS: Actual shortcut doorway overlap cannot transition while gate is closed
+PASS: Real ExitWater arrives at entry_from_room9
+PASS: Real ExitCampaign arrives at entry_from_room9
+PASS: Closed seal stops a real Kaze collision shape crossing its passage
+PASS: Continuous ceiling-to-floor collision leaves no jump, dash or wall-jump gap
+PASS: Sealed architecture blocks shortcut-anchor line of sight
+PASS: Live jump/dash and high incoming momentum cannot cross sealed architecture
+PASS: Real Wind projectile collision cannot open Fire seal
+PASS: Real Electric projectile collision preserves closed gate state
+PASS: Real Fire projectile disables seal blocker
+PASS: Fire impact persists gate and immediately unlocks shortcut door
+PASS: Opening emits exactly one gate event and updates the map
+PASS: Kaze collision shape can cross opened seal passage
+PASS: Repeated Fire cannot duplicate gate unlock
+PASS: Full disk save/load preserves opened Fire seal
+PASS: Authored return encounter records its clear state
+PASS: Checkpoint health restore preserves Fire gate progression
+PASS: Real ExitShortcut arrives at entry_shortcut
+PASS: Room re-entry starts with saved gate open
+PASS: Re-entry does not replay gate unlock event
+PASS: Cleared return encounter does not respawn on re-entry
+PASS: Actual player death reloads the configured return checkpoint
+PASS: Actual death/checkpoint reload preserves gate opening
+PASS: Required campaign routes remain available after unlocking shortcut
+FIRE RETURN REGRESSION: 0 failure(s), 37 checks
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

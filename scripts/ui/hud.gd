@@ -41,11 +41,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("character_menu"):
 		_map_overlay.visible = false
 		_character_panel.visible = not _character_panel.visible
-		get_tree().paused = _character_panel.visible
+		refresh_pause_state()
 	if Input.is_action_just_pressed("map"):
 		_character_panel.visible = false
 		_map_overlay.visible = not _map_overlay.visible
-		get_tree().paused = _map_overlay.visible
+		refresh_pause_state()
 	_update_ability_status()
 	if _combo_hide_timer <= 0.0:
 		return
@@ -53,6 +53,14 @@ func _process(delta: float) -> void:
 	_combo_hide_timer = maxf(0.0, _combo_hide_timer - delta)
 	if _combo_hide_timer <= 0.0:
 		_combo_label.visible = false
+
+
+func refresh_pause_state() -> void:
+	var pause_menu := get_node_or_null("PauseMenu")
+	var menu_open := pause_menu != null and bool(pause_menu.get("visible"))
+	var feedback := get_node_or_null("/root/CombatFeedback")
+	var hit_pause := feedback != null and bool(feedback.get("_hit_pause_active"))
+	get_tree().paused = _character_panel.visible or _map_overlay.visible or menu_open or hit_pause
 
 
 func _update_ability_status() -> void:

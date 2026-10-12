@@ -2,7 +2,7 @@
 
 **Genre:** 2D Metroidvania Action-Platformer  
 **Engine:** Godot 4.6.1
-**Status:** Alpha 0.8 playtest candidate
+**Status:** Recovery playtest candidate; Alpha acceptance incomplete
 
 Metroid-style room-to-room combat in a shattered Tokyo metropolis.
 
@@ -195,3 +195,9 @@ TBD (project in early development)
 
 **Last updated:** 2026-09-30
 **Version:** Alpha 0.8 recovery / web-parity restoration
+
+## October 12 recovery checkout and verification
+
+Active branch: `codex/alpha-recovery-source-2026-10-12`; active local worktree: `~/Documents/Playground/momentum-fractured-recovery`. Both older local directories are preserved. See PROJECT_STATUS.md, RECOVERY_REPORT.md and TEST_RESULTS.md for current evidence and remaining acceptance tasks.
+
+Run `python3 tools/validate_recovery.py --godot /path/to/Godot` for bounded import plus seven suites. This isolates test save files through explicit test save-path override and requires Godot4.6.1. For rendered measurements, run tests/performance_probe.gd on a real display. Test results are not subjective gameplay approval.

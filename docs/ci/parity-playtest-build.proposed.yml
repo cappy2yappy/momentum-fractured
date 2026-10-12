@@ -1,0 +1,130 @@
+name: Kaze parity playtest builds
+
+on:
+  push:
+    branches: ["codex/web-parity-restoration", "codex/parity-validation-2026-09-30", "codex/alpha-recovery-2026-10-12", "codex/alpha-recovery-source-2026-10-12"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install official Godot 4.6.1 and export templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --fail --location --retry 2 https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -j -q "$RUNNER_TEMP/godot/templates.tpz" \
+            'templates/windows_release_x86_64.exe' \
+            'templates/macos.zip' \
+            'templates/version.txt' \
+            -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+
+      - name: Import and validate parity restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          python3 tools/validate_recovery.py --godot "$GODOT" --output validation/ci
+
+      - name: Export Windows and macOS playtests
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          mkdir -p build/windows build/macos
+          "$GODOT" --headless --path . --export-release "Windows Desktop" build/windows/Kaze-Alpha-0.8.0.exe
+          "$GODOT" --headless --path . --export-release "macOS" build/macos/Kaze-Alpha-0.8.0-macOS.zip
+          cp README.md RELEASE_NOTES_ALPHA_0.8.0.md build/windows/
+          cp README.md RELEASE_NOTES_ALPHA_0.8.0.md build/macos/
+
+      - name: Test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-parity-test-logs
+          path: validation/ci/
+          retention-days: 14
+
+      - name: Windows playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-Windows-parity-playtest
+          path: build/windows/
+          retention-days: 14
+
+      - name: macOS playtest
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-macOS-parity-playtest
+          path: build/macos/
+          retention-days: 14
+
+  windows-runtime:
+    needs: validate-and-export
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Kaze-Windows-parity-playtest
+          path: build/windows
+      - name: Validate native Windows source and exported startup
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_win64.exe.zip -OutFile "$env:RUNNER_TEMP/godot.zip"
+          Expand-Archive "$env:RUNNER_TEMP/godot.zip" "$env:RUNNER_TEMP/godot"
+          $godot = "$env:RUNNER_TEMP/godot/Godot_v4.6.1-stable_win64_console.exe"
+          python tools/validate_recovery.py --godot $godot --output validation/windows-ci
+          if ($LASTEXITCODE -ne 0) { throw "Windows source validation failed" }
+          & ./build/windows/Kaze-Alpha-0.8.0.exe --headless --quit-after 180 --log-file "$env:GITHUB_WORKSPACE/validation/windows-ci/export-startup.log" -- --recovery-test-mode "--test-save-path=$env:GITHUB_WORKSPACE/validation/windows-ci/export.save.json"
+          if ($LASTEXITCODE -ne 0) { throw "Windows export startup failed" }
+          if (Select-String -Path validation/windows-ci/export-startup.log -Pattern 'SCRIPT ERROR|Parse Error|ERROR:') { throw "Windows export logged an error" }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-Windows-runtime-evidence
+          path: validation/windows-ci/
+          retention-days: 14
+
+  macos-runtime:
+    needs: validate-and-export
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Kaze-macOS-parity-playtest
+          path: build/macos
+      - name: Validate native macOS source and exported startup
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_macos.universal.zip -o "$RUNNER_TEMP/godot.zip"
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          python3 tools/validate_recovery.py --godot "$RUNNER_TEMP/godot/Godot.app/Contents/MacOS/Godot" --output validation/macos-ci
+          unzip -q build/macos/Kaze-Alpha-0.8.0-macOS.zip -d build/macos/unpacked
+          GAME=$(find build/macos/unpacked -type f -path '*/Contents/MacOS/*' -print -quit)
+          chmod +x "$GAME"
+          "$GAME" --headless --quit-after 180 --log-file "$GITHUB_WORKSPACE/validation/macos-ci/export-startup.log" -- --recovery-test-mode "--test-save-path=$GITHUB_WORKSPACE/validation/macos-ci/export.save.json"
+          ! grep -E 'SCRIPT ERROR|Parse Error|ERROR:' validation/macos-ci/export-startup.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-macOS-runtime-evidence
+          path: validation/macos-ci/
+          retention-days: 14

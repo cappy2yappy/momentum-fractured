@@ -1,0 +1,18 @@
+[
+  {
+    "preset": "Windows Desktop",
+    "exit": 0,
+    "output": "build/windows/Kaze-Recovery-2026-10-12.exe",
+    "bytes": 117951840,
+    "errors": [],
+    "warnings": []
+  },
+  {
+    "preset": "macOS",
+    "exit": 0,
+    "output": "build/macos/Kaze-Recovery-2026-10-12-macOS.zip",
+    "bytes": 74180071,
+    "errors": [],
+    "warnings": []
+  }
+]

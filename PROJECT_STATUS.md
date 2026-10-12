@@ -1,11 +1,11 @@
 # Momentum Fractured / Kaze — Project Status
 
-Updated: 2026-10-12 (America/New_York). Active branch: `codex/alpha-recovery-2026-10-12`.
+Updated: 2026-10-12 (America/New_York). Active branch: `codex/alpha-recovery-source-2026-10-12`.
 Active checkout: `~/Documents/Playground/momentum-fractured-recovery`.
 
 ## Milestone assessment
 
-Recovery in progress; Alpha 0.5 and Alpha 0.8 acceptance are **not complete**.
+Recovery baseline published; Alpha 0.5 and Alpha 0.8 acceptance are **not complete**.
 The September 30 parity baseline is the newest development line (2ec0a1d).
 Godot 4.6.1 import and all four existing automated suites actually ran: zero assertion failures across 12 rooms. See TEST_RESULTS.md and validation/2026-10-12 logs. Headless checks do not establish visual quality, full player reachability, or 60 FPS performance.
 
@@ -17,7 +17,7 @@ Both original checkouts remain intact. The newer outer checkout ends at 1d062bb;
 
 - Recover viewport-correct combat damage numbers, defensive Hurtbox/Checkpoint lookups, and audio shutdown cleanup.
 - Exercise real physics collisions, movement, transitions, and checkpoints beyond the existing method-level smoke checks.
-- Restore persistent elemental seals and the authored Fire return path after stability validation.
+- Persistent elemental seals and authored Fire return path implemented and regression-tested.
 
 ## Remaining acceptance work
 
@@ -36,3 +36,21 @@ All five runtime suites passed in `validation/2026-10-12/stability/results.json`
 The sandboxed re-import exited 0 but failed the strict runner due to denied writes to normal Godot editor settings/ObjectDB snapshot paths. It is recorded as **failed**, not passed; the engine import is being rerun with filesystem access. Baseline asset import had succeeded in an isolated application directory. Certificate and ObjectDB teardown warnings remain documented.
 
 Godot re-import with normal filesystem access succeeded (exit 0), with no script/resource/editor-setting errors: `validation/2026-10-12/stability/import-unsandboxed.log`. The initial sandbox failure remains retained in the strict results file.
+
+## October 12 continuation increment
+
+All seven runtime suites passed after integration: `validation/2026-10-12/continuation-final/results.json`. Fresh Godot import also passed with no errors (`continuation-import.log`). The new suites contribute 43 recovery + 37 live-input + 37 Fire-return checks, in addition to the four existing suites.
+
+Authored Room 9 now completes the five-room structural loop (Rooms 5–9): matching Fire impact opens a persistent seal and one-way shortcut to Surface entry_shortcut. Continuous partitions prevent the tested jump/dash/tether bypass routes; the Room 8 retreat and Room 10 campaign remain available. Gate saves are backward compatible; older saves begin with unopened gates. The map displays sealed links in orange and one-way arrows.
+
+Pause, map, loadout and combat hit-pause now preserve each other's pause ownership. Actual movement, short/held jump, dash, swinging and selected transitions were tested. Room-wide player reachability and subjective feel approval remain pending.
+
+Rendered probe: Apple M4 / Mac16,1, Godot Metal Forward+, 1280×720, 180 measured frames per room after 40 warmup frames. Average 116.8–120.1 FPS; p95 frame time 8.6–9.9 ms; worst observed frame 53.5 ms. Short sampling is not a sustained-frame-time guarantee. See rendered-performance.json/log.
+
+Remaining: direct five-room playthrough/feel acceptance; canonical Kaze art and animations; parry/run/unlock reconciliation; underwater presentation/recovery; bespoke bosses/tutorial recovery; target-device soak tests. Export validation is the next step.
+
+## Publication/build limitation
+
+GitHub rejected the workflow-changing commit84f82ee: existing OAuth authentication lacks workflow scope; SSH port443 authentication reports publickey denied (port22 timed out). The complete commit remains on local codex/alpha-recovery-2026-10-12. To preserve history without rewriting any branch, source publication continues on new codex/alpha-recovery-source-2026-10-12 from the already-published84060d2. Its tested game changes are identical except for the explicit packaged-test save override; the CI proposal is retained under docs/ci, and the installed workflow is unchanged. No native Windows CI run exists for this branch.
+
+Windows x86_64 and universal macOS exports succeeded without errors. File formats/embedded resources and archive checks passed. Native macOS startup validation is in progress. Native Windows runtime and sustained target-device frame-time testing remain unverified. Source changes can be published with current authentication; installing the proposed CI requires workflow-capable authentication or maintainer action.

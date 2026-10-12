@@ -11,9 +11,11 @@ class_name DoorExit
 @export var unlocked_text: String = "(open)"
 @export var requires_room_clear: bool = false
 @export var room_id: String = ""
+@export var required_gate_id: String = ""
 @export var transition_cooldown: float = 0.3
 
 var is_locked: bool = false
+var _room_locked: bool = false
 var _cooldown_timer: float = 0.0
 
 @onready var _label: Label = get_node_or_null("Label")
@@ -23,8 +25,10 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	_cooldown_timer = transition_cooldown
 	if requires_room_clear and not room_id.is_empty():
-		is_locked = not GameState.is_room_cleared(room_id)
-	_update_label()
+		_room_locked = not GameState.is_room_cleared(room_id)
+	GameState.gate_opened.connect(_on_gate_opened)
+	GameState.map_changed.connect(_refresh_lock)
+	_refresh_lock()
 
 
 func _process(delta: float) -> void:
@@ -33,15 +37,25 @@ func _process(delta: float) -> void:
 
 
 func set_locked(locked: bool) -> void:
-	is_locked = locked
-	_update_label()
+	_room_locked = locked
+	_refresh_lock()
 
 
 func refresh_locked_from_state() -> void:
 	if requires_room_clear and not room_id.is_empty():
-		is_locked = not GameState.is_room_cleared(room_id)
+		_room_locked = not GameState.is_room_cleared(room_id)
 	else:
-		is_locked = false
+		_room_locked = false
+	_refresh_lock()
+
+
+func _on_gate_opened(gate_id: String) -> void:
+	if gate_id == required_gate_id:
+		_refresh_lock()
+
+
+func _refresh_lock() -> void:
+	is_locked = _room_locked or (not required_gate_id.is_empty() and not GameState.is_gate_open(required_gate_id))
 	_update_label()
 
 
