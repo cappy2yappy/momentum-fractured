@@ -1,5 +1,7 @@
 # Kaze — approved Alpha 0.5 continuation
 
+> Historical build record from October 11. For the current approved source branch and sprite selection, see [CANONICAL_BASELINE.md](docs/CANONICAL_BASELINE.md) and [REPOSITORY_GUIDE.md](docs/REPOSITORY_GUIDE.md). The October 12 review verified browser access to the canonical demo; older benchmark-access statements below describe the earlier environment.
+
 Updated: 2026-10-11 (America/New_York)
 Engine: Godot 4.6.1.stable.official.14d19694e
 Branch: `codex/alpha05-approved-continuation` (local; not pushed)

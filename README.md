@@ -1,5 +1,16 @@
 # Kaze — Silent District Alpha 0.5.2 Development
 
+## Start here — approved project
+
+Use branch **`codex/kaze-approved-baseline-2026-10-12`** for the creator-approved Alpha 0.5.2 source. Open the **root `project.godot`** in Godot 4.6.1. This is the thirteen-room build reviewed on October 12, 2026; the creator confirmed its Kaze sprites that day. GitHub `main` still contains an older implementation until the baseline pull request is reviewed and merged.
+
+- [Approved Kaze sprites with previews](assets/web/KAZE_SPRITES.md)
+- [Baseline identity and preservation rules](docs/CANONICAL_BASELINE.md)
+- [Branch inventory and historical work](docs/REPOSITORY_GUIDE.md)
+- [Independent Alpha 0.5.2 review](docs/ALPHA_0_5_2_REVIEW.md)
+
+Verify the approved artwork and movement source with `python tools/verify_baseline.py`. The project layout is `assets/` for art, `scripts/` for gameplay, `scenes/` for the entry scene, `world/` for map data, `addons/` for MetSys, `tests/` for regression suites, and `docs/` for decisions and provenance. Generated `.godot/` cache and `build/` exports are ignored.
+
 This continues the creator-approved Alpha 0.5.0 executable. Its player controller, original eight-room geometry, art, momentum and controls are preserved. See PROJECT_STATUS.md for provenance, tests, limitations and the next task.
 
 The first expansion adds Relay Undercroft and Signal Terrace beyond the restored Relay Archive, three collectible relay sigils, a Fire cache, an Electric return to Echo Shrine, a shrine and a travel kit.
@@ -22,4 +33,4 @@ After collecting all three relay sigils, use Signal Terrace’s east door with E
 
 Seven suites cover controller/geometry preservation, combat/swing behavior, expansion, live-input traversal and save compatibility. Run them with `godot --headless --path . --script res://tests/<suite>.gd -- --test` using disposable user data. Windows exports with the committed export_presets.cfg and official 4.6.1 templates. CI is included.
 
-This is a tested development increment. The creator completed the previous ten-room expansion. Human acceptance of the new SkyWorks route and authenticated web-benchmark comparison remain pending. See PROJECT_STATUS.md for known editor cleanup and sandbox certificate diagnostics.
+This is a tested development increment. The creator completed the previous ten-room expansion. Human acceptance of the new SkyWorks route and a full web-benchmark playthrough remain pending. The canonical web demo was accessible during the October 12 review. See PROJECT_STATUS.md for known editor cleanup and sandbox certificate diagnostics.

@@ -1,0 +1,7 @@
+# Keep preservation checks stable across Windows, macOS and Linux checkouts.
+*.gd text eol=lf
+*.gd.uid text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.png -text

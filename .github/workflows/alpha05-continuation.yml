@@ -1,7 +1,9 @@
 name: Approved Alpha 0.5 continuation
 on:
   push:
-    branches: [codex/alpha05-approved-continuation]
+    branches: [main, codex/alpha05-approved-continuation, codex/kaze-approved-baseline-2026-10-12]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,6 +13,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Verify approved Kaze artwork and controller
+        run: python3 tools/verify_baseline.py
       - name: Install Godot 4.6.1
         shell: bash
         run: |
