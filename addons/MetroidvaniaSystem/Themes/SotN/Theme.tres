@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://cpqftkus7vhk1"]
+
+[ext_resource type="Texture2D" uid="uid://b358crvb7tquv" path="res://addons/MetroidvaniaSystem/Themes/SotN/RoomFill.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b4654oir6ffpi" path="res://addons/MetroidvaniaSystem/Themes/SotN/Corner.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cpsx30sutkree" path="res://addons/MetroidvaniaSystem/Themes/SotN/BorderPassage.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://debgde56f1x6f" path="res://addons/MetroidvaniaSystem/Themes/SotN/PlayerLocation.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b7ofctgav4kq4" path="res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3u8paa831jvs" path="res://addons/MetroidvaniaSystem/Themes/SotN/BorderWall.png" id="6"]
+
+[resource]
+script = ExtResource("5")
+center_texture = ExtResource("1")
+empty_space_texture = null
+player_location_scene = ExtResource("4")
+mapped_display = 7
+use_shared_borders = true
+default_center_color = Color(0.309804, 0.439216, 0.952941, 1)
+mapped_center_color = Color(0.45098, 0.443137, 0.45098, 1)
+default_border_color = Color(1, 1, 1, 1)
+mapped_border_color = Color(1, 1, 1, 1)
+wall = ExtResource("6")
+passage = ExtResource("3")
+separator = null
+u_corner = ExtResource("2")
+l_corner = ExtResource("2")
+t_corner = ExtResource("2")
+cross_corner = ExtResource("2")

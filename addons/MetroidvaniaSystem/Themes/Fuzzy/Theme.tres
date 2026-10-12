@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://e6e8dk7dxvt0"]
+
+[ext_resource type="Texture2D" uid="uid://biol1vsvxqe6y" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/HalfWall.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b58o75mw5xjej" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/HalfWall2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dw103qvnb2dw1" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/Blockade.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://rllbicrikp4o" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/RoomFill.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d0ma0ydgairdx" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Empty.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cmmovarouml1y" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/BorderPassage.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://xxqfc6h2rll" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/PlayerLocation.tscn" id="7"]
+[ext_resource type="Script" uid="uid://b7ofctgav4kq4" path="res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd" id="8"]
+[ext_resource type="Texture2D" uid="uid://cg7jjwwc4yxa0" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Collectible.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://b4oe25risqgsc" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Collected.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://d1gnlr3nba416" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/+.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://c5a2xgk62k3hv" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/X.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://b7nlobxf6vl87" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Eyes.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://cc13kn0y8bxy3" path="res://addons/MetroidvaniaSystem/Themes/Fuzzy/BorderWall.png" id="14"]
+
+[resource]
+script = ExtResource("8")
+center_texture = ExtResource("4")
+empty_space_texture = ExtResource("5")
+player_location_scene = ExtResource("7")
+mapped_display = 6
+default_center_color = Color(0.1333334, 0, 0.2, 1)
+default_border_color = Color(1, 0, 1, 1)
+mapped_border_color = Color(0.7, 0.7, 0.7, 1)
+symbols = [ExtResource("9"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13")]
+uncollected_item_symbol = 0
+collected_item_symbol = 1
+wall = ExtResource("14")
+passage = ExtResource("6")
+separator = null
+borders = [ExtResource("1"), ExtResource("2"), ExtResource("3")]
+outer_corner = null
+inner_corner = null
+metadata/_custom_type_script = "uid://b7ofctgav4kq4"

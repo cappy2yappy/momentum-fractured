@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://bfx2fid0hmsyb"]
+
+[ext_resource type="Texture2D" uid="uid://dvu8mgj5j1nc" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Borders/Barrier.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bp2d04ksaxa4r" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Center.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bhxdahyhbid7m" path="res://addons/MetroidvaniaSystem/Themes/Kenney/BorderPassage.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://dube8r7swlh2o" path="res://addons/MetroidvaniaSystem/Themes/Kenney/PlayerLocation.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b7ofctgav4kq4" path="res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://dw5a8bbhocksc" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Collectible.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c5e0a6e3skwvf" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Save.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c663y7lq7ycu6" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Skull.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://djuvsk1vybh8u" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/House.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c1x4v13eiinba" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Dot.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://i5yrx2gbck0p" path="res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Dot2.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://iswce4i7mku" path="res://addons/MetroidvaniaSystem/Themes/Kenney/BorderWall.png" id="12"]
+
+[resource]
+script = ExtResource("5")
+center_texture = ExtResource("2")
+empty_space_texture = null
+player_location_scene = ExtResource("4")
+use_shared_borders = true
+default_center_color = Color(0.254902, 0.188235, 0.223529, 1)
+default_border_color = Color(0.866667, 0.403922, 0.298039, 1)
+mapped_border_color = Color(0.254902, 0.188235, 0.223529, 1)
+symbols = [ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("10"), ExtResource("11")]
+uncollected_item_symbol = 0
+wall = ExtResource("12")
+passage = ExtResource("3")
+separator = null
+borders = [ExtResource("1")]
+u_corner = null
+l_corner = null
+t_corner = null
+cross_corner = null
+metadata/_custom_type_script = "uid://b7ofctgav4kq4"

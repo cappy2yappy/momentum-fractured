@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://dtpk6t0nnpjb"]
+
+[ext_resource type="Texture2D" uid="uid://danai55i8ghuq" path="res://addons/MetroidvaniaSystem/Themes/BS/RoomFill.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dp67rmhfarvuw" path="res://addons/MetroidvaniaSystem/Themes/BS/Corner.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bfhk3kvl3cx6t" path="res://addons/MetroidvaniaSystem/Themes/BS/BorderPassageHorizontal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bixscdbqbbnqm" path="res://addons/MetroidvaniaSystem/Themes/BS/BorderWallHorizontal.png" id="4"]
+[ext_resource type="PackedScene" uid="uid://cq5af3a4hpkmc" path="res://addons/MetroidvaniaSystem/Themes/BS/PlayerLocation.tscn" id="5"]
+[ext_resource type="Script" uid="uid://b7ofctgav4kq4" path="res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://dlhoaflaw78ms" path="res://addons/MetroidvaniaSystem/Themes/BS/BorderPassage.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cp12io0ko3ari" path="res://addons/MetroidvaniaSystem/Themes/BS/BorderWall.png" id="8"]
+
+[resource]
+script = ExtResource("6")
+center_texture = ExtResource("1")
+empty_space_texture = null
+player_location_scene = ExtResource("5")
+show_exact_player_location = true
+mapped_display = 7
+use_shared_borders = true
+default_center_color = Color(0, 0.368627, 0.996078, 1)
+mapped_center_color = Color(0.25098, 0.25098, 0.25098, 1)
+default_border_color = Color(1, 1, 1, 1)
+mapped_border_color = Color(1, 1, 1, 1)
+vertical_wall = ExtResource("8")
+horizontal_wall = ExtResource("4")
+vertical_passage = ExtResource("7")
+horizontal_passage = ExtResource("3")
+vertical_separator = null
+horizontal_separator = null
+u_corner = ExtResource("2")
+l_corner = ExtResource("2")
+t_corner = ExtResource("2")
+cross_corner = ExtResource("2")
