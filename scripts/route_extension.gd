@@ -4,9 +4,15 @@ const FRAGMENTS = {
 	8: [{"id": "undercroft_sigil", "at": Vector2(1470, 690), "gate": ""}],
 	9: [{"id": "terrace_west", "at": Vector2(1490, 600), "gate": ""}, {"id": "terrace_fire_cache", "at": Vector2(2240, 770), "gate": "terrace_fire_cache"}],
 }
+const Skyworks = preload("res://scripts/skyworks_region.gd")
+var skyworks = Skyworks.new()
+
 const RETURN_GATE = "terrace_return_relay"
 
 func build_room(world, index):
+	if index >= 10:
+		skyworks.build_room(world, index)
+		return
 	var layouts = {
 		8: [Rect2(0, 1090, 310, 40), Rect2(350, 1110, 320, 40), Rect2(770, 920, 340, 40), Rect2(1300, 740, 340, 40), Rect2(1810, 900, 360, 40), Rect2(2220, 830, 380, 40)],
 		9: [Rect2(0, 830, 650, 40), Rect2(80, 620, 440, 40), Rect2(380, 1040, 800, 40), Rect2(780, 850, 440, 40), Rect2(1360, 640, 400, 40), Rect2(1980, 810, 480, 40)],
@@ -24,6 +30,7 @@ func build_room(world, index):
 		world.create_kunai_gate(RETURN_GATE, "electric", Vector2(360, 620), 280)
 
 func interact(world) -> bool:
+	if skyworks.interact(world): return true
 	if world.room == 8 and world.player.position.distance_to(Vector2(2060, 1300)) < 100:
 		world.player.hp = 3
 		world.checkpoint_room = 8
@@ -52,6 +59,7 @@ func update_progress(world):
 			world.announce("Relay sigil recovered • %d / 3" % world.relay_fragments.size(), 5)
 
 func draw_room(world):
+	skyworks.draw_room(world)
 	var font = ThemeDB.fallback_font
 	for fragment in FRAGMENTS.get(world.room, []):
 		if world.relay_fragments.get(fragment.id, false): continue

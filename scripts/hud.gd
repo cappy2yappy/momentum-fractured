@@ -108,7 +108,7 @@ func _draw():
 	draw_rect(Rect2(982, 20, 92, 52), Color(0.06, 0.055, 0.09, 0.9))
 	label(Vector2(992, 52), "PAUSE", 17)
 	draw_rect(Rect2(1090, 20, 160, 116), Color(0.06, 0.055, 0.09, 0.9))
-	draw_map(Vector2(1104, 42), Vector2(16, 14), false)
+	draw_map(Vector2(1104, 42), Vector2(14, 14), false)
 	label(Vector2(1102, 123), "MAP  ·  M", 15)
 	if world.message_time > 0:
 		draw_rect(Rect2(28, 148, 1224, 52), Color(0.06, 0.055, 0.09, 0.88))
@@ -130,7 +130,7 @@ func _draw():
 			label(Vector2(82, 126), "MetSys survey · rooms reveal as Kaze explores", 17, Color("9ca9b7"))
 			draw_rect(Rect2(70, 145, 820, 415), Color(0.055, 0.055, 0.085, 0.92))
 			draw_rect(Rect2(920, 145, 290, 415), Color(0.055, 0.055, 0.085, 0.92))
-			draw_map(Vector2(92, 185), Vector2(98, 72), true)
+			draw_map(Vector2(92, 185), Vector2(84, 72), true)
 			var explored = world.explored_room_count()
 			label(Vector2(945, 184), "DISTRICT SURVEY", 18, Color("c9f29d"))
 			label(Vector2(945, 220), "%d / %d rooms explored" % [explored, world.ROOM_COUNT], 18)
@@ -176,10 +176,6 @@ func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
 		var to = map_room_rect(origin, cell_size, index, show_labels).get_center()
 		var gate = world.gate_label(index)
 		draw_line(from, to, Color("7fbc8a") if gate == "OPEN" else Color("b88b66"), 5 if show_labels else 2)
-		if show_labels and gate != "OPEN":
-			var midpoint = from.lerp(to, 0.5)
-			draw_rect(Rect2(midpoint - Vector2(38, 10), Vector2(76, 20)), Color("352a36"))
-			draw_string(font, midpoint + Vector2(-36, 5), gate, HORIZONTAL_ALIGNMENT_CENTER, 72, 10, Color("edc699"))
 	draw_return_link(origin, cell_size, show_labels)
 	for index in world.ROOM_COUNT:
 		var level = world.room_discovery_level(index)
@@ -191,7 +187,7 @@ func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
 		if level == 1 and show_labels:
 			draw_string(font, rect.position + Vector2(0, rect.size.y / 2 + 5), "MAPPED", HORIZONTAL_ALIGNMENT_CENTER, rect.size.x, 12, Color("7f8994"))
 		elif show_labels:
-			draw_string(font, rect.position + Vector2(4, 19), "%02d  %s" % [index + 1, world.room_region(index)], HORIZONTAL_ALIGNMENT_LEFT, rect.size.x - 8, 10, Color("9ca9b7"))
+			draw_string(font, rect.position + Vector2(4, 19), "%02d  %s" % [index + 1, world.room_region(index)], HORIZONTAL_ALIGNMENT_LEFT, rect.size.x - 8, 9, Color("9ca9b7"))
 			draw_multiline_string(font, rect.position + Vector2(4, 38), world.ROOM_NAMES[index], HORIZONTAL_ALIGNMENT_CENTER, rect.size.x - 8, 11, 2, Color("f1e4d1"))
 		if index == world.room:
 			var pulse = 2.0 + sin(Time.get_ticks_msec() * 0.008) * 1.5
@@ -201,6 +197,19 @@ func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
 			if index == 0 or index == 3: draw_circle(rect.position + Vector2(rect.size.x - 12, 12), 5, Color("c8d69f"))
 			if index == 6 and not world.boss_defeated: draw_circle(rect.position + Vector2(rect.size.x - 12, 12), 6, Color("df8c83"))
 			if index == 7: draw_rect(Rect2(rect.position + Vector2(rect.size.x - 17, 7), Vector2(10, 10)), Color("9bc5a0"), false, 2)
+	if show_labels:
+		for index in range(1, world.ROOM_COUNT):
+			var gate = world.gate_label(index)
+			if gate == "OPEN" or world.room_discovery_level(index-1) == 0 or world.room_discovery_level(index) == 0: continue
+			var start = map_room_rect(origin,cell_size,index-1,show_labels).get_center()
+			var finish = map_room_rect(origin,cell_size,index,show_labels).get_center()
+			var midpoint = start.lerp(finish,0.5)
+			if is_equal_approx(start.y,finish.y):
+				draw_rect(Rect2(midpoint-Vector2(6,7),Vector2(12,14)),Color("352a36"))
+				draw_string(font,midpoint+Vector2(-4,3),gate.left(1),HORIZONTAL_ALIGNMENT_LEFT,-1,8,Color("edc699"))
+			else:
+				draw_rect(Rect2(midpoint-Vector2(38,6),Vector2(76,12)),Color("352a36"))
+				draw_string(font,midpoint+Vector2(-38,3),gate,HORIZONTAL_ALIGNMENT_CENTER,76,8,Color("edc699"))
 
 
 func select_loadout_at(at: Vector2):
@@ -237,14 +246,28 @@ func draw_loadout():
 		label(rect.position + Vector2(15, 79), "EQUIPPED" if unlocked and world.player.selected_kunai == element else ("AVAILABLE" if unlocked else "LOCKED"), 15)
 	label(Vector2(490, 545), "Explore annexes to restore the optional relay circuit.", 19)
 	label(Vector2(490, 585), world.current_objective(), 16)
+	label(Vector2(490, 620), "KEEPER RELAY • " + ("ATTUNED" if world.skyworks_restored else "UNRESTORED"), 17, Color("c9f29d") if world.skyworks_restored else Color("82909e"))
 
 func draw_return_link(origin: Vector2, cell_size: Vector2, show_labels: bool):
+	draw_keeper_return(origin, cell_size, show_labels)
 	if world.room_discovery_level(3) == 0 or world.room_discovery_level(9) == 0: return
 	var start = map_room_rect(origin, cell_size, 3, show_labels).get_center()
 	var finish = map_room_rect(origin, cell_size, 9, show_labels).get_center()
 	var top = origin.y - (20 if show_labels else 6)
+	var outer_x = map_room_rect(origin, cell_size, 9, show_labels).end.x + (6 if show_labels else 1)
 	var opened = world.opened_kunai_gates.get("terrace_return_relay", false)
 	var color = Color("9bcf8b") if opened else Color("76d9ff")
-	draw_polyline(PackedVector2Array([start, Vector2(start.x, top), Vector2(finish.x, top), finish]), color, 3 if show_labels else 1)
+	draw_polyline(PackedVector2Array([start, Vector2(start.x, top), Vector2(outer_x, top), Vector2(outer_x, finish.y), finish]), color, 3 if show_labels else 1)
 	if show_labels:
 		label(Vector2(start.x + 30, top - 5), "RETURN OPEN" if opened else "ELECTRIC RETURN", 12, color)
+
+
+func draw_keeper_return(origin: Vector2, cell_size: Vector2, show_labels: bool):
+	if world.room_discovery_level(8) == 0 or world.room_discovery_level(12) == 0: return
+	var start = map_room_rect(origin, cell_size, 8, show_labels).get_center()
+	var finish = map_room_rect(origin, cell_size, 12, show_labels).get_center()
+	var bottom = start.y + cell_size.y / 2.0 + (32 if show_labels else 8)
+	var color = Color("9bcf8b") if world.skyworks_restored else Color("d7b477")
+	draw_polyline(PackedVector2Array([start, Vector2(start.x, bottom), Vector2(finish.x, bottom), finish]), color, 3 if show_labels else 1)
+	if show_labels:
+		label(Vector2(start.x + 10, bottom + 17), "KEEPER RETURN " + ("OPEN" if world.skyworks_restored else "LOCKED"), 10, color)

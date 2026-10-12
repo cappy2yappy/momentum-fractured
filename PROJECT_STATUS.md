@@ -3,7 +3,7 @@
 Updated: 2026-10-11 (America/New_York)
 Engine: Godot 4.6.1.stable.official.14d19694e
 Branch: `codex/alpha05-approved-continuation` (local; not pushed)
-Candidate: Alpha 0.5.1 Development
+Candidate: Alpha 0.5.2 Development
 Approved source baseline commit: `47ba3d3`
 
 ## Correct starting point
@@ -20,9 +20,21 @@ The selected baseline is an eight-room, MetSys-backed proving ground. Its origin
 - Original movement constants, swing integrator, release momentum, jump behavior, double-tap running, combo/parry, dash, animations and controls are preserved.
 - Original eight rooms' collision geometry is automatically compared with docs/APPROVED_GEOMETRY.json. Existing exit elevations and anchor positions are retained.
 - Existing game art is preserved. The kit portrait uses an original Kaze frame at its original aspect ratio.
-- Original Godot application name/save directory and save filename are retained so existing Alpha 0.5 saves can load. Exported executable metadata names this Alpha 0.5.1 Development.
+- Original Godot application name/save directory and save filename are retained so existing Alpha 0.5 saves can load. Exported executable metadata names this Alpha 0.5.2 Development.
 
-## New scope and features
+## Accepted prior increment
+
+The creator completed Alpha 0.5.1 (`7ef5873c12f037161ac592fb022cb41255600122`) on 2026-10-11 and reported great progress. Its ten-room route is the accepted foundation for this expansion.
+
+## Alpha 0.5.2 expansion
+
+- Thirteen rooms across four regions. SkyWorks Approach, Storm Foundry and Keeper Relay extend Signal Terrace after all three relay sigils are recovered.
+- Wind and Electric seals gate the new route, with live projectile collision and bypass-prevention checks. New elevated traversal retains the unchanged player controller.
+- Storm Keeper reuses existing art and combat: facing-locked sweep, jumpable ground pulse, parry recovery, faster second phase and ranged pursuit. Ordinary hits cannot repeatedly cancel its warning.
+- Foundry Refuge saves an exact checkpoint. Defeating the Keeper and attuning its relay opens a persistent two-way return to Relay Undercroft with safe arrivals.
+- Atlas/minimap include all thirteen rooms, elemental gate markers and the new shortcut. Save schema 6 retains schema 4/5 progress and records the new relay and encounter.
+
+## Retained Alpha 0.5.1 features
 
 - Ten connected rooms: Relay Undercroft and Signal Terrace extend the route after the original Relay Archive is restored.
 - New elevated jump/tether routes, a safe Undercroft shrine, and two sentinel encounters using the existing combat system.
@@ -45,19 +57,21 @@ All checks used official Godot 4.6.1 and isolated workspace user data. Original 
 | approved_baseline | Pass: unchanged controller checksum, original room geometry, 400 walk speed and measured 232.56 held-jump height |
 | approved_combat_swing | Pass: facing-aware melee, successful/missed parry, existing damage protection, swing rope length and exact release velocity, queued combo |
 | annex_expansion | Pass: all ten rooms, relay gate, real elemental projectile collisions, sigils, two-way return, kit selection, touch bindings, transition/death cleanup |
-| annex_traversal | Pass: four critical new platform jumps with actual controller inputs and collision landings, including Windstep jumps |
+| annex_traversal | Pass: six critical platform jumps (four accepted annex jumps and two SkyWorks jumps) with actual controller inputs and collision landings, including Windstep jumps |
 | save_compatibility | Pass: abilities, MetSys exploration, new shrine/return/sigils/encounters, schema 4 migration, invalid element and failed-save feedback |
+| skyworks_progression | Pass: thirteen rooms, sigil gate, real Wind/Electric projectiles, transitions, exact shrine, Keeper relay, reciprocal shortcut, persistence and schema 5 migration |
+| storm_keeper | Pass: warning/parry, single-hit damage, range miss, jump avoids ground pulse, second phase, recovery, pursuit and independent story flags |
 | Clean source import | Pass: no script/parse/resource-load errors in a fresh copy without generated Godot cache |
-| Rendered source QA | Pass: original appearance, both annexes, full atlas and travel kit visually inspected; capture fixtures use seeded progression |
+| Rendered source QA | Pass: original appearance, SkyWorks rooms and thirteen-room atlas visually inspected; capture fixtures use seeded progression |
 | Windows export | Pass: x86_64 release, embedded PCK, compatibility renderer, map data explicitly included |
 | Packaged fresh start | Pass: 180-frame headless boot, exit 0 |
-| Packaged annex starts | Pass: seeded saved starts in Rooms 8 and 9, 180 rendered frames each, OpenGL on RTX 4070 Laptop GPU, exit 0; no runtime script errors |
+| Packaged annex starts | Pass: seeded saved starts in Rooms 10, 11 and 12, 180 rendered frames each, OpenGL on RTX 4070 Laptop GPU, exit 0; no runtime script errors |
 
 Reproduce: import with `godot --headless --path . --import --quit`, then run each suite with `godot --headless --path . --script res://tests/<suite>.gd -- --test`. Use disposable user data: save_compatibility intentionally writes a regression-only save file. Windows export uses `godot --headless --path . --export-release "Windows Desktop" <output.exe>` and matching official templates. CI workflow is provided; no remote CI run is claimed.
 
 ## Limits and blockers
 
-- A full human playthrough of the ten-room route has not been completed. New critical jumps and transitions are tested, but encounter balance/readability still need direct acceptance.
+- The creator completed and accepted the ten-room Alpha 0.5.1 route. The new SkyWorks route has automated traversal/combat checks and rendered QA, but still needs a human playthrough for pacing and Keeper balance.
 - This is an incremental development candidate, not a completed web-demo parity milestone. No 21-area/five-region/five-boss completion claim is made.
 - Water remains the approved build's existing hazard/presentation behavior. Real swimming and larger regional/boss scope remain future work.
 - The Windows sandbox emits `Failed to read the root certificate store` before/after changes. This is unrelated to offline gameplay and appears in the logs.
@@ -66,4 +80,4 @@ Reproduce: import with `godot --headless --path . --import --quit`, then run eac
 
 ## Next development task
 
-Playtest the annex loop after an existing Alpha 0.5 save, focusing on room purpose, sigil readability, encounter pressure and Electric return usefulness while keeping the approved controller intact. After this content pass, give Tide Warden one distinctive, telegraphed phase/attack sequence with parry and recovery tests. Keep aquatic traversal and further regional expansion as separate bounded additions.
+Playtest SkyWorks from the accepted save, focusing on seal readability, platform pacing and Keeper phase pressure. Address feedback while preserving the controller. Then add a bounded aquatic traversal route with explicit swimming behavior and regression coverage for unchanged dry-ground movement.

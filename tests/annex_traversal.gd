@@ -42,6 +42,8 @@ func _run():
 	await probe(8, Vector2(1050, 918), Rect2(1300, 740, 340, 40), true)
 	await probe(9, Vector2(1110, 848), Rect2(1360, 640, 400, 40), true)
 	await probe(9, Vector2(1660, 638), Rect2(1980, 810, 480, 40), false)
+	await probe(10, Vector2(1180, 828), Rect2(1400, 620, 360, 40), true)
+	await probe(11, Vector2(1410, 778), Rect2(1500, 560, 400, 40), true)
 	world.player.set_physics_process(false)
 	world.queue_free()
 	current_scene = null

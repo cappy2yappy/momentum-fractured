@@ -30,7 +30,7 @@ jobs:
           GODOT=Godot_v4.6.1-stable_linux.x86_64
           "$GODOT" --headless --path . --import --quit 2>&1 | tee import.log
           ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' import.log
-          for suite in approved_baseline approved_combat_swing annex_expansion annex_traversal save_compatibility; do
+          for suite in approved_baseline approved_combat_swing annex_expansion annex_traversal save_compatibility skyworks_progression storm_keeper; do
             timeout 60s "$GODOT" --headless --path . --script "res://tests/$suite.gd" -- --test 2>&1 | tee "$suite.log"
             grep -q '0 failure(s)' "$suite.log"
             ! grep -E 'SCRIPT ERROR|Parse Error|FAIL:' "$suite.log"
@@ -40,7 +40,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p build/windows
-          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release "Windows Desktop" build/windows/Kaze-Alpha-0.5.1-Development.exe 2>&1 | tee export.log
+          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release "Windows Desktop" build/windows/Kaze-Alpha-0.5.2-Development.exe 2>&1 | tee export.log
           ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' export.log
           cp README.md PROJECT_STATUS.md build/windows/
       - uses: actions/upload-artifact@v4

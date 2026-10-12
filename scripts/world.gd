@@ -7,23 +7,26 @@ const Hud = preload("res://scripts/hud.gd")
 const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 
 const Extension = preload("res://scripts/route_extension.gd")
-const ROOM_COUNT = 10
+const ROOM_COUNT = 13
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
 	"BROKEN SPAN", "ASCENT TOWER", "TIDE WARDEN", "RELAY ARCHIVE",
 	"RELAY UNDERCROFT", "SIGNAL TERRACE",
+	"SKYWORKS APPROACH", "STORM FOUNDRY", "KEEPER RELAY",
 ]
 const ROOM_COLORS = [
 	Color("211e32"), Color("2b2030"), Color("172a35"), Color("29233b"),
 	Color("182837"), Color("242139"), Color("241c2d"), Color("1d2934"),
 	Color("202939"), Color("29243a"),
+	Color("283442"), Color("39283a"), Color("28283e"),
 ]
 const ROOM_MAP_COORDS = [
 	Vector3i(0, 2, 0), Vector3i(1, 2, 0), Vector3i(2, 2, 0), Vector3i(2, 1, 0),
 	Vector3i(3, 1, 0), Vector3i(4, 1, 0), Vector3i(4, 0, 0), Vector3i(5, 0, 0),
 	Vector3i(5, 1, 0), Vector3i(6, 1, 0),
+	Vector3i(6, 0, 0), Vector3i(7, 0, 0), Vector3i(7, 1, 0),
 ]
-const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP", "ECHO WORKS", "STORM KEEP"]
+const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP", "ECHO WORKS", "STORM KEEP", "SKYWORKS", "SKYWORKS", "SKYWORKS"]
 
 var save_path = "user://silent_district_alpha_v3.json"
 var player
@@ -35,10 +38,11 @@ var opened_kunai_gates: Dictionary = {}
 var camera = Camera2D.new()
 var geometry = Node2D.new()
 var room = 0
-var visited = [true, false, false, false, false, false, false, false, false, false]
+var visited = [true, false, false, false, false, false, false, false, false, false, false, false, false]
 var guard_defeated = false
 var boss_defeated = false
 var completed = false
+var skyworks_restored = false
 var secret = false
 var checkpoint_room = 0
 var checkpoint_position = Vector2(220, 1298)
@@ -171,7 +175,7 @@ func build_room(index):
 			for rect in [Rect2(0, 1090, 300, 40), Rect2(390, 1090, 300, 40), Rect2(820, 870, 340, 40), Rect2(1300, 650, 380, 40), Rect2(1830, 880, 320, 40)]: add_platform(rect)
 			tether_anchors = [Vector2(990, 650), Vector2(1480, 430)]
 			create_kunai_gate("relay_electric_seal", "electric", Vector2(2000, 1300), 300)
-		8, 9:
+		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	queue_redraw()
 
@@ -210,6 +214,9 @@ func gate_label(target_room: int) -> String:
 		6: return "GALE DASH" if not player.dash_unlocked else "OPEN"
 		7: return "WARDEN" if not boss_defeated else "OPEN"
 		8: return "RELAY" if not completed else "OPEN"
+		10: return "3 SIGILS" if relay_fragments.size() < 3 else "OPEN"
+		11: return "WIND" if not opened_kunai_gates.get("skyworks_wind_intake", false) else "OPEN"
+		12: return "ELECTRIC" if not opened_kunai_gates.get("foundry_electric_relay", false) else "OPEN"
 	return "OPEN"
 
 func current_objective() -> String:
@@ -219,8 +226,12 @@ func current_objective() -> String:
 	if not boss_defeated: return "Break the Tide Warden's seal."
 	if not completed: return "Restore the Relay Archive."
 	if relay_fragments.size() < 3: return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
-	if not opened_kunai_gates.get("terrace_return_relay", false): return "Use Electric Kunai to open the Echo Shrine return."
-	return "Relay circuit restored. Return to Echo Shrine."
+	if room == 10 and not opened_kunai_gates.get("skyworks_wind_intake", false): return "Use Wind Kunai to release the intake seal."
+	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Refuge. Open the Electric relay."
+	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
+	if not cleared_encounters.get("storm_keeper", false): return "Follow Signal Terrace east. Reach SkyWorks and face the Storm Keeper."
+	if not skyworks_restored: return "Attune the Keeper Relay beyond the arena."
+	return "SkyWorks restored. The Undercroft return is open."
 
 func register_metsys_progress():
 	var progress = {
@@ -284,8 +295,8 @@ func restore_metsys_save(encoded: Dictionary):
 	metsys.save_data.custom_markers = markers
 	metsys.map_updated.emit()
 
-func spawn_enemy(at: Vector2, is_boss: bool, is_required: = false):
-	var enemy = Guard.new()
+func spawn_enemy(at: Vector2, is_boss: bool, is_required: = false, enemy_script = Guard):
+	var enemy = enemy_script.new()
 	enemy.player = player
 	enemy.position = at
 	enemy.home = at.x
@@ -314,14 +325,16 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 		save_progress()
 	if active_enemy == enemy: active_enemy = null
 	if guard == enemy: guard = null
-	if is_boss:
+	if is_boss and enemy.get_meta("progression_boss", "tide_warden") == "tide_warden":
 		boss_defeated = true
 		save_progress()
 		announce("The Tide Warden breaks. The Relay Archive is open.", 7)
-	elif is_required:
+	elif is_required and not is_boss:
 		guard_defeated = true
 		save_progress()
 		announce("The guard falls. Claim the Windstep scroll.", 5)
+	elif is_boss:
+		announce("Storm Keeper defeated. Attune the relay with E.", 8)
 
 func add_platform(rect: Rect2):
 	platforms.append(rect)
@@ -455,15 +468,21 @@ func can_enter(target):
 		announce("The storm gate needs Gale Dash.");return false
 	if room == 7 and target == 8 and not completed:
 		announce("Restore the Relay Archive before exploring its annexes.");return false
+	if room == 9 and target == 10 and relay_fragments.size() < 3:
+		announce("Recover all three relay sigils to power the SkyWorks lift.");return false
+	if room == 10 and target == 11 and not opened_kunai_gates.get("skyworks_wind_intake", false):
+		announce("Use Wind Kunai to release the intake seal.");return false
+	if room == 11 and target == 12 and not opened_kunai_gates.get("foundry_electric_relay", false):
+		announce("Use Electric Kunai to open the Foundry relay.");return false
 	if room == 6 and target == 7 and not boss_defeated:
 		announce("The Tide Warden seals the archive.");return false
 	return true
 
 func left_exit_position() -> Vector2:
-	return Vector2(120, [1300, 1300, 1300, 850, 1300, 1080, 1300, 1090, 1090, 830][room])
+	return Vector2(120, [1300, 1300, 1300, 850, 1300, 1080, 1300, 1090, 1090, 830, 830, 760, 1300][room])
 
 func right_exit_position() -> Vector2:
-	return Vector2(2440, [1300, 1300, 850, 1300, 1080, 1300, 1090, 1300, 830, 830][room])
+	return Vector2(2440, [1300, 1300, 850, 1300, 1080, 1300, 1090, 1300, 830, 830, 760, 1300, 1300][room])
 
 func interact():
 	if transition > 0: return
@@ -549,7 +568,7 @@ func save_progress():
 	if file == null:
 		announce("Could not save. Your current session can continue.");return false
 	file.store_string(JSON.stringify({
-		"version": 5, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
+		"version": 6, "skyworks_restored": skyworks_restored, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
 		"relay_fragments": relay_fragments, "cleared_encounters": cleared_encounters, "double_jump": player.double_jump,
 		"tether_unlocked": player.tether_unlocked, "dash_unlocked": player.dash_unlocked,
 		"kunai_unlocked": player.kunai_unlocked, "selected_kunai": player.selected_kunai,
@@ -580,6 +599,7 @@ func load_progress():
 	guard_defeated = data.get("guard_defeated", false)
 	boss_defeated = data.get("boss_defeated", false)
 	completed = data.get("completed", false)
+	skyworks_restored = bool(data.get("skyworks_restored", false))
 	secret = data.get("secret", false)
 	checkpoint_room = clampi(int(data.get("checkpoint_room", 0)), 0, ROOM_COUNT - 1)
 	var checkpoint_at = data.get("checkpoint_position", [220, 1298])
