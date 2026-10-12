@@ -1,0 +1,28 @@
+{
+  "engine": "4.6.1.stable.official.14d19694e",
+  "results": [
+    {
+      "test": "recovery_regression",
+      "exit": 1,
+      "passed": false,
+      "errors": [
+        "ERROR: `--path` was specified on the command line, but this Godot binary was compiled without support for path overrides. Aborting."
+      ],
+      "summary": [],
+      "warnings": [],
+      "command": [
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/build/macos/final-unpacked/Kaze \u2014 Silent District Alpha 0.8.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.8.0",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/native-macos-tests/recovery_regression.engine.log",
+        "--script",
+        "res://tests/recovery_regression.gd",
+        "--",
+        "--recovery-test-mode",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/native-macos-tests/recovery_regression.save.json"
+      ]
+    }
+  ]
+}

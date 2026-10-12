@@ -36,7 +36,7 @@ def main():
         jobs.append((name, ['--script', 'res://tests/' + name + '.gd'], TESTS[name]))
     for name, flags, marker in jobs:
         command = [args.godot, '--headless', '--path', str(root), '--log-file', str(out / (name + '.engine.log')), *flags,
-                   '--', '--test-save-path=' + str(out / (name + '.save.json'))]
+                   '--', '--recovery-test-mode', '--test-save-path=' + str(out / (name + '.save.json'))]
         try:
             run = subprocess.run(command, cwd=root, capture_output=True, text=True, timeout=60)
             output, exit_code = run.stdout + run.stderr, run.returncode

@@ -1,56 +1,49 @@
 # Momentum Fractured / Kaze — Project Status
 
-Updated: 2026-10-12 (America/New_York). Active branch: `codex/alpha-recovery-source-2026-10-12`.
-Active checkout: `~/Documents/Playground/momentum-fractured-recovery`.
+Updated 2026-10-12 (America/New_York).
+Active development branch: `codex/alpha-recovery-source-2026-10-12`.
+Active local checkout: `~/Documents/Playground/momentum-fractured-recovery`.
+GitHub source verified at `5b364591e9835819882566a7a1f3d4694587457b`; final report/export-tool commit follows this source.
 
-## Milestone assessment
+## Current milestone
 
-Recovery baseline published; Alpha 0.5 and Alpha 0.8 acceptance are **not complete**.
-The September 30 parity baseline is the newest development line (2ec0a1d).
-Godot 4.6.1 import and all four existing automated suites actually ran: zero assertion failures across 12 rooms. See TEST_RESULTS.md and validation/2026-10-12 logs. Headless checks do not establish visual quality, full player reachability, or 60 FPS performance.
+Recovered, published, tested recovery playtest candidate. **Alpha 0.5 and Alpha 0.8 acceptance are incomplete.**
+Seven automated Godot 4.6.1 suites passed, totaling 520 executed checks across 12 rooms. Fresh asset import/script registration passed. Windows x86_64 and universal macOS playtest exports were generated; macOS packaged startup passed. Windows native runtime remains unverified.
+Evidence: TEST_RESULTS.md, RECOVERY_REPORT.md, and validation/2026-10-12.
 
-## Recovery and synchronization
+## Completed this session
 
-Both original checkouts remain intact. The newer outer checkout ends at 1d062bb; the nested clone ends at e4b0a86. All five requested commits were located. Local history and an unreachable stash are archived and published on separate preservation branches; current progression is retained. See RECOVERY_REPORT.md for hashes and compatibility decisions.
+- Archived both original local checkouts, all untracked/ignored files and Git objects; verified Git bundle. Located all five reported commits and preserved the unreachable stash.
+- Compared all nominated GitHub branches; based active work on latest September 30 parity 2ec0a1d. Published preserved local history/stash separately.
+- Recovered camera-correct damage numbers, defensive combat/checkpoint access and audio shutdown cleanup.
+- Fixed repeated damage within a melee window, already-overlapped combo targets, lethal-enemy physics mutation and pooled projectile monitoring.
+- Fixed checkpoint/door arrival restoration by waiting for scene_changed.
+- Fixed map/loadout/pause/hit-pause ownership so one panel cannot unpause another.
+- Authored Fire-Sealed Return (Room 9), saved elemental gate state, matching projectile detection, physical passage barriers, one-way Surface shortcut and map indication. Canal retreat and onward campaign remain available.
+- Ran actual movement/jump/dash/tether, combat, UI, save/checkpoint and selected transition tests, plus rendered performance measurement and exports.
 
-## Work under validation
+## Build and performance evidence
 
-- Recover viewport-correct combat damage numbers, defensive Hurtbox/Checkpoint lookups, and audio shutdown cleanup.
-- Exercise real physics collisions, movement, transitions, and checkpoints beyond the existing method-level smoke checks.
-- Persistent elemental seals and authored Fire return path implemented and regression-tested.
+Build source: `5b364591e9835819882566a7a1f3d4694587457b`.
 
-## Remaining acceptance work
+| Artifact | Verification |
+|---|---|
+| build/windows/Kaze-Recovery-5b364591.exe | Export exit0/no errors; x86_64 PE and embedded Godot pack verified; native Windows execution not run |
+| build/macos/Kaze-Recovery-5b364591-macOS.zip | Export exit0/no errors; archive CRC and universal x86_64/arm64 binary verified; native headless startup180 frames exit0/no errors; isolated save created |
 
-P0: live collision stability; direct movement/tether feel acceptance; HUD/map interactions; web unlock/control parity reconciliation.
-P1: Fire return loop; canonical Kaze animation sheets (current red-scarf art remains legacy); underwater presentation and recovery; genuine authored boss encounters and tutorial integration.
-Release: Windows and macOS exports and platform verification; 60 FPS measurement on target hardware. Package creation does not equal accepted Alpha completion.
+Hashes/byte counts: validation/2026-10-12/final-export/export-results.json. These are playtest packages, not accepted releases; signing/notarization/distribution acceptance remain pending.
+Rendered source probe on Apple M4 / Mac16,1, Metal Forward+,1280×720:180measuredframes/room after40 warmup frames, averages116.8–120.1 FPS, p95frame times 8.6–9.9 ms, worst frame53.5 ms. Short-run average exceeded60 FPS on this Mac; sustained16.67 ms frame budget across target devices is not verified.
 
-The canonical web game was directly inspected on October 12: Lantern Haven, Alpha 0.3.2, three-heart HUD, area map, F parry, Q tether after unlock, Shift/right-click dash after unlock. Current Godot baseline starts with Dash/Tether/Wind Kunai and uses F for kunai. Record this conflict before changing progression or remapping existing actions.
+## Remaining development and acceptance tasks
 
-No background development process or schedule is implied by this status.
+P0: direct five-room reachability/playthrough and movement/tether feel approval; reconcile canonical run/parry/control/unlock pacing; remaining teardown warnings and long-session frame-time stability.
+P1: canonical green/purple Kaze sheets and action animations (legacy red-scarf art remains); underwater presentation/recovery; bespoke bosses rather than scaled Echo encounters; safe recovery of Guardian, Echo Amalgam, tutorials and victory stats from preserved history.
+Release: Windows native runtime/performance tests; macOS rendered packaged playthrough and signing/notarization/distribution decisions; sustained performance on target hardware.
 
-## Stability increment evidence
+The five-room loop is structurally implemented, not visually or subjectively parity-approved. Canonical web inspection showed Lantern Haven Alpha 0.3.2 with F parry, double-tap run, Q tether after unlock and Shift/right-click dash after unlock; Godot's existing F-kunai/base-kit choices are documented prototype differences.
 
-All five runtime suites passed in `validation/2026-10-12/stability/results.json`. The new recovery suite passed 43 checks including physical melee damage/immunity, per-window target tracking, camera transform, checkpoint save/load and actual scene respawn, detached helper guards, and audio teardown. Initial regressions demonstrated repeated per-window damage, an Echo death physics mutation error, and default-spawn checkpoint restoration; fixed and rerun.
+## Genuine blockers and resolution
 
-The sandboxed re-import exited 0 but failed the strict runner due to denied writes to normal Godot editor settings/ObjectDB snapshot paths. It is recorded as **failed**, not passed; the engine import is being rerun with filesystem access. Baseline asset import had succeeded in an isolated application directory. Certificate and ObjectDB teardown warnings remain documented.
+GitHub OAuth authentication can publish ordinary source but rejected the workflow-changing commit 84f82ee because it lacks workflow scope. Port22 SSH timed out; port443 rejected the existing key. Full attempted development history remains locally on codex/alpha-recovery-2026-10-12. Source was published on a new branch without rewriting either history; the workflow proposal is preserved at docs/ci/parity-playtest-build.proposed.yml. A maintainer must install that proposal with workflow-capable authentication to run native Windows/macOS CI. No such CI run is claimed.
 
-Godot re-import with normal filesystem access succeeded (exit 0), with no script/resource/editor-setting errors: `validation/2026-10-12/stability/import-unsandboxed.log`. The initial sandbox failure remains retained in the strict results file.
-
-## October 12 continuation increment
-
-All seven runtime suites passed after integration: `validation/2026-10-12/continuation-final/results.json`. Fresh Godot import also passed with no errors (`continuation-import.log`). The new suites contribute 43 recovery + 37 live-input + 37 Fire-return checks, in addition to the four existing suites.
-
-Authored Room 9 now completes the five-room structural loop (Rooms 5–9): matching Fire impact opens a persistent seal and one-way shortcut to Surface entry_shortcut. Continuous partitions prevent the tested jump/dash/tether bypass routes; the Room 8 retreat and Room 10 campaign remain available. Gate saves are backward compatible; older saves begin with unopened gates. The map displays sealed links in orange and one-way arrows.
-
-Pause, map, loadout and combat hit-pause now preserve each other's pause ownership. Actual movement, short/held jump, dash, swinging and selected transitions were tested. Room-wide player reachability and subjective feel approval remain pending.
-
-Rendered probe: Apple M4 / Mac16,1, Godot Metal Forward+, 1280×720, 180 measured frames per room after 40 warmup frames. Average 116.8–120.1 FPS; p95 frame time 8.6–9.9 ms; worst observed frame 53.5 ms. Short sampling is not a sustained-frame-time guarantee. See rendered-performance.json/log.
-
-Remaining: direct five-room playthrough/feel acceptance; canonical Kaze art and animations; parry/run/unlock reconciliation; underwater presentation/recovery; bespoke bosses/tutorial recovery; target-device soak tests. Export validation is the next step.
-
-## Publication/build limitation
-
-GitHub rejected the workflow-changing commit84f82ee: existing OAuth authentication lacks workflow scope; SSH port443 authentication reports publickey denied (port22 timed out). The complete commit remains on local codex/alpha-recovery-2026-10-12. To preserve history without rewriting any branch, source publication continues on new codex/alpha-recovery-source-2026-10-12 from the already-published84060d2. Its tested game changes are identical except for the explicit packaged-test save override; the CI proposal is retained under docs/ci, and the installed workflow is unchanged. No native Windows CI run exists for this branch.
-
-Windows x86_64 and universal macOS exports succeeded without errors. File formats/embedded resources and archive checks passed. Native macOS startup validation is in progress. Native Windows runtime and sustained target-device frame-time testing remain unverified. Source changes can be published with current authentication; installing the proposed CI requires workflow-capable authentication or maintainer action.
+No native Windows host is available in this session. Direct creator feel/art acceptance and target hardware validation are still required. No scheduled/background continuation process exists.

@@ -1,0 +1,16 @@
+{
+  "exit": 0,
+  "command": [
+    "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/build/macos/final-unpacked/Kaze \u2014 Silent District Alpha 0.8.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.8.0",
+    "--headless",
+    "--quit-after",
+    "180",
+    "--log-file",
+    "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/final-export/macos-native.engine.log",
+    "--",
+    "--recovery-test-mode",
+    "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/final-export/macos-native.save.json"
+  ],
+  "errors": [],
+  "isolated_save_created": true
+}

@@ -1,0 +1,39 @@
+{
+  "source_commit": "5b364591e9835819882566a7a1f3d4694587457b",
+  "Windows": {
+    "PE_machine": "0x8664",
+    "embedded_pack_footer": "GDPC",
+    "native_runtime": "NOT RUN"
+  },
+  "macOS": {
+    "zip_crc_valid": true,
+    "architectures": [
+      "x86_64",
+      "arm64"
+    ],
+    "native_headless_startup": "PASS,180 frames,exit0,no errors; isolated save verified",
+    "regression_runner_attempt": "Unsupported on release export: --path overrides disabled, exit1 (editor suites passed separately)"
+  },
+  "exports": {
+    "source_commit": "5b364591e9835819882566a7a1f3d4694587457b",
+    "engine": "4.6.1.stable.official.14d19694e",
+    "exports": [
+      {
+        "preset": "Windows Desktop",
+        "exit": 0,
+        "errors": [],
+        "file": "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/build/windows/Kaze-Recovery-5b364591.exe",
+        "bytes": 117951936,
+        "sha256": "f370dec92089f97ccb61aa48dc0499841e7063fcd9e14cdb3d98115388e58575"
+      },
+      {
+        "preset": "macOS",
+        "exit": 0,
+        "errors": [],
+        "file": "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/build/macos/Kaze-Recovery-5b364591-macOS.zip",
+        "bytes": 74180193,
+        "sha256": "8002cd9bc41b4c7570b2d97d8d9f57be453c0b44786ffdfa3b2c144683e245fd"
+      }
+    ]
+  }
+}

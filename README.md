@@ -200,4 +200,6 @@ TBD (project in early development)
 
 Active branch: `codex/alpha-recovery-source-2026-10-12`; active local worktree: `~/Documents/Playground/momentum-fractured-recovery`. Both older local directories are preserved. See PROJECT_STATUS.md, RECOVERY_REPORT.md and TEST_RESULTS.md for current evidence and remaining acceptance tasks.
 
-Run `python3 tools/validate_recovery.py --godot /path/to/Godot` for bounded import plus seven suites. This isolates test save files through explicit test save-path override and requires Godot4.6.1. For rendered measurements, run tests/performance_probe.gd on a real display. Test results are not subjective gameplay approval.
+Run `python3 tools/validate_recovery.py --godot /path/to/Godot` for bounded import plus seven suites. This isolates test save files through explicit test save-path override and requires Godot 4.6.1. For rendered measurements, run tests/performance_probe.gd on a real display. Test results are not subjective gameplay approval.
+
+Recovery playtest packages are named Kaze-Recovery-5b364591 and correspond to the verified source commit in TEST_RESULTS.md. macOS packaged headless startup passed; Windows package structure passed while native execution remains pending. These are not accepted Alpha releases. Normal editor-only regression flags are unsupported in release templates; explicit --recovery-test-mode plus --test-save-path isolates packaged startup data.
