@@ -1,0 +1,74 @@
+[
+  {
+    "suite": "approved_baseline",
+    "before_pass_assertions": 32,
+    "after_pass_assertions": 32,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "approved_combat_swing",
+    "before_pass_assertions": 7,
+    "after_pass_assertions": 7,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "annex_expansion",
+    "before_pass_assertions": 34,
+    "after_pass_assertions": 34,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "annex_traversal",
+    "before_pass_assertions": 6,
+    "after_pass_assertions": 6,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "save_compatibility",
+    "before_pass_assertions": 11,
+    "after_pass_assertions": 11,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "skyworks_progression",
+    "before_pass_assertions": 33,
+    "after_pass_assertions": 33,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "storm_keeper",
+    "before_pass_assertions": 12,
+    "after_pass_assertions": 12,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "sprite_integration",
+    "before_pass_assertions": 43,
+    "after_pass_assertions": 43,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "movement_momentum",
+    "before_pass_assertions": null,
+    "after_pass_assertions": 53,
+    "fail_assertions": 0,
+    "script_errors": 0,
+    "exit_code": 0
+  }
+]
