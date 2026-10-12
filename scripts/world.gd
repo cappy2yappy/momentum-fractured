@@ -407,6 +407,7 @@ func spawn_dash_afterimage(texture, frame, at, flip_h):
 	ghost.hframes = 8
 	ghost.frame = frame
 	ghost.scale = player.sprite.scale
+	ghost.offset = player.sprite.offset
 	ghost.flip_h = flip_h
 	ghost.position = at
 	ghost.modulate = Color(0.55, 0.95, 1.0, 0.48)

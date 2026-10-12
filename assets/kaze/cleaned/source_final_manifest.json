@@ -1,0 +1,521 @@
+{
+  "project": "Kaze / Momentum Fractured",
+  "pass": "Final technical cleanup candidate",
+  "engine": "Godot 4.6.1",
+  "source_archive": "original_handoff/Kaze_Sprite_Cleanup_Handoff.zip",
+  "source_policy": "source archive included unchanged; pixel corrections only, no newly generated replacement artwork",
+  "animation_sheets": [
+    {
+      "animation": "idle",
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "export_dimensions": [
+        2176,
+        724
+      ],
+      "frame_dimensions": [
+        272,
+        724
+      ],
+      "frames": 8,
+      "frame_boundaries": [
+        0,
+        272,
+        543,
+        814,
+        1086,
+        1358,
+        1629,
+        1900,
+        2172
+      ],
+      "pixel_fixes": [
+        {
+          "recolored_neutral_edge_pixels": 64,
+          "attenuated_weak_white_pixels": 5,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 106,
+          "attenuated_weak_white_pixels": 14,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 86,
+          "attenuated_weak_white_pixels": 9,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 91,
+          "attenuated_weak_white_pixels": 11,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 77,
+          "attenuated_weak_white_pixels": 8,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 112,
+          "attenuated_weak_white_pixels": 15,
+          "removed_small_component_pixels": 1
+        },
+        {
+          "recolored_neutral_edge_pixels": 81,
+          "attenuated_weak_white_pixels": 11,
+          "removed_small_component_pixels": 1
+        },
+        {
+          "recolored_neutral_edge_pixels": 106,
+          "attenuated_weak_white_pixels": 13,
+          "removed_small_component_pixels": 0
+        }
+      ],
+      "frame_visible_bounds": [
+        [
+          40,
+          223,
+          247,
+          590
+        ],
+        [
+          40,
+          224,
+          244,
+          591
+        ],
+        [
+          36,
+          224,
+          240,
+          590
+        ],
+        [
+          35,
+          224,
+          239,
+          590
+        ],
+        [
+          42,
+          242,
+          247,
+          590
+        ],
+        [
+          26,
+          229,
+          237,
+          591
+        ],
+        [
+          29,
+          226,
+          237,
+          591
+        ],
+        [
+          27,
+          227,
+          235,
+          591
+        ]
+      ],
+      "png": "revised_strips/kaze_idle_strip_cleaned_final.png",
+      "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "recommended_fps": 8,
+      "origin_pixels_in_frame": [
+        136,
+        362
+      ]
+    },
+    {
+      "animation": "run",
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "export_dimensions": [
+        2176,
+        724
+      ],
+      "frame_dimensions": [
+        272,
+        724
+      ],
+      "frames": 8,
+      "frame_boundaries": [
+        0,
+        272,
+        543,
+        814,
+        1086,
+        1358,
+        1629,
+        1900,
+        2172
+      ],
+      "pixel_fixes": [
+        {
+          "recolored_neutral_edge_pixels": 97,
+          "attenuated_weak_white_pixels": 10,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 52,
+          "attenuated_weak_white_pixels": 10,
+          "removed_small_component_pixels": 2
+        },
+        {
+          "recolored_neutral_edge_pixels": 90,
+          "attenuated_weak_white_pixels": 9,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 90,
+          "attenuated_weak_white_pixels": 9,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 104,
+          "attenuated_weak_white_pixels": 12,
+          "removed_small_component_pixels": 1
+        },
+        {
+          "recolored_neutral_edge_pixels": 76,
+          "attenuated_weak_white_pixels": 8,
+          "removed_small_component_pixels": 1
+        },
+        {
+          "recolored_neutral_edge_pixels": 95,
+          "attenuated_weak_white_pixels": 10,
+          "removed_small_component_pixels": 4
+        },
+        {
+          "recolored_neutral_edge_pixels": 110,
+          "attenuated_weak_white_pixels": 8,
+          "removed_small_component_pixels": 0
+        }
+      ],
+      "frame_visible_bounds": [
+        [
+          22,
+          236,
+          248,
+          491
+        ],
+        [
+          39,
+          247,
+          233,
+          491
+        ],
+        [
+          28,
+          239,
+          242,
+          491
+        ],
+        [
+          26,
+          247,
+          248,
+          492
+        ],
+        [
+          16,
+          232,
+          259,
+          491
+        ],
+        [
+          43,
+          236,
+          231,
+          491
+        ],
+        [
+          26,
+          235,
+          247,
+          491
+        ],
+        [
+          28,
+          239,
+          248,
+          491
+        ]
+      ],
+      "png": "revised_strips/kaze_run_strip_cleaned_final.png",
+      "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "recommended_fps": 12,
+      "origin_pixels_in_frame": [
+        136,
+        362
+      ]
+    },
+    {
+      "animation": "combat",
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "export_dimensions": [
+        2176,
+        724
+      ],
+      "frame_dimensions": [
+        272,
+        724
+      ],
+      "frames": 8,
+      "frame_boundaries": [
+        0,
+        272,
+        543,
+        814,
+        1086,
+        1358,
+        1629,
+        1900,
+        2172
+      ],
+      "pixel_fixes": [
+        {
+          "recolored_neutral_edge_pixels": 66,
+          "attenuated_weak_white_pixels": 7,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 64,
+          "attenuated_weak_white_pixels": 51,
+          "removed_small_component_pixels": 7
+        },
+        {
+          "recolored_neutral_edge_pixels": 74,
+          "attenuated_weak_white_pixels": 19,
+          "removed_small_component_pixels": 16
+        },
+        {
+          "recolored_neutral_edge_pixels": 69,
+          "attenuated_weak_white_pixels": 13,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 75,
+          "attenuated_weak_white_pixels": 14,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 63,
+          "attenuated_weak_white_pixels": 40,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 62,
+          "attenuated_weak_white_pixels": 22,
+          "removed_small_component_pixels": 15
+        },
+        {
+          "recolored_neutral_edge_pixels": 64,
+          "attenuated_weak_white_pixels": 9,
+          "removed_small_component_pixels": 0
+        }
+      ],
+      "frame_visible_bounds": [
+        [
+          22,
+          252,
+          247,
+          498
+        ],
+        [
+          2,
+          236,
+          271,
+          498
+        ],
+        [
+          0,
+          240,
+          271,
+          498
+        ],
+        [
+          0,
+          243,
+          269,
+          498
+        ],
+        [
+          20,
+          251,
+          272,
+          498
+        ],
+        [
+          0,
+          239,
+          271,
+          498
+        ],
+        [
+          0,
+          247,
+          271,
+          497
+        ],
+        [
+          0,
+          271,
+          251,
+          498
+        ]
+      ],
+      "png": "revised_strips/kaze_combat_strip_cleaned_final.png",
+      "sha256": "c6fd8b052cb08302525b3b7ca74c6a0e7695859cce080b369d7ddb50162eeafc",
+      "recommended_fps": 12,
+      "origin_pixels_in_frame": [
+        136,
+        362
+      ]
+    },
+    {
+      "animation": "traversal",
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "export_dimensions": [
+        2176,
+        724
+      ],
+      "frame_dimensions": [
+        272,
+        724
+      ],
+      "frames": 8,
+      "frame_boundaries": [
+        0,
+        272,
+        543,
+        814,
+        1086,
+        1358,
+        1629,
+        1900,
+        2172
+      ],
+      "pixel_fixes": [
+        {
+          "recolored_neutral_edge_pixels": 53,
+          "attenuated_weak_white_pixels": 10,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 51,
+          "attenuated_weak_white_pixels": 11,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 69,
+          "attenuated_weak_white_pixels": 6,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 64,
+          "attenuated_weak_white_pixels": 11,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 45,
+          "attenuated_weak_white_pixels": 9,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 78,
+          "attenuated_weak_white_pixels": 13,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 109,
+          "attenuated_weak_white_pixels": 14,
+          "removed_small_component_pixels": 0
+        },
+        {
+          "recolored_neutral_edge_pixels": 52,
+          "attenuated_weak_white_pixels": 4,
+          "removed_small_component_pixels": 6
+        }
+      ],
+      "frame_visible_bounds": [
+        [
+          34,
+          315,
+          219,
+          510
+        ],
+        [
+          16,
+          292,
+          213,
+          513
+        ],
+        [
+          5,
+          241,
+          271,
+          507
+        ],
+        [
+          0,
+          243,
+          256,
+          505
+        ],
+        [
+          35,
+          311,
+          252,
+          514
+        ],
+        [
+          25,
+          238,
+          271,
+          511
+        ],
+        [
+          0,
+          233,
+          271,
+          511
+        ],
+        [
+          0,
+          344,
+          254,
+          476
+        ]
+      ],
+      "png": "revised_strips/kaze_traversal_strip_cleaned_final.png",
+      "sha256": "88e8285eb027fba9148ef3345587ad2e360d614f46797b0beafcaaa16c44c153",
+      "recommended_fps": 12,
+      "origin_pixels_in_frame": [
+        136,
+        362
+      ]
+    }
+  ],
+  "provisional_fps": {
+    "idle": 8,
+    "run": 12,
+    "combat": 12,
+    "traversal": 12
+  },
+  "pivot_guidance": "The authored animation occupies different positions within cells. Begin with frame-center offset (136, 362); keep frame registration unchanged. Fine-tune stable feet/airborne pivot in Godot after animation playback. Do not auto-center each frame by its alpha bounding box.",
+  "review_status": "Needs artist and Godot agent review before integration"
+}

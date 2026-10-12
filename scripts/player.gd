@@ -51,10 +51,10 @@ func _ready():
 	shape.position.y = -30
 	add_child(shape)
 	add_child(sprite)
-	clips["idle"] = load("res://assets/web/kaze_idle_strip.png")
-	clips["run"] = load("res://assets/web/kaze_run_strip.png")
-	clips["attack"] = load("res://assets/web/kaze_combat_strip.png")
-	clips["traversal"] = load("res://assets/web/kaze_traversal_strip.png")
+	clips["idle"] = load("res://assets/kaze/cleaned/kaze_idle_strip.png")
+	clips["run"] = load("res://assets/kaze/cleaned/kaze_run_strip.png")
+	clips["attack"] = load("res://assets/kaze/cleaned/kaze_combat_strip.png")
+	clips["traversal"] = load("res://assets/kaze/cleaned/kaze_traversal_strip.png")
 func held(action): return Input.is_action_pressed(action) or touch.get(action, false)
 func press(action):
 	if action == "jump": jump_buffer = 0.16
@@ -173,9 +173,12 @@ func animate(dt):
 		var total = [0.36, 0.41, 0.57][combo]
 		pose = clampi(int((total - attack_time) / total * 8.0), 0, 7)
 	sprite.frame = pose if pose >= 0 else int(animation_clock / (0.16 if clip == "idle" else 0.08)) % sprite.hframes
-	sprite.scale = Vector2.ONE * 106.0 / tex.get_height()
+	var visual_scale = 80.0 / 368.0 if clip == "idle" else 0.24
+	sprite.scale = Vector2.ONE * visual_scale
+	var baseline = {"idle": 591.0, "run": 491.0, "attack": 498.0, "traversal": 510.0}[clip]
+	sprite.offset = Vector2(0, tex.get_height() / 2.0 - baseline)
 	sprite.flip_h = facing < 0
-	sprite.position = Vector2(0, -53)
+	sprite.position = Vector2.ZERO
 	sprite.modulate.a = 0.45 if invulnerable > 0 and int(age * 18) % 2 == 0 else 1.0
 func damage(from: Vector2):
 	if invulnerable > 0: return false

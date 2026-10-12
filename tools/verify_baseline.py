@@ -10,6 +10,13 @@ manifest = json.loads((root / "assets/web/kaze_manifest.json").read_text())
 controller = (root / "scripts/player.gd").read_bytes()
 controller_text = controller.decode("utf-8")
 failures = []
+if "physics_sha256" in manifest:
+    physics = controller_text[controller_text.index("func _physics_process"):controller_text.index("func animate")]
+    if hashlib.sha256(physics.encode()).hexdigest() != manifest["physics_sha256"]:
+        failures.append("Approved physics process changed during sprite integration.")
+for item in manifest.get("previous_sprites", []):
+    if hashlib.sha256((root / item["path"]).read_bytes()).hexdigest() != item["sha256"]:
+        failures.append(f"Original artwork changed: {item['path']}")
 if hashlib.sha256(controller).hexdigest() != manifest["controller_sha256"]:
     failures.append("Controller differs from the approved baseline; review movement preservation before updating the contract.")
 for item in manifest["sprites"]:

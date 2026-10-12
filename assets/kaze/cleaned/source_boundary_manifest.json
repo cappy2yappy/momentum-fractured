@@ -1,0 +1,43 @@
+{
+  "package": "Kaze Sprite Boundary QA Pass",
+  "source_package": "Kaze_Sprite_Final_Cleanup_Pass.zip",
+  "created_on": "2026-10-12",
+  "notes": [
+    "This pass expands only combat and traversal frame canvases to reduce boundary contact and clipping risk.",
+    "Idle and run are unchanged because they passed the prior boundary check.",
+    "Artwork content was preserved from the accepted candidate package; this pass repacks frames into wider cells rather than redesigning poses.",
+    "If a pose was already truncated in the accepted source frame, that truncation cannot be restored without new art."
+  ],
+  "assets": [
+    {
+      "animation": "combat",
+      "project_mapping": "revised_strips/kaze_combat_strip_boundary_fixed.png",
+      "frame_count": 8,
+      "frame_width": 320,
+      "frame_height": 724,
+      "strip_width": 2560,
+      "strip_height": 724,
+      "recommended_fps": 12,
+      "pivot_guideline": {
+        "grounded_frames": "Use bottom-center-ish anchor, preserving prior gameplay alignment; X offset is widened by +24 px vs the accepted candidate package.",
+        "airborne_frames": "Use the same Y baseline logic as the accepted candidate; visual content preserved, only canvas widened."
+      },
+      "sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d"
+    },
+    {
+      "animation": "traversal",
+      "project_mapping": "revised_strips/kaze_traversal_strip_boundary_fixed.png",
+      "frame_count": 8,
+      "frame_width": 320,
+      "frame_height": 724,
+      "strip_width": 2560,
+      "strip_height": 724,
+      "recommended_fps": 12,
+      "pivot_guideline": {
+        "grounded_frames": "Use bottom-center-ish anchor, preserving prior gameplay alignment; X offset is widened by +24 px vs the accepted candidate package.",
+        "airborne_frames": "Use the same Y baseline logic as the accepted candidate; visual content preserved, only canvas widened."
+      },
+      "sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe"
+    }
+  ]
+}

@@ -12,7 +12,8 @@ func _run():
 	world.set_physics_process(false)
 	check(world.ROOM_COUNT >= 8, "Approved eight-room foundation remains present")
 	check(world.player.hp == 3 and not world.player.double_jump, "Original starting progression is intact")
-	check(FileAccess.get_sha256("res://scripts/player.gd") == "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d", "Approved controller is byte-for-byte unchanged")
+	var art_contract = JSON.parse_string(FileAccess.get_file_as_string("res://assets/web/kaze_manifest.json"))
+	check(FileAccess.get_sha256("res://scripts/player.gd") == art_contract["controller_sha256"], "Controller matches reviewed sprite integration contract")
 	var approved = JSON.parse_string(FileAccess.get_file_as_string("res://docs/APPROVED_GEOMETRY.json"))
 	for index in 8:
 		world.build_room(index)

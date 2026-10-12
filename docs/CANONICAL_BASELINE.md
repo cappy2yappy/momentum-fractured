@@ -1,5 +1,7 @@
 # Canonical Kaze development baseline
 
+October 12 sprite update: the creator authorized Final Cleanup idle/run and Boundary QA combat/traversal integration. Active bindings now use `assets/kaze/cleaned`; original approved image bytes remain preserved in `assets/web`. See [sprite integration](SPRITE_INTEGRATION_2026-10-12.md) for the visual-only controller checksum change and verification limits.
+
 Selected on 2026-10-12 by the creator following the Alpha 0.5.2 review and direct confirmation of the character sprite sheets.
 
 | Item | Identity |

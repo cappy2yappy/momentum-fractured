@@ -224,8 +224,9 @@ func select_loadout_at(at: Vector2):
 func draw_loadout():
 	draw_rect(Rect2(70, 150, 320, 470), Color("191824"))
 	var texture = world.player.clips["idle"]
-	var portrait_size = Vector2(texture.get_width() / 8.0, texture.get_height()) * (250.0 / texture.get_height())
-	draw_texture_rect_region(texture, Rect2(Vector2(230 - portrait_size.x / 2.0, 185), portrait_size), Rect2(0, 0, texture.get_width() / 8.0, texture.get_height()))
+	var portrait_region = Rect2(0, 223, texture.get_width() / 8.0, 368)
+	var portrait_size = portrait_region.size * (250.0 / portrait_region.size.y)
+	draw_texture_rect_region(texture, Rect2(Vector2(230 - portrait_size.x / 2.0, 185), portrait_size), portrait_region)
 	label(Vector2(118, 494), "KAZE / SILENT DISTRICT", 20)
 	label(Vector2(118, 535), "Health  %d / 3" % world.player.hp, 20)
 	label(Vector2(118, 575), "Relay sigils  %d / 3" % world.relay_fragments.size(), 18, Color("c9f29d"))

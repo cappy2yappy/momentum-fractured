@@ -1,11 +1,84 @@
 {
   "approved_on": "2026-10-12",
   "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
-  "controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
+  "controller_sha256": "5648d6b47d29e07d66ac92aee44222fcfed29cdabc3b830d02b8f7ecab84b466",
   "sprites": [
-    {"clip": "idle", "path": "assets/web/kaze_idle_strip.png", "sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762", "width": 3832, "height": 479, "frames": 8},
-    {"clip": "run", "path": "assets/web/kaze_run_strip.png", "sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80", "width": 3280, "height": 410, "frames": 8},
-    {"clip": "attack", "path": "assets/web/kaze_combat_strip.png", "sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b", "width": 3736, "height": 467, "frames": 8},
-    {"clip": "traversal", "path": "assets/web/kaze_traversal_strip.png", "sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751", "width": 4008, "height": 501, "frames": 8}
-  ]
+    {
+      "clip": "idle",
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "width": 2176,
+      "height": 724,
+      "frames": 8,
+      "ground_baseline": 591,
+      "visual_scale": 0.21739130434782608
+    },
+    {
+      "clip": "run",
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "width": 2176,
+      "height": 724,
+      "frames": 8,
+      "ground_baseline": 491,
+      "visual_scale": 0.24
+    },
+    {
+      "clip": "attack",
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+      "width": 2560,
+      "height": 724,
+      "frames": 8,
+      "ground_baseline": 498,
+      "visual_scale": 0.24
+    },
+    {
+      "clip": "traversal",
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+      "width": 2560,
+      "height": 724,
+      "frames": 8,
+      "ground_baseline": 510,
+      "visual_scale": 0.24
+    }
+  ],
+  "previous_sprites": [
+    {
+      "clip": "idle",
+      "path": "assets/web/kaze_idle_strip.png",
+      "sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762",
+      "width": 3832,
+      "height": 479,
+      "frames": 8
+    },
+    {
+      "clip": "run",
+      "path": "assets/web/kaze_run_strip.png",
+      "sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80",
+      "width": 3280,
+      "height": 410,
+      "frames": 8
+    },
+    {
+      "clip": "attack",
+      "path": "assets/web/kaze_combat_strip.png",
+      "sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b",
+      "width": 3736,
+      "height": 467,
+      "frames": 8
+    },
+    {
+      "clip": "traversal",
+      "path": "assets/web/kaze_traversal_strip.png",
+      "sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751",
+      "width": 4008,
+      "height": 501,
+      "frames": 8
+    }
+  ],
+  "previous_controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
+  "physics_sha256": "5d5f5f4084bc8a23f49f692004e92c8fbdbabd92d3434279167e3c895dc65eda",
+  "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes."
 }
