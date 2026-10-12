@@ -209,6 +209,7 @@ func _build_player() -> void:
 	player.name = "Kaze"
 	player.position = Vector2(105, 625)
 	add_child(player)
+	player.died.connect(_on_player_died)
 	GameState.apply_player_state(player)
 	var camera := Camera2D.new()
 	camera.position = Vector2(640, 360)
@@ -227,6 +228,16 @@ func _build_spawn_points() -> void:
 		if source_number > room_index:
 			spawn_position = Vector2(1175, EXIT_HEIGHTS[room_index])
 		_add_spawn_marker(spawn_points, ROOM_GRAPH.entry_marker_from(source_room_id), spawn_position)
+
+
+func _on_player_died() -> void:
+	SceneNavigator.respawn_from_checkpoint()
+
+
+func _physics_process(_delta: float) -> void:
+	var player := get_node_or_null("Kaze") as Node2D
+	if player and not Rect2(-160, -160, 1600, 1040).has_point(player.global_position):
+		player.call("die")
 
 
 func _add_spawn_marker(parent: Node2D, marker_name: String, marker_position: Vector2) -> void:

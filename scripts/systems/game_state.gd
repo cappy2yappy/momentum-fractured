@@ -27,6 +27,8 @@ var cells: int = 0
 var combo_count: int = 0
 var abilities_unlocked: Array[String] = []
 var visited_rooms: Array[String] = []
+var discovered_gates: Array[String] = []
+var opened_gates: Array[String] = []
 var loaded_from_disk: bool = false
 
 var player_health: float = 100.0
@@ -62,6 +64,8 @@ func _set_defaults() -> void:
 	combo_count = 0
 	abilities_unlocked.assign(BASELINE_ABILITIES)
 	visited_rooms.clear()
+	discovered_gates.clear()
+	opened_gates.clear()
 
 
 func _emit_runtime_signals() -> void:
@@ -83,6 +87,28 @@ func visit_room(room_id: String) -> void:
 
 func has_visited_room(room_id: String) -> bool:
 	return room_id in visited_rooms
+
+
+func discover_gate(gate_id: String) -> void:
+	if gate_id.is_empty() or gate_id in discovered_gates:
+		return
+	discovered_gates.append(gate_id)
+	emit_signal("map_changed")
+	save_to_disk()
+
+
+func is_gate_open(gate_id: String) -> bool:
+	return not gate_id.is_empty() and gate_id in opened_gates
+
+
+func open_gate(gate_id: String) -> void:
+	if gate_id.is_empty() or is_gate_open(gate_id):
+		return
+	if gate_id not in discovered_gates:
+		discovered_gates.append(gate_id)
+	opened_gates.append(gate_id)
+	emit_signal("map_changed")
+	save_to_disk()
 
 
 func is_room_cleared(room_id: String) -> bool:
@@ -225,6 +251,8 @@ func get_debug_snapshot() -> Dictionary:
 		"combo_count": combo_count,
 		"abilities_unlocked": abilities_unlocked,
 		"visited_rooms": visited_rooms,
+		"discovered_gates": discovered_gates,
+		"opened_gates": opened_gates,
 		"loaded_from_disk": loaded_from_disk,
 	}
 
@@ -247,6 +275,8 @@ func save_to_disk() -> void:
 		"pending_spawn_marker": pending_spawn_marker,
 		"abilities_unlocked": abilities_unlocked,
 		"visited_rooms": visited_rooms,
+		"discovered_gates": discovered_gates,
+		"opened_gates": opened_gates,
 	}
 	file.store_string(JSON.stringify(payload))
 
@@ -280,6 +310,12 @@ func load_from_disk() -> bool:
 	visited_rooms.clear()
 	for room_id in data.get("visited_rooms", []):
 		visited_rooms.append(String(room_id))
+	discovered_gates.clear()
+	for gate_id in data.get("discovered_gates", []):
+		discovered_gates.append(String(gate_id))
+	opened_gates.clear()
+	for gate_id in data.get("opened_gates", []):
+		opened_gates.append(String(gate_id))
 
 	player_health = clampf(player_health, 0.0, player_max_health)
 	checkpoint_health = clampf(checkpoint_health, 0.0, checkpoint_max_health)

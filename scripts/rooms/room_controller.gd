@@ -29,6 +29,16 @@ var is_cleared: bool = false
 var _player: Node = null
 
 
+func _physics_process(_delta: float) -> void:
+	if not is_instance_valid(_player) or not (_player is Node2D):
+		return
+	var camera := get_node_or_null("RoomCamera")
+	if camera and camera.get("room_bounds") is Rect2:
+		var bounds: Rect2 = camera.get("room_bounds")
+		if not bounds.grow(160.0).has_point(_player.global_position) and _player.has_method("die"):
+			_player.call("die")
+
+
 func _ready() -> void:
 	GameState.visit_room(room_id)
 	if build_default_environment:

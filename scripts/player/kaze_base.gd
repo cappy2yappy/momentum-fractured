@@ -26,6 +26,8 @@ const MOVE_ACCEL := 2850.0
 const AIR_ACCEL := 1750.0
 const GROUND_DECEL := 3300.0
 const AIR_DECEL := 520.0
+const MOMENTUM_AIR_DRAG := 90.0
+const DAMAGE_INVINCIBILITY := 0.5
 
 # JUMP
 const JUMP_VELOCITY := -585.0
@@ -80,6 +82,7 @@ var is_dead := false
 var _was_on_floor := false
 var attack_cooldown_timer := 0.0
 var is_attacking := false
+var attack_animation_timer := 0.0
 var combo_reset_timer := 0.0
 var combo_step := 0
 var grapple_active := false
@@ -94,6 +97,7 @@ var afterimage_timer := 0.0
 var current_kunai_element := 0
 var kunai_elements: Array[String] = ["wind", "fire", "electric"]
 var in_water := false
+var damage_invincibility_timer := 0.0
 var water_surfaces: Dictionary = {}
 const SWIM_SPEED := 230.0
 const SWIM_VERTICAL_SPEED := 180.0
@@ -121,6 +125,7 @@ func _ready() -> void:
 			health.connect("died", on_health_died)
 		emit_signal("health_changed", get_current_health(), get_max_health())
 	_was_on_floor = is_on_floor()
+	$Hurtbox.hit_received.connect(_on_melee_hit_received)
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -132,11 +137,14 @@ func _physics_process(delta: float) -> void:
 	dash_buffer_timer = max(0.0, dash_buffer_timer - delta)
 	dash_cooldown_timer = max(0.0, dash_cooldown_timer - delta)
 	attack_cooldown_timer = max(0.0, attack_cooldown_timer - delta)
+	attack_animation_timer = maxf(0.0, attack_animation_timer - delta)
+	is_attacking = attack_animation_timer > 0.0
 	combo_reset_timer = max(0.0, combo_reset_timer - delta)
 	kunai_cooldown_timer = max(0.0, kunai_cooldown_timer - delta)
 	guard_veil_timer = max(0.0, guard_veil_timer - delta)
 	guard_veil_cooldown_timer = max(0.0, guard_veil_cooldown_timer - delta)
 	afterimage_timer = max(0.0, afterimage_timer - delta)
+	damage_invincibility_timer = maxf(0.0, damage_invincibility_timer - delta)
 	tether_visual_time += delta
 
 	if Input.is_action_just_pressed("guard_veil") and GameState.has_ability("guard_veil") and guard_veil_cooldown_timer <= 0.0:
@@ -183,13 +191,7 @@ func _physics_process(delta: float) -> void:
 	if sprite:
 		sprite.flip_h = facing_dir < 0
 	
-	if input_dir != 0:
-		var accel := SWIM_ACCEL if in_water else (MOVE_ACCEL if is_on_floor() else AIR_ACCEL)
-		var move_speed := SWIM_SPEED if in_water else MAX_MOVE_SPEED
-		velocity.x = move_toward(velocity.x, input_dir * move_speed, accel * delta)
-	else:
-		var decel := SWIM_DRAG if in_water else (GROUND_DECEL if is_on_floor() else AIR_DECEL)
-		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
+	_apply_horizontal_movement(input_dir, delta)
 	
 	# COYOTE TIME
 	var on_floor_now := is_on_floor()
@@ -275,10 +277,30 @@ func _check_wall_touch() -> void:
 			elif collision.get_normal().x < -0.5:
 				is_touching_wall = 1
 
+
+func _apply_horizontal_movement(input_dir: float, delta: float) -> void:
+	# Swinging is governed by tangent pumping, not run-speed acceleration.
+	if grapple_active and not in_water:
+		return
+	var airborne_momentum := not is_on_floor() and not in_water and absf(velocity.x) > MAX_MOVE_SPEED
+	if airborne_momentum and (is_zero_approx(input_dir) or signf(input_dir) == signf(velocity.x)):
+		velocity.x = move_toward(velocity.x, signf(velocity.x) * MAX_MOVE_SPEED, MOMENTUM_AIR_DRAG * delta)
+	elif not is_zero_approx(input_dir):
+		var accel := SWIM_ACCEL if in_water else (MOVE_ACCEL if is_on_floor() else AIR_ACCEL)
+		velocity.x = move_toward(velocity.x, input_dir * (SWIM_SPEED if in_water else MAX_MOVE_SPEED), accel * delta)
+	else:
+		var decel := SWIM_DRAG if in_water else (GROUND_DECEL if is_on_floor() else AIR_DECEL)
+		velocity.x = move_toward(velocity.x, 0.0, decel * delta)
+
 func die() -> void:
 	if is_dead:
 		return
 	is_dead = true
+	_release_grapple()
+	is_dashing = false
+	is_attacking = false
+	attack_animation_timer = 0.0
+	hitbox.deactivate()
 	visible = false
 	emit_signal("died")
 
@@ -299,6 +321,15 @@ func respawn(pos: Vector2) -> void:
 	water_surfaces.clear()
 	in_water = false
 	guard_veil_timer = 0.0
+	damage_invincibility_timer = 0.0
+	attack_cooldown_timer = 0.0
+	combo_reset_timer = 0.0
+	combo_step = 0
+	is_attacking = false
+	attack_animation_timer = 0.0
+	dash_buffer_timer = 0.0
+	hitbox.deactivate()
+	$Hurtbox.invincibility_timer = 0.0
 	modulate = Color.WHITE
 	if health:
 		health.is_dead = false
@@ -313,6 +344,7 @@ func _perform_attack() -> void:
 		return
 	
 	is_attacking = true
+	attack_animation_timer = ATTACK_HIT_WINDOW
 	attack_cooldown_timer = ATTACK_COOLDOWN
 	combo_step = combo_step + 1 if combo_reset_timer > 0.0 else 1
 	if combo_step > 3:
@@ -337,16 +369,12 @@ func _perform_attack() -> void:
 	hitbox.activate(ATTACK_HIT_WINDOW, true)
 	AudioManager.play_sfx("attack_swing")
 	
-	# Reset attacking flag after a short delay
-	await get_tree().create_timer(0.15).timeout
-	is_attacking = false
 
 
-func take_damage(amount: float) -> void:
-	if is_dead or amount <= 0.0:
-		return
-	if is_guard_veil_active():
-		return
+func take_damage(amount: float) -> bool:
+	if is_dead or amount <= 0.0 or is_dashing or is_guard_veil_active() or damage_invincibility_timer > 0.0:
+		return false
+	damage_invincibility_timer = DAMAGE_INVINCIBILITY
 
 	GameState.reset_combo()
 
@@ -354,6 +382,12 @@ func take_damage(amount: float) -> void:
 		health.take_damage(amount)
 	else:
 		die()
+	return true
+
+
+func _on_melee_hit_received(_damage: float, knockback: Vector2, _hitbox: Area2D) -> void:
+	if not is_dead:
+		velocity = knockback
 
 
 func set_health_values(current: float, max_health_value: float) -> void:
@@ -456,7 +490,7 @@ func _start_grapple() -> void:
 
 
 func _try_start_grapple(aim_point: Vector2) -> bool:
-	if _is_fully_submerged():
+	if is_dashing or is_dead or _is_fully_submerged():
 		return false
 	if not GameState.has_ability(GameState.ABILITY_TETHER):
 		return false
@@ -577,6 +611,8 @@ func _can_throw_current_kunai() -> bool:
 func _begin_dash() -> void:
 	if not GameState.has_ability(GameState.ABILITY_DASH):
 		return
+	# Dash deliberately releases the rope; it cannot stretch an active tether.
+	_release_grapple()
 	var incoming_speed_in_dash_direction := velocity.x * float(facing_dir)
 	dash_velocity_x = float(facing_dir) * maxf(DASH_SPEED, incoming_speed_in_dash_direction)
 	velocity.x = dash_velocity_x

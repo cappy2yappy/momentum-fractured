@@ -33,15 +33,16 @@ func _input(event: InputEvent) -> void:
 
 
 func open_menu() -> void:
-	_is_open = true
-	visible = true
-	get_tree().paused = true
+	get_parent().call("set_overlay", "pause")
 
 
 func close_menu() -> void:
-	_is_open = false
-	visible = false
-	get_tree().paused = false
+	get_parent().call("set_overlay", "")
+
+
+func set_open_state(open: bool) -> void:
+	_is_open = open
+	visible = open
 
 
 func _on_save_pressed() -> void:

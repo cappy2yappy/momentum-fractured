@@ -52,7 +52,11 @@ func _take_hit(hitbox: Area2D) -> void:
 	var damage := float(hitbox.get("damage"))
 	var knockback: Vector2 = hitbox.get("knockback") * knockback_multiplier
 
-	if health and health.has_method("take_damage"):
+	# The player owns damage immunity across melee, projectiles and hazards.
+	if owner and owner.is_in_group("player") and owner.has_method("take_damage"):
+		if not bool(owner.call("take_damage", damage)):
+			return
+	elif health and health.has_method("take_damage"):
 		health.call("take_damage", damage)
 
 	emit_signal("hit_received", damage, knockback, hitbox)

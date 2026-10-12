@@ -54,3 +54,7 @@ This playtest build is not Apple-notarized. Control-click the app and choose Ope
 - Added swimming and canal regression checks to the Windows/macOS build workflow.
 
 This remains a parity-slice candidate, not an accepted alpha. Current-jet art is provisional. Canonical character art, the Fire return shortcut, underwater presentation, direct playtesting and device-specific 60 FPS validation remain open. Existing smoke/scene shutdown may emit ObjectDB leak warnings.
+
+## 2026-10-11 development update
+
+Continues the latest parity-validation branch without restarting or downgrading the project. Fixes swing momentum damping, both tether/dash interactions, shared damage protection/knockback, overlay pause ownership, deferred spawn restoration, generated-route death and out-of-bounds recovery. Adds authored Fire Return Intake and a persistent optional surface shortcut with map indicators. Eight regression suites pass; Windows 4.6.1 export is available. Live web benchmark comparison, final art, audio shutdown warnings and campaign acceptance remain open. Full evidence and next task: PROJECT_STATUS.md.

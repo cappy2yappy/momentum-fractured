@@ -50,6 +50,7 @@ const CONNECTIONS := [
 	{"from": "room_10_route", "to": "room_11_route", "bidirectional": true},
 	{"from": "room_11_route", "to": "room_12_route", "bidirectional": true},
 	{"from": "room_12_route", "to": "room_05_route", "bidirectional": false},
+	{"from": "room_09_route", "to": "room_05_route", "bidirectional": true, "gate_id": "fire_return", "element": "fire"},
 ]
 
 

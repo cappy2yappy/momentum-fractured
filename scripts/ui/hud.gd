@@ -14,6 +14,9 @@ extends CanvasLayer
 @onready var _character_panel: PanelContainer = $CharacterPanel
 @onready var _character_stats: Label = $CharacterPanel/Content/Stats
 @onready var _map_overlay: PanelContainer = $MapOverlay
+@onready var _pause_menu: Control = $PauseMenu
+
+var active_overlay := ""
 
 var _player: Node = null
 var _notification_tween: Tween = null
@@ -39,13 +42,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("character_menu"):
-		_map_overlay.visible = false
-		_character_panel.visible = not _character_panel.visible
-		get_tree().paused = _character_panel.visible
+		toggle_overlay("loadout")
 	if Input.is_action_just_pressed("map"):
-		_character_panel.visible = false
-		_map_overlay.visible = not _map_overlay.visible
-		get_tree().paused = _map_overlay.visible
+		toggle_overlay("map")
 	_update_ability_status()
 	if _combo_hide_timer <= 0.0:
 		return
@@ -53,6 +52,19 @@ func _process(delta: float) -> void:
 	_combo_hide_timer = maxf(0.0, _combo_hide_timer - delta)
 	if _combo_hide_timer <= 0.0:
 		_combo_label.visible = false
+
+
+func toggle_overlay(overlay: String) -> void:
+	set_overlay("" if active_overlay == overlay else overlay)
+
+
+func set_overlay(overlay: String) -> void:
+	# One owner keeps visible menus and gameplay pause in agreement.
+	active_overlay = overlay if overlay in ["map", "loadout", "pause"] else ""
+	_map_overlay.visible = active_overlay == "map"
+	_character_panel.visible = active_overlay == "loadout"
+	_pause_menu.call("set_open_state", active_overlay == "pause")
+	get_tree().paused = not active_overlay.is_empty()
 
 
 func _update_ability_status() -> void:
@@ -67,6 +79,8 @@ func _update_ability_status() -> void:
 	if _player.has_method("get_guard_veil_ratio"):
 		veil_ratio = float(_player.call("get_guard_veil_ratio"))
 	var veil_text := "READY" if veil_ratio >= 0.999 else "%d%%" % roundi(veil_ratio * 100.0)
+	if not GameState.has_ability("guard_veil"):
+		veil_text = "LOCKED"
 	_ability_status.text = "TETHER: Q / MMB   KUNAI: F [%s]\nVEIL: C [%s]   MAP: M   LOADOUT: I" % [element.to_upper(), veil_text]
 	_character_stats.text = "HP %d / %d\n\nTRAVERSAL\nWind Tether — Q or Middle Mouse\nMomentum Dash — Shift\n\nEQUIPPED KUNAI\n%s\n\nGUARD VEIL\n%s" % [roundi(GameState.player_health), roundi(GameState.player_max_health), element.capitalize(), veil_text]
 

@@ -2,10 +2,10 @@
 
 **Project:** Momentum: Fractured / Kaze
 **Baseline branch:** `codex/web-parity-restoration`
-**Baseline commit:** `298faee`
+**Baseline commit:** `2ec0a1d` (inherited); current development changes recorded in PROJECT_STATUS.md
 **Canonical benchmark:** [Rush Line web build](https://rush-line.thacap.chatgpt.site)
 **Audit type:** Static scene, script, progression, map, and test review
-**Last updated:** September 20, 2026
+**Last updated:** October 11, 2026
 
 ## Purpose
 
@@ -26,7 +26,7 @@ The current recovered branch restores important systems, but rooms 5–12 remain
 | Area | Current Godot implementation | Status | Confirmed gaps | Playtest-required questions | Priority |
 |---|---|---|---|---|---|
 | Movement | Run, variable jump, wall jump, wall slide, coyote time, jump buffering, ground/air acceleration | Partial | No dedicated movement test room or recorded reference metrics. Controller only reads horizontal movement outside water. Action-cancel rules are not formally defined. | Does acceleration, reversal, short/full jump, apex, landing, and wall-jump response match the web build? | P0 |
-| Dash | Ground/air dash, one air charge, cooldown, cyan afterimages, ability gating, and preserved greater incoming horizontal/vertical momentum | Partial | The P0 momentum snap and gating regressions are fixed and covered by smoke tests. Dash still uses facing direction rather than directional aiming, and no dash invulnerability is implemented although the GDD promises it. | Is the dash distance, duration, recovery, afterimage density, direction, and cancel behavior correct? Should dash retain web-build invulnerability? | P0 |
+| Dash | Ground/air dash, one air charge, cooldown, cyan afterimages, ability gating, and preserved greater incoming horizontal/vertical momentum | Partial | The P0 momentum snap and gating regressions are fixed and covered by smoke tests. Dash still uses facing direction rather than directional aiming, and now grants damage immunity through the active dash; both tether/dash directions have regression coverage. | Is the dash distance, duration, recovery, afterimage density, direction, and cancel behavior correct? Should dash retain web-build invulnerability? | P0 |
 | Combat | Three-step light combo, facing-aware restartable 0.15-second hit windows, knockback, combo counter, Echo melee, Drone ranged | Partial | Fresh combo windows and single health-state signaling are now regression-tested. Only two true enemy archetypes exist. Bosses are enlarged Echo instances. Heavy attack, dodge, parry, aerial attack, and dash-strike described in the GDD are absent. | Does every visible player and enemy strike register exactly once during live collisions? Are active frames readable? Are damage, recovery, hitstun, and knockback comparable to the web build? | P0 |
 | Wind Tether | Q/Middle Mouse hold, authored anchors, 410-pixel range, 120-pixel aim acceptance, obstruction checks, collision-safe constraint correction, tangent pumping, momentum release, animated energy strand | Partial | The confirmed through-wall, off-target, and direct-position correction defects are fixed and covered by smoke tests. Final feel still depends on authored-room playtesting. | Is 120-pixel aim acceptance comfortable at gameplay scale? Does the correction cap avoid visible rope stretch at extreme speed? Does pumping build momentum naturally in both directions? | P0 |
 | Water | Water Areas in rooms 8 and 10, reduced gravity, drag, fall-speed cap, Space swim stroke | Partial | Each water area is a shallow 150-pixel strip at the bottom of a one-screen room. There is no descend input, directional swim, stable buoyancy behavior, water animation, or meaningful aquatic route. | Can Kaze descend, hover, surface, and exit consistently? Which actions should work underwater? Does entering water at speed feel coherent? | P1 |
@@ -280,3 +280,7 @@ The authored loop is ready to propagate only when:
 - Gate state, visited rooms, checkpoint state, abilities, and cleared encounters survive save/load.
 - Manual parity captures show acceptable movement, dash, tether, combat, and water behavior against the web benchmark.
 - The creative director approves room density, navigation clarity, game feel, and presentation.
+
+## October 11 verification update
+
+The five-room loop now has authored Room 9 / Fire Return Intake. Swing/release momentum, both dash/tether transitions, unified damage immunity, real melee knockback, exclusive overlay pause, persistent Fire gate/map state, actual reciprocal portal transitions and checkpoint/out-of-bounds recovery are tested. Source rendering and Windows export are verified. The authenticated benchmark was inaccessible for live comparison; all subjective parity and final-art acceptance remains open. See PROJECT_STATUS.md for branch audit, exact tests, known diagnostics and the next task.

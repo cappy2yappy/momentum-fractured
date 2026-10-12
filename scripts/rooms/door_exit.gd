@@ -12,6 +12,7 @@ class_name DoorExit
 @export var requires_room_clear: bool = false
 @export var room_id: String = ""
 @export var transition_cooldown: float = 0.3
+@export var required_gate_id: String = ""
 
 var is_locked: bool = false
 var _cooldown_timer: float = 0.0
@@ -25,6 +26,7 @@ func _ready() -> void:
 	if requires_room_clear and not room_id.is_empty():
 		is_locked = not GameState.is_room_cleared(room_id)
 	_update_label()
+	GameState.map_changed.connect(_update_label)
 
 
 func _process(delta: float) -> void:
@@ -48,6 +50,8 @@ func refresh_locked_from_state() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if is_locked:
 		return
+	if not required_gate_id.is_empty() and not GameState.is_gate_open(required_gate_id):
+		return
 	if _cooldown_timer > 0.0:
 		return
 	if target_scene_path.is_empty():
@@ -64,4 +68,6 @@ func _update_label() -> void:
 		return
 
 	var state_text := locked_text if is_locked else unlocked_text
+	if not required_gate_id.is_empty() and not GameState.is_gate_open(required_gate_id):
+		state_text = "FIRE SEAL • F + Fire Kunai"
 	_label.text = "%s\n%s" % [door_prompt_text, state_text]

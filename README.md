@@ -2,7 +2,9 @@
 
 **Genre:** 2D Metroidvania Action-Platformer  
 **Engine:** Godot 4.6.1
-**Status:** Alpha 0.8 playtest candidate
+**Status:** Development candidate — core Alpha 0.5 gap closure; benchmark acceptance pending
+
+See [PROJECT_STATUS.md](PROJECT_STATUS.md) for the current branch, verified tests, limitations and next task. Existing Alpha 0.8 version metadata is retained.
 
 Metroid-style room-to-room combat in a shattered Tokyo metropolis.
 
@@ -12,10 +14,10 @@ Metroid-style room-to-room combat in a shattered Tokyo metropolis.
 
 **Alpha 0.8 Candidate**
 - 12 connected playable rooms across the district, undercroft, and conservatory route
-- Two boss milestones: Storm Reliquary and The Borrowed Face
+- Five authored parity rooms (5–9); remaining campaign/boss milestones are prototypes
 - Momentum Wind Tether with visible rope and grapple anchors
 - Dash afterimages, swimming physics, and vertical traversal rooms
-- Wind, Fire, and Electric kunai with progression-locked elemental seals
+- Wind, Fire, and Electric kunai; persistent optional Fire return shortcut between Rooms 9 and 5
 - Guard Veil boss reward and character/loadout screen
 - Checkpoint save/load, persistent room clears, combat HUD, and room transitions
 
@@ -41,6 +43,8 @@ godot project.godot
 - **Mouse Wheel** - Cycle unlocked kunai elements
 - **C** - Guard Veil after it is unlocked
 - **I** - Character/loadout screen
+- **M** - Survey map
+- **E** - Claim the cleared Fire Reliquary
 - **Esc** - Pause menu
 
 ### Debug Hotkeys:

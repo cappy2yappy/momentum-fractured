@@ -31,11 +31,32 @@ func _draw() -> void:
 	for connection in ROOM_GRAPH.CONNECTIONS:
 		var from_id: String = connection.from
 		var to_id: String = connection.to
+		if connection.has("gate_id"):
+			continue
 		if not GameState.has_visited_room(from_id) or not GameState.has_visited_room(to_id):
 			continue
 		var from_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[from_id]) * step + room_size * 0.5
 		var to_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[to_id]) * step + room_size * 0.5
 		draw_line(from_center, to_center, Color(0.23, 0.68, 0.77, 0.72), 3.0 if not compact else 1.4)
+		if not connection.bidirectional:
+			var direction := (to_center - from_center).normalized()
+			var tip := from_center.lerp(to_center, 0.65)
+			var arrow_size := 4.0 if compact else 10.0
+			draw_line(tip, tip - direction.rotated(0.6) * arrow_size, Color.CYAN, 2.0)
+			draw_line(tip, tip - direction.rotated(-0.6) * arrow_size, Color.CYAN, 2.0)
+
+	# Show the discovered Fire return even before its destination is explored.
+	for connection in ROOM_GRAPH.CONNECTIONS:
+		var gate_id := String(connection.get("gate_id", ""))
+		if gate_id.is_empty() or gate_id not in GameState.discovered_gates:
+			continue
+		var from_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[connection.from]) * step + room_size * 0.5
+		var to_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[connection.to]) * step + room_size * 0.5
+		var color := Color(0.4, 1.0, 0.6) if GameState.is_gate_open(gate_id) else Color(1.0, 0.4, 0.12)
+		var offset := Vector2(0, 14 if compact else 34)
+		var route := PackedVector2Array([from_center, from_center + offset, to_center + offset, to_center])
+		draw_polyline(route, color, 2.0 if compact else 4.0)
+		draw_circle(from_center.lerp(to_center, 0.5) + offset, 3.0 if compact else 7.0, color)
 
 	for key in ROOM_GRAPH.ROOM_POSITIONS:
 		var room_id := String(key)
@@ -53,4 +74,4 @@ func _draw() -> void:
 			draw_string(ThemeDB.fallback_font, room_rect.position + Vector2(12, 22), room_number, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
 
 	if not compact:
-		draw_string(ThemeDB.fallback_font, Vector2(48, 288), "Cyan: current room    Blue: explored    M: close map", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color(0.64, 0.86, 0.90))
+		draw_string(ThemeDB.fallback_font, Vector2(48, 288), "Cyan: current / arrows: one-way   Orange: Fire seal   Green: open return", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(0.64, 0.86, 0.90))
