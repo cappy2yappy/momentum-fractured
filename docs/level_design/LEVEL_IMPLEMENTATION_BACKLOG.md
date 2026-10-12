@@ -4,7 +4,7 @@ Baseline: `codex/kaze-boundary-sprite-integration` at `0bf37e19ef3498386b133ed5d
 
 ## Approval checkpoint
 
-Design-only deliverables are complete for review. Do not implement major level/collision changes until creator design approval. Existing gameplay remains untouched. Preserve work on design/alpha-0.6-world-expansion; never merge main or overwrite MV/art branches. Integration should consume this branch's docs, not replace a newer controller with this baseline.
+Design-only deliverables are complete for review. Do not implement major level/collision changes until creator design approval. Existing gameplay remains untouched. Preserve work on design/alpha-0.6-world-expansion; never merge main or overwrite MV/art branches. Integration should consume this branch’s docs, not replace a newer controller with this baseline.
 
 | Order / priority | Task and owner | Depends on | Measurable acceptance |
 |---|---|---|---|
@@ -33,4 +33,3 @@ Each implementation PR should record source SHA, changed rooms/edges, movement c
 ## Scope exclusions
 
 No controller/combat/save edits, active scene edits or generated art in LD-01. No promise of five new/total keeper fights, swimming or complete web campaign parity. Expansion adds connected exploration; those broader systems require separate approved implementation ownership.
-

@@ -8,7 +8,7 @@ Initial pass changes documents only. Preserve approved original eight-room geome
 
 For every approved room pass: load both entrances, verify arrivals settle on solid ground, traverse at baseline and maximum MV-01 configurations, check secrets/gates, then compare checkpoint/transition/map behavior. Do not use greater enemy counts as a substitute for layout quality. Future ranged/armored roles depend on combat ownership; use existing guards until approved.
 
-## R00 CANAL HAVEN - Canal mooring haven
+## R00 CANAL HAVEN — Canal mooring haven
 
 **Visual/geometry intent:** Use stone quay, mooring posts and distant sluice silhouettes. Mark upper ledge as an optional future return overlook. Keep the starting shrine lane safe.
 
@@ -18,7 +18,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R01 LANTERN MARKET - Abandoned market balconies
+## R01 LANTERN MARKET — Abandoned market balconies
 
 **Visual/geometry intent:** Differentiate awnings and lantern beams from platform lips; stage the required guard before reward visibility, with side guards on bounded balcony lanes.
 
@@ -28,7 +28,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R02 FLOODED CISTERN - Sluice reservoir
+## R02 FLOODED CISTERN — Sluice reservoir
 
 **Visual/geometry intent:** Use depth marks and spillway arches. Enclose Wind letter alcove with ceiling and side walls; check its gate flag at reward collection.
 
@@ -38,7 +38,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R03 ECHO SHRINE - Tether reliquary
+## R03 ECHO SHRINE — Tether reliquary
 
 **Visual/geometry intent:** Introduce a supported wind bell over the practice route and a quiet landing at the shrine. Explain held Q and airborne attachment.
 
@@ -48,7 +48,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R04 BROKEN SPAN - Collapsed aqueduct
+## R04 BROKEN SPAN — Collapsed aqueduct
 
 **Visual/geometry intent:** Use broken structural beams supporting rings; move pressure guards away from initial attachment and landing regions.
 
@@ -58,7 +58,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R05 ASCENT TOWER - Relay tower interior
+## R05 ASCENT TOWER — Relay tower interior
 
 **Visual/geometry intent:** Add stacked masonry windows, cable risers and floor numbers; provide readable rest landings before each anchor.
 
@@ -68,7 +68,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R06 TIDE WARDEN - Warden forecourt
+## R06 TIDE WARDEN — Warden forecourt
 
 **Visual/geometry intent:** Separate arena silhouette from decorative battlements; preserve readable attack floor and retreat space.
 
@@ -78,7 +78,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R07 RELAY ARCHIVE - Archive machinery hall
+## R07 RELAY ARCHIVE — Archive machinery hall
 
 **Visual/geometry intent:** Make relay console, closed Electric seal and cable routing visibly causal.
 
@@ -88,7 +88,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R08 RELAY UNDERCROFT - Maintenance undercroft
+## R08 RELAY UNDERCROFT — Maintenance undercroft
 
 **Visual/geometry intent:** Use pipes, repair markings and shrine niche; keep sentinel on the wide lower floor.
 
@@ -98,7 +98,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R09 SIGNAL TERRACE - Signal roof terrace
+## R09 SIGNAL TERRACE — Signal roof terrace
 
 **Visual/geometry intent:** Use antenna silhouettes and wind-facing cloth, with railings visibly decorative where appropriate.
 
@@ -108,7 +108,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R10 SKYWORKS APPROACH - SkyWorks intake bridge
+## R10 SKYWORKS APPROACH — SkyWorks intake bridge
 
 **Visual/geometry intent:** Introduce turbine housings and distinct intake shutters; wind seal operates machinery visibly.
 
@@ -118,7 +118,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R11 STORM FOUNDRY - Powered foundry refuge
+## R11 STORM FOUNDRY — Powered foundry refuge
 
 **Visual/geometry intent:** Use dormant coils, insulated masonry and refuge shield canopy; isolate safe shrine from enemy lane.
 
@@ -128,7 +128,7 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
 
-## R12 KEEPER RELAY - Keeper relay chamber
+## R12 KEEPER RELAY — Keeper relay chamber
 
 **Visual/geometry intent:** Use central relay mast and noninteractive cable crown; preserve unobstructed pulse floor.
 
@@ -137,4 +137,3 @@ For every approved room pass: load both entrances, verify arrivals settle on sol
 **Developer specification:** retain current exits and pickups at audited coordinates; stage any new branch on a separate stable landing. Add environmental support to each anchor without adding collision inside its swing volume. Require bounded enemy territory or developer-approved lane implementation before moving guards toward platform ends. Keep arrival and first landing outside enemy attack ranges.
 
 **Acceptance:** room identity is distinguishable without its title; both original transitions and rewards remain usable with the original kit; all new locked rewards reject collection before their flag; player can reach a safe recovery landing after missing each new swing. New route is visible on mini-map/full map with its lock state.
-

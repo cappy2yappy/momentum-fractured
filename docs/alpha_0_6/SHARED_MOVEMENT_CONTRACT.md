@@ -2,16 +2,16 @@
 
 Baseline: `codex/kaze-boundary-sprite-integration` at `0bf37e19ef3498386b133ed5d41e32788c2609d6`. Static source audit; no new engine playthrough or measured MV-01 values claimed. Coordinates are world pixels, origin top-left, y increases down.
 
-## LD-01 proposal - NOT APPROVED BY MV-01
+## LD-01 proposal — NOT APPROVED BY MV-01
 
 No MV-01 measurements, recommendations or sign-off are present. This document records baseline observations and requests; it is not an instruction to replace the controller. LD owns layouts, supports, recovery and gated route intent. MV-01 owns mechanical recommendations and implementation within its authorization. Godot developer owns transition/geometry integration; QA owns recorded live acceptance. Creator approves the design checkpoint and any movement change.
 
 | Item | Verified baseline | Pending decision / evidence from MV-01 |
 |---|---|---|
 | Ground speed | walk400, run600 world px/s | permanent tier values, acceleration/braking and maximum combined speed |
-| Jump | impulse -900, gravity1800; variable release cut; wall jump (�480,-880) | measured tap/full/double/wall trajectories, air control and max envelopes at all tiers |
+| Jump | impulse -900, gravity1800; variable release cut; wall jump (±480,-880) | measured tap/full/double/wall trajectories, air control and max envelopes at all tiers |
 | Dash | facing horizontal920, duration0.18, cooldown0.58 | approved max/chain behavior, interaction with temporary bonus and swing release |
-| Attach | airborne; origin (0,-55); length80..400; facing x -100..400; y�-35 | longer range recommendation, minimum, selection, obstruction and retry rules |
+| Attach | airborne; origin (0,-55); length80..400; facing x -100..400; y≤-35 | longer range recommendation, minimum, selection, obstruction and retry rules |
 | Feedback | drawn proximity <520 from feet vs eligibility from origin | single truthful eligibility presentation, blocked/selected state |
 | Swing | gravity1800, pump130 in integrator; collision releases; attachment resets air_used | measured arc/clearance, released velocity and chaining behavior; rope LOS/wrapping decision |
 | Transitions | E portals reset velocity and tether | whether bonuses survive transitions; safe arrival/stopping envelope; no assumed cross-room carry |
@@ -47,4 +47,3 @@ For each baseline/permanent tier/temporary max/combined max, record engine/versi
 | MV-01 | Pending | no measured response received |
 | Godot developer / QA | Pending | no new levels implemented/tested |
 | Creator | Pending design checkpoint | major level changes intentionally not started |
-

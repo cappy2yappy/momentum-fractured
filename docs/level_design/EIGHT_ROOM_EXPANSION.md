@@ -4,17 +4,17 @@ Baseline: `codex/kaze-boundary-sprite-integration` at `0bf37e19ef3498386b133ed5d
 
 ## Scope and coherence
 
-Eight append-only proposed IDs 13-20. Existing 13 remain. Root Conservatory adds a fifth region through Root Shrine, Pump Gallery and Relay Junction; rooftops and industrial spaces extend existing regions rather than pretending all environments are new. Flooded rooms already exist in name/visuals, so Lower Sluice adds a dry subterranean maintenance experience instead of duplicating the Cistern or assuming swimming. Five regions/21 rooms does not mean five keepers; boss expansion is a separate dependency outside this assignment.
+Eight append-only proposed IDs 13–20. Existing 13 remain. Root Conservatory adds a fifth region through Root Shrine, Pump Gallery and Relay Junction; rooftops and industrial spaces extend existing regions rather than pretending all environments are new. Flooded rooms already exist in name/visuals, so Lower Sluice adds a dry subterranean maintenance experience instead of duplicating the Cistern or assuming swimming. Five regions/21 rooms does not mean five keepers; boss expansion is a separate dependency outside this assignment.
 
 Every new main line works with baseline movement abilities legitimately available at its entry; no temporary momentum threshold is mandatory. Dimensions/coordinates are blockout proposals to be adjusted to measured MV-01 envelopes. Platform diagrams below express topology, while tables give approximate spatial bounds; arrows are traversal options, not forced jumps. New lower recovery floors stay inside room bounds, with safe return ledges. No bottomless-pit room transition is promised by the existing runtime.
 
 Annex links require completed at all new entries that could bypass R07. Protected SkyWorks access uses the three named sigils and existing Wind intake flag regardless of direction. Existing Wind/Fire/Electric seals remain effective at maximum movement. Final shared contract approval precedes collision implementation.
 
-## N13 - MOORING LOFT
+## N13 — MOORING LOFT
 
-- Biome: Canal Ward rooftop fringe; proposed dimensions 1800 x 1440.
+- Biome: Canal Ward rooftop fringe; proposed dimensions 1800 × 1440.
 - Purpose: A compact return overlook above the Haven; first optional branch and two visible choices.
-- Elevation: main shelves y=1160  940  720  480.
+- Elevation: main shelves y=1160 → 940 → 720 → 480.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -38,7 +38,7 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (200, 1160, 400, 40); (720, 940, 360, 40); (1220, 720, 400, 40); (600, 480, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (200, 1160, 400, 40); (720, 940, 360, 40); (1220, 720, 400, 40); (600, 480, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (900, 690). Bell on timber mooring crane; jump from y940, swing toward y720; lower y1200 quay catches misses.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
@@ -47,13 +47,13 @@ Proposed platforms `(x,y,w,h)`: (200, 1160, 400, 40); (720, 940, 360, 40); (1220
 - Backtracking: N20 return makes long regional loop terminate at starting shrine.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Map/branch portal support and movement-upgrade persistence supplied by developer/MV-01.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N14 - BELLROOF WALK
+## N14 — BELLROOF WALK
 
-- Biome: Canal Ward elevated city; proposed dimensions 2600 x 1440.
+- Biome: Canal Ward elevated city; proposed dimensions 2600 × 1440.
 - Purpose: Roof promenade offering a steady stair route and faster hanging-bell line.
-- Elevation: main shelves y=1100  900  720  830.
+- Elevation: main shelves y=1100 → 900 → 720 → 830.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -77,22 +77,22 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (100, 1100, 500, 40); (750, 900, 400, 40); (1300, 720, 450, 40); (1900, 830, 600, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (100, 1100, 500, 40); (750, 900, 400, 40); (1300, 720, 450, 40); (1900, 830, 600, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (820, 620), (1460, 430), (2090, 550). Bells on roof crossbeams; staged airborne launches from middle ledges, release to broad next roof; lower service walkway y1280.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
 - Hazards/enemies: Two separated guard lanes; optional timed falling roof debris with clear shadow, safe waiting bays.
 - Gates/rewards/secrets: Momentum-only timed roof note at (1700,390) is optional; mastery reward is lore, not mandatory ability.
-- Backtracking: N13R09 bypasses repeated central traversal after relay restoration.
+- Backtracking: N13↔R09 bypasses repeated central traversal after relay restoration.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Debris telegraph/recovery system; gate/map integration; all range values pending MV-01.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N15 - LOWER SLUICE
+## N15 — LOWER SLUICE
 
-- Biome: Canal Ward underground; proposed dimensions 2200 x 1440.
+- Biome: Canal Ward underground; proposed dimensions 2200 × 1440.
 - Purpose: Dry maintenance route through a visibly flooded reservoir; aquatic space reserved for later approved swimming.
-- Elevation: main shelves y=500  720  940  1120.
+- Elevation: main shelves y=500 → 720 → 940 → 1120.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -115,7 +115,7 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (80, 500, 500, 40); (720, 720, 450, 40); (1320, 940, 400, 40); (1800, 1120, 350, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (80, 500, 500, 40); (720, 720, 450, 40); (1320, 940, 400, 40); (1800, 1120, 350, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (960, 480), (1550, 660). Masonry rings over dry platforms; descend in controlled stages, recover on lower dry floor y1300. Water behind collision-separated background plane.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
@@ -124,13 +124,13 @@ Proposed platforms `(x,y,w,h)`: (80, 500, 500, 40); (720, 720, 450, 40); (1320, 
 - Backtracking: Links Cistern to Root Shrine/Undercroft without traversing old upper chain; annex access requires completed.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Water visuals separate from interaction; spill hazard implementation; future swimming explicitly deferred.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N16 - ROOT SHRINE
+## N16 — ROOT SHRINE
 
-- Biome: Root Conservatory new fifth region; proposed dimensions 2000 x 1440.
+- Biome: Root Conservatory new fifth region; proposed dimensions 2000 × 1440.
 - Purpose: A quiet overgrown shrine linking underground and working machinery; rest and exploration junction.
-- Elevation: main shelves y=1120  900  760  500.
+- Elevation: main shelves y=1120 → 900 → 760 → 500.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -154,7 +154,7 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (80, 1120, 500, 40); (700, 900, 450, 40); (1300, 760, 600, 40); (780, 500, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (80, 1120, 500, 40); (700, 900, 450, 40); (1300, 760, 600, 40); (780, 500, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (950, 630), (1530, 470). Wind relic mounted under stone arch; gentle ascent with broad resting ledges; lower moss floor catches misses.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
@@ -163,13 +163,13 @@ Proposed platforms `(x,y,w,h)`: (80, 1120, 500, 40); (700, 900, 450, 40); (1300,
 - Backtracking: Two underground entries provide useful navigation choice; N18 upper passage loops to Undercroft.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Checkpoint safe spawn/IDs; upgrade persistence; new biome art with no obstruction of silhouettes.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N17 - COUNTERWEIGHT SPIRE
+## N17 — COUNTERWEIGHT SPIRE
 
-- Biome: Echo Works rooftop tower; proposed dimensions 1800 x 2160.
+- Biome: Echo Works rooftop tower; proposed dimensions 1800 × 2160.
 - Purpose: A purposeful multi-screen vertical climb with rest landings and an optional fast swing ascent.
-- Elevation: main shelves y=1900  1660  1300  1040  760  420.
+- Elevation: main shelves y=1900 → 1660 → 1300 → 1040 → 760 → 420.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -197,7 +197,7 @@ flowchart TD
  L5 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (100, 1900, 500, 40); (720, 1660, 400, 40); (1200, 1300, 500, 40); (650, 1040, 450, 40); (1100, 760, 450, 40); (1200, 420, 450, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (100, 1900, 500, 40); (720, 1660, 400, 40); (1200, 1300, 500, 40); (650, 1040, 450, 40); (1100, 760, 450, 40); (1200, 420, 450, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (900, 1400), (950, 780), (1320, 470). Rings on fixed tower beams; reversible zigzag from y1900 to420; side landings catch misses one stage below, no whole-tower fall.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
@@ -206,13 +206,13 @@ Proposed platforms `(x,y,w,h)`: (100, 1900, 500, 40); (720, 1660, 400, 40); (120
 - Backtracking: Mid-height N14 exit lets players leave climb and return later; upper N20 closes regional circuit.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Per-room camera/bounds/fall recovery support, moving-platform collision, swept swing measurements. No active camera change in LD pass.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N18 - PUMP GALLERY
+## N18 — PUMP GALLERY
 
-- Biome: Root Conservatory / industrial interface; proposed dimensions 2600 x 1440.
+- Biome: Root Conservatory / industrial interface; proposed dimensions 2600 × 1440.
 - Purpose: Machinery reclaimed by roots; a looping horizontal route with readable branching above a safe service floor.
-- Elevation: main shelves y=1000  800  620  760.
+- Elevation: main shelves y=1000 → 800 → 620 → 760.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -236,22 +236,22 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (80, 1000, 500, 40); (700, 800, 500, 40); (1380, 620, 450, 40); (2000, 760, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (80, 1000, 500, 40); (700, 800, 500, 40); (1380, 620, 450, 40); (2000, 760, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (930, 510), (1650, 340), (2220, 460). Bracket rings on stationary pump frame; optional aerial shortcut over pump housings, lower stepping lane remains viable.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
 - Hazards/enemies: One guard on broad y800 deck; two timed steam vents only on mastery lane with warning and sheltered waiting niches.
 - Gates/rewards/secrets: Electric-gated maintenance cache; optional permanent speed challenge upgrade with untimed alternative exploration source per MV-01.
-- Backtracking: N16N18R08 loop reconnects shrine; Electric isolator opens later machinery access.
+- Backtracking: N16→N18→R08 loop reconnects shrine; Electric isolator opens later machinery access.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Steam telegraphs; reward ownership/persistence; protected cross-region transitions.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N19 - COIL SERVICE HALL
+## N19 — COIL SERVICE HALL
 
-- Biome: SkyWorks industrial; proposed dimensions 2400 x 1440.
+- Biome: SkyWorks industrial; proposed dimensions 2400 × 1440.
 - Purpose: Power-routing passage that makes Electric and Fire access visibly causal.
-- Elevation: main shelves y=760  980  760  980  520.
+- Elevation: main shelves y=760 → 980 → 760 → 980 → 520.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -277,7 +277,7 @@ flowchart TD
  L4 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (80, 760, 450, 40); (700, 980, 500, 40); (1370, 760, 450, 40); (1850, 980, 450, 40); (1550, 520, 600, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (80, 760, 450, 40); (700, 980, 500, 40); (1370, 760, 450, 40); (1850, 980, 450, 40); (1550, 520, 600, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (890, 670), (1580, 430). Insulated rings on crane beams; deliberate side swing between y980/y760; safe lower floor avoids conductive hazard lanes.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
@@ -286,13 +286,13 @@ Proposed platforms `(x,y,w,h)`: (80, 760, 450, 40); (700, 980, 500, 40); (1370, 
 - Backtracking: Opens alternate access to Foundry but retains its Wind-entry and Electric-Keeper story locks.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Electric hazard eligibility separate from Electric Kunai ownership; no automatic immunity assumed.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
-## N20 - RELAY JUNCTION
+## N20 — RELAY JUNCTION
 
-- Biome: Root Conservatory upper ruins; proposed dimensions 2200 x 1440.
+- Biome: Root Conservatory upper ruins; proposed dimensions 2200 × 1440.
 - Purpose: Overgrown relay garden joining roofs and service tunnels; backtracking reward and route-choice hub.
-- Elevation: main shelves y=760  900  1120  560.
+- Elevation: main shelves y=760 → 900 → 1120 → 560.
 
 | Portal | Position | Connection and required flag |
 |---|---|---|
@@ -316,18 +316,17 @@ flowchart TD
  L3 -->|"missed swing"| F
 ```
 
-Proposed platforms `(x,y,w,h)`: (80, 760, 500, 40); (750, 900, 450, 40); (1400, 1120, 700, 40); (350, 560, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width � player stopping envelope plus arrival clearance, measured by MV-01.
+Proposed platforms `(x,y,w,h)`: (80, 760, 500, 40); (750, 900, 450, 40); (1400, 1120, 700, 40); (350, 560, 500, 40). All have readable top edges, walls/roof around elemental alcoves, and separate background art. Portal landings require width ≥ player stopping envelope plus arrival clearance, measured by MV-01.
 
 - Grapple points: (900, 520), (1650, 700). Wind relic under root-bound arch; quick aerial line and slower broad stairs converge at switch; lower floor catches misses.
 - Expected attach range: MV-01 approved value, pending; use current 80..400 eligibility for initial feasibility probes. Avoid beams/platforms inside rope arcs and keep approach airborne with anchor above origin.
 - Hazards/enemies: One optional shrine guard on a treasure lane; safe hub switch and arrival shelves.
 - Gates/rewards/secrets: Exploration speed upgrade in lower side nook; switch opens surface return; ledger ties shrine/industrial history together.
-- Backtracking: N17N20N19 forms upper-to-lower loop; N20N13 makes return to Haven useful.
+- Backtracking: N17↔N20↔N19 forms upper-to-lower loop; N20↔N13 makes return to Haven useful.
 - Failure/recovery: solid lower recovery surface and reconnecting ledge ladder; hazards permit retreat and reset without losing permanent rewards. Never respawn inside a closed gate or hazard.
 - Technical dependencies: Shortcut flag/save owner; map edge state; environmental layer art. No new boss scope implied.
-- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room's purpose and return path during unseeded playtest.
+- Acceptance: traverse every listed portal both ways; complete ordinary lane at baseline without temporary bonus; fail every swing and recover; locked route/reward stays closed under max speed and every alternate entry; save/reload and death preserve rewards/shortcuts; identify this room’s purpose and return path during unseeded playtest.
 
 ## Explicit edge prerequisites for developer integration
 
-Every direction of an edge must use the shared prerequisite; an opened seal adds to, never replaces, these story requirements. N13N14 remains optional early exploration after Windstep. N14N17 and R05N17 both require Tether + Dash; N17N20 additionally requires completed and Wind shutter. R02N15 requires Wind sluice; N15N16 requires completed, preventing an early route into annex spaces. N16N18 and N18R08 require completed. N18N19, N19R11 and N19N20 require completed, all three named existing sigils and skyworks_wind_intake; add Electric isolator for N18N19 and Fire seal for N19N20. N20N13 requires all regional flags plus the junction switch. N14R09 and N16R08 require completed. No proposed direct edge enters R12 or sets boss/attunement flags.
-
+Every direction of an edge must use the shared prerequisite; an opened seal adds to, never replaces, these story requirements. N13↔N14 remains optional early exploration after Windstep. N14↔N17 and R05↔N17 both require Tether + Dash; N17↔N20 additionally requires completed and Wind shutter. R02↔N15 requires Wind sluice; N15↔N16 requires completed, preventing an early route into annex spaces. N16↔N18 and N18↔R08 require completed. N18↔N19, N19↔R11 and N19↔N20 require completed, all three named existing sigils and skyworks_wind_intake; add Electric isolator for N18↔N19 and Fire seal for N19↔N20. N20↔N13 requires all regional flags plus the junction switch. N14↔R09 and N16↔R08 require completed. No proposed direct edge enters R12 or sets boss/attunement flags.
