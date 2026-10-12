@@ -1,7 +1,7 @@
 {
   "approved_on": "2026-10-12",
   "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
-  "controller_sha256": "5648d6b47d29e07d66ac92aee44222fcfed29cdabc3b830d02b8f7ecab84b466",
+  "controller_sha256": "61e0cf4fa4c0331b8079fccf493c12fdba6772c873bb4e23d66da007b3ce9448",
   "sprites": [
     {
       "clip": "idle",
@@ -11,7 +11,9 @@
       "height": 724,
       "frames": 8,
       "ground_baseline": 591,
-      "visual_scale": 0.21739130434782608
+      "visual_scale": 0.2649908807267889,
+      "previous_visible_height": 96.45668058455115,
+      "cleaned_visible_height_source": 364.0
     },
     {
       "clip": "run",
@@ -21,7 +23,9 @@
       "height": 724,
       "frames": 8,
       "ground_baseline": 491,
-      "visual_scale": 0.24
+      "visual_scale": 0.3825780535911868,
+      "previous_visible_height": 96.98353658536585,
+      "cleaned_visible_height_source": 253.5
     },
     {
       "clip": "attack",
@@ -31,7 +35,9 @@
       "height": 724,
       "frames": 8,
       "ground_baseline": 498,
-      "visual_scale": 0.24
+      "visual_scale": 0.37875157200639,
+      "previous_visible_height": 95.44539614561027,
+      "cleaned_visible_height_source": 252.0
     },
     {
       "clip": "traversal",
@@ -41,7 +47,9 @@
       "height": 724,
       "frames": 8,
       "ground_baseline": 510,
-      "visual_scale": 0.24
+      "visual_scale": 0.33919279345239656,
+      "previous_visible_height": 77.67514970059881,
+      "cleaned_visible_height_source": 229.0
     }
   ],
   "previous_sprites": [
@@ -80,5 +88,6 @@
   ],
   "previous_controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
   "physics_sha256": "5d5f5f4084bc8a23f49f692004e92c8fbdbabd92d3434279167e3c895dc65eda",
-  "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes."
+  "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes.",
+  "size_restoration": "Per-animation constant scale matches average visible height of approved original strips; alpha threshold 0.1. No per-frame resizing."
 }

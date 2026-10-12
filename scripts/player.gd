@@ -173,7 +173,7 @@ func animate(dt):
 		var total = [0.36, 0.41, 0.57][combo]
 		pose = clampi(int((total - attack_time) / total * 8.0), 0, 7)
 	sprite.frame = pose if pose >= 0 else int(animation_clock / (0.16 if clip == "idle" else 0.08)) % sprite.hframes
-	var visual_scale = 80.0 / 368.0 if clip == "idle" else 0.24
+	var visual_scale = {"idle": 0.2649908807267889, "run": 0.3825780535911868, "attack": 0.37875157200639, "traversal": 0.33919279345239656}[clip]
 	sprite.scale = Vector2.ONE * visual_scale
 	var baseline = {"idle": 591.0, "run": 491.0, "attack": 498.0, "traversal": 510.0}[clip]
 	sprite.offset = Vector2(0, tex.get_height() / 2.0 - baseline)
