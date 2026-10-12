@@ -1,7 +1,7 @@
 {
   "approved_on": "2026-10-12",
   "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
-  "controller_sha256": "61e0cf4fa4c0331b8079fccf493c12fdba6772c873bb4e23d66da007b3ce9448",
+  "controller_sha256": "a35fe82802b3d41d6c9715e0231f5e97323b0edb5dbf0493ddecbef0486a0e41",
   "sprites": [
     {
       "clip": "idle",
@@ -87,7 +87,9 @@
     }
   ],
   "previous_controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
-  "physics_sha256": "5d5f5f4084bc8a23f49f692004e92c8fbdbabd92d3434279167e3c895dc65eda",
+  "physics_sha256": "806c88f69eb5199b07fc33ccb5ca854f45ee347ff71cedb0c61dbb7434b5da7c",
   "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes.",
-  "size_restoration": "Per-animation constant scale matches average visible height of approved original strips; alpha threshold 0.1. No per-frame resizing."
+  "size_restoration": "Per-animation constant scale matches average visible height of approved original strips; alpha threshold 0.1. No per-frame resizing.",
+  "rollback_controller_sha256": "61e0cf4fa4c0331b8079fccf493c12fdba6772c873bb4e23d66da007b3ce9448",
+  "movement_prototype_reference": "docs/gameplay/HYBRID_MOMENTUM_SPEC.md"
 }

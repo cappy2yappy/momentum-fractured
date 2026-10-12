@@ -4,6 +4,29 @@ signal hurt
 signal tether_requested
 signal afterimage_requested(texture, frame, position, flip_h)
 signal kunai_requested(element, direction, position)
+const MomentumProfile = preload("res://scripts/momentum_profile.gd")
+@export_range(80.0, 480.0, 1.0) var grapple_range = 440.0
+@export var grapple_clearance_check = true
+var speed_upgrade_level = 0
+var momentum = MomentumProfile.new()
+var technique_start = Vector2.ZERO
+func unlock_speed_upgrade(id: String) -> bool:
+	if id != "stride_1" or speed_upgrade_level >= 1: return false
+	speed_upgrade_level = 1
+	return true
+func restore_speed_upgrade(value):
+	speed_upgrade_level = 1 if (value is int or value is float) and value == 1 else 0
+func movement_target_speed(sprinting: bool) -> float:
+	var permanent = 1.05 if speed_upgrade_level == 1 else 1.0
+	return (600.0 if sprinting else 400.0) * permanent * (momentum.speed_multiplier() if sprinting else 1.0)
+func has_traversal_requirement(id: String) -> bool:
+	match id:
+		"double_jump": return double_jump
+		"tether": return tether_unlocked
+		"dash": return dash_unlocked
+		"stride_1": return speed_upgrade_level == 1
+		"wind", "fire", "electric": return bool(kunai_unlocked.get(id, false))
+	return false
 var facing = 1
 var hp = 3
 var double_jump = false
@@ -41,6 +64,7 @@ var clips: Dictionary = {}
 var animation_clock = 0.0
 var last_clip = ""
 func _ready():
+	momentum.enabled = "--momentum-prototype" in OS.get_cmdline_user_args()
 	collision_layer = 2
 	collision_mask = 1
 	var shape = CollisionShape2D.new()
@@ -67,6 +91,7 @@ func press(action):
 	if action == "tether" and tether_unlocked and tether_cooldown <= 0 and not tether_attached and not is_on_floor():
 		tether_requested.emit()
 	if action == "dash" and dash_unlocked and dash_cooldown <= 0 and attack_time <= 0:
+		technique_start = position
 		dash_time = 0.18
 		dash_cooldown = 0.58
 		invulnerable = maxf(invulnerable, 0.24)
@@ -102,7 +127,10 @@ func _physics_process(dt):
 	if dash_time > 0:
 		dash_time = maxf(0, dash_time - dt)
 		velocity = Vector2(facing * 920, 0)
+		var before_dash = position
 		move_and_slide()
+		momentum.tick(dt, position - before_dash, float(held("right")) - float(held("left")), false, false)
+		if dash_time <= 0: momentum.reward_transition("dash", position.distance_to(technique_start), absf(velocity.x))
 		animate(dt)
 		afterimage_cooldown -= dt
 		if afterimage_cooldown <= 0:
@@ -115,7 +143,9 @@ func _physics_process(dt):
 	if tether_attached:
 		var swing_direction = float(held("right")) - float(held("left"))
 		if swing_direction != 0: facing = int(swing_direction)
+		var before_swing = position
 		integrate_tether_swing(dt, swing_direction)
+		momentum.tick(dt, position - before_swing, swing_direction, false, false)
 		animate(dt)
 		queue_redraw()
 		return
@@ -126,7 +156,7 @@ func _physics_process(dt):
 	var direction = float(held("right")) - float(held("left"))
 	if direction == 0: run = false
 	if direction != 0: facing = int(direction)
-	var speed = 600.0 if run else 400.0
+	var speed = movement_target_speed(run)
 	if attack_time > 0 and is_on_floor(): speed *= 0.5
 	if direction != 0 and (absf(velocity.x) < speed or signf(velocity.x) != signf(direction)):
 		velocity.x = move_toward(velocity.x, direction * speed, 2600 * dt if is_on_floor() else 1200 * dt)
@@ -142,7 +172,9 @@ func _physics_process(dt):
 		elif double_jump and not air_used:
 			velocity.y = -900;air_used = true;jump_buffer = 0
 	if not held("jump") and velocity.y < -360: velocity.y = -360
+	var before_move = position
 	move_and_slide()
+	momentum.tick(dt, position - before_move, direction, run, attack_time > 0 or invulnerable > 0)
 	if attack_time > 0:
 		var total = [0.36, 0.41, 0.57][combo]
 		attack_time -= dt
@@ -182,6 +214,7 @@ func animate(dt):
 	sprite.modulate.a = 0.45 if invulnerable > 0 and int(age * 18) % 2 == 0 else 1.0
 func damage(from: Vector2):
 	if invulnerable > 0: return false
+	momentum.take_damage()
 	hp -= 1
 	invulnerable = 1.2
 	velocity = Vector2(signf(position.x - from.x) * 280, -240)
@@ -192,9 +225,14 @@ func tether_origin() -> Vector2:
 func can_tether_anchor(anchor: Vector2) -> bool:
 	var offset = anchor - tether_origin()
 	var forward = offset.x * facing
-	return not is_on_floor() and forward >= -100 and forward <= 400 and offset.y <= -35 and offset.length() >= 80 and offset.length() <= 400
+	return not is_on_floor() and forward >= -100 and forward <= clampf(grapple_range, 80.0, 480.0) and offset.y <= -35 and offset.length() >= 80 and offset.length() <= clampf(grapple_range, 80.0, 480.0) and tether_path_clear(anchor)
+func tether_path_clear(anchor: Vector2) -> bool:
+	if not grapple_clearance_check or not is_inside_tree(): return true
+	var query = PhysicsRayQueryParameters2D.create(global_position + Vector2(0, -55), anchor, 1, [get_rid()])
+	return get_world_2d().direct_space_state.intersect_ray(query).is_empty()
 func apply_tether(anchor: Vector2):
 	if not can_tether_anchor(anchor): return false
+	technique_start = position
 	tether_anchor = anchor
 	tether_length = maxf(80.0, tether_origin().distance_to(anchor))
 	tether_taut = false
@@ -203,6 +241,7 @@ func apply_tether(anchor: Vector2):
 	return true
 func release_tether():
 	if not tether_attached: return
+	momentum.reward_transition("tether", position.distance_to(technique_start), absf(velocity.x))
 	tether_attached = false
 	tether_taut = false
 	tether_cooldown = 0.2

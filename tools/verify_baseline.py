@@ -10,10 +10,21 @@ manifest = json.loads((root / "assets/web/kaze_manifest.json").read_text())
 controller = (root / "scripts/player.gd").read_bytes()
 controller_text = controller.decode("utf-8")
 failures = []
+rollback_path = root / "tests/fixtures/player_alpha052.gd"
+if "rollback_controller_sha256" in manifest:
+    rollback = rollback_path.read_bytes()
+    if hashlib.sha256(rollback).hexdigest() != manifest["rollback_controller_sha256"]:
+        failures.append("Rollback controller reference changed.")
+    rollback_text = rollback.decode("utf-8")
+    for method, following in [("animate", "damage"), ("integrate_tether_swing", "_draw")]:
+        def body(text):
+            return text[text.index(f"func {method}"):text.index(f"func {following}")]
+        if body(controller_text) != body(rollback_text):
+            failures.append(f"Preserved {method} differs from restored-size Alpha 0.5.2.")
 if "physics_sha256" in manifest:
     physics = controller_text[controller_text.index("func _physics_process"):controller_text.index("func animate")]
     if hashlib.sha256(physics.encode()).hexdigest() != manifest["physics_sha256"]:
-        failures.append("Approved physics process changed during sprite integration.")
+        failures.append("Physics process differs from the documented movement contract.")
 for item in manifest.get("previous_sprites", []):
     if hashlib.sha256((root / item["path"]).read_bytes()).hexdigest() != item["sha256"]:
         failures.append(f"Original artwork changed: {item['path']}")

@@ -181,6 +181,7 @@ func build_room(index):
 
 func reset_room_actions():
 	player.release_tether()
+	player.momentum.reset()
 	player.attack_time = 0.0
 	player.queued = false
 	player.did_strike = false
@@ -503,15 +504,26 @@ func interact():
 	elif room < ROOM_COUNT - 1 and player.position.distance_to(right_exit_position()) < 105:
 		request_room(room + 1)
 
-func on_tether_requested():
-	var nearest = Vector2.ZERO
-	var distance = 401.0
-	for anchor in tether_anchors:
+func grapple_candidates() -> Array[Vector2]:
+	var candidates: Array[Vector2] = tether_anchors.duplicate()
+	for object in get_tree().get_nodes_in_group("kaze_grapple_anchor"):
+		if is_ancestor_of(object) and object.has_method("is_available_for") and object.has_method("get_attachment_position") and object.is_available_for(player):
+			candidates.append(object.get_attachment_position())
+	return candidates
+
+func select_tether_anchor():
+	var nearest = null
+	var distance = clampf(player.grapple_range, 80.0, 480.0) + 1.0
+	for anchor in grapple_candidates():
 		var candidate = player.tether_origin().distance_to(anchor)
 		if candidate < distance and player.can_tether_anchor(anchor):
 			distance = candidate
 			nearest = anchor
-	if nearest == Vector2.ZERO:
+	return nearest
+
+func on_tether_requested():
+	var nearest = select_tether_anchor() if player.tether_unlocked else null
+	if nearest == null:
 		announce("No Wind Tether anchor in range.", 2)
 	elif player.apply_tether(nearest):
 		tether_effect_anchor = nearest
@@ -569,7 +581,7 @@ func save_progress():
 	if file == null:
 		announce("Could not save. Your current session can continue.");return false
 	file.store_string(JSON.stringify({
-		"version": 6, "skyworks_restored": skyworks_restored, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
+		"version": 7, "speed_upgrade_level": player.speed_upgrade_level, "skyworks_restored": skyworks_restored, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
 		"relay_fragments": relay_fragments, "cleared_encounters": cleared_encounters, "double_jump": player.double_jump,
 		"tether_unlocked": player.tether_unlocked, "dash_unlocked": player.dash_unlocked,
 		"kunai_unlocked": player.kunai_unlocked, "selected_kunai": player.selected_kunai,
@@ -586,6 +598,8 @@ func load_progress():
 	if not FileAccess.file_exists(save_path): return
 	var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
 	if not data is Dictionary or int(data.get("version", 0)) < 1: return
+	player.restore_speed_upgrade(data.get("speed_upgrade_level", 0))
+	player.momentum.reset()
 	player.double_jump = data.get("double_jump", false)
 	player.tether_unlocked = data.get("tether_unlocked", false)
 	player.dash_unlocked = data.get("dash_unlocked", false)
@@ -642,7 +656,7 @@ func _draw():
 	elif room == 5:
 		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(rect)
 	for anchor in tether_anchors:
-		var in_range = player.tether_unlocked and player.position.distance_to(anchor) < 520
+		var in_range = player.tether_unlocked and player.can_tether_anchor(anchor)
 		var pulse = 3.0 + sin(player.age * 7.0) * 2.0 if in_range else 0.0
 		draw_circle(anchor, 25 + pulse, Color(0.68, 0.9, 0.57, 0.12 if in_range else 0.07))
 		draw_arc(anchor, 20 + pulse, 0, TAU, 28, Color("d5ffb4") if in_range else Color("93b982"), 4 if in_range else 3)

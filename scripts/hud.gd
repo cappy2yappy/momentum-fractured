@@ -110,6 +110,9 @@ func _draw():
 	draw_rect(Rect2(1090, 20, 160, 116), Color(0.06, 0.055, 0.09, 0.9))
 	draw_map(Vector2(1104, 42), Vector2(14, 14), false)
 	label(Vector2(1102, 123), "MAP  ·  M", 15)
+	if world.player.momentum.enabled:
+		draw_rect(Rect2(390, 130, 180, 8), Color("4e3b50"))
+		draw_rect(Rect2(390, 130, 180 * world.player.momentum.meter, 8), Color("b9d48d"))
 	if world.message_time > 0:
 		draw_rect(Rect2(28, 148, 1224, 52), Color(0.06, 0.055, 0.09, 0.88))
 		label(Vector2(44, 181), world.message, 18)
