@@ -4,6 +4,15 @@ extends Node
 ## Tracks room clears, checkpoint data, and player stats across scene loads.
 
 const SAVE_PATH := "user://fractured_save.dat"
+# Editor test runs can isolate save data without touching existing player saves.
+var save_path: String = _resolve_save_path()
+
+func _resolve_save_path() -> String:
+	if OS.has_feature("editor"):
+		for argument in OS.get_cmdline_user_args():
+			if argument.begins_with("--test-save-path="):
+				return argument.trim_prefix("--test-save-path=")
+	return SAVE_PATH
 const DEFAULT_START_SCENE := "res://scenes/rooms/room_01_combat.tscn"
 const DEFAULT_START_SPAWN := "spawn_default"
 const ABILITY_DASH := "dash"
@@ -201,8 +210,8 @@ func reset_progress() -> void:
 
 
 func new_game() -> void:
-	if FileAccess.file_exists(SAVE_PATH):
-		DirAccess.remove_absolute(SAVE_PATH)
+	if FileAccess.file_exists(save_path):
+		DirAccess.remove_absolute(save_path)
 	_set_defaults()
 	loaded_from_disk = false
 	_emit_runtime_signals()
@@ -230,9 +239,9 @@ func get_debug_snapshot() -> Dictionary:
 
 
 func save_to_disk() -> void:
-	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	var file := FileAccess.open(save_path, FileAccess.WRITE)
 	if file == null:
-		push_warning("Failed to open save file for writing: %s" % SAVE_PATH)
+		push_warning("Failed to open save file for writing: %s" % save_path)
 		return
 
 	var payload := {
@@ -252,10 +261,10 @@ func save_to_disk() -> void:
 
 
 func load_from_disk() -> bool:
-	if not FileAccess.file_exists(SAVE_PATH):
+	if not FileAccess.file_exists(save_path):
 		return false
 
-	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
+	var file := FileAccess.open(save_path, FileAccess.READ)
 	if file == null:
 		return false
 

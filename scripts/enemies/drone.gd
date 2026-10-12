@@ -186,7 +186,7 @@ func _on_death() -> void:
 	state = State.DEAD
 	collision_layer = 0
 	collision_mask = 0
-	hurtbox.monitoring = false
+	hurtbox.set_deferred("monitoring", false)
 
 	var tween := create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 0.26)

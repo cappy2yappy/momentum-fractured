@@ -269,7 +269,7 @@ func _on_death() -> void:
 	if hitbox and hitbox.has_method("deactivate"):
 		hitbox.deactivate()
 	if hurtbox:
-		hurtbox.monitoring = false
+		hurtbox.set_deferred("monitoring", false)
 
 	var tween := create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 0.5)

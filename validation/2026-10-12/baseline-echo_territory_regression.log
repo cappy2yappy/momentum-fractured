@@ -1,0 +1,11 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Unset territory preserves legacy movement without floor support
+PASS: Authored minimum blocks outward movement
+PASS: Authored maximum blocks outward movement
+PASS: Floor probe permits movement over supported territory
+PASS: Floor probe blocks movement toward a ledge
+PASS: Current speed cannot carry Echo past the authored maximum
+ECHO TERRITORY REGRESSION: 0 failure(s)

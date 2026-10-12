@@ -6,6 +6,9 @@ Use this index before relying on older plans. The project changed direction duri
 
 | Document | Status | Purpose |
 |---|---|---|
+| `PROJECT_STATUS.md` | Current | October recovery status and remaining milestones |
+| `RECOVERY_REPORT.md` | Current | Preserved histories, branches and integration evidence |
+| `TEST_RESULTS.md` | Current | Executed tests, logs and limitations |
 | `GDD.md` | Current | Canonical game direction and feature decisions |
 | `docs/ART_BIBLE.md` | Current | Character, environment, UI, and VFX visual language |
 | `docs/GAMEPLAY_PARITY_MATRIX.md` | Current | Confirmed gaps, playtest questions, priorities, and acceptance tests |
@@ -32,6 +35,6 @@ The following files may still contain useful implementation history, but their t
 - `PHASE_3_COMPLETE.md`
 - `PHASE_4_TASKS.md`
 - `PLAYTEST_REPORT_2026-03-12.md`
-- `PROJECT_STATUS.md`
+- `docs/history/PROJECT_STATUS_2026-03-25.md`
 
 In particular, historical claims that Grapple/Wind Tether and Dash are later boss unlocks conflict with the current baseline kit. References to Godot 4.3 are obsolete; the project target is Godot 4.6.1.

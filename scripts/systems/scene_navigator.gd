@@ -32,7 +32,8 @@ func _ready() -> void:
 		var err := get_tree().change_scene_to_file(GameState.checkpoint_scene_path)
 		if err != OK:
 			push_error("Failed to restore checkpoint scene '%s' (error %d)" % [GameState.checkpoint_scene_path, err])
-		await get_tree().process_frame
+			return
+		await get_tree().scene_changed
 
 	_restore_player_in_current_scene()
 
@@ -52,7 +53,9 @@ func goto_scene(scene_path: String, spawn_marker: String) -> void:
 		is_transitioning = false
 		return
 
-	await get_tree().process_frame
+	# Godot publishes current_scene only after scene_changed; a process-frame
+	# wait can restore against a null scene and silently lose the arrival marker.
+	await get_tree().scene_changed
 	_restore_player_in_current_scene()
 	await _fade_to_alpha(0.0)
 	is_transitioning = false

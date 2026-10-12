@@ -117,3 +117,13 @@ func _play_tone(player: AudioStreamPlayer, config: Dictionary) -> void:
 				sample = sin(phase) * amplitude
 
 		playback.push_frame(Vector2(sample, sample))
+
+
+func _exit_tree() -> void:
+	if is_instance_valid(_music_player):
+		_music_player.stop()
+		_music_player.stream = null
+	for player in _sfx_players:
+		if is_instance_valid(player):
+			player.stop()
+			player.stream = null

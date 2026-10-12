@@ -1,0 +1,153 @@
+{
+  "engine": "4.6.1.stable.official.14d19694e",
+  "results": [
+    {
+      "test": "import",
+      "exit": 0,
+      "passed": false,
+      "errors": [
+        "ERROR: Could not create ObjectDB Snapshots directory: user://",
+        "ERROR: Cannot save file '/Users/tonysantiago/Library/Application Support/Godot/editor_settings-4.6.tres'.",
+        "ERROR: Error saving editor settings to /Users/tonysantiago/Library/Application Support/Godot/editor_settings-4.6.tres"
+      ],
+      "summary": [],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/import.engine.log",
+        "--import",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/import.save.json"
+      ]
+    },
+    {
+      "test": "alpha_08_smoke",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "ALPHA 0.8 SMOKE TEST: 0 failure(s), 12 rooms"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/alpha_08_smoke.engine.log",
+        "--script",
+        "res://tests/alpha_08_smoke.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/alpha_08_smoke.save.json"
+      ]
+    },
+    {
+      "test": "echo_territory_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "ECHO TERRITORY REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/echo_territory_regression.engine.log",
+        "--script",
+        "res://tests/echo_territory_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/echo_territory_regression.save.json"
+      ]
+    },
+    {
+      "test": "swimming_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "SWIMMING REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/swimming_regression.engine.log",
+        "--script",
+        "res://tests/swimming_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/swimming_regression.save.json"
+      ]
+    },
+    {
+      "test": "canal_chamber_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "CANAL CHAMBER REGRESSION: 0 failure(s)"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/canal_chamber_regression.engine.log",
+        "--script",
+        "res://tests/canal_chamber_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/canal_chamber_regression.save.json"
+      ]
+    },
+    {
+      "test": "recovery_regression",
+      "exit": 0,
+      "passed": true,
+      "errors": [],
+      "summary": [
+        "RECOVERY REGRESSION: 0 failure(s), 43 checks"
+      ],
+      "warnings": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ],
+      "command": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+        "--log-file",
+        "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/recovery_regression.engine.log",
+        "--script",
+        "res://tests/recovery_regression.gd",
+        "--",
+        "--test-save-path=/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/validation/2026-10-12/stability/recovery_regression.save.json"
+      ]
+    }
+  ]
+}

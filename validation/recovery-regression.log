@@ -1,0 +1,50 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Camera creates a nonidentity canvas transform at 1.0x zoom
+PASS: Damage number is visible with actual damage text at 1.0x zoom
+PASS: Damage number Y follows the translated/zoomed camera at 1.0x zoom (actual 438.00, expected 438.00)
+PASS: Damage number X stays inside the transformed jitter bounds at 1.0x zoom
+PASS: Camera creates a nonidentity canvas transform at 2.0x zoom
+PASS: Damage number is visible with actual damage text at 2.0x zoom
+PASS: Damage number Y follows the translated/zoomed camera at 2.0x zoom (actual 516.00, expected 516.00)
+PASS: Damage number X stays inside the transformed jitter bounds at 2.0x zoom
+PASS: Actual player melee produces one Hurtbox collision signal
+PASS: Actual player melee reduces enemy health by its attack damage
+PASS: Single-hit melee closes its window after a collision
+PASS: Persistent overlap does not repeatedly damage an enemy
+PASS: Multi-target melee window damages an entering target
+PASS: Exit/reentry cannot damage the same target twice in one melee window
+PASS: A restarted melee window can damage a previously hit target
+PASS: A consecutive attack window damages an already-overlapping target exactly once
+PASS: A lethal physical melee collision kills the enemy
+PASS: Lethal melee safely disables the enemy Hurtbox after its collision callback
+PASS: Guard Veil is tested during a real enemy Hitbox overlap
+PASS: Guard Veil prevents both damage and accepted-hit feedback
+PASS: Enemy Hitbox damages the player once Guard Veil is inactive
+PASS: An accepted enemy hit starts player Hurtbox invincibility
+PASS: Real physics reentry during player invincibility cannot deal another hit
+PASS: Missing-scene checkpoint test exercises actual body overlap
+PASS: A checkpoint without current_scene does not claim activation
+PASS: Missing-scene checkpoint preserves the previous respawn destination
+PASS: Authored Room 4 checkpoint activates through a physical player overlap
+PASS: Checkpoint activation heals the player to full
+PASS: Checkpoint stores the actual Room 4 scene and authored marker
+PASS: Checkpoint save data reloads from disk
+PASS: Checkpoint scene and healed health survive save/load
+PASS: Checkpoint respawn finishes its actual scene transition
+PASS: Checkpoint respawn loads the saved scene
+PASS: Checkpoint respawn places Kaze at the authored marker (actual (640.0, 600.352), expected (640.0, 600.0))
+PASS: Checkpoint respawn restores saved full health
+PASS: Audio teardown fixture starts music and an actual SFX stream
+PASS: Audio exit stops music and releases its stream
+PASS: Audio exit stops and clears every pooled SFX player
+PASS: hurtbox.gd _game_state safely returns null outside the scene tree
+PASS: hurtbox.gd _audio_manager safely returns null outside the scene tree
+PASS: Detached Hurtbox feedback lookup safely returns null
+PASS: checkpoint.gd _game_state safely returns null outside the scene tree
+PASS: checkpoint.gd _audio_manager safely returns null outside the scene tree
+RECOVERY REGRESSION: 0 failure(s), 43 checks
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)

@@ -54,3 +54,13 @@ This playtest build is not Apple-notarized. Control-click the app and choose Ope
 - Added swimming and canal regression checks to the Windows/macOS build workflow.
 
 This remains a parity-slice candidate, not an accepted alpha. Current-jet art is provisional. Canonical character art, the Fire return shortcut, underwater presentation, direct playtesting and device-specific 60 FPS validation remain open. Existing smoke/scene shutdown may emit ObjectDB leak warnings.
+
+## October 12 recovery — stability increment
+
+- Preserved both original checkouts and the legacy branch/stash; active candidate is based on September 30 parity development.
+- Recovered camera-correct damage numbers and defensive checkpoint/combat lookups.
+- Fixed melee repeat damage within one window, already-overlapping combo windows, lethal enemy physics-callback mutations, and pooled projectile monitoring.
+- Checkpoint/room arrival restoration now waits for scene_changed, preserving the authored destination marker.
+- Added 43 real-collision/checkpoint/audio/feedback regression checks and an isolated-save validation runner.
+
+Alpha acceptance, canonical Kaze art, subjective feel and target-device 60 FPS remain open.

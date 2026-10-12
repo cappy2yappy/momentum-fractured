@@ -35,7 +35,7 @@ func activate_projectile(spawn_position: Vector2, move_direction: Vector2, new_s
 	_life_timer = lifetime
 	_active = true
 	visible = true
-	monitoring = true
+	set_deferred("monitoring", true)
 	add_to_group("enemy_projectile")
 	set_physics_process(true)
 
@@ -43,7 +43,7 @@ func activate_projectile(spawn_position: Vector2, move_direction: Vector2, new_s
 func deactivate_projectile() -> void:
 	_active = false
 	visible = false
-	monitoring = false
+	set_deferred("monitoring", false)
 	remove_from_group("enemy_projectile")
 	set_physics_process(false)
 

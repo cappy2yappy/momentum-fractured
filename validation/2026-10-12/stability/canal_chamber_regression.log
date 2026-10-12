@@ -1,0 +1,23 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Authored canal camera bounds
+PASS: Deep traversable water spans Y430–1040
+PASS: Water uses swim state rather than death hazard
+PASS: Threshold arrival on dry entry ledge
+PASS: Return arrival at underwater intake
+PASS: Backtrack names reciprocal threshold marker
+PASS: Forward route names reciprocal return marker
+PASS: Retreat remains open during water encounter
+PASS: Current has warning, safe interval, survivable damage
+PASS: Current has warning, safe interval, survivable damage
+PASS: Dry right shore supports surfacing and recovery
+PASS: room_07_route reciprocal arrival exists
+PASS: Real water collision enters swimming
+PASS: Neutral swimming holds depth in authored canal
+PASS: Live input descends through deep water
+PASS: Live input ascends from the deep route
+CANAL CHAMBER REGRESSION: 0 failure(s)
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

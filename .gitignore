@@ -3,3 +3,5 @@
 build/
 Kaze-*-Windows-*.zip
 Kaze-*-macOS-*.zip
+
+.validation-home/

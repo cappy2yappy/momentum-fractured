@@ -1,0 +1,30 @@
+[
+  {
+    "test": "alpha_08_smoke",
+    "exit": 0,
+    "summary": [
+      "ALPHA 0.8 SMOKE TEST: 0 failure(s), 12 rooms"
+    ]
+  },
+  {
+    "test": "echo_territory_regression",
+    "exit": 0,
+    "summary": [
+      "ECHO TERRITORY REGRESSION: 0 failure(s)"
+    ]
+  },
+  {
+    "test": "swimming_regression",
+    "exit": 0,
+    "summary": [
+      "SWIMMING REGRESSION: 0 failure(s)"
+    ]
+  },
+  {
+    "test": "canal_chamber_regression",
+    "exit": 0,
+    "summary": [
+      "CANAL CHAMBER REGRESSION: 0 failure(s)"
+    ]
+  }
+]
