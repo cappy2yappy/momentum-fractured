@@ -72,7 +72,7 @@ func _enter_tree() -> void :
 
 	get_singleton().editor_plugin = self
 
-	main = load("uid://crxgu2q73va5y").instantiate()
+	main = load("res://addons/MetroidvaniaSystem/Database/Main.tscn").instantiate()
 	EditorInterface.get_editor_main_screen().add_child(main)
 	main.hide()
 

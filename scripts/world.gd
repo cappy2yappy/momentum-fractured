@@ -6,20 +6,24 @@ const Kunai = preload("res://scripts/kunai.gd")
 const Hud = preload("res://scripts/hud.gd")
 const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 
-const ROOM_COUNT = 8
+const Extension = preload("res://scripts/route_extension.gd")
+const ROOM_COUNT = 10
 const ROOM_NAMES = [
-	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE", 
-	"BROKEN SPAN", "ASCENT TOWER", "TIDE WARDEN", "RELAY ARCHIVE", 
+	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
+	"BROKEN SPAN", "ASCENT TOWER", "TIDE WARDEN", "RELAY ARCHIVE",
+	"RELAY UNDERCROFT", "SIGNAL TERRACE",
 ]
 const ROOM_COLORS = [
-	Color("211e32"), Color("2b2030"), Color("172a35"), Color("29233b"), 
-	Color("182837"), Color("242139"), Color("241c2d"), Color("1d2934"), 
+	Color("211e32"), Color("2b2030"), Color("172a35"), Color("29233b"),
+	Color("182837"), Color("242139"), Color("241c2d"), Color("1d2934"),
+	Color("202939"), Color("29243a"),
 ]
 const ROOM_MAP_COORDS = [
-	Vector3i(0, 2, 0), Vector3i(1, 2, 0), Vector3i(2, 2, 0), Vector3i(2, 1, 0), 
-	Vector3i(3, 1, 0), Vector3i(4, 1, 0), Vector3i(4, 0, 0), Vector3i(5, 0, 0), 
+	Vector3i(0, 2, 0), Vector3i(1, 2, 0), Vector3i(2, 2, 0), Vector3i(2, 1, 0),
+	Vector3i(3, 1, 0), Vector3i(4, 1, 0), Vector3i(4, 0, 0), Vector3i(5, 0, 0),
+	Vector3i(5, 1, 0), Vector3i(6, 1, 0),
 ]
-const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP"]
+const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP", "ECHO WORKS", "STORM KEEP"]
 
 var save_path = "user://silent_district_alpha_v3.json"
 var player
@@ -31,12 +35,17 @@ var opened_kunai_gates: Dictionary = {}
 var camera = Camera2D.new()
 var geometry = Node2D.new()
 var room = 0
-var visited = [true, false, false, false, false, false, false, false]
+var visited = [true, false, false, false, false, false, false, false, false, false]
 var guard_defeated = false
 var boss_defeated = false
 var completed = false
 var secret = false
 var checkpoint_room = 0
+var checkpoint_position = Vector2(220, 1298)
+var relay_fragments: Dictionary = {}
+var cleared_encounters: Dictionary = {}
+var pending_arrival = Vector2.INF
+var extension = Extension.new()
 var platforms: Array[Rect2] = []
 var tether_anchors: Array[Vector2] = []
 var tether_effect_anchor = Vector2.ZERO
@@ -81,16 +90,16 @@ func _ready():
 	if not test_mode: load_progress()
 	register_metsys_progress()
 	build_room(checkpoint_room)
-	player.position = Vector2(220, 1298)
+	player.position = checkpoint_position
 	camera.reset_smoothing()
 
 func configure_input():
 	var keys = {
-		"left": [KEY_A, KEY_LEFT], "right": [KEY_D, KEY_RIGHT], 
-		"jump": [KEY_SPACE, KEY_W, KEY_UP], "attack": [KEY_J], 
-		"parry": [KEY_F, KEY_K], "interact": [KEY_E], "map": [KEY_M], 
-		"pause": [KEY_ESCAPE], "tether": [KEY_Q], "dash": [KEY_SHIFT], 
-		"kunai": [KEY_R], "cycle_kunai": [KEY_T], 
+		"left": [KEY_A, KEY_LEFT], "right": [KEY_D, KEY_RIGHT],
+		"jump": [KEY_SPACE, KEY_W, KEY_UP], "attack": [KEY_J],
+		"parry": [KEY_F, KEY_K], "interact": [KEY_E], "map": [KEY_M],
+		"pause": [KEY_ESCAPE], "loadout": [KEY_I], "tether": [KEY_Q], "dash": [KEY_SHIFT],
+		"kunai": [KEY_R], "cycle_kunai": [KEY_T],
 	}
 	for action in keys:
 		if not InputMap.has_action(action): InputMap.add_action(action)
@@ -102,6 +111,10 @@ func configure_input():
 		InputMap.action_add_event(pair[0], event)
 
 func build_room(index):
+	reset_room_actions()
+	for child in get_children():
+		if child.get_script() == Kunai or child.is_in_group("route_afterimage"):
+			child.queue_free()
 	room = clampi(index, 0, ROOM_COUNT - 1)
 	visited[room] = true
 	sync_metsys_room(room)
@@ -158,7 +171,16 @@ func build_room(index):
 			for rect in [Rect2(0, 1090, 300, 40), Rect2(390, 1090, 300, 40), Rect2(820, 870, 340, 40), Rect2(1300, 650, 380, 40), Rect2(1830, 880, 320, 40)]: add_platform(rect)
 			tether_anchors = [Vector2(990, 650), Vector2(1480, 430)]
 			create_kunai_gate("relay_electric_seal", "electric", Vector2(2000, 1300), 300)
+		8, 9:
+			extension.build_room(self, room)
 	queue_redraw()
+
+func reset_room_actions():
+	player.release_tether()
+	player.attack_time = 0.0
+	player.queued = false
+	player.did_strike = false
+	player.dash_time = 0.0
 
 func sync_metsys_room(index: int):
 	var coords: Vector3i = ROOM_MAP_COORDS[index]
@@ -187,6 +209,7 @@ func gate_label(target_room: int) -> String:
 		4: return "WIND TETHER" if not player.tether_unlocked else "OPEN"
 		6: return "GALE DASH" if not player.dash_unlocked else "OPEN"
 		7: return "WARDEN" if not boss_defeated else "OPEN"
+		8: return "RELAY" if not completed else "OPEN"
 	return "OPEN"
 
 func current_objective() -> String:
@@ -195,13 +218,15 @@ func current_objective() -> String:
 	if not player.dash_unlocked: return "Cross Broken Span and recover Gale Dash."
 	if not boss_defeated: return "Break the Tide Warden's seal."
 	if not completed: return "Restore the Relay Archive."
-	return "Silent District relay restored."
+	if relay_fragments.size() < 3: return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
+	if not opened_kunai_gates.get("terrace_return_relay", false): return "Use Electric Kunai to open the Echo Shrine return."
+	return "Relay circuit restored. Return to Echo Shrine."
 
 func register_metsys_progress():
 	var progress = {
-		"guard_defeated": guard_defeated, "windstep": player.double_jump, 
-		"wind_tether": player.tether_unlocked, "gale_dash": player.dash_unlocked, 
-		"boss_defeated": boss_defeated, "secret_letter": secret, "relay_restored": completed, 
+		"guard_defeated": guard_defeated, "windstep": player.double_jump,
+		"wind_tether": player.tether_unlocked, "gale_dash": player.dash_unlocked,
+		"boss_defeated": boss_defeated, "secret_letter": secret, "relay_restored": completed,
 	}
 	for id in progress:
 		var token = RefCounted.new()
@@ -222,9 +247,9 @@ func apply_metsys_progress_flag(id: String):
 
 func store_metsys_progress():
 	var progress = {
-		"guard_defeated": guard_defeated, "windstep": player.double_jump, 
-		"wind_tether": player.tether_unlocked, "gale_dash": player.dash_unlocked, 
-		"boss_defeated": boss_defeated, "secret_letter": secret, "relay_restored": completed, 
+		"guard_defeated": guard_defeated, "windstep": player.double_jump,
+		"wind_tether": player.tether_unlocked, "gale_dash": player.dash_unlocked,
+		"boss_defeated": boss_defeated, "secret_letter": secret, "relay_restored": completed,
 	}
 	for id in progress:
 		if progress[id] and id in metsys_progress and not metsys.is_object_id_stored(StringName("silent_district/" + id)):
@@ -279,9 +304,14 @@ func spawn_enemy(at: Vector2, is_boss: bool, is_required: = false):
 	if is_required:
 		active_enemy = enemy
 		guard = enemy
+	return enemy
 
 func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 	enemies.erase(enemy)
+	var encounter_id = str(enemy.get_meta("persistent_id", ""))
+	if not encounter_id.is_empty():
+		cleared_encounters[encounter_id] = true
+		save_progress()
 	if active_enemy == enemy: active_enemy = null
 	if guard == enemy: guard = null
 	if is_boss:
@@ -290,6 +320,7 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 		announce("The Tide Warden breaks. The Relay Archive is open.", 7)
 	elif is_required:
 		guard_defeated = true
+		save_progress()
 		announce("The guard falls. Claim the Windstep scroll.", 5)
 
 func add_platform(rect: Rect2):
@@ -358,6 +389,7 @@ func on_strike(damage, reach):
 func spawn_dash_afterimage(texture, frame, at, flip_h):
 	afterimages_spawned += 1
 	var ghost = Sprite2D.new()
+	ghost.add_to_group("route_afterimage")
 	ghost.texture = texture
 	ghost.hframes = 8
 	ghost.frame = frame
@@ -375,10 +407,14 @@ func on_hurt():
 	if player.hp <= 0: call_deferred("respawn")
 
 func respawn():
+	transition = 0.0
+	pending_room = -1
+	pending_arrival = Vector2.INF
+	player.set_physics_process(true)
 	fall_recovering = false
 	player.hp = 3
 	build_room(checkpoint_room)
-	player.position = Vector2(220, 1298)
+	player.position = checkpoint_position
 	player.velocity = Vector2.ZERO
 	player.attack_time = 0
 	player.invulnerable = 1.5
@@ -393,16 +429,17 @@ func recover_from_fall():
 		respawn()
 		return
 	build_room(room)
-	player.position = Vector2(230, 1298)
+	player.position = left_exit_position() + Vector2(110, -2)
 	player.velocity = Vector2.ZERO
 	player.invulnerable = 1.2
 	camera.reset_smoothing()
 	fall_recovering = false
 	announce("The current pulls Kaze back to solid ground.", 3)
 
-func request_room(target):
+func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
+	pending_arrival = arrival
 	pending_from_room = room
 	pending_room = target
 	transition = 0.65
@@ -416,28 +453,31 @@ func can_enter(target):
 		announce("The broken span needs a Wind Tether.");return false
 	if room == 5 and target == 6 and not player.dash_unlocked:
 		announce("The storm gate needs Gale Dash.");return false
+	if room == 7 and target == 8 and not completed:
+		announce("Restore the Relay Archive before exploring its annexes.");return false
 	if room == 6 and target == 7 and not boss_defeated:
 		announce("The Tide Warden seals the archive.");return false
 	return true
 
 func left_exit_position() -> Vector2:
-	return Vector2(120, [1300, 1300, 1300, 850, 1300, 1080, 1300, 1090][room])
+	return Vector2(120, [1300, 1300, 1300, 850, 1300, 1080, 1300, 1090, 1090, 830][room])
 
 func right_exit_position() -> Vector2:
-	return Vector2(2440, [1300, 1300, 850, 1300, 1080, 1300, 1090, 1300][room])
+	return Vector2(2440, [1300, 1300, 850, 1300, 1080, 1300, 1090, 1300, 830, 830][room])
 
 func interact():
 	if transition > 0: return
 	if room == 0 and player.position.distance_to(Vector2(220, 1300)) < 95:
-		player.hp = 3;checkpoint_room = 0;save_progress();announce("Canal Haven restored. Journey saved.")
+		player.hp = 3;checkpoint_room = 0;checkpoint_position = Vector2(220, 1298);save_progress();announce("Canal Haven restored. Journey saved.")
 		return
 	if room == 3 and player.position.distance_to(Vector2(1320, 1300)) < 115:
-		player.hp = 3;checkpoint_room = 3;save_progress();announce("Echo Shrine awakened. Checkpoint saved.")
+		player.hp = 3;checkpoint_room = 3;checkpoint_position = Vector2(1320, 1298);save_progress();announce("Echo Shrine awakened. Checkpoint saved.")
 		return
 	if room == 7 and player.position.distance_to(Vector2(2200, 1300)) < 140:
-		completed = true;checkpoint_room = 7;save_progress()
+		completed = true;checkpoint_room = 7;checkpoint_position = Vector2(2200, 1298);save_progress()
 		announce("Relay restored. The Silent District route is open.", 15)
 		return
+	if extension.interact(self): return
 	if room > 0 and player.position.distance_to(left_exit_position()) < 105:
 		request_room(room - 1)
 	elif room < ROOM_COUNT - 1 and player.position.distance_to(right_exit_position()) < 105:
@@ -473,7 +513,8 @@ func _physics_process(dt):
 			var moving_east = target > pending_from_room
 			build_room(target)
 			var destination = left_exit_position() if moving_east else right_exit_position()
-			player.position = destination + Vector2(110 if moving_east else -140, -2)
+			player.position = destination + Vector2(110 if moving_east else -140, -2) if pending_arrival == Vector2.INF else pending_arrival
+			pending_arrival = Vector2.INF
 			player.velocity = Vector2.ZERO
 			camera.reset_smoothing()
 		if transition <= 0: player.set_physics_process(true)
@@ -496,26 +537,30 @@ func _physics_process(dt):
 	if room == 2 and not secret and player.position.distance_to(Vector2(2300, 830)) < 80:
 		secret = true;player.hp = 3;save_progress()
 		announce("Hidden letter: the next convoy leaves before dawn. Health restored.", 7)
+	extension.update_progress(self)
 	if player.position.y > 1510 and not fall_recovering:
 		call_deferred("recover_from_fall")
 	queue_redraw()
 
 func save_progress():
-	if test_mode: return
+	if test_mode: return true
 	store_metsys_progress()
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	if file == null:
-		announce("Could not save. Your current session can continue.");return
+		announce("Could not save. Your current session can continue.");return false
 	file.store_string(JSON.stringify({
-		"version": 4, "double_jump": player.double_jump, 
-		"tether_unlocked": player.tether_unlocked, "dash_unlocked": player.dash_unlocked, 
-		"kunai_unlocked": player.kunai_unlocked, "selected_kunai": player.selected_kunai, 
-		"opened_kunai_gates": opened_kunai_gates, 
-		"guard_defeated": guard_defeated, "boss_defeated": boss_defeated, 
-		"completed": completed, "secret": secret, "visited": visited, 
-		"checkpoint_room": checkpoint_room, 
-		"metsys": serialize_metsys_save(), 
+		"version": 5, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
+		"relay_fragments": relay_fragments, "cleared_encounters": cleared_encounters, "double_jump": player.double_jump,
+		"tether_unlocked": player.tether_unlocked, "dash_unlocked": player.dash_unlocked,
+		"kunai_unlocked": player.kunai_unlocked, "selected_kunai": player.selected_kunai,
+		"opened_kunai_gates": opened_kunai_gates,
+		"guard_defeated": guard_defeated, "boss_defeated": boss_defeated,
+		"completed": completed, "secret": secret, "visited": visited,
+		"checkpoint_room": checkpoint_room,
+		"metsys": serialize_metsys_save(),
 	}))
+	file.close()
+	return true
 
 func load_progress():
 	if not FileAccess.file_exists(save_path): return
@@ -528,6 +573,8 @@ func load_progress():
 	if saved_kunai is Dictionary:
 		for element in player.kunai_unlocked: player.kunai_unlocked[element] = bool(saved_kunai.get(element, false))
 	player.selected_kunai = data.get("selected_kunai", "wind")
+	if not player.selected_kunai in player.kunai_unlocked:
+		player.selected_kunai = "wind"
 	opened_kunai_gates = data.get("opened_kunai_gates", {})
 	if int(data.get("version", 0)) < 4 and player.double_jump: player.kunai_unlocked["wind"] = true
 	guard_defeated = data.get("guard_defeated", false)
@@ -535,6 +582,13 @@ func load_progress():
 	completed = data.get("completed", false)
 	secret = data.get("secret", false)
 	checkpoint_room = clampi(int(data.get("checkpoint_room", 0)), 0, ROOM_COUNT - 1)
+	var checkpoint_at = data.get("checkpoint_position", [220, 1298])
+	if checkpoint_at is Array and checkpoint_at.size() == 2:
+		checkpoint_position = Vector2(clampf(float(checkpoint_at[0]), 40, 2560), clampf(float(checkpoint_at[1]), 80, 1390))
+	var saved_fragments = data.get("relay_fragments", {})
+	if saved_fragments is Dictionary: relay_fragments = saved_fragments
+	var saved_encounters = data.get("cleared_encounters", {})
+	if saved_encounters is Dictionary: cleared_encounters = saved_encounters
 	var metsys_encoded = data.get("metsys", {})
 	if metsys_encoded is Dictionary and not metsys_encoded.is_empty(): restore_metsys_save(metsys_encoded)
 	var saved_visited = data.get("visited", visited)
@@ -599,6 +653,7 @@ func _draw():
 	elif room == 7:
 		draw_rect(Rect2(2140, 1080, 120, 220), Color("2e3c4f"));draw_rect(Rect2(2160, 1110, 80, 120), Color("9bc5a0"), false, 5)
 		draw_string(ThemeDB.fallback_font, Vector2(2080, 1035), "RELAY CONTROL", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("e6dcc4"))
+	extension.draw_room(self)
 	draw_string(ThemeDB.fallback_font, Vector2(980, 260), ROOM_NAMES[room], HORIZONTAL_ALIGNMENT_CENTER, 640, 32, Color(0.9, 0.84, 0.75, 0.55))
 
 func draw_tether_effect():
