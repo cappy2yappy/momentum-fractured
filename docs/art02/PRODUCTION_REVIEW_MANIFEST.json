@@ -1,0 +1,75 @@
+{
+  "assignment": "ART-02",
+  "date": "2026-10-13",
+  "approved_conditioned_commit": "59cf0d0bb440d7fa357c7c46a37acef3d5195936",
+  "generation_tool": "built-in image_gen for character art; unchanged source PNGs composed for comparison",
+  "sprite_animation_produced": false,
+  "artwork": [
+    {
+      "filename": "aria-conditioned-turnaround-review-v01.png",
+      "path": "assets/characters/aria/review/aria-conditioned-turnaround-review-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1975450,
+      "sha256": "177e6237b9343b552088f2b6f21b921b076fc8f530e2b110a43e70625d2f1e38",
+      "git_blob_sha": "f48e0e93df10899639562f5f65686633e277a993",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "aria-normal-turnaround-review-v02.png",
+      "path": "assets/characters/aria/review/aria-normal-turnaround-review-v02.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1884375,
+      "sha256": "1511bee1a2bfbe9284b91cb653502eded830161c86594e499d3ac48c0ac12c24",
+      "git_blob_sha": "84f0dc256c269d7197ae1b32c31c9f06fc401ff8",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "aria-air-combat-review-v01.png",
+      "path": "assets/characters/aria/review/aria-air-combat-review-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1929121,
+      "sha256": "17a9d56d2d511ee20c967305301201e9e7a186ea5066d17389331df6d9c81c79",
+      "git_blob_sha": "0fc990b213c4514d11cc6f338211abc72f6c7dbf",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "kenji-active-kaze-concepts-review-v01.png",
+      "path": "assets/characters/kenji/review/kenji-active-kaze-concepts-review-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2024866,
+      "sha256": "3e4a7dcac78a427779689f36566709b039a0a5244a49f6bcd57748ecb34941e9",
+      "git_blob_sha": "8936fd833f5dcc5cbb2e3df5e38b0a731e1d81fe",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "kenji-locs-concepts-review-v02.png",
+      "path": "assets/characters/kenji/review/kenji-locs-concepts-review-v02.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2006396,
+      "sha256": "cdf7974f75e96a1f6e15b62fcd036bd59a46192f28fd463706f78d0537a70d22",
+      "git_blob_sha": "90f8cf488f9d753fdb603704a0ab7b98bc65021a",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "kaze-aria-source-comparison-review.png",
+      "path": "assets/characters/aria/review/kaze-aria-source-comparison-review.png",
+      "width": 1080,
+      "height": 920,
+      "bytes": 433096,
+      "sha256": "da5ce3c8a0ef242f21ad5f3c85d393df35523051e6b6594bf33b3b059843f39e",
+      "git_blob_sha": "bdc0a9beb5297043231500920c03c4dfc22532a4",
+      "status": "creator_review_pending",
+      "runtime_integrated": false
+    }
+  ]
+}
