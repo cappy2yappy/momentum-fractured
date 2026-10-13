@@ -1,4 +1,4 @@
-# Alpha 0.6 shared movement contract — MV-01 contribution
+# Alpha 0.6 shared movement contract ΓÇö MV-01 contribution
 
 Status: measured baseline + tested mechanical prototype; pending LD-01 review and integration. Common starting commit **0bf37e19ef3498386b133ed5d41e32788c2609d6**, restored-size Alpha 0.5.2, not historical main. MV-01 branch `feature/alpha-0.6-momentum`. No LD-01 branch was merged and no room/anchor placement was edited.
 
@@ -7,12 +7,12 @@ Exchange this document and its supporting docs through the dedicated documentati
 | Contract item | Measured / proposed / implementation |
 | --- | --- |
 | Baseline speed | measured walk400, run600; ground accel/brake2600; air1200 |
-| Vertical reach | measured full jump232.5643; scripted double jump464.5643; recommend ≥470 px plus collision margin for a bare double-jump clearance test, not a global lock |
+| Vertical reach | measured full jump232.5643; scripted double jump464.5643; recommend ΓëÑ470 px plus collision margin for a bare double-jump clearance test, not a global lock |
 | Dash | measured 168.6667 px in12 sampled ticks; source920 px/s,0.18 s,0.58 cooldown; repeated air dashes not charge-limited in this controller |
-| Grapple | original80–400; prototype80–440 radial, configurable upper hard bound480; forward projection≥-100, anchor≥35 above hand, airborne |
+| Grapple | original80ΓÇô400; prototype80ΓÇô440 radial, configurable upper hard bound480; forward projectionΓëÑ-100, anchorΓëÑ35 above hand, airborne |
 | Swing | hand offset(0,-55); pump130; gravity1800; exact release preserved; 60px body/14px radius clearance |
 | Upgrade | tested explicit stride_1, walk420/run630; no autoaward or new pickup yet |
-| Meter | opt-in;0–1; run gain0.12/s above360 real travel; decay0.18/0.45; dash/tether reward0.08 with travel/time/technique guards; damage-0.5 |
+| Meter | opt-in;0ΓÇô1; run gain0.12/s above360 real travel; decay0.18/0.45; dash/tether reward0.08 with travel/time/technique guards; damage-0.5 |
 | Intended sprint target cap | 600/630 atzero;636/667.8 atfull meter; inherited momentum can exceed target |
 | Anchor objects | optional grapple_anchor.gd Node2D, enabled/attachment_offset/required_ability; legacy vectors remain; world gathers only descendant objects |
 | Obstruction | initial layer1 ray check; body collision releases; no rope wrapping; exposed object attachment required |
@@ -28,8 +28,8 @@ Unlock flags: `double_jump` (Market reward), `tether_unlocked` (Echo Shrine), `d
 | relay_electric_seal, room7 | 30px wide,300px tall at(2000,1300). Relay interaction at(2200,1300) checks proximity only, not opened state. Existing state-protection gap: reaching the far side can restore the relay without opening the Electric seal. Coordinate-seeded audit reproduces this; a complete live traversal bypass remains untested. |
 | terrace_fire_cache, room9 | 280px tall at(2110,810); fragment explicitly checks opened-state, so jumping to its coordinates cannot collect it. |
 | terrace_return_relay, room9 | Electric,280px at(360,620); portal interaction checks opened-state both directions. |
-| skyworks_wind_intake, room10 | Wind,280px at(2110,810); room10→11 transition checks opened-state. |
-| foundry_electric_relay, room11 | Electric,300px at(2370,760); room11→12 checks opened-state. |
+| skyworks_wind_intake, room10 | Wind,280px at(2110,810); room10ΓåÆ11 transition checks opened-state. |
+| foundry_electric_relay, room11 | Electric,300px at(2370,760); room11ΓåÆ12 checks opened-state. |
 
 Existing ability transitions separately check Windstep, tether, dash, boss defeat, restored archive and three sigils. No movement upgrade changes those flags. Wind/Fire/Electric projectile resolution accepts matching element only; wrong elements retain the barrier. Existing automated projectile/state checks were rerun.
 
