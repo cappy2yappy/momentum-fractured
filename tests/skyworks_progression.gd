@@ -23,7 +23,7 @@ func _run():
 	current_scene = world
 	world.set_physics_process(false)
 	freeze()
-	check(world.ROOM_COUNT == 13, "SkyWorks expands the accepted route to thirteen rooms")
+	check(world.ROOM_COUNT == 21, "SkyWorks remains in the expanded twenty-one-room world")
 	for index in 13:
 		world.build_room(index)
 		freeze()
