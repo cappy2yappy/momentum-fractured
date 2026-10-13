@@ -1,0 +1,16 @@
+{
+  "character": "Aria Zephyros",
+  "date": "2026-10-13",
+  "approval_status": "creator_approved",
+  "creator_approval": "better approved",
+  "path": "assets/characters/aria/concepts/aria-conditioned-approved-v01.png",
+  "bytes": 2013492,
+  "width": 1536,
+  "height": 1024,
+  "sha256": "56d1621431af6b93b72618e72aace25ef650aa2033e37f18cdd6785b6804ae26",
+  "git_blob_sha": "fdc85eb38baa2571605feae94ab453b2e7acfd9d",
+  "format": "opaque PNG concept board",
+  "interface": "hairline band following temples and looping behind ears",
+  "runtime_integrated": false,
+  "animation_production_authorized": false
+}
