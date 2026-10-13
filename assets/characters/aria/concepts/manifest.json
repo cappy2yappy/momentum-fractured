@@ -1,0 +1,36 @@
+{
+  "project": "Momentum Fractured / Kaze",
+  "assignment": "ART-02",
+  "character": "Aria Zephyros",
+  "date": "2026-10-13",
+  "development_baseline": "34be30436996284ec2f783269c40269d321ed427",
+  "generated_with": "built-in image_gen",
+  "assets": [
+    {
+      "path": "assets/characters/aria/concepts/aria-approved-concept-v01.png",
+      "bytes": 1602496,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dd9c0ad63515b3fda528c4f0696730025576ccdda0ddf1e002a44ed750b70a13",
+      "git_blob_sha": "52df5bb839410a7203ca61765587fc420a1c6154",
+      "approval_status": "creator_approved",
+      "format": "PNG",
+      "purpose": "art_development_reference",
+      "runtime_integrated": false
+    },
+    {
+      "path": "assets/characters/aria/concepts/aria-model-sheet-review-v01.png",
+      "bytes": 1939820,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "bda20f55c36153e6ed28b08468a5202f1b43f77d481e9735e952cfc74d0036d3",
+      "git_blob_sha": "ca541c5d3593435b41343a7ce50358c074ecf681",
+      "approval_status": "turnaround_review_pending",
+      "format": "PNG",
+      "purpose": "art_development_reference",
+      "runtime_integrated": false
+    }
+  ],
+  "production_status": "concepts only; sprite scope and shared scale pending",
+  "reference_correction": "Early style exploration used historical main art. Review against active assets/kaze/cleaned before sprite production."
+}
