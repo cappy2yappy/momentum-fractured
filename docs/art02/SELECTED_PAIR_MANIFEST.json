@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-13",
+  "creator_selection": "Aria and Kenji K4 Street Ember",
+  "generation_tool": "built-in image_gen",
+  "sprite_animation_produced": false,
+  "assets": [
+    {
+      "filename": "kenji-k4-turnaround-review-v01.png",
+      "path": "assets/characters/kenji/review/kenji-k4-turnaround-review-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1940100,
+      "sha256": "ac52246f577ec1a8c297b7d8a3be61186f2036ac0f21f9824619934b34751f97",
+      "git_blob_sha": "30b247a958a99857e42069264682d06f26c44cd0",
+      "status": "model_expression_review_pending",
+      "runtime_integrated": false
+    },
+    {
+      "filename": "aria-expression-review-v01.png",
+      "path": "assets/characters/aria/review/aria-expression-review-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2091468,
+      "sha256": "1bb0ffbe29d230706a2c4b33c865e0c5cf3ed71980813e3a4fd87d41a1b5db75",
+      "git_blob_sha": "91327406a6398b77eed716ffcfb103ed4e8347f7",
+      "status": "model_expression_review_pending",
+      "runtime_integrated": false
+    }
+  ]
+}
