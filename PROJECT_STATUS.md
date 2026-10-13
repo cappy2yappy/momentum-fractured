@@ -1,3 +1,19 @@
+# Current DEV-06 status — 2026-10-13 UTC
+
+Alpha 0.6 World Expansion & Momentum: **candidate implemented; creator acceptance pending**.
+
+21 connected rooms; MV-01 preserved; LD-01 integrated; seal-state fixes, named sigil protections, permanent Stride I, checkpoint/shortcut persistence and atlas are implemented. Temporary meter is opt-in. See docs/alpha_0_6/INTEGRATION_REPORT.md, WORLD_IMPLEMENTATION_REPORT.md, QA_RESULTS.md and ART_ASSET_BACKLOG.md for current evidence.
+
+Release blockers: fresh-save full campaign/alternate-route playthrough, subjective 440-pixel grapple/+5% speed review, collision/bypass/softlock sweep at base/upgraded/full-meter states, 60 FPS hardware measurement, placeholder environment/art completion as required by milestone acceptance. Source suites and seeded transition/jump checks do not replace these.
+
+Next action: creator Windows playtest, starting with a backed-up existing save or a clean test profile; review roof/underground loops and ordinary ascent. Record exact room, approach, ability flags and observed issue. Keep optional meter disabled for baseline review; compare a separate launch with --momentum-prototype. No new bosses were commissioned in this integration assignment.
+
+CLI publication authentication failed; connected GitHub fallback preserves a matching remote tree with different file-commit SHAs. Final PM report records verified remote head/PR/build identifiers. Windows export is the available target; macOS templates/toolchain are absent.
+
+---
+
+The following historical record is preserved unchanged for provenance:
+
 # Kaze — approved Alpha 0.5 continuation
 
 > Historical build record from October 11. For the current approved source branch and sprite selection, see [CANONICAL_BASELINE.md](docs/CANONICAL_BASELINE.md) and [REPOSITORY_GUIDE.md](docs/REPOSITORY_GUIDE.md). The October 12 review verified browser access to the canonical demo; older benchmark-access statements below describe the earlier environment.
