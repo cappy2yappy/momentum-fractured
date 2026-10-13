@@ -1,0 +1,80 @@
+{
+  "engine": "Godot 4.6.1.stable.official.14d19694e",
+  "platform": "Windows headless, 60 physics ticks",
+  "suites": [
+    {
+      "suite": "approved_baseline",
+      "pass_assertions": 32,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "approved_combat_swing",
+      "pass_assertions": 7,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "annex_expansion",
+      "pass_assertions": 34,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "annex_traversal",
+      "pass_assertions": 6,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "save_compatibility",
+      "pass_assertions": 11,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "skyworks_progression",
+      "pass_assertions": 33,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "storm_keeper",
+      "pass_assertions": 12,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "sprite_integration",
+      "pass_assertions": 43,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "movement_momentum",
+      "pass_assertions": 53,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "world_expansion",
+      "pass_assertions": 193,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "expansion_gates_save",
+      "pass_assertions": 17,
+      "failed_assertions": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "expansion_traversal",
+      "pass_assertions": 115,
+      "failed_assertions": 0,
+      "script_errors": 0
+    }
+  ],
+  "render_fps": null,
+  "full_campaign_playthrough": false
+}
