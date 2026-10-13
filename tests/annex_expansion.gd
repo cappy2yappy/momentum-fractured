@@ -25,6 +25,7 @@ func _run():
 	world.build_room(7)
 	check(not world.can_enter(8), "Annexes await original relay completion")
 	world.player.position = Vector2(2200, 1300)
+	world.opened_kunai_gates["relay_electric_seal"] = true
 	world.interact()
 	check(world.completed and world.can_enter(8), "Original relay now opens the annex route")
 	world.player.double_jump = true

@@ -7,26 +7,33 @@ const Hud = preload("res://scripts/hud.gd")
 const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 
 const Extension = preload("res://scripts/route_extension.gd")
-const ROOM_COUNT = 13
+const Expansion = preload("res://scripts/world_expansion.gd")
+const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
 	"BROKEN SPAN", "ASCENT TOWER", "TIDE WARDEN", "RELAY ARCHIVE",
 	"RELAY UNDERCROFT", "SIGNAL TERRACE",
 	"SKYWORKS APPROACH", "STORM FOUNDRY", "KEEPER RELAY",
+	"MOORING LOFT", "BELLROOF WALK", "LOWER SLUICE", "ROOT SHRINE",
+	"COUNTERWEIGHT SPIRE", "PUMP GALLERY", "COIL SERVICE HALL", "RELAY JUNCTION",
 ]
 const ROOM_COLORS = [
 	Color("211e32"), Color("2b2030"), Color("172a35"), Color("29233b"),
 	Color("182837"), Color("242139"), Color("241c2d"), Color("1d2934"),
 	Color("202939"), Color("29243a"),
 	Color("283442"), Color("39283a"), Color("28283e"),
+	Color("292434"),Color("302b3b"),Color("1b2a30"),Color("26352e"),
+	Color("282c39"),Color("30352e"),Color("30313f"),Color("29372f"),
 ]
 const ROOM_MAP_COORDS = [
 	Vector3i(0, 2, 0), Vector3i(1, 2, 0), Vector3i(2, 2, 0), Vector3i(2, 1, 0),
 	Vector3i(3, 1, 0), Vector3i(4, 1, 0), Vector3i(4, 0, 0), Vector3i(5, 0, 0),
 	Vector3i(5, 1, 0), Vector3i(6, 1, 0),
 	Vector3i(6, 0, 0), Vector3i(7, 0, 0), Vector3i(7, 1, 0),
+	Vector3i(-1,2,0),Vector3i(-1,1,0),Vector3i(2,3,0),Vector3i(3,3,0),
+	Vector3i(4,2,0),Vector3i(4,3,0),Vector3i(5,3,0),Vector3i(5,2,0),
 ]
-const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP", "ECHO WORKS", "STORM KEEP", "SKYWORKS", "SKYWORKS", "SKYWORKS"]
+const ROOM_REGIONS = ["CANAL WARD", "CANAL WARD", "CANAL WARD", "ECHO WORKS", "ECHO WORKS", "ECHO WORKS", "STORM KEEP", "STORM KEEP", "ECHO WORKS", "STORM KEEP", "SKYWORKS", "SKYWORKS", "SKYWORKS", "CANAL WARD", "CANAL WARD", "CANAL WARD", "ROOT CONSERVATORY", "ECHO WORKS", "ROOT CONSERVATORY", "SKYWORKS", "ROOT CONSERVATORY"]
 
 var save_path = "user://silent_district_alpha_v3.json"
 var player
@@ -38,7 +45,9 @@ var opened_kunai_gates: Dictionary = {}
 var camera = Camera2D.new()
 var geometry = Node2D.new()
 var room = 0
-var visited = [true, false, false, false, false, false, false, false, false, false, false, false, false]
+var visited = [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+var expansion = Expansion.new()
+var expansion_flags: Dictionary = {}
 var guard_defeated = false
 var boss_defeated = false
 var completed = false
@@ -92,6 +101,7 @@ func _ready():
 	hud.world = self
 	layer.add_child(hud)
 	if not test_mode: load_progress()
+	player.momentum.enabled = "--momentum-prototype" in OS.get_cmdline_user_args() or "--momentum" in OS.get_cmdline_user_args()
 	register_metsys_progress()
 	build_room(checkpoint_room)
 	player.position = checkpoint_position
@@ -132,8 +142,10 @@ func build_room(index):
 	platforms.clear()
 	tether_anchors.clear()
 	kunai_gates.clear()
-	for rect in [Rect2(-40, 0, 40, 1440), Rect2(2600, 0, 40, 1440)]: add_platform(rect)
-	var floor_segments = [Rect2(0, 1300, 2600, 140)]
+	var bounds = room_size(room)
+	camera.limit_right = int(bounds.x);camera.limit_bottom = int(bounds.y)
+	for rect in [Rect2(-40, 0, 40, bounds.y), Rect2(bounds.x, 0, 40, bounds.y)]: add_platform(rect)
+	var floor_segments = [Rect2(0, bounds.y - 140, bounds.x, 140)]
 	if room == 2:
 		floor_segments = [Rect2(0, 1300, 640, 140), Rect2(930, 1300, 420, 140), Rect2(1680, 1300, 520, 140), Rect2(2380, 1300, 220, 140)]
 	elif room == 4:
@@ -177,7 +189,23 @@ func build_room(index):
 			create_kunai_gate("relay_electric_seal", "electric", Vector2(2000, 1300), 300)
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
+	expansion.build_room(self,room)
 	queue_redraw()
+
+func room_size(index: int) -> Vector2:
+	return Expansion.SIZES.get(index,Vector2(2600,1440))
+
+func has_required_sigils() -> bool:
+	for id in ["undercroft_sigil","terrace_west","terrace_fire_cache"]:
+		if not relay_fragments.get(id,false): return false
+	return true
+
+func world_edges() -> Array:
+	var edges = []
+	for i in 12: edges.append([i,i+1])
+	edges.append([3,9]);edges.append([8,12])
+	for e in Expansion.EDGES: edges.append([e.a,e.b])
+	return edges
 
 func reset_room_actions():
 	player.release_tether()
@@ -192,8 +220,9 @@ func sync_metsys_room(index: int):
 	metsys.current_layer = coords.z
 	metsys.visit_cell(coords)
 	metsys.last_player_position = coords
-	if index > 0: metsys.discover_cell(ROOM_MAP_COORDS[index - 1])
-	if index < ROOM_COUNT - 1: metsys.discover_cell(ROOM_MAP_COORDS[index + 1])
+	for edge in world_edges():
+		if edge[0] == index: metsys.discover_cell(ROOM_MAP_COORDS[edge[1]])
+		elif edge[1] == index: metsys.discover_cell(ROOM_MAP_COORDS[edge[0]])
 
 func room_discovery_level(index: int) -> int:
 	if not metsys.save_data: return 2 if visited[index] else 0
@@ -215,7 +244,7 @@ func gate_label(target_room: int) -> String:
 		6: return "GALE DASH" if not player.dash_unlocked else "OPEN"
 		7: return "WARDEN" if not boss_defeated else "OPEN"
 		8: return "RELAY" if not completed else "OPEN"
-		10: return "3 SIGILS" if relay_fragments.size() < 3 else "OPEN"
+		10: return "3 SIGILS" if not has_required_sigils() else "OPEN"
 		11: return "WIND" if not opened_kunai_gates.get("skyworks_wind_intake", false) else "OPEN"
 		12: return "ELECTRIC" if not opened_kunai_gates.get("foundry_electric_relay", false) else "OPEN"
 	return "OPEN"
@@ -226,7 +255,7 @@ func current_objective() -> String:
 	if not player.dash_unlocked: return "Cross Broken Span and recover Gale Dash."
 	if not boss_defeated: return "Break the Tide Warden's seal."
 	if not completed: return "Restore the Relay Archive."
-	if relay_fragments.size() < 3: return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
+	if not has_required_sigils(): return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
 	if room == 10 and not opened_kunai_gates.get("skyworks_wind_intake", false): return "Use Wind Kunai to release the intake seal."
 	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Refuge. Open the Electric relay."
 	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
@@ -302,6 +331,12 @@ func spawn_enemy(at: Vector2, is_boss: bool, is_required: = false, enemy_script 
 	enemy.position = at
 	enemy.home = at.x
 	enemy.is_required = is_required
+	if not is_boss:
+		for surface in platforms:
+			if absf(surface.position.y-at.y)<2 and at.x>surface.position.x and at.x<surface.end.x:
+				enemy.patrol_min = surface.position.x+45
+				enemy.patrol_max = surface.end.x-45
+				break
 	if is_boss:
 		enemy.is_boss = true
 		enemy.hp = 14
@@ -343,6 +378,10 @@ func add_platform(rect: Rect2):
 	var shape = CollisionShape2D.new()
 	var box = RectangleShape2D.new();box.size = rect.size
 	shape.shape = box;shape.position = rect.get_center()
+	# New service ledges allow upward passage; perimeter and recovery floors stay solid.
+	if room >= 13 and rect.size.y == 40 and rect.position.x >= 0:
+		shape.one_way_collision = true
+		shape.one_way_collision_margin = 8.0
 	body.add_child(shape);geometry.add_child(body)
 
 func create_kunai_gate(id: String, element: String, at: Vector2, height: float):
@@ -470,7 +509,7 @@ func can_enter(target):
 		announce("The storm gate needs Gale Dash.");return false
 	if room == 7 and target == 8 and not completed:
 		announce("Restore the Relay Archive before exploring its annexes.");return false
-	if room == 9 and target == 10 and relay_fragments.size() < 3:
+	if room == 9 and target == 10 and not has_required_sigils():
 		announce("Recover all three relay sigils to power the SkyWorks lift.");return false
 	if room == 10 and target == 11 and not opened_kunai_gates.get("skyworks_wind_intake", false):
 		announce("Use Wind Kunai to release the intake seal.");return false
@@ -478,12 +517,18 @@ func can_enter(target):
 		announce("Use Electric Kunai to open the Foundry relay.");return false
 	if room == 6 and target == 7 and not boss_defeated:
 		announce("The Tide Warden seals the archive.");return false
+	if room >= 13 or target >= 13:
+		for portal in expansion.portals(room):
+			if portal.target == target: return expansion.allowed(self,portal.need)
+		return false
 	return true
 
 func left_exit_position() -> Vector2:
+	if room >= 13: return expansion.portals(room)[0].at
 	return Vector2(120, [1300, 1300, 1300, 850, 1300, 1080, 1300, 1090, 1090, 830, 830, 760, 1300][room])
 
 func right_exit_position() -> Vector2:
+	if room >= 13: return expansion.portals(room)[-1].at
 	return Vector2(2440, [1300, 1300, 850, 1300, 1080, 1300, 1090, 1300, 830, 830, 760, 1300, 1300][room])
 
 func interact():
@@ -495,13 +540,17 @@ func interact():
 		player.hp = 3;checkpoint_room = 3;checkpoint_position = Vector2(1320, 1298);save_progress();announce("Echo Shrine awakened. Checkpoint saved.")
 		return
 	if room == 7 and player.position.distance_to(Vector2(2200, 1300)) < 140:
+		if not opened_kunai_gates.get("relay_electric_seal", false):
+			announce("Open the Electric archive seal before restoring the relay.");return
 		completed = true;checkpoint_room = 7;checkpoint_position = Vector2(2200, 1298);save_progress()
 		announce("Relay restored. The Silent District route is open.", 15)
 		return
+	if expansion.interact(self): return
 	if extension.interact(self): return
+	if room >= 13: return
 	if room > 0 and player.position.distance_to(left_exit_position()) < 105:
 		request_room(room - 1)
-	elif room < ROOM_COUNT - 1 and player.position.distance_to(right_exit_position()) < 105:
+	elif room < 12 and player.position.distance_to(right_exit_position()) < 105:
 		request_room(room + 1)
 
 func grapple_candidates() -> Array[Vector2]:
@@ -566,11 +615,12 @@ func _physics_process(dt):
 	if room == 5 and not player.kunai_unlocked["electric"] and player.position.distance_to(Vector2(1510, 890)) < 105:
 		player.unlock_kunai("electric");save_progress()
 		announce("ELECTRIC KUNAI — Blue relay seals can now be opened.", 8)
-	if room == 2 and not secret and player.position.distance_to(Vector2(2300, 830)) < 80:
+	if room == 2 and not secret and opened_kunai_gates.get("cistern_wind_cache", false) and player.position.distance_to(Vector2(2300, 830)) < 80:
 		secret = true;player.hp = 3;save_progress()
 		announce("Hidden letter: the next convoy leaves before dawn. Health restored.", 7)
 	extension.update_progress(self)
-	if player.position.y > 1510 and not fall_recovering:
+	expansion.update(self,dt)
+	if player.position.y > room_size(room).y + 70 and not fall_recovering:
 		call_deferred("recover_from_fall")
 	queue_redraw()
 
@@ -581,7 +631,7 @@ func save_progress():
 	if file == null:
 		announce("Could not save. Your current session can continue.");return false
 	file.store_string(JSON.stringify({
-		"version": 7, "speed_upgrade_level": player.speed_upgrade_level, "skyworks_restored": skyworks_restored, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
+		"version": 8, "expansion_flags": expansion_flags, "speed_upgrade_level": player.speed_upgrade_level, "skyworks_restored": skyworks_restored, "checkpoint_position": [checkpoint_position.x, checkpoint_position.y],
 		"relay_fragments": relay_fragments, "cleared_encounters": cleared_encounters, "double_jump": player.double_jump,
 		"tether_unlocked": player.tether_unlocked, "dash_unlocked": player.dash_unlocked,
 		"kunai_unlocked": player.kunai_unlocked, "selected_kunai": player.selected_kunai,
@@ -598,6 +648,7 @@ func load_progress():
 	if not FileAccess.file_exists(save_path): return
 	var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
 	if not data is Dictionary or int(data.get("version", 0)) < 1: return
+	expansion_flags = data.get("expansion_flags", {}) if data.get("expansion_flags", {}) is Dictionary else {}
 	player.restore_speed_upgrade(data.get("speed_upgrade_level", 0))
 	player.momentum.reset()
 	player.double_jump = data.get("double_jump", false)
@@ -619,7 +670,7 @@ func load_progress():
 	checkpoint_room = clampi(int(data.get("checkpoint_room", 0)), 0, ROOM_COUNT - 1)
 	var checkpoint_at = data.get("checkpoint_position", [220, 1298])
 	if checkpoint_at is Array and checkpoint_at.size() == 2:
-		checkpoint_position = Vector2(clampf(float(checkpoint_at[0]), 40, 2560), clampf(float(checkpoint_at[1]), 80, 1390))
+		checkpoint_position = Vector2(clampf(float(checkpoint_at[0]), 40, room_size(checkpoint_room).x-40), clampf(float(checkpoint_at[1]), 80, room_size(checkpoint_room).y-50))
 	var saved_fragments = data.get("relay_fragments", {})
 	if saved_fragments is Dictionary: relay_fragments = saved_fragments
 	var saved_encounters = data.get("cleared_encounters", {})
@@ -634,11 +685,13 @@ func load_progress():
 
 func _draw():
 	if not is_instance_valid(player): return
-	draw_rect(Rect2(0, 0, 2600, 1440), ROOM_COLORS[room])
-	draw_texture_rect(DistrictBackground, Rect2(0, 0, 2600, 1440), false, Color(0.72, 0.7, 0.86, 0.92))
-	draw_rect(Rect2(0, 0, 2600, 1440), Color(ROOM_COLORS[room], 0.18))
+	draw_rect(Rect2(Vector2.ZERO,room_size(room)), ROOM_COLORS[room])
+	draw_texture_rect(DistrictBackground, Rect2(Vector2.ZERO,room_size(room)), false, Color(0.72, 0.7, 0.86, 0.92))
+	draw_rect(Rect2(Vector2.ZERO,room_size(room)), Color(ROOM_COLORS[room], 0.18))
+	if room in [15,16,18,19]:
+		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
 	for rect in platforms:
-		if rect.position.x < 0 or rect.position.x >= 2600: continue
+		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
 		draw_rect(rect, Color("252631"))
 		draw_rect(Rect2(rect.position, Vector2(rect.size.x, 7)), Color("aaa18b"))
 		draw_rect(Rect2(rect.position + Vector2(0, 7), Vector2(rect.size.x, 9)), Color("54535c"))
@@ -655,7 +708,7 @@ func _draw():
 		for rect in [Rect2(450, 1260, 550, 180), Rect2(1280, 1260, 770, 180)]: draw_water(rect)
 	elif room == 5:
 		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(rect)
-	for anchor in tether_anchors:
+	for anchor in grapple_candidates():
 		var in_range = player.tether_unlocked and player.can_tether_anchor(anchor)
 		var pulse = 3.0 + sin(player.age * 7.0) * 2.0 if in_range else 0.0
 		draw_circle(anchor, 25 + pulse, Color(0.68, 0.9, 0.57, 0.12 if in_range else 0.07))
@@ -665,8 +718,8 @@ func _draw():
 		draw_line(anchor - Vector2(0, 12), anchor + Vector2(0, 12), Color("d5ffb4"), 2)
 	if tether_effect_time > 0:
 		draw_tether_effect()
-	if room > 0: draw_door(left_exit_position())
-	if room < ROOM_COUNT - 1: draw_door(right_exit_position())
+	if room > 0 and room < 13: draw_door(left_exit_position())
+	if room < 12: draw_door(right_exit_position())
 	if room == 0:
 		draw_rect(Rect2(190, 1256, 60, 44), Color("63516e"));draw_circle(Vector2(220, 1237), 18, Color("c8d69f"))
 		draw_string(ThemeDB.fallback_font, Vector2(105, 1185), "CANAL HAVEN", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("e6dcc4"))
@@ -689,6 +742,7 @@ func _draw():
 		draw_rect(Rect2(2140, 1080, 120, 220), Color("2e3c4f"));draw_rect(Rect2(2160, 1110, 80, 120), Color("9bc5a0"), false, 5)
 		draw_string(ThemeDB.fallback_font, Vector2(2080, 1035), "RELAY CONTROL", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("e6dcc4"))
 	extension.draw_room(self)
+	expansion.draw_room(self)
 	draw_string(ThemeDB.fallback_font, Vector2(980, 260), ROOM_NAMES[room], HORIZONTAL_ALIGNMENT_CENTER, 640, 32, Color(0.9, 0.84, 0.75, 0.55))
 
 func draw_tether_effect():

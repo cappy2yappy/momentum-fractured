@@ -15,6 +15,8 @@ var timer = 0.0
 var facing = -1
 var strike_done = false
 var home = 1100.0
+var patrol_min = -INF
+var patrol_max = INF
 var sprite = Sprite2D.new()
 func _ready():
 	add_child(sprite)
@@ -46,7 +48,7 @@ func _physics_process(dt):
 		if absf(distance.x) < attack_range and absf(distance.y) < 80:
 			state = "windup";timer = 0.48
 		elif absf(distance.x) < chase_distance:
-			position.x = clampf(position.x + facing * move_speed * dt, home - 350, home + 350)
+			position.x = clampf(position.x + facing * move_speed * dt, maxf(home - 350,patrol_min), minf(home + 350,patrol_max))
 	sprite.flip_h = facing < 0
 	sprite.modulate = Color("d9dd99") if state == "stunned" else Color.WHITE
 	if is_boss:

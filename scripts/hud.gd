@@ -133,7 +133,7 @@ func _draw():
 			label(Vector2(82, 126), "MetSys survey · rooms reveal as Kaze explores", 17, Color("9ca9b7"))
 			draw_rect(Rect2(70, 145, 820, 415), Color(0.055, 0.055, 0.085, 0.92))
 			draw_rect(Rect2(920, 145, 290, 415), Color(0.055, 0.055, 0.085, 0.92))
-			draw_map(Vector2(92, 185), Vector2(84, 72), true)
+			draw_map(Vector2(92, 185), Vector2(76, 72), true)
 			var explored = world.explored_room_count()
 			label(Vector2(945, 184), "DISTRICT SURVEY", 18, Color("c9f29d"))
 			label(Vector2(945, 220), "%d / %d rooms explored" % [explored, world.ROOM_COUNT], 18)
@@ -168,10 +168,10 @@ func _draw():
 func map_room_rect(origin: Vector2, cell_size: Vector2, index: int, show_labels: bool) -> Rect2:
 	var coords: Vector3i = world.ROOM_MAP_COORDS[index]
 	var gap = Vector2(12, 12) if show_labels else Vector2(3, 3)
-	return Rect2(origin + Vector2(coords.x, coords.y) * (cell_size + gap), cell_size)
+	return Rect2(origin + Vector2(coords.x+1, coords.y) * (cell_size + gap), cell_size)
 
 func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
-	for index in range(1, world.ROOM_COUNT):
+	for index in range(1, 13):
 		var previous_level = world.room_discovery_level(index - 1)
 		var level = world.room_discovery_level(index)
 		if previous_level == 0 or level == 0: continue
@@ -179,6 +179,11 @@ func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
 		var to = map_room_rect(origin, cell_size, index, show_labels).get_center()
 		var gate = world.gate_label(index)
 		draw_line(from, to, Color("7fbc8a") if gate == "OPEN" else Color("b88b66"), 5 if show_labels else 2)
+	for edge in world.Expansion.EDGES:
+		if world.room_discovery_level(edge.a)==0 or world.room_discovery_level(edge.b)==0: continue
+		var a=map_room_rect(origin,cell_size,edge.a,show_labels).get_center()
+		var b=map_room_rect(origin,cell_size,edge.b,show_labels).get_center()
+		draw_line(a,b,Color("7fbc8a") if world.expansion.allowed(world,edge.need) else Color("b88b66"),3 if show_labels else 1)
 	draw_return_link(origin, cell_size, show_labels)
 	for index in world.ROOM_COUNT:
 		var level = world.room_discovery_level(index)
@@ -201,7 +206,7 @@ func draw_map(origin: Vector2, cell_size: Vector2, show_labels: bool):
 			if index == 6 and not world.boss_defeated: draw_circle(rect.position + Vector2(rect.size.x - 12, 12), 6, Color("df8c83"))
 			if index == 7: draw_rect(Rect2(rect.position + Vector2(rect.size.x - 17, 7), Vector2(10, 10)), Color("9bc5a0"), false, 2)
 	if show_labels:
-		for index in range(1, world.ROOM_COUNT):
+		for index in range(1, 13):
 			var gate = world.gate_label(index)
 			if gate == "OPEN" or world.room_discovery_level(index-1) == 0 or world.room_discovery_level(index) == 0: continue
 			var start = map_room_rect(origin,cell_size,index-1,show_labels).get_center()
