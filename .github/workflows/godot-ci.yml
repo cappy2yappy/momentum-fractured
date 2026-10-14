@@ -1,0 +1,114 @@
+name: Kaze Alpha 0.6.1 QA and Builds
+on:
+  pull_request:
+    branches: ['integration/candidate-alpha-0.6.1-gp-ld']
+    paths-ignore: ['docs/**', '*.md']
+  workflow_dispatch:
+    inputs:
+      build_artifacts:
+        description: Export Windows and macOS playtest packages
+        type: boolean
+        default: true
+      negative_probe:
+        description: Intentionally fail after proving validation rejects bad input
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: kaze-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  qa-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      SOURCE_BRANCH: ${{ github.head_ref || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Source identifier
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          echo "short=${SOURCE_SHA:0:8}" >> "$GITHUB_OUTPUT"
+          echo "Source: $SOURCE_SHA ($SOURCE_BRANCH)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Install checksum-verified Godot and templates
+        run: python3 tools/ci/install_godot.py
+      - name: Full regression suite and preservation checks
+        run: python3 tools/ci/qa.py --godot "$GODOT"
+      - name: Negative-path validator checks
+        run: python3 tools/ci/negative_path.py
+      - name: Intentional red probe
+        if: inputs.negative_probe
+        run: exit 1
+      - name: Export and audit both platforms
+        if: github.event_name == 'pull_request' || inputs.build_artifacts
+        run: python3 tools/ci/package.py --godot "$GODOT"
+      - name: QA logs and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-QA-Results-${{ steps.source.outputs.short }}
+          path: |
+            build/int01/logs/
+            build/ci/logs/
+          retention-days: 21
+          if-no-files-found: error
+      - name: Windows package
+        if: success() && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-Windows-x86_64-${{ steps.source.outputs.short }}
+          path: build/ci/Windows-x86_64/
+          retention-days: 21
+          if-no-files-found: error
+      - name: macOS package
+        if: success() && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-macOS-Universal-${{ steps.source.outputs.short }}
+          path: build/ci/macOS-Universal/
+          retention-days: 21
+          if-no-files-found: error
+  native-smoke:
+    needs: qa-and-build
+    if: github.event_name == 'pull_request' || inputs.build_artifacts
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            target: Windows-x86_64
+          - runner: macos-14
+            target: macOS-Universal
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: Kaze-${{ matrix.target }}-*
+          path: build/native-artifact
+          merge-multiple: true
+      - name: Native release headless startup
+        shell: bash
+        run: python tools/ci/native_smoke.py build/native-artifact --output build/native-smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-Native-Smoke-${{ matrix.target }}
+          path: |
+            build/native-smoke/NATIVE_SMOKE.json
+            build/native-smoke/engine.log
+            build/native-smoke/stdout.log
+          retention-days: 21
+          if-no-files-found: error
