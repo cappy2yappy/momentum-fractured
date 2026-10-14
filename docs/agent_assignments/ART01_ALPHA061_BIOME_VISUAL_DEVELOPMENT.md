@@ -102,3 +102,8 @@ J. Recommended Production Order and Next Actions
 K. Final Verdict: **READY FOR PM REVIEW**, **PARTIAL HANDOFF — CONTINUATION REQUIRED**, or **BLOCKED — PM DECISION REQUIRED**.
 
 Preserve intermediate work near session usage limits and issue a partial report. The creator copies the final report back to PM. No visual direction or source assets become approved without creator/PM review.
+
+
+## PM-01 reference availability update (2026-10-14)
+
+The canonical proposed reference manifest is [ART_ASSET_REGISTRY.md](../art/ART_ASSET_REGISTRY.md), on this documentation branch. **REF-CITY-001 and REF-VILLAGE-001 remain unavailable as source binaries in the GitHub repo.** The original creator-shared chat images must be retrieved intact, permissions for publication in a public repository confirmed, then binary contents uploaded and independently verified before the agent can claim to have matched the creator's visual references. Current visual description is sufficient for technical audit and provisional planning, not source-image-based concept approval. Do not pretend planned registry image paths exist. This addendum does not supersede original scope or alter gameplay.
