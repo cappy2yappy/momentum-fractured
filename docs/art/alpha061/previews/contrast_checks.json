@@ -1,0 +1,30 @@
+[
+  {
+    "role": "city route/support",
+    "foreground": "#D9DCCF",
+    "background": "#202C3E",
+    "ratio": 10.12,
+    "scope": "flat palette pair only; not sampled painted scene"
+  },
+  {
+    "role": "village edge/support",
+    "foreground": "#FFF0CB",
+    "background": "#44545C",
+    "ratio": 6.96,
+    "scope": "flat palette pair only; not sampled painted scene"
+  },
+  {
+    "role": "culvert edge/support",
+    "foreground": "#C8D8D6",
+    "background": "#23343C",
+    "ratio": 8.75,
+    "scope": "flat palette pair only; not sampled painted scene"
+  },
+  {
+    "role": "sheet text/background",
+    "foreground": "#EEE9DA",
+    "background": "#141B25",
+    "ratio": 14.26,
+    "scope": "flat palette pair only; not sampled painted scene"
+  }
+]

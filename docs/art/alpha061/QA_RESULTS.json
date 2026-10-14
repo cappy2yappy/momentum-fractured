@@ -1,0 +1,52 @@
+{
+  "assignment": "ART-01-0061",
+  "date": "2026-10-14",
+  "baseline_commit": "34be30436996284ec2f783269c40269d321ed427",
+  "ld_reference_commit": "a4926e9f0667168f390ab99279efe3243055aa3f",
+  "engine": "Godot4.6.1",
+  "renderer": "GL Compatibility/OpenGL3.3",
+  "capture_size": [
+    1280,
+    720
+  ],
+  "camera_zoom": [
+    1,
+    1
+  ],
+  "source_reference_hashes_verified": true,
+  "runtime_scripts_geometry_project_changed": false,
+  "svg_import": "passed; no script parse errors",
+  "prototype_horizontal_seam_edge_checks": {
+    "layers_checked": 8,
+    "different_edge_rows": 0,
+    "scope": "exact first/last raster column equality; no animated long-pan test"
+  },
+  "normal_camera_captures": [
+    "baseline_R14.png",
+    "baseline_R15.png"
+  ],
+  "composition_studies": [
+    "composition_R14.png",
+    "composition_R15.png"
+  ],
+  "manual_findings": [
+    "Kaze and cream route lips are legible in two inspected prototype views",
+    "Green anchors remain separated from background window clusters",
+    "R15 no longer visually depends on an outdoor skyline in the art fixture",
+    "Existing dark guard silhouette remains a contrast risk; production needs local value separation",
+    "Existing diagonal rooftop drawing can suggest false collision; LD/Integration review required, no geometry change made"
+  ],
+  "unmeasured": [
+    "60FPS performance",
+    "texture memory residency",
+    "parallax motion",
+    "grayscale/color-vision simulations",
+    "full-route hazard/seal readability",
+    "final painted seams"
+  ],
+  "known_diagnostics": [
+    "Windows root certificate-store access",
+    "editor import cleanup RID/ObjectDB warnings"
+  ],
+  "verdict": "READY FOR PM REVIEW; concept development complete, production approval pending"
+}
