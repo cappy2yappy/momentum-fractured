@@ -1,7 +1,7 @@
 {
   "approved_on": "2026-10-12",
   "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
-  "controller_sha256": "a35fe82802b3d41d6c9715e0231f5e97323b0edb5dbf0493ddecbef0486a0e41",
+  "controller_sha256": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
   "sprites": [
     {
       "clip": "idle",
@@ -91,5 +91,6 @@
   "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes.",
   "size_restoration": "Per-animation constant scale matches average visible height of approved original strips; alpha threshold 0.1. No per-frame resizing.",
   "rollback_controller_sha256": "61e0cf4fa4c0331b8079fccf493c12fdba6772c873bb4e23d66da007b3ce9448",
-  "movement_prototype_reference": "docs/gameplay/HYBRID_MOMENTUM_SPEC.md"
+  "movement_prototype_reference": "docs/gameplay/HYBRID_MOMENTUM_SPEC.md",
+  "gameplay_stabilization_reference": "docs/agent_handoffs/GP01_ALPHA_0_6_1_HANDOFF.md"
 }

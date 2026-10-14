@@ -91,6 +91,8 @@ func press(action):
 	if action == "tether" and tether_unlocked and tether_cooldown <= 0 and not tether_attached and not is_on_floor():
 		tether_requested.emit()
 	if action == "dash" and dash_unlocked and dash_cooldown <= 0 and attack_time <= 0:
+		# A dash skips rope integration: release the constraint before its impulse.
+		release_tether()
 		technique_start = position
 		dash_time = 0.18
 		dash_cooldown = 0.58
@@ -225,7 +227,7 @@ func tether_origin() -> Vector2:
 func can_tether_anchor(anchor: Vector2) -> bool:
 	var offset = anchor - tether_origin()
 	var forward = offset.x * facing
-	return not is_on_floor() and forward >= -100 and forward <= clampf(grapple_range, 80.0, 480.0) and offset.y <= -35 and offset.length() >= 80 and offset.length() <= clampf(grapple_range, 80.0, 480.0) and tether_path_clear(anchor)
+	return dash_time <= 0 and not is_on_floor() and forward >= -100 and forward <= clampf(grapple_range, 80.0, 480.0) and offset.y <= -35 and offset.length() >= 80 and offset.length() <= clampf(grapple_range, 80.0, 480.0) and tether_path_clear(anchor)
 func tether_path_clear(anchor: Vector2) -> bool:
 	if not grapple_clearance_check or not is_inside_tree(): return true
 	var query = PhysicsRayQueryParameters2D.create(global_position + Vector2(0, -55), anchor, 1, [get_rid()])
