@@ -1,0 +1,486 @@
+[
+  {
+    "suite": "import",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--import",
+      "--quit"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/import",
+    "returncode": 0,
+    "seconds": 3.02,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "verify_baseline",
+    "command": [
+      "/usr/bin/python3",
+      "tools/verify_baseline.py"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/verify",
+    "returncode": 0,
+    "seconds": 0.05,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": []
+  },
+  {
+    "suite": "approved_baseline",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/approved_baseline.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/approved_baseline",
+    "returncode": 0,
+    "seconds": 1.94,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "approved_combat_swing",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/approved_combat_swing.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/approved_combat_swing",
+    "returncode": 0,
+    "seconds": 0.4,
+    "passes": 7,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 6 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "annex_expansion",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/annex_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/annex_expansion",
+    "returncode": 0,
+    "seconds": 3.68,
+    "passes": 34,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "annex_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/annex_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/annex_traversal",
+    "returncode": 0,
+    "seconds": 8.94,
+    "passes": 6,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "save_compatibility",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/save_compatibility",
+    "returncode": 0,
+    "seconds": 0.5,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "skyworks_progression",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/skyworks_progression.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/skyworks_progression",
+    "returncode": 0,
+    "seconds": 5.17,
+    "passes": 33,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "storm_keeper",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/storm_keeper.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/storm_keeper",
+    "returncode": 0,
+    "seconds": 0.62,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "movement_momentum",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/movement_momentum",
+    "returncode": 0,
+    "seconds": 9.04,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "sprite_integration",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/sprite_integration",
+    "returncode": 0,
+    "seconds": 0.61,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "suite": "world_expansion",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/world_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/world_expansion",
+    "returncode": 0,
+    "seconds": 4.75,
+    "passes": 193,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "suite": "expansion_gates_save",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/expansion_gates_save.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/expansion_gates_save",
+    "returncode": 0,
+    "seconds": 3.78,
+    "passes": 17,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "expansion_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/expansion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/expansion_traversal",
+    "returncode": 0,
+    "seconds": 98.22,
+    "passes": 125,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "gameplay_stabilization",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/gameplay_stabilization.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/gameplay_stabilization",
+    "returncode": 0,
+    "seconds": 0.52,
+    "passes": 16,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "traversal_transitions",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/traversal_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/traversal_transitions",
+    "returncode": 0,
+    "seconds": 0.52,
+    "passes": 8,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "world_cohesion_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/world_cohesion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/world_cohesion_traversal",
+    "returncode": 0,
+    "seconds": 60.6,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "suite": "integration_candidate",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/integration_candidate.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/integration_candidate",
+    "returncode": 0,
+    "seconds": 0.76,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "suite": "integration_descent",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://tests/integration_descent.gd",
+      "--",
+      "--test"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/integration_descent",
+    "returncode": 0,
+    "seconds": 0.58,
+    "passes": 26,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "profile_prepare",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--prepare"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011021205840000",
+    "returncode": 0,
+    "seconds": 0.7,
+    "passes": 2,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "profile_reload",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--reload"
+    ],
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011021205840000",
+    "returncode": 0,
+    "seconds": 0.69,
+    "passes": 5,
+    "failures": 0,
+    "script_errors": 0,
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  }
+]

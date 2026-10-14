@@ -66,6 +66,7 @@ func resolve_attack():
 		state = "stunned"
 		timer = 1.2
 		player.hitstop = 0.065
+		audio_cue.emit("parry") # AUD01 audio-only
 	else:
 		player.damage(position)
 

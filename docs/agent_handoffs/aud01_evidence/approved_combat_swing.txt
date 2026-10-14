@@ -1,0 +1,16 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Approved facing-aware melee connects at its existing reach
+PASS: Approved parry stuns the facing attacker without damage
+PASS: Missed parry keeps the approved damage and protection window
+PASS: Approved in-range forward anchor accepts tether
+PASS: Approved integrator maintains rope length while pumping
+PASS: Approved swing release retains its exact velocity
+PASS: Approved combo queues a follow-up during recovery
+APPROVED COMBAT SWING: 0 failure(s)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 6 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

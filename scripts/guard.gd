@@ -1,4 +1,5 @@
 extends Node2D
+signal audio_cue(cue: String) # AUD01 audio-only
 signal defeated
 var player
 var hp = 6
@@ -42,6 +43,7 @@ func _physics_process(dt):
 				if player.parry_time > 0 and player.facing == - facing:
 					state = "stunned";timer = 1.1
 					player.hitstop = 0.065
+					audio_cue.emit("parry") # AUD01 audio-only
 				else: player.damage(position)
 		if timer <= 0: state = "recover";timer = 0.7
 	else:

@@ -1,0 +1,81 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Music routes to Master
+PASS: SFX routes to Master
+PASS: Ambience routes to Master
+PASS: UI routes to Master
+PASS: Master limiter loaded and enabled
+PASS: step_stone imports as nonempty PCM16
+PASS: step_wood imports as nonempty PCM16
+PASS: jump imports as nonempty PCM16
+PASS: land imports as nonempty PCM16
+PASS: dash imports as nonempty PCM16
+PASS: tether_fire imports as nonempty PCM16
+PASS: tether_attach imports as nonempty PCM16
+PASS: tether_release imports as nonempty PCM16
+PASS: swing imports as nonempty PCM16
+PASS: contact imports as nonempty PCM16
+PASS: kunai_throw imports as nonempty PCM16
+PASS: impact_wind imports as nonempty PCM16
+PASS: impact_fire imports as nonempty PCM16
+PASS: impact_electric imports as nonempty PCM16
+PASS: parry imports as nonempty PCM16
+PASS: damage imports as nonempty PCM16
+PASS: death imports as nonempty PCM16
+PASS: checkpoint imports as nonempty PCM16
+PASS: room_passage imports as nonempty PCM16
+PASS: reject imports as nonempty PCM16
+PASS: amb_city loops exactly eight seconds
+PASS: amb_canal loops exactly eight seconds
+PASS: Fixed player budget: 12 effects, two ambience, two music
+PASS: Music slot starts silent
+PASS: Unknown cues fail quietly
+PASS: Locked dash makes no success sound
+PASS: Successful dash sounds once; cooldown rejection stays silent
+PASS: Actual melee start emits swing
+PASS: Confirmed melee contact emits hit cue
+PASS: Melee miss has no false hit confirmation
+PASS: Guard successful parry emits cue without damage
+PASS: Storm Keeper success uses same parry interface
+PASS: Damage cue only for accepted hit; invulnerability suppresses repeats
+PASS: Lethal damage emits death
+PASS: Accepted tether emits attach
+PASS: Release cue once; exact release velocity preserved
+PASS: Successful world tether hook fires line cue
+PASS: No-anchor attempt emits quiet rejection
+PASS: wind successful throw emits common cue
+PASS: wind real seal contact emits distinct impact
+PASS: fire successful throw emits common cue
+PASS: fire real seal contact emits distinct impact
+PASS: electric successful throw emits common cue
+PASS: electric real seal contact emits distinct impact
+PASS: Locked room emits no passage cue
+PASS: Accepted passage sounds once during repeated requests
+PASS: R0 shrine interaction emits checkpoint
+PASS: R3 shrine interaction emits checkpoint
+PASS: R8 shrine interaction emits checkpoint
+PASS: R11 shrine interaction emits checkpoint
+PASS: R12 shrine interaction emits checkpoint
+PASS: R16 shrine interaction emits checkpoint
+PASS: Automatic persistence has no checkpoint chime
+PASS: City profile crossfade completes with one loop
+PASS: Same biome entry does not restart ambience
+PASS: Rapid profile changes leave one canal loop
+PASS: Pause stops effects, pauses ambience and blocks gameplay playback
+PASS: Unpause resumes ambient bed
+PASS: Music handoff accepts stream (test-only ambience fixture)
+PASS: Music null handoff fades back to silence
+PASS: Independent SFX zero volume mutes bus
+PASS: Independent SFX volume restores bus
+PASS: Ordinary pool caps at eight and drops overload
+PASS: Critical reserve remains available under ordinary overload
+PASS: Rate limit prevents duplicate same-tick cue
+PASS: Real resolved walking produces sparse distance-based footfalls
+PASS: Real grounded jump produces accepted-jump cue
+PASS: Real airborne-to-ground transition produces landing
+PASS: Idle and airborne movement do not create footfalls
+AUDIO FOUNDATION: 0 failure(s)
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

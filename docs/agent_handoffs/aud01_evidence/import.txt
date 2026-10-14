@@ -1,0 +1,109 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (2 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (22 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | amb_canal.wav[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | amb_city.wav[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | checkpoint.wav[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | contact.wav[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | damage.wav[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | dash.wav[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | death.wav[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | impact_electric.wav[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | impact_fire.wav[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | impact_wind.wav[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | jump.wav[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | kunai_throw.wav[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | land.wav[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | parry.wav[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | reject.wav[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | room_passage.wav[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | step_stone.wav[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | step_wood.wav[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | swing.wav[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | tether_attach.wav[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | tether_fire.wav[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | tether_release.wav[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (22 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | tether_release.wav[39m[0m
+[   4% ] [90m[1mreimport[22m | tether_fire.wav[39m[0m
+[   8% ] [90m[1mreimport[22m | tether_attach.wav[39m[0m
+[  13% ] [90m[1mreimport[22m | swing.wav[39m[0m
+[  17% ] [90m[1mreimport[22m | step_wood.wav[39m[0m
+[  21% ] [90m[1mreimport[22m | step_stone.wav[39m[0m
+[  26% ] [90m[1mreimport[22m | room_passage.wav[39m[0m
+[  30% ] [90m[1mreimport[22m | reject.wav[39m[0m
+[  34% ] [90m[1mreimport[22m | parry.wav[39m[0m
+[  39% ] [90m[1mreimport[22m | land.wav[39m[0m
+[  43% ] [90m[1mreimport[22m | kunai_throw.wav[39m[0m
+[  47% ] [90m[1mreimport[22m | jump.wav[39m[0m
+[  52% ] [90m[1mreimport[22m | impact_wind.wav[39m[0m
+[  56% ] [90m[1mreimport[22m | impact_fire.wav[39m[0m
+[  60% ] [90m[1mreimport[22m | impact_electric.wav[39m[0m
+[  65% ] [90m[1mreimport[22m | death.wav[39m[0m
+[  69% ] [90m[1mreimport[22m | dash.wav[39m[0m
+[  73% ] [90m[1mreimport[22m | damage.wav[39m[0m
+[  78% ] [90m[1mreimport[22m | contact.wav[39m[0m
+[  82% ] [90m[1mreimport[22m | checkpoint.wav[39m[0m
+[  86% ] [90m[1mreimport[22m | amb_city.wav[39m[0m
+[  91% ] [90m[1mreimport[22m | amb_canal.wav[39m[0m
+[  95% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (22 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+WARNING: 1 RID of type "CanvasItem" was leaked.
+     at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2690)
+ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.
+ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

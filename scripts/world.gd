@@ -1,5 +1,7 @@
 extends Node2D
 
+const AudioDirector = preload("res://scripts/audio/audio_director.gd") # AUD01 audio-only
+var audio = AudioDirector.new() # AUD01 audio-only
 const Player = preload("res://scripts/player.gd")
 const Guard = preload("res://scripts/guard.gd")
 const Kunai = preload("res://scripts/kunai.gd")
@@ -85,6 +87,9 @@ func _ready():
 	add_child(geometry)
 	player = Player.new()
 	add_child(player)
+	audio.world = self # AUD01 audio-only
+	add_child(audio) # AUD01 audio-only
+	player.audio_cue.connect(audio.play) # AUD01 audio-only
 	player.strike.connect(on_strike)
 	player.hurt.connect(on_hurt)
 	player.tether_requested.connect(on_tether_requested)
@@ -126,6 +131,8 @@ func configure_input():
 		InputMap.action_add_event(pair[0], event)
 
 func build_room(index):
+	audio.clear_action_voices() # AUD01 audio-only
+	audio.suspended = true # AUD01 audio-only
 	reset_room_actions()
 	for child in get_children():
 		if child.get_script() == Kunai or child.is_in_group("route_afterimage"):
@@ -191,6 +198,8 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	audio.suspended = false # AUD01 audio-only
+	audio.enter_room(room) # AUD01 audio-only
 	queue_redraw()
 
 func room_size(index: int) -> Vector2:
@@ -372,6 +381,7 @@ func spawn_enemy(at: Vector2, is_boss: bool, is_required: = false, enemy_script 
 		enemy.chase_distance = 850.0
 		enemy.attack_range = 130.0
 	enemy.defeated.connect( func(): on_enemy_defeated(enemy, is_boss, is_required))
+	enemy.audio_cue.connect(audio.play) # AUD01 audio-only
 	add_child(enemy)
 	enemies.append(enemy)
 	if is_required:
@@ -422,6 +432,7 @@ func create_kunai_gate(id: String, element: String, at: Vector2, height: float):
 	kunai_gates.append(gate)
 
 func spawn_kunai(element, direction, at):
+	audio.play("kunai_throw") # AUD01 audio-only
 	var projectile = Kunai.new()
 	projectile.element = element
 	projectile.direction = direction
@@ -442,9 +453,11 @@ func resolve_kunai(projectile) -> bool:
 				queue_redraw()
 			else:
 				announce("The seal rejects the " + projectile.element.capitalize() + " Kunai.", 2)
+			audio.play("impact_" + projectile.element) # AUD01 audio-only
 			return true
 	for enemy in enemies:
 		if is_instance_valid(enemy) and enemy.hp > 0 and projectile.position.distance_to(enemy.position + Vector2(0, -50)) < enemy.hit_radius + 28:
+			audio.play("impact_" + projectile.element) # AUD01 audio-only
 			enemy.receive_hit(1)
 			return true
 	return false
@@ -462,6 +475,7 @@ func on_strike(damage, reach):
 			if d.length_squared() < closest:
 				closest = d.length_squared();target = enemy
 	if target:
+		audio.play("contact") # AUD01 audio-only
 		target.receive_hit(damage)
 		player.hitstop = 0.055 if damage == 1 else 0.085
 
@@ -484,9 +498,11 @@ func spawn_dash_afterimage(texture, frame, at, flip_h):
 	tween.tween_callback(ghost.queue_free)
 
 func on_hurt():
+	audio.play("death" if player.hp <= 0 else "damage") # AUD01 audio-only
 	if player.hp <= 0: call_deferred("respawn")
 
 func respawn():
+	audio.clear_action_voices() # AUD01 audio-only
 	transition = 0.0
 	pending_room = -1
 	pending_arrival = Vector2.INF
@@ -505,6 +521,7 @@ func recover_from_fall():
 	if fall_recovering: return
 	fall_recovering = true
 	player.hp -= 1
+	audio.play("death" if player.hp <= 0 else "damage") # AUD01 audio-only
 	if player.hp <= 0:
 		respawn()
 		return
@@ -519,6 +536,8 @@ func recover_from_fall():
 func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
+	audio.clear_action_voices() # AUD01 audio-only
+	audio.play("room_passage") # AUD01 audio-only
 	pending_arrival = arrival
 	pending_from_room = room
 	pending_room = target
@@ -561,14 +580,17 @@ func interact():
 	if transition > 0: return
 	if room == 0 and player.position.distance_to(Vector2(220, 1300)) < 95:
 		player.hp = 3;checkpoint_room = 0;checkpoint_position = Vector2(220, 1298);save_progress();announce("Canal Haven restored. Journey saved.")
+		audio.play("checkpoint") # AUD01 audio-only
 		return
 	if room == 3 and player.position.distance_to(Vector2(1320, 1300)) < 115:
 		player.hp = 3;checkpoint_room = 3;checkpoint_position = Vector2(1320, 1298);save_progress();announce("Echo Shrine awakened. Checkpoint saved.")
+		audio.play("checkpoint") # AUD01 audio-only
 		return
 	if room == 7 and player.position.distance_to(Vector2(2200, 1300)) < 140:
 		if not opened_kunai_gates.get("relay_electric_seal", false):
 			announce("Open the Electric archive seal before restoring the relay.");return
 		completed = true;checkpoint_room = 7;checkpoint_position = Vector2(2200, 1298);save_progress()
+		audio.play("checkpoint") # AUD01 audio-only
 		announce("Relay restored. The Silent District route is open.", 15)
 		return
 	if expansion.interact(self): return
@@ -599,8 +621,10 @@ func select_tether_anchor():
 func on_tether_requested():
 	var nearest = select_tether_anchor() if player.tether_unlocked else null
 	if nearest == null:
+		audio.play("reject") # AUD01 audio-only
 		announce("No Wind Tether anchor in range.", 2)
 	elif player.apply_tether(nearest):
+		audio.play("tether_fire") # AUD01 audio-only
 		tether_effect_anchor = nearest
 		tether_effect_time = 1.0
 		announce("Wind Tether", 1)

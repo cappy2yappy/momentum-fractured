@@ -1,0 +1,11 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PROFILE_PATH=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011021205840000/Library/Application Support/Godot/app_userdata/Kaze — Silent District Alpha 0.5.0 SAVE=user://silent_district_alpha_v3.json
+PASS: New process restores earned traversal kit
+PASS: New process restores Stride and Fire
+PASS: New process restores Root Shrine checkpoint
+PASS: New process restores Fire return seal
+PASS: Temporary momentum starts empty after reload
+INTEGRATION PROFILE: 0 failure(s)

@@ -32,6 +32,7 @@ func interact(world) -> bool:
 		world.checkpoint_position = Vector2(1720, 1298)
 		world.save_progress()
 		world.announce("Foundry Refuge restored. The Keeper waits east.", 5)
+		world.audio.play("checkpoint") # AUD01 audio-only
 		return true
 	if world.room == 12 and world.player.position.distance_to(Vector2(2220, 1300)) < 120:
 		if not world.cleared_encounters.get("storm_keeper", false):
@@ -43,6 +44,7 @@ func interact(world) -> bool:
 			world.player.hp = 3
 			world.save_progress()
 			world.announce("SkyWorks attuned. The Undercroft return is open.", 9)
+			world.audio.play("checkpoint") # AUD01 audio-only
 		return true
 	if world.room in [8, 12]:
 		var portal = Vector2(1470, 740) if world.room == 8 else Vector2(220, 830)

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+signal audio_cue(cue: String) # AUD01 audio-only
 signal strike(damage, reach)
 signal hurt
 signal tether_requested
@@ -98,6 +99,7 @@ func press(action):
 		dash_cooldown = 0.58
 		invulnerable = maxf(invulnerable, 0.24)
 		velocity = Vector2(facing * 920, 0)
+		audio_cue.emit("dash") # AUD01 audio-only
 	if action == "kunai" and kunai_unlocked.get(selected_kunai, false) and kunai_cooldown <= 0:
 		kunai_cooldown = 0.32
 		kunai_requested.emit(selected_kunai, facing, position + Vector2(facing * 30, -52))
@@ -112,6 +114,7 @@ func start_attack(index):
 	did_strike = false
 	queued = false
 	attack_time = [0.36, 0.41, 0.57][combo]
+	audio_cue.emit("swing") # AUD01 audio-only
 func _physics_process(dt):
 	age += dt
 	for action in ["left", "right", "jump", "attack", "parry", "tether", "dash", "kunai", "cycle_kunai"]:
@@ -169,10 +172,13 @@ func _physics_process(dt):
 	if jump_buffer > 0:
 		if coyote > 0:
 			velocity.y = -900;coyote = 0;jump_buffer = 0
+			audio_cue.emit("jump") # AUD01 audio-only
 		elif is_on_wall():
 			velocity = Vector2(get_wall_normal().x * 480, -880);jump_buffer = 0
+			audio_cue.emit("jump") # AUD01 audio-only
 		elif double_jump and not air_used:
 			velocity.y = -900;air_used = true;jump_buffer = 0
+			audio_cue.emit("jump") # AUD01 audio-only
 	if not held("jump") and velocity.y < -360: velocity.y = -360
 	var before_move = position
 	move_and_slide()
@@ -239,10 +245,12 @@ func apply_tether(anchor: Vector2):
 	tether_length = maxf(80.0, tether_origin().distance_to(anchor))
 	tether_taut = false
 	tether_attached = true
+	audio_cue.emit("tether_attach") # AUD01 audio-only
 	air_used = false
 	return true
 func release_tether():
 	if not tether_attached: return
+	audio_cue.emit("tether_release") # AUD01 audio-only
 	momentum.reward_transition("tether", position.distance_to(technique_start), absf(velocity.x))
 	tether_attached = false
 	tether_taut = false

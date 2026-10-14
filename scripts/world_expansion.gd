@@ -100,6 +100,7 @@ func build_room(w, index):
 
 func interact(w) -> bool:
 	if w.room == 16 and w.player.position.distance_to(Vector2(420,1120))<85:
+		w.audio.play("checkpoint") # AUD01 audio-only
 		w.checkpoint_room=16;w.checkpoint_position=Vector2(420,1118);w.player.hp=3;w.save_progress();w.announce("Root Shrine restored. Journey saved.");return true
 	if w.room == 20 and w.player.position.distance_to(Vector2(600,520))<85 and not w.expansion_flags.get("junction_return",false):
 		if regional(w): w.expansion_flags["junction_return"]=true;w.save_progress();w.announce("Mooring return activated. The Haven loop is open.")

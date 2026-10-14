@@ -10,6 +10,10 @@ manifest = json.loads((root / "assets/web/kaze_manifest.json").read_text())
 controller = (root / "scripts/player.gd").read_bytes()
 controller_text = controller.decode("utf-8")
 failures = []
+if "aud01_pre_audio_controller_sha256" in manifest:
+    stripped = "".join(line for line in controller_text.splitlines(keepends=True) if "# AUD01 audio-only" not in line)
+    if hashlib.sha256(stripped.encode()).hexdigest() != manifest["aud01_pre_audio_controller_sha256"]:
+        failures.append("Non-audio controller bytes differ from pre-AUD01 candidate.")
 rollback_path = root / "tests/fixtures/player_alpha052.gd"
 if "rollback_controller_sha256" in manifest:
     rollback = rollback_path.read_bytes()
