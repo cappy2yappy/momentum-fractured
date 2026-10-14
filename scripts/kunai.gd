@@ -7,9 +7,16 @@ var lifetime = 1.4
 var world
 
 func _physics_process(dt):
-	position.x += direction * speed * dt
 	lifetime -= dt
-	if world.resolve_kunai(self) or lifetime <= 0 or position.x < -40 or position.x > 2640:
+	# Sample traveled collision path, not just its endpoint, during slow frames.
+	var distance = direction * speed * dt
+	var steps = maxi(1, ceili(absf(distance) / 16.0))
+	for step in steps:
+		position.x += distance / steps
+		if world.resolve_kunai(self):
+			queue_free()
+			break
+	if lifetime <= 0 or position.x < -40 or position.x > world.room_size(world.room).x + 40:
 		queue_free()
 	queue_redraw()
 

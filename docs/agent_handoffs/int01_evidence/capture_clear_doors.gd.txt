@@ -1,0 +1,35 @@
+extends SceneTree
+func _init(): call_deferred("run")
+func run():
+	await process_frame
+	print("ADAPTER=",RenderingServer.get_video_adapter_name()," DRIVER=",RenderingServer.get_current_rendering_driver_name())
+	var w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w
+	w.set_physics_process(false);w.player.set_physics_process(false)
+	w.camera.position_smoothing_enabled=false
+	DirAccess.make_dir_recursive_absolute("res://build/int01/captures")
+	for index in 21:
+		w.build_room(index);w.player.set_physics_process(false)
+		for e in w.enemies: e.set_physics_process(false)
+		w.message_time=0
+		var locations=[]
+		if index>0 and index<13: locations.append(w.left_exit_position())
+		if index<12: locations.append(w.right_exit_position())
+		for p in w.expansion.portals(index): locations.append(p.at)
+		for n in locations.size():
+			w.player.position=locations[n]+Vector2(65,-2);w.player.animate(0);w.camera.reset_smoothing();w.queue_redraw()
+			for i in 3: await process_frame
+			await RenderingServer.frame_post_draw
+			root.get_texture().get_image().save_png("res://build/int01/captures/room_%02d_exit_%02d.png"%[index,n])
+		if false:
+			for i in 30: await process_frame
+			var samples=[];var before=Time.get_ticks_usec();var drawn=Engine.get_frames_drawn()
+			for i in 120:
+				await RenderingServer.frame_post_draw
+				var now=Time.get_ticks_usec();samples.append((now-before)/1000.0);before=now
+			samples.sort()
+			var sum=0.0
+			for s in samples: sum+=s
+			print("RENDER_METRIC room=%d frames=%d mean_ms=%.3f p95_ms=%.3f max_ms=%.3f fps=%.2f zoom=%s"%[index,Engine.get_frames_drawn()-drawn,sum/120.0,samples[113],samples[119],120000.0/sum,w.camera.zoom])
+	w.queue_free();current_scene=null
+	for i in 3: await process_frame
+	print("RENDER QA COMPLETE");quit()

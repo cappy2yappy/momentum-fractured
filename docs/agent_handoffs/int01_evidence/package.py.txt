@@ -1,0 +1,71 @@
+from pathlib import Path
+import subprocess,zipfile,hashlib,json,struct,shutil
+root=Path.cwd(); source=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(); out=root/'build/int01/artifacts';out.mkdir(exist_ok=True)
+common=f'''KAZE — INT-01-0061 — Alpha 0.6.1 Combined GP-LD REVIEW CANDIDATE
+Source commit: {source}
+Gameplay PR #8: 70a0a83bd6076c9c711a43bcaafb3c79a8ad20a2
+Level Design PR #9: a4926e9f0667168f390ab99279efe3243055aa3f
+Godot: 4.6.1.stable.official.14d19694e
+No PM release acceptance or mainline merge is implied.
+
+Controls: A/D or arrows move; double-tap direction runs; Space/W/Up jumps;
+J attacks; F/K parries; E interacts; Q tethers after unlock; Shift dashes after
+unlock; R throws kunai; T cycles elements; M atlas; I kit; Escape pause.
+
+The application intentionally retains the Alpha 0.5.0 save identity.
+No personal saves or seeded QA profiles are included.
+Fresh campaign: verify Haven, three HP, no Windstep/tether/dash and no Stride.
+Progression/feel checklist: guard and Windstep; Cistern Wind seal; Shrine tether;
+Broken Span; Gale Dash; Tide Warden; Archive; named sigils; elemental gates;
+four refined rooms 14/15/17/19 forward/reverse, missed shelves and normal returns.
+Try ordinary speed first. Stride I is earned at Mooring Loft. Optional momentum
+is enabled only by the --momentum-prototype argument. Do not tune movement.
+Seeded automated probes do not establish a full unseeded campaign completion.
+'''
+win=root/'build/windows';(win/'README-INT01.txt').write_text(common+'''
+WINDOWS x86_64: run Kaze-Alpha-0.6.1-Combined-GP-LD.exe (PCK embedded).
+This was cross-exported on macOS. Windows execution is NOT TESTED; no Windows
+or Wine runtime is available here. ZIP/PE integrity alone is not a boot test.
+Safest fresh-save test: use a separate disposable Windows user account.
+Existing-save test: back up the entire Godot app_userdata folder first:
+%APPDATA%\\Godot\\app_userdata\\Kaze — Silent District Alpha 0.5.0
+Then launch under the normal Windows account; preserve the backup unchanged.
+Do not delete existing creator saves to make a fresh run.
+''')
+exe=win/'Kaze-Alpha-0.6.1-Combined-GP-LD.exe';data=exe.read_bytes();offset=struct.unpack_from('<I',data,0x3c)[0];assert data[:2]==b'MZ' and data[offset:offset+4]==b'PE\0\0' and struct.unpack_from('<H',data,offset+4)[0]==0x8664
+assert b'GDPC' in data[-64:];print('Windows PE x86_64 and embedded PCK footer PASS')
+wp=out/'Kaze-Alpha-0.6.1-Combined-GP-LD-Windows.zip'
+with zipfile.ZipFile(wp,'w',zipfile.ZIP_DEFLATED) as z:
+ for p in [exe,win/'README-INT01.txt']: z.write(p,p.name)
+mac=root/'build/int01/mac-final';mac.mkdir(exist_ok=True)
+subprocess.run(['ditto','-x','-k',str(root/'build/macos/Kaze-Alpha-0.6.1-Combined-GP-LD-final.zip'),str(mac)],check=True)
+app=next(mac.glob('*.app'));binary=next((app/'Contents/MacOS').iterdir());pck=next((app/'Contents/Resources').glob('*.pck'))
+(mac/'README-INT01.txt').write_text(common+'''
+MACOS universal (Apple Silicon + Intel), unsigned, not notarized.
+Apple Silicon boot tested on Apple M4; Intel execution NOT TESTED.
+For fresh/isolated play, run Play Isolated.command. It keeps a persistent save
+profile in playtest-profile beside the launcher and never reads normal saves.
+If macOS blocks this unsigned candidate, review and approve this specific local
+app in Finder / Privacy & Security according to your Mac's policy.
+For an existing-save test, back up the normal app_userdata folder before opening
+the .app normally in Finder. Normal saves remain at:
+~/Library/Application Support/Godot/app_userdata/Kaze — Silent District Alpha 0.5.0
+The folder name and app title are historical by design. Keep backups unchanged.
+''')
+launcher=mac/'Play Isolated.command';launcher.write_text('''#!/bin/zsh
+set -eu
+PACKAGE_DIR="${0:A:h}"
+mkdir -p "$PACKAGE_DIR/playtest-profile"
+export HOME="$PACKAGE_DIR/playtest-profile"
+exec "$PACKAGE_DIR/'''+str(binary.relative_to(mac))+'''" "$@"
+''');launcher.chmod(0o755)
+mp=out/'Kaze-Alpha-0.6.1-Combined-GP-LD-macOS-Universal.zip'
+with zipfile.ZipFile(mp,'w',zipfile.ZIP_DEFLATED) as z:
+ for p in sorted(mac.rglob('*')):
+  if p.is_file(): z.write(p,str(p.relative_to(mac)))
+manifest={'source_sha':source,'engine':'4.6.1.stable.official.14d19694e','artifacts':[],'components':[]}
+for p in [wp,mp]:
+ with zipfile.ZipFile(p) as z: assert z.testzip() is None
+ manifest['artifacts'].append(dict(name=p.name,path=str(p),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),zip_crc='PASS'))
+for p in [exe,binary,pck]:manifest['components'].append(dict(name=str(p.relative_to(root)),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+(out/'BUILD_MANIFEST.json').write_text(json.dumps(manifest,indent=2));print(json.dumps(manifest,indent=2))

@@ -1,0 +1,70 @@
+# movement_momentum — executed Godot stdout
+
+```text
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+PASS: Differential walk acceleration and braking match rollback controller
+METRIC: sprint=600.0
+PASS: Base sprint reaches 600 px/s
+METRIC: double_jump_rise_at_second_apex=464.564331054688
+PASS: Held and double jump trajectories match rollback
+PASS: Tap jump trajectory matches rollback
+PASS: Wall slide and wall jump match rollback
+METRIC: dash_ticks12_distance=168.666748046875
+PASS: Dash trajectory and cooldown match rollback
+PASS: Clear baseline swing attaches
+PASS: Clear baseline swing attaches
+PASS: Bidirectional swing pumping is identical to rollback
+PASS: Release preserves exact velocity
+PASS: Range boundary 399 px
+PASS: Range boundary 400 px
+PASS: Range boundary 420 px
+PASS: Range boundary 440 px
+PASS: Range boundary 441 px
+PASS: Range boundary 480 px
+PASS: Behind-facing rejection preserved
+PASS: Anchor must remain above origin
+PASS: Minimum rope distance preserved
+PASS: Nearest valid target wins
+PASS: Solid terrain blocks initial rope ray
+PASS: Clearance check can be reverted independently for feel review
+PASS: Reusable dedicated anchor enters candidate interface
+PASS: Disabled object cannot attach
+PASS: Unknown object requirement fails closed
+PASS: Explicit first upgrade unlocks once
+PASS: Unknown upgrade rejected
+PASS: Permanent caps are 420 walk / 630 run
+PASS: Pressing movement against obstruction cannot farm meter
+PASS: Purposeful 600 px/s running fills and caps normalized meter
+PASS: Combined driven run target capped at 667.8 px/s
+PASS: Temporary bonus never changes precision walk target
+METRIC: live_upgraded_run=638.3916015625 meter=0.224
+PASS: Real upgraded running builds meter and stays under driven cap
+PASS: Real wall collision prevents stationary running exploit
+PASS: Damage penalty removes 0.5 and suppresses gain
+PASS: Idle decay is 0.45 per second
+PASS: Stationary dash cannot earn a transition reward
+PASS: Useful traveled dash earns one transition reward
+PASS: Repeating one technique cannot farm chain rewards
+PASS: Different traveled technique earns chain reward
+PASS: Real damage path applies momentum penalty
+PASS: Schema 7 saves prototype upgrade
+PASS: Save restores permanent state and resets temporary meter
+PASS: Schema 6 defaults to unchanged baseline speeds
+PASS: Invalid upgrade level cannot raise caps
+PASS: Invalid saved type/value rejected: true
+PASS: Invalid saved type/value rejected: 1
+PASS: Invalid saved type/value rejected: 1.5
+PASS: Invalid saved type/value rejected: -1
+PASS: Room rebuild resets temporary momentum
+PASS: Checkpoint respawn preserves upgrade and clears meter
+PASS: Speed upgrade cannot bypass Wind progression flag
+PASS: Speed upgrade cannot bypass Electric progression flag
+KNOWN BASELINE GAP: relay completes behind unopened Electric seal=false
+KNOWN BASELINE GAP: proximity secret behind unopened Wind seal=false
+METRIC: differential_frames=267
+MOVEMENT MOMENTUM: 0 failure(s)
+
+```

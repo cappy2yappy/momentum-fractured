@@ -8,6 +8,7 @@ const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 
 const Extension = preload("res://scripts/route_extension.gd")
 const Expansion = preload("res://scripts/world_expansion.gd")
+const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -308,17 +309,42 @@ func serialize_metsys_save() -> Dictionary:
 	for id in raw.get(&"stored_objects", {}): stored[str(id)] = raw[&"stored_objects"][id]
 	return {"discovered_cells": discovered, "stored_objects": stored, "custom_markers": markers, "cell_overrides": raw.get(&"cell_overrides", [])}
 
+func saved_flag(value) -> bool:
+	return value is bool and value
+
+func saved_flags(value) -> Dictionary:
+	var result = {}
+	if value is Dictionary:
+		for key in value:
+			if key is String: result[key] = saved_flag(value[key])
+	return result
+
+func saved_number(value, fallback: float) -> float:
+	if (value is int or value is float) and is_finite(float(value)): return float(value)
+	return fallback
+
+func valid_map_entry(entry) -> bool:
+	if not entry is Array or entry.size() < 4: return false
+	for i in 4:
+		if not (entry[i] is int or entry[i] is float) or not is_finite(float(entry[i])): return false
+	return true
+
 func restore_metsys_save(encoded: Dictionary):
 	var discovered: Dictionary[Vector3i, int] = {}
 	var stored: Dictionary[StringName, bool] = {}
 	var markers: Dictionary[Vector3i, int] = {}
-	for entry in encoded.get("discovered_cells", []):
-		if entry is Array and entry.size() >= 4:
-			discovered[Vector3i(int(entry[0]), int(entry[1]), int(entry[2]))] = int(entry[3])
-	for id in encoded.get("stored_objects", {}): stored[StringName(id)] = bool(encoded["stored_objects"][id])
-	for entry in encoded.get("custom_markers", []):
-		if entry is Array and entry.size() >= 4:
-			markers[Vector3i(int(entry[0]), int(entry[1]), int(entry[2]))] = int(entry[3])
+	var cells = encoded.get("discovered_cells", [])
+	if cells is Array:
+		for entry in cells:
+			if valid_map_entry(entry):
+				discovered[Vector3i(int(entry[0]), int(entry[1]), int(entry[2]))] = clampi(int(entry[3]), 0, 2)
+	var saved_objects = saved_flags(encoded.get("stored_objects", {}))
+	for id in saved_objects: stored[StringName(id)] = saved_objects[id]
+	var saved_markers = encoded.get("custom_markers", [])
+	if saved_markers is Array:
+		for entry in saved_markers:
+			if valid_map_entry(entry):
+				markers[Vector3i(int(entry[0]), int(entry[1]), int(entry[2]))] = int(entry[3])
 	metsys.set_save_data()
 	metsys.save_data.discovered_cells = discovered
 	metsys.save_data.stored_objects = stored
@@ -647,41 +673,46 @@ func save_progress():
 func load_progress():
 	if not FileAccess.file_exists(save_path): return
 	var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
-	if not data is Dictionary or int(data.get("version", 0)) < 1: return
-	expansion_flags = data.get("expansion_flags", {}) if data.get("expansion_flags", {}) is Dictionary else {}
+	if not data is Dictionary or saved_number(data.get("version", 0), 0) < 1: return
+	expansion_flags = saved_flags(data.get("expansion_flags", {}))
 	player.restore_speed_upgrade(data.get("speed_upgrade_level", 0))
 	player.momentum.reset()
-	player.double_jump = data.get("double_jump", false)
-	player.tether_unlocked = data.get("tether_unlocked", false)
-	player.dash_unlocked = data.get("dash_unlocked", false)
-	var saved_kunai = data.get("kunai_unlocked", {})
-	if saved_kunai is Dictionary:
-		for element in player.kunai_unlocked: player.kunai_unlocked[element] = bool(saved_kunai.get(element, false))
-	player.selected_kunai = data.get("selected_kunai", "wind")
-	if not player.selected_kunai in player.kunai_unlocked:
+	player.double_jump = saved_flag(data.get("double_jump", false))
+	player.tether_unlocked = saved_flag(data.get("tether_unlocked", false))
+	player.dash_unlocked = saved_flag(data.get("dash_unlocked", false))
+	var saved_kunai = saved_flags(data.get("kunai_unlocked", {}))
+	for element in player.kunai_unlocked: player.kunai_unlocked[element] = saved_kunai.get(element, false)
+	if saved_number(data.get("version", 0), 0) < 4 and player.double_jump: player.kunai_unlocked["wind"] = true
+	var selected = data.get("selected_kunai", "wind")
+	player.selected_kunai = selected if selected is String and selected in player.kunai_unlocked else "wind"
+	if not player.kunai_unlocked.get(player.selected_kunai, false):
 		player.selected_kunai = "wind"
-	opened_kunai_gates = data.get("opened_kunai_gates", {})
-	if int(data.get("version", 0)) < 4 and player.double_jump: player.kunai_unlocked["wind"] = true
-	guard_defeated = data.get("guard_defeated", false)
-	boss_defeated = data.get("boss_defeated", false)
-	completed = data.get("completed", false)
-	skyworks_restored = bool(data.get("skyworks_restored", false))
-	secret = data.get("secret", false)
-	checkpoint_room = clampi(int(data.get("checkpoint_room", 0)), 0, ROOM_COUNT - 1)
+		for element in ["wind", "fire", "electric"]:
+			if player.kunai_unlocked[element]:
+				player.selected_kunai = element
+				break
+	opened_kunai_gates = saved_flags(data.get("opened_kunai_gates", {}))
+	guard_defeated = saved_flag(data.get("guard_defeated", false))
+	boss_defeated = saved_flag(data.get("boss_defeated", false))
+	completed = saved_flag(data.get("completed", false))
+	skyworks_restored = saved_flag(data.get("skyworks_restored", false))
+	secret = saved_flag(data.get("secret", false))
+	checkpoint_room = clampi(int(saved_number(data.get("checkpoint_room", 0), 0)), 0, ROOM_COUNT - 1)
+	checkpoint_position = Vector2(220, 1298)
 	var checkpoint_at = data.get("checkpoint_position", [220, 1298])
 	if checkpoint_at is Array and checkpoint_at.size() == 2:
-		checkpoint_position = Vector2(clampf(float(checkpoint_at[0]), 40, room_size(checkpoint_room).x-40), clampf(float(checkpoint_at[1]), 80, room_size(checkpoint_room).y-50))
-	var saved_fragments = data.get("relay_fragments", {})
-	if saved_fragments is Dictionary: relay_fragments = saved_fragments
-	var saved_encounters = data.get("cleared_encounters", {})
-	if saved_encounters is Dictionary: cleared_encounters = saved_encounters
+		checkpoint_position = Vector2(clampf(saved_number(checkpoint_at[0], 220), 40, room_size(checkpoint_room).x-40), clampf(saved_number(checkpoint_at[1], 1298), 80, room_size(checkpoint_room).y-50))
+	relay_fragments = saved_flags(data.get("relay_fragments", {}))
+	cleared_encounters = saved_flags(data.get("cleared_encounters", {}))
 	var metsys_encoded = data.get("metsys", {})
-	if metsys_encoded is Dictionary and not metsys_encoded.is_empty(): restore_metsys_save(metsys_encoded)
-	var saved_visited = data.get("visited", visited)
+	restore_metsys_save(metsys_encoded if metsys_encoded is Dictionary else {})
+	visited.fill(false)
+	visited[0] = true
+	var saved_visited = data.get("visited", [])
 	if saved_visited is Array:
 		for i in mini(saved_visited.size(), ROOM_COUNT):
-			visited[i] = bool(saved_visited[i])
-			if visited[i] and ( not metsys_encoded is Dictionary or metsys_encoded.is_empty()): metsys.visit_cell(ROOM_MAP_COORDS[i])
+			visited[i] = saved_flag(saved_visited[i])
+			if visited[i]: metsys.visit_cell(ROOM_MAP_COORDS[i])
 
 func _draw():
 	if not is_instance_valid(player): return
@@ -690,6 +721,7 @@ func _draw():
 	draw_rect(Rect2(Vector2.ZERO,room_size(room)), Color(ROOM_COLORS[room], 0.18))
 	if room in [15,16,18,19]:
 		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
+	RoomPresentation.draw_background(self)
 	for rect in platforms:
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
 		draw_rect(rect, Color("252631"))
@@ -764,9 +796,8 @@ func draw_tether_effect():
 	draw_circle(finish, 28 + 12 * strength, Color(0.66, 1.0, 0.78, 0.22 * strength))
 
 func draw_door(at: Vector2, color = Color("d1b08e")):
-	draw_rect(Rect2(at + Vector2(-37, -133), Vector2(74, 133)), Color("171523"))
-	draw_rect(Rect2(at + Vector2(-40, -136), Vector2(80, 136)), color, false, 4)
-	draw_circle(at + Vector2(22, -58), 4, color)
+	# Presentation only: interaction radius, destination and landing stay unchanged.
+	RoomPresentation.draw_exit(self, at, color)
 
 func draw_water(rect: Rect2):
 	draw_rect(rect, Color("15364a"))

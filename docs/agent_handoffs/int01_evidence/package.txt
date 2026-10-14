@@ -1,0 +1,38 @@
+Windows PE x86_64 and embedded PCK footer PASS
+{
+  "source_sha": "847d3e57bcc1561a8d0fbb431a104703355ade03",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "artifacts": [
+    {
+      "name": "Kaze-Alpha-0.6.1-Combined-GP-LD-Windows.zip",
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-alpha061/build/int01/artifacts/Kaze-Alpha-0.6.1-Combined-GP-LD-Windows.zip",
+      "bytes": 51148764,
+      "sha256": "b384a6c43678108d7ffdd9beaa029359becdc259a52b50e2c4a19fd57b8353c7",
+      "zip_crc": "PASS"
+    },
+    {
+      "name": "Kaze-Alpha-0.6.1-Combined-GP-LD-macOS-Universal.zip",
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-alpha061/build/int01/artifacts/Kaze-Alpha-0.6.1-Combined-GP-LD-macOS-Universal.zip",
+      "bytes": 75946454,
+      "sha256": "197c345d6c76d47cad6ff08c37fa672d0e897a0b2d6034d733353e8e2b6665cd",
+      "zip_crc": "PASS"
+    }
+  ],
+  "components": [
+    {
+      "name": "build/windows/Kaze-Alpha-0.6.1-Combined-GP-LD.exe",
+      "bytes": 119922184,
+      "sha256": "d5b997cb8d629cf1e9c1b49e0aa26823696d8908e6aa19dc92a5dcc4191735dd"
+    },
+    {
+      "name": "build/int01/mac-final/Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.5.0",
+      "bytes": 183849535,
+      "sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070"
+    },
+    {
+      "name": "build/int01/mac-final/Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/Kaze \u2014 Silent District Alpha 0.5.0.pck",
+      "bytes": 15486440,
+      "sha256": "7e78c5a5c1267cea6acd8f2542fbc732bbcbf2fad2ab10c0a6c9b2cb618bd52e"
+    }
+  ]
+}

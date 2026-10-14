@@ -1,0 +1,86 @@
+{
+  "assignment": "LD-01-0061",
+  "baseline": "34be30436996284ec2f783269c40269d321ed427",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "isolated_user_data": true,
+  "results": {
+    "approved_baseline": {
+      "exit_code": 0,
+      "pass_assertions": 32,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "approved_combat_swing": {
+      "exit_code": 0,
+      "pass_assertions": 7,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "annex_expansion": {
+      "exit_code": 0,
+      "pass_assertions": 34,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "annex_traversal": {
+      "exit_code": 0,
+      "pass_assertions": 6,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "save_compatibility": {
+      "exit_code": 0,
+      "pass_assertions": 11,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "skyworks_progression": {
+      "exit_code": 0,
+      "pass_assertions": 33,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "storm_keeper": {
+      "exit_code": 0,
+      "pass_assertions": 12,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "sprite_integration": {
+      "exit_code": 0,
+      "pass_assertions": 43,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "movement_momentum": {
+      "exit_code": 0,
+      "pass_assertions": 53,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "world_expansion": {
+      "exit_code": 0,
+      "pass_assertions": 193,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "expansion_gates_save": {
+      "exit_code": 0,
+      "pass_assertions": 17,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "expansion_traversal": {
+      "exit_code": 0,
+      "pass_assertions": 125,
+      "fail_assertions": 0,
+      "script_errors": 0
+    },
+    "world_cohesion_traversal": {
+      "exit_code": 0,
+      "pass_assertions": 56,
+      "fail_assertions": 0,
+      "script_errors": 0
+    }
+  }
+}
