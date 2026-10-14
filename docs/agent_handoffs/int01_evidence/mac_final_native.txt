@@ -1,0 +1,5 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+Requested V-Sync mode: Enabled - FPS will likely be capped to the monitor refresh rate.
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+Project FPS: 121 (8.26 mspf)

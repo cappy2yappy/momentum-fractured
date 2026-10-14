@@ -1,5 +1,13 @@
 # Kaze changelog
 
+## Alpha 0.6.1 combined integration review candidate — INT-01-0061 (2026-10-14)
+
+- Integrate reviewed Gameplay PR #8 (`70a0a83`) then Level Design PR #9 (`a4926e9`) on a dedicated candidate branch. Preserve approved movement, sprite proportions/anchors and save identity.
+- Add combined save/room/door, descent and process-reload QA; 691 executed passing assertions across current and added probes.
+- Add universal macOS export alongside Windows x86_64; exclude local QA/build/profile resources. macOS Apple Silicon startup tested; Windows startup untested on this host.
+- Candidate only: PM review, creator feel/campaign playtest and native Windows verification remain pending; no milestone-complete or release claim.
+
+
 This log records reviewed development changes and creator feedback. Entries distinguish delivered work from proposals and acceptance still required.
 
 ## 2026-10-14 — Alpha 0.6.1 creator playtest follow-up

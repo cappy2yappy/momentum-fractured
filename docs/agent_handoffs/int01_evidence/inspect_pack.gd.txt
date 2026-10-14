@@ -1,0 +1,14 @@
+extends SceneTree
+var forbidden=[]
+var count=0
+func scan(path):
+	for file in DirAccess.get_files_at(path):
+		count+=1
+		if path.begins_with("res://build") or path.begins_with("res://tests") or path.begins_with("res://docs") or path.begins_with("res://tools"): forbidden.append(path.path_join(file))
+	for folder in DirAccess.get_directories_at(path):
+		if folder==".godot": continue
+		scan(path.path_join(folder))
+func _init():
+	scan("res://")
+	print("PACK_AUDIT files=",count," forbidden=",forbidden)
+	quit(1 if forbidden.size() else 0)
