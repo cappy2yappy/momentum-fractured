@@ -1,0 +1,30 @@
+{
+  "baseline": "c26cb7fa23131c2fd9c8deae288f7d0d468a6b52",
+  "runtime_source_sha": "1ef2f459611e366dd359ef4f970a79234136970f",
+  "protected_normalized_sha256": {
+    "scripts/player.gd": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+    "scripts/momentum_profile.gd": "3d6df2e5e1df015ea51b6f3dc626c1f85460357c0105ca7b3b0af2477a2fdf30",
+    "scripts/grapple_anchor.gd": "4b603bdf31c9bae380034f81067001670f4e31484a5b48be5a0a9f2a6598d18e",
+    "scripts/guard.gd": "1bd5e21f384e4a20222d14fad6ba5919d2a72afcee575ff1e2bada1d8a8a0ef1",
+    "scripts/kunai.gd": "e2ee684aef6deefae79d500ff7262647339d235aba99a00b9a32e5df0c035d5a",
+    "scripts/storm_keeper.gd": "2925340314141bbb6d3440d59eeaa6cedba10cbcf5f690869394ac0e054f9513",
+    "scripts/hud.gd": "78d1504c7da62e9208255a9584f9e4d7d696414ee47a4ff7eab53c2f305574e0",
+    "scripts/route_extension.gd": "5415817fc3bc1ce75082ab10656319686cb90f8a70b08e5ffd372bea6f6606db",
+    "scripts/skyworks_region.gd": "25e71662e95973696592d5d4221bffab514c048da1a3802c7cfda546dafceb55",
+    "world/MapData.txt": "31888be3c5fbbc78f4125ccf4b3a369f1acd40f311331e6dd392e217f6cdaaaf",
+    "project.godot": "d2fc5649f8a21d2ccda03ef36a6417bcb4775ce239435e62037997b66bfe52cb",
+    "docs/APPROVED_GEOMETRY.json": "fc51ef10e1611225357281ab25f5ca540292564dfd0975750b7288a16be10604"
+  },
+  "world_methods_unchanged": [
+    "configure_input",
+    "can_enter",
+    "interact",
+    "save_progress",
+    "load_progress",
+    "add_platform",
+    "reset_room_actions",
+    "world_edges"
+  ],
+  "stair_art_unchanged": true,
+  "topology_and_geometry_unchanged": true
+}

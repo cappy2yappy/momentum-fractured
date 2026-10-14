@@ -1,0 +1,31 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+PASS: ordinary room 14 missed top shelf falls to a lower collision landing at (1716.0, 659.9668)
+PASS: ordinary room 14 retains ordinary camera zoom
+PASS: ordinary room 15 missed top shelf falls to a lower collision landing at (616.0, 609.9453)
+PASS: ordinary room 15 retains ordinary camera zoom
+PASS: ordinary room 17 missed top shelf falls to a lower collision landing at (1686.0, 589.9922)
+PASS: ordinary room 17 retains ordinary camera zoom
+PASS: ordinary room 19 missed top shelf falls to a lower collision landing at (1996.0, 519.9756)
+PASS: ordinary room 19 retains ordinary camera zoom
+PASS: stride room 14 missed top shelf falls to a lower collision landing at (1716.0, 659.9668)
+PASS: stride room 14 retains ordinary camera zoom
+PASS: stride room 15 missed top shelf falls to a lower collision landing at (616.0, 609.9453)
+PASS: stride room 15 retains ordinary camera zoom
+PASS: stride room 17 missed top shelf falls to a lower collision landing at (1686.0, 589.9922)
+PASS: stride room 17 retains ordinary camera zoom
+PASS: stride room 19 missed top shelf falls to a lower collision landing at (1996.0, 519.9756)
+PASS: stride room 19 retains ordinary camera zoom
+PASS: momentum room 14 missed top shelf falls to a lower collision landing at (1716.0, 659.9668)
+PASS: momentum room 14 retains ordinary camera zoom
+PASS: momentum room 15 missed top shelf falls to a lower collision landing at (616.0, 609.9453)
+PASS: momentum room 15 retains ordinary camera zoom
+PASS: momentum room 17 missed top shelf falls to a lower collision landing at (1686.0, 589.9922)
+PASS: momentum room 17 retains ordinary camera zoom
+PASS: momentum room 19 missed top shelf falls to a lower collision landing at (1996.0, 519.9756)
+PASS: momentum room 19 retains ordinary camera zoom
+PASS: Vent warning phase is non-damaging
+PASS: Vent active phase damages after warning
+INTEGRATION DESCENT: 0 failure(s)

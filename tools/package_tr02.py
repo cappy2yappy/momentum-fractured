@@ -26,6 +26,7 @@ if ($Pilot -ne 'fresh') {
 $trArguments=@()
 if ($Headless) {$trArguments+='--headless'}
 if ($QuitAfter -gt 0) {$trArguments+=@('--quit-after',[string]$QuitAfter)}
+$trArguments+='--'
 if ($Treatment -eq 'plain') {$trArguments+='--tr02-plain'}
 if ($Treatment -eq 'reduced') {$trArguments+='--tr02-reduced-motion'}
 $trArguments+=('--tr02-save="'+$trSave+'"')
@@ -48,7 +49,8 @@ No personal saves included; default creator APPDATA is never used by these launc
 Each comparison has its own profile. Play-fresh-graphic starts an unseeded campaign.
 Stride tier starts0 and optional momentum remains disabled by default.
 Walk: start R15 just left of culvert. Hold D to cross automatically into R16.
-For reverse: move right at least96px inside R16 first, then walk left across the opening.
+Wait one second after load/arrival for the safety cooldown before crossing.
+For reverse: move right at least96px inside R16 first, wait a beat, then walk left across the opening.
 Stair: start near R14 upper service stairwell. Press/release E to reach R17; use E to return.
 Special: start R20 beside the unlocked junction Wind-fold. E goes to R13; E returns.
 Special fixture deliberately seeds junction switch/regional flags; fresh progression is unchanged.

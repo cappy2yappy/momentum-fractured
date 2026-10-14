@@ -32,6 +32,13 @@ func run():
 	await process_frame
 	w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w;freeze();seed_fixture()
 	check(w.ROOM_COUNT==21 and w.world_edges().size()==29,"21 rooms and29 links retained")
+	check(w.world_edges().has([15,16]) and w.world_edges().has([14,17]) and w.world_edges().has([20,13]),"Atlas graph keeps all three exact pilot links")
+	check(w.ROOM_NAMES[15]=="LOWER SLUICE" and w.ROOM_NAMES[16]=="ROOT SHRINE" and w.ROOM_NAMES[20]=="RELAY JUNCTION","Atlas destination names remain canonical")
+	if "--tr02-reduced-motion" in OS.get_cmdline_user_args():
+		check(w.mixed_transitions.graphic_mode=="reduced","CLI reduced-motion config is active")
+	else: check(w.mixed_transitions.graphic_mode=="graphic","Default original graphic comparison config")
+	w.build_room(15);freeze()
+	check("WALK THROUGH" in w.mixed_transitions.label(w,w.mixed_transitions.walk_portal(w)),"Converted passage label communicates automatic activation")
 	check(w.camera.zoom==Vector2.ONE,"Normal1280x720 camera zoom")
 	for index in [15,16]:
 		for speed in [400.0,600.0,920.0]:

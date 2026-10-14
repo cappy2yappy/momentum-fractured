@@ -1,0 +1,198 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+PASS: Exactly 21 append-only rooms
+PASS: Momentum defaults disabled
+PASS: Integrated grapple range 440
+PASS: World graph contains no isolated room
+PASS: Metadata covers all rooms
+PASS: Map coordinates never overlap
+PASS: Cistern reward blocked behind unopened seal
+PASS: Cistern reward collected after opened seal
+PASS: Archive console blocked behind unopened Electric seal
+PASS: Archive restoration accepted after opened seal
+PASS: Arbitrary optional pickups cannot replace named sigils
+PASS: Reciprocal definition 0 -> 13
+PASS: Transition exact arrival 0 -> 13
+PASS: Arrival settles on safe floor 0 -> 13
+PASS: Reciprocal definition 13 -> 0
+PASS: Transition exact arrival 13 -> 0
+PASS: Arrival settles on safe floor 13 -> 0
+PASS: Reciprocal definition 13 -> 14
+PASS: Transition exact arrival 13 -> 14
+PASS: Arrival settles on safe floor 13 -> 14
+PASS: Reciprocal definition 14 -> 13
+PASS: Transition exact arrival 14 -> 13
+PASS: Arrival settles on safe floor 14 -> 13
+PASS: Reciprocal definition 14 -> 9
+PASS: Transition exact arrival 14 -> 9
+PASS: Arrival settles on safe floor 14 -> 9
+PASS: Reciprocal definition 9 -> 14
+PASS: Transition exact arrival 9 -> 14
+PASS: Arrival settles on safe floor 9 -> 14
+PASS: Reciprocal definition 14 -> 17
+PASS: Transition exact arrival 14 -> 17
+PASS: Arrival settles on safe floor 14 -> 17
+PASS: Reciprocal definition 17 -> 14
+PASS: Transition exact arrival 17 -> 14
+PASS: Arrival settles on safe floor 17 -> 14
+PASS: Reciprocal definition 5 -> 17
+PASS: Transition exact arrival 5 -> 17
+PASS: Arrival settles on safe floor 5 -> 17
+PASS: Reciprocal definition 17 -> 5
+PASS: Transition exact arrival 17 -> 5
+PASS: Arrival settles on safe floor 17 -> 5
+PASS: Reciprocal definition 17 -> 20
+PASS: Transition exact arrival 17 -> 20
+PASS: Arrival settles on safe floor 17 -> 20
+PASS: Reciprocal definition 20 -> 17
+PASS: Transition exact arrival 20 -> 17
+PASS: Arrival settles on safe floor 20 -> 17
+PASS: Reciprocal definition 2 -> 15
+PASS: Transition exact arrival 2 -> 15
+PASS: Arrival settles on safe floor 2 -> 15
+PASS: Reciprocal definition 15 -> 2
+PASS: Transition exact arrival 15 -> 2
+PASS: Arrival settles on safe floor 15 -> 2
+PASS: Reciprocal definition 15 -> 16
+PASS: Transition exact arrival 15 -> 16
+PASS: Arrival settles on safe floor 15 -> 16
+PASS: Reciprocal definition 16 -> 15
+PASS: Transition exact arrival 16 -> 15
+PASS: Arrival settles on safe floor 16 -> 15
+PASS: Reciprocal definition 16 -> 8
+PASS: Transition exact arrival 16 -> 8
+PASS: Arrival settles on safe floor 16 -> 8
+PASS: Reciprocal definition 8 -> 16
+PASS: Transition exact arrival 8 -> 16
+PASS: Arrival settles on safe floor 8 -> 16
+PASS: Reciprocal definition 16 -> 18
+PASS: Transition exact arrival 16 -> 18
+PASS: Arrival settles on safe floor 16 -> 18
+PASS: Reciprocal definition 18 -> 16
+PASS: Transition exact arrival 18 -> 16
+PASS: Arrival settles on safe floor 18 -> 16
+PASS: Reciprocal definition 18 -> 8
+PASS: Transition exact arrival 18 -> 8
+PASS: Arrival settles on safe floor 18 -> 8
+PASS: Reciprocal definition 8 -> 18
+PASS: Transition exact arrival 8 -> 18
+PASS: Arrival settles on safe floor 8 -> 18
+PASS: Reciprocal definition 18 -> 19
+PASS: Transition exact arrival 18 -> 19
+PASS: Arrival settles on safe floor 18 -> 19
+PASS: Reciprocal definition 19 -> 18
+PASS: Transition exact arrival 19 -> 18
+PASS: Arrival settles on safe floor 19 -> 18
+PASS: Reciprocal definition 19 -> 11
+PASS: Transition exact arrival 19 -> 11
+PASS: Arrival settles on safe floor 19 -> 11
+PASS: Reciprocal definition 11 -> 19
+PASS: Transition exact arrival 11 -> 19
+PASS: Arrival settles on safe floor 11 -> 19
+PASS: Reciprocal definition 19 -> 20
+PASS: Transition exact arrival 19 -> 20
+PASS: Arrival settles on safe floor 19 -> 20
+PASS: Reciprocal definition 20 -> 19
+PASS: Transition exact arrival 20 -> 19
+PASS: Arrival settles on safe floor 20 -> 19
+PASS: Reciprocal definition 20 -> 13
+PASS: Transition exact arrival 20 -> 13
+PASS: Arrival settles on safe floor 20 -> 13
+PASS: Reciprocal definition 13 -> 20
+PASS: Transition exact arrival 13 -> 20
+PASS: Arrival settles on safe floor 13 -> 20
+PASS: Room 13 has solid recovery floor
+PASS: Room 13 camera follows actual bounds
+PASS: Room 13 map explored
+PASS: Room 13 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 13 guard remains on bounded platform
+PASS: Room 13 anchor is outside solid/support art collision
+PASS: Room 14 has solid recovery floor
+PASS: Room 14 camera follows actual bounds
+PASS: Room 14 map explored
+PASS: Room 14 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 14 guard remains on bounded platform
+PASS: Room 14 anchor is outside solid/support art collision
+PASS: Room 14 anchor is outside solid/support art collision
+PASS: Room 14 anchor is outside solid/support art collision
+PASS: Room 15 has solid recovery floor
+PASS: Room 15 camera follows actual bounds
+PASS: Room 15 map explored
+PASS: Room 15 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 15 guard remains on bounded platform
+PASS: Room 15 anchor is outside solid/support art collision
+PASS: Room 15 anchor is outside solid/support art collision
+PASS: Room 16 has solid recovery floor
+PASS: Room 16 camera follows actual bounds
+PASS: Room 16 map explored
+PASS: Room 16 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 16 anchor is outside solid/support art collision
+PASS: Room 16 anchor is outside solid/support art collision
+PASS: Room 17 has solid recovery floor
+PASS: Room 17 camera follows actual bounds
+PASS: Room 17 map explored
+PASS: Room 17 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 17 anchor is outside solid/support art collision
+PASS: Room 17 anchor is outside solid/support art collision
+PASS: Room 17 anchor is outside solid/support art collision
+PASS: Room 18 has solid recovery floor
+PASS: Room 18 camera follows actual bounds
+PASS: Room 18 map explored
+PASS: Room 18 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 18 guard remains on bounded platform
+PASS: Room 18 anchor is outside solid/support art collision
+PASS: Room 18 anchor is outside solid/support art collision
+PASS: Room 18 anchor is outside solid/support art collision
+PASS: Room 19 has solid recovery floor
+PASS: Room 19 camera follows actual bounds
+PASS: Room 19 map explored
+PASS: Room 19 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 19 guard remains on bounded platform
+PASS: Room 19 anchor is outside solid/support art collision
+PASS: Room 19 anchor is outside solid/support art collision
+PASS: Room 20 has solid recovery floor
+PASS: Room 20 camera follows actual bounds
+PASS: Room 20 map explored
+PASS: Room 20 ordinary steps retain clearance below baseline jump envelope
+PASS: Room 20 anchor is outside solid/support art collision
+PASS: Room 20 anchor is outside solid/support art collision
+PASS: In-world Stride I pickup awards tier one
+PASS: Stride pickup cannot duplicate
+PASS: Root Shrine saves exact resting position
+PASS: Version 8 expanded save written
+PASS: Stride and junction flag persist across reload
+PASS: New checkpoint and exploration persist
+PASS: Opened seals and rewards persist
+PASS: Missing prerequisites fail closed 0 -> 13
+PASS: Missing prerequisites fail closed 13 -> 0
+PASS: Missing prerequisites fail closed 13 -> 14
+PASS: Missing prerequisites fail closed 14 -> 13
+PASS: Missing prerequisites fail closed 14 -> 9
+PASS: Missing prerequisites fail closed 9 -> 14
+PASS: Missing prerequisites fail closed 14 -> 17
+PASS: Missing prerequisites fail closed 17 -> 14
+PASS: Missing prerequisites fail closed 5 -> 17
+PASS: Missing prerequisites fail closed 17 -> 5
+PASS: Missing prerequisites fail closed 17 -> 20
+PASS: Missing prerequisites fail closed 20 -> 17
+PASS: Missing prerequisites fail closed 2 -> 15
+PASS: Missing prerequisites fail closed 15 -> 2
+PASS: Missing prerequisites fail closed 15 -> 16
+PASS: Missing prerequisites fail closed 16 -> 15
+PASS: Missing prerequisites fail closed 16 -> 8
+PASS: Missing prerequisites fail closed 8 -> 16
+PASS: Missing prerequisites fail closed 16 -> 18
+PASS: Missing prerequisites fail closed 18 -> 16
+PASS: Missing prerequisites fail closed 18 -> 8
+PASS: Missing prerequisites fail closed 8 -> 18
+PASS: Missing prerequisites fail closed 18 -> 19
+PASS: Missing prerequisites fail closed 19 -> 18
+PASS: Missing prerequisites fail closed 19 -> 11
+PASS: Missing prerequisites fail closed 11 -> 19
+PASS: Missing prerequisites fail closed 19 -> 20
+PASS: Missing prerequisites fail closed 20 -> 19
+PASS: Missing prerequisites fail closed 20 -> 13
+PASS: Missing prerequisites fail closed 13 -> 20
+WORLD EXPANSION: 193 assertions, 0 failure(s)

@@ -1,0 +1,18 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+ADAPTER=NVIDIA GeForce RTX 4070 Laptop GPU DRIVER=opengl3
+LIVE_CAPTURE mode=plain pilot=walk effect_seen=true destination=16 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=plain pilot=stair effect_seen=true destination=17 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=plain pilot=special effect_seen=true destination=13 zoom=(1.0, 1.0)
+DRAW_FRAME mode=plain n=120 mean_ms=1.985 p95_ms=2.653 max_ms=3.368
+LIVE_CAPTURE mode=graphic pilot=walk effect_seen=true destination=16 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=graphic pilot=stair effect_seen=true destination=17 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=graphic pilot=special effect_seen=true destination=13 zoom=(1.0, 1.0)
+DRAW_FRAME mode=graphic n=120 mean_ms=2.021 p95_ms=2.878 max_ms=3.553
+LIVE_CAPTURE mode=reduced pilot=walk effect_seen=true destination=16 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=reduced pilot=stair effect_seen=true destination=17 zoom=(1.0, 1.0)
+LIVE_CAPTURE mode=reduced pilot=special effect_seen=true destination=13 zoom=(1.0, 1.0)
+DRAW_FRAME mode=reduced n=120 mean_ms=1.909 p95_ms=2.647 max_ms=3.012

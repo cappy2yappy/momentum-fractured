@@ -1,0 +1,529 @@
+{
+  "runtime_source_sha": "1ef2f459611e366dd359ef4f970a79234136970f",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "full_matrix": [
+    {
+      "suite": "import",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      "returncode": 0,
+      "seconds": 3.45,
+      "passes": 0,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store.",
+        "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+        "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+        "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      ]
+    },
+    {
+      "suite": "verify_baseline",
+      "command": [
+        "C:\\Program Files\\Python310\\python.exe",
+        "tools/verify_baseline.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.08,
+      "passes": 0,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": []
+    },
+    {
+      "suite": "approved_baseline",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/approved_baseline.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 2.19,
+      "passes": 32,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "approved_combat_swing",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/approved_combat_swing.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.62,
+      "passes": 7,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "annex_expansion",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/annex_expansion.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 3.82,
+      "passes": 34,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "annex_traversal",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/annex_traversal.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 8.9,
+      "passes": 6,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "save_compatibility",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/save_compatibility.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.62,
+      "passes": 11,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "skyworks_progression",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/skyworks_progression.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 5.25,
+      "passes": 33,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "storm_keeper",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/storm_keeper.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.71,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "movement_momentum",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/movement_momentum.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 9.14,
+      "passes": 53,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "sprite_integration",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/sprite_integration.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.7,
+      "passes": 43,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "world_expansion",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/world_expansion.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 4.66,
+      "passes": 193,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "expansion_gates_save",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/expansion_gates_save.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 4.0,
+      "passes": 17,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "expansion_traversal",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/expansion_traversal.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 102.8,
+      "passes": 125,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "gameplay_stabilization",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/gameplay_stabilization.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.72,
+      "passes": 16,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "traversal_transitions",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/traversal_transitions.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.61,
+      "passes": 8,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "world_cohesion_traversal",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/world_cohesion_traversal.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 61.67,
+      "passes": 56,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "integration_candidate",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/integration_candidate.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.71,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "integration_descent",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/integration_descent.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 0.73,
+      "passes": 26,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "room_transition_prototype",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/room_transition_prototype.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 1.26,
+      "passes": 93,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "mixed_transitions",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/mixed_transitions.gd",
+        "--",
+        "--test"
+      ],
+      "returncode": 0,
+      "seconds": 4.32,
+      "passes": 105,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "profile_prepare",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/integration_profile.gd",
+        "--",
+        "--prepare"
+      ],
+      "returncode": 0,
+      "seconds": 0.64,
+      "passes": 2,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    },
+    {
+      "suite": "profile_reload",
+      "command": [
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02/build/tr02/engine/Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-12\\new-chat\\kaze-tr02",
+        "--script",
+        "res://tests/integration_profile.gd",
+        "--",
+        "--reload"
+      ],
+      "returncode": 0,
+      "seconds": 0.59,
+      "passes": 5,
+      "failures": 0,
+      "script_errors": 0,
+      "diagnostics": [
+        "ERROR: Failed to read the root certificate store."
+      ]
+    }
+  ],
+  "full_passes": 889,
+  "final_policy_and_explicit_profiles": [
+    {
+      "suite": "policy-normal",
+      "passes": 109,
+      "failures": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "policy-reduced",
+      "passes": 109,
+      "failures": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "fixture-fresh",
+      "passes": 1,
+      "failures": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "fixture-walk",
+      "passes": 1,
+      "failures": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "fixture-stair",
+      "passes": 1,
+      "failures": 0,
+      "returncode": 0
+    },
+    {
+      "suite": "fixture-special",
+      "passes": 1,
+      "failures": 0,
+      "returncode": 0
+    }
+  ],
+  "unique_final_coverage": 897,
+  "notes": "Full matrix has105 original TR02 assertions; test-only expansion adds4 atlas/CLI/cue checks. Final normal/reduced policies each109. Four explicit profile probes add4. No duplicated rerun counts added to unique coverage."
+}
