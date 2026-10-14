@@ -12,6 +12,7 @@ static func pilot_portal(w, at: Vector2) -> Dictionary:
 	return {}
 
 static func draw_exit(w, at: Vector2, color: Color):
+	if w.mixed_transitions.draw_exit(w,at): return
 	var portal = pilot_portal(w, at)
 	if not portal.is_empty():
 		draw_pilot_exit(w, at, portal)
@@ -120,6 +121,7 @@ static func uses_pilot_transition(w) -> bool:
 	return w.transition > 0 and (w.pending_from_room in PILOT_STYLES or w.room in PILOT_STYLES or w.pending_room in PILOT_STYLES)
 
 static func draw_transition(h, w, alpha: float) -> bool:
+	if w.mixed_transitions.draw_transition(h,w,alpha): return true
 	if not uses_pilot_transition(w): return false
 	# No player mutation, shader, timer, particles or persistent visual state.
 	var still = "--tr01-reduced-motion" in OS.get_cmdline_user_args()

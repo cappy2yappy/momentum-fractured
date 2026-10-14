@@ -51,7 +51,15 @@ func run():
 			for candidate in w.expansion.portals(pair[0]):
 				if candidate.target==pair[1]: portal=candidate
 			check(portal!=null,"Reciprocal definition %d -> %d"%pair)
-			w.player.position=portal.at;w.expansion.interact(w)
+			if w.mixed_transitions.is_walk(w.room,portal.target):
+				var dir=w.MixedTransitions.WALK[w.room].direction
+				w.player.set_physics_process(true);w.mixed_transitions.cooldown=0
+				w.player.position=portal.at+Vector2(-120*dir,-2);w.player.velocity=Vector2(400*dir,0)
+				w.mixed_transitions.update(w,0);w.mixed_transitions.update(w,0)
+				w.player.position=portal.at+Vector2(4*dir,-2);w.mixed_transitions.update(w,0)
+				w.player.set_physics_process(false)
+			else:
+				w.player.position=portal.at;w.expansion.interact(w)
 			for tick in 45: w._physics_process(1.0/60.0)
 			freeze()
 			check(w.room==pair[1] and w.player.position.distance_to(portal.arrival)<1,"Transition exact arrival %d -> %d"%pair)

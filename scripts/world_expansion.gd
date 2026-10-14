@@ -106,6 +106,7 @@ func interact(w) -> bool:
 		else: w.announce("The junction needs Archive restoration, three named sigils and the Wind intake.")
 		return true
 	for p in portals(w.room):
+		if w.mixed_transitions.is_walk(w.room,p.target): continue
 		if w.player.position.distance_to(p.at)<85:
 			if allowed(w,p.need): w.request_room(p.target,p.arrival)
 			else: w.announce("Route sealed: "+p.need.replace("_"," ").to_upper()+". Consult the atlas.")
@@ -146,4 +147,4 @@ func draw_room(w):
 		if w.room in LORE and not w.expansion_flags.get("lore_%d"%w.room,false): w.draw_rect(Rect2(LORE[w.room]-Vector2(12,32),Vector2(24,18)),Color("ddceb0"))
 	for p in portals(w.room):
 		w.draw_door(p.at,Color("9bc5a0") if allowed(w,p.need) else Color("b88b66"))
-		w.draw_string(font,p.at+Vector2(-100,-248 if w.room in [14,15] else -158),w.ROOM_NAMES[p.target]+" - E",HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color("e6dcc4"))
+		w.draw_string(font,p.at+Vector2(-100,-248 if w.room in [14,15] else -158),w.mixed_transitions.label(w,p),HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color("e6dcc4"))
