@@ -1,0 +1,6 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+ADAPTER=Apple M4 DRIVER=opengl3
+EFFECT_FRAME_METRIC room=14 n=120 mean_ms=8.338 p95_ms=9.181 max_ms=10.022 zoom=(1.0, 1.0) reduced=true
+EFFECT_FRAME_METRIC room=15 n=120 mean_ms=8.333 p95_ms=9.134 max_ms=10.469 zoom=(1.0, 1.0) reduced=true

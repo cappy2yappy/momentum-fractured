@@ -1,0 +1,261 @@
+{
+  "base": "afecef1922231081807a332c511de85c7941fec8",
+  "files": [
+    {
+      "path": "scripts/player.gd",
+      "sha256": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/world.gd",
+      "sha256": "cb5b0786496c47d1f1e6df1bcb810388c11ee4868ce17afb816acdb819e7b1f2",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/route_extension.gd",
+      "sha256": "5415817fc3bc1ce75082ab10656319686cb90f8a70b08e5ffd372bea6f6606db",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/momentum_profile.gd",
+      "sha256": "3d6df2e5e1df015ea51b6f3dc626c1f85460357c0105ca7b3b0af2477a2fdf30",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/grapple_anchor.gd",
+      "sha256": "4b603bdf31c9bae380034f81067001670f4e31484a5b48be5a0a9f2a6598d18e",
+      "unchanged": true
+    },
+    {
+      "path": "project.godot",
+      "sha256": "d2fc5649f8a21d2ccda03ef36a6417bcb4775ce239435e62037997b66bfe52cb",
+      "unchanged": true
+    },
+    {
+      "path": "world/MapData.txt",
+      "sha256": "31888be3c5fbbc78f4125ccf4b3a369f1acd40f311331e6dd392e217f6cdaaaf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/attack_strip.png",
+      "sha256": "acea98063ec67872cac86a07036669b8e9f9e2ea323c13f7bd9913dae82a54fb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/attack_strip.png.import",
+      "sha256": "cfbf2bfa528c1839ee045824357578f2ce755e3f9612d438313bf0883cc66f10",
+      "unchanged": true
+    },
+    {
+      "path": "assets/fall_strip.png",
+      "sha256": "8f537d45971963eb73b494f99c14bba2c7d446e3131a8556a616f72b469c1d90",
+      "unchanged": true
+    },
+    {
+      "path": "assets/fall_strip.png.import",
+      "sha256": "48c511f8440974ff9f0060777ff21e0f08c2e140bd58a757640e9f26362a3b09",
+      "unchanged": true
+    },
+    {
+      "path": "assets/guard.png",
+      "sha256": "0261c89efdd6c6e0397a3d3706653e3381945a4a26018103c6245d0aa4a634bb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/guard.png.import",
+      "sha256": "c8637768be43a6f4502a143693d5424f5b09fb94ea03c0f98afd586cbd074c54",
+      "unchanged": true
+    },
+    {
+      "path": "assets/idle_strip.png",
+      "sha256": "223bb91b93008fc1587fd899cb9ba72df8b16661b12dc9dbbe61e5cc948d6033",
+      "unchanged": true
+    },
+    {
+      "path": "assets/idle_strip.png.import",
+      "sha256": "26c9978173d07ef132bff7328215d826f0934c3abecb893ecdb1e2a11c2d567e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/jump_strip.png",
+      "sha256": "d202e5a83c4fc9f94fb40590ab5967c5e39440b0d5d8c3dc98226e8bfc861945",
+      "unchanged": true
+    },
+    {
+      "path": "assets/jump_strip.png.import",
+      "sha256": "6974487991d58f7eb1a5b7f39234d3e4680dad51a9d0cbed6c1bf23eb6e58da2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png.import",
+      "sha256": "db44d60353cd0310d5437e0a5e2a68b30d7b29325c9777c8845f39dfdc9a6a70",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png.import",
+      "sha256": "91459951c549d9d28db5a2e6894c0f21a7da8634ff89435297222b82adfc3f87",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png.import",
+      "sha256": "c7a502305166d2978af8d211351a7ecc1afd7b5962a1d7f8cbb54f83b8852f08",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png.import",
+      "sha256": "aa72faa4c429518ccb52d53d485c196aa2fc36efd1d0f1e7f786c5ad74149d04",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/source_boundary_manifest.json",
+      "sha256": "2802c4da483618abce586c792bea367364db4dc9feeec826047ccd57cd40ba47",
+      "unchanged": true
+    },
+    {
+      "path": "assets/kaze/cleaned/source_final_manifest.json",
+      "sha256": "1350d9b225ab7054fccf8ce34461c9bc21d6c27f83c51b543ce24825b236eb6c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/run_strip.png",
+      "sha256": "0be9951175048334b51ff72c34d1f908b15ec26b71b8a2c8eca8ef5cd174a1b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/run_strip.png.import",
+      "sha256": "00daafc35f9781ea3655bb6049a913700509869b15e155328cb2cc5988126278",
+      "unchanged": true
+    },
+    {
+      "path": "assets/wall_slide_strip.png",
+      "sha256": "43cb6c42670ed17aa1e5ed442c37f88ef5cbc395ebf51077f0ddba057d942560",
+      "unchanged": true
+    },
+    {
+      "path": "assets/wall_slide_strip.png.import",
+      "sha256": "739b844aff58fd0bea86e18eba59fbac6d9c06131a4b36ad0076bf9c218281d3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/KAZE_SPRITES.md",
+      "sha256": "ab00aaf5a6831c340b0cd3ce2e071b77118d01f03ce87e3de0e3ce10e622bb14",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/area-atlas.png",
+      "sha256": "7177e1a96a17157c26c18161b68bef47fffc8a45a1c2f1d03092f14611e44a0f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/area-atlas.png.import",
+      "sha256": "190dd1e67143b3fa3c64417f9ee0c8627dad438d4769eb1b1328014529bc3feb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/bosses_strip.png",
+      "sha256": "d526a63f9ae568fa762518350d65269aefa67dc0e298a28eda0c7f4df5c9b1ba",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/bosses_strip.png.import",
+      "sha256": "98f112eb1bb6897ff46e339f3a0eb9165ba9e0a5411b0b19e5087a83140cc347",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/district-fidelity.png",
+      "sha256": "ad85520ea52c1024781d44cadbae3b21c0fe8b4474c1c060eef2b2ba88076afa",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/district-fidelity.png.import",
+      "sha256": "dc842e8799dccf48fb86e7cbb1ee5229cd255115ec543faed1e68196d831a570",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_combat_strip.png",
+      "sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_combat_strip.png.import",
+      "sha256": "ddcdacacdf46c4fbcbf35f40f39e1ebf5abc059f0352b3385af3b2fe8d606a65",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_idle_strip.png",
+      "sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_idle_strip.png.import",
+      "sha256": "7a2c8aeeb560300a3c0538e78162179c8ba29ffe0ed801cc646f76f1fbce5268",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_manifest.json",
+      "sha256": "284c5f4b72dd7bd9b1501490efe045548a12a8c95e9826fc9d5efa6bdb278286",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_run_strip.png",
+      "sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_run_strip.png.import",
+      "sha256": "ad1a1826d8791a20a9ae1fc6bc0589bc0a75e0a57a7ba8410df14681e3761437",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_traversal_strip.png",
+      "sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/kaze_traversal_strip.png.import",
+      "sha256": "a183e15deecba4b154ab7b3c151010d829e78882b27e06475ec8498751092a9f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/sentinels_strip.png",
+      "sha256": "65622dacd0ea7bc5333da972383dae12b8ba5cff8cb001d45dbe3a1391f95dba",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/sentinels_strip.png.import",
+      "sha256": "a38f774fc3b75e36fa386e05c7aa6cc94722d6514c3e9d4674a7a34734747208",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/terrain-materials.png",
+      "sha256": "4e1467905844cc25b3f464933f3cbebe3a3a120217d457362b30fcea0233d721",
+      "unchanged": true
+    },
+    {
+      "path": "assets/web/terrain-materials.png.import",
+      "sha256": "d46abb5146a7a1c3cbebe1732ef802536b8b2dd4a1d9cd30db7b14fe66b882e3",
+      "unchanged": true
+    }
+  ],
+  "expansion_logic_before_draw_room_unchanged": true
+}

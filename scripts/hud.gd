@@ -164,7 +164,8 @@ func _draw():
 	if world.transition > 0:
 		var alpha = 1.0 - absf(world.transition - 0.325) / 0.325
 		draw_rect(Rect2(0, 0, 1280, 720), Color(0.015, 0.01, 0.025, alpha))
-		draw_rect(Rect2(596, 240, 88, 180), Color(1, 0.96, 0.87, alpha), false, 5)
+		if not world.RoomPresentation.draw_transition(self, world, alpha):
+			draw_rect(Rect2(596, 240, 88, 180), Color(1, 0.96, 0.87, alpha), false, 5)
 func map_room_rect(origin: Vector2, cell_size: Vector2, index: int, show_labels: bool) -> Rect2:
 	var coords: Vector3i = world.ROOM_MAP_COORDS[index]
 	var gap = Vector2(12, 12) if show_labels else Vector2(3, 3)

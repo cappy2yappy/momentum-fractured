@@ -1,0 +1,16 @@
+{
+  "source_runtime_sha": "75fd73b1bbe50745d08628c4b61a36c0c64a2976",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "source_base": "afecef1922231081807a332c511de85c7941fec8",
+  "runtime_hashes": {
+    "scripts/hud.gd": "78d1504c7da62e9208255a9584f9e4d7d696414ee47a4ff7eab53c2f305574e0",
+    "scripts/world_expansion.gd": "491951f9097482f04bb1b48f27cb7ac50dce4d79b0a2cafaa2e46c1fcf513dc0",
+    "scripts/room_presentation.gd": "3cde68d14b79636e4929d166a76e34b9da83e182f40a0cdf783b9cb76bdc3f31"
+  },
+  "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061/build/tr01/Kaze-TR01-Alpha061-GenericSized-macOS-Universal.zip",
+  "bytes": 75953471,
+  "sha256": "abd0b9b5c481115feb49aa7198c85dcdf102ad4642944419fccf6e49cb3b76ca",
+  "zip_crc": "PASS",
+  "tested_platform": "macOS Apple M4 native and headless boot; Intel untested; Windows not exported",
+  "remote_binary_publication": false
+}
