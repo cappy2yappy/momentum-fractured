@@ -112,13 +112,3 @@ jobs:
             build/native-smoke/stdout.log
           retention-days: 21
           if-no-files-found: error
-  temporary-red-proof:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 2
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          persist-credentials: false
-      - name: Intentionally fail corrupted-pack validation (CI-01 negative evidence)
-        run: PYTHONPATH=tools/ci python3 -c "from package import audit_pack; audit_pack(b'intentionally corrupt pack')"
