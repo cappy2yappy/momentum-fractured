@@ -1,0 +1,180 @@
+{
+  "engine": "Godot 4.6.1.stable.official.14d19694e",
+  "current_start": "34be30436996284ec2f783269c40269d321ed427",
+  "historical_start": "03bac2f03c532b99562fb0eb07279aea1f847a15",
+  "baseline_suites": 12,
+  "baseline_pass_assertions": 556,
+  "final_suites": [
+    {
+      "suite": "approved_baseline",
+      "pass_assertions": 32,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/approved_baseline.gd -- --test"
+    },
+    {
+      "suite": "approved_combat_swing",
+      "pass_assertions": 7,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/approved_combat_swing.gd -- --test"
+    },
+    {
+      "suite": "annex_expansion",
+      "pass_assertions": 34,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/annex_expansion.gd -- --test"
+    },
+    {
+      "suite": "annex_traversal",
+      "pass_assertions": 6,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/annex_traversal.gd -- --test"
+    },
+    {
+      "suite": "save_compatibility",
+      "pass_assertions": 11,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/save_compatibility.gd -- --test"
+    },
+    {
+      "suite": "skyworks_progression",
+      "pass_assertions": 33,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/skyworks_progression.gd -- --test"
+    },
+    {
+      "suite": "storm_keeper",
+      "pass_assertions": 12,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/storm_keeper.gd -- --test"
+    },
+    {
+      "suite": "sprite_integration",
+      "pass_assertions": 43,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/sprite_integration.gd -- --test"
+    },
+    {
+      "suite": "movement_momentum",
+      "pass_assertions": 53,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/movement_momentum.gd -- --test"
+    },
+    {
+      "suite": "world_expansion",
+      "pass_assertions": 193,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/world_expansion.gd -- --test"
+    },
+    {
+      "suite": "expansion_gates_save",
+      "pass_assertions": 17,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/expansion_gates_save.gd -- --test"
+    },
+    {
+      "suite": "expansion_traversal",
+      "pass_assertions": 115,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/expansion_traversal.gd -- --test"
+    },
+    {
+      "suite": "gameplay_stabilization",
+      "pass_assertions": 16,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/gameplay_stabilization.gd -- --test"
+    },
+    {
+      "suite": "traversal_transitions",
+      "pass_assertions": 8,
+      "failed_assertions": 0,
+      "script_errors": 0,
+      "exit_code": 0,
+      "command": "godot --headless --path kaze-gp01 --script res://tests/traversal_transitions.gd -- --test"
+    }
+  ],
+  "final_pass_assertions": 580,
+  "historical_suites": [
+    {
+      "suite": "alpha_08_smoke",
+      "pass_assertions": 374,
+      "exit_code": 0
+    },
+    {
+      "suite": "canal_chamber_regression",
+      "pass_assertions": 17,
+      "exit_code": 0
+    },
+    {
+      "suite": "echo_territory_regression",
+      "pass_assertions": 6,
+      "exit_code": 0
+    },
+    {
+      "suite": "fire_return_regression",
+      "pass_assertions": 12,
+      "exit_code": 0
+    },
+    {
+      "suite": "movement_combat_regression",
+      "pass_assertions": 18,
+      "exit_code": 0
+    },
+    {
+      "suite": "pause_overlay_regression",
+      "pass_assertions": 22,
+      "exit_code": 0
+    },
+    {
+      "suite": "swimming_regression",
+      "pass_assertions": 11,
+      "exit_code": 0
+    },
+    {
+      "suite": "traversal_stability_regression",
+      "pass_assertions": 10,
+      "exit_code": 0
+    }
+  ],
+  "historical_pass_assertions": 470,
+  "manual_playtest": "NOT TESTED",
+  "rendering_60_fps": "NOT TESTED",
+  "app_identity_preserved": true,
+  "build": {
+    "source_commit": "7a2b7737168caedcf40a51914c7d345f2e9684dc",
+    "exe_sha256": "48326bd8fda3a15a09b8481ec3dc7433048d3c216221b05495c010833ba6819e",
+    "zip_sha256": "74e596dbfbbc0b5b46a8eb4dfa87dd0c73a9fecd73a947c87c446c754b8e4847",
+    "zip_bytes": 51145060,
+    "zip_path": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\gp01-delivery\\Kaze-Alpha-0.6.1-GP01-Windows.zip",
+    "crc": "PASS",
+    "export_exit_code": 0,
+    "packaged_boot_exit_code": 0
+  },
+  "published_implementation_commit": "7a2b7737168caedcf40a51914c7d345f2e9684dc",
+  "pull_request": "https://github.com/cappy2yappy/momentum-fractured/pull/8"
+}
