@@ -99,8 +99,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: success() && (github.event_name == 'pull_request' || inputs.build_artifacts)
         with:
-          name: Kaze-macOS-Universal-${{ steps.source.outputs.short }}
-          path: game-source/build/ci/macOS-Universal/
+          name: Kaze-macOS-${{ steps.source.outputs.short }}
+          path: game-source/build/ci/macOS/
           retention-days: 21
           if-no-files-found: error
   native-smoke:
@@ -113,7 +113,7 @@ jobs:
           - runner: windows-2022
             target: Windows-x86_64
           - runner: macos-14
-            target: macOS-Universal
+            target: macOS
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 10
     steps:
@@ -188,6 +188,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: CI02-Candidate-macOS-${{ steps.source.outputs.short }}
-          path: game-source/build/ci/macOS-Universal/
+          path: game-source/build/ci/macOS/
           retention-days: 21
           if-no-files-found: error
