@@ -9,7 +9,7 @@
 
 | ID | Intended Git path | Context / usage | Current state | Rights / provenance |
 | --- | --- | --- | --- | --- |
-| REF-CITY-001 | `docs/art/references/alpha061/city_silent_district_reference_01.png` | Creator-provided nighttime city image; City / Silent District visual direction | **MISSING ORIGINAL BINARY** — do not fetch/recreate substitutes | Shared by creator in PM chat (2026-10-14); creator authorizes public repository storage; stock-site name/license and redistribution rights not independently verified |
+| REF-CITY-001 | `docs/art/references/alpha061/city_silent_district_reference_01.png` | Creator-provided nighttime city image; City / Silent District visual direction | **SOURCE RECEIVED IN PM CHAT; GITHUB BINARY NOT YET UPLOADED** | Shared by creator in PM chat (2026-10-14); creator authorizes public repository storage; stock-site name/license and redistribution rights not independently verified |
 | REF-VILLAGE-001 | `docs/art/references/alpha061/hidden_village_reference_01.png` | Creator-provided warm Japanese hidden village image; playable prologue visual direction | **MISSING ORIGINAL BINARY** — do not fetch/recreate substitutes | Shared by creator in PM chat (2026-10-14); creator not necessarily copyright holder; source/license unknown |
 | REF-RUINS-001 | `docs/art/references/alpha061/ruins_reference_01.png` | Optional later ruins concept reference | **NOT PROVIDED** | No original supplied |
 
@@ -34,3 +34,9 @@ For ART-01-0061, the Art Mane already retrieved its assignment and inspected the
 ## Rights and storage policy
 
 A creator posting an image for visual inspiration does not establish that the image is owned by the creator or licensed for redistribution in a public code repository. Default unknown-rights images to a **private repository** or linked restricted location pending confirmation. Record license/credit when known. Do not build final game textures by directly incorporating third-party reference pixels without appropriate rights.
+
+## Original image intake verified (2026-10-14)
+
+- REF-CITY-001: original PM chat attachment `image(7).png`; PNG RGBA; 736 × 1314 pixels; SHA-256 `ae534f4cfba433dfeec2fa1c5310cd1498e190ad8fabd631a0ac4a64a4cbadab`.
+- REF-VILLAGE-001: original PM chat attachment `image(8).png`; PNG RGBA; 736 × 1104 pixels; SHA-256 `f51e4ae44990f9db3cb89b8b502b3cd34f3c2a56fda6710794cf29c5516428cf`.
+- Intake confirms original local copies are available in the current PM session. **No corresponding binary blobs have yet been committed to GitHub.** The current connector cannot directly consume this conversation's mounted binary attachments, so a binary-capable push/upload step remains required.
