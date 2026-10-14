@@ -1,0 +1,300 @@
+{
+  "assignment": "ART-01-0061",
+  "assets": [
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG00_sky.png",
+      "bytes": 17930,
+      "sha256": "b204b87edc1d3a24ddb73f5becaf3ab4f194046ccba424f6b39be6dde8eed719",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG00_sky.svg",
+      "bytes": 243,
+      "sha256": "1a8fae3f61a1a0a4725385c8fe99972cdd84019aeb7c610f695d883ef3c48f5d",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG10_far_skyline.png",
+      "bytes": 18707,
+      "sha256": "8b09b8c030e406d8f0d76b820885f78dd47b968eeb98bfd16e4567d1afc22bad",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG10_far_skyline.svg",
+      "bytes": 9338,
+      "sha256": "93cdcaea5035881f53bfb157a3058d550008655e13fd1c53a403864dac7a5e61",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG20_roof_silhouettes.png",
+      "bytes": 17809,
+      "sha256": "3e239b0979ace489e936a7f6a8f8cbaf0382e72ec12af8177ea33403b3cce605",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/BG20_roof_silhouettes.svg",
+      "bytes": 780,
+      "sha256": "b79c607ebee47241ee875c59ee69ff927c7f6f2d6a50965cc9ea6bcfa27025cd",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/city_rooftop_layered.png",
+      "bytes": 21971,
+      "sha256": "3c3345e34953bf768ac0a3d3310abaa2727a4d512f4619c047edc7d42c479164",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/city_rooftop/city_rooftop_layered.svg",
+      "bytes": 10167,
+      "sha256": "f7120a720bc7220380b0f09f7648fe1d2ef896596f4f5019b246e764b51c3c11",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG00_wall_base.png",
+      "bytes": 18295,
+      "sha256": "e5adab4321e048e375731b1f970521501fa3a54cdb4b17e7833219ca7c55a320",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG00_wall_base.svg",
+      "bytes": 3038,
+      "sha256": "e53ca375fd65a98bf333b492f2ce391194745c9eb98e3b75740625aff3001271",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG10_retaining_arches.png",
+      "bytes": 34080,
+      "sha256": "cbc462cd1540d4108e3d3ad163460d83628975d540983c33137b64d1e0b99635",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG10_retaining_arches.svg",
+      "bytes": 1005,
+      "sha256": "088a0d87a595b28389dc0cc0a8cfb9d41494bac063f910bc7312f2bfacc01051",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG20_service_pipes.png",
+      "bytes": 18199,
+      "sha256": "7d52f70dc6e9b0f43d3ac3f44a2ba51ccd321e318d999c459fca670fce20896d",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/BG20_service_pipes.svg",
+      "bytes": 758,
+      "sha256": "cdd7e3abfe92f302e5429bb6bdec17e1501e2d5d1828c8454e12e9945710c24a",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/underground_approach_layered.png",
+      "bytes": 33612,
+      "sha256": "e4ba07a2e75d4f4cd7bc1e7b5dd3b1b0cf8ac6c621844a297154d32ecd1e6d7c",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/environment/alpha061/underground_approach/underground_approach_layered.svg",
+      "bytes": 4607,
+      "sha256": "717696d370ddb8da8ec896498b8f5e42fef7d2a2eb7ff3c9ecf0ca5e0893c214",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "path": "docs/art/alpha061/previews/B0_hidden_village_identity.svg",
+      "bytes": 2948,
+      "sha256": "e920c31b6c70f5399c8fca9f1770ee210e8419d2957b37fc08fc005a5b5b0a3b",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "docs/art/alpha061/previews/B1_ruins_variants_identity.svg",
+      "bytes": 2791,
+      "sha256": "1b34411216b9e175c6b8970fc9a4d4dde3454e06ac4e788a115db91f5c24cf1f",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "docs/art/alpha061/previews/B2_silent_district_identity.svg",
+      "bytes": 11792,
+      "sha256": "700b885eb0bd7a70bf7151752205f756338913fe002c4c5c85023511576b5977",
+      "status": "concept-only / draft prototype",
+      "format": "editable SVG",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "docs/art/alpha061/previews/baseline_R14.png",
+      "bytes": 947832,
+      "sha256": "fcaea4c78cc917161195c638ed7bff0526bf46736e3be5128a8df4cec2b19731",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/baseline_R15.png",
+      "bytes": 703067,
+      "sha256": "cb5f02fdc8035c5f221ba7fcb5ceb8565151c8b8f96a108198bf475f94260947",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/city_rooftop_render.png",
+      "bytes": 21971,
+      "sha256": "3c3345e34953bf768ac0a3d3310abaa2727a4d512f4619c047edc7d42c479164",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/composition_R14.png",
+      "bytes": 68398,
+      "sha256": "01dc88b59bed3ed89f34f0c197950ad556bf2d884f59552052d051d085f1da6c",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/composition_R15.png",
+      "bytes": 78381,
+      "sha256": "5d8bdbff38622e39e2ee2c5be906e7e5231b7d4f28dbc536d09cf496fa25d5c6",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/contrast_checks.json",
+      "bytes": 782,
+      "sha256": "3e57d61cd7c34396f41ace9b46c8dfd50870040f4d49eac3567700913fd21e3b",
+      "status": "concept-only / draft prototype",
+      "format": "JSON"
+    },
+    {
+      "path": "docs/art/alpha061/previews/early_biome_concept_board.png",
+      "bytes": 3080013,
+      "sha256": "0f48743044e8b9ba8ed960f3d34a0167eedf0221c9d2405929746c3262461e08",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "docs/art/alpha061/previews/underground_approach_render.png",
+      "bytes": 33612,
+      "sha256": "e4ba07a2e75d4f4cd7bc1e7b5dd3b1b0cf8ac6c621844a297154d32ecd1e6d7c",
+      "status": "concept-only / draft prototype",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "format": "PNG"
+    }
+  ],
+  "license_provenance": "PROVENANCE.md",
+  "no_production_approval": true
+}
