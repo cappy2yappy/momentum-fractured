@@ -1,0 +1,1776 @@
+{
+  "assignment": "CI-02",
+  "verdict": "READY FOR PM REVIEW",
+  "main_baseline": "1a33d283a3781ba7068f86b43d4197f28f063939",
+  "tested_promotion_commit": "aec292c4f23610ca542a50e69a66c35b904c009f",
+  "candidate_baseline": "afecef1922231081807a332c511de85c7941fec8",
+  "tested_candidate_proof_commit": "7f6633edf2a92a517b8687f612d65c30290684a6",
+  "primary_pr": "https://github.com/cappy2yappy/momentum-fractured/pull/14",
+  "verification_pr": "https://github.com/cappy2yappy/momentum-fractured/pull/15",
+  "runs": [
+    {
+      "id": 38631729109,
+      "url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38631729109",
+      "conclusion": "success",
+      "target": "main",
+      "jobs": [
+        {
+          "id": 116085101805,
+          "name": "candidate-compatibility",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38631729109,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Resolve approved candidate identity",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run python3 ci-control/tools/ci/install_godot.py",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run python3 ci-control/tools/ci/qa.py --godot \"$GODOT\"",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run python3 ci-control/tools/ci/negative_path.py",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run python3 ci-control/tools/ci/package.py --godot \"$GODOT\"",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23
+            }
+          ]
+        },
+        {
+          "id": 116085102366,
+          "name": "qa-and-build",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38631729109,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Guard manual source and workflow branch",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Checkout reviewed CI controls",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Checkout selected game source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Resolve actual source identity",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Install checksum-pinned Godot/templates",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Full supported QA with explicit capability report",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Negative-path checks",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Deliberate red probe",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 9
+            },
+            {
+              "name": "Export and audit both platforms",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Post Checkout selected game source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            },
+            {
+              "name": "Post Checkout reviewed CI controls",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 26
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 27
+            }
+          ]
+        },
+        {
+          "id": 116085613052,
+          "name": "native-smoke (windows-2022, Windows-x86_64)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38631729109,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Native release headless startup",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 116085613262,
+          "name": "native-smoke (macos-15-intel, macOS)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38631729109,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Native release headless startup",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38632031577,
+      "url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38632031577",
+      "conclusion": "success",
+      "target": "integration/candidate-alpha-0.6.1-gp-ld",
+      "jobs": [
+        {
+          "id": 116085794418,
+          "name": "qa-and-build",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38632031577,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Guard manual source and workflow branch",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Checkout reviewed CI controls",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Checkout selected game source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Resolve actual source identity",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Install checksum-pinned Godot/templates",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Full supported QA with explicit capability report",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Negative-path checks",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Deliberate red probe",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 9
+            },
+            {
+              "name": "Export and audit both platforms",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Post Checkout selected game source",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            },
+            {
+              "name": "Post Checkout reviewed CI controls",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 26
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 27
+            }
+          ]
+        },
+        {
+          "id": 116085796734,
+          "name": "candidate-compatibility",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 38632031577,
+          "logs_url": null,
+          "steps": null
+        },
+        {
+          "id": 116087839451,
+          "name": "native-smoke (windows-2022, Windows-x86_64)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38632031577,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Native release headless startup",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 116087839949,
+          "name": "native-smoke (macos-15-intel, macOS)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38632031577,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Native release headless startup",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "main_evidence": [
+    {
+      "artifact": {
+        "id": 11926940080,
+        "name": "Kaze-Native-Smoke-macOS-aec292c4",
+        "size_in_bytes": 799,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926940080",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926940080/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:26:10Z",
+        "expires_at": "2026-11-04T20:26:09Z",
+        "updated_at": "2026-10-14T20:26:10Z",
+        "digest": "sha256:3736c2f5328bc15c9ceed0923ee328b5b527520779734e37798a5f3998abaa3b",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "native_smoke": {
+        "status": "passed",
+        "source_sha": "aec292c4f23610ca542a50e69a66c35b904c009f",
+        "target": "macOS-x86_64",
+        "os": "Darwin",
+        "architecture": "x86_64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "4e6ebe9103e3245c2491357630a686dcb51ec386ae83e7c15770371ebd637d29"
+      }
+    },
+    {
+      "artifact": {
+        "id": 11926024442,
+        "name": "Kaze-Windows-x86_64-aec292c4",
+        "size_in_bytes": 36467641,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926024442",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926024442/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:25:40Z",
+        "expires_at": "2026-11-04T20:25:38Z",
+        "updated_at": "2026-10-14T20:25:40Z",
+        "digest": "sha256:d96bf0b9f31063c9dd6aad0f73ef6f2a03574431fd7a577e774cb7023de7d2c7",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "ci/default-branch-godot-builds",
+        "source_sha": "aec292c4f23610ca542a50e69a66c35b904c009f",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:25:13.468251+00:00",
+        "target": "Windows-x86_64",
+        "qa_outcome": "passed",
+        "qa_suite_count": 0,
+        "qa_mode": "legacy-import-startup",
+        "qa_unavailable_checks": [
+          "No regression tests or baseline preservation verifier exist in this source"
+        ],
+        "temporary_export_overrides": [],
+        "template_derivation": "byte-exact Intel slice from checksum-verified official universal macOS template",
+        "preset_origin": "temporary CI-only fallback",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "Windows x86_64"
+        ],
+        "zip": {
+          "name": "Momentum-Fractured-Main-Playtest-Windows-x86_64-aec292c4.zip",
+          "size": 36613385,
+          "sha256": "8fdde58e9e2df9961977a8ee36419133876ea78c890a5c985490ee02b526b085"
+        },
+        "members": [
+          {
+            "path": "Momentum-Fractured-Main-Playtest-Windows-x86_64-aec292c4.exe",
+            "size": 105190112,
+            "sha256": "12f781863ee8df0a03648a0f55ebfd7f838e7ac22e943888193f85d26265f348"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 125,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 125
+    },
+    {
+      "artifact": {
+        "id": 11925904559,
+        "name": "Kaze-QA-Results-aec292c4",
+        "size_in_bytes": 9919,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925904559",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925904559/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:25:38Z",
+        "expires_at": "2026-11-04T20:25:38Z",
+        "updated_at": "2026-10-14T20:25:38Z",
+        "digest": "sha256:d2259dc6904f73d671970a46d03ad18684326a76d05e88184a8d7d328b7d3233",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "qa": {
+        "status": "passed",
+        "source_sha": "aec292c4f23610ca542a50e69a66c35b904c009f",
+        "qa_mode": "legacy-import-startup",
+        "suite_count": 0,
+        "assertion_count": 0,
+        "unavailable_checks": [
+          "No regression tests or baseline preservation verifier exist in this source"
+        ],
+        "failures": [],
+        "results": [
+          {
+            "suite": "import",
+            "returncode": 0,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": [],
+            "seconds": 8.04
+          },
+          {
+            "suite": "main_scene_startup",
+            "returncode": 0,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": [],
+            "seconds": 0.34
+          }
+        ]
+      }
+    },
+    {
+      "artifact": {
+        "id": 11925429922,
+        "name": "Kaze-Native-Smoke-Windows-x86_64-aec292c4",
+        "size_in_bytes": 808,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925429922",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925429922/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:26:00Z",
+        "expires_at": "2026-11-04T20:26:00Z",
+        "updated_at": "2026-10-14T20:26:00Z",
+        "digest": "sha256:2dbd1f28d5cc72e2ecd0a15280db488df147b00b3edc33c15abce854c4143749",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "native_smoke": {
+        "status": "passed",
+        "source_sha": "aec292c4f23610ca542a50e69a66c35b904c009f",
+        "target": "Windows-x86_64",
+        "os": "Windows",
+        "architecture": "AMD64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "8fdde58e9e2df9961977a8ee36419133876ea78c890a5c985490ee02b526b085"
+      }
+    },
+    {
+      "artifact": {
+        "id": 11925344955,
+        "name": "Kaze-macOS-aec292c4",
+        "size_in_bytes": 32064467,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925344955",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11925344955/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:25:42Z",
+        "expires_at": "2026-11-04T20:25:40Z",
+        "updated_at": "2026-10-14T20:25:42Z",
+        "digest": "sha256:a605a7ca4ee9c0fcbf5170b5222259e985331fcf7fa14df8cebbc303ca550540",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "ci/default-branch-godot-builds",
+        "source_sha": "aec292c4f23610ca542a50e69a66c35b904c009f",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:25:37.990620+00:00",
+        "target": "macOS-x86_64",
+        "qa_outcome": "passed",
+        "qa_suite_count": 0,
+        "qa_mode": "legacy-import-startup",
+        "qa_unavailable_checks": [
+          "No regression tests or baseline preservation verifier exist in this source"
+        ],
+        "temporary_export_overrides": [],
+        "template_derivation": "byte-exact Intel slice from checksum-verified official universal macOS template",
+        "preset_origin": "temporary CI-only fallback",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "macOS arm64",
+          "macOS x86_64"
+        ],
+        "zip": {
+          "name": "Momentum-Fractured-Main-Playtest-macOS-x86_64-aec292c4.zip",
+          "size": 32251409,
+          "sha256": "4e6ebe9103e3245c2491357630a686dcb51ec386ae83e7c15770371ebd637d29"
+        },
+        "members": [
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/MacOS/MOMENTUM- FRACTURED",
+            "size": 94650968,
+            "sha256": "3e4b31820e3a1652f48c9f4804c972fa96b69e60d1c418134d5282d242a8b410"
+          },
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/PkgInfo",
+            "size": 9,
+            "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb"
+          },
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/Info.plist",
+            "size": 1814,
+            "sha256": "4f29c2ecb192d3cd002e3791e5c4d072a7e6e8badced4c568034f02e1ae60642"
+          },
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/Resources/icon.icns",
+            "size": 67500,
+            "sha256": "779ff524928785811d6d4c61f47a26491160b1092db9b610e85fcdfd9b2d2b2a"
+          },
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/Resources/PrivacyInfo.xcprivacy",
+            "size": 229,
+            "sha256": "0535353bb08c25b8ce5ed9ac7e442a5994f402e0f6cbc4bed668cfc63c2ceac3"
+          },
+          {
+            "path": "MOMENTUM- FRACTURED.app/Contents/Resources/MOMENTUM- FRACTURED.pck",
+            "size": 613588,
+            "sha256": "a6146c8b4cc49c42dd964970e984afd4dd3cbb48c4eafba56ab64c9130c94f82"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 125,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 125
+    }
+  ],
+  "candidate_compatibility_evidence": [
+    {
+      "artifact": {
+        "id": 11926646963,
+        "name": "CI02-Candidate-QA-afecef19",
+        "size_in_bytes": 55130,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926646963",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926646963/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:28:47Z",
+        "expires_at": "2026-11-04T20:28:46Z",
+        "updated_at": "2026-10-14T20:28:47Z",
+        "digest": "sha256:c15f77b8d9a0d18a55d952b5192691b372437c7c4b1a2fdec89f09fad1408cc0",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "qa": {
+        "qa_mode": "candidate-full-regression",
+        "source_sha": "afecef1922231081807a332c511de85c7941fec8",
+        "status": "passed",
+        "suite_count": 17,
+        "assertion_count": 691,
+        "failures": [],
+        "results": [
+          {
+            "suite": "import",
+            "returncode": 0,
+            "seconds": 8.43,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [
+              "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+              "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+              "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+              "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+              "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+              "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+            ],
+            "hard_errors": []
+          },
+          {
+            "suite": "verify_baseline",
+            "returncode": 0,
+            "seconds": 0.03,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_baseline",
+            "returncode": 0,
+            "seconds": 1.92,
+            "passes": 32,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_combat_swing",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 7,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_expansion",
+            "returncode": 0,
+            "seconds": 3.5,
+            "passes": 34,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_traversal",
+            "returncode": 0,
+            "seconds": 8.71,
+            "passes": 6,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "save_compatibility",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 11,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "skyworks_progression",
+            "returncode": 0,
+            "seconds": 5.08,
+            "passes": 33,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "storm_keeper",
+            "returncode": 0,
+            "seconds": 0.52,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "movement_momentum",
+            "returncode": 0,
+            "seconds": 8.89,
+            "passes": 53,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "sprite_integration",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 43,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_expansion",
+            "returncode": 0,
+            "seconds": 4.34,
+            "passes": 193,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_gates_save",
+            "returncode": 0,
+            "seconds": 4.06,
+            "passes": 17,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_traversal",
+            "returncode": 0,
+            "seconds": 98.04,
+            "passes": 125,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "gameplay_stabilization",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 16,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "traversal_transitions",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 8,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_cohesion_traversal",
+            "returncode": 0,
+            "seconds": 60.21,
+            "passes": 56,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_candidate",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_descent",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 26,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_prepare",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 2,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_reload",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 5,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          }
+        ]
+      }
+    },
+    {
+      "artifact": {
+        "id": 11926372355,
+        "name": "CI02-Candidate-macOS-afecef19",
+        "size_in_bytes": 75664981,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926372355",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926372355/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:28:52Z",
+        "expires_at": "2026-11-04T20:28:50Z",
+        "updated_at": "2026-10-14T20:28:52Z",
+        "digest": "sha256:8c0675b70596608dd59aa0d2e262345cdac1c148dcdc3256c9cc459285799640",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "integration/candidate-alpha-0.6.1-gp-ld",
+        "source_sha": "afecef1922231081807a332c511de85c7941fec8",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:28:46.136472+00:00",
+        "target": "macOS-Universal",
+        "qa_outcome": "passed",
+        "qa_suite_count": 17,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "macOS arm64",
+          "macOS x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-Alpha-0.6.1-Candidate-macOS-Universal-afecef19.zip",
+          "size": 75943910,
+          "sha256": "82755c8de354cd46f68619ec22e9037b682d84bfc54173425ebe92583f1ae7e1"
+        },
+        "members": [
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.5.0",
+            "size": 183849535,
+            "sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/PkgInfo",
+            "size": 9,
+            "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Info.plist",
+            "size": 1908,
+            "sha256": "3ac172d88aaa3702da4bc558fb0e145644f9b59b5845388acec97b824595edc0"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/icon.icns",
+            "size": 67500,
+            "sha256": "779ff524928785811d6d4c61f47a26491160b1092db9b610e85fcdfd9b2d2b2a"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/PrivacyInfo.xcprivacy",
+            "size": 229,
+            "sha256": "0535353bb08c25b8ce5ed9ac7e442a5994f402e0f6cbc4bed668cfc63c2ceac3"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/Kaze \u2014 Silent District Alpha 0.5.0.pck",
+            "size": 15482984,
+            "sha256": "f5f45cdca0a0d281f64ca044ea9c2c1436a3f39b97bfd0c9fd7e06a1754633c0"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 527,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 527
+    },
+    {
+      "artifact": {
+        "id": 11926362002,
+        "name": "CI02-Candidate-Windows-afecef19",
+        "size_in_bytes": 51004861,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926362002",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926362002/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:28:49Z",
+        "expires_at": "2026-11-04T20:28:47Z",
+        "updated_at": "2026-10-14T20:28:49Z",
+        "digest": "sha256:da8cc1cdbc8ce300af63e43ebf181455db82e67a9dc96e8d7875eae403511d08",
+        "workflow_run": {
+          "id": 38631729109,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/default-branch-godot-builds",
+          "head_sha": "aec292c4f23610ca542a50e69a66c35b904c009f"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "integration/candidate-alpha-0.6.1-gp-ld",
+        "source_sha": "afecef1922231081807a332c511de85c7941fec8",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:28:33.940532+00:00",
+        "target": "Windows-x86_64",
+        "qa_outcome": "passed",
+        "qa_suite_count": 17,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "Windows x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-Alpha-0.6.1-Candidate-Windows-x86_64-afecef19.zip",
+          "size": 51146694,
+          "sha256": "56e65f027dbd61a4dae5d42acd7c961e193ccae889fc25e65e66853d4f97b7c9"
+        },
+        "members": [
+          {
+            "path": "Kaze-Alpha-0.6.1-Candidate-Windows-x86_64-afecef19.exe",
+            "size": 119918696,
+            "sha256": "743869212895a9c16232de050b43bd92a9f372c0a71aa25a0c8b521b3998c4fd"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 527,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 527
+    }
+  ],
+  "candidate_pr_evidence": [
+    {
+      "artifact": {
+        "id": 11926891044,
+        "name": "Kaze-Native-Smoke-macOS-7f6633ed",
+        "size_in_bytes": 805,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926891044",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926891044/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:30:53Z",
+        "expires_at": "2026-11-04T20:30:51Z",
+        "updated_at": "2026-10-14T20:30:53Z",
+        "digest": "sha256:7bc9d6f1c29c5aa7e935d6469d46ab8b2e3d5ba402a9577ec75867675399a08e",
+        "workflow_run": {
+          "id": 38632031577,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/ci02-candidate-workflow-proof",
+          "head_sha": "7f6633edf2a92a517b8687f612d65c30290684a6"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "native_smoke": {
+        "status": "passed",
+        "source_sha": "7f6633edf2a92a517b8687f612d65c30290684a6",
+        "target": "macOS-Universal",
+        "os": "Darwin",
+        "architecture": "x86_64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "98118df053864ef4e952f66789a7d14776cee35fc392abf9e6bba3745a915396"
+      }
+    },
+    {
+      "artifact": {
+        "id": 11926776955,
+        "name": "Kaze-Native-Smoke-Windows-x86_64-7f6633ed",
+        "size_in_bytes": 808,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926776955",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926776955/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:30:38Z",
+        "expires_at": "2026-11-04T20:30:38Z",
+        "updated_at": "2026-10-14T20:30:38Z",
+        "digest": "sha256:ac7368afe144d7cbb9512ee7a0b6afcf02fb24ffcc797780d30d1f650cfed7d2",
+        "workflow_run": {
+          "id": 38632031577,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/ci02-candidate-workflow-proof",
+          "head_sha": "7f6633edf2a92a517b8687f612d65c30290684a6"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "native_smoke": {
+        "status": "passed",
+        "source_sha": "7f6633edf2a92a517b8687f612d65c30290684a6",
+        "target": "Windows-x86_64",
+        "os": "Windows",
+        "architecture": "AMD64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "0abc0b011c250605a19524ec3576725da6c45ce68ea2ad34adcfefd1c1b8f2db"
+      }
+    },
+    {
+      "artifact": {
+        "id": 11926457555,
+        "name": "Kaze-macOS-7f6633ed",
+        "size_in_bytes": 75664981,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926457555",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926457555/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:30:20Z",
+        "expires_at": "2026-11-04T20:30:17Z",
+        "updated_at": "2026-10-14T20:30:20Z",
+        "digest": "sha256:6608e6afbfd5b99e2a1e6f4c5f2749c6c26fd1ff402ddfebcb4dc678865f6916",
+        "workflow_run": {
+          "id": 38632031577,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/ci02-candidate-workflow-proof",
+          "head_sha": "7f6633edf2a92a517b8687f612d65c30290684a6"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "ci/ci02-candidate-workflow-proof",
+        "source_sha": "7f6633edf2a92a517b8687f612d65c30290684a6",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:30:14.212321+00:00",
+        "target": "macOS-Universal",
+        "qa_outcome": "passed",
+        "qa_suite_count": 17,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "macOS arm64",
+          "macOS x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-Alpha-0.6.1-Candidate-macOS-Universal-7f6633ed.zip",
+          "size": 75943906,
+          "sha256": "98118df053864ef4e952f66789a7d14776cee35fc392abf9e6bba3745a915396"
+        },
+        "members": [
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.5.0",
+            "size": 183849535,
+            "sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/PkgInfo",
+            "size": 9,
+            "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Info.plist",
+            "size": 1908,
+            "sha256": "3ac172d88aaa3702da4bc558fb0e145644f9b59b5845388acec97b824595edc0"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/icon.icns",
+            "size": 67500,
+            "sha256": "779ff524928785811d6d4c61f47a26491160b1092db9b610e85fcdfd9b2d2b2a"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/PrivacyInfo.xcprivacy",
+            "size": 229,
+            "sha256": "0535353bb08c25b8ce5ed9ac7e442a5994f402e0f6cbc4bed668cfc63c2ceac3"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/Kaze \u2014 Silent District Alpha 0.5.0.pck",
+            "size": 15482984,
+            "sha256": "16f02dcb84bda02a03796964fc824d3765aba3cd86624b4a5386b9fc7301768a"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 527,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 527
+    },
+    {
+      "artifact": {
+        "id": 11926262499,
+        "name": "Kaze-QA-Results-7f6633ed",
+        "size_in_bytes": 55158,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926262499",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926262499/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:30:14Z",
+        "expires_at": "2026-11-04T20:30:14Z",
+        "updated_at": "2026-10-14T20:30:14Z",
+        "digest": "sha256:d191ef4b6bcd36c42fc264fccb09a423a50dceb812b908bc50b04c4b4a70bf97",
+        "workflow_run": {
+          "id": 38632031577,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/ci02-candidate-workflow-proof",
+          "head_sha": "7f6633edf2a92a517b8687f612d65c30290684a6"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "qa": {
+        "qa_mode": "candidate-full-regression",
+        "source_sha": "7f6633edf2a92a517b8687f612d65c30290684a6",
+        "status": "passed",
+        "suite_count": 17,
+        "assertion_count": 691,
+        "failures": [],
+        "results": [
+          {
+            "suite": "import",
+            "returncode": 0,
+            "seconds": 9.73,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [
+              "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+              "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+              "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+              "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+              "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+              "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+            ],
+            "hard_errors": []
+          },
+          {
+            "suite": "verify_baseline",
+            "returncode": 0,
+            "seconds": 0.04,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_baseline",
+            "returncode": 0,
+            "seconds": 2.02,
+            "passes": 32,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_combat_swing",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 7,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_expansion",
+            "returncode": 0,
+            "seconds": 3.6,
+            "passes": 34,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_traversal",
+            "returncode": 0,
+            "seconds": 8.71,
+            "passes": 6,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "save_compatibility",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 11,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "skyworks_progression",
+            "returncode": 0,
+            "seconds": 5.08,
+            "passes": 33,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "storm_keeper",
+            "returncode": 0,
+            "seconds": 0.54,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "movement_momentum",
+            "returncode": 0,
+            "seconds": 8.9,
+            "passes": 53,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "sprite_integration",
+            "returncode": 0,
+            "seconds": 0.53,
+            "passes": 43,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_expansion",
+            "returncode": 0,
+            "seconds": 4.34,
+            "passes": 193,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_gates_save",
+            "returncode": 0,
+            "seconds": 3.78,
+            "passes": 17,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_traversal",
+            "returncode": 0,
+            "seconds": 98.07,
+            "passes": 125,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "gameplay_stabilization",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 16,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "traversal_transitions",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 8,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_cohesion_traversal",
+            "returncode": 0,
+            "seconds": 60.22,
+            "passes": 56,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_candidate",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_descent",
+            "returncode": 0,
+            "seconds": 0.53,
+            "passes": 26,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_prepare",
+            "returncode": 0,
+            "seconds": 0.44,
+            "passes": 2,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_reload",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 5,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          }
+        ]
+      }
+    },
+    {
+      "artifact": {
+        "id": 11926213154,
+        "name": "Kaze-Windows-x86_64-7f6633ed",
+        "size_in_bytes": 51004871,
+        "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926213154",
+        "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/11926213154/zip",
+        "expired": false,
+        "created_at": "2026-10-14T20:30:17Z",
+        "expires_at": "2026-11-04T20:30:15Z",
+        "updated_at": "2026-10-14T20:30:17Z",
+        "digest": "sha256:bf78b33c9e1da8a6e7453188930ea74c2252c336a12c75d5a888f65ffd0288fd",
+        "workflow_run": {
+          "id": 38632031577,
+          "repository_id": 1177046351,
+          "head_repository_id": 1177046351,
+          "head_branch": "ci/ci02-candidate-workflow-proof",
+          "head_sha": "7f6633edf2a92a517b8687f612d65c30290684a6"
+        }
+      },
+      "outer_digest_verified": true,
+      "zip_crc_verified": true,
+      "manifest": {
+        "branch": "ci/ci02-candidate-workflow-proof",
+        "source_sha": "7f6633edf2a92a517b8687f612d65c30290684a6",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-14T20:30:00.348427+00:00",
+        "target": "Windows-x86_64",
+        "qa_outcome": "passed",
+        "qa_suite_count": 17,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "Windows x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-Alpha-0.6.1-Candidate-Windows-x86_64-7f6633ed.zip",
+          "size": 51146701,
+          "sha256": "0abc0b011c250605a19524ec3576725da6c45ce68ea2ad34adcfefd1c1b8f2db"
+        },
+        "members": [
+          {
+            "path": "Kaze-Alpha-0.6.1-Candidate-Windows-x86_64-7f6633ed.exe",
+            "size": 119918696,
+            "sha256": "46dbe5d76d19dc901a514cc658315d203c7e556e575ffcabdafae04a2d764d8b"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 527,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "inner_and_member_hashes_verified": true,
+      "pack_reaudit_entries": 527
+    }
+  ],
+  "manual_guard_checks": [
+    {
+      "requested_ref": "main",
+      "workflow_branch": "main",
+      "expected_returncode": 0,
+      "actual_returncode": 0
+    },
+    {
+      "requested_ref": "integration/candidate-alpha-0.6.1-gp-ld",
+      "workflow_branch": "main",
+      "expected_returncode": 0,
+      "actual_returncode": 0
+    },
+    {
+      "requested_ref": "private/secret-bearing-ref",
+      "workflow_branch": "main",
+      "expected_returncode": 1,
+      "actual_returncode": 1
+    },
+    {
+      "requested_ref": "main",
+      "workflow_branch": "unreviewed/workflow",
+      "expected_returncode": 1,
+      "actual_returncode": 1
+    }
+  ],
+  "source_audit": {
+    "implementation_parent": "1a33d283a3781ba7068f86b43d4197f28f063939",
+    "infrastructure_files": [
+      ".github/workflows/godot-ci.yml",
+      "docs/build/CI01_AUTOMATED_BUILD_HANDBOOK.md",
+      "tools/ci/install_godot.py",
+      "tools/ci/native_smoke.py",
+      "tools/ci/negative_path.py",
+      "tools/ci/package.py",
+      "tools/ci/qa.py"
+    ],
+    "gameplay_diff": [],
+    "candidate_controls_identical": true,
+    "main_unchanged": true,
+    "pr13_unchanged_unmerged": true
+  },
+  "earlier_evidence": {
+    "first_run": 38631017554,
+    "failed_job": 116082355000,
+    "failure": "Universal/arm64 export requires ASTC import setting absent from main; failure remained red and uploads withheld",
+    "superseded_run": 38631502235,
+    "ci01_deliberate_negative_job": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38625120369/job/116062527261"
+  },
+  "remaining_pm_gates": [
+    "No merge authorized/performed",
+    "Manual workflow_dispatch activation and real dispatch verification after approved default installation",
+    "Main has zero regression suites; gameplay QA development outside CI-02 scope",
+    "Main macOS package is Intel-only; Apple Silicon/universal export needs separately approved project configuration",
+    "Interactive rendering/input and sustained 60 FPS not certified",
+    "Candidate branch infrastructure synchronization if future PR trees lack this workflow"
+  ]
+}
