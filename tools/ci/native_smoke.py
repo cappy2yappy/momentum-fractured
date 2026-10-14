@@ -26,6 +26,8 @@ try:
     output,rc=proc.stdout,proc.returncode
 except subprocess.TimeoutExpired as e:
     output,rc=(e.stdout or b'').decode(),124
+except OSError as e:
+    output,rc=str(e),126
 (args.output/'stdout.log').write_text(output)
 engine=log.read_text() if log.exists() else ''
 errors=hard_errors(output+'\n'+engine)
