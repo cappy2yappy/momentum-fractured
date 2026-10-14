@@ -38,10 +38,11 @@ A/D move; double tap runs; Space jumps; Q tether; Shift dash; J attack; F parry;
 R kunai; T cycle; E interact; M map; I kit; Escape pause.
 This prototype is not a final art or release approval. Never merge without creator/PM.
 ''')
+(out/'README-TR01.txt').write_text((out/'README-TR01.txt').read_text()+'\nRuntime source commit: '+subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()+'\n')
 archive=r/'build/tr01/Kaze-TR01-Alpha061-macOS-Universal.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
  for p in sorted(out.rglob('*')):
   if p.is_file() and not any(part.startswith('playtest-profile') for part in p.parts): z.write(p,str(p.relative_to(out)))
 with zipfile.ZipFile(archive) as z: assert z.testzip() is None
-manifest=dict(engine='4.6.1.stable.official.14d19694e',source_base='afecef1922231081807a332c511de85c7941fec8',runtime_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path('scripts/hud.gd'),Path('scripts/world_expansion.gd'),Path('scripts/room_presentation.gd')]},path=str(archive),bytes=archive.stat().st_size,sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),zip_crc='PASS',tested_platform='macOS Apple M4 native and headless boot; Intel untested; Windows not exported',remote_binary_publication=False)
+manifest=dict(source_runtime_sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),engine='4.6.1.stable.official.14d19694e',source_base='afecef1922231081807a332c511de85c7941fec8',runtime_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path('scripts/hud.gd'),Path('scripts/world_expansion.gd'),Path('scripts/room_presentation.gd')]},path=str(archive),bytes=archive.stat().st_size,sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),zip_crc='PASS',tested_platform='macOS Apple M4 native and headless boot; Intel untested; Windows not exported',remote_binary_publication=False)
 (r/'docs/agent_handoffs/tr01_evidence/BUILD_MANIFEST.json').write_text(json.dumps(manifest,indent=2));print(str(archive))

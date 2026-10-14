@@ -1,4 +1,5 @@
 {
+  "source_runtime_sha": "6867d19d4f1d8edbf104e04726d5b07741cf9fc4",
   "engine": "4.6.1.stable.official.14d19694e",
   "source_base": "afecef1922231081807a332c511de85c7941fec8",
   "runtime_hashes": {
@@ -7,8 +8,8 @@
     "scripts/room_presentation.gd": "7f5dbe77052d7f7e61b95879a6193a70d8541bac60f271b5998e18c409ec5353"
   },
   "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061/build/tr01/Kaze-TR01-Alpha061-macOS-Universal.zip",
-  "bytes": 75950952,
-  "sha256": "01f2ad3befdc8827953d4b2e0b5472bf497132336107654b2ac47d15598bc40b",
+  "bytes": 75951003,
+  "sha256": "bf5eec82d807548a510cef208d6fb3e6909c5756f5afc56ae4b8e370dab3103b",
   "zip_crc": "PASS",
   "tested_platform": "macOS Apple M4 native and headless boot; Intel untested; Windows not exported",
   "remote_binary_publication": false
