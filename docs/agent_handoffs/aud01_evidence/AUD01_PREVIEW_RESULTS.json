@@ -1,0 +1,97 @@
+{
+  "audio_driver": "CoreAudio",
+  "cue_counts": {
+    "checkpoint": 1,
+    "contact": 1,
+    "damage": 1,
+    "dash": 31,
+    "death": 1,
+    "impact_electric": 1,
+    "impact_fire": 31,
+    "impact_wind": 1,
+    "jump": 1,
+    "kunai_throw": 3,
+    "land": 4,
+    "parry": 31,
+    "room_passage": 1,
+    "step_stone": 3,
+    "swing": 31,
+    "tether_attach": 1,
+    "tether_fire": 1,
+    "tether_release": 1
+  },
+  "display": "macOS",
+  "engine": "4.6.1-stable (official)",
+  "frame_count": 434,
+  "manual_listening": "not performed; creator review required",
+  "master_meter_peak_db": [
+    -12.717267036438,
+    -12.717267036438
+  ],
+  "max_ms": 47.166,
+  "mean_ms": 14.7171428571429,
+  "p95_ms": 38.032,
+  "pool_dropped": 0,
+  "pool_high_water": 7,
+  "recording_result": 0,
+  "sample_seconds": 6,
+  "sustained_60fps": "not certified",
+  "timeline": [
+    {
+      "event": "Canal bed; silence is the music slot",
+      "seconds": 0.0
+    },
+    {
+      "event": "Real walk, jump, landing",
+      "seconds": 0.236
+    },
+    {
+      "event": "Accepted dash",
+      "seconds": 2.193
+    },
+    {
+      "event": "Swing, confirmed contact, successful guard parry",
+      "seconds": 2.84
+    },
+    {
+      "event": "Accepted damage then death",
+      "seconds": 3.989
+    },
+    {
+      "event": "Accepted tether fire/attach then release",
+      "seconds": 5.551
+    },
+    {
+      "event": "wind kunai throw then real seal impact",
+      "seconds": 6.359
+    },
+    {
+      "event": "fire kunai throw then real seal impact",
+      "seconds": 6.969
+    },
+    {
+      "event": "electric kunai throw then real seal impact",
+      "seconds": 7.564
+    },
+    {
+      "event": "Checkpoint interaction",
+      "seconds": 8.181
+    },
+    {
+      "event": "Accepted passage, canal to city crossfade",
+      "seconds": 8.974
+    },
+    {
+      "event": "R14 roof bed, eight seconds across loop seam",
+      "seconds": 9.793
+    },
+    {
+      "event": "R15 canal crossfade, eight seconds across loop seam",
+      "seconds": 18.081
+    },
+    {
+      "event": "Six-second busy-room sample, natural enemies plus audio overload",
+      "seconds": 26.393
+    }
+  ]
+}

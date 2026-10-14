@@ -37,6 +37,7 @@ func interact(world) -> bool:
 		world.checkpoint_position = Vector2(2060, 1298)
 		world.save_progress()
 		world.announce("Undercroft shrine restored. Journey saved.")
+		world.audio.play("checkpoint") # AUD01 audio-only
 		return true
 	var portal = Vector2(160, 620) if world.room == 9 else Vector2(2250, 790)
 	if world.room in [3, 9] and world.player.position.distance_to(portal) < 100:

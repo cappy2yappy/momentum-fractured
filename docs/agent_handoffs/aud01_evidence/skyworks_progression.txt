@@ -1,0 +1,42 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: SkyWorks remains in the expanded twenty-one-room world
+PASS: Room 0 loads collision, anchors and MetSys survey
+PASS: Room 1 loads collision, anchors and MetSys survey
+PASS: Room 2 loads collision, anchors and MetSys survey
+PASS: Room 3 loads collision, anchors and MetSys survey
+PASS: Room 4 loads collision, anchors and MetSys survey
+PASS: Room 5 loads collision, anchors and MetSys survey
+PASS: Room 6 loads collision, anchors and MetSys survey
+PASS: Room 7 loads collision, anchors and MetSys survey
+PASS: Room 8 loads collision, anchors and MetSys survey
+PASS: Room 9 loads collision, anchors and MetSys survey
+PASS: Room 10 loads collision, anchors and MetSys survey
+PASS: Room 11 loads collision, anchors and MetSys survey
+PASS: Room 12 loads collision, anchors and MetSys survey
+PASS: SkyWorks requires three earned relay sigils
+PASS: Earned sigils open the new region
+PASS: Actual transition reaches the SkyWorks entrance
+PASS: Wind seal cannot be bypassed at the route door
+PASS: Wrong element does not release intake
+PASS: Live Wind projectile opens the Foundry route
+PASS: Foundry transition completes
+PASS: Foundry Refuge saves an exact recovery point
+PASS: Electric relay locks the Keeper approach
+PASS: Live Electric projectile opens the arena
+PASS: Keeper spawns on entering the arena
+PASS: Relay cannot be attuned before the Keeper is defeated
+PASS: Keeper defeat is recorded persistently
+PASS: Explicit attunement completes the SkyWorks objective
+PASS: Keeper return reaches the accepted Undercroft landing
+PASS: Keeper return works in both directions
+PASS: Defeated Keeper does not respawn on backtracking
+PASS: Save/reload retains Keeper, attunement and regional seals
+PASS: Accepted 0.5.1 saves retain sigils while new story state initializes safely
+SKYWORKS PROGRESSION: 0 failure(s)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

@@ -1,0 +1,31 @@
+{
+  "audio_driver": "CoreAudio",
+  "display": "macOS",
+  "engine": "4.6.1-stable (official)",
+  "limitations": "Sequential six-second samples; scene state evolves; no sustained 60 FPS or audio-only causal claim.",
+  "results": [
+    {
+      "five_cue_dispatch_p95_us": 0,
+      "frames": 366,
+      "max_ms": 119.281,
+      "mean_ms": 17.5138087431694,
+      "mode": "silent_control",
+      "p95_ms": 18.968,
+      "physics_cpu_p95_ms": 7.493,
+      "process_cpu_p95_ms": 106.782
+    },
+    {
+      "five_cue_dispatch_p95_us": 157,
+      "frames": 388,
+      "max_ms": 41.682,
+      "mean_ms": 16.6658195876289,
+      "mode": "audio_stress",
+      "p95_ms": 17.348,
+      "physics_cpu_p95_ms": 1.869,
+      "process_cpu_p95_ms": 44.35
+    }
+  ],
+  "room": 1,
+  "voice_drops": 0,
+  "voice_high_water": 8
+}

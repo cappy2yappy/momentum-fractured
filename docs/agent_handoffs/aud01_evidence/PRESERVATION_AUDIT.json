@@ -1,0 +1,420 @@
+{
+  "base_sha": "afecef1922231081807a332c511de85c7941fec8",
+  "audited_files": 69,
+  "files": [
+    {
+      "path": "assets/attack_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "acea98063ec67872cac86a07036669b8e9f9e2ea323c13f7bd9913dae82a54fb",
+      "current_sha256": "acea98063ec67872cac86a07036669b8e9f9e2ea323c13f7bd9913dae82a54fb"
+    },
+    {
+      "path": "assets/attack_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "cfbf2bfa528c1839ee045824357578f2ce755e3f9612d438313bf0883cc66f10",
+      "current_sha256": "cfbf2bfa528c1839ee045824357578f2ce755e3f9612d438313bf0883cc66f10"
+    },
+    {
+      "path": "assets/fall_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "8f537d45971963eb73b494f99c14bba2c7d446e3131a8556a616f72b469c1d90",
+      "current_sha256": "8f537d45971963eb73b494f99c14bba2c7d446e3131a8556a616f72b469c1d90"
+    },
+    {
+      "path": "assets/fall_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "48c511f8440974ff9f0060777ff21e0f08c2e140bd58a757640e9f26362a3b09",
+      "current_sha256": "48c511f8440974ff9f0060777ff21e0f08c2e140bd58a757640e9f26362a3b09"
+    },
+    {
+      "path": "assets/guard.png",
+      "status": "byte-identical",
+      "base_sha256": "0261c89efdd6c6e0397a3d3706653e3381945a4a26018103c6245d0aa4a634bb",
+      "current_sha256": "0261c89efdd6c6e0397a3d3706653e3381945a4a26018103c6245d0aa4a634bb"
+    },
+    {
+      "path": "assets/guard.png.import",
+      "status": "byte-identical",
+      "base_sha256": "c8637768be43a6f4502a143693d5424f5b09fb94ea03c0f98afd586cbd074c54",
+      "current_sha256": "c8637768be43a6f4502a143693d5424f5b09fb94ea03c0f98afd586cbd074c54"
+    },
+    {
+      "path": "assets/idle_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "223bb91b93008fc1587fd899cb9ba72df8b16661b12dc9dbbe61e5cc948d6033",
+      "current_sha256": "223bb91b93008fc1587fd899cb9ba72df8b16661b12dc9dbbe61e5cc948d6033"
+    },
+    {
+      "path": "assets/idle_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "26c9978173d07ef132bff7328215d826f0934c3abecb893ecdb1e2a11c2d567e",
+      "current_sha256": "26c9978173d07ef132bff7328215d826f0934c3abecb893ecdb1e2a11c2d567e"
+    },
+    {
+      "path": "assets/jump_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "d202e5a83c4fc9f94fb40590ab5967c5e39440b0d5d8c3dc98226e8bfc861945",
+      "current_sha256": "d202e5a83c4fc9f94fb40590ab5967c5e39440b0d5d8c3dc98226e8bfc861945"
+    },
+    {
+      "path": "assets/jump_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "6974487991d58f7eb1a5b7f39234d3e4680dad51a9d0cbed6c1bf23eb6e58da2",
+      "current_sha256": "6974487991d58f7eb1a5b7f39234d3e4680dad51a9d0cbed6c1bf23eb6e58da2"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+      "current_sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "db44d60353cd0310d5437e0a5e2a68b30d7b29325c9777c8845f39dfdc9a6a70",
+      "current_sha256": "db44d60353cd0310d5437e0a5e2a68b30d7b29325c9777c8845f39dfdc9a6a70"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "current_sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "91459951c549d9d28db5a2e6894c0f21a7da8634ff89435297222b82adfc3f87",
+      "current_sha256": "91459951c549d9d28db5a2e6894c0f21a7da8634ff89435297222b82adfc3f87"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "current_sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "c7a502305166d2978af8d211351a7ecc1afd7b5962a1d7f8cbb54f83b8852f08",
+      "current_sha256": "c7a502305166d2978af8d211351a7ecc1afd7b5962a1d7f8cbb54f83b8852f08"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+      "current_sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe"
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "aa72faa4c429518ccb52d53d485c196aa2fc36efd1d0f1e7f786c5ad74149d04",
+      "current_sha256": "aa72faa4c429518ccb52d53d485c196aa2fc36efd1d0f1e7f786c5ad74149d04"
+    },
+    {
+      "path": "assets/kaze/cleaned/source_boundary_manifest.json",
+      "status": "byte-identical",
+      "base_sha256": "2802c4da483618abce586c792bea367364db4dc9feeec826047ccd57cd40ba47",
+      "current_sha256": "2802c4da483618abce586c792bea367364db4dc9feeec826047ccd57cd40ba47"
+    },
+    {
+      "path": "assets/kaze/cleaned/source_final_manifest.json",
+      "status": "byte-identical",
+      "base_sha256": "1350d9b225ab7054fccf8ce34461c9bc21d6c27f83c51b543ce24825b236eb6c",
+      "current_sha256": "1350d9b225ab7054fccf8ce34461c9bc21d6c27f83c51b543ce24825b236eb6c"
+    },
+    {
+      "path": "assets/run_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "0be9951175048334b51ff72c34d1f908b15ec26b71b8a2c8eca8ef5cd174a1b5",
+      "current_sha256": "0be9951175048334b51ff72c34d1f908b15ec26b71b8a2c8eca8ef5cd174a1b5"
+    },
+    {
+      "path": "assets/run_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "00daafc35f9781ea3655bb6049a913700509869b15e155328cb2cc5988126278",
+      "current_sha256": "00daafc35f9781ea3655bb6049a913700509869b15e155328cb2cc5988126278"
+    },
+    {
+      "path": "assets/wall_slide_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "43cb6c42670ed17aa1e5ed442c37f88ef5cbc395ebf51077f0ddba057d942560",
+      "current_sha256": "43cb6c42670ed17aa1e5ed442c37f88ef5cbc395ebf51077f0ddba057d942560"
+    },
+    {
+      "path": "assets/wall_slide_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "739b844aff58fd0bea86e18eba59fbac6d9c06131a4b36ad0076bf9c218281d3",
+      "current_sha256": "739b844aff58fd0bea86e18eba59fbac6d9c06131a4b36ad0076bf9c218281d3"
+    },
+    {
+      "path": "assets/web/KAZE_SPRITES.md",
+      "status": "byte-identical",
+      "base_sha256": "ab00aaf5a6831c340b0cd3ce2e071b77118d01f03ce87e3de0e3ce10e622bb14",
+      "current_sha256": "ab00aaf5a6831c340b0cd3ce2e071b77118d01f03ce87e3de0e3ce10e622bb14"
+    },
+    {
+      "path": "assets/web/area-atlas.png",
+      "status": "byte-identical",
+      "base_sha256": "7177e1a96a17157c26c18161b68bef47fffc8a45a1c2f1d03092f14611e44a0f",
+      "current_sha256": "7177e1a96a17157c26c18161b68bef47fffc8a45a1c2f1d03092f14611e44a0f"
+    },
+    {
+      "path": "assets/web/area-atlas.png.import",
+      "status": "byte-identical",
+      "base_sha256": "190dd1e67143b3fa3c64417f9ee0c8627dad438d4769eb1b1328014529bc3feb",
+      "current_sha256": "190dd1e67143b3fa3c64417f9ee0c8627dad438d4769eb1b1328014529bc3feb"
+    },
+    {
+      "path": "assets/web/bosses_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "d526a63f9ae568fa762518350d65269aefa67dc0e298a28eda0c7f4df5c9b1ba",
+      "current_sha256": "d526a63f9ae568fa762518350d65269aefa67dc0e298a28eda0c7f4df5c9b1ba"
+    },
+    {
+      "path": "assets/web/bosses_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "98f112eb1bb6897ff46e339f3a0eb9165ba9e0a5411b0b19e5087a83140cc347",
+      "current_sha256": "98f112eb1bb6897ff46e339f3a0eb9165ba9e0a5411b0b19e5087a83140cc347"
+    },
+    {
+      "path": "assets/web/district-fidelity.png",
+      "status": "byte-identical",
+      "base_sha256": "ad85520ea52c1024781d44cadbae3b21c0fe8b4474c1c060eef2b2ba88076afa",
+      "current_sha256": "ad85520ea52c1024781d44cadbae3b21c0fe8b4474c1c060eef2b2ba88076afa"
+    },
+    {
+      "path": "assets/web/district-fidelity.png.import",
+      "status": "byte-identical",
+      "base_sha256": "dc842e8799dccf48fb86e7cbb1ee5229cd255115ec543faed1e68196d831a570",
+      "current_sha256": "dc842e8799dccf48fb86e7cbb1ee5229cd255115ec543faed1e68196d831a570"
+    },
+    {
+      "path": "assets/web/kaze_combat_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b",
+      "current_sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b"
+    },
+    {
+      "path": "assets/web/kaze_combat_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "ddcdacacdf46c4fbcbf35f40f39e1ebf5abc059f0352b3385af3b2fe8d606a65",
+      "current_sha256": "ddcdacacdf46c4fbcbf35f40f39e1ebf5abc059f0352b3385af3b2fe8d606a65"
+    },
+    {
+      "path": "assets/web/kaze_idle_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762",
+      "current_sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762"
+    },
+    {
+      "path": "assets/web/kaze_idle_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "7a2c8aeeb560300a3c0538e78162179c8ba29ffe0ed801cc646f76f1fbce5268",
+      "current_sha256": "7a2c8aeeb560300a3c0538e78162179c8ba29ffe0ed801cc646f76f1fbce5268"
+    },
+    {
+      "path": "assets/web/kaze_manifest.json",
+      "status": "manifest checksum updated for observation emissions",
+      "base_sha256": "284c5f4b72dd7bd9b1501490efe045548a12a8c95e9826fc9d5efa6bdb278286",
+      "current_sha256": "44e9851feae545f8b28990930797039ec9fdd4114c9e53c0b57bb361d3fc255a"
+    },
+    {
+      "path": "assets/web/kaze_run_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80",
+      "current_sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80"
+    },
+    {
+      "path": "assets/web/kaze_run_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "ad1a1826d8791a20a9ae1fc6bc0589bc0a75e0a57a7ba8410df14681e3761437",
+      "current_sha256": "ad1a1826d8791a20a9ae1fc6bc0589bc0a75e0a57a7ba8410df14681e3761437"
+    },
+    {
+      "path": "assets/web/kaze_traversal_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751",
+      "current_sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751"
+    },
+    {
+      "path": "assets/web/kaze_traversal_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "a183e15deecba4b154ab7b3c151010d829e78882b27e06475ec8498751092a9f",
+      "current_sha256": "a183e15deecba4b154ab7b3c151010d829e78882b27e06475ec8498751092a9f"
+    },
+    {
+      "path": "assets/web/sentinels_strip.png",
+      "status": "byte-identical",
+      "base_sha256": "65622dacd0ea7bc5333da972383dae12b8ba5cff8cb001d45dbe3a1391f95dba",
+      "current_sha256": "65622dacd0ea7bc5333da972383dae12b8ba5cff8cb001d45dbe3a1391f95dba"
+    },
+    {
+      "path": "assets/web/sentinels_strip.png.import",
+      "status": "byte-identical",
+      "base_sha256": "a38f774fc3b75e36fa386e05c7aa6cc94722d6514c3e9d4674a7a34734747208",
+      "current_sha256": "a38f774fc3b75e36fa386e05c7aa6cc94722d6514c3e9d4674a7a34734747208"
+    },
+    {
+      "path": "assets/web/terrain-materials.png",
+      "status": "byte-identical",
+      "base_sha256": "4e1467905844cc25b3f464933f3cbebe3a3a120217d457362b30fcea0233d721",
+      "current_sha256": "4e1467905844cc25b3f464933f3cbebe3a3a120217d457362b30fcea0233d721"
+    },
+    {
+      "path": "assets/web/terrain-materials.png.import",
+      "status": "byte-identical",
+      "base_sha256": "d46abb5146a7a1c3cbebe1732ef802536b8b2dd4a1d9cd30db7b14fe66b882e3",
+      "current_sha256": "d46abb5146a7a1c3cbebe1732ef802536b8b2dd4a1d9cd30db7b14fe66b882e3"
+    },
+    {
+      "path": "export_presets.cfg",
+      "status": "byte-identical",
+      "base_sha256": "55b601bb4e7b697b86eee2dc617995657da72488e5de4fea122a7796ac2496c4",
+      "current_sha256": "55b601bb4e7b697b86eee2dc617995657da72488e5de4fea122a7796ac2496c4"
+    },
+    {
+      "path": "project.godot",
+      "status": "byte-identical",
+      "base_sha256": "d2fc5649f8a21d2ccda03ef36a6417bcb4775ce239435e62037997b66bfe52cb",
+      "current_sha256": "d2fc5649f8a21d2ccda03ef36a6417bcb4775ce239435e62037997b66bfe52cb"
+    },
+    {
+      "path": "scenes/main.tscn",
+      "status": "byte-identical",
+      "base_sha256": "2e79cfe939b9240e9bfb85d6dde03f26b7e304e597593acdb19f3c0775353ab6",
+      "current_sha256": "2e79cfe939b9240e9bfb85d6dde03f26b7e304e597593acdb19f3c0775353ab6"
+    },
+    {
+      "path": "scripts/grapple_anchor.gd",
+      "status": "byte-identical",
+      "base_sha256": "4b603bdf31c9bae380034f81067001670f4e31484a5b48be5a0a9f2a6598d18e",
+      "current_sha256": "4b603bdf31c9bae380034f81067001670f4e31484a5b48be5a0a9f2a6598d18e"
+    },
+    {
+      "path": "scripts/guard.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "1bd5e21f384e4a20222d14fad6ba5919d2a72afcee575ff1e2bada1d8a8a0ef1",
+      "current_sha256": "a6400c0f06e31623e6da0da1836db61d6e53819112fdcd5ccaa234caa019ac91"
+    },
+    {
+      "path": "scripts/guard.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "0d8c081baf0b17402b574720e2efdfafc91508b5f1a37a8aad342a94ddc254ab",
+      "current_sha256": "0d8c081baf0b17402b574720e2efdfafc91508b5f1a37a8aad342a94ddc254ab"
+    },
+    {
+      "path": "scripts/hud.gd",
+      "status": "byte-identical",
+      "base_sha256": "ef9f4921d17e0d778734425075991507cec7c188f20e6ecb6a4ed10ae6d17a35",
+      "current_sha256": "ef9f4921d17e0d778734425075991507cec7c188f20e6ecb6a4ed10ae6d17a35"
+    },
+    {
+      "path": "scripts/hud.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "d81c1398e129cef80e1894835da7151ac689b08a1c83530384fd462dd54ef275",
+      "current_sha256": "d81c1398e129cef80e1894835da7151ac689b08a1c83530384fd462dd54ef275"
+    },
+    {
+      "path": "scripts/kunai.gd",
+      "status": "byte-identical",
+      "base_sha256": "e2ee684aef6deefae79d500ff7262647339d235aba99a00b9a32e5df0c035d5a",
+      "current_sha256": "e2ee684aef6deefae79d500ff7262647339d235aba99a00b9a32e5df0c035d5a"
+    },
+    {
+      "path": "scripts/kunai.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "55239350258d8f86a24934b07fdf548ddeda46e68b633dd92cdcd677ddaf71e7",
+      "current_sha256": "55239350258d8f86a24934b07fdf548ddeda46e68b633dd92cdcd677ddaf71e7"
+    },
+    {
+      "path": "scripts/momentum_profile.gd",
+      "status": "byte-identical",
+      "base_sha256": "3d6df2e5e1df015ea51b6f3dc626c1f85460357c0105ca7b3b0af2477a2fdf30",
+      "current_sha256": "3d6df2e5e1df015ea51b6f3dc626c1f85460357c0105ca7b3b0af2477a2fdf30"
+    },
+    {
+      "path": "scripts/player.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+      "current_sha256": "82bb20ffa9235144fac3c6026a606b3d9791fea7a74fcfab950f6d6b529c95b7"
+    },
+    {
+      "path": "scripts/player.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "7780c7ddca4c2c6e4112c3acc20eb9dc5564b49f6df9281429ca4fafeba2e7bc",
+      "current_sha256": "7780c7ddca4c2c6e4112c3acc20eb9dc5564b49f6df9281429ca4fafeba2e7bc"
+    },
+    {
+      "path": "scripts/room_presentation.gd",
+      "status": "byte-identical",
+      "base_sha256": "6a392ad2c1a31c0f00f2756ef18c7a36c40fa33248c754d2325ae3306afdf944",
+      "current_sha256": "6a392ad2c1a31c0f00f2756ef18c7a36c40fa33248c754d2325ae3306afdf944"
+    },
+    {
+      "path": "scripts/route_extension.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "5415817fc3bc1ce75082ab10656319686cb90f8a70b08e5ffd372bea6f6606db",
+      "current_sha256": "a257d35069f752efa7f4652638788ae09191b90f2b69d6877b992177fa3cb5f7"
+    },
+    {
+      "path": "scripts/route_extension.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "9caa90e6d7f9a080dd69d571edea70d7673ce39790d17dfcfb562f39f2a63de5",
+      "current_sha256": "9caa90e6d7f9a080dd69d571edea70d7673ce39790d17dfcfb562f39f2a63de5"
+    },
+    {
+      "path": "scripts/skyworks_region.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "25e71662e95973696592d5d4221bffab514c048da1a3802c7cfda546dafceb55",
+      "current_sha256": "aede3b269d9a9b43127f8dc1c2c16fb405612ae090d0321de265d932c3472b5a"
+    },
+    {
+      "path": "scripts/skyworks_region.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "d44bfa2676b9b2d77de00682a6ffd869256ca364f3c040b619f0c463d87f97d9",
+      "current_sha256": "d44bfa2676b9b2d77de00682a6ffd869256ca364f3c040b619f0c463d87f97d9"
+    },
+    {
+      "path": "scripts/storm_keeper.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "2925340314141bbb6d3440d59eeaa6cedba10cbcf5f690869394ac0e054f9513",
+      "current_sha256": "758d74364980927dd3c8e217ba0431a779f16b016a0c82f8bd6ee202ba7cf5fa"
+    },
+    {
+      "path": "scripts/storm_keeper.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "02677ce645d992f7d99299055db627b5c37646e3adfdf91e3d4a966ac847a024",
+      "current_sha256": "02677ce645d992f7d99299055db627b5c37646e3adfdf91e3d4a966ac847a024"
+    },
+    {
+      "path": "scripts/world.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "cb5b0786496c47d1f1e6df1bcb810388c11ee4868ce17afb816acdb819e7b1f2",
+      "current_sha256": "893d262353f73f53ed7b2bc192585ad02dd6ea4849091265fcde8d478aa861ad"
+    },
+    {
+      "path": "scripts/world.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "8fe4605de2fc28815edcd73ca3ed90a9824939bd8f380c854c72ce994c208a9e",
+      "current_sha256": "8fe4605de2fc28815edcd73ca3ed90a9824939bd8f380c854c72ce994c208a9e"
+    },
+    {
+      "path": "scripts/world_expansion.gd",
+      "status": "audio additions only; original bytes identical",
+      "base_sha256": "b458b8df69344b07a96c6f6b22a6b82cb786c349d9f1f1a1ed51419be93be32c",
+      "current_sha256": "3f95137d5bd66e0fa78febb6272b658e8a4131eb2a250df227f74ca6d5a1b708"
+    },
+    {
+      "path": "scripts/world_expansion.gd.uid",
+      "status": "byte-identical",
+      "base_sha256": "d2ed3312ba369dbaf6799209faebea6933862c7496e6bebd779da2991ae45e55",
+      "current_sha256": "d2ed3312ba369dbaf6799209faebea6933862c7496e6bebd779da2991ae45e55"
+    },
+    {
+      "path": "world/MapData.txt",
+      "status": "byte-identical",
+      "base_sha256": "31888be3c5fbbc78f4125ccf4b3a369f1acd40f311331e6dd392e217f6cdaaaf",
+      "current_sha256": "31888be3c5fbbc78f4125ccf4b3a369f1acd40f311331e6dd392e217f6cdaaaf"
+    }
+  ]
+}

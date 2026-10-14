@@ -1,0 +1,7 @@
+{
+  "path": "docs/agent_handoffs/aud01_evidence/AUD01_ENGINE_MIX.wav",
+  "sha256": "30526b074c5a4aaf94595305ec777418ef4c5e42311d7ed965fc4885f762fe7f",
+  "bytes": 1472684,
+  "source": "native CoreAudio AudioEffectRecord, downmix/resample via afconvert to PCM16 mono 22050",
+  "human_listening": "pending"
+}

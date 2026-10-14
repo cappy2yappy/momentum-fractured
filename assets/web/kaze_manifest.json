@@ -1,7 +1,7 @@
 {
   "approved_on": "2026-10-12",
   "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
-  "controller_sha256": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+  "controller_sha256": "82bb20ffa9235144fac3c6026a606b3d9791fea7a74fcfab950f6d6b529c95b7",
   "sprites": [
     {
       "clip": "idle",
@@ -87,10 +87,13 @@
     }
   ],
   "previous_controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
-  "physics_sha256": "806c88f69eb5199b07fc33ccb5ca854f45ee347ff71cedb0c61dbb7434b5da7c",
+  "physics_sha256": "34f12009445163682bb47c9578a54fdd2c95d97cef464df960f7476cf7826dfa",
   "integration": "Final Cleanup idle/run plus Boundary QA combat/traversal; visual-only controller changes.",
   "size_restoration": "Per-animation constant scale matches average visible height of approved original strips; alpha threshold 0.1. No per-frame resizing.",
   "rollback_controller_sha256": "61e0cf4fa4c0331b8079fccf493c12fdba6772c873bb4e23d66da007b3ce9448",
   "movement_prototype_reference": "docs/gameplay/HYBRID_MOMENTUM_SPEC.md",
-  "gameplay_stabilization_reference": "docs/agent_handoffs/GP01_ALPHA_0_6_1_HANDOFF.md"
+  "gameplay_stabilization_reference": "docs/agent_handoffs/GP01_ALPHA_0_6_1_HANDOFF.md",
+  "aud01_pre_audio_controller_sha256": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+  "aud01_pre_audio_physics_sha256": "806c88f69eb5199b07fc33ccb5ca854f45ee347ff71cedb0c61dbb7434b5da7c",
+  "audio_integration": "AUD01: signal declaration and synchronous audio-only emissions; removing tagged lines reproduces pre-audio controller byte-for-byte."
 }
