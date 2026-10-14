@@ -1,0 +1,193 @@
+name: Godot 4.6.1 QA and Playtest Builds
+on:
+  pull_request:
+    branches: [main, 'integration/candidate-alpha-0.6.1-gp-ld']
+    paths-ignore: ['docs/**', '*.md']
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: Approved game source branch (keep workflow branch set to main)
+        type: choice
+        options: [main, 'integration/candidate-alpha-0.6.1-gp-ld']
+        default: main
+      build_artifacts:
+        description: Export Windows and macOS playtest packages
+        type: boolean
+        default: true
+      negative_probe:
+        description: Intentionally fail the validation job
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: godot-ci02-${{ github.event.pull_request.number || inputs.source_ref || github.ref }}
+  cancel-in-progress: true
+jobs:
+  qa-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      short: ${{ steps.source.outputs.short }}
+      sha: ${{ steps.source.outputs.sha }}
+    steps:
+      - name: Guard manual source and workflow branch
+        env:
+          EVENT: ${{ github.event_name }}
+          REQUESTED: ${{ inputs.source_ref }}
+          WORKFLOW_BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ "$EVENT" = workflow_dispatch ]; then
+            case "$REQUESTED" in main|integration/candidate-alpha-0.6.1-gp-ld) ;; *) exit 1;; esac
+            case "$WORKFLOW_BRANCH" in main|ci/default-branch-godot-builds) ;; *) exit 1;; esac
+          fi
+      - name: Checkout reviewed CI controls
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: ci-control
+          persist-credentials: false
+      - name: Checkout selected game source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || inputs.source_ref }}
+          path: game-source
+          persist-credentials: false
+      - name: Resolve actual source identity
+        id: source
+        env:
+          SOURCE_BRANCH: ${{ github.head_ref || inputs.source_ref }}
+          EXPECTED: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          SHA=$(git -C game-source rev-parse HEAD)
+          if [ -n "$EXPECTED" ]; then test "$SHA" = "$EXPECTED"; fi
+          echo "SOURCE_SHA=$SHA" >> "$GITHUB_ENV"
+          echo "SOURCE_BRANCH=$SOURCE_BRANCH" >> "$GITHUB_ENV"
+          echo "CI_SOURCE_ROOT=$GITHUB_WORKSPACE/game-source" >> "$GITHUB_ENV"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "short=${SHA:0:8}" >> "$GITHUB_OUTPUT"
+          echo "Actual game source: $SOURCE_BRANCH @ $SHA" >> "$GITHUB_STEP_SUMMARY"
+      - name: Install checksum-pinned Godot/templates
+        run: python3 ci-control/tools/ci/install_godot.py
+      - name: Full supported QA with explicit capability report
+        run: python3 ci-control/tools/ci/qa.py --godot "$GODOT"
+      - name: Negative-path checks
+        run: python3 ci-control/tools/ci/negative_path.py
+      - name: Deliberate red probe
+        if: inputs.negative_probe
+        run: exit 1
+      - name: Export and audit both platforms
+        if: github.event_name == 'pull_request' || inputs.build_artifacts
+        run: python3 ci-control/tools/ci/package.py --godot "$GODOT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-QA-Results-${{ steps.source.outputs.short }}
+          path: |
+            game-source/build/int01/logs/
+            game-source/build/ci/logs/
+          retention-days: 21
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: success() && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        with:
+          name: Kaze-Windows-x86_64-${{ steps.source.outputs.short }}
+          path: game-source/build/ci/Windows-x86_64/
+          retention-days: 21
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: success() && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        with:
+          name: Kaze-macOS-${{ steps.source.outputs.short }}
+          path: game-source/build/ci/macOS/
+          retention-days: 21
+          if-no-files-found: error
+  native-smoke:
+    needs: qa-and-build
+    if: github.event_name == 'pull_request' || inputs.build_artifacts
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            target: Windows-x86_64
+          - runner: macos-15-intel
+            target: macOS
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: Kaze-${{ matrix.target }}-${{ needs.qa-and-build.outputs.short }}
+          path: build/native-artifact
+      - name: Native release headless startup
+        env:
+          EXPECTED_SOURCE_SHA: ${{ needs.qa-and-build.outputs.sha }}
+        shell: bash
+        run: python tools/ci/native_smoke.py build/native-artifact --output build/native-smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-Native-Smoke-${{ matrix.target }}-${{ needs.qa-and-build.outputs.short }}
+          path: |
+            build/native-smoke/NATIVE_SMOKE.json
+            build/native-smoke/engine.log
+            build/native-smoke/stdout.log
+          retention-days: 21
+          if-no-files-found: error
+  candidate-compatibility:
+    # Promotion PR proof only; normal PRs/manual runs validate their selected source.
+    if: github.event_name == 'pull_request' && github.head_ref == 'ci/default-branch-godot-builds'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: ci-control
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: integration/candidate-alpha-0.6.1-gp-ld
+          path: game-source
+          persist-credentials: false
+      - name: Resolve approved candidate identity
+        id: source
+        run: |
+          set -euo pipefail
+          SHA=$(git -C game-source rev-parse HEAD)
+          echo "SOURCE_SHA=$SHA" >> "$GITHUB_ENV"
+          echo "SOURCE_BRANCH=integration/candidate-alpha-0.6.1-gp-ld" >> "$GITHUB_ENV"
+          echo "CI_SOURCE_ROOT=$GITHUB_WORKSPACE/game-source" >> "$GITHUB_ENV"
+          echo "short=${SHA:0:8}" >> "$GITHUB_OUTPUT"
+          echo "Compatibility candidate source: $SHA" >> "$GITHUB_STEP_SUMMARY"
+      - run: python3 ci-control/tools/ci/install_godot.py
+      - run: python3 ci-control/tools/ci/qa.py --godot "$GODOT"
+      - run: python3 ci-control/tools/ci/negative_path.py
+      - run: python3 ci-control/tools/ci/package.py --godot "$GODOT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: CI02-Candidate-QA-${{ steps.source.outputs.short }}
+          path: |
+            game-source/build/int01/logs/
+            game-source/build/ci/logs/
+          retention-days: 21
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CI02-Candidate-Windows-${{ steps.source.outputs.short }}
+          path: game-source/build/ci/Windows-x86_64/
+          retention-days: 21
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CI02-Candidate-macOS-${{ steps.source.outputs.short }}
+          path: game-source/build/ci/macOS/
+          retention-days: 21
+          if-no-files-found: error
