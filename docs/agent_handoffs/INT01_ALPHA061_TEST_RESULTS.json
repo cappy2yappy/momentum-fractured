@@ -472,5 +472,7 @@
         "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
       ]
     }
-  ]
+  ],
+  "qa_runtime_source_sha": "a82a83b97e65ab3a8ed912f01e490eabce42289e",
+  "provenance_note": "The reproduction spanned export-filter-only commit 847d3e5. Runtime scripts/assets did not change after a82a83b; final platform exports and PCK/ZIP/boot audits used 847d3e5. Subsequent commits are handoff documentation only."
 }

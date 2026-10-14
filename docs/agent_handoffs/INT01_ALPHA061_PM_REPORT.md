@@ -62,7 +62,7 @@ An initial packaging pass included generated capture resources because the inher
 
 ## E. QA results and reproduction
 
-The final reproducible run executed 21 processes: import, verifier, 17 named suites and two save-profile stages. It produced **691 PASS lines**, zero FAIL lines, zero script/parser/load errors, and successful process exits. Totals count assertions actually executed in this run; overlapping coverage across suites is included and historical totals are not added. Movement's differential frame comparisons are not inflated into separate printed assertions.
+Runtime scripts/assets were fixed at `a82a83b`; the reproduction spanned the export-filter-only commit `847d3e5`. Final exports and package/resource/boot checks used `847d3e5`. Subsequent handoff commits change documentation only. The final reproducible run executed 21 processes: import, verifier, 17 named suites and two save-profile stages. It produced **691 PASS lines**, zero FAIL lines, zero script/parser/load errors, and successful process exits. Totals count assertions actually executed in this run; overlapping coverage across suites is included and historical totals are not added. Movement's differential frame comparisons are not inflated into separate printed assertions.
 
 | Existing suite | PASS assertions |
 | --- | ---: |
@@ -154,7 +154,7 @@ No integration/export blocker remains. Acceptance gaps: Windows native launch/fe
 1. On this Mac, extract the macOS universal ZIP to a writable folder. Use **Play Isolated.command** to keep test saves in `playtest-profile` beside the launcher, leaving normal creator saves intact. It persists that test profile across runs. Verify Haven, three HP and no unlocked traversal kit before beginning. The app is unsigned/not notarized; if macOS blocks it, review/approve this specific candidate according to local security policy.
 2. For existing-save playtesting, back up the normal Godot userdata directory first, then open the `.app` normally. Intentional save identity: `~/Library/Application Support/Godot/app_userdata/Kaze — Silent District Alpha 0.5.0`; save file `silent_district_alpha_v3.json`. Keep the original backup unchanged. Do not delete creator saves to force a fresh campaign.
 3. Windows: extract ZIP and launch EXE. For safe fresh-save testing use a separate disposable Windows user account; for existing-save testing back up `%APPDATA%\Godot\app_userdata\Kaze — Silent District Alpha 0.5.0` first. No unverified APPDATA-remapping launcher is supplied.
-4. Controls are in each README. Check ordinary movement/floatiness and sprite proportions first; play guard→Windstep→Wind seal→tether→dash→Warden→Archive→sigils→regional elemental gates. Review R14/R15/R17/R19 forward and backward, deliberately miss shelves, use ordinary-zoom doors, test gate rejection and returns, checkpoint/save/reload. Earn Stride I in Mooring Loft; optionally launch the isolated script with `--momentum-prototype` for the prototype. Record separate feedback for each mode.
+4. Controls are in each README. Check ordinary movement/floatiness and sprite proportions first; play guard→Windstep→Wind seal→tether→dash→Warden→Archive→sigils→regional elemental gates. Review R14/R15/R17/R19 forward and backward, deliberately miss shelves, use ordinary-zoom doors, test gate rejection and returns, checkpoint/save/reload. Earn Stride I in Mooring Loft; optionally run `./Play\ Isolated.command -- --momentum-prototype` for the prototype. Record separate feedback for each mode.
 5. Return crashes, stuck positions, room/exit identifiers, ability kit, save/profile type and movement/sprite feedback to PM. Retain source/build hashes with the feedback.
 
 ## J. PM decisions and next actions
@@ -164,3 +164,9 @@ Review the combined diff and evidence; arrange creator macOS playtesting and Win
 ## K. Final verdict
 
 **READY FOR PM REVIEW** — combined candidate, source, tests, evidence and both platform exports delivered for review. **Not approved for mainline integration or release.** Creator transports this report to the existing Project Management chat.
+
+### Publication verification
+
+Pushed source and initial complete handoff at `e81bec3c0d5c5e5de94f5b47c3d0203b00b0815d`; this publication-note commit is documentation only. Draft review PR: **https://github.com/cappy2yappy/momentum-fractured/pull/10**, target `integration/alpha-0.6-world-momentum`. No merge performed.
+
+Post-push remote verification retained main `1a33d283a3781ba7068f86b43d4197f28f063939`, shared integration `34be30436996284ec2f783269c40269d321ed427`, Gameplay `70a0a83bd6076c9c711a43bcaafb3c79a8ad20a2` and Level Design `a4926e9f0667168f390ab99279efe3243055aa3f`. Candidate-only push succeeded. No source, cache, profile or build items remain unpushed; builds remain intentionally ignored local artifacts. The final documentation commit SHA is recorded in the chat return and GitHub branch history.
