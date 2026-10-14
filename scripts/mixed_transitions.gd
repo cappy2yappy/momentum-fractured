@@ -13,8 +13,13 @@ var direction = 1
 var destination = ""
 var graphic_mode = "graphic"
 
-func configure():
+func configure(w):
 	var args=OS.get_cmdline_user_args()
+	# Explicit QA save override: schema/API/default creator save path stay unchanged.
+	for arg in args:
+		if arg.begins_with("--tr02-save="):
+			var path=arg.trim_prefix("--tr02-save=")
+			if path.is_absolute_path(): w.save_path=path
 	if "--tr02-plain" in args: graphic_mode="plain"
 	if "--tr02-reduced-motion" in args or "--tr01-reduced-motion" in args: graphic_mode="reduced"
 

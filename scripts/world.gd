@@ -79,7 +79,7 @@ var test_mode = false
 var fall_recovering = false
 
 func _ready():
-	mixed_transitions.configure()
+	mixed_transitions.configure(self)
 	test_mode = "--test" in OS.get_cmdline_user_args()
 	metsys = get_node("/root/MetSys")
 	metsys.reset_state()
