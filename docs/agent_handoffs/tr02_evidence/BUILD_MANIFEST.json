@@ -1,0 +1,11 @@
+{
+  "runtime_sha": "1ef2f459611e366dd359ef4f970a79234136970f",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "windows_zip": "Kaze-TR02-Mixed-Transitions-Windows.zip",
+  "bytes": 51169602,
+  "sha256": "47e05f69caeb21f9133949bfecd76e80dfdbb1d27e6e68d4d09ea4093bdb1759",
+  "exe_sha256": "27e5b3f030badb03aa87a3169dee11ed1e38c066b7731805944a228aa6117898",
+  "zip_crc": "PASS",
+  "macOS": "not exported - template unavailable",
+  "remote_binary_release": false
+}

@@ -22,6 +22,9 @@ func run():
 		check((not w.RoomPresentation.exit_style(index).is_empty()) == (index in [14,15]),"Room %d bounded style selection"%index)
 	for index in [14,15]:
 		for portal in w.expansion.portals(index):
+			# TR-02 explicitly converts only R15<->R16 to directional crossing.
+			# Its E expectations are superseded by tests/mixed_transitions.gd.
+			if w.mixed_transitions.is_walk(index,portal.target): continue
 			seed_progress(w);w.build_room(index);w.player.set_physics_process(false)
 			var geometry_before=w.platforms.duplicate()
 			var checkpoint_before=[w.checkpoint_room,w.checkpoint_position]

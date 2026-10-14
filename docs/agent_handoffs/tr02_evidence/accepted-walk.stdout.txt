@@ -1,0 +1,11 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 60 FPS...
+--------------------------------------------------------------------------------
+Done recording movie at path: C:\Users\TonyS\Documents\Codex\2026-10-12\new-chat\kaze-tr02/build/tr02/accepted-walk.png
+12 frames at 60 FPS (movie length: 00:00:00:12), recorded in 00:00:02 (50% of real-time speed).
+CPU render time: 0.00 seconds (average: 0.39 ms/frame)
+GPU render time: 0.00 seconds (average: 0.10 ms/frame)
+Encoding time: 1.82 seconds (average: 151.55 ms/frame)
+--------------------------------------------------------------------------------

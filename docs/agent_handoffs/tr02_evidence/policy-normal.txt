@@ -1,0 +1,114 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+PASS: 21 rooms and29 links retained
+PASS: Atlas graph keeps all three exact pilot links
+PASS: Atlas destination names remain canonical
+PASS: Default original graphic comparison config
+PASS: Converted passage label communicates automatic activation
+PASS: Normal1280x720 camera zoom
+PASS: Directional walk/run/dash-speed crossing R15 speed400
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: Directional walk/run/dash-speed crossing R15 speed600
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: Directional walk/run/dash-speed crossing R15 speed920
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: High/low corner crossing rejected
+PASS: High/low corner crossing rejected
+PASS: Wrong travel direction rejected
+PASS: Stationary crossing rejected
+PASS: Attached grapple near plane rejected
+PASS: Converted passage no longer uses E
+PASS: Load directly at plane does not activate
+PASS: Closed Archive gate rejects crossing with cause
+PASS: Death mid-crossing cancels clock and carry
+PASS: Death restores framing
+PASS: Directional walk/run/dash-speed crossing R16 speed400
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: Directional walk/run/dash-speed crossing R16 speed600
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: Directional walk/run/dash-speed crossing R16 speed920
+PASS: Original explicit arrival and clock
+PASS: Directional framing stays modest
+PASS: Exact reciprocal feet position
+PASS: Horizontal crossing velocity preserved, landing vertical zero
+PASS: Camera offset restores on arrival
+PASS: Arrival proximity does not bounce back
+PASS: High/low corner crossing rejected
+PASS: High/low corner crossing rejected
+PASS: Wrong travel direction rejected
+PASS: Stationary crossing rejected
+PASS: Attached grapple near plane rejected
+PASS: Converted passage no longer uses E
+PASS: Load directly at plane does not activate
+PASS: Closed Archive gate rejects crossing with cause
+PASS: Death mid-crossing cancels clock and carry
+PASS: Death restores framing
+PASS: Live walk input crosses culvert with collisions
+PASS: Live run input crosses culvert with collisions
+PASS: Live dash input crosses culvert with collisions
+PASS: Interactive85px boundary unchanged
+PASS: Stairwell/special E keeps existing destination
+PASS: Repeated E cannot restart transition
+PASS: Interactive reciprocal exact arrival
+PASS: Interactive mode retains original stopped arrival
+PASS: Interactive85px boundary unchanged
+PASS: Stairwell/special E keeps existing destination
+PASS: Repeated E cannot restart transition
+PASS: Interactive reciprocal exact arrival
+PASS: Interactive mode retains original stopped arrival
+PASS: Interactive85px boundary unchanged
+PASS: Stairwell/special E keeps existing destination
+PASS: Repeated E cannot restart transition
+PASS: Interactive reciprocal exact arrival
+PASS: Interactive mode retains original stopped arrival
+PASS: Interactive85px boundary unchanged
+PASS: Stairwell/special E keeps existing destination
+PASS: Repeated E cannot restart transition
+PASS: Interactive reciprocal exact arrival
+PASS: Interactive mode retains original stopped arrival
+PASS: Actual held E starts stair/special
+PASS: Held E does not bounce stair/special
+PASS: Actual held E starts stair/special
+PASS: Held E does not bounce stair/special
+PASS: Special rejects missing relay from R13
+PASS: Special rejects missing sigil from R13
+PASS: Special rejects missing wind from R13
+PASS: Special rejects missing switch from R13
+PASS: Special rejects missing relay from R20
+PASS: Special rejects missing sigil from R20
+PASS: Special rejects missing wind from R20
+PASS: Special rejects missing switch from R20
+PASS: Version8 save writes without schema change
+PASS: Upgraded save restores prerequisites/tier/checkpoint
+PASS: Reload does not rewrite save
+PASS: Explicit creator comparison mode plain
+PASS: Explicit creator comparison mode graphic
+PASS: Explicit creator comparison mode reduced
+MIXED TRANSITIONS: 0 failure(s)

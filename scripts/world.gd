@@ -9,6 +9,7 @@ const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 const Extension = preload("res://scripts/route_extension.gd")
 const Expansion = preload("res://scripts/world_expansion.gd")
 const RoomPresentation = preload("res://scripts/room_presentation.gd")
+const MixedTransitions = preload("res://scripts/mixed_transitions.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -48,6 +49,7 @@ var geometry = Node2D.new()
 var room = 0
 var visited = [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 var expansion = Expansion.new()
+var mixed_transitions = MixedTransitions.new()
 var expansion_flags: Dictionary = {}
 var guard_defeated = false
 var boss_defeated = false
@@ -77,6 +79,7 @@ var test_mode = false
 var fall_recovering = false
 
 func _ready():
+	mixed_transitions.configure(self)
 	test_mode = "--test" in OS.get_cmdline_user_args()
 	metsys = get_node("/root/MetSys")
 	metsys.reset_state()
@@ -191,6 +194,7 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	mixed_transitions.room_loaded(self)
 	queue_redraw()
 
 func room_size(index: int) -> Vector2:
@@ -487,6 +491,7 @@ func on_hurt():
 	if player.hp <= 0: call_deferred("respawn")
 
 func respawn():
+	mixed_transitions.cancel(self)
 	transition = 0.0
 	pending_room = -1
 	pending_arrival = Vector2.INF
@@ -519,6 +524,7 @@ func recover_from_fall():
 func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
+	mixed_transitions.begin(self,target)
 	pending_arrival = arrival
 	pending_from_room = room
 	pending_room = target
@@ -606,6 +612,7 @@ func on_tether_requested():
 		announce("Wind Tether", 1)
 
 func _physics_process(dt):
+	mixed_transitions.update(self,dt)
 	message_time = maxf(0, message_time - dt)
 	if player.tether_attached:
 		tether_effect_anchor = player.tether_anchor
@@ -623,6 +630,7 @@ func _physics_process(dt):
 			player.position = destination + Vector2(110 if moving_east else -140, -2) if pending_arrival == Vector2.INF else pending_arrival
 			pending_arrival = Vector2.INF
 			player.velocity = Vector2.ZERO
+			mixed_transitions.arrived(self)
 			camera.reset_smoothing()
 		if transition <= 0: player.set_physics_process(true)
 	if Input.is_action_just_pressed("interact"): interact()
