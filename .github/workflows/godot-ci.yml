@@ -76,3 +76,49 @@ jobs:
           path: build/ci/macOS-Universal/
           retention-days: 21
           if-no-files-found: error
+  native-smoke:
+    needs: qa-and-build
+    if: github.event_name == 'pull_request' || inputs.build_artifacts
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            target: Windows-x86_64
+          - runner: macos-14
+            target: macOS-Universal
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: Kaze-${{ matrix.target }}-*
+          path: build/native-artifact
+          merge-multiple: true
+      - name: Native release headless startup
+        shell: bash
+        run: python tools/ci/native_smoke.py build/native-artifact --output build/native-smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Kaze-Native-Smoke-${{ matrix.target }}
+          path: |
+            build/native-smoke/NATIVE_SMOKE.json
+            build/native-smoke/engine.log
+            build/native-smoke/stdout.log
+          retention-days: 21
+          if-no-files-found: error
+  temporary-red-proof:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Intentionally fail corrupted-pack validation (CI-01 negative evidence)
+        run: PYTHONPATH=tools/ci python3 -c "from package import audit_pack; audit_pack(b'intentionally corrupt pack')"

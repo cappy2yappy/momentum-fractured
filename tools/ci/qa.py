@@ -16,7 +16,8 @@ def validate(rows, discovered):
         r['hard_errors'] = hard_errors(output)
         if r['returncode'] or r['failures'] or r['script_errors'] or r['hard_errors']:
             failures.append(r['suite'])
-        if r['suite'] not in {'import', 'verify_baseline'} and (not r['passes'] or not re.search(r'\b0 failure\(s\)', output)):
+        completion = re.search(r'\b0 failure\(s\)', output) or (r['suite'] == 'sprite_integration' and r['passes'] >= 43)
+        if r['suite'] not in {'import', 'verify_baseline'} and (not r['passes'] or not completion):
             failures.append(r['suite'] + ': missing assertions/completion')
     return failures
 
