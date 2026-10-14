@@ -1,6 +1,6 @@
 # Kaze Art Asset Registry
 
-**Status:** registry established; original ART-01-0061 reference images **NOT YET PUBLISHED**. Never represent a planned filename as an uploaded image.
+**Status:** creator has authorized storing reference images in this public repository; original ART-01-0061 reference images **NOT YET PUBLISHED**. Never represent a planned filename as an uploaded image.
 **Library owner:** Project Management (PM-01)
 **Repository:** https://github.com/cappy2yappy/momentum-fractured
 **Purpose:** One verifiable home for creator-provided reference images, approved concepts, and production-ready art without reattaching images to each chat.
@@ -9,7 +9,7 @@
 
 | ID | Intended Git path | Context / usage | Current state | Rights / provenance |
 | --- | --- | --- | --- | --- |
-| REF-CITY-001 | `docs/art/references/alpha061/city_silent_district_reference_01.png` | Creator-provided nighttime city image; City / Silent District visual direction | **MISSING ORIGINAL BINARY** — do not fetch/recreate substitutes | Shared by creator in PM chat (2026-10-14); creator not necessarily copyright holder; source/license unknown |
+| REF-CITY-001 | `docs/art/references/alpha061/city_silent_district_reference_01.png` | Creator-provided nighttime city image; City / Silent District visual direction | **MISSING ORIGINAL BINARY** — do not fetch/recreate substitutes | Shared by creator in PM chat (2026-10-14); creator authorizes public repository storage; stock-site name/license and redistribution rights not independently verified |
 | REF-VILLAGE-001 | `docs/art/references/alpha061/hidden_village_reference_01.png` | Creator-provided warm Japanese hidden village image; playable prologue visual direction | **MISSING ORIGINAL BINARY** — do not fetch/recreate substitutes | Shared by creator in PM chat (2026-10-14); creator not necessarily copyright holder; source/license unknown |
 | REF-RUINS-001 | `docs/art/references/alpha061/ruins_reference_01.png` | Optional later ruins concept reference | **NOT PROVIDED** | No original supplied |
 
@@ -19,7 +19,7 @@ This registry intentionally does **not** include image URLs or checksums until o
 
 1. When a creator supplies visual references, retrieve the **actual original image bytes** from the authorized chat attachment or a creator-approved source; never substitute a visually similar image.
 2. Keep original filenames and formats when possible. If changing extension, only after verifying true image encoding. Preserve an original copy byte-for-byte, without resizing, recoloring or embedding in a PDF.
-3. Because the repository is public, ask the creator to confirm that publishing each possibly copyrighted third-party reference is permitted. If not, use a private asset repository or creator-controlled private storage, and publish only a safe pointer/description here.
+3. Creator confirmed on 2026-10-14 that these images may be placed in the public Kaze repository. Record this authorization, but independently verify the originating stock-site license/redistribution conditions before publishing third-party originals when source information is available; if public redistribution is prohibited, use a private reference store or link instead.
 4. Use filenames consistent with this registry (adjust extensions to actual file format). Upload each image on an isolated branch. Confirm the binary can be fetched as an image and its SHA-256 and dimensions match the source.
 5. Update this table with **PUBLISHED — VERIFIED**, the exact commit permalink, format/dimensions, SHA-256, provenance (creator reference vs licensed source), permission status, attribution and intended use (inspiration only vs permitted to redistribute/use in-game).
 6. Put finalized in-game assets under `assets/environment/`, not `docs/art/references/`, with separate provenance and QA. Art references are **not approved production assets**.
