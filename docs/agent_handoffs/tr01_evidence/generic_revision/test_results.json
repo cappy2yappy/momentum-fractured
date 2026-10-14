@@ -1,0 +1,36 @@
+[
+  {
+    "suite": "room_transition_prototype",
+    "returncode": 0,
+    "passes": 109,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061",
+      "--script",
+      "res://tests/room_transition_prototype.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "integration_candidate",
+    "returncode": 0,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061",
+      "--script",
+      "res://tests/integration_candidate.gd",
+      "--",
+      "--test"
+    ]
+  }
+]

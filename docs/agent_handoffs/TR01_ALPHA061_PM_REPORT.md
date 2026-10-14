@@ -4,6 +4,8 @@
 **Date:** October 14, 2026 (America/New_York)  
 **Verdict:** READY FOR PM REVIEW — prototype review, not release or merge approval.
 
+> **Creator follow-up — generic entrance size:** After the initial review, the creator requested a slightly larger generic entrance and liked the stairwell. Generic housings are now 80×108 (previously 64×84), with a 16px E cue and expanded base. Stairwell and masonry pilot artwork remain unchanged. Original report evidence below describes the initial submission; current follow-up evidence is in `tr01_evidence/generic_revision/`. The preservation verifier and 121 focused assertions pass for this visual revision. The refreshed playable package is recorded in that directory's revision report/build manifest.
+
 ## A. Executive Summary
 
 Implemented two contextual entrance treatments on the combined Alpha 0.6.1 foundation: a lit rooftop service stairwell in R14 Bellroof Walk and a segmented masonry tunnel in R15 Lower Sluice. All five existing exits in those two rooms use larger architecture, readable E/proximity cues and prerequisite-driven locked feedback. A concise ninja wind-fold accents transitions involving pilot rooms; a stationary reduced-motion alternative is available. Other room entrances retain the prior compact housing.

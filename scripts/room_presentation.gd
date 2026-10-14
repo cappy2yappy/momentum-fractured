@@ -19,14 +19,15 @@ static func draw_exit(w, at: Vector2, color: Color):
 	draw_legacy_exit(w, at, color)
 
 static func draw_legacy_exit(w, at: Vector2, color: Color):
-	w.draw_rect(Rect2(at + Vector2(-48,-7),Vector2(96,14)),Color("565461"))
-	w.draw_rect(Rect2(at + Vector2(-32,-84),Vector2(64,84)),Color("262535"))
-	w.draw_rect(Rect2(at + Vector2(-24,-72),Vector2(48,65)),Color("171523"))
-	w.draw_rect(Rect2(at + Vector2(-24,-72),Vector2(48,65)),color,false,3)
-	w.draw_line(at+Vector2(-38,-84),at+Vector2(38,-84),Color("aaa18b"),5)
-	w.draw_circle(at+Vector2(0,-39),9,color)
-	w.draw_line(at+Vector2(-8,-39),at+Vector2(8,-39),Color("e6dcc4"),2)
-	w.draw_string(ThemeDB.fallback_font,at+Vector2(-5,-16),"E",HORIZONTAL_ALIGNMENT_LEFT,-1,12,Color("e6dcc4"))
+	# Creator-requested modest size increase; feet anchor and activation stay unchanged.
+	w.draw_rect(Rect2(at + Vector2(-56,-7),Vector2(112,14)),Color("565461"))
+	w.draw_rect(Rect2(at + Vector2(-40,-108),Vector2(80,108)),Color("262535"))
+	w.draw_rect(Rect2(at + Vector2(-30,-96),Vector2(60,89)),Color("171523"))
+	w.draw_rect(Rect2(at + Vector2(-30,-96),Vector2(60,89)),color,false,3)
+	w.draw_line(at+Vector2(-46,-108),at+Vector2(46,-108),Color("aaa18b"),5)
+	w.draw_circle(at+Vector2(0,-53),11,color)
+	w.draw_line(at+Vector2(-10,-53),at+Vector2(10,-53),Color("e6dcc4"),2)
+	w.draw_string(ThemeDB.fallback_font,at+Vector2(-5,-18),"E",HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e6dcc4"))
 
 static func draw_background(w):
 	var size=w.room_size(w.room)
@@ -68,8 +69,8 @@ static func draw_background(w):
 	if w.room in [14,15,17,19]:
 		for p in w.expansion.portals(w.room):
 			var at=p.at
-			w.draw_rect(Rect2(at+Vector2(-62,-218 if w.room in PILOT_STYLES else -128),Vector2(124,30)),Color("23242f"))
-			w.draw_string(font,at+Vector2(-54,-198 if w.room in PILOT_STYLES else -108),"ROUTE %02d"%p.target,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("d7c9a6"))
+			w.draw_rect(Rect2(at+Vector2(-62,-218 if w.room in PILOT_STYLES else -146),Vector2(124,30)),Color("23242f"))
+			w.draw_string(font,at+Vector2(-54,-198 if w.room in PILOT_STYLES else -126),"ROUTE %02d"%p.target,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("d7c9a6"))
 
 # All artwork is procedural, noninteractive placeholder architecture.
 static func draw_pilot_exit(w, at: Vector2, portal: Dictionary):
