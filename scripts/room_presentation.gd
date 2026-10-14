@@ -1,6 +1,24 @@
 extends RefCounted
 # Noninteractive architecture. Never add these silhouettes to physics geometry.
+# Bounded visual map; coordinates/targets/requirements come only from existing portals.
+const PILOT_STYLES = {14: "rooftop", 15: "masonry"}
+static func exit_style(index: int) -> String:
+	return PILOT_STYLES.get(index, "")
+
+static func pilot_portal(w, at: Vector2) -> Dictionary:
+	if exit_style(w.room).is_empty(): return {}
+	for portal in w.expansion.portals(w.room):
+		if portal.at == at: return portal
+	return {}
+
 static func draw_exit(w, at: Vector2, color: Color):
+	var portal = pilot_portal(w, at)
+	if not portal.is_empty():
+		draw_pilot_exit(w, at, portal)
+		return
+	draw_legacy_exit(w, at, color)
+
+static func draw_legacy_exit(w, at: Vector2, color: Color):
 	w.draw_rect(Rect2(at + Vector2(-48,-7),Vector2(96,14)),Color("565461"))
 	w.draw_rect(Rect2(at + Vector2(-32,-84),Vector2(64,84)),Color("262535"))
 	w.draw_rect(Rect2(at + Vector2(-24,-72),Vector2(48,65)),Color("171523"))
@@ -50,5 +68,67 @@ static func draw_background(w):
 	if w.room in [14,15,17,19]:
 		for p in w.expansion.portals(w.room):
 			var at=p.at
-			w.draw_rect(Rect2(at+Vector2(-62,-128),Vector2(124,30)),Color("23242f"))
-			w.draw_string(font,at+Vector2(-54,-108),"ROUTE %02d"%p.target,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("d7c9a6"))
+			w.draw_rect(Rect2(at+Vector2(-62,-218 if w.room in PILOT_STYLES else -128),Vector2(124,30)),Color("23242f"))
+			w.draw_string(font,at+Vector2(-54,-198 if w.room in PILOT_STYLES else -108),"ROUTE %02d"%p.target,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("d7c9a6"))
+
+# All artwork is procedural, noninteractive placeholder architecture.
+static func draw_pilot_exit(w, at: Vector2, portal: Dictionary):
+	var unlocked = w.expansion.allowed(w, portal.need)
+	var near = w.player.position.distance_to(at) < 85
+	var cue = Color("f4db96") if unlocked else Color("d49b87")
+	var font = ThemeDB.fallback_font
+	w.draw_rect(Rect2(at+Vector2(-86,-8),Vector2(172,16)),Color("55535e"))
+	w.draw_line(at+Vector2(-86,-8),at+Vector2(86,-8),Color("ddd0ad"),4)
+	if exit_style(w.room) == "rooftop":
+		# Lit service stairwell: roof cap, solid uprights, recessed stairs and lamp.
+		w.draw_rect(Rect2(at+Vector2(-74,-180),Vector2(148,174)),Color("343443"))
+		w.draw_rect(Rect2(at+Vector2(-53,-153),Vector2(106,145)),Color("10151e"))
+		w.draw_rect(Rect2(at+Vector2(-82,-190),Vector2(164,16)),Color("817982"))
+		w.draw_line(at+Vector2(-53,-153),at+Vector2(53,-153),cue,5)
+		for i in 5:
+			w.draw_rect(Rect2(at+Vector2(-43,-20-i*19),Vector2(86-i*9,6)),Color("59616b"))
+		w.draw_line(at+Vector2(42,-26),at+Vector2(12,-119),Color("9c9c9e"),3)
+		w.draw_rect(Rect2(at+Vector2(-14,-176),Vector2(28,10)),cue)
+	else:
+		# Masonry tunnel: a filled recess bounded by thick segmented voussoirs.
+		w.draw_rect(Rect2(at+Vector2(-55,-112),Vector2(110,104)),Color("0e1921"))
+		w.draw_circle(at+Vector2(0,-112),55,Color("0e1921"))
+		for side in [-1,1]:
+			for y in 4:
+				w.draw_rect(Rect2(at+Vector2(side*67-12,-106+y*25),Vector2(24,23)),Color("63777a"))
+		for i in 9:
+			var a = PI + float(i)*PI/9.0
+			w.draw_arc(at+Vector2(0,-112),67,a,a+PI/9.0-0.025,5,Color("7c8c8b"),23,true)
+		w.draw_arc(at+Vector2(0,-112),53,PI,TAU,24,cue,3,true)
+		w.draw_line(at+Vector2(-52,-112),at+Vector2(-52,-8),cue,3)
+		w.draw_line(at+Vector2(52,-112),at+Vector2(52,-8),cue,3)
+	# Neutral warm cues never imitate the green/blue/red elemental seal geometry.
+	w.draw_rect(Rect2(at+Vector2(-32,-143),Vector2(64,34)),Color("202532"))
+	if unlocked:
+		w.draw_string(font,at+Vector2(-23,-119),"E  >",HORIZONTAL_ALIGNMENT_LEFT,-1,22,cue)
+	else:
+		w.draw_rect(Rect2(at+Vector2(-10,-132),Vector2(20,17)),cue,false,3)
+		w.draw_arc(at+Vector2(0,-132),7,PI,TAU,12,cue,3)
+	var label = "E · ENTER" if unlocked and near else ("APPROACH" if unlocked else "LOCKED · "+portal.need.to_upper())
+	w.draw_rect(Rect2(at+Vector2(-104,18),Vector2(208,28)),Color("202532"))
+	w.draw_string(font,at+Vector2(-96,38),label,HORIZONTAL_ALIGNMENT_LEFT,-1,16,cue)
+	if unlocked and near:
+		w.draw_line(at+Vector2(-43,-5),at+Vector2(43,-5),cue,6)
+
+static func uses_pilot_transition(w) -> bool:
+	return w.transition > 0 and (w.pending_from_room in PILOT_STYLES or w.room in PILOT_STYLES or w.pending_room in PILOT_STYLES)
+
+static func draw_transition(h, w, alpha: float) -> bool:
+	if not uses_pilot_transition(w): return false
+	# No player mutation, shader, timer, particles or persistent visual state.
+	var still = "--tr01-reduced-motion" in OS.get_cmdline_user_args()
+	var center = w.player.get_global_transform_with_canvas().origin - Vector2(0,55)
+	if still:
+		h.draw_arc(center,36,PI*0.15,PI*1.65,24,Color(0.96,0.86,0.65,alpha),3,true)
+	else:
+		for i in 3:
+			var radius = 28.0+i*17.0+alpha*24.0
+			var angle = (0.65-w.transition)*7.0+i*1.5
+			h.draw_arc(center,radius,angle,angle+PI*1.1,24,Color(0.83,0.91,0.91,alpha*0.8),3,true)
+	h.draw_string(ThemeDB.fallback_font,Vector2(520,550),"WIND THROUGH THE PASSAGE",HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color(0.96,0.86,0.65,alpha))
+	return true

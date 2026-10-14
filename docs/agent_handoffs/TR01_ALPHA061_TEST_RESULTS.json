@@ -1,0 +1,42 @@
+{
+  "assignment": "TR-01-0061",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "source_base": "afecef1922231081807a332c511de85c7941fec8",
+  "combined": {
+    "checks": 21,
+    "passes": 691,
+    "failures": 0,
+    "all_exit_zero": true,
+    "script_errors": 0
+  },
+  "dedicated": {
+    "passes": 109,
+    "failures": 0,
+    "exit_code": 0
+  },
+  "reproduction": [
+    "python3 tools/run_tr01_qa.py",
+    "python3 tools/run_tr01_qa.py --render",
+    "python3 tools/verify_baseline.py"
+  ],
+  "limitations": [
+    "Seeded automated local routes are not an unseeded full campaign or human visual acceptance.",
+    "Native captures use 1280x720, zoom 1.0 and unchanged Kaze assets/controller.",
+    "Headless macOS certificate diagnostic and import/export RID/ObjectDB shutdown warnings are retained in raw logs.",
+    "macOS universal package is unsigned, not notarized; Apple M4 tested, Intel untested; no Windows export; no remote binary upload."
+  ],
+  "build_smoke_tests": {
+    "mac_headless_rooftop": 0,
+    "mac_headless_canal": 0,
+    "mac_native_rooftop": 0,
+    "mac_native_canal_reduced": 0,
+    "exported_pck_audit_with_editor_engine": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\nERROR: Condition \"ret != noErr\" is true. Returning: \"\"\n   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)\nPACK_AUDIT forbidden=0 ROOM=14 STYLE=rooftop PLAYER_VISIBLE=true\nEXPORTED PROTOTYPE QA failures=0\n",
+    "standalone_release_external_script": "Release runtime did not run external QA script; stopped; editor-engine --main-pack audit used successfully."
+  },
+  "performance": [
+    "EFFECT_FRAME_METRIC room=14 n=120 mean_ms=8.335 p95_ms=9.316 max_ms=11.001 zoom=(1.0, 1.0) reduced=false",
+    "EFFECT_FRAME_METRIC room=15 n=120 mean_ms=10.432 p95_ms=13.603 max_ms=32.610 zoom=(1.0, 1.0) reduced=false",
+    "EFFECT_FRAME_METRIC room=14 n=120 mean_ms=8.338 p95_ms=9.181 max_ms=10.022 zoom=(1.0, 1.0) reduced=true",
+    "EFFECT_FRAME_METRIC room=15 n=120 mean_ms=8.333 p95_ms=9.134 max_ms=10.469 zoom=(1.0, 1.0) reduced=true"
+  ]
+}

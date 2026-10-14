@@ -1,0 +1,22 @@
+extends SceneTree
+var failures=0
+func _init(): call_deferred("run")
+func scan(path):
+	for file in DirAccess.get_files_at(path):
+		if path.begins_with("res://build") or path.begins_with("res://tests") or path.begins_with("res://docs") or path.begins_with("res://tools"): failures+=1
+	for folder in DirAccess.get_directories_at(path):
+		if folder!=".godot": scan(path.path_join(folder))
+func run():
+	await process_frame
+	scan("res://")
+	var w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w
+	w.set_physics_process(false);w.player.set_physics_process(false)
+	print("PACK_AUDIT forbidden=",failures," ROOM=",w.room," STYLE=",w.RoomPresentation.exit_style(w.room)," PLAYER_VISIBLE=",w.player.visible)
+	if w.room!=14 or w.RoomPresentation.exit_style(w.room)!="rooftop": failures+=1
+	w.player.position=w.expansion.portals(14)[0].at;w.interact()
+	if w.pending_room!=13: failures+=1
+	for i in 41: w._physics_process(1.0/60.0)
+	if w.room!=13 or not w.player.is_physics_processing(): failures+=1
+	w.queue_free();current_scene=null
+	for i in 3: await process_frame
+	print("EXPORTED PROTOTYPE QA failures=",failures);quit(1 if failures else 0)
