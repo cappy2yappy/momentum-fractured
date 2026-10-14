@@ -1,5 +1,7 @@
 # KAZE - PROJECT MANAGEMENT RETURN REPORT
 
+**Creator playtest follow-up — October 14, 2026:** The creator subsequently reported liking gameplay, dynamics, feel and floatiness, with tentative speed concerns, a request for more expressive character actions, apparent save reuse and Level Design as the next major focus. See [the complete creator-playtest PM return](GP01_CREATOR_PLAYTEST_PM_RETURN_2026-10-14.md) and [changelog](../../CHANGELOG.md). The automated-session evidence and its original manual-testing limits below remain a historical record; this feedback does not imply a complete campaign or rendering-performance pass.
+
 **Report ID:** GP-01-ALPHA-0.6.1  
 **Agent:** Gameplay Systems  
 **Status:** REVIEW REQUIRED  
