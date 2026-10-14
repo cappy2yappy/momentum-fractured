@@ -10,7 +10,3 @@ PASS: Approved integrator maintains rope length while pumping
 PASS: Approved swing release retains its exact velocity
 PASS: Approved combo queues a follow-up during recovery
 APPROVED COMBAT SWING: 0 failure(s)
-WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
-     at: cleanup (core/object/object.cpp:2641)
-ERROR: 6 resources still in use at exit (run with --verbose for details).
-   at: clear (core/io/resource.cpp:810)

@@ -1,0 +1,25 @@
+{
+  "audio_driver": "CoreAudio",
+  "display": "macOS",
+  "engine": "4.6.1-stable (official)",
+  "limitations": "Sequential six-second samples; scene state evolves; no sustained 60 FPS or audio-only causal claim.",
+  "results": [
+    {
+      "frames": 783,
+      "max_ms": 49.174,
+      "mean_ms": 7.89973563218391,
+      "mode": "silent_control",
+      "p95_ms": 20.541
+    },
+    {
+      "frames": 451,
+      "max_ms": 119.359,
+      "mean_ms": 13.9588625277162,
+      "mode": "audio_stress",
+      "p95_ms": 46.162
+    }
+  ],
+  "room": 1,
+  "voice_drops": 0,
+  "voice_high_water": 10
+}

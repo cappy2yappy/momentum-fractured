@@ -5,21 +5,27 @@
   "limitations": "Sequential six-second samples; scene state evolves; no sustained 60 FPS or audio-only causal claim.",
   "results": [
     {
-      "frames": 783,
-      "max_ms": 49.174,
-      "mean_ms": 7.89973563218391,
+      "five_cue_dispatch_p95_us": 0,
+      "frames": 366,
+      "max_ms": 119.281,
+      "mean_ms": 17.5138087431694,
       "mode": "silent_control",
-      "p95_ms": 20.541
+      "p95_ms": 18.968,
+      "physics_cpu_p95_ms": 7.493,
+      "process_cpu_p95_ms": 106.782
     },
     {
-      "frames": 451,
-      "max_ms": 119.359,
-      "mean_ms": 13.9588625277162,
+      "five_cue_dispatch_p95_us": 157,
+      "frames": 388,
+      "max_ms": 41.682,
+      "mean_ms": 16.6658195876289,
       "mode": "audio_stress",
-      "p95_ms": 46.162
+      "p95_ms": 17.348,
+      "physics_cpu_p95_ms": 1.869,
+      "process_cpu_p95_ms": 44.35
     }
   ],
   "room": 1,
   "voice_drops": 0,
-  "voice_high_water": 10
+  "voice_high_water": 8
 }

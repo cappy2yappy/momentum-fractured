@@ -11,7 +11,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/import",
     "returncode": 0,
-    "seconds": 3.02,
+    "seconds": 8.55,
     "passes": 0,
     "failures": 0,
     "script_errors": 0,
@@ -33,7 +33,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/verify",
     "returncode": 0,
-    "seconds": 0.05,
+    "seconds": 0.13,
     "passes": 0,
     "failures": 0,
     "script_errors": 0,
@@ -53,13 +53,12 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/approved_baseline",
     "returncode": 0,
-    "seconds": 1.94,
+    "seconds": 2.32,
     "passes": 32,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
-      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
     ]
   },
   {
@@ -76,14 +75,12 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/approved_combat_swing",
     "returncode": 0,
-    "seconds": 0.4,
+    "seconds": 0.62,
     "passes": 7,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
-      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
-      "ERROR: 6 resources still in use at exit (run with --verbose for details)."
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
     ]
   },
   {
@@ -100,7 +97,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/annex_expansion",
     "returncode": 0,
-    "seconds": 3.68,
+    "seconds": 3.7,
     "passes": 34,
     "failures": 0,
     "script_errors": 0,
@@ -124,7 +121,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/annex_traversal",
     "returncode": 0,
-    "seconds": 8.94,
+    "seconds": 8.79,
     "passes": 6,
     "failures": 0,
     "script_errors": 0,
@@ -148,7 +145,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/save_compatibility",
     "returncode": 0,
-    "seconds": 0.5,
+    "seconds": 0.63,
     "passes": 11,
     "failures": 0,
     "script_errors": 0,
@@ -171,7 +168,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/skyworks_progression",
     "returncode": 0,
-    "seconds": 5.17,
+    "seconds": 5.35,
     "passes": 33,
     "failures": 0,
     "script_errors": 0,
@@ -195,7 +192,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/storm_keeper",
     "returncode": 0,
-    "seconds": 0.62,
+    "seconds": 0.6,
     "passes": 12,
     "failures": 0,
     "script_errors": 0,
@@ -219,7 +216,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/movement_momentum",
     "returncode": 0,
-    "seconds": 9.04,
+    "seconds": 8.87,
     "passes": 53,
     "failures": 0,
     "script_errors": 0,
@@ -243,12 +240,13 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/sprite_integration",
     "returncode": 0,
-    "seconds": 0.61,
+    "seconds": 0.52,
     "passes": 43,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
     ]
   },
   {
@@ -265,12 +263,13 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/world_expansion",
     "returncode": 0,
-    "seconds": 4.75,
+    "seconds": 6.19,
     "passes": 193,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
     ]
   },
   {
@@ -287,7 +286,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/expansion_gates_save",
     "returncode": 0,
-    "seconds": 3.78,
+    "seconds": 8.62,
     "passes": 17,
     "failures": 0,
     "script_errors": 0,
@@ -310,14 +309,12 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/expansion_traversal",
     "returncode": 0,
-    "seconds": 98.22,
+    "seconds": 98.26,
     "passes": 125,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
-      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
-      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
     ]
   },
   {
@@ -334,7 +331,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/gameplay_stabilization",
     "returncode": 0,
-    "seconds": 0.52,
+    "seconds": 0.39,
     "passes": 16,
     "failures": 0,
     "script_errors": 0,
@@ -358,7 +355,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/traversal_transitions",
     "returncode": 0,
-    "seconds": 0.52,
+    "seconds": 0.4,
     "passes": 8,
     "failures": 0,
     "script_errors": 0,
@@ -382,12 +379,14 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/world_cohesion_traversal",
     "returncode": 0,
-    "seconds": 60.6,
+    "seconds": 60.19,
     "passes": 56,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
     ]
   },
   {
@@ -404,12 +403,14 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/integration_candidate",
     "returncode": 0,
-    "seconds": 0.76,
+    "seconds": 0.42,
     "passes": 12,
     "failures": 0,
     "script_errors": 0,
     "warnings": [
-      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
     ]
   },
   {
@@ -428,7 +429,7 @@
     ],
     "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/integration_descent",
     "returncode": 0,
-    "seconds": 0.58,
+    "seconds": 0.53,
     "passes": 26,
     "failures": 0,
     "script_errors": 0,
@@ -450,9 +451,9 @@
       "--",
       "--prepare"
     ],
-    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011021205840000",
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011573042126000",
     "returncode": 0,
-    "seconds": 0.7,
+    "seconds": 0.45,
     "passes": 2,
     "failures": 0,
     "script_errors": 0,
@@ -473,9 +474,9 @@
       "--",
       "--reload"
     ],
-    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011021205840000",
+    "home": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/build/int01/profiles/restart-1792011573042126000",
     "returncode": 0,
-    "seconds": 0.69,
+    "seconds": 0.5,
     "passes": 5,
     "failures": 0,
     "script_errors": 0,

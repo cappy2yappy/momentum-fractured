@@ -45,3 +45,5 @@ PASS: traversal frame 7 contains artwork
 PASS: Dash retains traversal pose 7
 PASS: Left-facing cleaned art mirrors correctly
 PASS: Dash uses restored scale and preserved floor pivot
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

@@ -128,7 +128,3 @@ PASS: Room 20 object anchor (900.0, 520.0) has actual facing/height/airborne/cle
 PASS: Room 20 object anchor (1650.0, 700.0) has actual facing/height/airborne/clearance eligibility
 PASS: Room 20 failed traversal recovers on dry floor
 EXPANSION TRAVERSAL: 0 failure(s)
-WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
-     at: cleanup (core/object/object.cpp:2641)
-ERROR: 1 resources still in use at exit (run with --verbose for details).
-   at: clear (core/io/resource.cpp:810)

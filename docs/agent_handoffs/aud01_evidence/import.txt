@@ -16,81 +16,14 @@ ERROR: Condition "ret != noErr" is true. Returning: ""
 [  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
 [92m[ DONE ][39m [1mupdate_scripts_classes[22m
 [0m
-[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (22 steps)[39m[0m
-[   0% ] [90m[1m_update_scan_actions[22m | amb_canal.wav[39m[0m
-[   4% ] [90m[1m_update_scan_actions[22m | amb_city.wav[39m[0m
-[   8% ] [90m[1m_update_scan_actions[22m | checkpoint.wav[39m[0m
-[  13% ] [90m[1m_update_scan_actions[22m | contact.wav[39m[0m
-[  17% ] [90m[1m_update_scan_actions[22m | damage.wav[39m[0m
-[  21% ] [90m[1m_update_scan_actions[22m | dash.wav[39m[0m
-[  26% ] [90m[1m_update_scan_actions[22m | death.wav[39m[0m
-[  30% ] [90m[1m_update_scan_actions[22m | impact_electric.wav[39m[0m
-[  34% ] [90m[1m_update_scan_actions[22m | impact_fire.wav[39m[0m
-[  39% ] [90m[1m_update_scan_actions[22m | impact_wind.wav[39m[0m
-[  43% ] [90m[1m_update_scan_actions[22m | jump.wav[39m[0m
-[  47% ] [90m[1m_update_scan_actions[22m | kunai_throw.wav[39m[0m
-[  52% ] [90m[1m_update_scan_actions[22m | land.wav[39m[0m
-[  56% ] [90m[1m_update_scan_actions[22m | parry.wav[39m[0m
-[  60% ] [90m[1m_update_scan_actions[22m | reject.wav[39m[0m
-[  65% ] [90m[1m_update_scan_actions[22m | room_passage.wav[39m[0m
-[  69% ] [90m[1m_update_scan_actions[22m | step_stone.wav[39m[0m
-[  73% ] [90m[1m_update_scan_actions[22m | step_wood.wav[39m[0m
-[  78% ] [90m[1m_update_scan_actions[22m | swing.wav[39m[0m
-[  82% ] [90m[1m_update_scan_actions[22m | tether_attach.wav[39m[0m
-[  86% ] [90m[1m_update_scan_actions[22m | tether_fire.wav[39m[0m
-[  91% ] [90m[1m_update_scan_actions[22m | tether_release.wav[39m[0m
-[92m[ DONE ][39m [1m_update_scan_actions[22m
-[0m
-[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (22 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (1 steps)[39m[0m
 [   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
-[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
 [   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
-[   0% ] [90m[1mreimport[22m | tether_release.wav[39m[0m
-[   4% ] [90m[1mreimport[22m | tether_fire.wav[39m[0m
-[   8% ] [90m[1mreimport[22m | tether_attach.wav[39m[0m
-[  13% ] [90m[1mreimport[22m | swing.wav[39m[0m
-[  17% ] [90m[1mreimport[22m | step_wood.wav[39m[0m
-[  21% ] [90m[1mreimport[22m | step_stone.wav[39m[0m
-[  26% ] [90m[1mreimport[22m | room_passage.wav[39m[0m
-[  30% ] [90m[1mreimport[22m | reject.wav[39m[0m
-[  34% ] [90m[1mreimport[22m | parry.wav[39m[0m
-[  39% ] [90m[1mreimport[22m | land.wav[39m[0m
-[  43% ] [90m[1mreimport[22m | kunai_throw.wav[39m[0m
-[  47% ] [90m[1mreimport[22m | jump.wav[39m[0m
-[  52% ] [90m[1mreimport[22m | impact_wind.wav[39m[0m
-[  56% ] [90m[1mreimport[22m | impact_fire.wav[39m[0m
-[  60% ] [90m[1mreimport[22m | impact_electric.wav[39m[0m
-[  65% ] [90m[1mreimport[22m | death.wav[39m[0m
-[  69% ] [90m[1mreimport[22m | dash.wav[39m[0m
-[  73% ] [90m[1mreimport[22m | damage.wav[39m[0m
-[  78% ] [90m[1mreimport[22m | contact.wav[39m[0m
-[  82% ] [90m[1mreimport[22m | checkpoint.wav[39m[0m
-[  86% ] [90m[1mreimport[22m | amb_city.wav[39m[0m
-[  91% ] [90m[1mreimport[22m | amb_canal.wav[39m[0m
-[  95% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[   0% ] [90m[1mreimport[22m | AUD01_ENGINE_MIX.wav[39m[0m
+[  50% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
 [92m[ DONE ][39m [1mreimport[22m
 [0m
-[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (22 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (1 steps)[39m[0m
 [   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
 [92m[ DONE ][39m [1mreimport[22m
 [0m

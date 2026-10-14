@@ -1,0 +1,5 @@
+{
+  "test": "single-byte corruption of local PCK copy",
+  "result": "PASS: integrity audit rejected corruption",
+  "original_artifact_modified": false
+}

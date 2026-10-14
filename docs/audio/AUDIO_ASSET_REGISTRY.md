@@ -57,6 +57,7 @@ for compact review. The raw stereo 48k recording is in ignored `build/aud01/`.
 This derivative uses only the original assets above and shares CC0-1.0.
 Human listening approval is pending; it is not a finished soundtrack.
 Timeline and actual cue counts are in `AUD01_PREVIEW_RESULTS.json`.
+Preview SHA-256: `30526b074c5a4aaf94595305ec777418ef4c5e42311d7ed965fc4885f762fe7f`.
 
 ## Music inventory — intentionally empty
 

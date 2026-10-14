@@ -16,3 +16,7 @@ PASS: Compact door rejects missing Windstep
 PASS: Compact door keeps original 85px interaction radius
 PASS: Compact door accepts earned Windstep at exact cue
 INTEGRATION CANDIDATE: 0 failure(s)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

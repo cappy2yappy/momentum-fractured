@@ -39,7 +39,7 @@ def audit(data):
         assert contents.get(path.relative_to(ROOT).as_posix())==path.read_bytes()
     samples = [name for name in names if name.startswith('.godot/imported/') and '.wav-' in name and name.endswith('.sample')]
     assert len(samples)==22, samples
-    assert 'default_bus_layout.tres' in names and any('scripts/audio/audio_director.' in name for name in names)
+    assert any(name.startswith('default_bus_layout.tres') for name in names) and any('scripts/audio/audio_director.' in name for name in names)
     return dict(entries=count,imported_audio_samples=len(samples),world_data='byte-identical',forbidden_entries=[],files=names)
 
 def main():

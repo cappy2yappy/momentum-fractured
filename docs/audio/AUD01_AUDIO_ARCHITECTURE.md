@@ -15,7 +15,9 @@ not a loudness target. No runtime DSP allocation or synthesis is performed.
 
 All sources use PCM16 mono 22,050 Hz, no normalization/trim, WAV compression
 disabled (`compress/mode=0`). Short attacks need predictable latency and a small
-decoded footprint. Two eight-second ambience streams are duplicated once at
+decoded footprint. Before adding an individual track above 10MB or a new batch
+above 25MB, agree on Git LFS or asset hosting with the creator; no such music
+files are included here. Two eight-second ambience streams are duplicated once at
 startup and assigned explicit forward loop sample ranges 0–176400. Their
 periodic synthesis has a continuous seam; quantitative seam checks are in
 `aud01_evidence/ASSET_ANALYSIS.json`. Auditory loop/click acceptance is pending.

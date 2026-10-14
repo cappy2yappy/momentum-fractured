@@ -59,3 +59,7 @@ PASS: Base-speed live landing room 19: (1370.0, 980.0) -> (1685.0, 980.0); end=(
 PASS: Base-speed live landing room 19: (1685.0, 980.0) -> (1850.0, 980.0); end=(2099.165, 979.9328)
 PASS: Base-speed live landing room 19: (1850.0, 980.0) -> (1950.0, 1140.0); end=(2100.0, 979.9336)
 WORLD COHESION RETURN TRAVERSAL: 0 failure(s)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

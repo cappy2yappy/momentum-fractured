@@ -196,3 +196,5 @@ PASS: Missing prerequisites fail closed 20 -> 19
 PASS: Missing prerequisites fail closed 20 -> 13
 PASS: Missing prerequisites fail closed 13 -> 20
 WORLD EXPANSION: 193 assertions, 0 failure(s)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
