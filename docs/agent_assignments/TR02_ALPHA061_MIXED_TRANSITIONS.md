@@ -32,6 +32,17 @@ No new map topology/room exits is approved for implementation in this pass.
 - Capture normal-zoom before/after and a real playable GIF/video if possible, preferably creator-usable Mac and Windows ZIPs. The newly approved CI-01 GitHub Actions infrastructure PR #13 is still unmerged; do NOT rely on its workflow being available on this branch. Build locally or explicitly coordinate a separate safe CI testing request without merging features.
 - 60 FPS expectation persists. Measure frame-time spikes during effects, no false sustained 60 FPS claim. The playtest must let the creator compare all three transition types without unearned permanent saves; provide isolated profile launchers/fixtures.
 
+
+## Creator addendum — Persona 5-inspired graphic transition presentation (2026-10-14)
+
+**New creator preference:** When exiting a room, the transition's presentation should capture some of the stylish, kinetic graphic-design energy associated with **Persona 5**. This is an **aesthetic reference, not a request to copy its trademarked graphics, fonts, music, characters, logos or exact animation sequences**. The goal is a Kaze-original visual identity that complements ninja movement, the approved city-pop/jazz-hop soundtrack direction, and the early city's indigo/rose palette.
+
+**Required bounded prototype:** Alongside the TR-02 comparison, include at least one **Kaze-original graphic transition treatment** for the pilot walk-through and/or special transition. Explore directional motion graphics (angled panel/wind-cloth wipes, silhouette streaks, impact framing, punchy 2D layering) that track Kaze's travel direction and communicate entry and arrival. Permit a brief district/room destination title only if legible and nonintrusive. Prefer a concise 0.2–0.6 second presentation study that does not change the underlying transition clock or navigation timing; timings are exploratory, not a mandate to alter game physics. The approved stairwell should remain grounded and readable, with any new graphic flourish modest by default.
+
+**Camera/gameplay constraints:** Preserve the player's sense of forward momentum, the actual safe landing position and reciprocal traversal. No frame-hiding trick may mask a wrong spawn, sequence break or gate bypass. Do not force a long freeze, strong camera shake or repeated strobing. Support the existing reduced-motion flag with a straightforward fade/static directional graphic alternative. Maintain 1280×720 viewport, normal zoom, HUD legibility, at least 60 FPS target, and visibility of interactable gates. If smooth scroll between discrete rooms cannot be genuinely implemented with current room loader, prototype a deliberate graphic wipe instead and label that limitation.
+
+**Evidence & creator sign-off:** Provide side-by-side capture or short GIF/video of (1) ordinary walk-through, (2) Persona 5-*influenced*, Kaze-original graphic wipe, and (3) reduced-motion treatment. Record effect timings, actual draw-frame performance samples and any spikes. Let creator select the preferred graphic intensity before expanding globally. Treat music beat-sync as a later optional polish layer, not a dependency or blocking requirement for this milestone.
+
 ## Branch, handoff and acceptance
 - Branch `feature/alpha-0.6.1-mixed-transitions`, draft PR targeting TR-01 branch. Do not merge `main`, shared integration, PR #10, PR #12 or art PR #11.
 - Commit and push incrementally; preserve completed work if stalled.
