@@ -8,6 +8,7 @@ const DistrictBackground = preload("res://assets/web/district-fidelity.png")
 
 const Extension = preload("res://scripts/route_extension.gd")
 const Expansion = preload("res://scripts/world_expansion.gd")
+const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -690,6 +691,7 @@ func _draw():
 	draw_rect(Rect2(Vector2.ZERO,room_size(room)), Color(ROOM_COLORS[room], 0.18))
 	if room in [15,16,18,19]:
 		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
+	RoomPresentation.draw_background(self)
 	for rect in platforms:
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
 		draw_rect(rect, Color("252631"))
@@ -764,9 +766,8 @@ func draw_tether_effect():
 	draw_circle(finish, 28 + 12 * strength, Color(0.66, 1.0, 0.78, 0.22 * strength))
 
 func draw_door(at: Vector2, color = Color("d1b08e")):
-	draw_rect(Rect2(at + Vector2(-37, -133), Vector2(74, 133)), Color("171523"))
-	draw_rect(Rect2(at + Vector2(-40, -136), Vector2(80, 136)), color, false, 4)
-	draw_circle(at + Vector2(22, -58), 4, color)
+	# Presentation only: interaction radius, destination and landing stay unchanged.
+	RoomPresentation.draw_exit(self, at, color)
 
 func draw_water(rect: Rect2):
 	draw_rect(rect, Color("15364a"))

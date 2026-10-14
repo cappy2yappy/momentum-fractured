@@ -1,0 +1,44 @@
+# annex_expansion — executed Godot stdout
+
+```text
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+PASS: Two annex rooms extend the approved route
+PASS: Room 0 geometry and MetSys discovery load
+PASS: Room 1 geometry and MetSys discovery load
+PASS: Room 2 geometry and MetSys discovery load
+PASS: Room 3 geometry and MetSys discovery load
+PASS: Room 4 geometry and MetSys discovery load
+PASS: Room 5 geometry and MetSys discovery load
+PASS: Room 6 geometry and MetSys discovery load
+PASS: Room 7 geometry and MetSys discovery load
+PASS: Room 8 geometry and MetSys discovery load
+PASS: Room 9 geometry and MetSys discovery load
+PASS: Annexes await original relay completion
+PASS: Original relay now opens the annex route
+PASS: Original transition sequence reaches the Undercroft
+PASS: Undercroft sigil is collectible once
+PASS: Repeated overlap cannot duplicate a sigil
+PASS: New shrine records its exact safe spawn
+PASS: Fire cache rejects collection through a bypass
+PASS: Real Wind projectile cannot open the Fire cache
+PASS: Real Fire projectile opens the cache
+PASS: Opened cache completes the three-sigil side objective
+PASS: Shortcut door checks its Electric seal even after a geometry bypass
+PASS: Real Electric projectile opens the return
+PASS: Return reaches Echo Shrine at its dedicated safe landing
+PASS: Reciprocal return lands safely on the terrace
+PASS: Kit pauses gameplay exclusively
+PASS: Kit selection equips unlocked Fire Kunai
+PASS: Atlas replaces kit without unpausing
+PASS: Pause replaces atlas
+PASS: Closing the last overlay resumes play
+PASS: Touch controls expose both elemental actions
+PASS: Room rebuild clears stale transient actions without editing the controller
+PASS: Room changes discard old projectiles
+PASS: Death during a transition safely restores the earned shrine
+ANNEX EXPANSION: 0 failure(s)
+
+```
