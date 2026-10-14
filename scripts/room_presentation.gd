@@ -124,7 +124,7 @@ static func draw_transition(h, w, alpha: float) -> bool:
 	if w.mixed_transitions.draw_transition(h,w,alpha): return true
 	if not uses_pilot_transition(w): return false
 	# No player mutation, shader, timer, particles or persistent visual state.
-	var still = "--tr01-reduced-motion" in OS.get_cmdline_user_args()
+	var still = w.mixed_transitions.graphic_mode == "reduced" or "--tr01-reduced-motion" in OS.get_cmdline_user_args()
 	var center = w.player.get_global_transform_with_canvas().origin - Vector2(0,55)
 	if still:
 		h.draw_arc(center,36,PI*0.15,PI*1.65,24,Color(0.96,0.86,0.65,alpha),3,true)
