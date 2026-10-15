@@ -22,6 +22,8 @@ var walked = 0.0
 var grounded = false
 var last_position = Vector2.ZERO
 var suspended = false
+var bank = "aud01"
+const AUD02_CUES = ["dash", "swing", "contact", "parry", "kunai_throw", "tether_fire", "tether_attach", "tether_release", "impact_wind", "impact_fire", "impact_electric", "room_passage"]
 
 func _ready():
 	process_physics_priority = 100 # Sample resolved movement after the controller.
@@ -33,6 +35,15 @@ func _ready():
 		stream.loop_begin = 0
 		stream.loop_end = stream.data.size() / 2
 		streams[cue] = stream
+	# AUD02 is an isolated listening candidate; established identity stays default.
+	if "--audio-bank=aud02" in OS.get_cmdline_user_args():
+		bank = "aud02"
+		for cue in AUD02_CUES:
+			var path = "res://assets/audio/aud02/%s.wav" % cue
+			if ResourceLoader.exists(path):
+				var candidate = load(path) as AudioStreamWAV
+				if candidate != null and candidate.get_length() > 0:
+					streams[cue] = candidate
 	for i in 12: voices.append(make_player("SFX"))
 	for i in 2:
 		ambience.append(make_player("Ambience"))

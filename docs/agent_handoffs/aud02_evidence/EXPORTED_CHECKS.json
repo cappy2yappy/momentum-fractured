@@ -1,0 +1,23 @@
+[
+  {
+    "name": "windows_release_smoke",
+    "returncode": 0,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0
+  },
+  {
+    "name": "windows_pack_audio",
+    "returncode": 0,
+    "passes": 74,
+    "failures": 0,
+    "script_errors": 0
+  },
+  {
+    "name": "windows_pack_curation",
+    "returncode": 0,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0
+  }
+]

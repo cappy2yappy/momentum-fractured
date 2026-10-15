@@ -1,0 +1,18 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Expanded save writes successfully
+PASS: Original abilities survive expanded saves
+PASS: New shrine and exact spawn survive restart
+PASS: Shortcut and side objective survive restart
+PASS: MetSys exploration persists for added rooms
+PASS: Cleared annex encounter stays cleared after reload
+PASS: Saved annex shrine remains a safe death recovery point
+PASS: Existing Alpha 0.5 save version 4 loads without losing earned kit
+PASS: Legacy saves initialize added data safely
+PASS: Unknown selected element cannot break the HUD
+PASS: Failed manual save preserves honest error feedback
+SAVE COMPATIBILITY: 0 failure(s)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)
