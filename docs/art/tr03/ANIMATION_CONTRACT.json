@@ -1,0 +1,154 @@
+{
+  "assignment": "TR-03-0061",
+  "lane": "B",
+  "status": "specification-only; review required",
+  "runtime_changed": false,
+  "loader": {
+    "seconds": 0.65,
+    "reference_tick_rate": 60,
+    "ticks": 39,
+    "swap_cue": "existing loader room-swap event around elapsed0.33s; do not reschedule"
+  },
+  "new_source_canvas": [
+    320,
+    724
+  ],
+  "new_ground_pivot_px": [
+    160,
+    600
+  ],
+  "new_upright_visible_height_px": 320,
+  "proposed_visual_scale": 0.303125,
+  "alpha_margin_px": 12,
+  "no_per_frame_autocenter": true,
+  "clips": [
+    {
+      "id": "walk_continuation",
+      "frames": 6,
+      "nominal_fps": 10,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "turn_depth",
+      "frames": 4,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "enter_depth",
+      "frames": 3,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "leave_depth",
+      "frames": 3,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "return_profile",
+      "frames": 2,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "stair_up",
+      "frames": 6,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    },
+    {
+      "id": "stair_down",
+      "frames": 6,
+      "nominal_fps": 20,
+      "new_art": true,
+      "status": "not painted"
+    }
+  ],
+  "run_reuse": {
+    "path": "assets/kaze/cleaned/kaze_run_strip.png",
+    "frames": 8,
+    "scale": 0.3825780535911868,
+    "baseline": 491,
+    "frame_seconds": 0.08
+  },
+  "beats": [
+    {
+      "ticks": [
+        0,
+        11
+      ],
+      "cue": "turn_or_approach"
+    },
+    {
+      "ticks": [
+        12,
+        18
+      ],
+      "cue": "inward_step_or_stair_contact"
+    },
+    {
+      "ticks": [
+        18,
+        21
+      ],
+      "cue": "opaque_cover_follow_loader_swap"
+    },
+    {
+      "ticks": [
+        21,
+        29
+      ],
+      "cue": "destination_emergence"
+    },
+    {
+      "ticks": [
+        30,
+        38
+      ],
+      "cue": "profile_or_running_recovery"
+    },
+    {
+      "ticks": [
+        39,
+        39
+      ],
+      "cue": "resume_existing_physics_policy"
+    }
+  ],
+  "metadata_proposal": [
+    "presentation_mode",
+    "exit_heading",
+    "arrival_heading",
+    "approach_motion",
+    "depth_axis",
+    "stair_rise_direction",
+    "source_art_anchor",
+    "destination_art_anchor",
+    "mirror_safe",
+    "occluder_polygon",
+    "clip_phase"
+  ],
+  "protected": [
+    "physics",
+    "player_scale",
+    "combat",
+    "graph",
+    "endpoint_coordinates",
+    "collisions",
+    "gating",
+    "save_format",
+    "default_save_identity",
+    "load_clock",
+    "map_minimap"
+  ],
+  "depth_endpoint_selected": false,
+  "final_character_frames_produced": false
+}

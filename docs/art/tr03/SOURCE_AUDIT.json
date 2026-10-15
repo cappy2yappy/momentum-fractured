@@ -1,0 +1,46 @@
+{
+  "base": "2b1ccec9e293a50ada9c11d3dc9751281db31cb1",
+  "assets": [
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+      "width": 2560,
+      "height": 724,
+      "cells": 8,
+      "cell_width": 320,
+      "bit_depth": 8,
+      "color_type": 6
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "width": 2176,
+      "height": 724,
+      "cells": 8,
+      "cell_width": 272,
+      "bit_depth": 8,
+      "color_type": 6
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "width": 2176,
+      "height": 724,
+      "cells": 8,
+      "cell_width": 272,
+      "bit_depth": 8,
+      "color_type": 6
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+      "width": 2560,
+      "height": 724,
+      "cells": 8,
+      "cell_width": 320,
+      "bit_depth": 8,
+      "color_type": 6
+    }
+  ],
+  "note": "PNG header/hash audit only; alpha-boundary pixel QA is a later production gate."
+}
