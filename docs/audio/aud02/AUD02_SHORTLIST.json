@@ -1,0 +1,732 @@
+[
+  {
+    "cue": "step_stone",
+    "source_filename": "commse0 (150).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (150).wav",
+    "source_sha256": "56b0b1d7a14e6ba3e6316d5881c38660183275807bf76ccb0b257fb862ba95ec",
+    "duration": 0.20958,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (8).wav",
+        "group": "pack",
+        "sha256": "6294754c66735a49b7375fc14ba0b583c7ea202cc339ebd8645e97d0dd205074"
+      },
+      {
+        "filename": "commse0 (6).wav",
+        "group": "pack",
+        "sha256": "757c5eacbce13789d38ba5ad6ec148661906c1766e950f2d94e23c1b417fe432"
+      }
+    ],
+    "proposed_use": "Dry, restrained sole contact; preserve current until heard.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "step_wood",
+    "source_filename": "minigame (11).wav",
+    "source_group": "pack",
+    "source_relative_path": "minigame (11).wav",
+    "source_sha256": "94189eeb0d2f0bde356f603f3fe57e5b74d81d1fd548cab4c427a3c67f1350ae",
+    "duration": 0.20942,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (61).wav",
+        "group": "pack",
+        "sha256": "63470e314b0b39d0e6359e5f2c9a1446a8ff85e56f01482776c09183014fb697"
+      },
+      {
+        "filename": "minigame (8).wav",
+        "group": "pack",
+        "sha256": "6294754c66735a49b7375fc14ba0b583c7ea202cc339ebd8645e97d0dd205074"
+      }
+    ],
+    "proposed_use": "Muted hollow contact, no exaggerated bass.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "jump",
+    "source_filename": "pupSe (14).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (14).wav",
+    "source_sha256": "96b8dbe59814f285da974f9332d13687cc7cd6040a9d8108f72af7539a94e0c2",
+    "duration": 0.13825,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "missionSe (19).wav",
+        "group": "pack",
+        "sha256": "5731abb5386ad858d0e071a6f009aba55f683ce54d6590453fbefb61c1e71cf4"
+      },
+      {
+        "filename": "commse0.wav",
+        "group": "pack",
+        "sha256": "b4d59442af603718afb9e92336967280127a26bfbaf238884a3678ea7d53cd23"
+      }
+    ],
+    "proposed_use": "Small cloth/air lift, avoid rising arcade tone.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "land",
+    "source_filename": "pupSe (15).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (15).wav",
+    "source_sha256": "59dbd4b2183bb4594be89898587b517f9f113827c4d2d9fa43d88913c16186cf",
+    "duration": 0.37917,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "missionSe (46).wav",
+        "group": "pack",
+        "sha256": "7ed4164aac8bc361bb2c0b19fe2f53ca04858149b9208f5f4015a415764653e4"
+      },
+      {
+        "filename": "pupSe (61).wav",
+        "group": "pack",
+        "sha256": "63470e314b0b39d0e6359e5f2c9a1446a8ff85e56f01482776c09183014fb697"
+      }
+    ],
+    "proposed_use": "Compact body weight with dry grit.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "dash",
+    "source_filename": "missionSe (19).wav",
+    "source_group": "pack",
+    "source_relative_path": "missionSe (19).wav",
+    "source_sha256": "5731abb5386ad858d0e071a6f009aba55f683ce54d6590453fbefb61c1e71cf4",
+    "duration": 0.31302,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (8).wav",
+        "group": "pack",
+        "sha256": "245d7c8586b8fc0f68b104f21a6d3e51c64bcb691302bfd82d5b4a405e90285a"
+      },
+      {
+        "filename": "commse0 (13).wav",
+        "group": "pack",
+        "sha256": "54d24b9c5fb9b358a3283ddc9f6729cf819bc5d226c9200531c38611e2d8674f"
+      }
+    ],
+    "proposed_use": "Fast broad air, no shrill tonal tail.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "slide",
+    "source_filename": "commse0 (13).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (13).wav",
+    "source_sha256": "54d24b9c5fb9b358a3283ddc9f6729cf819bc5d226c9200531c38611e2d8674f",
+    "duration": 0.35025,
+    "descriptors": "bright, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (56).wav",
+        "group": "pack",
+        "sha256": "156de3c6ced42a8e54d6df4527dc2c378686585b1c8d595ec41e58579faa399b"
+      },
+      {
+        "filename": "missionSe (49).wav",
+        "group": "pack",
+        "sha256": "ffc25857f535da676ba8d19903065ab83cc02fba87ed0eb6afec8ce79f14dc21"
+      }
+    ],
+    "proposed_use": "Short friction scrape; no dedicated existing trigger.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "wall_jump",
+    "source_filename": "pupSe (20).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (20).wav",
+    "source_sha256": "843f1c9ab1899714c8cb828f44e5b5070251737783558303bba939b8ef93a5d9",
+    "duration": 0.25725,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (7).wav",
+        "group": "pack",
+        "sha256": "61f8644f02780a838e76a8479aeb11b9c2577539c6fbc0071aa5c2013ba2734e"
+      },
+      {
+        "filename": "commse0.wav",
+        "group": "pack",
+        "sha256": "b4d59442af603718afb9e92336967280127a26bfbaf238884a3678ea7d53cd23"
+      }
+    ],
+    "proposed_use": "Dry contact then air; existing jump hook shared.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "tether_fire",
+    "source_filename": "commse0 (1).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (1).wav",
+    "source_sha256": "df480ff4c3e045ea25e1c05ee31cfc3d255298135dc7345a95e1759f5f3f5ae4",
+    "duration": 0.21608,
+    "descriptors": "bright, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (71).wav",
+        "group": "pack",
+        "sha256": "444ee8d20151cc379d2e50bf5f179e11063712c59909e450e19310d9b9bcc88f"
+      },
+      {
+        "filename": "commse0.wav",
+        "group": "pack",
+        "sha256": "b4d59442af603718afb9e92336967280127a26bfbaf238884a3678ea7d53cd23"
+      }
+    ],
+    "proposed_use": "Narrow line launch with fast onset.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "tether_attach",
+    "source_filename": "minigame (7).wav",
+    "source_group": "pack",
+    "source_relative_path": "minigame (7).wav",
+    "source_sha256": "61f8644f02780a838e76a8479aeb11b9c2577539c6fbc0071aa5c2013ba2734e",
+    "duration": 0.3465,
+    "descriptors": "low-heavy, noise-rich, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (6).wav",
+        "group": "pack",
+        "sha256": "f38ed92f20525d5bccf91f665b90ad72507a65a1fffb7191475e57e816647195"
+      },
+      {
+        "filename": "commse0 (8).wav",
+        "group": "pack",
+        "sha256": "245d7c8586b8fc0f68b104f21a6d3e51c64bcb691302bfd82d5b4a405e90285a"
+      }
+    ],
+    "proposed_use": "Small firm metallic catch.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "tether_release",
+    "source_filename": "pupSe (71).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (71).wav",
+    "source_sha256": "444ee8d20151cc379d2e50bf5f179e11063712c59909e450e19310d9b9bcc88f",
+    "duration": 0.23873,
+    "descriptors": "bright, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0.wav",
+        "group": "pack",
+        "sha256": "b4d59442af603718afb9e92336967280127a26bfbaf238884a3678ea7d53cd23"
+      },
+      {
+        "filename": "commse0 (6).wav",
+        "group": "pack",
+        "sha256": "757c5eacbce13789d38ba5ad6ec148661906c1766e950f2d94e23c1b417fe432"
+      }
+    ],
+    "proposed_use": "Light line flick, short tail.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "tether_swing",
+    "source_filename": "pupSe (62).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (62).wav",
+    "source_sha256": "3a8d2677a6624303053c8c515dfbc967d31add74e770b8820e4ce097b4867d8e",
+    "duration": 0.69475,
+    "descriptors": "midrange, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "battle (37).wav",
+        "group": "pack",
+        "sha256": "5426a5b5f52898fba0f1cc90b5607290ae8583ea944b5713a8e9b5df9e787d79"
+      },
+      {
+        "filename": "commse0 (98).wav",
+        "group": "pack",
+        "sha256": "42637f894e1a227b68bf27b3ca54a02ba4291757b71272a900cab1a408ecc3e2"
+      }
+    ],
+    "proposed_use": "Subtle tension/air; no continuous emitter added.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "swing",
+    "source_filename": "commse0 (8).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (8).wav",
+    "source_sha256": "245d7c8586b8fc0f68b104f21a6d3e51c64bcb691302bfd82d5b4a405e90285a",
+    "duration": 0.36535,
+    "descriptors": "bright, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (5).wav",
+        "group": "pack",
+        "sha256": "c7d4d7ca7dd70838c06ad364f4d90cbb8e4087dc2e15f9375458f3098c995f27"
+      },
+      {
+        "filename": "commse0 (154).wav",
+        "group": "pack",
+        "sha256": "1c8d954bda277929a21e2df7614dc97ad181a106e5d8e42f88cb7e78f41e874c"
+      }
+    ],
+    "proposed_use": "Dry blade/cloth air cut.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "contact",
+    "source_filename": "missionSe (46).wav",
+    "source_group": "pack",
+    "source_relative_path": "missionSe (46).wav",
+    "source_sha256": "7ed4164aac8bc361bb2c0b19fe2f53ca04858149b9208f5f4015a415764653e4",
+    "duration": 0.55619,
+    "descriptors": "low-heavy, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (6).wav",
+        "group": "pack",
+        "sha256": "f38ed92f20525d5bccf91f665b90ad72507a65a1fffb7191475e57e816647195"
+      },
+      {
+        "filename": "pupSe (3).wav",
+        "group": "pack",
+        "sha256": "2558927e2829108ad80c7074cc5aee74ecd1d954fe3ad3589aa5c80f0fcb960e"
+      }
+    ],
+    "proposed_use": "Body impact with brief edge, no excessive boom.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "parry",
+    "source_filename": "commse0 (56).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (56).wav",
+    "source_sha256": "156de3c6ced42a8e54d6df4527dc2c378686585b1c8d595ec41e58579faa399b",
+    "duration": 0.48533,
+    "descriptors": "bright, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (19).wav",
+        "group": "pack",
+        "sha256": "0538a0a08d8c68b6392422a9ff278286ffb40782c39b85f2ddb241b993b518ca"
+      },
+      {
+        "filename": "pupSe (59).wav",
+        "group": "pack",
+        "sha256": "1c96135b05c16ee3123ad864149e50f229776544b88314aed9d12cd10aafc237"
+      }
+    ],
+    "proposed_use": "Distinct bright metal transient, controlled ring.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "damage",
+    "source_filename": "minigame (6).wav",
+    "source_group": "pack",
+    "source_relative_path": "minigame (6).wav",
+    "source_sha256": "f38ed92f20525d5bccf91f665b90ad72507a65a1fffb7191475e57e816647195",
+    "duration": 0.28933,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (5).wav",
+        "group": "pack",
+        "sha256": "482a202ae8310b3b077f028c9eee9e8088f7e56385a4f56c9ba917940172941e"
+      },
+      {
+        "filename": "pupSe (61).wav",
+        "group": "pack",
+        "sha256": "63470e314b0b39d0e6359e5f2c9a1446a8ff85e56f01482776c09183014fb697"
+      }
+    ],
+    "proposed_use": "Dull hit, separate from successful contact.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "enemy_defeat",
+    "source_filename": "pupSe (42).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (42).wav",
+    "source_sha256": "6b20cdfc90ae83da41b429317d3f3a29e8596f432d68018f2fbbe3400b52e43d",
+    "duration": 0.61833,
+    "descriptors": "low-heavy, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "hugebtl (28).wav",
+        "group": "pack",
+        "sha256": "c2f0bfbe16702436d509c4b2c2bd68d1832a103829642600d6a5ebb4bd080e36"
+      },
+      {
+        "filename": "commse0 (4).wav",
+        "group": "pack",
+        "sha256": "fe9ea3e14c7d34fbd5a69be64bd65594e52035c1f21ac5a73271cc079399d70f"
+      }
+    ],
+    "proposed_use": "Falling mass/air; dedicated hook deferred.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "kunai_throw",
+    "source_filename": "commse0.wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0.wav",
+    "source_sha256": "b4d59442af603718afb9e92336967280127a26bfbaf238884a3678ea7d53cd23",
+    "duration": 0.19521,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (6).wav",
+        "group": "pack",
+        "sha256": "757c5eacbce13789d38ba5ad6ec148661906c1766e950f2d94e23c1b417fe432"
+      },
+      {
+        "filename": "minigame (8).wav",
+        "group": "pack",
+        "sha256": "6294754c66735a49b7375fc14ba0b583c7ea202cc339ebd8645e97d0dd205074"
+      }
+    ],
+    "proposed_use": "Tiny metal flick followed by air.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "impact_wind",
+    "source_filename": "commse0 (5).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (5).wav",
+    "source_sha256": "c7d4d7ca7dd70838c06ad364f4d90cbb8e4087dc2e15f9375458f3098c995f27",
+    "duration": 0.36785,
+    "descriptors": "bright, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (147).wav",
+        "group": "pack",
+        "sha256": "2df4ee6461f4a7103b065ac141a8116815f18881273272906665d4da66123761"
+      },
+      {
+        "filename": "pupSe (59).wav",
+        "group": "pack",
+        "sha256": "1c96135b05c16ee3123ad864149e50f229776544b88314aed9d12cd10aafc237"
+      }
+    ],
+    "proposed_use": "Dispersing filtered air.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "impact_fire",
+    "source_filename": "minigame (5).wav",
+    "source_group": "pack",
+    "source_relative_path": "minigame (5).wav",
+    "source_sha256": "482a202ae8310b3b077f028c9eee9e8088f7e56385a4f56c9ba917940172941e",
+    "duration": 0.33483,
+    "descriptors": "low-heavy, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "battle (37).wav",
+        "group": "pack",
+        "sha256": "5426a5b5f52898fba0f1cc90b5607290ae8583ea944b5713a8e9b5df9e787d79"
+      },
+      {
+        "filename": "commse0 (7).wav",
+        "group": "pack",
+        "sha256": "e7f1107109b55c3f3e8060d8b9a5fc48ed9aa6781234325047fefd3f3f007e82"
+      }
+    ],
+    "proposed_use": "Dry crackle and compact low puff.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "impact_electric",
+    "source_filename": "pupSe (13).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (13).wav",
+    "source_sha256": "ffbe02d69830846159bd645805cf4f115a1fd1abf408a6ffa4f07d56c66a6caa",
+    "duration": 0.41825,
+    "descriptors": "bright, noise-rich, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (19).wav",
+        "group": "pack",
+        "sha256": "0538a0a08d8c68b6392422a9ff278286ffb40782c39b85f2ddb241b993b518ca"
+      },
+      {
+        "filename": "commse0 (147).wav",
+        "group": "pack",
+        "sha256": "2df4ee6461f4a7103b065ac141a8116815f18881273272906665d4da66123761"
+      }
+    ],
+    "proposed_use": "Brief irregular crack without sustained whine.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "elemental_gate",
+    "source_filename": "hugebtl (28).wav",
+    "source_group": "pack",
+    "source_relative_path": "hugebtl (28).wav",
+    "source_sha256": "c2f0bfbe16702436d509c4b2c2bd68d1832a103829642600d6a5ebb4bd080e36",
+    "duration": 0.70233,
+    "descriptors": "low-heavy, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (31).wav",
+        "group": "pack",
+        "sha256": "770f944b5d2ec5bbe8a4b3a0c9f84890484a2b61defba6e420301406bcd59979"
+      },
+      {
+        "filename": "commse0 (65).wav",
+        "group": "pack",
+        "sha256": "e09c160949cc88381301d7e7020ea3c7039ad6658a413d2c6e3e4794566c7cc7"
+      }
+    ],
+    "proposed_use": "Break/resolve cue; existing elemental contact retained.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "checkpoint",
+    "source_filename": "missionSe (48).wav",
+    "source_group": "pack",
+    "source_relative_path": "missionSe (48).wav",
+    "source_sha256": "bdd54bd8a27f579602a5a8ee506864f5e4b37ed21c0c0106e6e42286af8ea511",
+    "duration": 1.08317,
+    "descriptors": "midrange, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (146).wav",
+        "group": "pack",
+        "sha256": "9cd99a316508297c0d9eb1a508601e52ed7156c0af6463b667dae1f875afc3e3"
+      },
+      {
+        "filename": "minigame (12).wav",
+        "group": "pack",
+        "sha256": "7e5619a4b02a5ce362c7def4d35b559f259dbbf71f2e04f3d3fe98e28ef4e85d"
+      }
+    ],
+    "proposed_use": "Gentle resonance, no melody or music selection.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "room_passage",
+    "source_filename": "missionSe (49).wav",
+    "source_group": "pack",
+    "source_relative_path": "missionSe (49).wav",
+    "source_sha256": "ffc25857f535da676ba8d19903065ab83cc02fba87ed0eb6afec8ce79f14dc21",
+    "duration": 0.50108,
+    "descriptors": "midrange, resonant/tonal, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "commse0 (7).wav",
+        "group": "pack",
+        "sha256": "e7f1107109b55c3f3e8060d8b9a5fc48ed9aa6781234325047fefd3f3f007e82"
+      },
+      {
+        "filename": "commse0 (147).wav",
+        "group": "pack",
+        "sha256": "2df4ee6461f4a7103b065ac141a8116815f18881273272906665d4da66123761"
+      }
+    ],
+    "proposed_use": "Brief folded-air transition; no timing change.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "wind_fold",
+    "source_filename": "pupSe (19).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (19).wav",
+    "source_sha256": "0538a0a08d8c68b6392422a9ff278286ffb40782c39b85f2ddb241b993b518ca",
+    "duration": 0.51975,
+    "descriptors": "bright, noise-rich, extended, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (59).wav",
+        "group": "pack",
+        "sha256": "1c96135b05c16ee3123ad864149e50f229776544b88314aed9d12cd10aafc237"
+      },
+      {
+        "filename": "commse0 (54).wav",
+        "group": "pack",
+        "sha256": "e75bcf1968b8028c9d8d3a32384c9cb720e44638d614633db86106d0e96ff4ba"
+      }
+    ],
+    "proposed_use": "Soft pressure fold; shares existing passage concept.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "collectible",
+    "source_filename": "commse0 (147).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (147).wav",
+    "source_sha256": "2df4ee6461f4a7103b065ac141a8116815f18881273272906665d4da66123761",
+    "duration": 1.26823,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "pupSe (59).wav",
+        "group": "pack",
+        "sha256": "1c96135b05c16ee3123ad864149e50f229776544b88314aed9d12cd10aafc237"
+      },
+      {
+        "filename": "commse0 (7).wav",
+        "group": "pack",
+        "sha256": "e7f1107109b55c3f3e8060d8b9a5fc48ed9aa6781234325047fefd3f3f007e82"
+      }
+    ],
+    "proposed_use": "Small affirmative detail; dedicated hook deferred.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "ui_confirm",
+    "source_filename": "commse0 (6).wav",
+    "source_group": "pack",
+    "source_relative_path": "commse0 (6).wav",
+    "source_sha256": "757c5eacbce13789d38ba5ad6ec148661906c1766e950f2d94e23c1b417fe432",
+    "duration": 0.14563,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (8).wav",
+        "group": "pack",
+        "sha256": "6294754c66735a49b7375fc14ba0b583c7ea202cc339ebd8645e97d0dd205074"
+      },
+      {
+        "filename": "missionSe (43).wav",
+        "group": "pack",
+        "sha256": "d3c59c81ff33aec3a8af7691c43d106066b2dd6f5844583e477f22ac2e25512b"
+      }
+    ],
+    "proposed_use": "Quiet tactile confirmation; hook deferred.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "reject",
+    "source_filename": "pupSe (61).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (61).wav",
+    "source_sha256": "63470e314b0b39d0e6359e5f2c9a1446a8ff85e56f01482776c09183014fb697",
+    "duration": 0.29517,
+    "descriptors": "midrange, resonant/tonal, short, fast-onset",
+    "flags": [],
+    "alternates": [
+      {
+        "filename": "minigame (8).wav",
+        "group": "pack",
+        "sha256": "6294754c66735a49b7375fc14ba0b583c7ea202cc339ebd8645e97d0dd205074"
+      },
+      {
+        "filename": "pupSe (3).wav",
+        "group": "pack",
+        "sha256": "2558927e2829108ad80c7074cc5aee74ecd1d954fe3ad3589aa5c80f0fcb960e"
+      }
+    ],
+    "proposed_use": "Muted denial tick, unobtrusive.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  },
+  {
+    "cue": "ambience",
+    "source_filename": "pupSe (67).wav",
+    "source_group": "pack",
+    "source_relative_path": "pupSe (67).wav",
+    "source_sha256": "42fb24c43abc0c65f12a807f78a4cf3f69cf7b27abc686ed27be9ba2482f04a4",
+    "duration": 8.49683,
+    "descriptors": "low-heavy, resonant/tonal, extended, fast-onset",
+    "flags": [
+      "long_for_repeated_action"
+    ],
+    "alternates": [
+      {
+        "filename": "pupSe (66).wav",
+        "group": "pack",
+        "sha256": "5b202c9abe4ba16ae35fccf0d8c3f0c482696285883f301f21ee1498e36a3985"
+      },
+      {
+        "filename": "commse0 (94).wav",
+        "group": "pack",
+        "sha256": "e714fdde67fae8624075940657891ef706fd11e61faca4874f074581efdb0117"
+      }
+    ],
+    "proposed_use": "Sparse nonmusical atmosphere; retain established loops.",
+    "recommendation": "Listening candidate only; retain AUD01 or audition original alternative. Do not distribute source.",
+    "basis": "Automated waveform/spectral fit; NOT an artistic ranking",
+    "creator_approval": "PENDING"
+  }
+]

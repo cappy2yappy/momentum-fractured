@@ -1,0 +1,21 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Sweep gives a readable phase-one warning
+PASS: Correct parry grants a long punish window without damage
+PASS: Unparried close sweep deals one normal hit
+PASS: A strike cannot damage repeatedly
+PASS: Sweep misses outside its telegraphed reach
+PASS: Grounded player is vulnerable to the marked ground pulse
+PASS: A real jump clears the ground pulse using the approved controller
+PASS: Half health activates phase two without light-hit stun-lock
+PASS: Phase two accelerates warning timing while retaining a tell
+PASS: Phase two still grants recovery openings
+PASS: Keeper pursues a ranged attacker after being engaged
+PASS: Keeper victory is independent of Tide Warden progression
+STORM KEEPER: 0 failure(s)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)
+ERROR: 4 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

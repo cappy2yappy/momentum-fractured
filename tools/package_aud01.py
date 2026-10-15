@@ -8,7 +8,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT/'build/aud01/exports'
 EVIDENCE = ROOT/'docs/agent_handoffs/aud01_evidence'
 
-def audit(data):
+def audit(data, expected_audio_samples=22):
     start = 0
     if data[:4] != b'GDPC':
         assert data[:2] == b'MZ' and data[-4:] == b'GDPC'
@@ -38,7 +38,7 @@ def audit(data):
     for path in (ROOT/'world').glob('*.txt'):
         assert contents.get(path.relative_to(ROOT).as_posix())==path.read_bytes()
     samples = [name for name in names if name.startswith('.godot/imported/') and '.wav-' in name and name.endswith('.sample')]
-    assert len(samples)==22, samples
+    assert len(samples)==expected_audio_samples, samples
     assert any(name.startswith('default_bus_layout.tres') for name in names) and any('scripts/audio/audio_director.' in name for name in names)
     return dict(entries=count,imported_audio_samples=len(samples),world_data='byte-identical',forbidden_entries=[],files=names)
 

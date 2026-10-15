@@ -1,0 +1,25 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Fire projectile cannot tunnel through 30px seal during 120ms physics step
+PASS: Wrong element is consumed at crossed seal without opening it
+PASS: Long-step projectile hits crossed enemy exactly once
+PASS: Sparse valid save clears stale reward and encounter flags
+PASS: Load normalizes selected locked element to an earned element
+PASS: Sparse save cannot retain stale discovery
+PASS: Malformed collection fields load safely as empty state
+PASS: Malformed checkpoint falls back to safe Haven
+PASS: Malformed ability collection cannot retain old unlocks
+PASS: String flags do not grant traversal or story progress
+PASS: String flags do not open elemental seals or returns
+PASS: Valid earned kit and selection are preserved
+PASS: Valid expanded checkpoint and Fire seal are preserved
+PASS: Valid MetSys discovery survives filtering malformed entries
+PASS: Current Fire service route recognizes opened Fire seal and regional requirements
+PASS: Current Fire service route fails closed when seal is removed
+GAMEPLAY STABILIZATION: 0 failure(s)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2641)
+ERROR: 2 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

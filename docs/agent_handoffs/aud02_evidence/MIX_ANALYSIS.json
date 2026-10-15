@@ -1,0 +1,84 @@
+{
+  "audio_driver": "WASAPI",
+  "bank": "aud02",
+  "cue_counts": {
+    "contact": 20,
+    "dash": 21,
+    "impact_electric": 1,
+    "impact_fire": 7,
+    "impact_wind": 1,
+    "kunai_throw": 1,
+    "parry": 21,
+    "room_passage": 1,
+    "swing": 21,
+    "tether_attach": 1,
+    "tether_fire": 1,
+    "tether_release": 1
+  },
+  "device_latency": "NOT MEASURED",
+  "dispatch_five_cues_p95_us": 114,
+  "display": "headless",
+  "dropped": 15,
+  "high_water": 12,
+  "manual_listening": "NOT PERFORMED",
+  "recording_result": 0,
+  "sustained_60fps": "NOT CERTIFIED",
+  "timeline": [
+    {
+      "cue": "dash",
+      "seconds": 2e-06
+    },
+    {
+      "cue": "swing",
+      "seconds": 0.259022
+    },
+    {
+      "cue": "contact",
+      "seconds": 0.748872
+    },
+    {
+      "cue": "parry",
+      "seconds": 1.231941
+    },
+    {
+      "cue": "kunai_throw",
+      "seconds": 1.714895
+    },
+    {
+      "cue": "tether_fire",
+      "seconds": 2.197945
+    },
+    {
+      "cue": "tether_attach",
+      "seconds": 2.680916
+    },
+    {
+      "cue": "tether_release",
+      "seconds": 3.163876
+    },
+    {
+      "cue": "impact_wind",
+      "seconds": 3.646884
+    },
+    {
+      "cue": "impact_fire",
+      "seconds": 4.132804
+    },
+    {
+      "cue": "impact_electric",
+      "seconds": 4.615218
+    },
+    {
+      "cue": "room_passage",
+      "seconds": 5.098232
+    }
+  ],
+  "signal_analysis": {
+    "seconds": 8.245333333333333,
+    "rate": 48000,
+    "channels": 2,
+    "peak_dbfs": -14.21,
+    "rms_dbfs": -33.1,
+    "full_scale_samples": 0
+  }
+}

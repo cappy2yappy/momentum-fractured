@@ -1,0 +1,39 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Approved eight-room foundation remains present
+PASS: Original starting progression is intact
+PASS: Controller matches reviewed sprite integration contract
+PASS: Room 0 original collision geometry is unchanged
+PASS: Room 0 loads original geometry
+PASS: Room 0 registers MetSys exploration
+PASS: Room 1 original collision geometry is unchanged
+PASS: Room 1 loads original geometry
+PASS: Room 1 registers MetSys exploration
+PASS: Room 2 original collision geometry is unchanged
+PASS: Room 2 loads original geometry
+PASS: Room 2 registers MetSys exploration
+PASS: Room 3 original collision geometry is unchanged
+PASS: Room 3 loads original geometry
+PASS: Room 3 registers MetSys exploration
+PASS: Room 4 original collision geometry is unchanged
+PASS: Room 4 loads original geometry
+PASS: Room 4 registers MetSys exploration
+PASS: Room 5 original collision geometry is unchanged
+PASS: Room 5 loads original geometry
+PASS: Room 5 registers MetSys exploration
+PASS: Room 6 original collision geometry is unchanged
+PASS: Room 6 loads original geometry
+PASS: Room 6 registers MetSys exploration
+PASS: Room 7 original collision geometry is unchanged
+PASS: Room 7 loads original geometry
+PASS: Room 7 registers MetSys exploration
+METRIC: walk_velocity=400.0
+PASS: Approved walk speed reaches 400
+METRIC: held_jump_height=232.564331054688
+PASS: Approved held jump height remains in its measured band
+PASS: MetSys atlas pauses gameplay
+PASS: Pause replaces atlas
+PASS: Closing pause resumes gameplay
+APPROVED BASELINE: 0 failure(s)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2570)

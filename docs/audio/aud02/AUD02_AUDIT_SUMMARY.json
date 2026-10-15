@@ -1,0 +1,38 @@
+{
+  "zip_sha256": "46c15f62b9b6a8a4aded5a61ae0902570e7a43ff575313c63ef99f4622ce2e95",
+  "expected_zip_sha256": "46c15f62b9b6a8a4aded5a61ae0902570e7a43ff575313c63ef99f4622ce2e95",
+  "pack_count": 496,
+  "extra_count": 16,
+  "decoded_count": 512,
+  "auditioned_count": 0,
+  "confirmed_suitable_count": 0,
+  "provisional_candidates": 28,
+  "total_seconds": 1970.23,
+  "exact_pcm_duplicates": 2,
+  "possible_normalized_duplicates": 2,
+  "files_with_full_scale_samples": 235,
+  "formats": [
+    [
+      48000,
+      1,
+      "PCM_16"
+    ],
+    [
+      48000,
+      2,
+      "PCM_16"
+    ],
+    [
+      96000,
+      1,
+      "PCM_24"
+    ],
+    [
+      96000,
+      2,
+      "PCM_24"
+    ]
+  ],
+  "listening_limitation": "No perceptual audio input available to this agent; do not represent measurements as listening.",
+  "zip_safety": "All entries validated before extracting: path containment, collisions, symlinks, extension, size limits, encryption, CRC."
+}

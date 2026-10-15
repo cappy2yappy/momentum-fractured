@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "platform": "Windows x86_64",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "finalized_from_retained_logs": true,
+  "rows": [
+    {
+      "suite": "import",
+      "returncode": 0,
+      "passes": 0,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "profile_isolation",
+      "returncode": 0,
+      "passes": 0,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "approved_baseline",
+      "returncode": 0,
+      "passes": 32,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "approved_combat_swing",
+      "returncode": 0,
+      "passes": 7,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "annex_expansion",
+      "returncode": 0,
+      "passes": 34,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "annex_traversal",
+      "returncode": 0,
+      "passes": 6,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "save_compatibility",
+      "returncode": 0,
+      "passes": 11,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "skyworks_progression",
+      "returncode": 0,
+      "passes": 33,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "storm_keeper",
+      "returncode": 0,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "movement_momentum",
+      "returncode": 0,
+      "passes": 53,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "sprite_integration",
+      "returncode": 0,
+      "passes": 43,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "world_expansion",
+      "returncode": 0,
+      "passes": 193,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "expansion_gates_save",
+      "returncode": 0,
+      "passes": 17,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "expansion_traversal",
+      "returncode": 0,
+      "passes": 125,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "gameplay_stabilization",
+      "returncode": 0,
+      "passes": 16,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "traversal_transitions",
+      "returncode": 0,
+      "passes": 8,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "world_cohesion_traversal",
+      "returncode": 0,
+      "passes": 56,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "integration_candidate",
+      "returncode": 0,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "integration_descent",
+      "returncode": 0,
+      "passes": 26,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "profile_prepare",
+      "returncode": 0,
+      "passes": 2,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "profile_reload",
+      "returncode": 0,
+      "passes": 5,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "audio_foundation_aud01",
+      "returncode": 0,
+      "passes": 74,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "audio_curation_aud01",
+      "returncode": 0,
+      "passes": 56,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "audio_foundation_aud02",
+      "returncode": 0,
+      "passes": 74,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    },
+    {
+      "suite": "audio_curation_aud02",
+      "returncode": 0,
+      "passes": 56,
+      "failures": 0,
+      "script_errors": 0,
+      "seconds": null
+    }
+  ],
+  "assertions": 951,
+  "failures": 0,
+  "preservation": {
+    "base": "da121f19f85b49c3bb5e1c7910472c448c673935",
+    "checked_count": 68,
+    "changed": [],
+    "excluded": "Only audio_director.gd and import metadata; new AUD02 files are additions."
+  },
+  "baseline_verifier": "PASS",
+  "profile_isolation": "Confirmed OS.get_user_data_dir points inside build/aud02/profiles before persistence fixtures",
+  "audible_listening": "NOT PERFORMED",
+  "macos_execution": "NOT AVAILABLE",
+  "latency": "NOT MEASURED",
+  "sustained_60fps": "NOT CERTIFIED"
+}
