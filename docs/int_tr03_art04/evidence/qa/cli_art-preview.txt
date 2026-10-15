@@ -1,0 +1,9 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: CLI comparison resolves to art-preview
+PASS: CLI art activation follows explicit preview/reduced flags
+PASS: Explicit comparison save path containing spaces retained
+PASS: Launcher defaults preserve ordinary movement
+ART04 PROFILE OPTIONS: 4 assertions, 0 failure(s)
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)

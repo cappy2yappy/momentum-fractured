@@ -1,0 +1,15 @@
+{
+  "source_sha": "e91e49caeada21baad5ab25e5080e67ab16a4094",
+  "art_sha": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "platform": "windows",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "resource_count": 567,
+  "excluded_resources": [],
+  "launchers": 45,
+  "binary_sha256": "a865d3aee66252ee4d94b4337c2b8e5e44ee89c6308c9676c396d3569d3cc328",
+  "binary_bytes": 120875568,
+  "zip": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/packages/Kaze-INT-TR03-ART04-Windows.zip",
+  "zip_bytes": 52121874,
+  "zip_sha256": "5d751ee05fa92c5247e7fb668a64b5a3044f584b6b8b4bb80eb854f7d4912f48",
+  "zip_crc": "PASS"
+}

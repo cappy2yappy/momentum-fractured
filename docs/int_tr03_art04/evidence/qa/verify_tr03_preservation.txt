@@ -1,0 +1,33 @@
+PASS: scripts/player.gd matches TR-02 byte for byte
+PASS: scripts/mixed_transitions.gd matches TR-02 byte for byte
+PASS: scripts/route_extension.gd matches TR-02 byte for byte
+PASS: scripts/skyworks_region.gd matches TR-02 byte for byte
+PASS: scripts/hud.gd matches TR-02 byte for byte
+PASS: scripts/guard.gd matches TR-02 byte for byte
+PASS: scripts/storm_keeper.gd matches TR-02 byte for byte
+PASS: project.godot matches TR-02 byte for byte
+PASS: export_presets.cfg matches TR-02 byte for byte
+PASS: world/MapData.txt matches TR-02 byte for byte
+PASS: assets/kaze/cleaned/kaze_combat_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_run_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_idle_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_traversal_strip.png preserved
+PASS: assets/web/kaze_combat_strip.png preserved
+PASS: assets/web/kaze_run_strip.png preserved
+PASS: assets/web/kaze_idle_strip.png preserved
+PASS: assets/web/kaze_traversal_strip.png preserved
+PASS: world_expansion preserves all TR-02 code except scoped decoration suppression
+PASS: configure_input unchanged
+PASS: can_enter unchanged
+PASS: world_edges unchanged
+PASS: room_size unchanged
+PASS: left_exit_position unchanged
+PASS: right_exit_position unchanged
+PASS: save_progress unchanged
+PASS: load_progress unchanged
+PASS: interact unchanged
+PASS: recover_from_fall unchanged
+PASS: transition = 0.65 retained
+PASS: if transition < 0.32 and pending_room >= 0: retained
+PASS: player.position = destination + Vector2(110 if moving_east else -140, -2) if pending_arrival == Vector2.INF else pending_arrival retained
+{"base": "e9a2d1ab0537f3f903c543b080451b3556961179", "checks": 32, "failures": 0}

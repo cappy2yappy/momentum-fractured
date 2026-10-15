@@ -4,6 +4,7 @@ p=argparse.ArgumentParser();p.add_argument('--godot',required=True);args=p.parse
 root=pathlib.Path(__file__).resolve().parents[1];out=root/'build/int-tr03/qa';out.mkdir(parents=True,exist_ok=True)
 suites=['approved_baseline','approved_combat_swing','annex_expansion','annex_traversal','save_compatibility','skyworks_progression','storm_keeper','movement_momentum','sprite_integration','world_expansion','expansion_gates_save','expansion_traversal','gameplay_stabilization','traversal_transitions','world_cohesion_traversal','integration_candidate','integration_descent','room_transition_prototype','mixed_transitions','embodied_transitions','art04_transitions']
 rows=[]
+restart_profile='restart-'+str(time.time_ns())
 def run(name,cmd,profile=None,diagnostic=False):
     env=os.environ.copy();profile=out/('profile-'+(profile or name));profile.mkdir(exist_ok=True)
     env['HOME']=str(profile);env['XDG_DATA_HOME']=str(profile/'xdg');env['APPDATA']=str(profile)
@@ -24,6 +25,6 @@ run('verify_tr03_preservation',[sys.executable,'tools/verify_tr03_preservation.p
 run('verify_art04_assets',[sys.executable,'tools/verify_art04_integration.py'])
 for name in suites:
     run(name,base+(['--fixed-fps','60'] if name=='integration_descent' else [])+['--script','res://tests/'+name+'.gd','--','--test'])
-for stage in ['prepare','reload']:run('profile_'+stage,base+['--script','res://tests/integration_profile.gd','--','--'+stage],profile='restart')
+for stage in ['prepare','reload']:run('profile_'+stage,base+['--script','res://tests/integration_profile.gd','--','--'+stage],profile=restart_profile)
 run('endpoint_audit',base+['--script','res://tests/audit_embodied_endpoints.gd','--','--test'])
 raise SystemExit(any(r['exit'] or (not r['diagnostic_only'] and (r['failures'] or r['script_errors'])) for r in rows))

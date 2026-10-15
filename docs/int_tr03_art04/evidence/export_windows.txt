@@ -1,0 +1,1197 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+WARNING: Missing .uid file for path "res://scripts/art04_presentation.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://scripts/grapple_anchor.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://scripts/mixed_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://scripts/momentum_profile.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://scripts/room_presentation.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/fixtures/player_alpha052.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/art04_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/audit_embodied_endpoints.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/capture_dev06.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/capture_embodied_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/capture_mixed_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/capture_room_transition_prototype.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/capture_structural_pilots.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/embodied_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/expansion_gates_save.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/expansion_traversal.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/gameplay_stabilization.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/integration_candidate.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/integration_descent.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/integration_profile.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/measure_sprite_size.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/mixed_profile.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/mixed_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/movement_momentum.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/room_transition_prototype.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/traversal_transitions.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/world_cohesion_traversal.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+WARNING: Missing .uid file for path "res://tests/world_expansion.gd". The file was re-created from cache.
+     at: _process_file_system (editor/file_system/editor_file_system.cpp:1363)
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (3 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (186 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | door_combined.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | r14_door_back.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | r14_door_front.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | r14_door_interior.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | r14_roof_support.png[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | r15_masonry_support.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | stair_flight_right.png[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | stair_front_lip.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | enter_depth_key.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | key_pose_atlas.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | stair_down_key.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | stair_up_key.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | turn_depth_key.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_after.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_before.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_tick08.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_tick13.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_tick21.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | art-preview_13-14_tick39.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_after.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_before.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_tick08.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_tick13.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_tick21.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | art-preview_14-13_tick39.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_after.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_before.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_tick08.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_tick13.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_tick21.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | art-preview_14-17_tick39.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_after.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_before.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_tick08.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_tick13.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_tick21.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | art-preview_17-14_tick39.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | original_13-14_after.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | original_13-14_before.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | original_13-14_tick08.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | original_13-14_tick13.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | original_13-14_tick21.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | original_13-14_tick39.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | original_14-13_after.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | original_14-13_before.png[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | original_14-13_tick08.png[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | original_14-13_tick13.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | original_14-13_tick21.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | original_14-13_tick39.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | original_14-17_after.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | original_14-17_before.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | original_14-17_tick08.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | original_14-17_tick13.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | original_14-17_tick21.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | original_14-17_tick39.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | original_17-14_after.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | original_17-14_before.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | original_17-14_tick08.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | original_17-14_tick13.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | original_17-14_tick21.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | original_17-14_tick39.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | plain_13-14_after.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | plain_13-14_before.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | plain_13-14_tick08.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | plain_13-14_tick13.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | plain_13-14_tick21.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | plain_13-14_tick39.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | plain_14-13_after.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | plain_14-13_before.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | plain_14-13_tick08.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | plain_14-13_tick13.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | plain_14-13_tick21.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | plain_14-13_tick39.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | plain_14-17_after.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | plain_14-17_before.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | plain_14-17_tick08.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | plain_14-17_tick13.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | plain_14-17_tick21.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | plain_14-17_tick39.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | plain_17-14_after.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | plain_17-14_before.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | plain_17-14_tick08.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | plain_17-14_tick13.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | plain_17-14_tick21.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | plain_17-14_tick39.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | reduced_13-14_after.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | reduced_13-14_before.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | reduced_13-14_tick08.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | reduced_13-14_tick13.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | reduced_13-14_tick21.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | reduced_13-14_tick39.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | reduced_14-13_after.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | reduced_14-13_before.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | reduced_14-13_tick08.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | reduced_14-13_tick13.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | reduced_14-13_tick21.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | reduced_14-13_tick39.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | reduced_14-17_after.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | reduced_14-17_before.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | reduced_14-17_tick08.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | reduced_14-17_tick13.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | reduced_14-17_tick21.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | reduced_14-17_tick39.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | reduced_17-14_after.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | reduced_17-14_before.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | reduced_17-14_tick08.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | reduced_17-14_tick13.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | reduced_17-14_tick21.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | reduced_17-14_tick39.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | refined_13-14_after.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | refined_13-14_before.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | refined_13-14_tick08.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | refined_13-14_tick13.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | refined_13-14_tick21.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | refined_13-14_tick39.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | refined_14-13_after.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | refined_14-13_before.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | refined_14-13_tick08.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | refined_14-13_tick13.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | refined_14-13_tick21.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | refined_14-13_tick39.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | refined_14-17_after.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | refined_14-17_before.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | refined_14-17_tick08.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | refined_14-17_tick13.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | refined_14-17_tick21.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | refined_14-17_tick39.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | refined_17-14_after.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | refined_17-14_before.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | refined_17-14_tick08.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | refined_17-14_tick13.png[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | refined_17-14_tick21.png[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | refined_17-14_tick39.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | structure_R14_art-preview.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | structure_R14_original.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | structure_R14_refined.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | structure_R15_art-preview.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | structure_R15_original.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | structure_R15_refined.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | exits_0.jpg[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | exits_1.jpg[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | exits_2.jpg[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | after_r0.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | after_r8.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | after_r17.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | after_r19.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | before_r0.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | before_r8.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | before_r17.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | before_r19.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | comparison_r0.jpg[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | comparison_r8.jpg[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | comparison_r17.jpg[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | comparison_r19.jpg[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | after_r14_exit0.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | after_r14_exit1.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | after_r14_exit2.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | after_r15_exit0.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | after_r15_exit1.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | before_r14_exit0.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | before_r14_exit1.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | before_r14_exit2.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | before_r15_exit0.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | before_r15_exit1.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | comparison_r14.jpg[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | comparison_r15.jpg[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | effect_r14.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | effect_r14_reduced.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | effect_r15.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | effect_r15_reduced.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | locked_r14.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | locked_r15.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | effect_comparison.jpg[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | packaged_special.jpg[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | packaged_stair.jpg[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | packaged_walk.jpg[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | refined_depth_staging.jpg[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | refined_stair_up_staging.jpg[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | structure_R14_original.jpg[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | structure_R14_refined.jpg[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | structure_R15_original.jpg[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | structure_R15_refined.jpg[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | room_14_comparison.jpg[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | room_15_comparison.jpg[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | room_17_comparison.jpg[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | room_19_comparison.jpg[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (173 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | refined_14-17_before.png[39m[0m
+[   0% ] [90m[1mreimport[22m | refined_14-17_tick08.png[39m[0m
+[   1% ] [90m[1mreimport[22m | refined_14-17_tick13.png[39m[0m
+[   1% ] [90m[1mreimport[22m | refined_14-17_tick21.png[39m[0m
+[   2% ] [90m[1mreimport[22m | refined_14-17_tick39.png[39m[0m
+[   2% ] [90m[1mreimport[22m | refined_17-14_after.png[39m[0m
+[   3% ] [90m[1mreimport[22m | refined_17-14_before.png[39m[0m
+[   4% ] [90m[1mreimport[22m | refined_17-14_tick08.png[39m[0m
+[   4% ] [90m[1mreimport[22m | refined_17-14_tick13.png[39m[0m
+[   5% ] [90m[1mreimport[22m | refined_17-14_tick21.png[39m[0m
+[   5% ] [90m[1mreimport[22m | refined_17-14_tick39.png[39m[0m
+[   6% ] [90m[1mreimport[22m | structure_R14_art-preview.png[39m[0m
+[   6% ] [90m[1mreimport[22m | structure_R14_original.png[39m[0m
+[   7% ] [90m[1mreimport[22m | structure_R14_refined.png[39m[0m
+[   8% ] [90m[1mreimport[22m | structure_R15_art-preview.png[39m[0m
+[   8% ] [90m[1mreimport[22m | structure_R15_original.png[39m[0m
+[   9% ] [90m[1mreimport[22m | structure_R15_refined.png[39m[0m
+[   9% ] [90m[1mreimport[22m | exits_0.jpg[39m[0m
+[  10% ] [90m[1mreimport[22m | exits_1.jpg[39m[0m
+[  10% ] [90m[1mreimport[22m | exits_2.jpg[39m[0m
+[  11% ] [90m[1mreimport[22m | after_r0.png[39m[0m
+[  12% ] [90m[1mreimport[22m | reduced_14-17_tick13.png[39m[0m
+[  12% ] [90m[1mreimport[22m | reduced_14-17_tick21.png[39m[0m
+[  13% ] [90m[1mreimport[22m | reduced_14-17_tick39.png[39m[0m
+[  13% ] [90m[1mreimport[22m | reduced_17-14_after.png[39m[0m
+[  14% ] [90m[1mreimport[22m | reduced_17-14_before.png[39m[0m
+[  14% ] [90m[1mreimport[22m | reduced_17-14_tick08.png[39m[0m
+[  15% ] [90m[1mreimport[22m | reduced_17-14_tick13.png[39m[0m
+[  16% ] [90m[1mreimport[22m | reduced_17-14_tick21.png[39m[0m
+[  16% ] [90m[1mreimport[22m | reduced_17-14_tick39.png[39m[0m
+[  17% ] [90m[1mreimport[22m | refined_13-14_after.png[39m[0m
+[  17% ] [90m[1mreimport[22m | refined_13-14_before.png[39m[0m
+[  18% ] [90m[1mreimport[22m | refined_13-14_tick08.png[39m[0m
+[  18% ] [90m[1mreimport[22m | refined_13-14_tick13.png[39m[0m
+[  19% ] [90m[1mreimport[22m | refined_13-14_tick21.png[39m[0m
+[  20% ] [90m[1mreimport[22m | refined_13-14_tick39.png[39m[0m
+[  20% ] [90m[1mreimport[22m | refined_14-13_after.png[39m[0m
+[  21% ] [90m[1mreimport[22m | refined_14-13_before.png[39m[0m
+[  21% ] [90m[1mreimport[22m | refined_14-13_tick08.png[39m[0m
+[  22% ] [90m[1mreimport[22m | refined_14-13_tick13.png[39m[0m
+[  22% ] [90m[1mreimport[22m | refined_14-13_tick21.png[39m[0m
+[  23% ] [90m[1mreimport[22m | refined_14-13_tick39.png[39m[0m
+[  24% ] [90m[1mreimport[22m | refined_14-17_after.png[39m[0m
+[  24% ] [90m[1mreimport[22m | comparison_r15.jpg[39m[0m
+[  25% ] [90m[1mreimport[22m | effect_r14.png[39m[0m
+[  25% ] [90m[1mreimport[22m | effect_r14_reduced.png[39m[0m
+[  26% ] [90m[1mreimport[22m | effect_r15.png[39m[0m
+[  27% ] [90m[1mreimport[22m | effect_r15_reduced.png[39m[0m
+[  27% ] [90m[1mreimport[22m | locked_r14.png[39m[0m
+[  28% ] [90m[1mreimport[22m | locked_r15.png[39m[0m
+[  28% ] [90m[1mreimport[22m | effect_comparison.jpg[39m[0m
+[  29% ] [90m[1mreimport[22m | packaged_special.jpg[39m[0m
+[  29% ] [90m[1mreimport[22m | packaged_stair.jpg[39m[0m
+[  30% ] [90m[1mreimport[22m | packaged_walk.jpg[39m[0m
+[  31% ] [90m[1mreimport[22m | refined_depth_staging.jpg[39m[0m
+[  31% ] [90m[1mreimport[22m | refined_stair_up_staging.jpg[39m[0m
+[  32% ] [90m[1mreimport[22m | structure_R14_original.jpg[39m[0m
+[  32% ] [90m[1mreimport[22m | structure_R14_refined.jpg[39m[0m
+[  33% ] [90m[1mreimport[22m | structure_R15_original.jpg[39m[0m
+[  33% ] [90m[1mreimport[22m | structure_R15_refined.jpg[39m[0m
+[  34% ] [90m[1mreimport[22m | room_14_comparison.jpg[39m[0m
+[  35% ] [90m[1mreimport[22m | room_15_comparison.jpg[39m[0m
+[  35% ] [90m[1mreimport[22m | room_17_comparison.jpg[39m[0m
+[  36% ] [90m[1mreimport[22m | room_19_comparison.jpg[39m[0m
+[  36% ] [90m[1mreimport[22m | after_r8.png[39m[0m
+[  37% ] [90m[1mreimport[22m | after_r17.png[39m[0m
+[  37% ] [90m[1mreimport[22m | after_r19.png[39m[0m
+[  38% ] [90m[1mreimport[22m | before_r0.png[39m[0m
+[  39% ] [90m[1mreimport[22m | before_r8.png[39m[0m
+[  39% ] [90m[1mreimport[22m | before_r17.png[39m[0m
+[  40% ] [90m[1mreimport[22m | before_r19.png[39m[0m
+[  40% ] [90m[1mreimport[22m | comparison_r0.jpg[39m[0m
+[  41% ] [90m[1mreimport[22m | comparison_r8.jpg[39m[0m
+[  41% ] [90m[1mreimport[22m | comparison_r17.jpg[39m[0m
+[  42% ] [90m[1mreimport[22m | comparison_r19.jpg[39m[0m
+[  43% ] [90m[1mreimport[22m | after_r14_exit0.png[39m[0m
+[  43% ] [90m[1mreimport[22m | after_r14_exit1.png[39m[0m
+[  44% ] [90m[1mreimport[22m | after_r14_exit2.png[39m[0m
+[  44% ] [90m[1mreimport[22m | after_r15_exit0.png[39m[0m
+[  45% ] [90m[1mreimport[22m | after_r15_exit1.png[39m[0m
+[  45% ] [90m[1mreimport[22m | before_r14_exit0.png[39m[0m
+[  46% ] [90m[1mreimport[22m | before_r14_exit1.png[39m[0m
+[  47% ] [90m[1mreimport[22m | before_r14_exit2.png[39m[0m
+[  47% ] [90m[1mreimport[22m | before_r15_exit0.png[39m[0m
+[  48% ] [90m[1mreimport[22m | before_r15_exit1.png[39m[0m
+[  48% ] [90m[1mreimport[22m | comparison_r14.jpg[39m[0m
+[  49% ] [90m[1mreimport[22m | art-preview_17-14_tick21.png[39m[0m
+[  50% ] [90m[1mreimport[22m | art-preview_17-14_tick39.png[39m[0m
+[  50% ] [90m[1mreimport[22m | original_13-14_after.png[39m[0m
+[  51% ] [90m[1mreimport[22m | original_13-14_before.png[39m[0m
+[  51% ] [90m[1mreimport[22m | original_13-14_tick08.png[39m[0m
+[  52% ] [90m[1mreimport[22m | original_13-14_tick13.png[39m[0m
+[  52% ] [90m[1mreimport[22m | original_13-14_tick21.png[39m[0m
+[  53% ] [90m[1mreimport[22m | original_13-14_tick39.png[39m[0m
+[  54% ] [90m[1mreimport[22m | original_14-13_after.png[39m[0m
+[  54% ] [90m[1mreimport[22m | original_14-13_before.png[39m[0m
+[  55% ] [90m[1mreimport[22m | original_14-13_tick08.png[39m[0m
+[  55% ] [90m[1mreimport[22m | original_14-13_tick13.png[39m[0m
+[  56% ] [90m[1mreimport[22m | original_14-13_tick21.png[39m[0m
+[  56% ] [90m[1mreimport[22m | original_14-13_tick39.png[39m[0m
+[  57% ] [90m[1mreimport[22m | original_14-17_after.png[39m[0m
+[  58% ] [90m[1mreimport[22m | original_14-17_before.png[39m[0m
+[  58% ] [90m[1mreimport[22m | original_14-17_tick08.png[39m[0m
+[  59% ] [90m[1mreimport[22m | original_14-17_tick13.png[39m[0m
+[  59% ] [90m[1mreimport[22m | original_14-17_tick21.png[39m[0m
+[  60% ] [90m[1mreimport[22m | original_14-17_tick39.png[39m[0m
+[  60% ] [90m[1mreimport[22m | original_17-14_after.png[39m[0m
+[  61% ] [90m[1mreimport[22m | art-preview_13-14_after.png[39m[0m
+[  62% ] [90m[1mreimport[22m | art-preview_13-14_before.png[39m[0m
+[  62% ] [90m[1mreimport[22m | art-preview_13-14_tick08.png[39m[0m
+[  63% ] [90m[1mreimport[22m | art-preview_13-14_tick13.png[39m[0m
+[  63% ] [90m[1mreimport[22m | art-preview_13-14_tick21.png[39m[0m
+[  64% ] [90m[1mreimport[22m | art-preview_13-14_tick39.png[39m[0m
+[  64% ] [90m[1mreimport[22m | art-preview_14-13_after.png[39m[0m
+[  65% ] [90m[1mreimport[22m | art-preview_14-13_before.png[39m[0m
+[  66% ] [90m[1mreimport[22m | art-preview_14-13_tick08.png[39m[0m
+[  66% ] [90m[1mreimport[22m | art-preview_14-13_tick13.png[39m[0m
+[  67% ] [90m[1mreimport[22m | art-preview_14-13_tick21.png[39m[0m
+[  67% ] [90m[1mreimport[22m | art-preview_14-13_tick39.png[39m[0m
+[  68% ] [90m[1mreimport[22m | art-preview_14-17_after.png[39m[0m
+[  68% ] [90m[1mreimport[22m | art-preview_14-17_before.png[39m[0m
+[  69% ] [90m[1mreimport[22m | art-preview_14-17_tick08.png[39m[0m
+[  70% ] [90m[1mreimport[22m | art-preview_14-17_tick13.png[39m[0m
+[  70% ] [90m[1mreimport[22m | art-preview_14-17_tick21.png[39m[0m
+[  71% ] [90m[1mreimport[22m | art-preview_14-17_tick39.png[39m[0m
+[  71% ] [90m[1mreimport[22m | art-preview_17-14_after.png[39m[0m
+[  72% ] [90m[1mreimport[22m | art-preview_17-14_before.png[39m[0m
+[  72% ] [90m[1mreimport[22m | art-preview_17-14_tick08.png[39m[0m
+[  73% ] [90m[1mreimport[22m | art-preview_17-14_tick13.png[39m[0m
+[  74% ] [90m[1mreimport[22m | plain_14-17_tick39.png[39m[0m
+[  74% ] [90m[1mreimport[22m | plain_17-14_after.png[39m[0m
+[  75% ] [90m[1mreimport[22m | plain_17-14_before.png[39m[0m
+[  75% ] [90m[1mreimport[22m | plain_17-14_tick08.png[39m[0m
+[  76% ] [90m[1mreimport[22m | plain_17-14_tick13.png[39m[0m
+[  77% ] [90m[1mreimport[22m | plain_17-14_tick21.png[39m[0m
+[  77% ] [90m[1mreimport[22m | plain_17-14_tick39.png[39m[0m
+[  78% ] [90m[1mreimport[22m | reduced_13-14_after.png[39m[0m
+[  78% ] [90m[1mreimport[22m | reduced_13-14_before.png[39m[0m
+[  79% ] [90m[1mreimport[22m | reduced_13-14_tick08.png[39m[0m
+[  79% ] [90m[1mreimport[22m | reduced_13-14_tick13.png[39m[0m
+[  80% ] [90m[1mreimport[22m | reduced_13-14_tick21.png[39m[0m
+[  81% ] [90m[1mreimport[22m | reduced_13-14_tick39.png[39m[0m
+[  81% ] [90m[1mreimport[22m | reduced_14-13_after.png[39m[0m
+[  82% ] [90m[1mreimport[22m | reduced_14-13_before.png[39m[0m
+[  82% ] [90m[1mreimport[22m | reduced_14-13_tick08.png[39m[0m
+[  83% ] [90m[1mreimport[22m | reduced_14-13_tick13.png[39m[0m
+[  83% ] [90m[1mreimport[22m | reduced_14-13_tick21.png[39m[0m
+[  84% ] [90m[1mreimport[22m | reduced_14-13_tick39.png[39m[0m
+[  85% ] [90m[1mreimport[22m | reduced_14-17_after.png[39m[0m
+[  85% ] [90m[1mreimport[22m | reduced_14-17_before.png[39m[0m
+[  86% ] [90m[1mreimport[22m | reduced_14-17_tick08.png[39m[0m
+[  86% ] [90m[1mreimport[22m | original_17-14_before.png[39m[0m
+[  87% ] [90m[1mreimport[22m | original_17-14_tick08.png[39m[0m
+[  87% ] [90m[1mreimport[22m | original_17-14_tick13.png[39m[0m
+[  88% ] [90m[1mreimport[22m | original_17-14_tick21.png[39m[0m
+[  89% ] [90m[1mreimport[22m | original_17-14_tick39.png[39m[0m
+[  89% ] [90m[1mreimport[22m | plain_13-14_after.png[39m[0m
+[  90% ] [90m[1mreimport[22m | plain_13-14_before.png[39m[0m
+[  90% ] [90m[1mreimport[22m | plain_13-14_tick08.png[39m[0m
+[  91% ] [90m[1mreimport[22m | plain_13-14_tick13.png[39m[0m
+[  91% ] [90m[1mreimport[22m | plain_13-14_tick21.png[39m[0m
+[  92% ] [90m[1mreimport[22m | plain_13-14_tick39.png[39m[0m
+[  93% ] [90m[1mreimport[22m | plain_14-13_after.png[39m[0m
+[  93% ] [90m[1mreimport[22m | plain_14-13_before.png[39m[0m
+[  94% ] [90m[1mreimport[22m | plain_14-13_tick08.png[39m[0m
+[  94% ] [90m[1mreimport[22m | plain_14-13_tick13.png[39m[0m
+[  95% ] [90m[1mreimport[22m | plain_14-13_tick21.png[39m[0m
+[  95% ] [90m[1mreimport[22m | plain_14-13_tick39.png[39m[0m
+[  96% ] [90m[1mreimport[22m | plain_14-17_after.png[39m[0m
+[  97% ] [90m[1mreimport[22m | plain_14-17_before.png[39m[0m
+[  97% ] [90m[1mreimport[22m | plain_14-17_tick08.png[39m[0m
+[  98% ] [90m[1mreimport[22m | plain_14-17_tick13.png[39m[0m
+[  98% ] [90m[1mreimport[22m | plain_14-17_tick21.png[39m[0m
+[  99% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (173 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://world/MapData.txt[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/BorderPaintEditor.gdc[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/CellPaintEditor.gdc[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/MapEditor.gdc[39m[0m
+[   2% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-120c59419f3a224162818ade4da38902-MapEditor.scn[39m[0m
+[   2% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeBorderColor.gdc[39m[0m
+[   2% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeBorderType.gdc[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellColor.gdc[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellGroup.gdc[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellSymbol.gdc[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCustomElements.gdc[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeRoomLayout.gdc[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeSceneAssign.gdc[39m[0m
+[   5% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/SubEditor.gdc[39m[0m
+[   5% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Manage/Manage.gdc[39m[0m
+[   5% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-0cfaaebf2eacd6f4ea28a7a890f0cda6-Manage.scn[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Manage/Validation.gdc[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleElement.gdc[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3d0a473394e06910b7290a6387172bf7-CollectibleElement.scn[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleFinder.gdc[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleSettings.gdc[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/MapViewer.gdc[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-e0a2d838c8ecd08c46cdc1f1aecb52b3-MapViewer.scn[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-142feddb7bcb26e578d9bcf0d769ceb9-DatabaseTheme.res[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/EditorIconButton.gdc[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/EditorMapView.gdc[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-e436efe804895314dc10d89274a09219-LayerSelector.scn[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Main.gdc[39m[0m
+[  10% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-60f5d223823fdfe31d2a4a03bfc17442-Main.scn[39m[0m
+[  10% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/EditorExtension/MetSysEditorExtension.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-a811b289eabef152c9a2291ce4386002-RoomInstance.scn[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-1611d4e5a3e5f401c7ec5ee5e917fb93-RoomPreview.scn[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-4ef6625d6cbab31419c201ca0de07239-Singleton.scn[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/CellView.gdc[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/CustomElementManager.gdc[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapBuilder.gdc[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapData.gdc[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapTheme.gdc[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapView.gdc[39m[0m
+[  14% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MetroidvaniaSystem.gdc[39m[0m
+[  14% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/PlayerLocationInstance.gdc[39m[0m
+[  14% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/RoomInstance.gdc[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/SaveData.gdc[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/Settings.gdc[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Nodes/Minimap.gdc[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-d77e8e897d804b434c23cef4e2b525c4-Minimap.scn[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/PassageAutomapper.gdc[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/RoomTransitions.gdc[39m[0m
+[  17% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/ScrollingRoomTransitions.gdc[39m[0m
+[  17% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/MetSysGame.gdc[39m[0m
+[  17% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/MetSysModule.gdc[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/SaveManager.gdc[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-633225ee718470c51dbf8f1eadaceebc.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/BorderPassage.png.import[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-b3eebcdcaea75a2afb38071c89ec8187.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/BorderWall.png.import[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Corner.png-10c3b8f9b1a8940081842cbc25b22edb.ctex[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/Corner.png.import[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-5bb116814673a6a1b60e3356eb77b54c.ctex[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/PlayerLocation.png.import[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-9371f715a1fad4be2c0a56affe3a2d67-PlayerLocation.scn[39m[0m
+[  20% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-3fab033b1c51aa270231733c4bbbe3cb.ctex[39m[0m
+[  20% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/RoomFill.png.import[39m[0m
+[  20% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-0f7d4ab2b54be8774191ab26f9511327-Theme.res[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-9267f5e7854f25956faac66e32244104.ctex[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/BorderPassage.png.import[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassageHorizontal.png-c5365caa5938f8ef2ff19b0f85764346.ctex[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/BorderPassageHorizontal.png.import[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-26fbbf8b28dea53d162e4509b0078129.ctex[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/BorderWall.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWallHorizontal.png-8a03585c3fec3e27ec36d9209e60ddb0.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/BorderWallHorizontal.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Corner.png-3b270bb0bc68b65f38a41512dcd55729.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/Corner.png.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-23939cf1e6de1a78232f9845375f45f9.ctex[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/PlayerLocation.png.import[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-46440d03c7d15560541bfc0602741197-PlayerLocation.scn[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-24f0edf089b5b86a6e70f860d60f551c.ctex[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/RoomFill.png.import[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-5b24fd44be4027938b18d3f95d7bfddb-Theme.res[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderH.png-cdcd902df1d5d3ae8126efb58e8c098b.ctex[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/BorderH.png.import[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderV.png-84158604b66d8a8ce5b5f1760d05736d.ctex[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/BorderV.png.import[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Center.png-6ec9419530f30af9acf849c61d79a70e.ctex[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/Center.png.import[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Corner.png-46ef3af963e06123dce07b712143db25.ctex[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/Corner.png.import[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-3140005d89c8957f166c15732cebae4c.ctex[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/PlayerLocation.png.import[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-e9cace4100850ffa48680f9754f6c68f-PlayerLocation.scn[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-fdf704d4608957466cd9c1c2b44d4074-Theme.res[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Collected.png-70d99c06085090377e196418cee66c19.ctex[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Collected.png.import[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Collectible.png-9af2468e6f0024e693f1577ca821a870.ctex[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Collectible.png.import[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Portal.png-bff52835ac3177f5a3115b1a5554c998.ctex[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Portal.png.import[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Ring.png-531ccf1f93cfc7df1edda7c73e3f0897.ctex[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Ring.png.import[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-0014d135952d67eb8309d6d7ed57443f.ctex[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderPassage.png.import[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassageHorizontal.png-f9924ee9207cc35f2ff1a8237bef6b88.ctex[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderPassageHorizontal.png.import[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-62cc1a22fdc4f3da3329cb0764e89558.ctex[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderWall.png.import[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWallHorizontal.png-a151ba4bbdf139b3a508f2d33464c8be.ctex[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderWallHorizontal.png.import[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerInner.png-c52d89f0e905827e58f95c8e77d169fc.ctex[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/CornerInner.png.import[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerOuter.png-aadab3438335cc00d2d7825b4169097e.ctex[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/CornerOuter.png.import[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Empty.png-5c5b7398b3c73e9dac69098338edeff8.ctex[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Empty.png.import[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-db89c3dd938814d3cdaf16f8d83e4f4c.ctex[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/PlayerLocation.png.import[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-b5f12ef6d51bcc6c97aea7f0aa3834f0-PlayerLocation.scn[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-a2c5cfa768a806eaffa0be05b808df2d.ctex[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/RoomFill.png.import[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomSeparator.png-fba7149bc653105012a4b989a09fd2c7.ctex[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/RoomSeparator.png.import[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-725571c38c0847dd21cce13332a5c79e-Theme.res[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Blockade.png-25887f6778332aeeb9a4cde82df1c567.ctex[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/Blockade.png.import[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/HalfWall2.png-2d9a21e191875e06a1ed3c644f65b6f8.ctex[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/HalfWall2.png.import[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/HalfWall.png-623ec67afe2a14b9593ba34f4354f2a5.ctex[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Borders/HalfWall.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/+.png-6e814897c0d7a3874754a1edf150eeca.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/+.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Collected.png-f7ed2589b54abf7c95c3840015efa583.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Collected.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Collectible.png-6f04d463c3ff65a4eb4e4a753bea2cc5.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Collectible.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Eyes.png-bd191aa727bf825fb9bc31b0127d4da4.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/Eyes.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/X.png-f21c626ffd4196ab3f6d3d6e2d4a0630.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Symbols/X.png.import[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-fe62381e6a24a09708597c1f53d9e1cd.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/BorderPassage.png.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-c3be8a048bc9c9c1deb4a5777f4bafd1.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/BorderWall.png.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Empty.png-62d85db4a5ba9f2997be675916a77022.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Empty.png.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-3c33024b6be6d5ebee90af2d1018c681.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/PlayerLocation.png.import[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-ed81c8bd90489e15e4cf6554c5aeda4e-PlayerLocation.scn[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-f3c153545f0cd716ba19484d93691b6e.ctex[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/RoomFill.png.import[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-c6601a2168b21b4538a747e84389b19f-Theme.res[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Barrier.png-b2e299f7f4b492004c6c9e6cbe9f7cae.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Borders/Barrier.png.import[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Collectible.png-1bad05584e0798a47c3606d9db8fc515.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Collectible.png.import[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Dot2.png-13e3f917489f442b51d692d5f0c41dad.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Dot2.png.import[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Dot.png-0506e85bd1ac6e82a235b22054acf91b.ctex[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Dot.png.import[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/House.png-6dd43de4243b16a872d80b66af4389b7.ctex[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/House.png.import[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Save.png-5e4d02fd4f9c8c2bca00d628bf881803.ctex[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Save.png.import[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Skull.png-ed1245a49abb93540db5ac03abfa4540.ctex[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Symbols/Skull.png.import[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-a3945ce0d379733e732e4ab1f84dd6cb.ctex[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/BorderPassage.png.import[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-d037691b156989b4e18334a78d0f62c2.ctex[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/BorderWall.png.import[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Center.png-30a1e766e1de536c2eabac549a236d3a.ctex[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Center.png.import[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-b036ee75d7cd37ff8544ba41d35a99e5.ctex[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/PlayerLocation.png.import[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-f5ab7ac7d133cb0a3dad85e02cfbb328-PlayerLocation.scn[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-5d686616b21ccee114616c56a9d034f0-Theme.res[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Door1.png-e528b647953d6dfe7941c40924408ce6.ctex[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Borders/Door1.png.import[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Door2.png-f4a3bf33e9c7d664e2e850bfa8d97b14.ctex[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Borders/Door2.png.import[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Door3.png-924d56b4d9b2633e731ac99de58ac625.ctex[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Borders/Door3.png.import[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Door4.png-617a1b6d9b1d7d05c77b1390c509e781.ctex[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Borders/Door4.png.import[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Boss.png-8a7e06b27e3495c4639fd0912730d1ef.ctex[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Boss.png.import[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CollectedItem.png-390fa99fb1b9194e37d14effe6e13a5b.ctex[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/CollectedItem.png.import[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item.png-8e4d89151797d250e14b548995ec0f16.ctex[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Item.png.import[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/NavigationRoom.png-61655cbcdcb83963b6c68a0a826d2127.ctex[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/NavigationRoom.png.import[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RechargeRoom.png-e117252544d3c5c973bf563bfd1d7ac7.ctex[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/RechargeRoom.png.import[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SaveRoom.png-82271f82f5b4eaaa7a14448ba974c7ee.ctex[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/SaveRoom.png.import[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Ship.png-213019971211d64be9c8ccce6346f262.ctex[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Symbols/Ship.png.import[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-3717726a9e8f42f33cda81f114d70776.ctex[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/BorderPassage.png.import[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-72c47be69f4a48ebfeda5788ec64219e.ctex[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/BorderWall.png.import[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Corner.png-7a29b1153bb15b97c2177302425bf2dd.ctex[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Corner.png.import[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Empty.png-24499cf591b15fa88d742bd711bb08bc.ctex[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Empty.png.import[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-9daa727a432bf50156b4030ed2c0c8f6-PlayerLocation.scn[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-1c5ca0d83894bd16cf412f71c4c13f05.ctex[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/RoomFill.png.import[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-6a8aaaafff2023449ae7742f04dc3639-Theme.res[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/AreaExitLeft.png-5f32b575177c5e3d7e3b5f8732373a87.ctex[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/AreaExitLeft.png.import[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/AreaExitRight.png-c29acb83ed2e1c80ff22652c6ef6f3a8.ctex[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/AreaExitRight.png.import[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Egg.png-87455548beb6d96e5d12889c25deed02.ctex[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Egg.png.import[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/HealZone.png-7b93d6df486a0363574f4d20ba880109.ctex[39m[0m
+[  47% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/HealZone.png.import[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item1.png-065c2227cc2a12f76eefa5c50f6a30dd.ctex[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Item1.png.import[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item2.png-4166cebbd15980d921ba29423d71b561.ctex[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Item2.png.import[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item3.png-b3187f493ab94aecdc16b2730b375922.ctex[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Item3.png.import[39m[0m
+[  49% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item4.png-b7b36bc76a59f7e2d97f2359f2de4b65.ctex[39m[0m
+[  49% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Item4.png.import[39m[0m
+[  49% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item5.png-ca67ad1fcbee37e55e568f9a7ab85719.ctex[39m[0m
+[  49% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Item5.png.import[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SavePoint.png-efd1864ae2549635d4628d00ec8ac9c7.ctex[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/SavePoint.png.import[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Teleport.png-e13d2c8e824ea919a7d82cbb43428ba7.ctex[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Symbols/Teleport.png.import[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-f5408c83ad76913666293b5846c5c999.ctex[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/BorderPassage.png.import[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-b03026f7026f47a1068c12f17af9a31c.ctex[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/BorderWall.png.import[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerInner.png-66b601ab9d41f0cba05da9b4dcd3c90e.ctex[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/CornerInner.png.import[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerOuter.png-81afcca82023599019f5478662c4a80f.ctex[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/CornerOuter.png.import[39m[0m
+[  52% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-45d814bed1b6952203c59cd8522d54aa.ctex[39m[0m
+[  52% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/PlayerLocation.png.import[39m[0m
+[  52% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-66b3f50fb868e06bbbe0ca85cbc8fccf-PlayerLocation.scn[39m[0m
+[  52% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-d286eaee3743b7e555b395d2249d5758.ctex[39m[0m
+[  52% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/RoomFill.png.import[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-5ab57a994bea4503eedeb8e22d5012bf-Theme.res[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Boss.png-ee163bf7c84d2550da93109f5d6d3105.ctex[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Boss.png.import[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Door.png-8f1c390f1e0d450e41f19932cd7557ba.ctex[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Door.png.import[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Item.png-78edff575fdc4a68a1ade725d933d2b6.ctex[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Item.png.import[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Key.png-77f3c0b7cd164ce5c2c11bce27d78a0a.ctex[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Key.png.import[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Portal.png-119e464ef4ff59e6bdcd5fbc351f2f6e.ctex[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Portal.png.import[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SavePoint.png-854beb50b04d344e22ca8ea976d60ea7.ctex[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/SavePoint.png.import[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SuperBoss.png-7b17a12c19592c8ea9e09103311b7c10.ctex[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/SuperBoss.png.import[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SuperTeleport.png-654988bd067457d3601ba99c2a4e6a68.ctex[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/SuperTeleport.png.import[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Teleport.png-6de7bae2fc596bfdd3c22351d98dbc09.ctex[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Symbols/Teleport.png.import[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-61521022e41ba6a33012e8bcaa70563a.ctex[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/BorderPassage.png.import[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-24b3c6b95a048a90c271cd8a61fa8bce.ctex[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/BorderWall.png.import[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerInner.png-90410279b3d18570d2a7543f573c12a1.ctex[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/CornerInner.png.import[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerOuter.png-1dc9a67f13001b333d07b938ea654f5e.ctex[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/CornerOuter.png.import[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-8b93b93cd7fc43643121ccfcc5fbb80b.ctex[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/RoomFill.png.import[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomSeparator.png-74f5e298ff53f57254b237a5e2032428.ctex[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/RoomSeparator.png.import[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-d069b874ae6c7c6ea9f3b6acbf9cc04a-Theme.res[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-1b16c36747ced4b28e27381da194efef.ctex[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/BorderPassage.png.import[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-102432ab3b56ddfd5a6ab24610db58c2.ctex[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/BorderWall.png.import[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Corner.png-afde50c8f10d8bf7e548c5c6806fc056.ctex[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/Corner.png.import[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-e72bb8b87783fbe82a27e8f342e7c05e.ctex[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/PlayerLocation.png.import[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-f3d9d4ea2963a548b189bf5211e13de8-PlayerLocation.scn[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-7715e8eb09fea02c38c7f0c26cfb0422.ctex[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/RoomFill.png.import[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-30a6d54c0bdfd2fd45003d74c7e6bf23-Theme.res[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Abyss.png-e44923112186dc3a37669e73648e6fb0.ctex[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Borders/Abyss.png.import[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Crystal.png-b37e894441f0bb9854c9ec2f4c752709.ctex[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/Crystal.png.import[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CrystalDestroyed.png-71db63d596fa65b02e5647b5464c455d.ctex[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/CrystalDestroyed.png.import[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/InteriorEnter.png-f56f15f5d0f1670b20f7f57d110ad2ad.ctex[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/InteriorEnter.png.import[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Quest.png-eb263b4fbc9841a6570956cc262c9ef8.ctex[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/Quest.png.import[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomSave.png-4346f5d2a01cccefbc4e7b1da8550d12.ctex[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/RoomSave.png.import[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomTeleport.png-b913f40b89f7d1c6a3a5570f8c6b4977.ctex[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/RoomTeleport.png.import[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/WarpDown.png-cfe02667c94e1ae8d8be072a15d72cf1.ctex[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/WarpDown.png.import[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/WarpLeft.png-cc00441928ba81b4465e441caba03b01.ctex[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/WarpLeft.png.import[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/WarpRight.png-15971d30dbb91cf3a9a03f93cbccda4a.ctex[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/WarpRight.png.import[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/WarpUp.png-4f9ec6ac310ad24c461d74621484529c.ctex[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Symbols/WarpUp.png.import[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-a7bd3c72882d2d35e80fd202faab97f5.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/BorderPassage.png.import[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-9168d2ef001bb946de4117a027c7cd67.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/BorderWall.png.import[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerInner.png-cffb872847dfbf37289dd79613199b70.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/CornerInner.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerOuter.png-2d83a19d8c08d17920f8ab8813dda30c.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/CornerOuter.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Empty.png-1f0412dacda842616565bf02edad773c.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Empty.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-096cbc2294e68af409df3c1506c601aa.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/PlayerLocation.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-ea0983447529afe26e5f9cfef0f68f7a-PlayerLocation.scn[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-0a2dbb94654cb914cd5d663e73d95f0d.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/RoomFill.png.import[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomSeparator.png-44bf1420895a6a133169bfa6a76c9354.ctex[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/RoomSeparator.png.import[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-05419ab3f895a2084c1ffc82de8412fd-Theme.res[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BlueBarrier.png-7720bba1e981c8f29e8afb11ac6bc02f.ctex[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Borders/BlueBarrier.png.import[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/GreenBarrier.png-c53785bfea958021486c893ac3eb7aeb.ctex[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Borders/GreenBarrier.png.import[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PinkBarrier.png-3e4d43ed571bb30e2c8983562435eeb8.ctex[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Borders/PinkBarrier.png.import[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RedBarrier.png-20619b00a5ae623c64fd91f4d3e145ff.ctex[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Borders/RedBarrier.png.import[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/A.png-b66379b46ef7011fc1a7994a2a054c9d.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/A.png.import[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/B.png-ab55c01cd85d17faea2fe18db5c65b58.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/B.png.import[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/C.png-122d97ceb7e409f904f81e8e1f198489.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/C.png.import[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/D.png-3108bf07b7cac7f3a67ffa7a10b9d0ad.ctex[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/D.png.import[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/SavePoint.png-a9d130c3e092e19cab5cd6d4d20c1120.ctex[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/SavePoint.png.import[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Teleport.png-105b497fe7bc1928abd2f076edb58e81.ctex[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Symbols/Teleport.png.import[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderPassage.png-511aeda0d7345de8f366acab9acae662.ctex[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/BorderPassage.png.import[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/BorderWall.png-4e7e8b82577be7b39e51c9741a1d2e7b.ctex[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/BorderWall.png.import[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerCross.png-d54521f92aa7a7bad4019c1ed6bff4c2.ctex[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/CornerCross.png.import[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerL.png-54074cb97816bb7269732cd86798b495.ctex[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/CornerL.png.import[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerT.png-3c05955605a40f28e618abb2c5205669.ctex[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/CornerT.png.import[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/CornerU.png-b2623c796905924d5ba56c4730c3233b.ctex[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/CornerU.png.import[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/PlayerLocation.png-9d1a535b98ea21025d6695759bc23c1a.ctex[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/PlayerLocation.png.import[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-a60df46c5e2ff9001f7191ec0595bcbf-PlayerLocation.scn[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/RoomFill.png-0edeed042fd88e65da53ab51f51afe23.ctex[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/RoomFill.png.import[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-8fd50a8ea12784f12a0acd03d4c02a1c-Theme.res[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/de_DE.po[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/es.po[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/fr.po[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/ja.po[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/nl.po[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/pl.po[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/ru.po[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/sv_SE.po[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/zh-hans.po[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Translations/zh-hant.po[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/Icon.png-ee9c40684788f1a27b35051aa11d9b76.ctex[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Icon.png.import[39m[0m
+[  78% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/MetSysPlugin.gdc[39m[0m
+[  78% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/door_combined.png-c92cb83ae543f8bad83c701c95aa7ab3.ctex[39m[0m
+[  78% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/door_combined.png.import[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/r14_door_back.png-653a7ecd07ec91cd681e7d14297c3963.ctex[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/r14_door_back.png.import[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/r14_door_front.png-3a269f1e3eadc63adcada8bd039bb1e2.ctex[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/r14_door_front.png.import[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/r14_door_interior.png-b8539997556a4c599866ce461abe6737.ctex[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/r14_door_interior.png.import[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/r14_roof_support.png-73d8fa522dca8fe1078274d34fc17c83.ctex[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/r14_roof_support.png.import[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/r15_masonry_support.png-429a83bef7e5b4c1d73011bdeba65e38.ctex[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/r15_masonry_support.png.import[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/stair_flight_right.png-639f1fabacc4f4771d9ff44864bdc533.ctex[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/stair_flight_right.png.import[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/stair_front_lip.png-1cefeb1abb6faf928e2c56523d1f040b.ctex[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://assets/art04/environment/stair_front_lip.png.import[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-2edce8ccbac63f86647193d310a9b0dc-ART04_key_poses.res[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/enter_depth_key.png-5bc9825822558d1fbef70a8687251477.ctex[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/enter_depth_key.png.import[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/key_pose_atlas.png-faa4ccdc803b38b29a473e5b7fe7b20f.ctex[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/key_pose_atlas.png.import[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/stair_down_key.png-a012e974037b1f29924c8eff835c9d40.ctex[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/stair_down_key.png.import[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/stair_up_key.png-7931b8ef7799a85336dae73b191f901d.ctex[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/stair_up_key.png.import[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/turn_depth_key.png-015c0e4cbd31c2342b121e134cfe88c1.ctex[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/turn_depth_key.png.import[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-01ff934650d9d116dbde628759cfa90f-doorway.scn[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-d5e2b6cf6141151422030781d776d02d-kaze_key_preview.scn[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://assets/art04/ART04_ASSETS.json[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://assets/art04/MANIFEST.json[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_combat_strip.png-25d6ad398718bcec83841a809b536d9c.ctex[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/kaze_combat_strip.png.import[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_idle_strip.png-e808e1642968f1b9e9bb407e387d82e7.ctex[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/kaze_idle_strip.png.import[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_run_strip.png-6f5ceed58b01d153029bc1811ab16795.ctex[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/kaze_run_strip.png.import[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_traversal_strip.png-cc6f2cc2cbacd8a79e915fe10c4af68d.ctex[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/kaze_traversal_strip.png.import[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/source_boundary_manifest.json[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://assets/kaze/cleaned/source_final_manifest.json[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/area-atlas.png-ec1e0180414d1ed24d94b394df851bdb.ctex[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://assets/web/area-atlas.png.import[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/bosses_strip.png-b40da0b36f95fe6648f1357a7d8f20eb.ctex[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://assets/web/bosses_strip.png.import[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/district-fidelity.png-12f247e0b81a7cfc63c705e40552440d.ctex[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://assets/web/district-fidelity.png.import[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_combat_strip.png-cd192aee75f2c7b9871ee3d678338003.ctex[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://assets/web/kaze_combat_strip.png.import[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_idle_strip.png-9bd7ce8e5cbfaa2d3ad9ad4000d15733.ctex[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://assets/web/kaze_idle_strip.png.import[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://assets/web/kaze_manifest.json[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_run_strip.png-73a5a32bb7ef6b728a5ef8d8225ecacc.ctex[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://assets/web/kaze_run_strip.png.import[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/kaze_traversal_strip.png-421e57355a54445a4f29a611a6e9095d.ctex[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://assets/web/kaze_traversal_strip.png.import[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/sentinels_strip.png-239234da6b5b1fc1a88498b2b7956f87.ctex[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://assets/web/sentinels_strip.png.import[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/terrain-materials.png-74239589487569a012a0a23f7729bf9a.ctex[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://assets/web/terrain-materials.png.import[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/attack_strip.png-01af0caa8a34a2aae98910faaef4f374.ctex[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://assets/attack_strip.png.import[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/fall_strip.png-1d1286dc3f8f9e26095cbc80ba5c02e5.ctex[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://assets/fall_strip.png.import[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/guard.png-75d5c74613a4f44e8538431608437586.ctex[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://assets/guard.png.import[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/idle_strip.png-74346a7baa8975b0e7f01b7e1991dad6.ctex[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://assets/idle_strip.png.import[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/jump_strip.png-ae7d6d509aff1f05e93d58aec6f2a31e.ctex[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://assets/jump_strip.png.import[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/run_strip.png-03ebea9443e0d3ebf7c01d04cb3b65b7.ctex[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://assets/run_strip.png.import[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/wall_slide_strip.png-38d50fe7654842ac35c1538f7e189c16.ctex[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://assets/wall_slide_strip.png.import[39m[0m
+[  93% ] [90m[1msavepack[22m | Storing File: res://scripts/art04_presentation.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | Storing File: res://scripts/route_extension.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | Storing File: res://scripts/kunai.gdc[39m[0m
+[  94% ] [90m[1msavepack[22m | Storing File: res://scripts/world_expansion.gdc[39m[0m
+[  94% ] [90m[1msavepack[22m | Storing File: res://scripts/room_presentation.gdc[39m[0m
+[  94% ] [90m[1msavepack[22m | Storing File: res://scripts/skyworks_region.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://scripts/hud.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://scripts/momentum_profile.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://scripts/storm_keeper.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/embodied_transitions.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/player.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/world.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://scripts/guard.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://scripts/grapple_anchor.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://scripts/mixed_transitions.gdc[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-c77183fe866bc36ae17db17c1899d415-MetSysSettings.res[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/BorderPaintEditor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/CellPaintEditor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/MapEditor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/MapEditor.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeBorderColor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeBorderType.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellColor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellGroup.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCellSymbol.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeCustomElements.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeRoomLayout.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/ModeSceneAssign.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Editor/SubEditor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Manage/Manage.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Manage/Manage.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Manage/Validation.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleElement.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleElement.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleFinder.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/CollectibleSettings.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/MapViewer.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Viewer/MapViewer.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/DatabaseTheme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/EditorIconButton.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/EditorMapView.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/LayerSelector.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Main.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Database/Main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/EditorExtension/MetSysEditorExtension.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Nodes/RoomInstance.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Nodes/RoomPreview.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Nodes/Singleton.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/CellView.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/CustomElementManager.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapBuilder.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapData.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MapView.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/MetroidvaniaSystem.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/PlayerLocationInstance.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/RoomInstance.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/SaveData.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Scripts/Settings.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Nodes/Minimap.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Nodes/Minimap.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/PassageAutomapper.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/RoomTransitions.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/Modules/ScrollingRoomTransitions.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/MetSysGame.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/MetSysModule.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Template/Scripts/SaveManager.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/AoS/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/BS/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/EM/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Fuzzy/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Kenney/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/MF/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/RR/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SH/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/SotN/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/VoF/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/PlayerLocation.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/Themes/Zeric/Theme.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://addons/MetroidvaniaSystem/MetSysPlugin.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://assets/art04/kaze/ART04_key_poses.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://assets/art04/prefabs/doorway.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://assets/art04/prefabs/kaze_key_preview.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/art04_presentation.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/route_extension.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/kunai.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/world_expansion.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/room_presentation.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/skyworks_region.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/hud.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/momentum_profile.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/storm_keeper.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/embodied_transitions.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/player.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/world.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/guard.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/grapple_anchor.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scripts/mixed_transitions.gd.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://scenes/main.tscn.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://MetSysSettings.tres.remap[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  98% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+WARNING: 1 RID of type "CanvasItem" was leaked.
+     at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2690)
+ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.
+ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
