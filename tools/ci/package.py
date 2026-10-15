@@ -28,7 +28,7 @@ def audit_pack(data):
         file_flags=struct.unpack_from('<I',data,pos)[0]; pos+=4
         assert file_flags==0, 'Unexpected encrypted/removed/delta entry'
         name=name.removeprefix('res://'); names.append(name)
-        assert not any(p in {'build','tests','docs','tools','.autoconverted','.git'} for p in pathlib.PurePosixPath(name).parts), f'Forbidden PCK entry: {name}'
+        assert not any(p in {'build','tests','docs','tools','source_art','.autoconverted','.git'} for p in pathlib.PurePosixPath(name).parts), f'Forbidden PCK entry: {name}'
         assert not name.endswith(('.log','.zip','.tpz')) and 'app_userdata' not in name
         payload=data[base+offset:base+offset+size]
         assert len(payload)==size and hashlib.md5(payload).digest()==md5, f'Invalid PCK contents: {name}'

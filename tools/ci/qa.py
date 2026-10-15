@@ -25,6 +25,9 @@ def main():
     p = argparse.ArgumentParser(); p.add_argument('--godot', required=True); args = p.parse_args()
     LOGS.mkdir(parents=True, exist_ok=True)
     assert subprocess.check_output([args.godot, '--version'], text=True).strip() == '4.6.1.stable.official.14d19694e'
+    if (ROOT/'tools/run_int_tr03_art04_qa.py').is_file():
+        from int_tr03_qa import main as integration_main
+        return integration_main(args.godot)
     if not (ROOT / 'tools/run_int01_qa.py').is_file():
         return legacy_qa(args.godot)
     tree = ast.parse((ROOT / 'tools/run_int01_qa.py').read_text())

@@ -8,7 +8,7 @@ on:
       source_ref:
         description: Approved game source branch (keep workflow branch set to main)
         type: choice
-        options: [main, 'integration/candidate-alpha-0.6.1-gp-ld', 'feature/alpha-0.6.1-mixed-transitions']
+        options: [main, 'integration/candidate-alpha-0.6.1-gp-ld', 'feature/alpha-0.6.1-mixed-transitions', 'integration/int-tr03-art04-production']
         default: main
       build_artifacts:
         description: Export Windows and macOS playtest packages
@@ -38,8 +38,8 @@ jobs:
           WORKFLOW_BRANCH: ${{ github.ref_name }}
         run: |
           if [ "$EVENT" = workflow_dispatch ]; then
-            case "$REQUESTED" in main|integration/candidate-alpha-0.6.1-gp-ld|feature/alpha-0.6.1-mixed-transitions) ;; *) exit 1;; esac
-            case "$WORKFLOW_BRANCH" in main|ci/default-branch-godot-builds|ci/build03-tr02-playtest) ;; *) exit 1;; esac
+            case "$REQUESTED" in main|integration/candidate-alpha-0.6.1-gp-ld|feature/alpha-0.6.1-mixed-transitions|integration/int-tr03-art04-production) ;; *) exit 1;; esac
+            case "$WORKFLOW_BRANCH" in main|ci/default-branch-godot-builds|ci/build03-tr02-playtest|ci/build-int-tr03-art04) ;; *) exit 1;; esac
           fi
       - name: Checkout reviewed CI controls
         uses: actions/checkout@v4
@@ -50,14 +50,15 @@ jobs:
       - name: Checkout selected game source
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha || inputs.source_ref }}
+          ref: ${{ (github.head_ref == 'ci/build-int-tr03-art04' || inputs.source_ref == 'integration/int-tr03-art04-production') && 'e91e49caeada21baad5ab25e5080e67ab16a4094' || github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha || inputs.source_ref }}
           path: game-source
+          fetch-depth: 0
           persist-credentials: false
       - name: Resolve actual source identity
         id: source
         env:
-          SOURCE_BRANCH: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'feature/alpha-0.6.1-mixed-transitions' || github.head_ref || inputs.source_ref }}
-          EXPECTED: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha }}
+          SOURCE_BRANCH: ${{ (github.head_ref == 'ci/build-int-tr03-art04' || inputs.source_ref == 'integration/int-tr03-art04-production') && 'integration/int-tr03-art04-production' || github.head_ref == 'ci/build03-tr02-playtest' && 'feature/alpha-0.6.1-mixed-transitions' || github.head_ref || inputs.source_ref }}
+          EXPECTED: ${{ (github.head_ref == 'ci/build-int-tr03-art04' || inputs.source_ref == 'integration/int-tr03-art04-production') && 'e91e49caeada21baad5ab25e5080e67ab16a4094' || github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
           SHA=$(git -C game-source rev-parse HEAD)
@@ -80,6 +81,9 @@ jobs:
       - name: Export and audit both platforms
         if: github.event_name == 'pull_request' || inputs.build_artifacts
         run: python3 ci-control/tools/ci/package.py --godot "$GODOT"
+      - name: Package Windows INT-TR03 ART04 comparisons
+        if: (github.head_ref == 'ci/build-int-tr03-art04' || inputs.source_ref == 'integration/int-tr03-art04-production') && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        run: python3 ci-control/tools/ci/int_tr03_package.py --platform windows --artifact game-source/build/ci/Windows-x86_64
       - name: Package committed TR-02 comparison launchers
         if: (github.head_ref == 'ci/build03-tr02-playtest' || inputs.source_ref == 'feature/alpha-0.6.1-mixed-transitions') && (github.event_name == 'pull_request' || inputs.build_artifacts)
         run: python3 ci-control/tools/ci/tr02_package.py
@@ -118,6 +122,10 @@ jobs:
           - runner: macos-15-intel
             target: macOS
     runs-on: ${{ matrix.runner }}
+    env:
+      SOURCE_SHA: ${{ needs.qa-and-build.outputs.sha }}
+      EXPECTED_SOURCE_SHA: ${{ needs.qa-and-build.outputs.sha }}
+      CI_SOURCE_ROOT: ${{ github.workspace }}/game-source
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -128,11 +136,33 @@ jobs:
         with:
           name: Kaze-${{ matrix.target }}-${{ needs.qa-and-build.outputs.short }}
           path: build/native-artifact
+      - name: Checkout exact comparison packaging recipe
+        if: needs.qa-and-build.outputs.sha == 'e91e49caeada21baad5ab25e5080e67ab16a4094'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.qa-and-build.outputs.sha }}
+          path: game-source
+          persist-credentials: false
+      - name: Finalize macOS comparison package on native macOS
+        if: matrix.target == 'macOS' && needs.qa-and-build.outputs.sha == 'e91e49caeada21baad5ab25e5080e67ab16a4094'
+        run: python3 tools/ci/int_tr03_package.py --platform macos --artifact build/native-artifact
       - name: Native release headless startup
         env:
           EXPECTED_SOURCE_SHA: ${{ needs.qa-and-build.outputs.sha }}
         shell: bash
         run: python tools/ci/native_smoke.py build/native-artifact --output build/native-smoke
+      - name: Execute all 45 actual comparison launchers with spaced paths
+        if: needs.qa-and-build.outputs.sha == 'e91e49caeada21baad5ab25e5080e67ab16a4094'
+        shell: bash
+        run: python tools/ci/int_tr03_launchers.py build/native-artifact --output build/native-launchers
+      - name: Publish final macOS comparison package
+        if: success() && matrix.target == 'macOS' && needs.qa-and-build.outputs.sha == 'e91e49caeada21baad5ab25e5080e67ab16a4094'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-INT-TR03-ART04-macOS-Universal-${{ needs.qa-and-build.outputs.short }}
+          path: build/native-artifact/
+          retention-days: 21
+          if-no-files-found: error
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -141,6 +171,8 @@ jobs:
             build/native-smoke/NATIVE_SMOKE.json
             build/native-smoke/engine.log
             build/native-smoke/stdout.log
+            build/native-launchers/LAUNCHER_VERIFICATION.json
+            build/native-launchers/*.log
           retention-days: 21
           if-no-files-found: error
   candidate-compatibility:
