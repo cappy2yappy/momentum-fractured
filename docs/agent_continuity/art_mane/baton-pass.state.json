@@ -1,0 +1,12 @@
+{
+  "state": "handed-off",
+  "last_move": "baton-pass",
+  "last_agent": "The Art Mane",
+  "next_agent": "PM / Level Masta Masta review",
+  "updated_at": "2026-10-15T04:39:51.402848+00:00",
+  "assignment": "TR-03-0061 Lane B",
+  "branch": "art/alpha-0.6.1-tr03-entry-poses",
+  "verified_art_checkpoint": "45ed20bdd6af68b89edc4b15fec64cfd891e0700",
+  "pr": 25,
+  "next": "Review storyboard/specs; Lane A implements explicit placeholders. Final painted sprites require creator review."
+}
