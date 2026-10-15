@@ -53,3 +53,13 @@ Level contract is based on actual PR27 source, not inferred scene coordinates. C
 4. Level validates actual transitions, safety cleanup, both directions, destination masking, saves and bounded render cost. Build Shogun then pins art/integration commits for separate Mac/Windows comparison packages.
 
 No merge, public release or approved sprite replacement authorized by this report.
+
+## Verified publication and coordination
+
+- Art branch: `art/art04-production-pilots`.
+- Published production art commit: `9f4e7151b1f8aa683123ee59aa549c3d8c2b4bb7`.
+- Draft PR: [#30](https://github.com/cappy2yappy/momentum-fractured/pull/30), stacked on ART-03 #28.
+- Level implementation coordination: [PR27 comment](https://github.com/cappy2yappy/momentum-fractured/pull/27#issuecomment-6201972556), containing exact asset names, pivots, room anchors, missing clips and review/integration boundaries. No response or integration is assumed.
+- Native renderer evidence: [NATIVE_RENDER.txt](../art/art04/NATIVE_RENDER.txt), [baseline capture](../art/art04/BASELINE_RENDER.txt).
+
+Publication pointers, renderer text logs and continuity are a subsequent documentation checkpoint; current exact branch HEAD is recorded in PR30's description. No force push or merge. Source/gameplay preservation compared against ART03 base has zero task changes outside the new art/review/continuity paths. Inherited CRLF QA file noise remains excluded.

@@ -1,13 +1,14 @@
 {
   "state": "handed-off",
   "last_move": "baton-pass",
-  "last_agent": "The Art Mane / ART-03",
-  "next_agent": "Creator concept review; then Art Mane sprite production",
+  "last_agent": "The Art Mane / ART-04",
+  "next_agent": "Creator asset review; Level Masta Masta scoped integration",
   "updated_at": "2026-10-15",
-  "assignment": "ART-03 / TR-03 Lane B",
-  "branch": "art/art03-complete-compositions",
-  "verified_art_checkpoint": "f41e4e4c784ad170bfde0f6c33264e6af41c07c4",
-  "pr": 28,
-  "pr_url": "https://github.com/cappy2yappy/momentum-fractured/pull/28",
-  "next": "Review complete paintings and identity. Production sprites/integration remain pending; no merge."
+  "assignment": "ART-04 / next-build production pilot",
+  "branch": "art/art04-production-pilots",
+  "verified_art_checkpoint": "9f4e7151b1f8aa683123ee59aa549c3d8c2b4bb7",
+  "pr": 30,
+  "pr_url": "https://github.com/cappy2yappy/momentum-fractured/pull/30",
+  "coordination_url": "https://github.com/cappy2yappy/momentum-fractured/pull/27#issuecomment-6201972556",
+  "next": "Review four real keys and pilot assets; resolve scoped placeholder layer order; integrate only accepted paths with fallback. Full cycles remain incomplete. No merge."
 }

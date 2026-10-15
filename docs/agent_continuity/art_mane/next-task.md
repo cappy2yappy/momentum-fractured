@@ -2,11 +2,12 @@
 
 - State: handed-off
 - Last move: baton-pass
-- Last agent: The Art Mane / ART-03
-- Next agent: Creator concept review; then Art Mane sprite production
+- Last agent: The Art Mane / ART-04
+- Next agent: Creator asset review; Level Masta Masta scoped integration
 - Updated: 2026-10-15
-- Branch: `art/art03-complete-compositions`
-- Verified art checkpoint: `f41e4e4c784ad170bfde0f6c33264e6af41c07c4`
-- Draft PR: [#28](https://github.com/cappy2yappy/momentum-fractured/pull/28)
+- Branch: `art/art04-production-pilots`
+- Verified art checkpoint: `9f4e7151b1f8aa683123ee59aa549c3d8c2b4bb7`
+- Draft PR: [#30](https://github.com/cappy2yappy/momentum-fractured/pull/30)
+- Level coordination: [PR27 handoff](https://github.com/cappy2yappy/momentum-fractured/pull/27#issuecomment-6201972556)
 
-Review three complete paintings in docs/art/tr03/art03_recovery/README.md. Concepts reconstructed because PR #26's Git PNGs are corrupt; original sources remain intact. Full recovery/QA/limitations: docs/agent_handoffs/ART03_RECOVERY_PM_REPORT.md. No final sprites, integrated animations or native/performance certification. After creator review, continue existing 30-frame specification with brown skin/actual sprite identity and distinct stair ascent/descent. Follow PR #27 render-adapter metadata. No merge. State mirrors baton-pass.state.json.
+Review actual transparent assets and native game-scale captures in docs/art/art04/README.md. Creator approved ART-03 visual direction; new ART-04 keys remain pending acceptance. Four usable keys are supplied, not complete cycles. Level consumes only reviewed assets/art04 paths, resolving current placeholder overdraw and actual adapter timing/cleanup. Preserve approved sprites/run,0.65s/39 ticks, topology and saves. No playable ART04 integration or merge performed. State mirrors baton-pass.state.json.

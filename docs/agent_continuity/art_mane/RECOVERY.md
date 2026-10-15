@@ -1,11 +1,11 @@
-# Art Mane — ART-03 resume
+# ART-04 — resume without regenerating delivered work
 
-1. Fetch `art/art03-complete-compositions` and [PR #28](https://github.com/cappy2yappy/momentum-fractured/pull/28); verify its current HEAD. Published art checkpoint `f41e4e4c784ad170bfde0f6c33264e6af41c07c4`. Based on PR #26 head 0b96d41fa7b6b424591fdd685f5c8fdf9290c02b; no other branch overwritten.
-2. Read CONTEXT.md, next-task.md, baton-pass.state.json and docs/agent_handoffs/ART03_RECOVERY_PM_REPORT.md. Old CONTEXT/state referring to #25 were stale and are superseded, not evidence that #26 never existed.
-3. Inspect docs/art/tr03/art03_recovery/README.md and actual full PNGs before creating more art. Do not regenerate completed concepts without a focused creator revision. Old #26 files remain corrupt and preserved; RECOVERY_AUDIT.json records actual/claimed hashes.
-4. Local checkout is work/art03-recovery, a dedicated clone. Pillow needed for tools/art03_review.py; macOS Arial font path may need changing elsewhere. Built-in generation needs no CLI API key. No Aseprite or Higgsfield prerequisite for these paintings.
-5. Verify all new PNGs with truncation disabled, full CRC/IEND, manifest hashes and visual display; never certify image integrity from a PNG header. Baseline verifier passed. Gameplay/native/performance QA not run because no runtime edits.
-6. Next owner: creator for concept review, then Art Mane for separately gated sprite production. Existing 30-frame contract is unchanged. PR #27 placeholders and actual endpoint metadata guide future integration, not these paintings' inferred geometry.
-7. Preserve approved sprites/art, physics, topology, saves and loader. No merge. This checkpoint deliberately contains no final animation pack.
+1. Fetch `art/art04-production-pilots`, inspect [PR30](https://github.com/cappy2yappy/momentum-fractured/pull/30) actual HEAD. Verified production checkpoint `9f4e7151b1f8aa683123ee59aa549c3d8c2b4bb7`. Read current CONTEXT/next-task/state and ART04_PM_REPORT.md. Creator's ART-03 approval supersedes old pending-concept wording.
+2. Local art checkout work/art03-recovery; separate PR27 reference snapshot work/art04-level-reference at c2c002267c58e991966c0eebf7e098c6e7fff769. The reference snapshot is not a managed worktree or published integration branch.
+3. Inspect assets/art04, source_art/art04 and docs/art/art04 images before new authoring. No diagrams substituted for sprites. Master/source/transparency and ORA layers are recoverable; original ART03 paintings unchanged.
+4. Re-export with tools/art04_export.py (Pillow/NumPy, macOS Arial path). Fixed authoring transforms are recorded, not playback auto-centering. Review capture scripts run only on pinned PR27 with assets/art04 copied in; ignored on older art-branch gameplay. Native Godot4.6.1 installed at /Applications/Godot.app. Explicit disposable --tr03-save path.
+5. Rebuild capture sheets/QA with tools/art04_review/build_review.py. PNG integrity and baseline passed; native static fixture passed, not live transition/full-build tests. Keep strong texture references in custom drawing; first temporary-load white rectangles were fixed before delivered captures.
+6. Actual colors/contacts/facing and layer-order limitations are in LEVEL_HANDOFF.md. Right-up and left-down are separately authored; no opposite-facing or full-cycle approval inferred.
+7. Coordination posted to [PR27](https://github.com/cappy2yappy/momentum-fractured/pull/27#issuecomment-6201972556); no acknowledgment claimed. Next creator review → Level scoped integration/QA → Build Shogun pinned comparison packages. No merge, sprite replacement or global reskin.
 
-Known worktree-only status: inherited production_revision/QA_RESULTS.json CRLF normalization noise; byte-for-byte equal to base and not committed. No unfinished art files left outside the backed-up deliverables.
+Worktree-only inherited state: production_revision/QA_RESULTS.json reports CRLF normalization noise but bytes equal base; excluded from all commits. No unfinished production payload left outside publication.

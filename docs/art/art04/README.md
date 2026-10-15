@@ -12,7 +12,7 @@
 - [Four keys in native room fixtures](POSES_IN_ENGINE.png).
 - Individual native captures: [turn](captures/turn_depth_key.png), [entry](captures/enter_depth_key.png), [ascent](captures/stair_up_key.png), [descent](captures/stair_down_key.png), [R14](captures/R14_art04.png), [R15](captures/R15_art04.png).
 - [Black/white/gray/indigo alpha review](ALPHA_EDGE_REVIEW.png).
-- [Technical QA](QA_RESULTS.json) / [native renderer log](NATIVE_RENDER.log).
+- [Technical QA](QA_RESULTS.json) / [native renderer log](NATIVE_RENDER.txt).
 
 The renderer is Godot 4.6.1 on native macOS Apple M4/OpenGL compatibility. These are **scripted static fixtures on pinned PR #27**, not a playable ART-04 build or completed transition animation. Inherited procedural roof silhouettes and large arches still overdraw some dressing; Level must resolve their scoped replacement/layer order before the final room presentation is accepted.
 

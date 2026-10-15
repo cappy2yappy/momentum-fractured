@@ -1,0 +1,7 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+STRUCTURE_FIXTURE room=14 comparison=original zoom=(1.0, 1.0) colliders=23
+STRUCTURE_FIXTURE room=14 comparison=refined zoom=(1.0, 1.0) colliders=23
+STRUCTURE_FIXTURE room=15 comparison=original zoom=(1.0, 1.0) colliders=15
+STRUCTURE_FIXTURE room=15 comparison=refined zoom=(1.0, 1.0) colliders=15

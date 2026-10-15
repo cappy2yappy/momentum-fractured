@@ -1,0 +1,9 @@
+{
+  "branch": "art/art04-production-pilots",
+  "art_commit": "9f4e7151b1f8aa683123ee59aa549c3d8c2b4bb7",
+  "pr": "https://github.com/cappy2yappy/momentum-fractured/pull/30",
+  "level_reference": "c2c002267c58e991966c0eebf7e098c6e7fff769",
+  "coordination": "https://github.com/cappy2yappy/momentum-fractured/pull/27#issuecomment-6201972556",
+  "base": "fc998f9b22f3e778cc51ee2c81668ad73ac7902e",
+  "status": "published production asset candidates; creator review and runtime integration pending; no merge"
+}
