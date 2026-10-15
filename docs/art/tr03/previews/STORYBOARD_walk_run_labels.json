@@ -1,0 +1,149 @@
+[
+  {
+    "x": 40,
+    "y": 52,
+    "text": "TR-03 / WALK AND RUN CONTINUATION",
+    "size": 32,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 40,
+    "y": 86,
+    "text": "Walking must read as walking \u2022 reuse approved run cadence/registration \u2022 original wind-fold remains exceptional",
+    "size": 17,
+    "color": "#A5B7B6"
+  },
+  {
+    "x": 60,
+    "y": 155,
+    "text": "WALK / APPROACH",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 434,
+    "text": "Use actual approach state and heading.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 457,
+    "text": "Run is existing art; walk is NEW art.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 155,
+    "text": "WALK / CROSS",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 434,
+    "text": "Cross through the existing passage plane.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 457,
+    "text": "Keep gate/rearm/cooldown policy intact.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 155,
+    "text": "WALK / CONTINUE",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 434,
+    "text": "Continue stride without artificial speed change.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 457,
+    "text": "Carry x only where TR-02 already permits.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 565,
+    "text": "RUN / APPROACH",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 844,
+    "text": "Use actual approach state and heading.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 867,
+    "text": "Run is existing art; walk is NEW art.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 565,
+    "text": "RUN / CROSS",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 844,
+    "text": "Cross through the existing passage plane.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 867,
+    "text": "Keep gate/rearm/cooldown policy intact.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 565,
+    "text": "RUN / CONTINUE",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 844,
+    "text": "Continue stride without artificial speed change.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 867,
+    "text": "Carry x only where TR-02 already permits.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 40,
+    "y": 976,
+    "text": "SCHEMATIC KEY POSES / CONCEPT ONLY \u2014 final Kaze art, timing and placement require review",
+    "size": 17,
+    "color": "#E4B562"
+  }
+]

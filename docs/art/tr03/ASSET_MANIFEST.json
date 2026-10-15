@@ -1,0 +1,169 @@
+{
+  "assignment": "TR-03-0061",
+  "assets": [
+    {
+      "path": "docs/art/tr03/previews/ARCHITECTURE_entry_support_kit.png",
+      "sha256": "8ae5af3b96d3bb5da3d4c62cde48d332899e8091934d77463290105a747a4934",
+      "bytes": 120751,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/ARCHITECTURE_entry_support_kit.svg",
+      "sha256": "ada0d4d0097df29591b7c2aa93286d221d7540e9ef1829145660c5bb5e68c856",
+      "bytes": 13262,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/ARCHITECTURE_entry_support_kit_labels.json",
+      "sha256": "65d0afbbc83fa8a395ed318b91fd0705a53887d9387a4c295eb966ea7dea2588",
+      "bytes": 2968,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/ARCHITECTURE_entry_support_kit_shapes.svg",
+      "sha256": "a997484906f591625d7b07610adf3b0f211d5856247bf1f3c84329e80d4e490d",
+      "bytes": 10631,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/CONTACT_existing_kaze.png",
+      "sha256": "775f5f418b4ddb30f2d3d378a514fc3b2646b9f6326f08c74f36a3444bb88d23",
+      "bytes": 406368,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/CONTACT_new_frame_requirements.png",
+      "sha256": "c8c878e535cf7c81577ff40fba45ccc67bfc64aad07e4c723a06deb9ddc37fcd",
+      "bytes": 90287,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/CONTACT_new_frame_requirements.svg",
+      "sha256": "fc5d63ca2e4d22aaf3cd837e00a82e19cd482290210c394faff493b9687d807f",
+      "bytes": 50598,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/CONTACT_new_frame_requirements_labels.json",
+      "sha256": "06a6e66be8ad7ed760d4fdbe214aa5ee1f1ed3b4bde2d07d480592a0f237fd79",
+      "bytes": 7020,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/CONTACT_new_frame_requirements_shapes.svg",
+      "sha256": "ac4b44c5e628062c49d7a883360f36631304d568cd3e9dd01dba805955456380",
+      "bytes": 44535,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/diagram_manifest.json",
+      "sha256": "1810d5bec2b8801f68e00ea94b2b2c95482857c8455eab1b0a643364071ffb08",
+      "bytes": 310,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_depth_door.png",
+      "sha256": "93ff44d1aee25df6b81127c1cccce72710a8e7643c1a8afe952d450bdd5a4a10",
+      "bytes": 119186,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_depth_door.svg",
+      "sha256": "0c37d42f509bbdd6551433c3ba11962fd2b25655f7863e6bab3978303122c354",
+      "bytes": 15148,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_depth_door_labels.json",
+      "sha256": "1f41dcb87a891272e44bf5249fcabe45625efdd14fa5dd6783ffef40d41b5ee1",
+      "bytes": 3002,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_depth_door_shapes.svg",
+      "sha256": "d06e0db0aa61546720ab956d33d690d82bcdc656052625444bb828763e288924",
+      "bytes": 12505,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_stairs.png",
+      "sha256": "e69c6b30baf2e6a5e0beba7ca4542b5f0e26be19d77aeec1f6c4ee8b31b77c5b",
+      "bytes": 117632,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_stairs.svg",
+      "sha256": "c78b093a669d0c86700352c7ec6d1c224128791814e18b9280ee4b6255fd6bb7",
+      "bytes": 15807,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_stairs_labels.json",
+      "sha256": "1dd2741d6b9203856d0cb7f56938609bf580a1961ac7c1153d91ed7858235472",
+      "bytes": 2877,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_stairs_shapes.svg",
+      "sha256": "7294e5e9e7f972af7588fcf029418b637de311ede2acfa6f5f7b494186b2fdce",
+      "bytes": 13256,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_walk_run.png",
+      "sha256": "19d7237d4646c038f4fcae0c95368978c66fb31fe0e12f97bed1dd92ca5693c4",
+      "bytes": 105680,
+      "status": "review-only schematic/reference",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "png_color_type": 6
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_walk_run.svg",
+      "sha256": "62156d599e39dd88b383f710f1ebea3f56ae826876463a222b7b1ce511a93fae",
+      "bytes": 13840,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_walk_run_labels.json",
+      "sha256": "8908cb35613021aab127fd04409c2c795f19e0bbc75dc16ed501c9b2b4be1283",
+      "bytes": 2895,
+      "status": "review-only schematic/reference"
+    },
+    {
+      "path": "docs/art/tr03/previews/STORYBOARD_walk_run_shapes.svg",
+      "sha256": "9fa1afa7bece7a2c7982ae492694543940f1c6db8f135b5854af3b8ddb17dd57",
+      "bytes": 11274,
+      "status": "review-only schematic/reference"
+    }
+  ],
+  "new_character_frames": 0,
+  "schematic_frame_requirements": 30
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "x": 40,
+    "y": 52,
+    "text": "TR-03 / TURN INTO A DEPTH-FACING DOOR",
+    "size": 32,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 40,
+    "y": 86,
+    "text": "Six event-linked beats \u2022 explicit facing/depth metadata \u2022 schematic, not final sprite animation",
+    "size": 17,
+    "color": "#A5B7B6"
+  },
+  {
+    "x": 60,
+    "y": 155,
+    "text": "1 / APPROACH \u2022 t0",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 434,
+    "text": "Side silhouette and real approach heading.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 457,
+    "text": "The loader starts only after Level accepts travel.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 155,
+    "text": "2 / TURN \u2022 t0\u20130.18",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 434,
+    "text": "Profile to authored quarter-back/rear keys.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 457,
+    "text": "Headband and hair identity remain visible.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 155,
+    "text": "3 / ENTER \u2022 t0.20\u20130.30",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 434,
+    "text": "Rear step goes behind a real front reveal.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 457,
+    "text": "No sideways slide or x-squash substitutes.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 565,
+    "text": "4 / COVER + SWAP \u2022 ~t0.33",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 844,
+    "text": "Opaque doorway cover follows loader swap.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 867,
+    "text": "Do not change the0.65s room-load clock.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 565,
+    "text": "5 / ARRIVAL \u2022 t0.35\u20130.49",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 844,
+    "text": "New front-quarter keys emerge at safe arrival.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 867,
+    "text": "Destination heading comes from metadata.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 565,
+    "text": "6 / CONTINUE \u2022 t0.50\u20130.65",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 844,
+    "text": "Blend to existing run or proposed walk.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 867,
+    "text": "Restore ordinary sprite on resume/cancel.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 40,
+    "y": 976,
+    "text": "SCHEMATIC KEY POSES / CONCEPT ONLY \u2014 final Kaze art, timing and placement require review",
+    "size": 17,
+    "color": "#E4B562"
+  }
+]

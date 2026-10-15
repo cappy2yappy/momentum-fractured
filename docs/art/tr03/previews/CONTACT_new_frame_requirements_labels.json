@@ -1,0 +1,443 @@
+[
+  {
+    "x": 32,
+    "y": 45,
+    "text": "TR-03 / MINIMAL NEW-FRAME REQUIREMENTS \u2014 30 SCHEMATIC CELLS",
+    "size": 28,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 32,
+    "y": 78,
+    "text": "Not finished animation art. Each cell specifies a required frame slot; root dot and floor guide are fixed.",
+    "size": 17,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 156,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 156,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 156,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 156,
+    "text": "frame 03",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 156,
+    "text": "frame 04",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 134,
+    "text": "walk",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 156,
+    "text": "frame 05",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 134,
+    "text": "turn_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 156,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 134,
+    "text": "turn_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 156,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 348,
+    "text": "turn_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 370,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 348,
+    "text": "turn_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 370,
+    "text": "frame 03",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 348,
+    "text": "enter_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 370,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 348,
+    "text": "enter_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 370,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 348,
+    "text": "enter_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 370,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 348,
+    "text": "leave_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 370,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 348,
+    "text": "leave_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 370,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 348,
+    "text": "leave_depth",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 370,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 562,
+    "text": "return_profile",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 584,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 562,
+    "text": "return_profile",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 584,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 584,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 584,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 584,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 584,
+    "text": "frame 03",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1216,
+    "y": 584,
+    "text": "frame 04",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 562,
+    "text": "stair_up",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1413,
+    "y": 584,
+    "text": "frame 05",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 34,
+    "y": 798,
+    "text": "frame 00",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 231,
+    "y": 798,
+    "text": "frame 01",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 428,
+    "y": 798,
+    "text": "frame 02",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 625,
+    "y": 798,
+    "text": "frame 03",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 822,
+    "y": 798,
+    "text": "frame 04",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 776,
+    "text": "stair_down",
+    "size": 15,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1019,
+    "y": 798,
+    "text": "frame 05",
+    "size": 14,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 32,
+    "y": 987,
+    "text": "New-source proposal:320\u00d7724, pivot(160,600), scale0.303125; no current sprite replacement.",
+    "size": 17,
+    "color": "#EEE9DA"
+  }
+]

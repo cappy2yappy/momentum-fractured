@@ -1,0 +1,15 @@
+{
+  "status": "schematic only, not new character frames",
+  "size": [
+    1600,
+    1000
+  ],
+  "boards": [
+    "STORYBOARD_depth_door",
+    "STORYBOARD_stairs",
+    "STORYBOARD_walk_run",
+    "ARCHITECTURE_entry_support_kit",
+    "CONTACT_new_frame_requirements"
+  ],
+  "new_frame_slots": 30
+}

@@ -1,0 +1,11 @@
+# TR-03 provenance, tools and reproduction
+
+All storyboard pose diagrams and architecture drawings are original authored technical SVGs with separate text-label JSON. They are not traced genre assets, final Kaze sprites, or generated paintings. Rendering uses a standalone Godot4.6.1 Node2D fixture under docs; the actual game scene/controller is not executed by the fixture. The32-frame contact sheet renders existing accepted Kaze textures at their manifest scales. Existing PNG source bytes are unchanged.
+
+Tool check: local Aseprite executable exists. Batch help/crop probes exited1, with empty diagnostics and no output; no successful Aseprite authoring or .aseprite deliverable is claimed. Higgsfield preferences were read; no image generation submitted or credits/allowance selected. The exact key-pose/timing diagrams were authored deterministically. Later painted frame production can use either tool after storyboard review and compatibility testing.
+
+Official Aseprite CLI reference consulted: https://www.aseprite.org/docs/cli/ . Future .aseprite layers/tags/PNG export proposals appear in SPRITE_PACK_SPEC.md. No external imagery/fonts/stock media or genre trademarks were copied into the new boards.
+
+Reproduce PNG boards/contact/audit: run official Godot4.6.1 with a graphical GL Compatibility renderer, disposable APPDATA and `--path . --script res://docs/art/tr03/render_review.gd -- --test`. The fixture changes only its own window/viewport to1600×1000 and never changes project.godot. SVG technical boards include labels for browser viewing; the standalone render uses text-free SVG shapes plus JSON label coordinates because Godot's SVG rasterizer doesn't reliably render SVG text. The actual source contact is at manifest world-pixel scale (approximately97px upright); schematic storyboard drawings display at0.8× for panel layout.
+
+Output boards are technical composition renders, **not in-engine transition gameplay evidence**. Renders were manually inspected; diagram overlap/turn occlusion found in first drafts was corrected and final outputs regenerated. A source renderer syntax error was corrected before the successful run. The final log contains the known root-certificate diagnostic and no script error. Sustained60FPS, playable transition behavior and new final-frame alpha/pivot acceptance remain untested.
