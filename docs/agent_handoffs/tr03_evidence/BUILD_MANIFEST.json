@@ -1,0 +1,13 @@
+{
+  "export_source_local": "a2b0052bca317fa4268d44b3b3df0e6fb5299639",
+  "export_source_remote": "3c57ec1b57d0b02ecb9649bfb0b5795f74d0ee70",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "zip": "Kaze-TR03-Embodied-Transitions-Windows.zip",
+  "zip_bytes": 51173375,
+  "zip_sha256": "c900a58829b2d6a1de226f717935525e31b41545626c4e284e6607f04ec23605",
+  "exe_sha256": "2e426f7564be64205fcb78672ff4cc3f2046f3965039e86bbf106ffad22b1289",
+  "zip_crc": "PASS",
+  "Windows_native_launch": "not run - Linux host; no Wine",
+  "macOS": "not exported",
+  "captured_fixture_runtime": "a2b0052 (scripted input/seeded progress, not human playtest)"
+}

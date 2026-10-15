@@ -103,7 +103,10 @@ func run():
 			w.set_physics_process(true);w.player.set_physics_process(true)
 			for tick in 6: await physics_frame
 			var action="right" if dir>0 else "left";Input.action_press(action)
-			if running: w.player.run=true
+			if running:
+				await physics_frame;Input.action_release(action);await physics_frame;Input.action_press(action)
+				await physics_frame;await physics_frame
+				check(w.player.run,"Actual directional double-tap activates existing run state")
 			var seen=false;var carried=0.0;var sampled_mode=""
 			for tick in 100:
 				await physics_frame

@@ -20,7 +20,8 @@ func run():
 	var output="res://build/tr03/capture";DirAccess.make_dir_recursive_absolute(output)
 	print("NATIVE_RENDER adapter=",RenderingServer.get_video_adapter_name()," driver=",RenderingServer.get_current_rendering_driver_name())
 	var pilots={"walk":[15,16],"run":[15,16],"stair_up":[14,17],"stair_down":[17,14],"depth":[14,13],"wind_fold":[20,13]}
-	for comparison in ["original","refined","reduced"]:
+	var capture_modes=[] if "--tr03-benchmark-only" in OS.get_cmdline_user_args() else ["original","refined","reduced"]
+	for comparison in capture_modes:
 		for pilot in pilots:
 			w.transition=0;w.pending_room=-1;w.mixed_transitions.cancel(w);w.embodied_transitions.cancel(w)
 			w.embodied_transitions.comparison=comparison;w.embodied_transitions.structural_dressing=comparison!="original"
@@ -40,7 +41,8 @@ func run():
 			w.mixed_transitions.cooldown=0;w.set_physics_process(true)
 			if pilot in ["walk","run"]:
 				Input.action_press("right")
-				if pilot=="run": w.player.run=true
+				if pilot=="run":
+					await physics_frame;Input.action_release("right");await physics_frame;Input.action_press("right")
 			else: w.interact()
 			var seen=false;var phase_captured=false
 			for i in 90:
