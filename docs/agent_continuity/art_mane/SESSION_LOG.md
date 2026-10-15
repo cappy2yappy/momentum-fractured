@@ -9,3 +9,7 @@ Read complete authoritative work order; verified TR-02e9a2d1a and art2b1ccec. Ex
 
 ## 2026-10-15 — TR-03 Lane B specs/storyboards handed off
 Published0d96f93 requirements before further authoring, then45ed20b storyboards/architecture/source audit and review PNGs. Opened draft PR#25 against vetted art branch. Preserved all character/biome artwork and runtime. Successful Godot technical-render/source-audit evidence, not playable transition acceptance. Final painted character frames are absent by design until creator review; Level may implement labeled placeholders now. Scope/ownership state mirrors next-task.md and baton-pass.state.json. Summary of executed work, not a transcript.
+
+
+## 2026-10-15 — TR-03 production revision
+Three painted previews plus full master, source prompt and extraction script delivered on art/alpha-0.6.1-tr03-production-revision. Baseline verifier passes. Creator approval pending; skin-tone fidelity explicitly flagged. Existing artwork preserved; no merge. See TR03_ART_PRODUCTION_REVISION_PM_REPORT.md.

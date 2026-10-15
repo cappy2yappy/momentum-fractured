@@ -1,0 +1,42 @@
+{
+  "status": "concept-review-pending",
+  "images": [
+    {
+      "path": "docs/art/tr03/production_revision/01_doorway.png",
+      "width": 1672,
+      "height": 307,
+      "sha256": "e2315668952409a145b6b0e0b2835a8971778165afbe1aa56d9901e4575fbc32",
+      "bytes": 989208
+    },
+    {
+      "path": "docs/art/tr03/production_revision/02_staircase.png",
+      "width": 1672,
+      "height": 283,
+      "sha256": "ab8b9cf1efd535b7efdf5df643f7ed142e4ff741db2de1d178fa0e648cfe572a",
+      "bytes": 804735
+    },
+    {
+      "path": "docs/art/tr03/production_revision/03_supported_crossing.png",
+      "width": 1672,
+      "height": 319,
+      "sha256": "3e3c8414f954aa660507b79fe7ed0532ba2c2dbcad9a4973aac84785265ede45",
+      "bytes": 1127912
+    },
+    {
+      "path": "docs/art/tr03/production_revision/TR03_production_triptych.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "041cf5bf815d7263125dc9ebf5f22a33ffea6e13dab77caf85d0c80864507302",
+      "bytes": 3149224
+    }
+  ],
+  "baseline_verification": "0 failures",
+  "protected_tracked_changes": [],
+  "visual_review": [
+    "Three painted poses, no schematic figures",
+    "Source identity referenced; skin lightening and costume interpretation require creator review",
+    "Doorway turn, stair contact and supported crossing visible"
+  ],
+  "export": "Godot headless panel extraction passed with disposable APPDATA; initial default-profile launch crashed signal 11. Certificate-store warning on successful run.",
+  "runtime_tests": "Not applicable: no runtime changes"
+}
