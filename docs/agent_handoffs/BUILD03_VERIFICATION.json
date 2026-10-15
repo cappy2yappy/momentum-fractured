@@ -1,0 +1,810 @@
+{
+  "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+  "workflow_run": 38674862607,
+  "artifacts": [
+    {
+      "artifact_id": 11946625394,
+      "name": "Kaze-Native-Smoke-Windows-x86_64-e9a2d1ab",
+      "outer_sha256": "sha256:069f9934fcf70f19853dcc44175e67d67d93234ba02d574f0fdc4eb213702113",
+      "outer_digest_verified": true,
+      "expiry": "2026-11-05T03:16:10Z",
+      "native_smoke": {
+        "comparison_launcher_boots": [
+          {
+            "pilot": "fresh",
+            "treatment": "graphic",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "walk",
+            "treatment": "plain",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "walk",
+            "treatment": "graphic",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "walk",
+            "treatment": "reduced",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "stair",
+            "treatment": "plain",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "stair",
+            "treatment": "graphic",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "stair",
+            "treatment": "reduced",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "special",
+            "treatment": "plain",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "special",
+            "treatment": "graphic",
+            "returncode": 0,
+            "hard_errors": []
+          },
+          {
+            "pilot": "special",
+            "treatment": "reduced",
+            "returncode": 0,
+            "hard_errors": []
+          }
+        ],
+        "status": "passed",
+        "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+        "target": "Windows-x86_64",
+        "os": "Windows",
+        "architecture": "AMD64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "edd8661a7a6b1bb2b528eb4c205e22ee84bae9629fe58c69daaae7ca998c2350"
+      }
+    },
+    {
+      "artifact_id": 11946385503,
+      "name": "Kaze-Native-Smoke-macOS-e9a2d1ab",
+      "outer_sha256": "sha256:5ad659677b9887b27e4275a276c18728431b73567ac8ba5bec8fc7508d5f36f6",
+      "outer_digest_verified": true,
+      "expiry": "2026-11-05T03:15:42Z",
+      "native_smoke": {
+        "comparison_launcher_boots": [],
+        "status": "passed",
+        "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+        "target": "macOS-Universal",
+        "os": "Darwin",
+        "architecture": "x86_64",
+        "returncode": 0,
+        "hard_errors": [],
+        "scope": "Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested",
+        "archive_sha256": "28794062b7385994e27ded8a3d1d34edc11fb52e9b2e7cbd423c1521b0e4e1bf"
+      }
+    },
+    {
+      "artifact_id": 11945887204,
+      "name": "Kaze-macOS-e9a2d1ab",
+      "outer_sha256": "sha256:98d871fbf95996f3452c19efc5f50946048108c6fcbff5fd71f66c9eab7f8a7a",
+      "outer_digest_verified": true,
+      "expiry": "2026-11-05T03:15:19Z",
+      "manifest": {
+        "branch": "feature/alpha-0.6.1-mixed-transitions",
+        "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-15T03:15:10.611656+00:00",
+        "target": "macOS-Universal",
+        "qa_outcome": "passed",
+        "qa_suite_count": 19,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "macOS arm64",
+          "macOS x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-Alpha-0.6.1-Candidate-macOS-Universal-e9a2d1ab.zip",
+          "size": 75954928,
+          "sha256": "28794062b7385994e27ded8a3d1d34edc11fb52e9b2e7cbd423c1521b0e4e1bf"
+        },
+        "members": [
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.5.0",
+            "size": 183849535,
+            "sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/PkgInfo",
+            "size": 9,
+            "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Info.plist",
+            "size": 1908,
+            "sha256": "3ac172d88aaa3702da4bc558fb0e145644f9b59b5845388acec97b824595edc0"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/icon.icns",
+            "size": 67500,
+            "sha256": "779ff524928785811d6d4c61f47a26491160b1092db9b610e85fcdfd9b2d2b2a"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/PrivacyInfo.xcprivacy",
+            "size": 229,
+            "sha256": "0535353bb08c25b8ce5ed9ac7e442a5994f402e0f6cbc4bed668cfc63c2ceac3"
+          },
+          {
+            "path": "Kaze \u2014 Silent District Alpha 0.5.0.app/Contents/Resources/Kaze \u2014 Silent District Alpha 0.5.0.pck",
+            "size": 15496284,
+            "sha256": "84086849404cbee54a6db2bc9498b2fabd9a71dde0aa428e6b0d00f39a76fa84"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 529,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        }
+      },
+      "independent_pck_entry_count": 529,
+      "member_hashes_verified": true,
+      "zip_crc_verified": true
+    },
+    {
+      "artifact_id": 11945867083,
+      "name": "Kaze-QA-Results-e9a2d1ab",
+      "outer_sha256": "sha256:175d781738cc04b126bd04a53320a3ba870154e3740bd379545b12f7ec11903d",
+      "outer_digest_verified": true,
+      "expiry": "2026-11-05T03:15:16Z",
+      "qa": {
+        "qa_mode": "candidate-full-regression",
+        "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+        "status": "passed",
+        "suite_count": 19,
+        "assertion_count": 897,
+        "failures": [],
+        "results": [
+          {
+            "suite": "import",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--import",
+              "--quit"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/import",
+            "returncode": 0,
+            "seconds": 11.83,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [
+              "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+              "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+              "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+              "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+              "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+              "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+            ],
+            "hard_errors": []
+          },
+          {
+            "suite": "verify_baseline",
+            "command": [
+              "/usr/bin/python3",
+              "tools/verify_baseline.py"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/verify",
+            "returncode": 0,
+            "seconds": 0.03,
+            "passes": 0,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_baseline",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/approved_baseline.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/approved_baseline",
+            "returncode": 0,
+            "seconds": 1.92,
+            "passes": 32,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "approved_combat_swing",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/approved_combat_swing.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/approved_combat_swing",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 7,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_expansion",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/annex_expansion.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/annex_expansion",
+            "returncode": 0,
+            "seconds": 3.5,
+            "passes": 34,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "annex_traversal",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/annex_traversal.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/annex_traversal",
+            "returncode": 0,
+            "seconds": 8.71,
+            "passes": 6,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "save_compatibility",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/save_compatibility.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/save_compatibility",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 11,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "skyworks_progression",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/skyworks_progression.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/skyworks_progression",
+            "returncode": 0,
+            "seconds": 5.08,
+            "passes": 33,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "storm_keeper",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/storm_keeper.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/storm_keeper",
+            "returncode": 0,
+            "seconds": 0.52,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "movement_momentum",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/movement_momentum.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/movement_momentum",
+            "returncode": 0,
+            "seconds": 8.89,
+            "passes": 53,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "sprite_integration",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/sprite_integration.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/sprite_integration",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 43,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_expansion",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/world_expansion.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/world_expansion",
+            "returncode": 0,
+            "seconds": 4.34,
+            "passes": 193,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_gates_save",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/expansion_gates_save.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/expansion_gates_save",
+            "returncode": 0,
+            "seconds": 3.78,
+            "passes": 17,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "expansion_traversal",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/expansion_traversal.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/expansion_traversal",
+            "returncode": 0,
+            "seconds": 98.05,
+            "passes": 125,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "gameplay_stabilization",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/gameplay_stabilization.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/gameplay_stabilization",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 16,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "traversal_transitions",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/traversal_transitions.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/traversal_transitions",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 8,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "world_cohesion_traversal",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/world_cohesion_traversal.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/world_cohesion_traversal",
+            "returncode": 0,
+            "seconds": 60.21,
+            "passes": 56,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_candidate",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/integration_candidate.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/integration_candidate",
+            "returncode": 0,
+            "seconds": 0.43,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "integration_descent",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/integration_descent.gd",
+              "--",
+              "--test"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/integration_descent",
+            "returncode": 0,
+            "seconds": 0.52,
+            "passes": 26,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_prepare",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/integration_profile.gd",
+              "--",
+              "--prepare"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/restart-1792034082011194273",
+            "returncode": 0,
+            "seconds": 0.44,
+            "passes": 2,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "profile_reload",
+            "command": [
+              "/home/runner/work/_temp/godot-4.6.1/Godot_v4.6.1-stable_linux.x86_64",
+              "--headless",
+              "--path",
+              "/home/runner/work/momentum-fractured/momentum-fractured/game-source",
+              "--script",
+              "res://tests/integration_profile.gd",
+              "--",
+              "--reload"
+            ],
+            "home": "/home/runner/work/momentum-fractured/momentum-fractured/game-source/build/int01/profiles/restart-1792034082011194273",
+            "returncode": 0,
+            "seconds": 0.44,
+            "passes": 5,
+            "failures": 0,
+            "script_errors": 0,
+            "warnings": [],
+            "hard_errors": []
+          },
+          {
+            "suite": "mixed_transitions",
+            "returncode": 0,
+            "passes": 109,
+            "failures": 0,
+            "script_errors": 0,
+            "seconds": 4.06,
+            "hard_errors": []
+          },
+          {
+            "suite": "room_transition_prototype",
+            "returncode": 0,
+            "passes": 93,
+            "failures": 0,
+            "script_errors": 0,
+            "seconds": 1.08,
+            "hard_errors": []
+          },
+          {
+            "suite": "mixed_profile_fresh",
+            "returncode": 0,
+            "passes": 1,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": []
+          },
+          {
+            "suite": "mixed_profile_walk",
+            "returncode": 0,
+            "passes": 1,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": []
+          },
+          {
+            "suite": "mixed_profile_stair",
+            "returncode": 0,
+            "passes": 1,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": []
+          },
+          {
+            "suite": "mixed_profile_special",
+            "returncode": 0,
+            "passes": 1,
+            "failures": 0,
+            "script_errors": 0,
+            "hard_errors": []
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": 11945722171,
+      "name": "Kaze-Windows-x86_64-e9a2d1ab",
+      "outer_sha256": "sha256:f59b4e83fed5c4745139b215060a62cb956ad3515f16be971f8e46121de2fa1e",
+      "outer_digest_verified": true,
+      "expiry": "2026-11-05T03:15:17Z",
+      "manifest": {
+        "branch": "feature/alpha-0.6.1-mixed-transitions",
+        "source_sha": "e9a2d1ab0537f3f903c543b080451b3556961179",
+        "godot_version": "4.6.1.stable.official.14d19694e",
+        "templates": "4.6.1.stable",
+        "templates_sha256": "e6d372afd4fdfaae9571eb5e3568afcd96ce6db9a569244034154faf0ac69875",
+        "timestamp_utc": "2026-10-15T03:14:58.412471+00:00",
+        "target": "Windows-x86_64",
+        "qa_outcome": "passed",
+        "qa_suite_count": 19,
+        "qa_mode": "candidate-full-regression",
+        "qa_unavailable_checks": [],
+        "temporary_export_overrides": [],
+        "template_derivation": "none",
+        "preset_origin": "source",
+        "native_boot": "untested; export/package verified only",
+        "tested_architectures": [
+          "Linux x86_64 headless source QA"
+        ],
+        "untested_architectures": [
+          "Windows x86_64"
+        ],
+        "zip": {
+          "name": "Kaze-TR02-Mixed-Transitions-Windows-e9a2d1ab.zip",
+          "size": 51162244,
+          "sha256": "edd8661a7a6b1bb2b528eb4c205e22ee84bae9629fe58c69daaae7ca998c2350"
+        },
+        "members": [
+          {
+            "path": "Kaze-TR02.exe",
+            "size": 119931992,
+            "sha256": "96d1806f38f1e4d17a08698c0003f9bdaa25fdffd4a30fb13e560cfa94c1564b"
+          },
+          {
+            "path": "launch.ps1",
+            "size": 2079,
+            "sha256": "53d3daa3bbce0252e0a3fadc410ae64db524d82ee11b350f21b50099761fc290"
+          },
+          {
+            "path": "README.txt",
+            "size": 1970,
+            "sha256": "c83bec5b3516de716370e706e9f4ef0aa648725fb94ca101ba606aed8620e59b"
+          },
+          {
+            "path": "Play-fresh-graphic.cmd",
+            "size": 118,
+            "sha256": "9b230f88b5a24056dde9669f594ce6e48524caa9fce967bf6eae3c58a71ed47d"
+          },
+          {
+            "path": "Play-walk-plain.cmd",
+            "size": 115,
+            "sha256": "73a73e6a71590ede065fb755c5a8b65e42ec3d44db390ded89542204bc47ba5f"
+          },
+          {
+            "path": "Play-walk-graphic.cmd",
+            "size": 117,
+            "sha256": "8633dcf04e634d740f7d385480a4f4a1d901db1d57f23072faa073f4762abe15"
+          },
+          {
+            "path": "Play-walk-reduced.cmd",
+            "size": 117,
+            "sha256": "34cb2ddb5824bb09f190a11db0f13052db5846918013f91a4373e6368dfd0404"
+          },
+          {
+            "path": "Play-stair-plain.cmd",
+            "size": 116,
+            "sha256": "9c71f1966563e5f89e31ab5d4c84b03ef6c86987b2234d9ecfd32fdb962c4daa"
+          },
+          {
+            "path": "Play-stair-graphic.cmd",
+            "size": 118,
+            "sha256": "f17c277eae4562d01f52a438ff80c790da6a6f1cd65d5ac495f7839447d5dc4b"
+          },
+          {
+            "path": "Play-stair-reduced.cmd",
+            "size": 118,
+            "sha256": "e5d61ca3e1893efa5473c4cb9da3f3d07d1a23fbb81a9ea88d83b682f422b6bd"
+          },
+          {
+            "path": "Play-special-plain.cmd",
+            "size": 118,
+            "sha256": "067fa0a442baba6ab9f2f45834dee282f34190a40b4698c9ebeb5e5bbb03caa7"
+          },
+          {
+            "path": "Play-special-graphic.cmd",
+            "size": 120,
+            "sha256": "8f1be2777619690944476af45952e33035655c4908d7f295390942663df72a3d"
+          },
+          {
+            "path": "Play-special-reduced.cmd",
+            "size": 120,
+            "sha256": "86133da56f705fe692b0f72d4ae4bd279c33c1d8d2a369e099e0f2a22376d37b"
+          }
+        ],
+        "pack_audit": {
+          "entry_count": 529,
+          "world_data_verified": true,
+          "forbidden_entries": []
+        },
+        "feature_set": "TR-02 mixed transitions; no AUD-01 audio branch integration",
+        "comparison_modes": [
+          "walk",
+          "stair",
+          "special",
+          "plain",
+          "graphic",
+          "reduced",
+          "fresh"
+        ]
+      },
+      "independent_pck_entry_count": 529,
+      "member_hashes_verified": true,
+      "zip_crc_verified": true
+    }
+  ]
+}
