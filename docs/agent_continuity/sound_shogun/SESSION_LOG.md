@@ -8,3 +8,5 @@
 Future updates must include exact remote commits and actual creator decisions.
 
 - **2026-10-14 — AUD02 execution.** Creator assigned curation of attached ZIP plus16 references; unverified originals restricted to private review. Recovered AUD01 at da121f1, decoded512 WAVs, prepared28 provisional comparisons and12 opt-in original cues. Agent perceptual audition unavailable; this creative gap is explicit. Fresh source951 and Windows exported-resource130 assertions passed; report and raw evidence published on own audio-curation branch. No soundtrack, shared branch update or merge.
+
+- **2026-10-15 — Creator listening feedback.** Only slight improvement; sounds still generic and unimpressive. Creator unsure intended sounds were active. Review launcher in delivered Windows ZIP verified to pass --audio-bank=aud02; direct executable defaults to AUD01. Actual creator launch path/bank remains unconfirmed. Creative revision needed; no cue selection, sonic identity approval or merge approval inferred. See PM report feedback section.

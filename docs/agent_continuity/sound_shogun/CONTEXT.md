@@ -22,3 +22,11 @@ quality or macOS runtime claim. See AUD02 PM report and aud02_evidence.
 Next owner: creator/listening-capable reviewer, then Sound Shogun for targeted
 revision. Export choices from labeled review board. Preference is not rights
 clearance; do not merge or activate the bank by default without approval.
+
+## Latest creator feedback — 2026-10-15
+
+Only slight improvement; still generic, not impressive. Creative direction remains
+unapproved. Creator's audible bank is unconfirmed: delivered launcher selects
+AUD02 originals, direct executable selects AUD01. Supplied reference recordings
+are not in the playable build. See PM report for verified launch details and next
+listening-review steps. No new audio or gameplay changes made for this feedback.

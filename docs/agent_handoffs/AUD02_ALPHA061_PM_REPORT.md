@@ -130,3 +130,24 @@ or commission an original alternative using broad characteristics. Do not infer
 approval from attachment, algorithmic score, technical QA or Music Director role.
 Then revise sound design, check fatigue/device mix/latency and long play sessions,
 test macOS natively, and obtain PM approval before any integration merge.
+
+## Creator playtest feedback — 2026-10-15
+
+Creator described the sound result as only slightly improved/okay, not impressive,
+and still resembling a generic sound pack. Creator was unsure whether the build
+actually contained the intended new sounds. Record this as **creative revision
+needed**, not approval of AUD02's sonic identity, any source recording, or a merge.
+No per-cue choices or specific replacement instructions were given.
+
+Verified the delivered Windows ZIP's `Play AUD02 Review.bat`: it launches with
+`--test --audio-bank=aud02`. The 12 original alternatives are packaged; supplied
+recordings are intentionally excluded. The director defaults to AUD01 when the
+executable is opened directly without that argument. Which launch path the creator
+used is unknown, so the bank heard during this playtest is **unconfirmed**.
+
+Next review should identify the active bank before judging individual cues, then
+compare labeled supplied references / original candidates / AUD01 fallbacks.
+Keep the sound direction open; do not treat more generic synthesis or passing
+technical tests as resolution of this feedback. No new generation, gameplay edit,
+source redistribution or default-bank promotion is authorized by this feedback.
+The existing task authorization for targeted original revisions remains in force.
