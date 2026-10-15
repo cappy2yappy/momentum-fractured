@@ -12,6 +12,7 @@ static func pilot_portal(w, at: Vector2) -> Dictionary:
 	return {}
 
 static func draw_exit(w, at: Vector2, color: Color):
+	if w.embodied_transitions.draw_exit(w,at): return
 	if w.mixed_transitions.draw_exit(w,at): return
 	var portal = pilot_portal(w, at)
 	if not portal.is_empty():
@@ -31,6 +32,7 @@ static func draw_legacy_exit(w, at: Vector2, color: Color):
 	w.draw_string(ThemeDB.fallback_font,at+Vector2(-5,-18),"E",HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e6dcc4"))
 
 static func draw_background(w):
+	w.embodied_transitions.draw_dressing(w)
 	var size=w.room_size(w.room)
 	var font=ThemeDB.fallback_font
 	if w.room==14:
@@ -121,6 +123,7 @@ static func uses_pilot_transition(w) -> bool:
 	return w.transition > 0 and (w.pending_from_room in PILOT_STYLES or w.room in PILOT_STYLES or w.pending_room in PILOT_STYLES)
 
 static func draw_transition(h, w, alpha: float) -> bool:
+	if w.embodied_transitions.draw_overlay(h,w,alpha): return true
 	if w.mixed_transitions.draw_transition(h,w,alpha): return true
 	if not uses_pilot_transition(w): return false
 	# No player mutation, shader, timer, particles or persistent visual state.
