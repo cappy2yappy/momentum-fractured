@@ -1,0 +1,30 @@
+{
+  "status": "passed technical image QA; creator visual acceptance pending",
+  "date": "2026-10-15",
+  "strict_decode": "passed all 8 new PNGs with truncation disabled",
+  "png_chunk_crc": "passed all chunks; IEND present on all 8",
+  "baseline_verifier": "python3 tools/verify_baseline.py: 0 failures",
+  "visual_inspection": {
+    "doorway": "Full head-to-boot figure; rear-quarter turn into recessed doorway, planted threshold boot and trailing foot; amber lighting and brown skin. Chest bow largely hidden by rear angle.",
+    "staircase": "Full silhouette; upper leading boot and lower trailing boot contact distinct treads; bent leading knee and forward weight; masonry support and landing visible; brown skin under cool lighting.",
+    "crossing": "Full running figure; front boot contacts uninterrupted deck, complete masonry arch and piers rooted below, diagonal timber landing bracing visible.",
+    "presentation": "Full paintings, gallery and before/after opened and inspected. 1280x720 copies are static review reductions, not in-engine captures."
+  },
+  "limitations": [
+    "No layered painting source; PNG masters are flattened.",
+    "No pixel-exact character approval; creator must review identity and lighting.",
+    "No new sprites, stair descent drawing, walk cycle or integrated animation.",
+    "Not a gameplay-scale or 60FPS certification."
+  ],
+  "protected_changes": [],
+  "tools_used": [
+    "OpenAI built-in image_gen",
+    "Pillow",
+    "Git",
+    "GitHub"
+  ],
+  "tools_not_used": [
+    "Aseprite",
+    "Higgsfield"
+  ]
+}

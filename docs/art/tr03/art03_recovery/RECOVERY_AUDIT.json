@@ -1,0 +1,73 @@
+{
+  "base": "0b96d41fa7b6b424591fdd685f5c8fdf9290c02b",
+  "findings": [
+    {
+      "path": "docs/art/tr03/production_revision/01_doorway.png",
+      "bytes": 786444,
+      "sha256": "30d3c46c0229125e31ad0b14209bb8e7822c76d2f3f48aaa9e76bb1f490ffb69",
+      "crc_errors": [
+        "IDAT",
+        "\ufffd?\ufffd\ufffd"
+      ],
+      "iend_present": false,
+      "width": 1672,
+      "height": 307,
+      "mode": "RGB",
+      "strict_decode": "broken PNG file (chunk b'\\xd9?\\xf8\\xe9')",
+      "recorded_bytes": 989208,
+      "recorded_sha256": "e2315668952409a145b6b0e0b2835a8971778165afbe1aa56d9901e4575fbc32",
+      "recorded_hash_matches": false
+    },
+    {
+      "path": "docs/art/tr03/production_revision/02_staircase.png",
+      "bytes": 786443,
+      "sha256": "f55619a8a0dea39ca4bb0147e2f3d8a3eb784424ae12cc0fd3df4d940ad33afa",
+      "crc_errors": [
+        "IDAT",
+        "m\ufffd\ufffd\ufffd"
+      ],
+      "iend_present": false,
+      "width": 1672,
+      "height": 283,
+      "mode": "RGB",
+      "strict_decode": "broken PNG file (chunk b'm\\xf1\\xfa\\xf6')",
+      "recorded_bytes": 804735,
+      "recorded_sha256": "ab8b9cf1efd535b7efdf5df643f7ed142e4ff741db2de1d178fa0e648cfe572a",
+      "recorded_hash_matches": false
+    },
+    {
+      "path": "docs/art/tr03/production_revision/03_supported_crossing.png",
+      "bytes": 786443,
+      "sha256": "dbac9743a784b497945fa7c081a4f931a4a1d3caa9bbbec2a06429475abc95ac",
+      "crc_errors": [
+        "IDAT",
+        "\ufffd\ufffd\u001b\ufffd"
+      ],
+      "iend_present": false,
+      "width": 1672,
+      "height": 319,
+      "mode": "RGB",
+      "strict_decode": "broken PNG file (chunk b'\\xef\\xbd\\x1b\\xef')",
+      "recorded_bytes": 1127912,
+      "recorded_sha256": "3e3c8414f954aa660507b79fe7ed0532ba2c2dbcad9a4973aac84785265ede45",
+      "recorded_hash_matches": false
+    },
+    {
+      "path": "docs/art/tr03/production_revision/TR03_production_triptych.png",
+      "bytes": 786443,
+      "sha256": "78f604d7619735038cfb11c0fe5a6b1501d0c27f636ad614f542a961614f702f",
+      "crc_errors": [
+        "IDAT"
+      ],
+      "iend_present": false,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "strict_decode": "broken data stream when reading image file",
+      "recorded_bytes": 3149224,
+      "recorded_sha256": "041cf5bf815d7263125dc9ebf5f22a33ffea6e13dab77caf85d0c80864507302",
+      "recorded_hash_matches": false
+    }
+  ],
+  "conclusion": "All four committed PNGs fail strict decoding and recorded integrity checks. Partial decoding exposes only upper scanlines. Complete compositions could not be recovered from this Git master. Cause of corruption is unproven. New paintings reconstruct missing content."
+}

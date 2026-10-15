@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1328" height="2440" viewBox="0 0 1328 2440">
+<rect width="1328" height="2440" fill="#111923"/>
+<text x="24" y="40" fill="#efdfc1" font-size="25" font-family="Arial">KAZE / ART-03 — complete painted concepts</text>
+<text x="24" y="127" fill="#efdfc1" font-size="25" font-family="Arial">01  Doorway / Hidden Village / 1672 × 941</text>
+<image href="01_doorway.png" x="24" y="144" width="1280" height="721" preserveAspectRatio="xMidYMid meet"/>
+<text x="24" y="903" fill="#efdfc1" font-size="25" font-family="Arial">02  Stair ascent / Silent District / 1672 × 941</text>
+<image href="02_staircase.png" x="24" y="920" width="1280" height="721" preserveAspectRatio="xMidYMid meet"/>
+<text x="24" y="1679" fill="#efdfc1" font-size="25" font-family="Arial">03  Supported crossing / Canal Remains / 1672 × 941</text>
+<image href="03_supported_crossing.png" x="24" y="1696" width="1280" height="721" preserveAspectRatio="xMidYMid meet"/>
+</svg>
