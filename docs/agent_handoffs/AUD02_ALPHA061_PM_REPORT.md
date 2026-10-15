@@ -114,8 +114,11 @@ No claims are based on that abandoned attempt.
 
 ## Continuity, branch and remaining decisions
 
-Branch: `feature/alpha-0.6.1-audio-curation`; draft PR and exact published commit
-are recorded in the following publication checkpoint/continuity update.
+Branch: `feature/alpha-0.6.1-audio-curation`.
+Published runtime/inventory/evidence commit: `acc5699ae008be1c9c2345fbea487131718642b4`.
+Draft PR: https://github.com/cappy2yappy/momentum-fractured/pull/21
+The PR targets AUD01's `feature/alpha-0.6.1-audio-foundation` to isolate this delta;
+PR17 remains an explicit dependency. This documentation checkpoint adds no runtime changes.
 AUD01 remains an open prerequisite; no shared branch has been updated or merged.
 Historical AUD01 architecture and reports are unchanged. PM02 records are updated
 under `docs/agent_continuity/sound_shogun/`.

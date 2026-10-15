@@ -5,6 +5,6 @@
 - **2026-10-14 — PM technical review.** Technical submission accepted for creator listening, **not sound taste approval or integration**. See [PR comment](https://github.com/cappy2yappy/momentum-fractured/pull/17#issuecomment-6178699164).
 - **2026-10-14 — Chat visibility problem.** Creator cannot find original specialist conversation; details of missing chat are unknown. No transcript was auto-archived.
 
-Next update must include new exact remote commit and creator's specific sonic feedback, not an invented reconstruction.
+Future updates must include exact remote commits and actual creator decisions.
 
 - **2026-10-14 — AUD02 execution.** Creator assigned curation of attached ZIP plus16 references; unverified originals restricted to private review. Recovered AUD01 at da121f1, decoded512 WAVs, prepared28 provisional comparisons and12 opt-in original cues. Agent perceptual audition unavailable; this creative gap is explicit. Fresh source951 and Windows exported-resource130 assertions passed; report and raw evidence published on own audio-curation branch. No soundtrack, shared branch update or merge.

@@ -3,7 +3,9 @@
 Mission: AUD02 sound curation/integration. Creator remains Music Director.
 Branch: `feature/alpha-0.6.1-audio-curation`.
 Recovered source: `da121f19f85b49c3bb5e1c7910472c448c673935` / draft PR17.
-Published AUD02 commit/PR: recorded by the publication follow-up checkpoint.
+Published runtime/inventory/evidence: `acc5699ae008be1c9c2345fbea487131718642b4`.
+Draft PR: https://github.com/cappy2yappy/momentum-fractured/pull/21
+PR base is AUD01's audio-foundation branch; stacked dependency on PR17.
 
 Status: technical candidate complete; creative listening PARTIAL.512 decoded,
 0 perceptually auditioned by agent,0 confirmed suitable,28 provisional waveform
