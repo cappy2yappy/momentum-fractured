@@ -1,0 +1,2354 @@
+{
+  "endpoints": [
+    {
+      "arrival": [
+        230.0,
+        1298.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 0,
+      "target": 1
+    },
+    {
+      "arrival": [
+        120.0,
+        1198.0
+      ],
+      "at": [
+        590.0,
+        780.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "windstep",
+      "source": 0,
+      "target": 13
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 1,
+      "target": 0
+    },
+    {
+      "arrival": [
+        230.0,
+        1298.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 1,
+      "target": 2
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 2,
+      "target": 1
+    },
+    {
+      "arrival": [
+        230.0,
+        848.0
+      ],
+      "at": [
+        2440.0,
+        850.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 2,
+      "target": 3
+    },
+    {
+      "arrival": [
+        120.0,
+        498.0
+      ],
+      "at": [
+        470.0,
+        1120.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "sluice",
+      "source": 2,
+      "target": 15
+    },
+    {
+      "arrival": [
+        2300.0,
+        848.0
+      ],
+      "at": [
+        120.0,
+        850.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 3,
+      "target": 2
+    },
+    {
+      "arrival": [
+        230.0,
+        1298.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 3,
+      "target": 4
+    },
+    {
+      "arrival": [
+        480.0,
+        618.0
+      ],
+      "at": [
+        2250.0,
+        790.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "terrace_return_relay",
+      "source": 3,
+      "target": 9
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 4,
+      "target": 3
+    },
+    {
+      "arrival": [
+        230.0,
+        1078.0
+      ],
+      "at": [
+        2440.0,
+        1080.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 4,
+      "target": 5
+    },
+    {
+      "arrival": [
+        2300.0,
+        1078.0
+      ],
+      "at": [
+        120.0,
+        1080.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 5,
+      "target": 4
+    },
+    {
+      "arrival": [
+        230.0,
+        1298.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 5,
+      "target": 6
+    },
+    {
+      "arrival": [
+        120.0,
+        1898.0
+      ],
+      "at": [
+        2240.0,
+        930.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "climb",
+      "source": 5,
+      "target": 17
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 6,
+      "target": 5
+    },
+    {
+      "arrival": [
+        230.0,
+        1088.0
+      ],
+      "at": [
+        2440.0,
+        1090.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 6,
+      "target": 7
+    },
+    {
+      "arrival": [
+        2300.0,
+        1088.0
+      ],
+      "at": [
+        120.0,
+        1090.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 7,
+      "target": 6
+    },
+    {
+      "arrival": [
+        230.0,
+        1088.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 7,
+      "target": 8
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1090.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 8,
+      "target": 7
+    },
+    {
+      "arrival": [
+        230.0,
+        828.0
+      ],
+      "at": [
+        2440.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 8,
+      "target": 9
+    },
+    {
+      "arrival": [
+        1880.0,
+        758.0
+      ],
+      "at": [
+        550.0,
+        1110.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 8,
+      "target": 16
+    },
+    {
+      "arrival": [
+        1200.0,
+        1178.0
+      ],
+      "at": [
+        1090.0,
+        920.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 8,
+      "target": 18
+    },
+    {
+      "arrival": [
+        430.0,
+        828.0
+      ],
+      "at": [
+        1470.0,
+        740.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "skyworks_restored",
+      "source": 8,
+      "target": 12
+    },
+    {
+      "arrival": [
+        2300.0,
+        828.0
+      ],
+      "at": [
+        120.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 9,
+      "target": 8
+    },
+    {
+      "arrival": [
+        230.0,
+        828.0
+      ],
+      "at": [
+        2440.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 9,
+      "target": 10
+    },
+    {
+      "arrival": [
+        2440.0,
+        828.0
+      ],
+      "at": [
+        1100.0,
+        1040.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 9,
+      "target": 14
+    },
+    {
+      "arrival": [
+        2100.0,
+        788.0
+      ],
+      "at": [
+        160.0,
+        620.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "terrace_return_relay",
+      "source": 9,
+      "target": 3
+    },
+    {
+      "arrival": [
+        2300.0,
+        828.0
+      ],
+      "at": [
+        120.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 10,
+      "target": 9
+    },
+    {
+      "arrival": [
+        230.0,
+        758.0
+      ],
+      "at": [
+        2440.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 10,
+      "target": 11
+    },
+    {
+      "arrival": [
+        2300.0,
+        758.0
+      ],
+      "at": [
+        120.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 11,
+      "target": 10
+    },
+    {
+      "arrival": [
+        230.0,
+        1298.0
+      ],
+      "at": [
+        2440.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 11,
+      "target": 12
+    },
+    {
+      "arrival": [
+        2280.0,
+        978.0
+      ],
+      "at": [
+        890.0,
+        980.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "regional",
+      "source": 11,
+      "target": 19
+    },
+    {
+      "arrival": [
+        2300.0,
+        1298.0
+      ],
+      "at": [
+        120.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "original forward/reverse chain policy",
+      "source": 12,
+      "target": 11
+    },
+    {
+      "arrival": [
+        1590.0,
+        738.0
+      ],
+      "at": [
+        220.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "skyworks_restored",
+      "source": 12,
+      "target": 8
+    },
+    {
+      "arrival": [
+        590.0,
+        778.0
+      ],
+      "at": [
+        120.0,
+        1200.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "windstep",
+      "source": 13,
+      "target": 0
+    },
+    {
+      "arrival": [
+        120.0,
+        1098.0
+      ],
+      "at": [
+        1680.0,
+        560.0
+      ],
+      "depth_demo": true,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "windstep",
+      "source": 13,
+      "target": 14
+    },
+    {
+      "arrival": [
+        600.0,
+        518.0
+      ],
+      "at": [
+        900.0,
+        400.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "wind_fold",
+        "trigger": "interact"
+      },
+      "requirement": "junction",
+      "source": 13,
+      "target": 20
+    },
+    {
+      "arrival": [
+        1680.0,
+        558.0
+      ],
+      "at": [
+        120.0,
+        1100.0
+      ],
+      "depth_demo": true,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "windstep",
+      "source": 14,
+      "target": 13
+    },
+    {
+      "arrival": [
+        1100.0,
+        1038.0
+      ],
+      "at": [
+        2440.0,
+        830.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 14,
+      "target": 9
+    },
+    {
+      "arrival": [
+        1680.0,
+        1298.0
+      ],
+      "at": [
+        1450.0,
+        480.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "arrival_heading": -1,
+        "exit_heading": 1,
+        "mode": "stair_up",
+        "rise": -1
+      },
+      "requirement": "climb",
+      "source": 14,
+      "target": 17
+    },
+    {
+      "arrival": [
+        470.0,
+        1118.0
+      ],
+      "at": [
+        120.0,
+        500.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "sluice",
+      "source": 15,
+      "target": 2
+    },
+    {
+      "arrival": [
+        120.0,
+        1118.0
+      ],
+      "at": [
+        2080.0,
+        1120.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "arrival_heading": 1,
+        "dynamic_run": true,
+        "exit_heading": 1,
+        "mode": "horizontal_walk",
+        "trigger": "directional"
+      },
+      "requirement": "relay",
+      "source": 15,
+      "target": 16
+    },
+    {
+      "arrival": [
+        2080.0,
+        1118.0
+      ],
+      "at": [
+        120.0,
+        1120.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "arrival_heading": -1,
+        "dynamic_run": true,
+        "exit_heading": -1,
+        "mode": "horizontal_walk",
+        "trigger": "directional"
+      },
+      "requirement": "relay",
+      "source": 16,
+      "target": 15
+    },
+    {
+      "arrival": [
+        550.0,
+        1108.0
+      ],
+      "at": [
+        1880.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 16,
+      "target": 8
+    },
+    {
+      "arrival": [
+        120.0,
+        998.0
+      ],
+      "at": [
+        1000.0,
+        430.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 16,
+      "target": 18
+    },
+    {
+      "arrival": [
+        1450.0,
+        478.0
+      ],
+      "at": [
+        1680.0,
+        1300.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "arrival_heading": 1,
+        "exit_heading": -1,
+        "mode": "stair_down",
+        "rise": 1
+      },
+      "requirement": "climb",
+      "source": 17,
+      "target": 14
+    },
+    {
+      "arrival": [
+        2240.0,
+        928.0
+      ],
+      "at": [
+        120.0,
+        1900.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "climb",
+      "source": 17,
+      "target": 5
+    },
+    {
+      "arrival": [
+        120.0,
+        758.0
+      ],
+      "at": [
+        1500.0,
+        420.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "spire",
+      "source": 17,
+      "target": 20
+    },
+    {
+      "arrival": [
+        1000.0,
+        428.0
+      ],
+      "at": [
+        120.0,
+        1000.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 18,
+      "target": 16
+    },
+    {
+      "arrival": [
+        1090.0,
+        918.0
+      ],
+      "at": [
+        1200.0,
+        1180.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "relay",
+      "source": 18,
+      "target": 8
+    },
+    {
+      "arrival": [
+        120.0,
+        758.0
+      ],
+      "at": [
+        2440.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "pump",
+      "source": 18,
+      "target": 19
+    },
+    {
+      "arrival": [
+        2440.0,
+        758.0
+      ],
+      "at": [
+        120.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "pump",
+      "source": 19,
+      "target": 18
+    },
+    {
+      "arrival": [
+        890.0,
+        978.0
+      ],
+      "at": [
+        2280.0,
+        980.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "regional",
+      "source": 19,
+      "target": 11
+    },
+    {
+      "arrival": [
+        2080.0,
+        1118.0
+      ],
+      "at": [
+        1800.0,
+        480.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "coil",
+      "source": 19,
+      "target": 20
+    },
+    {
+      "arrival": [
+        1500.0,
+        418.0
+      ],
+      "at": [
+        120.0,
+        760.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "spire",
+      "source": 20,
+      "target": 17
+    },
+    {
+      "arrival": [
+        1800.0,
+        478.0
+      ],
+      "at": [
+        2080.0,
+        1120.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "fallback",
+        "reason": "orientation not authored; preserve existing presentation"
+      },
+      "requirement": "coil",
+      "source": 20,
+      "target": 19
+    },
+    {
+      "arrival": [
+        900.0,
+        398.0
+      ],
+      "at": [
+        600.0,
+        520.0
+      ],
+      "depth_demo": false,
+      "presentation": {
+        "mode": "wind_fold",
+        "trigger": "interact"
+      },
+      "requirement": "junction",
+      "source": 20,
+      "target": 13
+    }
+  ],
+  "rooms": [
+    {
+      "id": 0,
+      "map_cell": [
+        0,
+        2,
+        0
+      ],
+      "name": "CANAL HAVEN",
+      "unsupported_candidates": [
+        [
+          480.0,
+          1110.0,
+          300.0,
+          40.0
+        ],
+        [
+          1400.0,
+          1080.0,
+          300.0,
+          40.0
+        ],
+        [
+          1850.0,
+          900.0,
+          300.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "map_cell": [
+        1,
+        2,
+        0
+      ],
+      "name": "LANTERN MARKET",
+      "unsupported_candidates": [
+        [
+          370.0,
+          1120.0,
+          280.0,
+          40.0
+        ],
+        [
+          790.0,
+          950.0,
+          330.0,
+          40.0
+        ],
+        [
+          1450.0,
+          1080.0,
+          300.0,
+          40.0
+        ],
+        [
+          1800.0,
+          900.0,
+          270.0,
+          40.0
+        ],
+        [
+          2140.0,
+          720.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "map_cell": [
+        2,
+        2,
+        0
+      ],
+      "name": "FLOODED CISTERN",
+      "unsupported_candidates": [
+        [
+          330.0,
+          1120.0,
+          260.0,
+          40.0
+        ],
+        [
+          710.0,
+          940.0,
+          280.0,
+          40.0
+        ],
+        [
+          1090.0,
+          1100.0,
+          300.0,
+          40.0
+        ],
+        [
+          1510.0,
+          870.0,
+          300.0,
+          40.0
+        ],
+        [
+          1980.0,
+          1050.0,
+          250.0,
+          40.0
+        ],
+        [
+          2220.0,
+          850.0,
+          260.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "map_cell": [
+        2,
+        1,
+        0
+      ],
+      "name": "ECHO SHRINE",
+      "unsupported_candidates": [
+        [
+          0.0,
+          850.0,
+          300.0,
+          40.0
+        ],
+        [
+          420.0,
+          1060.0,
+          330.0,
+          40.0
+        ],
+        [
+          920.0,
+          830.0,
+          360.0,
+          40.0
+        ],
+        [
+          1480.0,
+          1030.0,
+          340.0,
+          40.0
+        ],
+        [
+          2000.0,
+          790.0,
+          340.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "map_cell": [
+        3,
+        1,
+        0
+      ],
+      "name": "BROKEN SPAN",
+      "unsupported_candidates": [
+        [
+          300.0,
+          1110.0,
+          310.0,
+          40.0
+        ],
+        [
+          930.0,
+          1030.0,
+          270.0,
+          40.0
+        ],
+        [
+          1530.0,
+          890.0,
+          270.0,
+          40.0
+        ],
+        [
+          2130.0,
+          1080.0,
+          270.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "map_cell": [
+        4,
+        1,
+        0
+      ],
+      "name": "ASCENT TOWER",
+      "unsupported_candidates": [
+        [
+          0.0,
+          1080.0,
+          280.0,
+          40.0
+        ],
+        [
+          300.0,
+          1110.0,
+          280.0,
+          40.0
+        ],
+        [
+          680.0,
+          900.0,
+          280.0,
+          40.0
+        ],
+        [
+          1030.0,
+          680.0,
+          280.0,
+          40.0
+        ],
+        [
+          1390.0,
+          930.0,
+          280.0,
+          40.0
+        ],
+        [
+          1760.0,
+          700.0,
+          280.0,
+          40.0
+        ],
+        [
+          2130.0,
+          930.0,
+          470.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "map_cell": [
+        4,
+        0,
+        0
+      ],
+      "name": "TIDE WARDEN",
+      "unsupported_candidates": [
+        [
+          300.0,
+          1110.0,
+          280.0,
+          40.0
+        ],
+        [
+          760.0,
+          1000.0,
+          310.0,
+          40.0
+        ],
+        [
+          1510.0,
+          1000.0,
+          310.0,
+          40.0
+        ],
+        [
+          2020.0,
+          1110.0,
+          580.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "map_cell": [
+        5,
+        0,
+        0
+      ],
+      "name": "RELAY ARCHIVE",
+      "unsupported_candidates": [
+        [
+          0.0,
+          1090.0,
+          300.0,
+          40.0
+        ],
+        [
+          390.0,
+          1090.0,
+          300.0,
+          40.0
+        ],
+        [
+          820.0,
+          870.0,
+          340.0,
+          40.0
+        ],
+        [
+          1300.0,
+          650.0,
+          380.0,
+          40.0
+        ],
+        [
+          1830.0,
+          880.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "map_cell": [
+        5,
+        1,
+        0
+      ],
+      "name": "RELAY UNDERCROFT",
+      "unsupported_candidates": [
+        [
+          0.0,
+          1090.0,
+          310.0,
+          40.0
+        ],
+        [
+          350.0,
+          1110.0,
+          320.0,
+          40.0
+        ],
+        [
+          770.0,
+          920.0,
+          340.0,
+          40.0
+        ],
+        [
+          1300.0,
+          740.0,
+          340.0,
+          40.0
+        ],
+        [
+          1810.0,
+          900.0,
+          360.0,
+          40.0
+        ],
+        [
+          2220.0,
+          830.0,
+          380.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "map_cell": [
+        6,
+        1,
+        0
+      ],
+      "name": "SIGNAL TERRACE",
+      "unsupported_candidates": [
+        [
+          0.0,
+          830.0,
+          650.0,
+          40.0
+        ],
+        [
+          80.0,
+          620.0,
+          440.0,
+          40.0
+        ],
+        [
+          380.0,
+          1040.0,
+          800.0,
+          40.0
+        ],
+        [
+          780.0,
+          850.0,
+          440.0,
+          40.0
+        ],
+        [
+          1360.0,
+          640.0,
+          400.0,
+          40.0
+        ],
+        [
+          1980.0,
+          810.0,
+          480.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "map_cell": [
+        6,
+        0,
+        0
+      ],
+      "name": "SKYWORKS APPROACH",
+      "unsupported_candidates": [
+        [
+          0.0,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          350.0,
+          1040.0,
+          800.0,
+          40.0
+        ],
+        [
+          920.0,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          1400.0,
+          620.0,
+          360.0,
+          40.0
+        ],
+        [
+          1780.0,
+          810.0,
+          360.0,
+          40.0
+        ],
+        [
+          2240.0,
+          760.0,
+          360.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "map_cell": [
+        7,
+        0,
+        0
+      ],
+      "name": "STORM FOUNDRY",
+      "unsupported_candidates": [
+        [
+          0.0,
+          760.0,
+          310.0,
+          40.0
+        ],
+        [
+          420.0,
+          980.0,
+          600.0,
+          40.0
+        ],
+        [
+          1100.0,
+          780.0,
+          380.0,
+          40.0
+        ],
+        [
+          1500.0,
+          560.0,
+          400.0,
+          40.0
+        ],
+        [
+          2010.0,
+          760.0,
+          590.0,
+          40.0
+        ],
+        [
+          920.0,
+          560.0,
+          240.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "map_cell": [
+        7,
+        1,
+        0
+      ],
+      "name": "KEEPER RELAY",
+      "unsupported_candidates": [
+        [
+          80.0,
+          830.0,
+          480.0,
+          40.0
+        ],
+        [
+          580.0,
+          1070.0,
+          320.0,
+          40.0
+        ],
+        [
+          1040.0,
+          850.0,
+          350.0,
+          40.0
+        ],
+        [
+          1700.0,
+          1030.0,
+          340.0,
+          40.0
+        ],
+        [
+          2180.0,
+          880.0,
+          300.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "map_cell": [
+        -1,
+        2,
+        0
+      ],
+      "name": "MOORING LOFT",
+      "unsupported_candidates": [
+        [
+          200.0,
+          1160.0,
+          400.0,
+          40.0
+        ],
+        [
+          500.0,
+          1050.0,
+          300.0,
+          40.0
+        ],
+        [
+          720.0,
+          940.0,
+          360.0,
+          40.0
+        ],
+        [
+          1010.0,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          1220.0,
+          720.0,
+          400.0,
+          40.0
+        ],
+        [
+          1400.0,
+          560.0,
+          360.0,
+          40.0
+        ],
+        [
+          1186.66662597656,
+          533.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          943.333251953125,
+          506.666687011719,
+          300.0,
+          40.0
+        ],
+        [
+          600.0,
+          480.0,
+          500.0,
+          40.0
+        ],
+        [
+          525.0,
+          460.0,
+          300.0,
+          40.0
+        ],
+        [
+          300.0,
+          440.0,
+          400.0,
+          40.0
+        ],
+        [
+          550.0,
+          420.0,
+          300.0,
+          40.0
+        ],
+        [
+          740.0,
+          400.0,
+          320.0,
+          40.0
+        ],
+        [
+          40.0,
+          1200.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "map_cell": [
+        -1,
+        1,
+        0
+      ],
+      "name": "BELLROOF WALK",
+      "unsupported_candidates": [
+        [
+          200.0,
+          1200.0,
+          300.0,
+          40.0
+        ],
+        [
+          100.0,
+          1100.0,
+          500.0,
+          40.0
+        ],
+        [
+          425.0,
+          1060.0,
+          300.0,
+          40.0
+        ],
+        [
+          650.0,
+          1020.0,
+          300.0,
+          40.0
+        ],
+        [
+          750.0,
+          900.0,
+          400.0,
+          40.0
+        ],
+        [
+          1000.0,
+          865.0,
+          300.0,
+          40.0
+        ],
+        [
+          1190.0,
+          830.0,
+          320.0,
+          40.0
+        ],
+        [
+          1400.0,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          1590.0,
+          830.0,
+          320.0,
+          40.0
+        ],
+        [
+          1837.5,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          1900.0,
+          830.0,
+          650.0,
+          40.0
+        ],
+        [
+          1827.5,
+          745.0,
+          300.0,
+          40.0
+        ],
+        [
+          1560.0,
+          660.0,
+          340.0,
+          40.0
+        ],
+        [
+          1300.0,
+          480.0,
+          380.0,
+          40.0
+        ],
+        [
+          1357.5,
+          600.0,
+          300.0,
+          40.0
+        ],
+        [
+          1300.0,
+          720.0,
+          450.0,
+          40.0
+        ],
+        [
+          40.0,
+          1100.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "map_cell": [
+        2,
+        3,
+        0
+      ],
+      "name": "LOWER SLUICE",
+      "unsupported_candidates": [
+        [
+          1800.0,
+          1120.0,
+          350.0,
+          40.0
+        ],
+        [
+          1570.0,
+          1080.0,
+          300.0,
+          40.0
+        ],
+        [
+          1320.0,
+          940.0,
+          400.0,
+          40.0
+        ],
+        [
+          1195.0,
+          885.0,
+          300.0,
+          40.0
+        ],
+        [
+          1020.0,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          720.0,
+          720.0,
+          450.0,
+          40.0
+        ],
+        [
+          632.5,
+          665.0,
+          300.0,
+          40.0
+        ],
+        [
+          470.0,
+          610.0,
+          300.0,
+          40.0
+        ],
+        [
+          80.0,
+          500.0,
+          500.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "map_cell": [
+        3,
+        3,
+        0
+      ],
+      "name": "ROOT SHRINE",
+      "unsupported_candidates": [
+        [
+          80.0,
+          1120.0,
+          500.0,
+          40.0
+        ],
+        [
+          477.5,
+          1010.0,
+          300.0,
+          40.0
+        ],
+        [
+          700.0,
+          900.0,
+          450.0,
+          40.0
+        ],
+        [
+          1008.33337402344,
+          853.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          1241.66674804688,
+          806.666687011719,
+          300.0,
+          40.0
+        ],
+        [
+          1300.0,
+          760.0,
+          650.0,
+          40.0
+        ],
+        [
+          1177.5,
+          630.0,
+          300.0,
+          40.0
+        ],
+        [
+          780.0,
+          500.0,
+          500.0,
+          40.0
+        ],
+        [
+          840.0,
+          430.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "map_cell": [
+        4,
+        2,
+        0
+      ],
+      "name": "COUNTERWEIGHT SPIRE",
+      "unsupported_candidates": [
+        [
+          80.0,
+          1900.0,
+          520.0,
+          40.0
+        ],
+        [
+          360.0,
+          1840.0,
+          300.0,
+          40.0
+        ],
+        [
+          520.0,
+          1780.0,
+          320.0,
+          40.0
+        ],
+        [
+          720.0,
+          1660.0,
+          400.0,
+          40.0
+        ],
+        [
+          960.0,
+          1480.0,
+          340.0,
+          40.0
+        ],
+        [
+          1152.5,
+          1390.0,
+          300.0,
+          40.0
+        ],
+        [
+          1200.0,
+          1300.0,
+          550.0,
+          40.0
+        ],
+        [
+          1137.5,
+          1235.0,
+          300.0,
+          40.0
+        ],
+        [
+          940.0,
+          1170.0,
+          320.0,
+          40.0
+        ],
+        [
+          650.0,
+          1040.0,
+          450.0,
+          40.0
+        ],
+        [
+          830.0,
+          900.0,
+          320.0,
+          40.0
+        ],
+        [
+          1007.5,
+          830.0,
+          300.0,
+          40.0
+        ],
+        [
+          1100.0,
+          760.0,
+          450.0,
+          40.0
+        ],
+        [
+          1440.0,
+          590.0,
+          300.0,
+          40.0
+        ],
+        [
+          1200.0,
+          420.0,
+          450.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 18,
+      "map_cell": [
+        4,
+        3,
+        0
+      ],
+      "name": "PUMP GALLERY",
+      "unsupported_candidates": [
+        [
+          1040.0,
+          1180.0,
+          320.0,
+          40.0
+        ],
+        [
+          760.0,
+          1120.0,
+          300.0,
+          40.0
+        ],
+        [
+          470.0,
+          1060.0,
+          300.0,
+          40.0
+        ],
+        [
+          80.0,
+          1000.0,
+          500.0,
+          40.0
+        ],
+        [
+          386.666687011719,
+          933.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          593.333374023438,
+          866.666625976562,
+          300.0,
+          40.0
+        ],
+        [
+          700.0,
+          800.0,
+          500.0,
+          40.0
+        ],
+        [
+          1065.0,
+          792.0,
+          300.0,
+          40.0
+        ],
+        [
+          1330.0,
+          784.0,
+          300.0,
+          40.0
+        ],
+        [
+          1595.0,
+          776.0,
+          300.0,
+          40.0
+        ],
+        [
+          1860.0,
+          768.0,
+          300.0,
+          40.0
+        ],
+        [
+          2000.0,
+          760.0,
+          550.0,
+          40.0
+        ],
+        [
+          1901.66674804688,
+          713.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          1678.33325195312,
+          666.666687011719,
+          300.0,
+          40.0
+        ],
+        [
+          1380.0,
+          620.0,
+          450.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "map_cell": [
+        5,
+        3,
+        0
+      ],
+      "name": "COIL SERVICE HALL",
+      "unsupported_candidates": [
+        [
+          1950.0,
+          1140.0,
+          300.0,
+          40.0
+        ],
+        [
+          1850.0,
+          980.0,
+          500.0,
+          40.0
+        ],
+        [
+          1685.0,
+          980.0,
+          300.0,
+          40.0
+        ],
+        [
+          1370.0,
+          980.0,
+          400.0,
+          40.0
+        ],
+        [
+          1213.33337402344,
+          980.0,
+          300.0,
+          40.0
+        ],
+        [
+          1006.66662597656,
+          980.0,
+          300.0,
+          40.0
+        ],
+        [
+          700.0,
+          980.0,
+          500.0,
+          40.0
+        ],
+        [
+          615.0,
+          925.0,
+          300.0,
+          40.0
+        ],
+        [
+          430.0,
+          870.0,
+          300.0,
+          40.0
+        ],
+        [
+          80.0,
+          760.0,
+          450.0,
+          40.0
+        ],
+        [
+          417.5,
+          760.0,
+          300.0,
+          40.0
+        ],
+        [
+          670.0,
+          760.0,
+          320.0,
+          40.0
+        ],
+        [
+          870.0,
+          760.0,
+          300.0,
+          40.0
+        ],
+        [
+          1050.0,
+          760.0,
+          320.0,
+          40.0
+        ],
+        [
+          1252.5,
+          760.0,
+          300.0,
+          40.0
+        ],
+        [
+          1370.0,
+          760.0,
+          450.0,
+          40.0
+        ],
+        [
+          1647.5,
+          700.0,
+          300.0,
+          40.0
+        ],
+        [
+          1850.0,
+          640.0,
+          300.0,
+          40.0
+        ],
+        [
+          1550.0,
+          520.0,
+          600.0,
+          40.0
+        ],
+        [
+          1640.0,
+          480.0,
+          320.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "map_cell": [
+        5,
+        2,
+        0
+      ],
+      "name": "RELAY JUNCTION",
+      "unsupported_candidates": [
+        [
+          1400.0,
+          1120.0,
+          750.0,
+          40.0
+        ],
+        [
+          1358.33325195312,
+          1046.66662597656,
+          300.0,
+          40.0
+        ],
+        [
+          1091.66662597656,
+          973.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          750.0,
+          900.0,
+          450.0,
+          40.0
+        ],
+        [
+          610.0,
+          853.333312988281,
+          300.0,
+          40.0
+        ],
+        [
+          395.0,
+          806.666687011719,
+          300.0,
+          40.0
+        ],
+        [
+          80.0,
+          760.0,
+          500.0,
+          40.0
+        ],
+        [
+          315.0,
+          660.0,
+          300.0,
+          40.0
+        ],
+        [
+          350.0,
+          560.0,
+          500.0,
+          40.0
+        ],
+        [
+          440.0,
+          520.0,
+          320.0,
+          40.0
+        ]
+      ]
+    }
+  ],
+  "source": "TR-02 e9a2d1a + TR-03 explicit presentation metadata"
+}

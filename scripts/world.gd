@@ -10,6 +10,7 @@ const Extension = preload("res://scripts/route_extension.gd")
 const Expansion = preload("res://scripts/world_expansion.gd")
 const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const MixedTransitions = preload("res://scripts/mixed_transitions.gd")
+const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -50,6 +51,7 @@ var room = 0
 var visited = [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 var expansion = Expansion.new()
 var mixed_transitions = MixedTransitions.new()
+var embodied_transitions = EmbodiedTransitions.new()
 var expansion_flags: Dictionary = {}
 var guard_defeated = false
 var boss_defeated = false
@@ -94,6 +96,8 @@ func _ready():
 	player.afterimage_requested.connect(spawn_dash_afterimage)
 	player.kunai_requested.connect(spawn_kunai)
 	player.add_child(camera)
+	add_child(embodied_transitions)
+	embodied_transitions.configure(self)
 	camera.position.y = -110
 	camera.position_smoothing_enabled = true
 	camera.position_smoothing_speed = 8
@@ -195,6 +199,7 @@ func build_room(index):
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
 	mixed_transitions.room_loaded(self)
+	embodied_transitions.room_loaded(self)
 	queue_redraw()
 
 func room_size(index: int) -> Vector2:
@@ -491,6 +496,7 @@ func on_hurt():
 	if player.hp <= 0: call_deferred("respawn")
 
 func respawn():
+	embodied_transitions.cancel(self)
 	mixed_transitions.cancel(self)
 	transition = 0.0
 	pending_room = -1
@@ -525,6 +531,7 @@ func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
 	mixed_transitions.begin(self,target)
+	embodied_transitions.begin(self,target)
 	pending_arrival = arrival
 	pending_from_room = room
 	pending_room = target
@@ -631,8 +638,10 @@ func _physics_process(dt):
 			pending_arrival = Vector2.INF
 			player.velocity = Vector2.ZERO
 			mixed_transitions.arrived(self)
+			embodied_transitions.arrived(self)
 			camera.reset_smoothing()
 		if transition <= 0: player.set_physics_process(true)
+	embodied_transitions.update_pose(self)
 	if Input.is_action_just_pressed("interact"): interact()
 	if room == 1 and guard_defeated and not player.double_jump and player.position.distance_to(Vector2(1580, 1260)) < 90:
 		player.double_jump = true;player.unlock_kunai("wind");save_progress()

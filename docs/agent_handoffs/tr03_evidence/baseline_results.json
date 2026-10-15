@@ -1,0 +1,443 @@
+[
+  {
+    "suite": "import",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "returncode": 0,
+    "seconds": 3.62,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 5,
+    "diagnostics": [
+      "ERROR: Unrecognized UID: \"uid://cmjsph053oe5d\".",
+      "ERROR: Failed to load script \"res://addons/MetroidvaniaSystem/Database/Editor/ModeBorderType.gd\" with error \"Parse error\".",
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 131 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "suite": "verify_baseline",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/verify_baseline.py"
+    ],
+    "returncode": 0,
+    "seconds": 0.04,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "approved_baseline",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/approved_baseline.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 2.02,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "approved_combat_swing",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/approved_combat_swing.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.43,
+    "passes": 7,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "annex_expansion",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/annex_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 3.59,
+    "passes": 34,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "annex_traversal",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/annex_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 8.8,
+    "passes": 6,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "save_compatibility",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.43,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "skyworks_progression",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/skyworks_progression.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 5.08,
+    "passes": 33,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "storm_keeper",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/storm_keeper.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.61,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "movement_momentum",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 8.9,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "sprite_integration",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.54,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "world_expansion",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/world_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 4.44,
+    "passes": 193,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "expansion_gates_save",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/expansion_gates_save.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 3.8,
+    "passes": 17,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "expansion_traversal",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/expansion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 98.11,
+    "passes": 125,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "gameplay_stabilization",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/gameplay_stabilization.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.53,
+    "passes": 16,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "traversal_transitions",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/traversal_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.44,
+    "passes": 8,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "world_cohesion_traversal",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/world_cohesion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 60.33,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "integration_candidate",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/integration_candidate.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.53,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "integration_descent",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://tests/integration_descent.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 0.63,
+    "passes": 26,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "room_transition_prototype",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/room_transition_prototype.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 1.18,
+    "passes": 93,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "mixed_transitions",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/mixed_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "returncode": 0,
+    "seconds": 4.07,
+    "passes": 109,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "profile_prepare",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--prepare"
+    ],
+    "returncode": 0,
+    "seconds": 0.43,
+    "passes": 2,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  },
+  {
+    "suite": "profile_reload",
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--path",
+      "/workspace/scratch/f29c75aa04b4/kaze",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--reload"
+    ],
+    "returncode": 0,
+    "seconds": 0.44,
+    "passes": 5,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostics": []
+  }
+]
