@@ -13,3 +13,9 @@ Published0d96f93 requirements before further authoring, then45ed20b storyboards/
 
 ## 2026-10-15 — TR-03 production revision
 Three painted previews plus full master, source prompt and extraction script delivered on art/alpha-0.6.1-tr03-production-revision. Baseline verifier passes. Creator approval pending; skin-tone fidelity explicitly flagged. Existing artwork preserved; no merge. See TR03_ART_PRODUCTION_REVISION_PM_REPORT.md.
+
+## 2026-10-15 — ART-03 recovery and complete compositions
+
+Recovered actual PR #26 source at 0b96d41fa7b6b424591fdd685f5c8fdf9290c02b; reviewed #24–#27, authoritative TR-03 order, prior reports and all Art Mane continuity. Found #26's four PNGs corrupt and inconsistent with recorded hashes; master lacks recoverable complete pixel data, and exporter additionally splits one landscape into shallow strips. Exact corruption cause unknown. Preserved originals; reconstructed three independent 1672×941 paintings with canonical brown-skinned purple/green Kaze and biome references.
+
+Published art checkpoint `f41e4e4c784ad170bfde0f6c33264e6af41c07c4` on `art/art03-complete-compositions` / draft [PR #28](https://github.com/cappy2yappy/momentum-fractured/pull/28); this following docs-only increment records final pointers. Gallery/comparison, raster masters, editable gallery SVG, prompts, hashes/audit and PM return delivered. Eight new PNGs strict-decode/CRC/IEND pass, scenes/gallery/comparisons visually inspected, baseline0failures, protected assets/runtime unchanged. Creator visual acceptance and all new sprites remain pending. No Aseprite/Higgsfield use and no merge. This is an executed-work summary, not a transcript.

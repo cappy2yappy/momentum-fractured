@@ -1,0 +1,8 @@
+{
+  "branch": "art/art03-complete-compositions",
+  "art_commit": "f41e4e4c784ad170bfde0f6c33264e6af41c07c4",
+  "pr": "https://github.com/cappy2yappy/momentum-fractured/pull/28",
+  "base_commit": "0b96d41fa7b6b424591fdd685f5c8fdf9290c02b",
+  "status": "published draft; creator review pending; no merge",
+  "note": "Publication pointers/continuity follow art_commit in a docs-only commit. Current PR HEAD is authoritative."
+}

@@ -1,0 +1,93 @@
+{
+  "status": "painted concepts; creator review pending",
+  "images": [
+    {
+      "path": "docs/art/tr03/art03_recovery/01_doorway.png",
+      "bytes": 3063998,
+      "sha256": "7ff0d1d6b36bd1aafe687fc4280490ebe46dfcf975fc0d92771ac281458bf863",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/02_staircase.png",
+      "bytes": 2586634,
+      "sha256": "68143ee219e316db29d33fbe160e1a124dc790d7b6bbd5044b22e7727105ba46",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/03_supported_crossing.png",
+      "bytes": 3206912,
+      "sha256": "4cb5e803318763325e27f1e02c50c3b6f16b65c4fd319e9b29469cc62f4af2e6",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/BEFORE_AFTER.png",
+      "bytes": 3040014,
+      "sha256": "87abe321ee17e285c13abc55dba39f1027de7f855314c4cd110f948ab9172463",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1800,
+      "height": 1840,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/REVIEW_GALLERY.png",
+      "bytes": 5401655,
+      "sha256": "b0988a38d0b9e89c668d33369a9963e42a2d842335004fd2e941fa2b84f363d7",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1328,
+      "height": 2440,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/review_1280_01_doorway.png",
+      "bytes": 1864854,
+      "sha256": "5aea3346979166521481c2966e3cabdfc0f6cb4b6d525b58720bd839e2e8d17b",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/review_1280_02_staircase.png",
+      "bytes": 1589658,
+      "sha256": "9eb6b51a593d8572169d2deff31ebbe2fb3d79590670afef9bf17e9a954efc07",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    },
+    {
+      "path": "docs/art/tr03/art03_recovery/review_1280_03_supported_crossing.png",
+      "bytes": 1890291,
+      "sha256": "2c5c7f42ae8da4792b0d0f722b9b6e638c3bd539886b757c6d8e79c0dda8c877",
+      "crc_errors": [],
+      "iend_present": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "strict_decode": "passed"
+    }
+  ]
+}
