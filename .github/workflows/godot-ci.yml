@@ -8,7 +8,7 @@ on:
       source_ref:
         description: Approved game source branch (keep workflow branch set to main)
         type: choice
-        options: [main, 'integration/candidate-alpha-0.6.1-gp-ld']
+        options: [main, 'integration/candidate-alpha-0.6.1-gp-ld', 'feature/alpha-0.6.1-mixed-transitions']
         default: main
       build_artifacts:
         description: Export Windows and macOS playtest packages
@@ -38,8 +38,8 @@ jobs:
           WORKFLOW_BRANCH: ${{ github.ref_name }}
         run: |
           if [ "$EVENT" = workflow_dispatch ]; then
-            case "$REQUESTED" in main|integration/candidate-alpha-0.6.1-gp-ld) ;; *) exit 1;; esac
-            case "$WORKFLOW_BRANCH" in main|ci/default-branch-godot-builds) ;; *) exit 1;; esac
+            case "$REQUESTED" in main|integration/candidate-alpha-0.6.1-gp-ld|feature/alpha-0.6.1-mixed-transitions) ;; *) exit 1;; esac
+            case "$WORKFLOW_BRANCH" in main|ci/default-branch-godot-builds|ci/build03-tr02-playtest) ;; *) exit 1;; esac
           fi
       - name: Checkout reviewed CI controls
         uses: actions/checkout@v4
@@ -50,14 +50,14 @@ jobs:
       - name: Checkout selected game source
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || inputs.source_ref }}
+          ref: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha || inputs.source_ref }}
           path: game-source
           persist-credentials: false
       - name: Resolve actual source identity
         id: source
         env:
-          SOURCE_BRANCH: ${{ github.head_ref || inputs.source_ref }}
-          EXPECTED: ${{ github.event.pull_request.head.sha }}
+          SOURCE_BRANCH: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'feature/alpha-0.6.1-mixed-transitions' || github.head_ref || inputs.source_ref }}
+          EXPECTED: ${{ github.head_ref == 'ci/build03-tr02-playtest' && 'e9a2d1ab0537f3f903c543b080451b3556961179' || github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
           SHA=$(git -C game-source rev-parse HEAD)
@@ -80,6 +80,9 @@ jobs:
       - name: Export and audit both platforms
         if: github.event_name == 'pull_request' || inputs.build_artifacts
         run: python3 ci-control/tools/ci/package.py --godot "$GODOT"
+      - name: Package committed TR-02 comparison launchers
+        if: (github.head_ref == 'ci/build03-tr02-playtest' || inputs.source_ref == 'feature/alpha-0.6.1-mixed-transitions') && (github.event_name == 'pull_request' || inputs.build_artifacts)
+        run: python3 ci-control/tools/ci/tr02_package.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -191,3 +194,4 @@ jobs:
           path: game-source/build/ci/macOS/
           retention-days: 21
           if-no-files-found: error
+
