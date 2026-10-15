@@ -70,8 +70,8 @@ Sign into GitHub to download Actions artifacts. The download is an outer artifac
 | --- | --- | --- |
 | Windows TR-02 | [Windows download](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11945722171) | 2026-11-05T03:15:17Z |
 | macOS universal | [macOS download](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11945887204) | 2026-11-05T03:15:19Z |
-| Source QA/logs | [QA results](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11945867083) | 2026-11-05T03:15:17Z (approximately; exact API timestamp in evidence) |
-| Windows native | [Native report](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11946625394) | 21-day retention; exact timestamp in evidence |
+| Source QA/logs | [QA results](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11945867083) | 2026-11-05T03:15:16Z |
+| Windows native | [Native report](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11946625394) | 2026-11-05T03:16:10Z |
 | Intel macOS native | [Native report](https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11946385503) | 2026-11-05T03:15:42Z |
 
 Inner Windows ZIP: **Kaze-TR02-Mixed-Transitions-Windows-e9a2d1ab.zip**, 51,162,244 bytes.
