@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="SpriteFrames" path="res://assets/art04/kaze/ART04_key_poses.tres" id="1"]
+
+[node name="ART04KazeKeyPreview" type="AnimatedSprite2D"]
+texture_filter = 2
+scale = Vector2(0.303125,0.303125)
+sprite_frames = ExtResource("1")
+animation = &"turn_depth_key"
+offset = Vector2(0,-238)
+metadata/source_pivot = Vector2i(160,600)
+metadata/status = "four single keys only; no autoplay or complete cycles"

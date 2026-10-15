@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps="5" format="3"]
+
+[ext_resource type="Texture2D" path="res://assets/art04/kaze/turn_depth_key.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/art04/kaze/enter_depth_key.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/art04/kaze/stair_up_key.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/art04/kaze/stair_down_key.png" id="4"]
+
+[resource]
+animations = [
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}], "loop": false, "name": &"turn_depth_key", "speed": 20.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("2")}], "loop": false, "name": &"enter_depth_key", "speed": 20.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("3")}], "loop": false, "name": &"stair_up_key", "speed": 20.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("4")}], "loop": false, "name": &"stair_down_key", "speed": 20.0}
+]

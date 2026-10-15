@@ -1,0 +1,242 @@
+{
+  "assignment": "ART-04",
+  "level_reference": "c2c002267c58e991966c0eebf7e098c6e7fff769",
+  "character_keys": [
+    {
+      "id": "turn_depth_key",
+      "path": "assets/art04/kaze/turn_depth_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "pivot": [
+        160,
+        600
+      ],
+      "scale": 0.303125,
+      "offset": [
+        0,
+        -238
+      ],
+      "frame_count": 1,
+      "loop": false,
+      "direction": "right-quarter-rear",
+      "contact_px": [
+        214.004,
+        577.224
+      ],
+      "authoring_transform": {
+        "source": "turn",
+        "scale": 0.2348,
+        "root": [
+          650,
+          1470
+        ],
+        "contact": [
+          880,
+          1373
+        ],
+        "facing": "right-quarter-rear"
+      },
+      "status": "single key; technical import candidate, creator acceptance pending"
+    },
+    {
+      "id": "enter_depth_key",
+      "path": "assets/art04/kaze/enter_depth_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "pivot": [
+        160,
+        600
+      ],
+      "scale": 0.303125,
+      "offset": [
+        0,
+        -238
+      ],
+      "frame_count": 1,
+      "loop": false,
+      "direction": "rear",
+      "contact_px": [
+        144.738,
+        598.826
+      ],
+      "authoring_transform": {
+        "source": "entry",
+        "scale": 0.2348,
+        "root": [
+          600,
+          1459
+        ],
+        "contact": [
+          535,
+          1454
+        ],
+        "facing": "rear"
+      },
+      "status": "single key; technical import candidate, creator acceptance pending"
+    },
+    {
+      "id": "stair_up_key",
+      "path": "assets/art04/kaze/stair_up_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "pivot": [
+        160,
+        600
+      ],
+      "scale": 0.303125,
+      "offset": [
+        0,
+        -238
+      ],
+      "frame_count": 1,
+      "loop": false,
+      "direction": "right",
+      "contact_px": [
+        259.2,
+        560.072
+      ],
+      "authoring_transform": {
+        "source": "up",
+        "scale": 0.248,
+        "root": [
+          600,
+          1281
+        ],
+        "contact": [
+          1000,
+          1120
+        ],
+        "facing": "right"
+      },
+      "status": "single key; technical import candidate, creator acceptance pending"
+    },
+    {
+      "id": "stair_down_key",
+      "path": "assets/art04/kaze/stair_down_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "pivot": [
+        160,
+        600
+      ],
+      "scale": 0.303125,
+      "offset": [
+        0,
+        -238
+      ],
+      "frame_count": 1,
+      "loop": false,
+      "direction": "left",
+      "contact_px": [
+        103.6,
+        598.56
+      ],
+      "authoring_transform": {
+        "source": "down",
+        "scale": 0.24,
+        "root": [
+          520,
+          1408
+        ],
+        "contact": [
+          285,
+          1402
+        ],
+        "facing": "left"
+      },
+      "status": "single key; technical import candidate, creator acceptance pending"
+    }
+  ],
+  "environment": [
+    {
+      "id": "r14_roof_support",
+      "room": 14,
+      "path": "assets/art04/environment/r14_roof_support.png",
+      "top_left": [
+        706,
+        922
+      ],
+      "opaque_envelope": [
+        714,
+        930,
+        472,
+        170
+      ],
+      "draw": "rear dressing, before platform lips and live actors"
+    },
+    {
+      "id": "r15_masonry_support",
+      "room": 15,
+      "path": "assets/art04/environment/r15_masonry_support.png",
+      "top_left": [
+        1292,
+        970
+      ],
+      "opaque_envelope": [
+        1300,
+        978,
+        440,
+        322
+      ],
+      "draw": "rear dressing, before platform lips and live actors"
+    },
+    {
+      "id": "r14_depth_door",
+      "room": 14,
+      "endpoint": [
+        120,
+        1100
+      ],
+      "root_px": [
+        120,
+        208
+      ],
+      "layers": [
+        "r14_door_interior",
+        "r14_door_back",
+        "r14_door_front"
+      ],
+      "draw": "interior \u2192 rear frame \u2192 actor \u2192 front jamb/threshold; prompts above all"
+    },
+    {
+      "id": "r14_stair_flight",
+      "room": 14,
+      "endpoint": [
+        1450,
+        480
+      ],
+      "path": "assets/art04/environment/stair_flight_right.png",
+      "size": [
+        384,
+        112
+      ],
+      "review_top_left": [
+        1330,
+        431.8
+      ],
+      "review_draw_size": [
+        384,
+        89.6
+      ],
+      "review_actor_root": [
+        1450,
+        478
+      ],
+      "draw": "short render-proxy staging only; no new physical stairs or collision",
+      "front": "assets/art04/environment/stair_front_lip.png"
+    }
+  ],
+  "loader_unchanged_seconds": 0.65,
+  "frames_supplied": 4,
+  "full_animation_pack": false,
+  "existing_run": "reuse approved clip without changing its scale/pivot",
+  "mirror_policy": "stair up right and stair down left are authored. Other facings/reverse door require review; do not assume symmetric ribbons."
+}
