@@ -1,0 +1,3 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Explicit isolated prototype save loads expected room 14 actual=14 path=/tmp/tr03 isolated fixtures/save file.json

@@ -1,0 +1,69 @@
+[
+  {
+    "mode": "original",
+    "exit": 0,
+    "pass": true,
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--main-pack",
+      "/workspace/scratch/f29c75aa04b4/kaze/build/tr03/windows/Kaze-TR03-Embodied-Transitions.exe",
+      "--script",
+      "/workspace/scratch/f29c75aa04b4/kaze/tests/mixed_profile.gd",
+      "--",
+      "--expected-room=14",
+      "--tr03-save=/tmp/tr03 isolated fixtures/save file.json",
+      "--tr03-original"
+    ]
+  },
+  {
+    "mode": "refined",
+    "exit": 0,
+    "pass": true,
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--main-pack",
+      "/workspace/scratch/f29c75aa04b4/kaze/build/tr03/windows/Kaze-TR03-Embodied-Transitions.exe",
+      "--script",
+      "/workspace/scratch/f29c75aa04b4/kaze/tests/mixed_profile.gd",
+      "--",
+      "--expected-room=14",
+      "--tr03-save=/tmp/tr03 isolated fixtures/save file.json"
+    ]
+  },
+  {
+    "mode": "reduced",
+    "exit": 0,
+    "pass": true,
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--main-pack",
+      "/workspace/scratch/f29c75aa04b4/kaze/build/tr03/windows/Kaze-TR03-Embodied-Transitions.exe",
+      "--script",
+      "/workspace/scratch/f29c75aa04b4/kaze/tests/mixed_profile.gd",
+      "--",
+      "--expected-room=14",
+      "--tr03-save=/tmp/tr03 isolated fixtures/save file.json",
+      "--tr03-reduced-motion"
+    ]
+  },
+  {
+    "mode": "plain",
+    "exit": 0,
+    "pass": true,
+    "command": [
+      "/tmp/kaze-tr03-engine/Godot_v4.6.1-stable_linux.x86_64",
+      "--headless",
+      "--main-pack",
+      "/workspace/scratch/f29c75aa04b4/kaze/build/tr03/windows/Kaze-TR03-Embodied-Transitions.exe",
+      "--script",
+      "/workspace/scratch/f29c75aa04b4/kaze/tests/mixed_profile.gd",
+      "--",
+      "--expected-room=14",
+      "--tr03-save=/tmp/tr03 isolated fixtures/save file.json",
+      "--tr03-plain"
+    ]
+  }
+]
