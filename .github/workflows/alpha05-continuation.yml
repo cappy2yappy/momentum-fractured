@@ -1,0 +1,58 @@
+name: Approved Alpha 0.5 continuation
+on:
+  push:
+    branches: [main, codex/alpha05-approved-continuation, codex/kaze-approved-baseline-2026-10-12]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-and-export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify approved Kaze artwork and controller
+        run: python3 tools/verify_baseline.py
+      - name: Install Godot 4.6.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -jq "$RUNNER_TEMP/godot/templates.tpz" templates/windows_release_x86_64.exe -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+      - name: Preserve approved feel and test expansion
+        shell: bash
+        run: |
+          set -euo pipefail
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --path . --import --quit 2>&1 | tee import.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' import.log
+          for suite in approved_baseline approved_combat_swing annex_expansion annex_traversal save_compatibility skyworks_progression storm_keeper; do
+            timeout 60s "$GODOT" --headless --path . --script "res://tests/$suite.gd" -- --test 2>&1 | tee "$suite.log"
+            grep -q '0 failure(s)' "$suite.log"
+            ! grep -E 'SCRIPT ERROR|Parse Error|FAIL:' "$suite.log"
+          done
+      - name: Windows export
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/windows
+          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release "Windows Desktop" build/windows/Kaze-Alpha-0.5.2-Development.exe 2>&1 | tee export.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' export.log
+          cp README.md PROJECT_STATUS.md build/windows/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Alpha05-verification
+          path: '*.log'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Alpha05-Windows-continuation
+          path: build/windows/

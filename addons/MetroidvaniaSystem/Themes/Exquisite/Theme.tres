@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://bt6s3nd8xo6b"]
+
+[ext_resource type="Texture2D" uid="uid://bxs8cn6khov7j" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/RoomFill.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://208uoowofggq" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Empty.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://6lyqjfj3vsy7" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderPassageHorizontal.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b1hy1w1k1asap" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/RoomSeparator.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c5wg3is8k5pux" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderWallHorizontal.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://rgchhbw4jh7f" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/CornerInner.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dihccrjj2ehi4" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/CornerOuter.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://cm5d4lvki74cy" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/PlayerLocation.tscn" id="8"]
+[ext_resource type="Script" uid="uid://b7ofctgav4kq4" path="res://addons/MetroidvaniaSystem/Scripts/MapTheme.gd" id="9"]
+[ext_resource type="Texture2D" uid="uid://bc0o6ot1koste" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Ring.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://dvp5dov6wsh2m" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Portal.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bcuwpuvv6bpsf" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Collectible.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://ljjnp6f81hm" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Symbols/Collected.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b8ccoibsf323o" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderPassage.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://xn6gipdberdc" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/BorderWall.png" id="15"]
+
+[resource]
+script = ExtResource("9")
+center_texture = ExtResource("1")
+empty_space_texture = ExtResource("2")
+player_location_scene = ExtResource("8")
+show_exact_player_location = true
+mapped_display = 11
+separator_mode = 1
+default_center_color = Color(0.5, 0.25, 0.25, 1)
+mapped_center_color = Color(0.745098, 0.745098, 0.745098, 1)
+default_border_color = Color(1, 0.741176, 0.580392, 1)
+mapped_border_color = Color(1, 1, 1, 1)
+symbols = [ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("13")]
+uncollected_item_symbol = 2
+collected_item_symbol = 3
+vertical_wall = ExtResource("15")
+horizontal_wall = ExtResource("5")
+vertical_passage = ExtResource("14")
+horizontal_passage = ExtResource("3")
+vertical_separator = ExtResource("4")
+horizontal_separator = ExtResource("4")
+outer_corner = ExtResource("7")
+inner_corner = ExtResource("6")

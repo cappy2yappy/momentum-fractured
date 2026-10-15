@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" uid="uid://orxlanqpgccv" path="res://addons/MetroidvaniaSystem/Scripts/Settings.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bt6s3nd8xo6b" path="res://addons/MetroidvaniaSystem/Themes/Exquisite/Theme.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+theme = ExtResource("2")
+map_data_file = "res://world/MapData.txt"
+map_extents = 32
+in_game_cell_size = Vector2(2600, 1440)
+discover_whole_rooms = true
+custom_element_script = null

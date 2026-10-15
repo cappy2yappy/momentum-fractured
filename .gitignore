@@ -1,2 +1,4 @@
 .godot/
-.DS_Store
+.autoconverted/
+build/
+*.log

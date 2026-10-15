@@ -1,0 +1,11 @@
+{
+  "approved_on": "2026-10-12",
+  "baseline_commit": "215e9bce3b234cb268e9426b52817f5ca844031e",
+  "controller_sha256": "58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d",
+  "sprites": [
+    {"clip": "idle", "path": "assets/web/kaze_idle_strip.png", "sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762", "width": 3832, "height": 479, "frames": 8},
+    {"clip": "run", "path": "assets/web/kaze_run_strip.png", "sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80", "width": 3280, "height": 410, "frames": 8},
+    {"clip": "attack", "path": "assets/web/kaze_combat_strip.png", "sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b", "width": 3736, "height": 467, "frames": 8},
+    {"clip": "traversal", "path": "assets/web/kaze_traversal_strip.png", "sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751", "width": 4008, "height": 501, "frames": 8}
+  ]
+}

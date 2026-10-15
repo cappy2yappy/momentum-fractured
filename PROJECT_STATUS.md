@@ -1,353 +1,85 @@
-# MOMENTUM: FRACTURED - Project Status
-
-**Last Updated:** March 25, 2026  
-**Phase:** 3 Complete, Phase 4 In Progress  
-**Playable:** Yes (4 rooms + combat prototype)
-
----
-
-## Quick Summary
-
-**What is it?**  
-Metroidvania action-platformer. Metroid Dread meets Tokyo at midnight. Room-to-room combat with ability-gated progression.
-
-**What works?**  
-- ✅ Player movement (run, jump, wall-jump, dash)
-- ✅ Combat system (3-hit combo, dodge, attacks)
-- ✅ 2 enemy types (Echo melee, Drone ranged)
-- ✅ 4 playable rooms (combat, platforming, mixed, checkpoint)
-- ✅ Save/load system
-- ✅ UI/HUD (health, cells, combo counter)
-- ✅ Hazards (spikes, saws, lasers, crushers, fire)
-- ✅ Moving platforms
-- ✅ Visual polish (hit flash, damage numbers, screen shake)
-- ✅ Audio framework (placeholder sounds)
-
-**What's next?**  
-- 🔄 More enemy types (Guardian, Ninja, Golem, Sentry)
-- 🔄 Boss fights
-- 🔄 Ability unlocks (grapple hook, double jump, slide)
-- 🔄 More biomes (Temple, Metro, Rooftops, Docks, Core)
-- 🔄 Real art assets (replace placeholders)
-
----
-
-## Project Links
-
-**GitHub Repo:**  
-https://github.com/cappy2yappy/momentum-fractured
-
-**Full GDD (23KB):**  
-[GDD.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/GDD.md)
-
-**Design Docs:**
-- [DESIGN_UPDATE.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/DESIGN_UPDATE.md) - Metroidvania structure
-- [ENEMY_ASSETS.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/ENEMY_ASSETS.md) - Asset sourcing
-- [PHASE_4_TASKS.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/PHASE_4_TASKS.md) - Next priorities
-
-**Development Logs:**
-- [OVERNIGHT_REPORT.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/OVERNIGHT_REPORT.md) - Tasks 1-10 complete
-- [PLAYTEST_REPORT_2026-03-12.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/PLAYTEST_REPORT_2026-03-12.md) - Playtest findings
-
----
-
-## Current State (Phase 3 Complete)
-
-### ✅ What's Built
-
-**Player Character: Kaze**
-- Movement: WASD, Space (jump), Shift (dash)
-- Combat: Left Click (3-hit combo), Right Click (dodge roll)
-- Wall mechanics: Wall jump, wall slide
-- Stats: 100 HP, upgradeable
-- Animations: Idle, run, jump, fall, dash, attack
-
-**Enemy Types (2/6)**
-1. **Echo** (Melee)
-   - Patrols, chases player
-   - Melee attack (10 damage)
-   - 50 HP, dies in 4 hits
-   - Drops 5 cells on death
-
-2. **Drone** (Ranged)
-   - Flies, hovers above platforms
-   - Shoots projectiles (5 damage)
-   - 30 HP, dies in 2 hits
-   - Retreats if player gets too close
-
-**4 Rooms Built**
-1. **Room 01: Combat Arena**
-   - 3 Echo enemies
-   - Flat layout
-   - Door unlocks when cleared
-
-2. **Room 02: Platforming Challenge**
-   - No enemies
-   - Hazards: Spikes, saws, moving platforms
-   - Tests jump timing
-
-3. **Room 03: Mixed Combat + Platforming**
-   - 2 Echo + 1 Drone enemy
-   - Elevated platforms
-   - Moving platform over spike pit
-   - Fight while platforming
-
-4. **Room 04: Checkpoint Safe Room**
-   - No combat
-   - Checkpoint (saves progress)
-   - Health refill station
-   - 2 exits (backtrack or forward)
-
-**Combat System**
-- 3-hit combo (light attack)
-- Dodge roll (i-frames)
-- Hit detection (Hitbox/Hurtbox)
-- Knockback on hit
-- Hitstun (enemy pauses when hit)
-- Death animation + cell drops
-
-**Visual Polish**
-- Hit flash (enemy flashes white)
-- Damage numbers (float up, fade out)
-- Screen shake (on player damage)
-- Hit pause (0.05s freeze on heavy hits)
-
-**UI/HUD**
-- Health bar (top-left, red fill)
-- Cell counter (top-right, shows total)
-- Combo counter (center-top, fades after 2s)
-- Enemy counter ("3 enemies remaining")
-- Mini-map placeholder (bottom-right)
-
-**Hazards (6 types)**
-- Spikes (instant kill zones)
-- Saws (rotating, 15 damage)
-- Lasers (toggle on/off, instant kill)
-- Crushers (slam down, 50 damage)
-- Fire pits (continuous 20 damage)
-- Moving platforms (horizontal/vertical/circular)
-
-**Systems**
-- Save/load (checkpoint, HP, cells, rooms cleared)
-- Room controller (locks doors, tracks enemies)
-- Scene navigation (room transitions)
-- Camera system (follows player, room bounds)
-- Audio manager (placeholder sounds)
-- Damage numbers (pooled, reusable)
-- Projectile system (Drone attacks)
-
-**Performance**
-- 60 FPS target maintained
-- Enemy AI culling (sleep when far from player)
-- Projectile pooling (max 20 active)
-- Optimized hitbox detection
-
----
-
-### 🔄 Phase 4 In Progress
-
-**Next Priorities:**
-1. Add 4 more enemy types (Guardian, Ninja, Golem, Sentry)
-2. First boss fight (Echo Amalgam)
-3. Grapple hook ability
-4. 5 more rooms (expand Shibuya biome to 10 rooms)
-5. Replace placeholder sprites with real art
-6. Add music tracks
-7. Upgrade system (HP, damage, speed)
-
-**Full Phase 4 breakdown:** See [PHASE_4_TASKS.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/PHASE_4_TASKS.md)
-
----
-
-## How to Play (Current Build)
-
-### Controls
-- **WASD** - Move
-- **Space** - Jump
-- **Shift** - Dash
-- **Left Click** - Attack (3-hit combo)
-- **Right Click** - Dodge roll
-- **ESC** - Pause menu
-
-### Progression
-1. Start in Room 01 (Combat Arena)
-2. Defeat 3 Echo enemies
-3. Door unlocks → proceed to Room 02
-4. Navigate platforming hazards
-5. Room 03: Mixed combat + platforming
-6. Room 04: Checkpoint (saves progress)
-7. Die anywhere → respawn at last checkpoint
-
-### Goals
-- Clear all 4 rooms without dying
-- Collect cells from defeated enemies
-- Master movement + combat timing
-- Find optimal combat strategies
-
----
-
-## Technical Details
-
-**Engine:** Godot 4.6.1  
-**Language:** GDScript  
-**Resolution:** 1280×720 (16:9)  
-**Target FPS:** 60  
-**Platform:** PC (Windows/Mac/Linux)
-
-**Project Structure:**
-```
-momentum-fractured/
-├── assets/
-│   ├── sprites/
-│   │   ├── kaze/ (player animations)
-│   │   ├── enemies/ (Echo, Drone)
-│   │   └── hazards/
-│   └── audio/
-│       └── sfx/ (placeholder sounds)
-├── scenes/
-│   ├── rooms/ (4 room .tscn files)
-│   ├── enemies/ (Echo, Drone)
-│   ├── ui/ (HUD, health bar, cell counter)
-│   └── hazards/ (saw, laser, crusher, fire)
-├── scripts/
-│   ├── player/ (kaze_base.gd)
-│   ├── enemies/ (echo.gd, drone.gd)
-│   ├── combat/ (hitbox, hurtbox, health)
-│   ├── rooms/ (room_controller.gd)
-│   └── systems/ (game_state, audio_manager)
-└── tools/
-    ├── import_room_json.gd (web editor import)
-    └── README.md (room creation guide)
-```
-
----
-
-## Development Stats
-
-**Start Date:** March 7, 2026  
-**Days Active:** 18 days  
-**Commits:** 30+  
-**Lines of Code:** ~5,000  
-**Scenes:** 15+  
-**Scripts:** 25+
-
-**Phase Timeline:**
-- **Phase 1** (Mar 7-9): Project setup, physics, combat prototype
-- **Phase 2** (Mar 9-10): Combat system, Kaze sprites, room system
-- **Phase 3** (Mar 10-12): 4 rooms, UI/HUD, hazards, save/load
-- **Phase 4** (Mar 12-present): Enemy variety, bosses, abilities, biomes
-
----
-
-## Design Philosophy
-
-**Core Pillars:**
-1. **Tight movement** - Wall jumps, dashes feel responsive
-2. **Room-to-room combat** - Metroid-style locked encounters
-3. **Ability-gated exploration** - New powers unlock shortcuts
-4. **Interconnected world** - Backtracking rewards curiosity
-
-**Inspiration:**
-- **Metroid Dread** - Room structure, movement feel
-- **Hollow Knight** - Interconnected world, boss design
-- **Dead Cells** - Combat feel, weapon variety
-
-**Aesthetic:**
-- Tokyo Noir (NOT neon cyberpunk)
-- Warm amber/red tones
-- Traditional Japanese + modern mix
-- Metroid Dread anime art style
-
----
-
-## Testing & Feedback
-
-**Last Playtest:** March 12, 2026  
-**Key Findings:**
-- Combat feels good, responsive
-- Enemy AI needs more variety
-- Room 2 platforming too easy
-- Checkpoint system works well
-- Visual polish makes impact
-
-**Known Issues:**
-- Some object leaks on scene exit (non-blocking)
-- No audio (placeholders only)
-- Placeholder sprites (colored rectangles)
-- Limited enemy variety (2 types)
-
-**Full bug list:** See [BUG_TEST_CHECKLIST.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/BUG_TEST_CHECKLIST.md)
-
----
-
-## Team & Tools
-
-**Team:**
-- Cap (Tony) - Design, direction
-- Cappy (AI) - Implementation, documentation
-- Codex (AI) - Autonomous development
-
-**Tools:**
-- Godot 4.6.1 (game engine)
-- Aseprite (sprite work - planned)
-- Git/GitHub (version control)
-- Web room editor (level design tool)
-
----
-
-## Roadmap (Q2-Q4 2026)
-
-**Q2 2026 (April-June):**
-- ✅ Phase 3 complete (4 rooms, combat, systems)
-- 🔄 Phase 4: Enemy variety + first boss
-- 🔄 Shibuya biome complete (10 rooms)
-- 🔄 Ability unlocks (grapple, double jump)
-
-**Q3 2026 (July-September):**
-- Temple District biome (15 rooms)
-- Metro biome (15 rooms)
-- 2 more bosses
-- Real art assets (replace placeholders)
-
-**Q4 2026 (October-December):**
-- Rooftops biome (20 rooms)
-- Docks biome (20 rooms)
-- Final biome (Fractured Core)
-- Polish, balance, playtesting
-- **Early Access Launch**
-
----
-
-## How to Get Started
-
-**Clone the repo:**
-```bash
-git clone https://github.com/cappy2yappy/momentum-fractured.git
-cd momentum-fractured
-```
-
-**Open in Godot:**
-```bash
-godot project.godot
-```
-
-**Play test scene:**
-- Open `scenes/rooms/room_01_combat.tscn`
-- Press F6 (run scene)
-
-**Read the docs:**
-- Start with [GDD.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/GDD.md)
-- Check [PHASE_4_TASKS.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/PHASE_4_TASKS.md) for next steps
-- See [tools/README.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/tools/README.md) for level design
-
----
-
-## Questions?
-
-Ask in Discord thread: `#FRACTURED Combat Prototype`  
-Check GitHub issues: https://github.com/cappy2yappy/momentum-fractured/issues  
-Read the full GDD: [GDD.md](https://github.com/cappy2yappy/momentum-fractured/blob/main/GDD.md)
-
----
-
-**Status:** Ready for Phase 4 expansion 🎮
+# Kaze — approved Alpha 0.5 continuation
+
+> Historical build record from October 11. For the current approved source branch and sprite selection, see [CANONICAL_BASELINE.md](docs/CANONICAL_BASELINE.md) and [REPOSITORY_GUIDE.md](docs/REPOSITORY_GUIDE.md). The October 12 review verified browser access to the canonical demo; older benchmark-access statements below describe the earlier environment.
+
+Updated: 2026-10-11 (America/New_York)
+Engine: Godot 4.6.1.stable.official.14d19694e
+Branch: `codex/alpha05-approved-continuation` (local; not pushed)
+Candidate: Alpha 0.5.2 Development
+Approved source baseline commit: `47ba3d3`
+
+## Correct starting point
+
+The creator selected Kaze-Silent-District-Alpha-0.5.0-Windows-x86_64/Kaze.exe and approved its feel/momentum. The project was recovered directly from that executable with GDRE Tools 2.7.4: 501 files verified/extracted, all 46 scripts decompiled, all 244 imported resources converted, zero failed/lossy conversions. See docs/BASELINE_PROVENANCE.md and docs/RECOVERY_REPORT.txt.
+
+This branch continues that project. The earlier 12-room Godot branch was the wrong gameplay foundation and is retained separately. Its controller, scenes and assets were not transplanted here.
+
+The selected baseline is an eight-room, MetSys-backed proving ground. Its original notes describe a larger web-demo goal; this candidate does not claim the full web campaign. Benchmark authentication remains unavailable.
+
+## Preservation contract
+
+- `scripts/player.gd` is byte-for-byte unchanged from the selected build's recovered source: SHA-256 `58a1c319183a993bde9abc6f639b4adaefe245f89de24e6f0f9338bc9519339d`.
+- Original movement constants, swing integrator, release momentum, jump behavior, double-tap running, combo/parry, dash, animations and controls are preserved.
+- Original eight rooms' collision geometry is automatically compared with docs/APPROVED_GEOMETRY.json. Existing exit elevations and anchor positions are retained.
+- Existing game art is preserved. The kit portrait uses an original Kaze frame at its original aspect ratio.
+- Original Godot application name/save directory and save filename are retained so existing Alpha 0.5 saves can load. Exported executable metadata names this Alpha 0.5.2 Development.
+
+## Accepted prior increment
+
+The creator completed Alpha 0.5.1 (`7ef5873c12f037161ac592fb022cb41255600122`) on 2026-10-11 and reported great progress. Its ten-room route is the accepted foundation for this expansion.
+
+## Alpha 0.5.2 expansion
+
+- Thirteen rooms across four regions. SkyWorks Approach, Storm Foundry and Keeper Relay extend Signal Terrace after all three relay sigils are recovered.
+- Wind and Electric seals gate the new route, with live projectile collision and bypass-prevention checks. New elevated traversal retains the unchanged player controller.
+- Storm Keeper reuses existing art and combat: facing-locked sweep, jumpable ground pulse, parry recovery, faster second phase and ranged pursuit. Ordinary hits cannot repeatedly cancel its warning.
+- Foundry Refuge saves an exact checkpoint. Defeating the Keeper and attuning its relay opens a persistent two-way return to Relay Undercroft with safe arrivals.
+- Atlas/minimap include all thirteen rooms, elemental gate markers and the new shortcut. Save schema 6 retains schema 4/5 progress and records the new relay and encounter.
+
+## Retained Alpha 0.5.1 features
+
+- Ten connected rooms: Relay Undercroft and Signal Terrace extend the route after the original Relay Archive is restored.
+- New elevated jump/tether routes, a safe Undercroft shrine, and two sentinel encounters using the existing combat system.
+- Three persistent relay sigils provide a side objective; the Fire cache checks opened gate state so jumping around its geometry cannot collect the sealed reward.
+- An Electric return from Signal Terrace to Echo Shrine works in both directions, has dedicated safe landings and persists across save/reload. The atlas/minimap show the discovered return and its seal/open state.
+- The MetSys map contains the added rooms/regions; full atlas labels wrap and all ten rooms fit in its existing panel.
+- I opens a travel kit with Kaze portrait, unlocked/locked traversal abilities and selectable elemental kunai. Click a slot or press T while paused. Map, pause and kit remain mutually exclusive.
+- Pause screen includes manual Save Journey with honest failure feedback; touch controls now include kunai and element cycling.
+- Save schema 5 preserves schema 4 progress and adds shrine positions, sigils and cleared annex encounters. Unknown selected elements are normalized before HUD drawing.
+- Room rebuilds release stale ropes, attacks/dashes, projectiles and afterimages without changing the player controller. Death during transitions clears pending travel and restores the earned shrine.
+- The recovered MetSys plugin manifest and UID-only editor load were corrected. Official plugin metadata/license and two missing translation files were restored from pinned upstream revision `0065ae8974291d1c4dfe72f55cfca0f37e3d6ef3`; existing runtime addon code/themes remain unchanged. See docs/METSYS_EDITOR_RECOVERY.md.
+
+## Tests and build evidence
+
+All checks used official Godot 4.6.1 and isolated workspace user data. Original downloaded executable and personal saves were not modified.
+
+| Check | Result |
+| --- | --- |
+| Approved baseline before expansion | Pass: all eight rooms load, MetSys discovery, movement and overlay checks |
+| approved_baseline | Pass: unchanged controller checksum, original room geometry, 400 walk speed and measured 232.56 held-jump height |
+| approved_combat_swing | Pass: facing-aware melee, successful/missed parry, existing damage protection, swing rope length and exact release velocity, queued combo |
+| annex_expansion | Pass: all ten rooms, relay gate, real elemental projectile collisions, sigils, two-way return, kit selection, touch bindings, transition/death cleanup |
+| annex_traversal | Pass: six critical platform jumps (four accepted annex jumps and two SkyWorks jumps) with actual controller inputs and collision landings, including Windstep jumps |
+| save_compatibility | Pass: abilities, MetSys exploration, new shrine/return/sigils/encounters, schema 4 migration, invalid element and failed-save feedback |
+| skyworks_progression | Pass: thirteen rooms, sigil gate, real Wind/Electric projectiles, transitions, exact shrine, Keeper relay, reciprocal shortcut, persistence and schema 5 migration |
+| storm_keeper | Pass: warning/parry, single-hit damage, range miss, jump avoids ground pulse, second phase, recovery, pursuit and independent story flags |
+| Clean source import | Pass: no script/parse/resource-load errors in a fresh copy without generated Godot cache |
+| Rendered source QA | Pass: original appearance, SkyWorks rooms and thirteen-room atlas visually inspected; capture fixtures use seeded progression |
+| Windows export | Pass: x86_64 release, embedded PCK, compatibility renderer, map data explicitly included |
+| Packaged fresh start | Pass: 180-frame headless boot, exit 0 |
+| Packaged annex starts | Pass: seeded saved starts in Rooms 10, 11 and 12, 180 rendered frames each, OpenGL on RTX 4070 Laptop GPU, exit 0; no runtime script errors |
+
+Reproduce: import with `godot --headless --path . --import --quit`, then run each suite with `godot --headless --path . --script res://tests/<suite>.gd -- --test`. Use disposable user data: save_compatibility intentionally writes a regression-only save file. Windows export uses `godot --headless --path . --export-release "Windows Desktop" <output.exe>` and matching official templates. CI workflow is provided; no remote CI run is claimed.
+
+## Limits and blockers
+
+- The creator completed and accepted the ten-room Alpha 0.5.1 route. The new SkyWorks route has automated traversal/combat checks and rendered QA, but still needs a human playthrough for pacing and Keeper balance.
+- This is an incremental development candidate, not a completed web-demo parity milestone. No 21-area/five-region/five-boss completion claim is made.
+- Water remains the approved build's existing hazard/presentation behavior. Real swimming and larger regional/boss scope remain future work.
+- The Windows sandbox emits `Failed to read the root certificate store` before/after changes. This is unrelated to offline gameplay and appears in the logs.
+- Headless editor import/export still emit pre-existing MetSys/editor RID/ObjectDB cleanup diagnostics. Gameplay suites and packaged boots have no script errors; do not describe editor runs as warning-free.
+- The runtime archive can be recovered, but original authoring history/comments are absent. Recovery and addon repair provenance are retained for traceability.
+
+## Next development task
+
+Playtest SkyWorks from the accepted save, focusing on seal readability, platform pacing and Keeper phase pressure. Address feedback while preserving the controller. Then add a bounded aquatic traversal route with explicit swimming behavior and regression coverage for unchanged dry-ground movement.

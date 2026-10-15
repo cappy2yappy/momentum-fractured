@@ -1,0 +1,37 @@
+GDRE Tools v2.7.4
+Windows 10.0.26200, headless
+Opening file: C:/Users/TonyS/Downloads/Kaze-Silent-District-Alpha-0.5.0-Windows-x86_64/Kaze.exe
+Loaded 244 imported files
+Detected Engine Version: 4.6.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Successfully loaded PCK!
+Version: 4.6.1
+Verified 501 files, no errors detected!
+Extracted 501 files, no errors detected!
+Recreating plugin configs...
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     46
+Scripts not decompiled:                 0
+Imported resources for export session:  244
+Successfully converted:                 244
+Lossy:                                  0
+Rewrote metadata:                       162
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.6.1 to edit the project.
+
+*******************************************************************************
+
+Recovery finished in 00m01s
