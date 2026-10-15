@@ -1,0 +1,80 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "classification": "new production asset candidates; creator acceptance pending",
+  "base": "fc998f9b22f3e778cc51ee2c81668ad73ac7902e",
+  "assignment": "4d2c97ba47717f9f7958a91d1992504822c85628",
+  "level_reference": "c2c002267c58e991966c0eebf7e098c6e7fff769",
+  "generations": [
+    {
+      "id": "turn",
+      "source": "source_art/art04/turn_master.png",
+      "prompt": "Use case: identity-preserve. Produce ONE actual 2D game character sprite on genuine transparent background, not a scene or model sheet. PRIMARY identity is supplied approved idle and running Kaze sprites: preserve her exact adult anime face, warm medium-dark brown skin, very long flowing dark-purple hair with bright GREEN head ribbons, bright green chest bow, fitted purple jacket with white collar and white cuffs, dark charcoal-purple pleated skirt, purple thigh-high stockings and purple lace-up heeled boots. Preserve athletic proportions and line weight/cel-painterly shading; no redesign, no weapon or extra costume. Third input supplies approved doorway turning action only.\nPOSE: quarter-BACK turning toward background, facing into upper-right depth at roughly 45 degrees away from viewer. Actual shoulders and hips rotate away, one visible cheek brown, leading right foot planted slightly farther into depth, left heel just lifting behind. Show all head/ribbons/hair/hands/boots, compact relaxed walking stance not running, hair trails modestly to left, no giant spread. No architectural ground surface or shadow underneath: only single character cutout, alpha everywhere else. Neutral readable ambient light matching canonical sprite colors, avoid golden skin bleaching or harsh blue tint. Full visible figure centered with ample transparent margins on every edge. Crisp clean painted sprite with defined contours that survive downsampling to roughly 97 pixels tall in game. Do NOT paste the idle sprite unchanged: author true rear-quarter torso/leg anatomy. No text, guides, boxes, background, multiple figures, feet cropping or ghost limbs.",
+      "generation_file": "exec-4f5d87c8-f316-4e2b-9459-94ff80f503d5.png"
+    },
+    {
+      "id": "entry",
+      "source": "source_art/art04/entry_master.png",
+      "prompt": "Use case: identity-preserve. Create ONE production 2D anime game sprite, genuine transparent alpha background, of the SAME Kaze character in the supplied exact canonical idle/run reference sprites. Match brown skin, adult face/proportions, long dark-purple hair, vivid green hair ribbons, green chest bow, fitted purple jacket with white collar/cuffs, short dark pleated skirt, purple thigh-highs and purple lace-up heeled boots. New pose only; no redesign. Secondary input is the previously authored rear-quarter sprite for consistent rendering and anatomy.\nPOSE: full BACK view walking into background doorway, shoulders and hips truly facing away (not side profile). Head turned only slightly right so a narrow brown cheek may be visible. Long hair separates into readable flowing dark-purple locks down back, tied with bright green ribbon; covers back naturally while waist/skirt remain readable. Right leg takes a small step away into depth, right boot farther/higher on image; left trailing boot heel raised with toe nearest viewer. Arms relaxed counter-swing, both correct hands visible beside skirt. Subtle natural hair follow-through, no exaggerated wind. Entire head-to-foot silhouette centered within generous transparent margins; compact enough for a 320-pixel-wide cell, no cropped hair or boots. Neutral canonical cel-painted shading, clean linework and colors that match source sprites; rich warm brown exposed legs and hands, no lightened skin, no new metallic accessories. No environment, ground, cast shadow, text, labels, frames or extra figures. This is one usable game sprite key, not a concept illustration.",
+      "generation_file": "exec-0cf860c7-4670-4871-b3d1-ec6a4ed68c41.png"
+    },
+    {
+      "id": "up",
+      "source": "source_art/art04/up_master.png",
+      "prompt": "Use case: identity-preserve. Deliver ONE actual transparent-alpha Kaze sprite for a 2D Metroidvania, single full figure only. PRIMARY canonical references are approved idle/run sprites: same adult anime woman, warm medium-dark brown skin, athletic proportions, very long dark-purple hair and vivid green ribbons, large GREEN chest bow, fitted purple jacket/white collar and white cuffs, charcoal-purple pleated skirt, purple thigh-high stockings and purple lace-up boots with modest block heels. Exact character face/costume, linework and clean cel-painted shading. Painting reference supplies stair pose mechanics, NOT character redesign.\nPOSE: right-facing side profile ASCENDING a short stair. Leading RIGHT boot sole horizontal planted on upper invisible tread, right knee raised and bent ~90 degrees carrying weight, pelvis just behind the support foot and torso leans slightly forward. Trailing LEFT leg extends down/back to lower tread, toe pushes off; correct anatomical legs with distinct knees and ankles. Right boot is about one boot-height higher than left toe. Near forearm forward in a small walking counter-swing, far arm back; no run sprint posture. Long hair trails gently left; compact silhouette fits narrow frame without clipping. Both boots and hands fully visible. No staircase, props, platforms, ground or shadow rendered: character cutout ONLY on genuine transparent alpha. Strong closed contours and recognizable brown face, neutral light matching canonical sprites, no pale skin. Entire figure with generous margins, all ribbons/hair intact, no labels, boxes, multiple figures, extra limbs, weapons, background or lighting glow. Game-ready key pose, not a finished animation or scenic painting.",
+      "generation_file": "exec-5507aef3-52ca-4b84-90c9-c21ceeb4bc44.png"
+    },
+    {
+      "id": "down",
+      "source": "source_art/art04/down_master.png",
+      "prompt": "Use case: identity-preserve. ONE actual Kaze 2D game sprite on true transparent alpha, single full figure only. Match supplied approved idle/run canonical adult anime Kaze exactly in identity, face, warm medium-dark BROWN skin, long deep-purple hair, vivid green head ribbon tails and green chest bow, fitted purple jacket with white collar/cuffs, dark pleated skirt, purple thigh-highs and matching lace-up modest block heel boots. Clean cel-painted linework and shading consistent with canonical sprites. No redesign, no pale skin, no additional equipment.\nPOSE: side profile facing LEFT, walking DOWN stairs with controlled weight transfer. Leading LEFT boot has reached LOWER invisible tread to the left, sole horizontal, knee slightly bent absorbing landing; heel and toe clearly align to same horizontal lower surface. Trailing RIGHT boot is still planted on UPPER invisible tread to right, back knee visibly bent/compressed and weight lowered; heel may lift slightly as toe pushes off. Lower leading foot is one boot-height below upper trailing foot. Pelvis stays BETWEEN the two supports, spine upright/slightly back compared with ascent, gaze lowered toward next step, arms relaxed balance not sprint. Hair gently drapes/trails toward right with all ends intact, no enormous wind spread. Distinct physical descending silhouette, not reversed ascent pose and not a jump/fall. Render only character, absolutely no stair, props, floor, cast shadow, colored aura, backdrop, text, guides, multiple figures or foot cropping. Entire figure compact within generous transparent margins on all edges, readable when reduced to roughly 97px upright game scale.",
+      "generation_file": "exec-1c7208ea-5243-4608-9734-56fc4f64af87.png"
+    },
+    {
+      "id": "door",
+      "source": "source_art/art04/door_master.png",
+      "prompt": "Use case: stylized-concept / production game asset. Derive ONE isolated reusable 2D doorway architecture cutout from approved Kaze painting reference, on genuine transparent alpha. Environment ONLY, no character. Asset is a Bellroof Walk timber service doorway for a side-scrolling Metroidvania, viewed almost front-on with slight depth into background. Structure roughly 164 units wide by190 units high at final game size; full lintel, tiled small eave, aged timber left/right jambs, stone threshold and small wall returns. Rich hand-painted weathered wood joinery, subtle cool indigo shadows and restrained amber interior reflection, same painting material language but neutral enough for Silent District night. Thick RIGHT jamb must be a distinct vertical front occluder with visible inner face. Keep center aperture OPEN AND TRANSPARENT, approximately 90 units wide by140 units tall, no painted dark rectangle or closed door; the game will place a separate dark interior behind. Threshold is horizontal at bottom and a solid narrow stone strip, no ground platform extending outside unit. Closed outer silhouette, subtle edge wear, believable joinery, no loose splinters/ivy blocking opening. Entire doorway/eave/base visible with transparent margin all around, no ground shadow or surrounding room, no landscape, no wall extending to image borders, no text/signage, no moon, no symbols or character. This is actual alpha architecture art to import, not a concept scene.",
+      "generation_file": "exec-0b8c3faf-63a8-4100-9555-9d5167623724.png"
+    },
+    {
+      "id": "stairs",
+      "source": "source_art/art04/stairs_master.png",
+      "prompt": "Use case: production game environment asset. From approved stair painting derive ONE isolated short masonry stair flight and small top landing, true transparent alpha outside. No character or surrounding scene. Orthographic SIDE VIEW for a 2D platformer: four broad horizontal treads, each rises to RIGHT, consistent step rise about 12 units and run about 48 units, total diagonal flight run192 rise48; top small horizontal landing. Flat walkable surfaces read as straight horizontal contact edges, visible thin top faces and shaded vertical risers; no perspective rotation or isometric camera. Full SOLID stone stringer/retaining wedge underneath carries each step to lower base, no floating steps. Dark weathered blue-gray masonry with clean lavender-blue edge light and restrained warm reflection, intricate hand-painted stone grain/joints that match Silent District reference. Sparse moss at base only, no rail in front of character feet. Bottom underside silhouette terminates as an intentional masonry wedge/block; all bases and all steps fit within generous alpha margin. Long low landscape composition, gameplay asset rather than illustration, no shadow plane, floor outside asset, props, foliage clusters, text, labels, border, arrows or background. One complete connected flight with landing; preserve visible horizontal contact surfaces and side-scroller readability.",
+      "generation_file": "exec-41b97d18-0df3-4a32-988a-7fa7e6238f73.png"
+    },
+    {
+      "id": "roof",
+      "source": "source_art/art04/roof_master.png",
+      "prompt": "Use case: production game environment asset. ONE isolated horizontal ROOF SUPPORT ASSEMBLY on genuine transparent alpha for Bellroof Walk side-scrolling 2D game, derived from the approved paintings' timber joinery, weathered stone, tiled roof materials and Silent District cool night palette. No character/landscape.\nStructure intended beneath an existing 400-unit horizontal platform: complete top horizontal aged timber beam, paired vertical wall posts at left/right, two strong diagonal knee braces connecting beam to posts, and a CONTINUOUS low dark timber/plaster roof-wall backing between posts so supports visually connect into existing roof mass. Wide low ratio about 472 wide \u00d7170 tall. Feet of both posts and backing terminate on one horizontal baseline, top beam continuous horizontally. Orthographic front/side elevation, no vanishing-point wedge, no cut off load-bearing member, no floating disconnected brace. Rich painterly wood grain, pegged mortise joints, iron bolts, modest chipped plaster, restrained blue-violet shadows and subtle warm edge reflections; no giant highlights. Full assembly isolated with alpha around exterior, clean border silhouette and opaque material interiors; deliberate openings only between braces if backed by wall material. No deck/rail above beam, no plants cluttering the gameplay edge. No surrounding house or background, no floor outside assembly, no cast-shadow plane, no captions/icons. Usable modular game dressing at actual scale, not concept art scene.",
+      "generation_file": "exec-2b7bb1cf-9c3c-43c0-9267-b2ce99fdd04a.png"
+    },
+    {
+      "id": "arch",
+      "source": "source_art/art04/arch_master.png",
+      "prompt": "Use case: production 2D game environment asset. Derive ONE isolated complete load-bearing CANAL MASONRY ARCH with TWO PIERS from approved supported-crossing painting. Transparent alpha around outer structure AND THROUGH arch opening. No character, water, surrounding terrain, landscape, furniture or scene. Straight orthographic FRONT/SIDE elevation suitable for side-scrolling room. Final intended size440 wide \u00d7322 tall, so width/height ratio1.37. Solid horizontal top beam/spandrel behind existing platform, proper radial voussoir wedge stones and keystone across wide arch, two substantial vertical piers extending to SAME LEVEL BASE. Both pier foundations and top fully visible, no member cropped. Clear load path top\u2192arch\u2192piers\u2192base. Pier feet flare slightly, dry recovery-floor contact baseline. Cool desaturated blue-gray worn masonry with restrained moss on SIDE faces only, subtle warm bevel edges, textured material and coherent depth like approved Canal Remains painting, no neon outlines. Arch opening is EMPTY TRANSPARENT, not painted black, no backdrop surface or cast shadow plane. Closed crisp contours, full alpha margin around unit, no ornament/lore/text, no floating cap, no isometric perspective. Real usable modular transparent game architecture, not an illustrated room or mockup.",
+      "generation_file": "exec-02e73521-8617-46b7-ba0d-dfd4acbd2104.png"
+    }
+  ],
+  "notes": "Pillow used for requested extraction, technical alpha cleanup, packing, registration and review layouts; artistic pixels authored with image_gen. No layered Aseprite authoring claimed.",
+  "cleanup": {
+    "source": "arch_master.png",
+    "output": "arch_plain_master.png",
+    "tool": "image_gen",
+    "instruction": "Remove only V/chevron carving from center keystone, preserve geometry/materials/transparency; plain weathered stone."
+  },
+  "references": {
+    "primary_identity": [
+      "assets/kaze/cleaned/kaze_idle_strip.png",
+      "assets/kaze/cleaned/kaze_run_strip.png"
+    ],
+    "generation_identity_inputs": [
+      "source_art/art04/reference_kaze_idle.png",
+      "source_art/art04/reference_kaze_run.png"
+    ],
+    "identity_reference_preparation": "first272x724 cell, crop to source alpha bounds,3x nearest enlargement; approved source sheets unchanged",
+    "approved_paintings": [
+      "docs/art/tr03/art03_recovery/01_doorway.png",
+      "docs/art/tr03/art03_recovery/02_staircase.png",
+      "docs/art/tr03/art03_recovery/03_supported_crossing.png"
+    ]
+  }
+}

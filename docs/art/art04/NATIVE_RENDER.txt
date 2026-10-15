@@ -1,0 +1,14 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+ART04_NATIVE device=Apple M4 driver=opengl3
+ART04_CAPTURE R14_tr03 room=14 zoom=(1.0, 1.0) colliders=23
+ART04_CAPTURE R14_art04 room=14 zoom=(1.0, 1.0) colliders=23
+ART04_CAPTURE R15_tr03 room=15 zoom=(1.0, 1.0) colliders=15
+ART04_CAPTURE R15_art04 room=15 zoom=(1.0, 1.0) colliders=15
+ART04_CAPTURE turn_depth_key room=14 zoom=(1.0, 1.0) colliders=23
+ART04_CAPTURE enter_depth_key room=14 zoom=(1.0, 1.0) colliders=23
+ART04_CAPTURE stair_up_key room=14 zoom=(1.0, 1.0) colliders=23
+ART04_CAPTURE stair_down_key room=14 zoom=(1.0, 1.0) colliders=23
+ART04_RESOURCE_CHECK four one-key clips loaded, no cycles claimed
+ART04_PREFAB_CHECK door layers and key preview instantiate

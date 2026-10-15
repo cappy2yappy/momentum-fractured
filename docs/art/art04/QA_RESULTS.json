@@ -1,0 +1,142 @@
+{
+  "status": "technical import and native static-review passed; creator acceptance and runtime integration pending",
+  "engine": "Godot 4.6.1.stable.official.14d19694e",
+  "platform": "native macOS Apple M4, OpenGL compatibility",
+  "pngs_validated": 13,
+  "rgba_hidden_rgb_and_margins": "passed in art04_export.py",
+  "root_equation": "(160 - 320/2, 600 - 724/2 - 238) = (0,0)",
+  "source_archives": [
+    {
+      "path": "source_art/art04/enter_depth_key.ora",
+      "sha256": "aa2cc346c0773657201b25f6d0890c0d91ec713a42c21759b259c44e1088e483"
+    },
+    {
+      "path": "source_art/art04/r14_door_layers.ora",
+      "sha256": "ab6344af8982f91a9eb9f731c564b64f7aa7a7710248b0210e538af871458bb1"
+    },
+    {
+      "path": "source_art/art04/r14_roof_support.ora",
+      "sha256": "ecafe7e5eb4ff96d3d307354c69a28b40521e6cf0c3b64d9e6e5a4f43b2f3dc6"
+    },
+    {
+      "path": "source_art/art04/r15_masonry_support.ora",
+      "sha256": "33fcd52e70a4cc18a53747a4b7792f6b21c463819ca8e4076b419bc795aac3dd"
+    },
+    {
+      "path": "source_art/art04/stair_down_key.ora",
+      "sha256": "196e50dcbb768302e7cb1f3786d46acbb1f929860edb6d642f3c557154a2212c"
+    },
+    {
+      "path": "source_art/art04/stair_flight_right.ora",
+      "sha256": "db7b296473e1601db1e21a429e1effa0bfe1dd4302e6e539797eb15eb382c10a"
+    },
+    {
+      "path": "source_art/art04/stair_up_key.ora",
+      "sha256": "411bc638207a57367ae89100e9acb7d56ab6c6807185580abce2a4fa7ce15dd3"
+    },
+    {
+      "path": "source_art/art04/turn_depth_key.ora",
+      "sha256": "663ee75cec43d92df179d5b363b7591110a43e400fe2fa5e1fb916b87548d385"
+    }
+  ],
+  "captures": [
+    {
+      "path": "docs/art/art04/captures/R14_art04.png",
+      "sha256": "c9bb70e4f3a3c721479fb56dec6180473146e5bde5d40c5291871002bf30334c"
+    },
+    {
+      "path": "docs/art/art04/captures/R14_tr03.png",
+      "sha256": "f1adb45d520fe0d433ec435e4a4544692dee62368000243cf1b985689e518b55"
+    },
+    {
+      "path": "docs/art/art04/captures/R15_art04.png",
+      "sha256": "b71da1730dcab0a0310f6e6c4c3f04f21b7a2928ba4bb8fa7e15bb829f818ca6"
+    },
+    {
+      "path": "docs/art/art04/captures/R15_tr03.png",
+      "sha256": "568129bfaf04ac46aba2318d065bc24c993de79ee21908e5df1d3dd8bdd1d2a5"
+    },
+    {
+      "path": "docs/art/art04/captures/enter_depth_key.png",
+      "sha256": "b185794926b5f0f9bdf0c56d080ebf0075ae2af51e48459610d8447849dd5551"
+    },
+    {
+      "path": "docs/art/art04/captures/stair_down_key.png",
+      "sha256": "f2a2554363c6f6deba609e22ceb95f0f480daa34d80b5be4fe9e9ac42c008a1e"
+    },
+    {
+      "path": "docs/art/art04/captures/stair_up_key.png",
+      "sha256": "4536631ad4fbf31437742b001af47e7443d55d1b2ec81869d8bce8b3da0153dd"
+    },
+    {
+      "path": "docs/art/art04/captures/turn_depth_key.png",
+      "sha256": "daa2aa99a88bc93a3075388057b1543763e8250c3bc94120b693cb4b50c839d6"
+    }
+  ],
+  "skin_color_proxy": {
+    "approved_idle": {
+      "median_warm_pixels_rgb": [
+        164,
+        94,
+        67
+      ],
+      "method": "warm-pixel color proxy, not an identity approval or exact skin segmentation"
+    },
+    "turn_depth_key": {
+      "median_warm_pixels_rgb": [
+        171,
+        97,
+        68
+      ],
+      "method": "warm-pixel color proxy, not an identity approval or exact skin segmentation"
+    },
+    "enter_depth_key": {
+      "median_warm_pixels_rgb": [
+        163,
+        87,
+        59
+      ],
+      "method": "warm-pixel color proxy, not an identity approval or exact skin segmentation"
+    },
+    "stair_up_key": {
+      "median_warm_pixels_rgb": [
+        180,
+        102,
+        66
+      ],
+      "method": "warm-pixel color proxy, not an identity approval or exact skin segmentation"
+    },
+    "stair_down_key": {
+      "median_warm_pixels_rgb": [
+        183,
+        106,
+        66
+      ],
+      "method": "warm-pixel color proxy, not an identity approval or exact skin segmentation"
+    }
+  },
+  "colliders": {
+    "R14_before_after": [
+      23,
+      23
+    ],
+    "R15_before_after": [
+      15,
+      15
+    ]
+  },
+  "visual_results": [
+    "Four distinct keys, brown skin/purple costume/green ribbons retained; visible head-to-boot silhouettes at approximately 94\u201397px occupied height.",
+    "Door rear/foreground layers and transparent opening rendered; inward foot recedes into background.",
+    "Ascent leading boot sits on higher tread; descent leading boot reaches lower tread with flexed knees; 0.8 vertical stair staging scale aligns contacts.",
+    "Existing procedural roof silhouettes/large arches still overdraw parts of new dressing; integration must resolve these scoped placeholders. No claim of a final room reskin."
+  ],
+  "limitations": [
+    "Static native fixture captures, not a playable ART04 integration or creator playtest.",
+    "No full cycles, walk, exit/front-quarter keys or reviewed opposite-facing variants supplied.",
+    "R17 descent destination/runtime masking not validated.",
+    "Full runtime cleanup/cancel/death/input/progression/save tests not rerun; gameplay unchanged.",
+    "No Windows export/native check, sustained 60FPS, or finished transition timing acceptance.",
+    "Initial sandbox GUI capture aborted before rendering; authorized native capture succeeded. Headless import had profile-permission/certificate/shutdown diagnostics; native final capture log has no script or resource errors."
+  ]
+}

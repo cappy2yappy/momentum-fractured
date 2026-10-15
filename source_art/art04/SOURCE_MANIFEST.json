@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "source_art/art04/PROVENANCE.json",
+      "bytes": 15201,
+      "sha256": "043ffb5e7292c58bc3823f167080e6010160c283656287ce59384af97f8d4135"
+    },
+    {
+      "path": "source_art/art04/arch_master.png",
+      "bytes": 1859054,
+      "sha256": "4ab466bdf2a1738a1cc2d61a9fc4ac90df1b38e06b4a94c6cbea17011e8bf38f"
+    },
+    {
+      "path": "source_art/art04/arch_plain_master.png",
+      "bytes": 1689329,
+      "sha256": "40925dec40ecc844fa827c821a048e293608b08580afce25d808368712b6a768"
+    },
+    {
+      "path": "source_art/art04/door_master.png",
+      "bytes": 1789177,
+      "sha256": "bacd44b1ed3e0e2a8c9c473bcd3b99844aa4abddb695ae2d3923a8e7323f70f2"
+    },
+    {
+      "path": "source_art/art04/down_master.png",
+      "bytes": 1512512,
+      "sha256": "1cfacce52b0d96b9ef21676ed5432fd893dfa4250303a6e45880cf8ca6c3efe3"
+    },
+    {
+      "path": "source_art/art04/enter_depth_key.ora",
+      "bytes": 125906,
+      "sha256": "aa2cc346c0773657201b25f6d0890c0d91ec713a42c21759b259c44e1088e483"
+    },
+    {
+      "path": "source_art/art04/entry_master.png",
+      "bytes": 1404746,
+      "sha256": "4092010ef57f38bcfd2d6781298b36626f99d3b0417ac59104d6a9fe97c40f4d"
+    },
+    {
+      "path": "source_art/art04/r14_door_layers.ora",
+      "bytes": 156302,
+      "sha256": "ab6344af8982f91a9eb9f731c564b64f7aa7a7710248b0210e538af871458bb1"
+    },
+    {
+      "path": "source_art/art04/r14_roof_support.ora",
+      "bytes": 278798,
+      "sha256": "ecafe7e5eb4ff96d3d307354c69a28b40521e6cf0c3b64d9e6e5a4f43b2f3dc6"
+    },
+    {
+      "path": "source_art/art04/r15_masonry_support.ora",
+      "bytes": 483941,
+      "sha256": "33fcd52e70a4cc18a53747a4b7792f6b21c463819ca8e4076b419bc795aac3dd"
+    },
+    {
+      "path": "source_art/art04/reference_kaze_idle.png",
+      "bytes": 132648,
+      "sha256": "814434b2eea8807b10ba85ce5406739f03c20264fd6ca0f38ef955421b9ad65c"
+    },
+    {
+      "path": "source_art/art04/reference_kaze_run.png",
+      "bytes": 116988,
+      "sha256": "52274783034d6cc9c28939fa0654ad8fe94f2a7b4b0520f65e3959d9c6a5d117"
+    },
+    {
+      "path": "source_art/art04/roof_master.png",
+      "bytes": 1881754,
+      "sha256": "12a01d4c3a63e6914120c7419aa301877d5adc3ea1c0cb29b0b8d0fb6ae12296"
+    },
+    {
+      "path": "source_art/art04/stair_down_key.ora",
+      "bytes": 137402,
+      "sha256": "196e50dcbb768302e7cb1f3786d46acbb1f929860edb6d642f3c557154a2212c"
+    },
+    {
+      "path": "source_art/art04/stair_flight_right.ora",
+      "bytes": 94946,
+      "sha256": "db7b296473e1601db1e21a429e1effa0bfe1dd4302e6e539797eb15eb382c10a"
+    },
+    {
+      "path": "source_art/art04/stair_up_key.ora",
+      "bytes": 169784,
+      "sha256": "411bc638207a57367ae89100e9acb7d56ab6c6807185580abce2a4fa7ce15dd3"
+    },
+    {
+      "path": "source_art/art04/stairs_master.png",
+      "bytes": 1351295,
+      "sha256": "506cf945167bd74271364aa558b0286209d4958368d22eb2740e75a9c771aa6c"
+    },
+    {
+      "path": "source_art/art04/turn_depth_key.ora",
+      "bytes": 144966,
+      "sha256": "663ee75cec43d92df179d5b363b7591110a43e400fe2fa5e1fb916b87548d385"
+    },
+    {
+      "path": "source_art/art04/turn_master.png",
+      "bytes": 1559763,
+      "sha256": "5d953e0a16125c087c3eaaa6bb743109969b87ac85b4880897be662803cdb254"
+    },
+    {
+      "path": "source_art/art04/up_master.png",
+      "bytes": 992452,
+      "sha256": "682cfe1cbd3c0c29d12527f042a589e35bfe98d0b0ba8560b6883a15280e4d14"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art04/environment/r14_door_interior.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/art04/environment/r14_door_back.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/art04/environment/r14_door_front.png" id="3"]
+
+[node name="ART04Doorway" type="Node2D"]
+texture_filter = 2
+metadata/anchor = "existing endpoint feet; pilot R14 (120,1100)"
+metadata/status = "production art candidate; no collision or interaction"
+
+[node name="Interior" type="Sprite2D" parent="."]
+position = Vector2(-120,-208)
+texture = ExtResource("1")
+centered = false
+z_index = -2
+
+[node name="RearFrame" type="Sprite2D" parent="."]
+position = Vector2(-120,-208)
+texture = ExtResource("2")
+centered = false
+z_index = -1
+
+[node name="FrontJambThreshold" type="Sprite2D" parent="."]
+position = Vector2(-120,-208)
+texture = ExtResource("3")
+centered = false
+z_index = 1
