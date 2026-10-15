@@ -1,11 +1,11 @@
-# Build Shogun — BUILD-03 context
+# Build Shogun — BUILD-03 complete
 
-Mission: deliver TR-02 Windows playtest through GitHub without gameplay merges.
+Verified 2026-10-15 UTC. Mission delivered: downloadable TR-02 Windows x86_64 playtest, plus separate macOS universal artifact.
 
-Verified 2026-10-15 UTC: main c69efbb43aa49b71dc6c541820934487a170fa7b; CI-02 PR #14 merged. CI-01 PR #13 remains open. PM-02 PR #18 remains open; its Build Shogun bootstrap records were read.
+Game source: feature/alpha-0.6.1-mixed-transitions @ e9a2d1ab0537f3f903c543b080451b3556961179; PR #16 open. CI branch: ci/build03-tr02-playtest; PR #20 open. Main remains c69efbb43aa49b71dc6c541820934487a170fa7b. Successful run 38674862607 at CI head 7a02be64bfe508f39b1a7a724a2aa5ab2341ede6; subsequent commits documentation only.
 
-Game source: feature/alpha-0.6.1-mixed-transitions @ e9a2d1ab0537f3f903c543b080451b3556961179 (PR #16 open). Dedicated CI branch: ci/build03-tr02-playtest; review PR #20. Last executable CI change: 220b93177b74ac4309fcc45e377e88f04dcaf38e. Workflow run 38674789799 queued at checkpoint. No success/artifact acceptance yet.
+897 assertions passed; exported Windows/macOS ZIP/PCK audits passed; Windows native main startup and ten isolated comparison launcher boots passed; Intel macOS native startup passed. All five artifacts downloaded and independently outer/inner/member-hash/CRC verified, 529 PCK entries per target. Windows inner ZIP SHA-256 edd8661a7a6b1bb2b528eb4c205e22ee84bae9629fe58c69daaae7ca998c2350.
 
-Recovered checksum-pinned Godot 4.6.1 Linux QA/export, Windows x86_64 and macOS universal target support, native Windows/Intel macOS headless checks. Read-only Actions token and credential-free checkouts retained. TR-02 packaging reuses committed launch.ps1/README and ten isolated profile launchers. Audio branch is not included. Existing game audio startup only is in scope.
+Windows: https://github.com/cappy2yappy/momentum-fractured/actions/runs/38674862607/artifacts/11945722171 (expires 2026-11-05 UTC). Report/evidence: docs/agent_handoffs/BUILD03_PM_RETURN_REPORT.md and BUILD03_VERIFICATION.json.
 
-No merge, tag, release or repository security change authorized. Human gameplay and sustained 60 FPS remain unverified.
+No merge, release, gameplay changes or specialist combination. Sound branch not included. Human gameplay, Apple Silicon native startup and sustained 60 FPS unverified. Next: creator compares treatments; PM reviews CI/gameplay separately.
