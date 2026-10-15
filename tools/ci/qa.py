@@ -29,7 +29,7 @@ def main():
         return legacy_qa(args.godot)
     tree = ast.parse((ROOT / 'tools/run_int01_qa.py').read_text())
     listed = set(next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'suites' for t in n.targets)))
-    discovered = listed | {f.stem for f in (ROOT / 'tests').glob('*.gd') if 'PASS:' in f.read_text() and f.stem != 'integration_profile'}
+    discovered = listed | {f.stem for f in (ROOT / 'tests').glob('*.gd') if 'PASS:' in f.read_text() and f.stem not in {'integration_profile', 'mixed_profile'}}
     assert KNOWN <= listed and all((ROOT/'tests'/f'{name}.gd').is_file() for name in discovered), 'Required suite missing'
     result = subprocess.run([sys.executable, 'tools/run_int01_qa.py', '--godot', args.godot], cwd=ROOT)
     rows = json.loads((LOGS / 'int01_reproduction_results.json').read_text())
@@ -74,3 +74,4 @@ def legacy_qa(godot):
     return int(bool(failed))
 
 if __name__ == '__main__': sys.exit(main())
+
