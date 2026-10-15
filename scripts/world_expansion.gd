@@ -130,6 +130,7 @@ func draw_room(w):
 		# Lightweight identity silhouettes: roofs, retaining arches, roots and pump drums.
 		for x in range(140,int(size.x),440):
 			var at=Vector2(x,size.y-400)
+			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(at-Vector2(160,225),Vector2(390,385))): continue
 			if w.room in [13,14,17]:
 				w.draw_line(at-Vector2(100,220),at+Vector2(100,-120),Color("62566b"),9)
 				w.draw_line(at+Vector2(100,-120),at+Vector2(220,-220),Color("62566b"),9)

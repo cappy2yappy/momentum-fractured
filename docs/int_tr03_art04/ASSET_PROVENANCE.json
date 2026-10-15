@@ -1,0 +1,10 @@
+{
+  "base_pr": 27,
+  "base_sha": "c2c002267c58e991966c0eebf7e098c6e7fff769",
+  "art_pr": 30,
+  "art_sha": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "imported_paths": [
+    "assets/art04/"
+  ],
+  "policy": "Selective runtime assets only; no source_art, art-branch gameplay or active clip replacement. Four keys, not cycles."
+}

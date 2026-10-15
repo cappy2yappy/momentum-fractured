@@ -32,13 +32,14 @@ static func draw_legacy_exit(w, at: Vector2, color: Color):
 	w.draw_string(ThemeDB.fallback_font,at+Vector2(-5,-18),"E",HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e6dcc4"))
 
 static func draw_background(w):
-	w.embodied_transitions.draw_dressing(w)
+	if not w.embodied_transitions.production_active(): w.embodied_transitions.draw_dressing(w)
 	var size=w.room_size(w.room)
 	var font=ThemeDB.fallback_font
 	if w.room==14:
 		# Distant stepped roofs and antenna masts frame the horizontal roof route.
 		w.draw_rect(Rect2(0,0,size.x,560),Color(0.12,0.12,0.20,0.28))
 		for x in range(100,2500,390):
+			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(x-30,460,290,840)): continue
 			w.draw_rect(Rect2(x,700,230,600),Color("272634"))
 			w.draw_line(Vector2(x-30,700),Vector2(x+115,630),Color("60576a"),7)
 			w.draw_line(Vector2(x+115,630),Vector2(x+260,700),Color("60576a"),7)
@@ -49,6 +50,7 @@ static func draw_background(w):
 		for y in [420,680,940,1200]:
 			w.draw_line(Vector2(40,y),Vector2(size.x-40,y),Color("354850"),12)
 		for x in range(180,2100,420):
+			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(x-160,770,320,490)): continue
 			w.draw_arc(Vector2(x,1250),150,PI,TAU,32,Color("465b62"),14)
 			w.draw_line(Vector2(x-150,1250),Vector2(x-150,780),Color("2c3c43"),18)
 		w.draw_string(font,Vector2(680,570),"DRY SERVICE ROUTE",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("b2c0b5"))
@@ -75,7 +77,9 @@ static func draw_background(w):
 			w.draw_rect(Rect2(at+Vector2(-62,-218 if w.room in PILOT_STYLES else -146),Vector2(124,30)),Color("23242f"))
 			w.draw_string(font,at+Vector2(-54,-198 if w.room in PILOT_STYLES else -126),"ROUTE %02d"%p.target,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("d7c9a6"))
 
-# All artwork is procedural, noninteractive placeholder architecture.
+	if w.embodied_transitions.production_active(): w.embodied_transitions.draw_dressing(w)
+
+# Legacy artwork is procedural, noninteractive placeholder architecture.
 static func draw_pilot_exit(w, at: Vector2, portal: Dictionary):
 	var unlocked = w.expansion.allowed(w, portal.need)
 	var near = w.player.position.distance_to(at) < 85
