@@ -1,0 +1,149 @@
+[
+  {
+    "x": 40,
+    "y": 52,
+    "text": "TR-03 / ENTRIES THAT LEAD SOMEWHERE, PLATFORMS THAT ARE SUPPORTED",
+    "size": 32,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 40,
+    "y": 86,
+    "text": "Original schematic module kit \u2022 all dressing is visual-only \u2022 collision and endpoint geometry remain owned by Level",
+    "size": 17,
+    "color": "#A5B7B6"
+  },
+  {
+    "x": 60,
+    "y": 155,
+    "text": "DEPTH-DOOR-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 434,
+    "text": "Recess, inner reveal, lintel and sill.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 457,
+    "text": "Opening100\u00d7132; frame144\u00d7168 (proposal).",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 155,
+    "text": "STAIR-LANDING-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 434,
+    "text": "Four visible treads28 / rise14 with stringer.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 457,
+    "text": "Existing landing joins a depth-facing flight.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 155,
+    "text": "CULVERT-PIER-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 434,
+    "text": "Arch/stone piers carry the service cap.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 457,
+    "text": "Keep full approved passage corridor clear.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 565,
+    "text": "ROOF-BRACE-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 844,
+    "text": "Attach below shelf to an actual visible wall.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 867,
+    "text": "A dangling bracket is not a structural fix.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 565,
+    "text": "CANAL-SUPPORT-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 844,
+    "text": "Cap beam, braced pile and visible foot.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 867,
+    "text": "Do not invent a safe landing in hazard water.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 565,
+    "text": "RUIN-BUTTRESS-01",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 844,
+    "text": "Masonry/terrain mass joins a real surface.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 867,
+    "text": "Roots supplement, not replace, load-bearing.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 40,
+    "y": 976,
+    "text": "SCHEMATIC KEY POSES / CONCEPT ONLY \u2014 final Kaze art, timing and placement require review",
+    "size": 17,
+    "color": "#E4B562"
+  }
+]

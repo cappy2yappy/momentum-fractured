@@ -1,0 +1,462 @@
+{
+  "boards_rendered": 5,
+  "current_frame_previews": 32,
+  "current_gameplay_not_executed_by_this_fixture": true,
+  "diagram_size": [
+    1600,
+    1000
+  ],
+  "final_new_frames_produced": 0,
+  "loader_seconds_unchanged_in_spec": true,
+  "measured_fps": null,
+  "new_frame_slots": 30.0,
+  "source_audit": [
+    {
+      "clip": "idle",
+      "dimensions": [
+        2176,
+        724
+      ],
+      "equal_cells": true,
+      "frame_count": 8,
+      "frames": [
+        {
+          "alpha_bounds_01": [
+            40,
+            223,
+            247,
+            591
+          ],
+          "frame": 0,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            39,
+            224,
+            245,
+            591
+          ],
+          "frame": 1,
+          "minimum_margin_px": 27,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            36,
+            223,
+            240,
+            591
+          ],
+          "frame": 2,
+          "minimum_margin_px": 32,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            34,
+            223,
+            240,
+            591
+          ],
+          "frame": 3,
+          "minimum_margin_px": 32,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            42,
+            242,
+            247,
+            591
+          ],
+          "frame": 4,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            26,
+            229,
+            237,
+            591
+          ],
+          "frame": 5,
+          "minimum_margin_px": 26,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            28,
+            225,
+            238,
+            591
+          ],
+          "frame": 6,
+          "minimum_margin_px": 28,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            27,
+            227,
+            235,
+            591
+          ],
+          "frame": 7,
+          "minimum_margin_px": 27,
+          "strong_alpha_on_cell_border": 0
+        }
+      ],
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "rgba_png": true,
+      "source_pivot": [
+        136.0,
+        591.0
+      ],
+      "visual_scale": 0.264990880726789
+    },
+    {
+      "clip": "run",
+      "dimensions": [
+        2176,
+        724
+      ],
+      "equal_cells": true,
+      "frame_count": 8,
+      "frames": [
+        {
+          "alpha_bounds_01": [
+            22,
+            236,
+            249,
+            492
+          ],
+          "frame": 0,
+          "minimum_margin_px": 22,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            39,
+            247,
+            234,
+            492
+          ],
+          "frame": 1,
+          "minimum_margin_px": 38,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            28,
+            239,
+            242,
+            492
+          ],
+          "frame": 2,
+          "minimum_margin_px": 28,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            26,
+            246,
+            248,
+            492
+          ],
+          "frame": 3,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            15,
+            232,
+            259,
+            492
+          ],
+          "frame": 4,
+          "minimum_margin_px": 13,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            43,
+            236,
+            231,
+            492
+          ],
+          "frame": 5,
+          "minimum_margin_px": 41,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            26,
+            234,
+            247,
+            492
+          ],
+          "frame": 6,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            28,
+            238,
+            248,
+            492
+          ],
+          "frame": 7,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        }
+      ],
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "rgba_png": true,
+      "source_pivot": [
+        136.0,
+        491.0
+      ],
+      "visual_scale": 0.382578053591187
+    },
+    {
+      "clip": "attack",
+      "dimensions": [
+        2560,
+        724
+      ],
+      "equal_cells": true,
+      "frame_count": 8,
+      "frames": [
+        {
+          "alpha_bounds_01": [
+            46,
+            251,
+            272,
+            498
+          ],
+          "frame": 0,
+          "minimum_margin_px": 46,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            26,
+            235,
+            295,
+            499
+          ],
+          "frame": 1,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            240,
+            295,
+            498
+          ],
+          "frame": 2,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            243,
+            293,
+            498
+          ],
+          "frame": 3,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            44,
+            251,
+            296,
+            498
+          ],
+          "frame": 4,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            239,
+            295,
+            498
+          ],
+          "frame": 5,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            239,
+            295,
+            497
+          ],
+          "frame": 6,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            270,
+            275,
+            498
+          ],
+          "frame": 7,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        }
+      ],
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "rgba_png": true,
+      "source_pivot": [
+        160.0,
+        498.0
+      ],
+      "visual_scale": 0.37875157200639
+    },
+    {
+      "clip": "traversal",
+      "dimensions": [
+        2560,
+        724
+      ],
+      "equal_cells": true,
+      "frame_count": 8,
+      "frames": [
+        {
+          "alpha_bounds_01": [
+            58,
+            315,
+            244,
+            510
+          ],
+          "frame": 0,
+          "minimum_margin_px": 58,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            39,
+            291,
+            237,
+            513
+          ],
+          "frame": 1,
+          "minimum_margin_px": 39,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            28,
+            241,
+            295,
+            507
+          ],
+          "frame": 2,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            243,
+            280,
+            505
+          ],
+          "frame": 3,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            59,
+            311,
+            276,
+            514
+          ],
+          "frame": 4,
+          "minimum_margin_px": 44,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            49,
+            238,
+            295,
+            511
+          ],
+          "frame": 5,
+          "minimum_margin_px": 25,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            233,
+            295,
+            511
+          ],
+          "frame": 6,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        },
+        {
+          "alpha_bounds_01": [
+            24,
+            343,
+            279,
+            476
+          ],
+          "frame": 7,
+          "minimum_margin_px": 24,
+          "strong_alpha_on_cell_border": 0
+        }
+      ],
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "rgba_png": true,
+      "source_pivot": [
+        160.0,
+        510.0
+      ],
+      "visual_scale": 0.339192793452397
+    }
+  ],
+  "status": "art brief/storyboards complete; final sprite production pending creator review",
+  "aseprite_probe": {
+    "installed": true,
+    "batch_exit_code": 1,
+    "output_created": false,
+    "authored_assets_claimed": false
+  },
+  "higgsfield": {
+    "preferences_checked": true,
+    "generation_submitted": false
+  },
+  "source_border_alpha_threshold": 0.1,
+  "manual_review": [
+    "Door turn remains visible before reveal occlusion; initial occluded turn diagram corrected",
+    "Stair ascent/downward contact keys use different leg mechanics; support drawings separated from captions",
+    "Architecture kit shows attachment paths into walls/terrain/landings",
+    "All32 current source frames inspected over black/white/gray/indigo at their recorded gameplay scales",
+    "Existing combat/traversal sheets contain some detached fragments; preserved and flagged, not automatically repaired"
+  ],
+  "new_sprite_frame_qa": "NOT RUN \u2014 zero final painted new frames; only future acceptance contract exists",
+  "new_gameplay_transition_test": "NOT RUN \u2014 Lane B does not implement transition code",
+  "fps_validation": "NOT RUN \u2014 diagrams/static art do not establish frame rate",
+  "source_art_preservation": "verify_baseline.py checked separately; record command result in PM report"
+}

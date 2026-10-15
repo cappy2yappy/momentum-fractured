@@ -1,0 +1,149 @@
+[
+  {
+    "x": 40,
+    "y": 52,
+    "text": "TR-03 / STAIR ASCENT AND DESCENT",
+    "size": 32,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 40,
+    "y": 86,
+    "text": "Different contact mechanics, not reversed playback \u2022 short entry/arrival fragment, not a full flight",
+    "size": 17,
+    "color": "#A5B7B6"
+  },
+  {
+    "x": 60,
+    "y": 155,
+    "text": "UP / KEY 1",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 434,
+    "text": "Plant before committing to the flight.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 457,
+    "text": "Preserve exact existing landing/top lip.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 155,
+    "text": "UP / KEY 2",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 434,
+    "text": "Knee lifts or compresses at visible contact.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 457,
+    "text": "Move only the staged art proxy if authorized.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 155,
+    "text": "UP / KEY 3",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 434,
+    "text": "Flight continues into a recessed landing.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 457,
+    "text": "Swap under cover; emerge at paired arrival.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 565,
+    "text": "DOWN / KEY 1",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 60,
+    "y": 844,
+    "text": "Plant before committing to the flight.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 60,
+    "y": 867,
+    "text": "Preserve exact existing landing/top lip.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 565,
+    "text": "DOWN / KEY 2",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 580,
+    "y": 844,
+    "text": "Knee lifts or compresses at visible contact.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 580,
+    "y": 867,
+    "text": "Move only the staged art proxy if authorized.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 565,
+    "text": "DOWN / KEY 3",
+    "size": 22,
+    "color": "#EEE9DA"
+  },
+  {
+    "x": 1100,
+    "y": 844,
+    "text": "Flight continues into a recessed landing.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 1100,
+    "y": 867,
+    "text": "Swap under cover; emerge at paired arrival.",
+    "size": 16,
+    "color": "#C4C9C5"
+  },
+  {
+    "x": 40,
+    "y": 976,
+    "text": "SCHEMATIC KEY POSES / CONCEPT ONLY \u2014 final Kaze art, timing and placement require review",
+    "size": 17,
+    "color": "#E4B562"
+  }
+]
