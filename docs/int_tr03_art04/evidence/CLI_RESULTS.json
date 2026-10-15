@@ -1,0 +1,93 @@
+[
+  {
+    "mode": "original",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      ".",
+      "--script",
+      "res://tests/art04_profile_options.gd",
+      "--",
+      "--test",
+      "--expect=original",
+      "--tr03-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/profile with spaces/comparison.json",
+      "--tr03-original"
+    ],
+    "exit": 0,
+    "passes": 4
+  },
+  {
+    "mode": "refined",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      ".",
+      "--script",
+      "res://tests/art04_profile_options.gd",
+      "--",
+      "--test",
+      "--expect=refined",
+      "--tr03-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/profile with spaces/comparison.json"
+    ],
+    "exit": 0,
+    "passes": 4
+  },
+  {
+    "mode": "art-preview",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      ".",
+      "--script",
+      "res://tests/art04_profile_options.gd",
+      "--",
+      "--test",
+      "--expect=art-preview",
+      "--tr03-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/profile with spaces/comparison.json",
+      "--tr03-art-preview"
+    ],
+    "exit": 0,
+    "passes": 4
+  },
+  {
+    "mode": "reduced",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      ".",
+      "--script",
+      "res://tests/art04_profile_options.gd",
+      "--",
+      "--test",
+      "--expect=reduced",
+      "--tr03-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/profile with spaces/comparison.json",
+      "--tr03-art-preview",
+      "--tr03-reduced-motion"
+    ],
+    "exit": 0,
+    "passes": 5
+  },
+  {
+    "mode": "plain",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      ".",
+      "--script",
+      "res://tests/art04_profile_options.gd",
+      "--",
+      "--test",
+      "--expect=plain",
+      "--tr03-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/profile with spaces/comparison.json",
+      "--tr03-art-preview",
+      "--tr03-plain"
+    ],
+    "exit": 0,
+    "passes": 4
+  }
+]

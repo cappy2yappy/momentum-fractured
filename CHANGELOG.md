@@ -1,5 +1,12 @@
 # Kaze changelog
 
+## INT-TR03 / ART-04 production-asset review comparison — 2026-10-15
+
+- Continue PR27 with selective PR30 runtime assets, four held Kaze keys, layered doorway/stair art and two scoped R14/R15 supports. Four keys are not complete cycles; unsupported outward/arrival facings retain labelled approved-idle fallback.
+- Preserve controller/world/mixed-policy/config bytes,0.65s loader, progression, collision, saves and original active art. Keep original/refined/art-preview/reduced/plain options.
+- Source QA1,158 passes; native20 fixtures and45 Mac launcher boots pass. Native Windows/hosted packaging coordinated with Build Shogun. PM/creator acceptance pending; no merge/release.
+
+
 ## Alpha 0.6.1 combined integration review candidate — INT-01-0061 (2026-10-14)
 
 - Integrate reviewed Gameplay PR #8 (`70a0a83`) then Level Design PR #9 (`a4926e9`) on a dedicated candidate branch. Preserve approved movement, sprite proportions/anchors and save identity.

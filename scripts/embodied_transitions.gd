@@ -1,6 +1,9 @@
 extends Node2D
 ## TR-03 render adapter. The existing world owns gates, freeze, swap and arrivals.
-## No animation asset from PR24/25 is approved or imported by this adapter.
+## ART-04 is an explicit opt-in held-key comparison; legacy staging is retained.
+const Art04Presentation = preload("res://scripts/art04_presentation.gd")
+var production_art = Art04Presentation.new()
+var art_preview = false
 const PILOTS = {
 	"14:17": {"mode":"stair_up","exit_heading":1,"arrival_heading":-1,"rise":-1},
 	"17:14": {"mode":"stair_down","exit_heading":-1,"arrival_heading":1,"rise":1},
@@ -40,6 +43,8 @@ func configure(w):
 	if "--tr03-original" in args: comparison="original"
 	if "--tr03-plain" in args or (w.mixed_transitions.graphic_mode=="plain" and comparison!="original"): comparison="plain"
 	if "--tr03-reduced-motion" in args or w.mixed_transitions.graphic_mode=="reduced": comparison="reduced"
+	art_preview="--tr03-art-preview" in args
+	if art_preview and comparison=="refined": comparison="art-preview"
 	depth_demo="--tr03-depth-demo" in args
 	structural_dressing=not "--tr03-no-dressing" in args and comparison!="original"
 	if comparison in ["plain","reduced"]: w.mixed_transitions.graphic_mode=comparison
@@ -47,6 +52,9 @@ func configure(w):
 		if arg.begins_with("--tr03-save="):
 			var path=arg.trim_prefix("--tr03-save=")
 			if path.is_absolute_path(): w.save_path=path
+
+func production_active() -> bool:
+	return (art_preview or comparison=="art-preview") and not comparison in ["original","plain"]
 
 func policy(w,index:int,target:int) -> Dictionary:
 	var key="%d:%d"%[index,target]
@@ -89,6 +97,7 @@ func begin(w,target:int):
 	proxy.position=initial_position;proxy.flip_h=exit_heading<0;proxy.modulate=Color.WHITE
 	w.player.sprite.visible=false;proxy.visible=prior_sprite_visible
 	active=true;arrived_event=false
+	if production_active(): production_art.update_pose(self,w,0)
 	queue_redraw()
 
 func arrived(w):
@@ -101,9 +110,11 @@ func arrived(w):
 func cancel(w):
 	if active and is_instance_valid(w.player) and is_instance_valid(w.player.sprite): w.player.sprite.visible=prior_sprite_visible
 	active=false;proxy.visible=false;arrived_event=false;placeholder=""
+	production_art.selected_key=""
 	queue_redraw()
 
 func room_loaded(w):
+	queue_redraw()
 	# External rebuild/load must not leave a hidden character; the loader-owned swap
 	# is the only build permitted to continue its proxy through the swap callback.
 	if active and (w.transition<=0 or w.pending_room!=-1 or w.room!=target_room): cancel(w)
@@ -120,6 +131,8 @@ func update_pose(w):
 	var t=clampf((elapsed-0.34)/0.31,0,1) if arrived_event else clampf(elapsed/0.33,0,1)
 	var anchor=arrival_anchor if arrived_event else departure
 	var heading=arrival_heading if arrived_event else exit_heading
+	if production_art.update_pose(self,w,t):
+		queue_redraw();return
 	proxy.flip_h=heading<0
 	var base_scale=RUN_SCALE if mode in ["horizontal_run","stair_up","stair_down"] else IDLE_SCALE
 	proxy.scale=Vector2.ONE*base_scale
@@ -156,6 +169,7 @@ func handles_overlay(w) -> bool:
 	return active and w.transition>0 and mode!="wind_fold"
 
 func draw_exit(w,at:Vector2) -> bool:
+	if production_art.draw_exit(self,w,at): return true
 	if not depth_demo or comparison=="original": return false
 	var selected=false
 	for p in w.expansion.portals(w.room):
@@ -170,6 +184,8 @@ func draw_exit(w,at:Vector2) -> bool:
 	return true
 
 func draw_dressing(w):
+	if production_active():
+		production_art.draw_supports(self,w);return
 	if not structural_dressing: return
 	if w.room==14:
 		# One existing shelf(750,900,400,40): beams end in a continuous roof backing.
@@ -196,6 +212,8 @@ func draw_overlay(h,w,alpha:float) -> bool:
 	return true
 
 func _draw():
+	if production_active():
+		production_art.draw_front(self);return
 	if not active: return
 	var at=arrival_anchor if arrived_event else departure
 	if mode=="depth_door":

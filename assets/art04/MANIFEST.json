@@ -1,0 +1,226 @@
+{
+  "status": "technical asset candidates; creator acceptance pending",
+  "images": [
+    {
+      "path": "assets/art04/environment/door_combined.png",
+      "size": [
+        208,
+        224
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        200,
+        216
+      ],
+      "transparent_fraction": 0.4719,
+      "sha256": "0685b67ad7960e913f4e231e95e929f0a0ad7942b68e65baa3457fe54ebb9963",
+      "bytes": 62038
+    },
+    {
+      "path": "assets/art04/environment/r14_door_back.png",
+      "size": [
+        208,
+        224
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        200,
+        207
+      ],
+      "transparent_fraction": 0.5999,
+      "sha256": "71364e0a504c983243bbd1f5ade39b55f4e25a5af17be949b2b94ab014948819",
+      "bytes": 47684
+    },
+    {
+      "path": "assets/art04/environment/r14_door_front.png",
+      "size": [
+        208,
+        224
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        30,
+        88,
+        192,
+        216
+      ],
+      "transparent_fraction": 0.872,
+      "sha256": "0184433a0ecded9253b8b4adb316f4276e61a7ceb871fc4be532f337212022b3",
+      "bytes": 16361
+    },
+    {
+      "path": "assets/art04/environment/r14_door_interior.png",
+      "size": [
+        208,
+        224
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        82,
+        84,
+        157,
+        210
+      ],
+      "transparent_fraction": 0.7972,
+      "sha256": "5df710af0a37840910d76aaf15b34b00adc6dde4dbfff47e7bf6af3fe0b66e57",
+      "bytes": 18423
+    },
+    {
+      "path": "assets/art04/environment/r14_roof_support.png",
+      "size": [
+        488,
+        186
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        480,
+        178
+      ],
+      "transparent_fraction": 0.2949,
+      "sha256": "f07ab1d8cd92ffd7d4a2fa8a0ae1db313405407c1a68621fac60e4914b4c021a",
+      "bytes": 139068
+    },
+    {
+      "path": "assets/art04/environment/r15_masonry_support.png",
+      "size": [
+        456,
+        338
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        448,
+        330
+      ],
+      "transparent_fraction": 0.4456,
+      "sha256": "a130dcb3d596d7a004caf6231eccb3318fe172600b5a75ec5c76a0281dd1a756",
+      "bytes": 241638
+    },
+    {
+      "path": "assets/art04/environment/stair_flight_right.png",
+      "size": [
+        384,
+        112
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        376,
+        104
+      ],
+      "transparent_fraction": 0.5627,
+      "sha256": "27b8a288790c5426baece3622a2fa929fc0a6599dd493147f62b0e0e74046af5",
+      "bytes": 47141
+    },
+    {
+      "path": "assets/art04/environment/stair_front_lip.png",
+      "size": [
+        384,
+        112
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        8,
+        8,
+        376,
+        103
+      ],
+      "transparent_fraction": 0.9829,
+      "sha256": "e58900f5fc2cf386bdcfada47fb0114731cab9b3531b0290348c60ceaccfd0de",
+      "bytes": 2737
+    },
+    {
+      "path": "assets/art04/kaze/enter_depth_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        65,
+        280,
+        227,
+        600
+      ],
+      "transparent_fraction": 0.9024,
+      "sha256": "42fb6eb7ca51528fef1c3599aa95e2e4774171712ca79131f3cc244d07f9a147",
+      "bytes": 61230
+    },
+    {
+      "path": "assets/art04/kaze/key_pose_atlas.png",
+      "size": [
+        1280,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        33,
+        280,
+        1230,
+        600
+      ],
+      "transparent_fraction": 0.8876,
+      "sha256": "b8ea9028cd93c83b22a0217d5369a21f410da660a0cf5cbd770eda2612f5a368",
+      "bytes": 278973
+    },
+    {
+      "path": "assets/art04/kaze/stair_down_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        77,
+        287,
+        270,
+        600
+      ],
+      "transparent_fraction": 0.8946,
+      "sha256": "1d170617d1957440d9eb2ecf15c133d93fb0935b2b28528c211cd0ecd509cf24",
+      "bytes": 66978
+    },
+    {
+      "path": "assets/art04/kaze/stair_up_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        42,
+        292,
+        279,
+        600
+      ],
+      "transparent_fraction": 0.8662,
+      "sha256": "87e161915266e18ec7225fcca5b173b35e94abe1537e91972f27102af1ee7deb",
+      "bytes": 83177
+    },
+    {
+      "path": "assets/art04/kaze/turn_depth_key.png",
+      "size": [
+        320,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        33,
+        280,
+        226,
+        600
+      ],
+      "transparent_fraction": 0.8872,
+      "sha256": "878ee13ed80dec5a9cfbc32f9720d7a1a7531b36c629f5f9748bffa6a73cbbaa",
+      "bytes": 70766
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+PASS: assets/art04/ART04_ASSETS.json matches pinned ART-04 delivery
+PASS: assets/art04/MANIFEST.json matches pinned ART-04 delivery
+PASS: assets/art04/environment/door_combined.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/door_combined.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_back.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_back.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_front.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_front.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_interior.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_door_interior.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_roof_support.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/r14_roof_support.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/r15_masonry_support.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/r15_masonry_support.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/stair_flight_right.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/stair_flight_right.png.import matches pinned ART-04 delivery
+PASS: assets/art04/environment/stair_front_lip.png matches pinned ART-04 delivery
+PASS: assets/art04/environment/stair_front_lip.png.import matches pinned ART-04 delivery
+PASS: assets/art04/kaze/ART04_key_poses.tres matches pinned ART-04 delivery
+PASS: assets/art04/kaze/enter_depth_key.png matches pinned ART-04 delivery
+PASS: assets/art04/kaze/enter_depth_key.png.import matches pinned ART-04 delivery
+PASS: assets/art04/kaze/key_pose_atlas.png matches pinned ART-04 delivery
+PASS: assets/art04/kaze/key_pose_atlas.png.import matches pinned ART-04 delivery
+PASS: assets/art04/kaze/stair_down_key.png matches pinned ART-04 delivery
+PASS: assets/art04/kaze/stair_down_key.png.import matches pinned ART-04 delivery
+PASS: assets/art04/kaze/stair_up_key.png matches pinned ART-04 delivery
+PASS: assets/art04/kaze/stair_up_key.png.import matches pinned ART-04 delivery
+PASS: assets/art04/kaze/turn_depth_key.png matches pinned ART-04 delivery
+PASS: assets/art04/kaze/turn_depth_key.png.import matches pinned ART-04 delivery
+PASS: assets/art04/prefabs/doorway.tscn matches pinned ART-04 delivery
+PASS: assets/art04/prefabs/kaze_key_preview.tscn matches pinned ART-04 delivery
+PASS: scripts/world.gd matches PR27 byte for byte
+PASS: scripts/player.gd matches PR27 byte for byte
+PASS: scripts/mixed_transitions.gd matches PR27 byte for byte
+PASS: scripts/hud.gd matches PR27 byte for byte
+PASS: scripts/momentum_profile.gd matches PR27 byte for byte
+PASS: scripts/route_extension.gd matches PR27 byte for byte
+PASS: scripts/skyworks_region.gd matches PR27 byte for byte
+PASS: project.godot matches PR27 byte for byte
+PASS: export_presets.cfg matches PR27 byte for byte
+PASS: assets/web/kaze_manifest.json matches PR27 byte for byte
+PASS: world/MapData.txt matches PR27 byte for byte
+{"art_sha": "a6b76b9938825307bdcd4efb687c7198ea0d8681", "base_sha": "c2c002267c58e991966c0eebf7e098c6e7fff769", "checks": 42, "failures": 0}

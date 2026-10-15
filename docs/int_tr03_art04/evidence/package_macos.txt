@@ -1,0 +1,15 @@
+{
+  "source_sha": "e91e49caeada21baad5ab25e5080e67ab16a4094",
+  "art_sha": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "platform": "macos",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "resource_count": 567,
+  "excluded_resources": [],
+  "launchers": 45,
+  "binary_sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070",
+  "binary_bytes": 183849535,
+  "zip": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/packages/Kaze-INT-TR03-ART04-macOS-Universal.zip",
+  "zip_bytes": 76904820,
+  "zip_sha256": "ca5af774b8bf33d7ae432fbcb609338eec7a57419164e2b09eb133bb6965327f",
+  "zip_crc": "PASS"
+}

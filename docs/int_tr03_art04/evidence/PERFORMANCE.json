@@ -1,0 +1,122 @@
+[
+	{
+		"average_fps": 807.395745024424,
+		"comparison": "original",
+		"max_ms": 1.901,
+		"mean_ms": 1.23855,
+		"median_draw_calls": 112.0,
+		"p95_ms": 1.385,
+		"room": 14,
+		"samples": 120
+	},
+	{
+		"average_fps": 841.237460304107,
+		"comparison": "refined",
+		"max_ms": 1.345,
+		"mean_ms": 1.188725,
+		"median_draw_calls": 102.0,
+		"p95_ms": 1.312,
+		"room": 14,
+		"samples": 120
+	},
+	{
+		"average_fps": 800.357493013546,
+		"comparison": "art-preview",
+		"max_ms": 1.945,
+		"mean_ms": 1.24944166666667,
+		"median_draw_calls": 90.0,
+		"p95_ms": 1.821,
+		"room": 14,
+		"samples": 120
+	},
+	{
+		"average_fps": 523.880206059548,
+		"comparison": "reduced",
+		"max_ms": 2.385,
+		"mean_ms": 1.90883333333333,
+		"median_draw_calls": 90.0,
+		"p95_ms": 2.243,
+		"room": 14,
+		"samples": 120
+	},
+	{
+		"average_fps": 815.234006127843,
+		"comparison": "reduced",
+		"max_ms": 1.546,
+		"mean_ms": 1.22664166666667,
+		"median_draw_calls": 116.0,
+		"p95_ms": 1.301,
+		"room": 15,
+		"samples": 120
+	},
+	{
+		"average_fps": 827.415017582569,
+		"comparison": "art-preview",
+		"max_ms": 1.35,
+		"mean_ms": 1.20858333333333,
+		"median_draw_calls": 116.0,
+		"p95_ms": 1.282,
+		"room": 15,
+		"samples": 120
+	},
+	{
+		"average_fps": 793.377938804115,
+		"comparison": "refined",
+		"max_ms": 1.401,
+		"mean_ms": 1.26043333333333,
+		"median_draw_calls": 124.0,
+		"p95_ms": 1.294,
+		"room": 15,
+		"samples": 120
+	},
+	{
+		"average_fps": 813.929038953288,
+		"comparison": "original",
+		"max_ms": 1.384,
+		"mean_ms": 1.22860833333333,
+		"median_draw_calls": 121.0,
+		"p95_ms": 1.287,
+		"room": 15,
+		"samples": 120
+	},
+	{
+		"average_fps": 800.197382020899,
+		"comparison": "original",
+		"max_ms": 1.367,
+		"mean_ms": 1.24969166666667,
+		"median_draw_calls": 109.0,
+		"p95_ms": 1.278,
+		"room": 17,
+		"samples": 120
+	},
+	{
+		"average_fps": 808.456454514219,
+		"comparison": "refined",
+		"max_ms": 1.393,
+		"mean_ms": 1.236925,
+		"median_draw_calls": 102.0,
+		"p95_ms": 1.307,
+		"room": 17,
+		"samples": 120
+	},
+	{
+		"average_fps": 804.472869152488,
+		"comparison": "art-preview",
+		"max_ms": 1.365,
+		"mean_ms": 1.24305,
+		"median_draw_calls": 100.0,
+		"p95_ms": 1.28,
+		"room": 17,
+		"samples": 120
+	},
+	{
+		"average_fps": 807.059076724416,
+		"comparison": "reduced",
+		"max_ms": 1.386,
+		"mean_ms": 1.23906666666667,
+		"median_draw_calls": 100.0,
+		"p95_ms": 1.283,
+		"room": 17,
+		"samples": 120
+	}
+]

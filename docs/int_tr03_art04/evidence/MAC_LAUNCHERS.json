@@ -1,0 +1,542 @@
+[
+  {
+    "launcher": "Play-depth-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-depth-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/depth-art-preview"
+  },
+  {
+    "launcher": "Play-depth-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-depth-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/depth-original"
+  },
+  {
+    "launcher": "Play-depth-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-depth-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/depth-plain"
+  },
+  {
+    "launcher": "Play-depth-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-depth-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/depth-reduced"
+  },
+  {
+    "launcher": "Play-depth-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-depth-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/depth-refined"
+  },
+  {
+    "launcher": "Play-fresh-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-fresh-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/fresh-art-preview"
+  },
+  {
+    "launcher": "Play-fresh-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-fresh-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/fresh-original"
+  },
+  {
+    "launcher": "Play-fresh-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-fresh-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/fresh-plain"
+  },
+  {
+    "launcher": "Play-fresh-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-fresh-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/fresh-reduced"
+  },
+  {
+    "launcher": "Play-fresh-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-fresh-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/fresh-refined"
+  },
+  {
+    "launcher": "Play-passage-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-passage-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/passage-art-preview"
+  },
+  {
+    "launcher": "Play-passage-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-passage-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/passage-original"
+  },
+  {
+    "launcher": "Play-passage-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-passage-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/passage-plain"
+  },
+  {
+    "launcher": "Play-passage-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-passage-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/passage-reduced"
+  },
+  {
+    "launcher": "Play-passage-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-passage-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/passage-refined"
+  },
+  {
+    "launcher": "Play-reverse-depth-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-reverse-depth-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/reverse-depth-art-preview"
+  },
+  {
+    "launcher": "Play-reverse-depth-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-reverse-depth-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/reverse-depth-original"
+  },
+  {
+    "launcher": "Play-reverse-depth-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-reverse-depth-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/reverse-depth-plain"
+  },
+  {
+    "launcher": "Play-reverse-depth-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-reverse-depth-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/reverse-depth-reduced"
+  },
+  {
+    "launcher": "Play-reverse-depth-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-reverse-depth-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/reverse-depth-refined"
+  },
+  {
+    "launcher": "Play-special-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-special-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/special-art-preview"
+  },
+  {
+    "launcher": "Play-special-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-special-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/special-original"
+  },
+  {
+    "launcher": "Play-special-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-special-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/special-plain"
+  },
+  {
+    "launcher": "Play-special-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-special-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/special-reduced"
+  },
+  {
+    "launcher": "Play-special-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-special-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/special-refined"
+  },
+  {
+    "launcher": "Play-stair-down-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-down-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-down-art-preview"
+  },
+  {
+    "launcher": "Play-stair-down-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-down-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-down-original"
+  },
+  {
+    "launcher": "Play-stair-down-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-down-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-down-plain"
+  },
+  {
+    "launcher": "Play-stair-down-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-down-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-down-reduced"
+  },
+  {
+    "launcher": "Play-stair-down-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-down-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-down-refined"
+  },
+  {
+    "launcher": "Play-stair-up-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-up-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-up-art-preview"
+  },
+  {
+    "launcher": "Play-stair-up-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-up-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-up-original"
+  },
+  {
+    "launcher": "Play-stair-up-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-up-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-up-plain"
+  },
+  {
+    "launcher": "Play-stair-up-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-up-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-up-reduced"
+  },
+  {
+    "launcher": "Play-stair-up-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-stair-up-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/stair-up-refined"
+  },
+  {
+    "launcher": "Play-structure14-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure14-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure14-art-preview"
+  },
+  {
+    "launcher": "Play-structure14-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure14-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure14-original"
+  },
+  {
+    "launcher": "Play-structure14-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure14-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure14-plain"
+  },
+  {
+    "launcher": "Play-structure14-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure14-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure14-reduced"
+  },
+  {
+    "launcher": "Play-structure14-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure14-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure14-refined"
+  },
+  {
+    "launcher": "Play-structure15-art-preview.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure15-art-preview.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure15-art-preview"
+  },
+  {
+    "launcher": "Play-structure15-original.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure15-original.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure15-original"
+  },
+  {
+    "launcher": "Play-structure15-plain.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure15-plain.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure15-plain"
+  },
+  {
+    "launcher": "Play-structure15-reduced.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure15-reduced.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure15-reduced"
+  },
+  {
+    "launcher": "Play-structure15-refined.command",
+    "command": [
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/Play-structure15-refined.command",
+      "--headless",
+      "--quit-after",
+      "12"
+    ],
+    "exit": 0,
+    "script_errors": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/Launcher QA With Spaces/profiles/structure15-refined"
+  }
+]

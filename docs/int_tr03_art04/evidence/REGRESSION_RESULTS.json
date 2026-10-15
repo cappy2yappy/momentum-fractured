@@ -1,0 +1,657 @@
+[
+  {
+    "name": "import_warmup",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "seconds": 2.223,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": true,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-import_warmup",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "name": "import",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "seconds": 2.445,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-import",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\"",
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "name": "verify_baseline",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "tools/verify_baseline.py"
+    ],
+    "exit": 0,
+    "seconds": 0.094,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-verify_baseline",
+    "warnings": []
+  },
+  {
+    "name": "verify_tr03_preservation",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "tools/verify_tr03_preservation.py"
+    ],
+    "exit": 0,
+    "seconds": 0.263,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-verify_tr03_preservation",
+    "warnings": []
+  },
+  {
+    "name": "verify_art04_assets",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "tools/verify_art04_integration.py"
+    ],
+    "exit": 0,
+    "seconds": 0.423,
+    "passes": 42,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-verify_art04_assets",
+    "warnings": []
+  },
+  {
+    "name": "approved_baseline",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/approved_baseline.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 1.915,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-approved_baseline",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "approved_combat_swing",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/approved_combat_swing.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.411,
+    "passes": 7,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-approved_combat_swing",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "annex_expansion",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/annex_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 3.508,
+    "passes": 34,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-annex_expansion",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "annex_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/annex_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 8.642,
+    "passes": 6,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-annex_traversal",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "save_compatibility",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.416,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-save_compatibility",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "skyworks_progression",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/skyworks_progression.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.975,
+    "passes": 33,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-skyworks_progression",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "storm_keeper",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/storm_keeper.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.416,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-storm_keeper",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "movement_momentum",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 8.781,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-movement_momentum",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "sprite_integration",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.41,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-sprite_integration",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "world_expansion",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/world_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.285,
+    "passes": 193,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-world_expansion",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "expansion_gates_save",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/expansion_gates_save.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 3.682,
+    "passes": 17,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-expansion_gates_save",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "expansion_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/expansion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 97.944,
+    "passes": 125,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-expansion_traversal",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "gameplay_stabilization",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/gameplay_stabilization.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.396,
+    "passes": 16,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-gameplay_stabilization",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "traversal_transitions",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/traversal_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.401,
+    "passes": 8,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-traversal_transitions",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "world_cohesion_traversal",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/world_cohesion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 60.222,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-world_cohesion_traversal",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "integration_candidate",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/integration_candidate.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.403,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-integration_candidate",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "integration_descent",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://tests/integration_descent.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.39,
+    "passes": 26,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-integration_descent",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "room_transition_prototype",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/room_transition_prototype.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 1.074,
+    "passes": 93,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-room_transition_prototype",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "mixed_transitions",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/mixed_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.007,
+    "passes": 109,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-mixed_transitions",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "embodied_transitions",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/embodied_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 2.395,
+    "passes": 80,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-embodied_transitions",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "art04_transitions",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/art04_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.398,
+    "passes": 111,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-art04_transitions",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "profile_prepare",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--prepare"
+    ],
+    "exit": 0,
+    "seconds": 0.39,
+    "passes": 2,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-restart",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "profile_reload",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--reload"
+    ],
+    "exit": 0,
+    "seconds": 0.393,
+    "passes": 5,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-restart",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  },
+  {
+    "name": "endpoint_audit",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+      "--script",
+      "res://tests/audit_embodied_endpoints.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.397,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/build/int-tr03/qa/profile-endpoint_audit",
+    "warnings": [
+      "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+    ]
+  }
+]
