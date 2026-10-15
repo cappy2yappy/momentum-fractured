@@ -32,7 +32,17 @@ except OSError as e:
 engine=log.read_text() if log.exists() else ''
 errors=hard_errors(output+'\n'+engine)
 passed=rc==0 and not errors and 'Godot Engine v4.6.1.stable.official.14d19694e' in output+engine
-report=dict(status='passed' if passed else 'failed',source_sha=manifest['source_sha'],target=manifest['target'],os=platform.system(),architecture=platform.machine(),returncode=rc,hard_errors=errors,scope='Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested',archive_sha256=manifest['zip']['sha256'])
+comparisons=[]
+if platform.system()=='Windows' and (extract/'launch.ps1').exists():
+    for pilot in ['fresh','walk','stair','special']:
+        for treatment in (['graphic'] if pilot=='fresh' else ['plain','graphic','reduced']):
+            result=subprocess.run(['powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-File',str((extract/'launch.ps1').resolve()),'-Pilot',pilot,'-Treatment',treatment,'-Headless','-QuitAfter','120'],cwd=extract,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=90)
+            (args.output/f'{pilot}-{treatment}.log').write_text(result.stdout)
+            errors_found=hard_errors(result.stdout)
+            comparisons.append(dict(pilot=pilot,treatment=treatment,returncode=result.returncode,hard_errors=errors_found))
+            passed=passed and result.returncode==0 and not errors_found
+report=dict(comparison_launcher_boots=comparisons,status='passed' if passed else 'failed',source_sha=manifest['source_sha'],target=manifest['target'],os=platform.system(),architecture=platform.machine(),returncode=rc,hard_errors=errors,scope='Release executable main-scene headless startup only; graphics, input, interactive gameplay and sustained 60 FPS untested',archive_sha256=manifest['zip']['sha256'])
 (args.output/'NATIVE_SMOKE.json').write_text(json.dumps(report,indent=2))
 print(json.dumps(report,indent=2))
 sys.exit(0 if passed else 1)
+
