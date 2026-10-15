@@ -38,7 +38,7 @@ func configure(w):
 	add_child(proxy)
 	var args=OS.get_cmdline_user_args()
 	if "--tr03-original" in args: comparison="original"
-	if "--tr03-plain" in args: comparison="plain"
+	if "--tr03-plain" in args or (w.mixed_transitions.graphic_mode=="plain" and comparison!="original"): comparison="plain"
 	if "--tr03-reduced-motion" in args or w.mixed_transitions.graphic_mode=="reduced": comparison="reduced"
 	depth_demo="--tr03-depth-demo" in args
 	structural_dressing=not "--tr03-no-dressing" in args and comparison!="original"
@@ -133,8 +133,8 @@ func update_pose(w):
 		if mode=="horizontal_run": proxy.frame=int((clip_phase+elapsed)/0.08)%8
 		else: proxy.frame=int(elapsed/0.16)%2
 	elif mode in ["stair_up","stair_down"]:
-		var step=floorf(t*3.0)/3.0
-		proxy.position=anchor+Vector2(heading*lerpf(-32,0,step),rise*lerpf(-24,0,step)) if arrived_event else anchor+Vector2(heading*32*step,rise*24*step)
+		var step=floorf((t if arrived_event else clampf((t-0.3)/0.7,0,1))*3.0)/3.0
+		proxy.position=anchor+Vector2(heading*lerpf(-32,0,step),rise*lerpf(-24,0,step)) if arrived_event else initial_position.lerp(anchor,clampf(t/0.3,0,1))+Vector2(heading*32*step,rise*24*step)
 		proxy.frame=int(elapsed/0.08)%8
 		# Current run poses are an expressly labeled adapter; separate up/down final
 		# clips are required. The three local contacts are not the entire staircase.
