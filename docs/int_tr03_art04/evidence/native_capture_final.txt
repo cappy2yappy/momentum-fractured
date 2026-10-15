@@ -1,0 +1,31 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+ART04_NATIVE adapter=Apple M4 driver=opengl3 viewport=(1280, 720)
+PASS: Native rendered original_14-17 exact destination and cleanup actual=(1680.0, 1298.0) expected=(1680.0, 1298.0) room=17 target=17 visible=true proxy=false
+PASS: Native rendered original_17-14 exact destination and cleanup actual=(1450.0, 478.0) expected=(1450.0, 478.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered original_14-13 exact destination and cleanup actual=(1680.0, 558.0) expected=(1680.0, 558.0) room=13 target=13 visible=true proxy=false
+PASS: Native rendered original_13-14 exact destination and cleanup actual=(120.0, 1098.0) expected=(120.0, 1098.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered refined_14-17 exact destination and cleanup actual=(1680.0, 1298.0) expected=(1680.0, 1298.0) room=17 target=17 visible=true proxy=false
+PASS: Native rendered refined_17-14 exact destination and cleanup actual=(1450.0, 478.0) expected=(1450.0, 478.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered refined_14-13 exact destination and cleanup actual=(1680.0, 558.0) expected=(1680.0, 558.0) room=13 target=13 visible=true proxy=false
+PASS: Native rendered refined_13-14 exact destination and cleanup actual=(120.0, 1098.0) expected=(120.0, 1098.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered art-preview_14-17 exact destination and cleanup actual=(1680.0, 1298.0) expected=(1680.0, 1298.0) room=17 target=17 visible=true proxy=false
+PASS: Native rendered art-preview_17-14 exact destination and cleanup actual=(1450.0, 478.0) expected=(1450.0, 478.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered art-preview_14-13 exact destination and cleanup actual=(1680.0, 558.0) expected=(1680.0, 558.0) room=13 target=13 visible=true proxy=false
+PASS: Native rendered art-preview_13-14 exact destination and cleanup actual=(120.0, 1098.0) expected=(120.0, 1098.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered reduced_14-17 exact destination and cleanup actual=(1680.0, 1298.0) expected=(1680.0, 1298.0) room=17 target=17 visible=true proxy=false
+PASS: Native rendered reduced_17-14 exact destination and cleanup actual=(1450.0, 478.0) expected=(1450.0, 478.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered reduced_14-13 exact destination and cleanup actual=(1680.0, 558.0) expected=(1680.0, 558.0) room=13 target=13 visible=true proxy=false
+PASS: Native rendered reduced_13-14 exact destination and cleanup actual=(120.0, 1098.0) expected=(120.0, 1098.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered plain_14-17 exact destination and cleanup actual=(1680.0, 1298.0) expected=(1680.0, 1298.0) room=17 target=17 visible=true proxy=false
+PASS: Native rendered plain_17-14 exact destination and cleanup actual=(1450.0, 478.0) expected=(1450.0, 478.0) room=14 target=14 visible=true proxy=false
+PASS: Native rendered plain_14-13 exact destination and cleanup actual=(1680.0, 558.0) expected=(1680.0, 558.0) room=13 target=13 visible=true proxy=false
+PASS: Native rendered plain_13-14 exact destination and cleanup actual=(120.0, 1098.0) expected=(120.0, 1098.0) room=14 target=14 visible=true proxy=false
+STRUCTURE room=14 mode=original colliders=23 zoom=(1.0, 1.0)
+STRUCTURE room=14 mode=refined colliders=23 zoom=(1.0, 1.0)
+STRUCTURE room=14 mode=art-preview colliders=23 zoom=(1.0, 1.0)
+STRUCTURE room=15 mode=original colliders=15 zoom=(1.0, 1.0)
+STRUCTURE room=15 mode=refined colliders=15 zoom=(1.0, 1.0)
+STRUCTURE room=15 mode=art-preview colliders=15 zoom=(1.0, 1.0)
+ART04 NATIVE CAPTURE: 20 assertions, 0 failure(s)

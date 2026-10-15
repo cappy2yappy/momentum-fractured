@@ -1,0 +1,32 @@
+[
+  {
+    "key": "stair_up_key",
+    "root": [
+      1450,
+      478
+    ],
+    "leading_boot": [
+      1480.07,
+      465.896825
+    ],
+    "stair_pixel_x": 150,
+    "stair_surface_y": 464.6,
+    "vertical_error_px": 1.2968249999999557,
+    "passed": true
+  },
+  {
+    "key": "stair_down_key",
+    "root": [
+      1680,
+      1298
+    ],
+    "leading_boot": [
+      1662.90375,
+      1297.5635
+    ],
+    "stair_pixel_x": 103,
+    "stair_surface_y": 1297.3999999999999,
+    "vertical_error_px": 0.16350000000011278,
+    "passed": true
+  }
+]
