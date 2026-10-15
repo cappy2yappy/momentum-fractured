@@ -53,3 +53,7 @@ Technical blockers to this concept delivery: none after reconstruction. Original
 3. Retain 320 × 724 cells, pivot (160,600), 12px alpha margin and proposed 97px upright scale for future new clips. Existing clips retain their own scales/pivots.
 4. PR #27 verified head `c2c002267c58e991966c0eebf7e098c6e7fff769` remains a comparison candidate with labeled placeholders, not accepted finished animation. Later integration must use Lane A's render adapter and actual R14/R13 depth-demo, R14/R17 stair and R15/R16 horizontal metadata. Preserve 0.65s/39 ticks and loader-event timing; no graph/collision/save changes or global support rollout.
 5. Final sprites require boundary/alpha/anchor/facing/contact QA and actual gameplay-scale review before separately authorized integration. No merge is authorized here.
+
+## Verified publication checkpoint
+
+Published art commit: `f41e4e4c784ad170bfde0f6c33264e6af41c07c4`. Branch: `art/art03-complete-compositions`. Draft PR: [#28](https://github.com/cappy2yappy/momentum-fractured/pull/28), based on PR #26. Verified remote ref equals the local art checkpoint. Continuity records and this pointer are published as a following docs-only commit; retrieve its current exact HEAD from PR #28. Automatic review initially rejected PR creation as an unverified disclosure; read-only destination/ownership checks and the user's attached authorization resolved it, and the same PR action succeeded. No approval remains blocked.

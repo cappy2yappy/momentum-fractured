@@ -1,19 +1,11 @@
-# Art Mane TR-03 — verified recovery checkpoint
+# Art Mane — ART-03 resume
 
-1. Fetch art/alpha-0.6.1-tr03-entry-poses; inspect PR#25 actual HEAD, CONTEXT.md, SESSION_LOG.md, next-task.md and the complete PM report. Do not trust a historical SHA as live HEAD.
-2. Existing completed requirements/storyboards are published at0d96f93 and45ed20b; the final report/continuity follows. Inspect docs/art/tr03/previews before any new media creation. Never regenerate ART-01 or replace accepted Kaze art by default.
-3. Next: PM/creator reviews storyboards; Level consumes LANE_B_IMPLEMENTATION_HANDOFF.md and transition_art_contract.json and chooses explicit door/stair metadata. No final new sprite art is approved yet. New frame production requires creator storyboard/compatibility review.
-4. Reproduce technical boards/contact/audit with official Godot4.6.1 graphical GL renderer and disposable APPDATA: --path . --script res://docs/art/tr03/render_review.gd -- --test. This fixture is not gameplay. Aseprite batch probes failed; do not assert editor authoring until outputs are verified.
-5. Preserve load clock, scale, collisions, graph, endpoints, gates, physics, saves and current comparison branches. No merge. Record source versus gameplay/export QA accurately.
+1. Fetch `art/art03-complete-compositions` and [PR #28](https://github.com/cappy2yappy/momentum-fractured/pull/28); verify its current HEAD. Published art checkpoint `f41e4e4c784ad170bfde0f6c33264e6af41c07c4`. Based on PR #26 head 0b96d41fa7b6b424591fdd685f5c8fdf9290c02b; no other branch overwritten.
+2. Read CONTEXT.md, next-task.md, baton-pass.state.json and docs/agent_handoffs/ART03_RECOVERY_PM_REPORT.md. Old CONTEXT/state referring to #25 were stale and are superseded, not evidence that #26 never existed.
+3. Inspect docs/art/tr03/art03_recovery/README.md and actual full PNGs before creating more art. Do not regenerate completed concepts without a focused creator revision. Old #26 files remain corrupt and preserved; RECOVERY_AUDIT.json records actual/claimed hashes.
+4. Local checkout is work/art03-recovery, a dedicated clone. Pillow needed for tools/art03_review.py; macOS Arial font path may need changing elsewhere. Built-in generation needs no CLI API key. No Aseprite or Higgsfield prerequisite for these paintings.
+5. Verify all new PNGs with truncation disabled, full CRC/IEND, manifest hashes and visual display; never certify image integrity from a PNG header. Baseline verifier passed. Gameplay/native/performance QA not run because no runtime edits.
+6. Next owner: creator for concept review, then Art Mane for separately gated sprite production. Existing 30-frame contract is unchanged. PR #27 placeholders and actual endpoint metadata guide future integration, not these paintings' inferred geometry.
+7. Preserve approved sprites/art, physics, topology, saves and loader. No merge. This checkpoint deliberately contains no final animation pack.
 
-Inherited untracked metadata at session start, outside this task's commits:
-
-- scripts/grapple_anchor.gd.uid
-- scripts/momentum_profile.gd.uid
-- tests/capture_dev06.gd.uid
-- tests/expansion_gates_save.gd.uid
-- tests/expansion_traversal.gd.uid
-- tests/fixtures/player_alpha052.gd.uid
-- tests/measure_sprite_size.gd.uid
-- tests/movement_momentum.gd.uid
-- tests/world_expansion.gd.uid
+Known worktree-only status: inherited production_revision/QA_RESULTS.json CRLF normalization noise; byte-for-byte equal to base and not committed. No unfinished art files left outside the backed-up deliverables.
