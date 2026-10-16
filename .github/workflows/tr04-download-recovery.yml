@@ -1,0 +1,62 @@
+name: TR04 Windows download recovery
+on:
+  push:
+    branches: [ci/tr04-download-recovery]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-download:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 1835fcca272fd6a925b3d8ad4834fb225a6caef6
+      - name: Install official Godot 4.6.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -jq "$RUNNER_TEMP/godot/templates.tpz" templates/windows_release_x86_64.exe -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+      - name: Check reviewed source and geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/tr04/windows
+          python3 tools/verify_baseline.py
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --editor --path . --import --quit > build/tr04/import-warmup.log 2>&1
+          "$GODOT" --headless --editor --path . --import --quit > build/tr04/import.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/tr04/import.log
+          "$GODOT" --headless --path . --script res://tests/level_geometry.gd -- --test > build/tr04/geometry.log 2>&1
+          grep -q 'LEVEL GEOMETRY: 0 failure(s)' build/tr04/geometry.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|FAIL:' build/tr04/geometry.log
+      - name: Export and package Windows candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release "Windows Desktop" build/tr04/windows/Kaze-TR04-Geometry-Windows.exe > build/tr04/export.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/tr04/export.log
+          python3 tools/package_tr04.py > build/tr04/package.log
+          printf 'Reviewed source: 1835fcca272fd6a925b3d8ad4834fb225a6caef6\nGame runtime scripts: e7c308abd93de6f2191fbf000961d6fa1bb80721\nThis hosted candidate is rebuilt from reviewed source; it is not byte-identical to the session-native ZIP.\n' > build/tr04/HOSTED_BUILD_SOURCE.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-TR04-Geometry-Windows
+          path: |
+            build/tr04/windows/
+            build/tr04/windows-manifest.json
+            build/tr04/HOSTED_BUILD_SOURCE.txt
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: TR04-download-build-evidence
+          path: build/tr04/*.log
