@@ -1,0 +1,12 @@
+{
+  "workflow_source": "3f03bb92f69b67bbf5f3505bd4b0112a82e729df",
+  "game_runtime_source": "1dc714e2249cf39ada9fdcc5cd2225bdda5c5cc0",
+  "run_id": 38847365650,
+  "run_url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38847365650",
+  "artifact_id": 12024315505,
+  "download_url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38847365650/artifacts/12024315505",
+  "artifact_bytes": 52969952,
+  "artifact_sha256": "931fe310e8ae33b97f18f413555600562d60a039e389094d81cf8de7c126ae58",
+  "expires": "2026-11-15",
+  "status": "success"
+}

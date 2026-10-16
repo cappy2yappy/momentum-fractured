@@ -37,7 +37,7 @@ const SHELVES = {
 }
 const ANCHORS = {13:[Vector2(900,690)],14:[Vector2(820,620),Vector2(1460,430),Vector2(2090,550)],15:[Vector2(960,480),Vector2(1550,660)],16:[Vector2(950,630),Vector2(1530,470)],17:[Vector2(900,1400),Vector2(950,780),Vector2(1320,250)],18:[Vector2(930,510),Vector2(1650,340),Vector2(2220,460)],19:[Vector2(890,670),Vector2(1580,430)],20:[Vector2(900,520),Vector2(1650,700)]}
 const GATES = {15:["lower_sluice_wind","wind",Vector2(500,500)],17:["spire_wind_shutter","wind",Vector2(1430,420)],18:["pump_electric_isolator","electric",Vector2(2370,760)],19:["coil_fire_service","fire",Vector2(1730,480)]}
-const LORE = {14:Vector2(1700,700),15:Vector2(390,500),16:Vector2(1500,760),17:Vector2(1370,420),18:Vector2(1690,620),19:Vector2(1960,520),20:Vector2(1800,1120)}
+const LORE = {14:Vector2(1300,1220),15:Vector2(390,500),16:Vector2(1500,760),17:Vector2(1370,420),18:Vector2(1690,620),19:Vector2(1960,520),20:Vector2(1800,1120)}
 const NOTES = {14:"Bellkeepers marked this roof as the convoy's quiet route.",15:"Inspection ledger: the lower pumps ran dry before the evacuation.",16:"Roots hold the old shrine together. Someone still tends its lamps.",17:"Counterweights once carried workers above the storm line.",18:"The pumps feed both the canal and the conservatory.",19:"Service crews isolated the coils before the Keeper arrived.",20:"The relay garden links the roof watch to the maintenance crews."}
 var hazards: Array = []
 var route_steps: Array = []
@@ -129,6 +129,7 @@ func draw_room(w):
 		var size=SIZES[w.room]
 		# Lightweight identity silhouettes: roofs, retaining arches, roots and pump drums.
 		for x in range(140,int(size.x),440):
+			if w.room==14: continue # LD03 uses grounded service-walk architecture.
 			var at=Vector2(x,size.y-400)
 			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(at-Vector2(160,225),Vector2(390,385))): continue
 			if w.room in [13,14,17]:

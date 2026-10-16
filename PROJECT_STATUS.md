@@ -1,3 +1,12 @@
+# Current LD03 status — 2026-10-16 UTC
+
+Draft PR37: playable Bellroof lower service walk, log court and three returns; six solid masses/six steps share rendered/collision rectangles. PR33 base; game runtime1dc714e2249cf39ada9fdcc5cd2225bdda5c5cc0. Other20 rooms audited, not redesigned. Blocked historical R14 saves stage safely; schema/flags/controller/topology preserved.
+
+Final31 actions /24 suites /1292 passes; native routes63, packed routes63, transition keys11, EXE exit0. Hosted Windows run38847365650 succeeds. See docs/agent_handoffs/LD03_PM_REPORT.md for download, audit, hashes and remaining work. No human campaign/gamepad/sustained FPS certification. Creator playtest and authored environment work remain open. Do not merge.
+
+---
+Historical status follows unchanged:
+
 # Current TR04 / LD02 status — 2026-10-16 UTC
 
 PR33: https://github.com/cappy2yappy/momentum-fractured/pull/33 (draft, do not merge).
