@@ -204,8 +204,9 @@ func present(w):
 	e.placeholder="MOVING STAIR STUDY / FULL GAIT PENDING"
 	var close=sin(PI*elapsed/0.65)
 	w.camera.zoom=camera_state.get("zoom",Vector2.ONE)*lerpf(1.0,1.55,close)
-	w.camera.position=e.proxy.position-w.player.position+Vector2(0,-65)
-	w.camera.offset=Vector2.ZERO
+	var focus=e.proxy.position-w.player.position+Vector2(0,-65)
+	w.camera.position=camera_state.position.lerp(focus,close)
+	w.camera.offset=camera_state.offset*(1.0-close)
 	w.camera.reset_smoothing()
 	e.queue_redraw();queue_redraw()
 

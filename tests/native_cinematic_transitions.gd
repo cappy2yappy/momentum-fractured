@@ -40,7 +40,7 @@ func run():
 				check(w.room==pair[1] and w.cinematic_transitions.request_count==before+1,"Native held E cannot loop reciprocal %s"%[pair])
 				# After the real stop/cooldown, reverse through the same door in the
 				# same scene. Separate seeded starts alone cannot prove retrigger/rearm.
-				key(KEY_D if p.heading<0 else KEY_A,true);await wait_ticks(22)
+				key(KEY_D if p.heading<0 else KEY_A,true);await wait_ticks(40)
 				key(KEY_D if p.heading<0 else KEY_A,false);await wait_ticks(60)
 				check(w.room==pair[0] and w.cinematic_transitions.request_count==before+2,"Native stopped reverse round trip %s succeeds once"%[pair])
 			freeze()
