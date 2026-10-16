@@ -1,0 +1,43 @@
+{
+  "haxqer": {
+    "repository": "haxqer/godot-skill",
+    "commit": "037c03e9858ae748bf66c010aeb9942dbe9b93d6",
+    "files": {
+      "skill/godot/SKILL.md": {
+        "sha256": "1a15711ab1d81dd6b2c395b3a7c91976c92ca34b157e33a709b06060e24a6ae2",
+        "bytes": 82675,
+        "checkout_sha256": "510547f39ac49cc40b2e083948e1de618648777f39aebcb40ac8a17955ee30da"
+      },
+      "skill/godot/scripts/docs/api_lookup.py": {
+        "sha256": "647f2efe96571c2af4f6f9d30bf0f17862ce8263c41a99d65108bb41a2f16e56",
+        "bytes": 52843,
+        "checkout_sha256": "e069ff3d37a58fcbf71f6b96cc1cdc4ea6fe5c3f77b861feea364c396ec36068"
+      },
+      "skill/godot/scripts/debug/lint_project.py": {
+        "sha256": "faea32b4f85e0f6c372f961d2feb34c54c1a665f25365910b430154cf8f50934",
+        "bytes": 168177,
+        "checkout_sha256": "a6959dcfca556e00b42c9b2bf249355f380fdaa3bd708c113849da9dee34aac1"
+      }
+    }
+  },
+  "awesome": {
+    "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+    "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+    "files": {
+      "skills/godot/godot-physics/SKILL.md": {
+        "sha256": "53310957617465653c838309851bad09b12a051e6aeef2a2b307f11d9e75062b",
+        "bytes": 8292,
+        "checkout_sha256": "4b3052b5c1893f609c533fb45cd203c7b586838a2649061d00d654b43d2ee222"
+      },
+      "skills/godot/godot-physics/references/bodies-and-queries.md": {
+        "sha256": "64f6bdd613b92607cfbf0d3be0b88172d2e6c5b9cfd353706740833fd1343160",
+        "bytes": 3963,
+        "checkout_sha256": "939b7cd730359345fd712d8d393c792b0fae9dbe194d70d23ff69b51ed5f1468"
+      }
+    }
+  },
+  "engine": {
+    "version": "4.6.1.stable.official.14d19694e",
+    "sha256": "bd9e27c6994a128aaab45cdda4d372de87b91900618ba2de55c6aa29248d5b56"
+  }
+}

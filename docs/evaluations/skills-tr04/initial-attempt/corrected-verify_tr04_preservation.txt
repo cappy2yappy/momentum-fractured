@@ -1,0 +1,47 @@
+PASS: single scoped hook: const LevelGeometry = preload("res://scripts/level_geometry.gd")
+PASS: single scoped hook: rect = LevelGeometry.perimeter_landing(room,room_size(room),rect)
+PASS: single scoped hook: if pending_arrival == Vector2.INF: player.position = LevelGeometry.legacy_arrival(room,player.position)
+PASS: world PR31 text after removing four reviewed geometry/render hooks (LF normalized)
+PASS: scripts/player.gd PR31 exact
+PASS: scripts/mixed_transitions.gd PR31 exact
+PASS: scripts/embodied_transitions.gd PR31 exact
+PASS: scripts/world_expansion.gd PR31 exact
+PASS: scripts/route_extension.gd PR31 exact
+PASS: scripts/skyworks_region.gd PR31 exact
+PASS: scripts/guard.gd PR31 exact
+PASS: scripts/storm_keeper.gd PR31 exact
+PASS: scripts/hud.gd PR31 exact
+PASS: scripts/momentum_profile.gd PR31 exact
+FAIL: project.godot PR31 exact
+FAIL: export_presets.cfg PR31 exact
+FAIL: world/MapData.txt PR31 exact
+PASS: assets/kaze/cleaned/kaze_combat_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_idle_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_run_strip.png preserved
+PASS: assets/kaze/cleaned/kaze_traversal_strip.png preserved
+PASS: assets/web/area-atlas.png preserved
+PASS: assets/web/bosses_strip.png preserved
+PASS: assets/web/district-fidelity.png preserved
+PASS: assets/web/kaze_combat_strip.png preserved
+PASS: assets/web/kaze_idle_strip.png preserved
+PASS: assets/web/kaze_run_strip.png preserved
+PASS: assets/web/kaze_traversal_strip.png preserved
+PASS: assets/web/sentinels_strip.png preserved
+PASS: assets/web/terrain-materials.png preserved
+PASS: assets/art04/environment/door_combined.png preserved
+PASS: assets/art04/environment/r14_door_back.png preserved
+PASS: assets/art04/environment/r14_door_front.png preserved
+PASS: assets/art04/environment/r14_door_interior.png preserved
+PASS: assets/art04/environment/r14_roof_support.png preserved
+PASS: assets/art04/environment/r15_masonry_support.png preserved
+PASS: assets/art04/environment/stair_flight_right.png preserved
+PASS: assets/art04/environment/stair_front_lip.png preserved
+FAIL: assets/art04/kaze/ART04_key_poses.tres preserved
+PASS: assets/art04/kaze/enter_depth_key.png preserved
+PASS: assets/art04/kaze/key_pose_atlas.png preserved
+PASS: assets/art04/kaze/stair_down_key.png preserved
+PASS: assets/art04/kaze/stair_up_key.png preserved
+PASS: assets/art04/kaze/turn_depth_key.png preserved
+FAIL: assets/art04/prefabs/doorway.tscn preserved
+FAIL: assets/art04/prefabs/kaze_key_preview.tscn preserved
+TR04 PRESERVATION: 6 failure(s)

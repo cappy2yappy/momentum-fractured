@@ -1,0 +1,34 @@
+[
+  {
+    "name": "corrected-verify_tr03_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr03_preservation.py"
+    ],
+    "exit": 1,
+    "seconds": 0.781,
+    "passes": 29,
+    "failures": 3,
+    "sha256": "6a41aac9aa8ccdab7bc6568410ef6a158e8689cc14e6529103ef45b3fb011300",
+    "environment": {
+      "GIT_DIR": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-skill-eval\\.git",
+      "GIT_WORK_TREE": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run"
+    }
+  },
+  {
+    "name": "corrected-verify_tr04_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr04_preservation.py"
+    ],
+    "exit": 1,
+    "seconds": 1.579,
+    "passes": 40,
+    "failures": 6,
+    "sha256": "8f7498ec443ff8d69cd5af5beb5debeeee76c8d66fe7ccd891c0ea83415ce7e4",
+    "environment": {
+      "GIT_DIR": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-skill-eval\\.git",
+      "GIT_WORK_TREE": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run"
+    }
+  }
+]

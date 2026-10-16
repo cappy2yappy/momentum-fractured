@@ -1,0 +1,545 @@
+{
+  "ok": false,
+  "project_path": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+  "counts": {
+    "total": 56,
+    "errors": 54,
+    "warnings": 2,
+    "parse_errors": 0
+  },
+  "categories": {
+    "godot3_api": 0,
+    "godot3_shader": 0,
+    "inference": 0,
+    "node_ref": 0,
+    "unique_name": 0,
+    "signal_target": 0,
+    "missing_resource": 0,
+    "input_action": 54,
+    "group_ref": 0,
+    "res_path": 2,
+    "animation_ref": 0
+  },
+  "scan_summary": {
+    "gd": 55,
+    "tscn": 3,
+    "tres": 2,
+    "shader": 0,
+    "project_godot": 1,
+    "scene_script_pairs": 1,
+    "node_paths_checked": 0,
+    "skipped_dynamic_paths": 0,
+    "skipped_gdignore_dirs": 2
+  },
+  "suppressions": {
+    "total": 0,
+    "used": 0,
+    "unused": []
+  },
+  "diagnostics": [
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`event.is_action_pressed()` uses the action `loadout`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"loadout\")`. At runtime Godot prints `ERROR: The InputMap action \"loadout\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://scripts/hud.gd",
+      "line": 50,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"loadout\"},{\"type\":\"add_input_event\",\"action_name\":\"loadout\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"loadout\")` before the first use, or guard the use with `InputMap.has_action(\"loadout\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`event.is_action_pressed()` uses the action `cycle_kunai`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"cycle_kunai\")`. At runtime Godot prints `ERROR: The InputMap action \"cycle_kunai\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://scripts/hud.gd",
+      "line": 52,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"cycle_kunai\"},{\"type\":\"add_input_event\",\"action_name\":\"cycle_kunai\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"cycle_kunai\")` before the first use, or guard the use with `InputMap.has_action(\"cycle_kunai\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`event.is_action_pressed()` uses the action `map`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"map\")`. At runtime Godot prints `ERROR: The InputMap action \"map\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://scripts/hud.gd",
+      "line": 54,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"map\"},{\"type\":\"add_input_event\",\"action_name\":\"map\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"map\")` before the first use, or guard the use with `InputMap.has_action(\"map\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`event.is_action_pressed()` uses the action `pause`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"pause\")`. At runtime Godot prints `ERROR: The InputMap action \"pause\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_paste`? Actions this project defines: (none).",
+      "file": "res://scripts/hud.gd",
+      "line": 55,
+      "suggested_fix": "Fix the spelling to `ui_paste`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"pause\"},{\"type\":\"add_input_event\",\"action_name\":\"pause\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"pause\")` before the first use, or guard the use with `InputMap.has_action(\"pause\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.is_action_just_pressed()` uses the action `interact`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"interact\")`. At runtime Godot prints `ERROR: The InputMap action \"interact\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://scripts/world.gd",
+      "line": 648,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"interact\"},{\"type\":\"add_input_event\",\"action_name\":\"interact\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"interact\")` before the first use, or guard the use with `InputMap.has_action(\"interact\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 19,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 20,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 24,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 26,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 31,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/annex_traversal.gd",
+      "line": 32,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/approved_baseline.gd",
+      "line": 37,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/approved_baseline.gd",
+      "line": 39,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/approved_baseline.gd",
+      "line": 47,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/approved_baseline.gd",
+      "line": 52,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_embodied_transitions.gd",
+      "line": 43,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_embodied_transitions.gd",
+      "line": 45,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_embodied_transitions.gd",
+      "line": 45,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_embodied_transitions.gd",
+      "line": 54,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_mixed_transitions.gd",
+      "line": 31,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/capture_mixed_transitions.gd",
+      "line": 38,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`InputMap.action_get_events()` uses the action `interact`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"interact\")`. At runtime Godot prints `ERROR: The InputMap action \"interact\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/embodied_transitions.gd",
+      "line": 135,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"interact\"},{\"type\":\"add_input_event\",\"action_name\":\"interact\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"interact\")` before the first use, or guard the use with `InputMap.has_action(\"interact\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`InputMap.action_get_events()` uses the action `interact`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"interact\")`. At runtime Godot prints `ERROR: The InputMap action \"interact\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/embodied_transitions.gd",
+      "line": 139,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"interact\"},{\"type\":\"add_input_event\",\"action_name\":\"interact\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"interact\")` before the first use, or guard the use with `InputMap.has_action(\"interact\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 20,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 27,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `left`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"left\")`. At runtime Godot prints `ERROR: The InputMap action \"left\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_left`? Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 27,
+      "suggested_fix": "Fix the spelling to `ui_left`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"left\"},{\"type\":\"add_input_event\",\"action_name\":\"left\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"left\")` before the first use, or guard the use with `InputMap.has_action(\"left\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 37,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `left`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"left\")`. At runtime Godot prints `ERROR: The InputMap action \"left\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_left`? Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 37,
+      "suggested_fix": "Fix the spelling to `ui_left`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"left\"},{\"type\":\"add_input_event\",\"action_name\":\"left\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"left\")` before the first use, or guard the use with `InputMap.has_action(\"left\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/expansion_traversal.gd",
+      "line": 37,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/mixed_transitions.gd",
+      "line": 79,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/mixed_transitions.gd",
+      "line": 86,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 43,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 43,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 47,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 50,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 53,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 54,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 55,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 55,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 59,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 59,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 61,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 62,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 62,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 62,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `dash`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"dash\")`. At runtime Godot prints `ERROR: The InputMap action \"dash\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 66,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"dash\"},{\"type\":\"add_input_event\",\"action_name\":\"dash\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"dash\")` before the first use, or guard the use with `InputMap.has_action(\"dash\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `dash`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"dash\")`. At runtime Godot prints `ERROR: The InputMap action \"dash\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 66,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"dash\"},{\"type\":\"add_input_event\",\"action_name\":\"dash\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"dash\")` before the first use, or guard the use with `InputMap.has_action(\"dash\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 127,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 129,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 134,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `right`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"right\")`. At runtime Godot prints `ERROR: The InputMap action \"right\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Did you mean `ui_right`? Actions this project defines: (none).",
+      "file": "res://tests/movement_momentum.gd",
+      "line": 136,
+      "suggested_fix": "Fix the spelling to `ui_right`, or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"right\"},{\"type\":\"add_input_event\",\"action_name\":\"right\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"right\")` before the first use, or guard the use with `InputMap.has_action(\"right\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`InputMap.action_get_events()` uses the action `interact`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"interact\")`. At runtime Godot prints `ERROR: The InputMap action \"interact\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/room_transition_prototype.gd",
+      "line": 20,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"interact\"},{\"type\":\"add_input_event\",\"action_name\":\"interact\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"interact\")` before the first use, or guard the use with `InputMap.has_action(\"interact\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_press()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/storm_keeper.gd",
+      "line": 55,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "error",
+      "category": "input_action",
+      "rule": "undefined_input_action",
+      "message": "`Input.action_release()` uses the action `jump`, which nothing defines: it is not in project.godot's `[input]` section, it is not one of the engine's built-in `ui_*` actions, and no script calls `InputMap.add_action(\"jump\")`. At runtime Godot prints `ERROR: The InputMap action \"jump\" doesn't exist` (or silently answers false, depending on the call) and the input never fires. Actions this project defines: (none).",
+      "file": "res://tests/storm_keeper.gd",
+      "line": 57,
+      "suggested_fix": "or create the action and bind a key (32 = Space; pick your own keycode):\n  godot --headless --path /absolute/project --script /absolute/path/to/godot/scripts/core/dispatcher.gd project_batch '{\"actions\":[{\"type\":\"add_input_action\",\"action_name\":\"jump\"},{\"type\":\"add_input_event\",\"action_name\":\"jump\",\"event\":{\"__resource_type\":\"InputEventKey\",\"properties\":{\"physical_keycode\":32}}}]}'\nIf the action is instead created at runtime, call `InputMap.add_action(\"jump\")` before the first use, or guard the use with `InputMap.has_action(\"jump\")` \u2014 the linter finds either and goes quiet."
+    },
+    {
+      "severity": "warning",
+      "category": "res_path",
+      "rule": "res_path_missing",
+      "message": "The literal `res://build/int-tr03/captures` does not exist on disk (no file and no directory). Nothing here proves it is loaded, so this is a warning \u2014 but a `res://` string in a script is almost always a path that is about to be opened, and the load will return null.",
+      "file": "res://tests/capture_art04_comparison.gd",
+      "line": 3,
+      "suggested_fix": "Create `res://build/int-tr03/captures`, fix the path, or \u2014 if the file is produced at runtime \u2014 write it through `FileAccess.open(\u2026, FileAccess.WRITE)` / `ResourceSaver.save()`, which the linter recognises and stops reporting. `# lint:ignore res_path` on the line silences it for good."
+    },
+    {
+      "severity": "warning",
+      "category": "res_path",
+      "rule": "res_path_missing",
+      "message": "The literal `res://build/tr02/capture` does not exist on disk (no file and no directory). Nothing here proves it is loaded, so this is a warning \u2014 but a `res://` string in a script is almost always a path that is about to be opened, and the load will return null.",
+      "file": "res://tests/capture_mixed_transitions.gd",
+      "line": 15,
+      "suggested_fix": "Create `res://build/tr02/capture`, fix the path, or \u2014 if the file is produced at runtime \u2014 write it through `FileAccess.open(\u2026, FileAccess.WRITE)` / `ResourceSaver.save()`, which the linter recognises and stops reporting. `# lint:ignore res_path` on the line silences it for good."
+    }
+  ]
+}
