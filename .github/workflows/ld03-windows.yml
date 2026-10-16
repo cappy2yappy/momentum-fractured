@@ -1,0 +1,66 @@
+name: LD03 Bellroof playable Windows candidate
+on:
+  push:
+    branches: [feature/alpha-0.6.1-ld03-intentional-space]
+    paths: ['scripts/**', 'tests/**', 'tools/package_ld03.py', '.github/workflows/ld03-windows.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bellroof-windows:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the exact PR33 comparison source
+        run: git fetch --no-tags --depth=1 origin 1835fcca272fd6a925b3d8ad4834fb225a6caef6
+      - name: Install official Godot 4.6.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -jq "$RUNNER_TEMP/godot/templates.tpz" templates/windows_release_x86_64.exe -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+      - name: Verify preservation, routes and all-room geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/ld03/windows
+          touch build/.gdignore
+          python3 tools/verify_baseline.py > build/ld03/baseline.log
+          python3 tools/verify_ld03_preservation.py > build/ld03/preservation.log
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --editor --path . --import --quit > build/ld03/import-warmup.log 2>&1
+          "$GODOT" --headless --editor --path . --import --quit > build/ld03/import.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/ld03/import.log
+          for suite in intentional_space audit_intentional_space level_geometry; do
+            "$GODOT" --headless --fixed-fps 60 --path . --script "res://tests/$suite.gd" -- --test > "build/ld03/$suite.log" 2>&1
+            ! grep -E 'SCRIPT ERROR|Parse Error|FAIL:' "build/ld03/$suite.log"
+          done
+      - name: Export and package playable review fixtures
+        shell: bash
+        run: |
+          set -euo pipefail
+          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release "Windows Desktop" build/ld03/windows/Kaze-LD03-Intentional-Space-Windows.exe > build/ld03/export.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/ld03/export.log
+          python3 tools/package_ld03.py --source "$GITHUB_SHA" > build/ld03/package.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-LD03-Intentional-Space-Windows
+          path: |
+            build/ld03/windows/
+            build/ld03/windows-manifest.json
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: LD03-build-and-route-evidence
+          path: |
+            build/ld03/*.log
+            build/ld03/space_audit.json
