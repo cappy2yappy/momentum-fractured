@@ -72,6 +72,7 @@ func draw_supports(e,w):
 		w.draw_texture_rect_region(material,Rect2(1776,1210,24,130),Rect2(0,96,24,130),Color(0.5,0.52,0.6))
 
 func is_door(e,w,at:Vector2) -> bool:
+	if w.cinematic_transitions.automatic(w,w.room,13): return false
 	return e.production_active() and e.depth_demo and w.room==14 and at==Vector2(120,1100)
 
 func stair_rect(w) -> Rect2:

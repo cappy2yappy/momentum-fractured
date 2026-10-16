@@ -11,6 +11,7 @@ const Expansion = preload("res://scripts/world_expansion.gd")
 const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const MixedTransitions = preload("res://scripts/mixed_transitions.gd")
 const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
+const CinematicTransitions = preload("res://scripts/cinematic_transitions.gd")
 const LevelGeometry = preload("res://scripts/level_geometry.gd")
 const BellroofWalk = preload("res://scripts/bellroof_walk.gd")
 const ROOM_COUNT = 21
@@ -54,6 +55,7 @@ var visited = [true,false,false,false,false,false,false,false,false,false,false,
 var expansion = Expansion.new()
 var mixed_transitions = MixedTransitions.new()
 var embodied_transitions = EmbodiedTransitions.new()
+var cinematic_transitions = CinematicTransitions.new()
 var expansion_flags: Dictionary = {}
 var guard_defeated = false
 var boss_defeated = false
@@ -100,6 +102,8 @@ func _ready():
 	player.add_child(camera)
 	add_child(embodied_transitions)
 	embodied_transitions.configure(self)
+	add_child(cinematic_transitions)
+	cinematic_transitions.configure(self)
 	camera.position.y = -110
 	camera.position_smoothing_enabled = true
 	camera.position_smoothing_speed = 8
@@ -204,6 +208,7 @@ func build_room(index):
 	BellroofWalk.build(self)
 	mixed_transitions.room_loaded(self)
 	embodied_transitions.room_loaded(self)
+	cinematic_transitions.room_loaded(self)
 	queue_redraw()
 
 func room_size(index: int) -> Vector2:
@@ -501,6 +506,7 @@ func on_hurt():
 	if player.hp <= 0: call_deferred("respawn")
 
 func respawn():
+	cinematic_transitions.cancel(self)
 	embodied_transitions.cancel(self)
 	mixed_transitions.cancel(self)
 	transition = 0.0
@@ -536,6 +542,7 @@ func recover_from_fall():
 func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
+	cinematic_transitions.begin(self,target)
 	mixed_transitions.begin(self,target)
 	embodied_transitions.begin(self,target)
 	pending_arrival = arrival
@@ -593,9 +600,9 @@ func interact():
 	if expansion.interact(self): return
 	if extension.interact(self): return
 	if room >= 13: return
-	if room > 0 and player.position.distance_to(left_exit_position()) < 105:
+	if room > 0 and not cinematic_transitions.automatic(self,room,room-1) and player.position.distance_to(left_exit_position()) < 105:
 		request_room(room - 1)
-	elif room < 12 and player.position.distance_to(right_exit_position()) < 105:
+	elif room < 12 and not cinematic_transitions.automatic(self,room,room+1) and player.position.distance_to(right_exit_position()) < 105:
 		request_room(room + 1)
 
 func grapple_candidates() -> Array[Vector2]:
@@ -625,7 +632,8 @@ func on_tether_requested():
 		announce("Wind Tether", 1)
 
 func _physics_process(dt):
-	mixed_transitions.update(self,dt)
+	if cinematic_transitions.enabled: cinematic_transitions.update(self,dt)
+	else: mixed_transitions.update(self,dt)
 	message_time = maxf(0, message_time - dt)
 	if player.tether_attached:
 		tether_effect_anchor = player.tether_anchor
@@ -645,10 +653,12 @@ func _physics_process(dt):
 			pending_arrival = Vector2.INF
 			player.velocity = Vector2.ZERO
 			mixed_transitions.arrived(self)
+			cinematic_transitions.arrived(self)
 			embodied_transitions.arrived(self)
 			camera.reset_smoothing()
 		if transition <= 0: player.set_physics_process(true)
 	embodied_transitions.update_pose(self)
+	cinematic_transitions.present(self)
 	if Input.is_action_just_pressed("interact"): interact()
 	if room == 1 and guard_defeated and not player.double_jump and player.position.distance_to(Vector2(1580, 1260)) < 90:
 		player.double_jump = true;player.unlock_kunai("wind");save_progress()

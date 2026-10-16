@@ -30,8 +30,13 @@ func run():
 	w.player.double_jump = true
 	w.player.position = portal.at + Vector2(86,0)
 	check(not w.expansion.interact(w), "Compact door keeps original 85px interaction radius")
-	w.player.position = portal.at; w.expansion.interact(w)
-	check(w.pending_room == portal.target, "Compact door accepts earned Windstep at exact cue")
+	if w.cinematic_transitions.enabled:
+		var p=w.cinematic_transitions.endpoint(w,14,portal.target);var dir=int(p.heading)
+		w.player.set_physics_process(true);w.cinematic_transitions.cooldown=0
+		w.player.position=p.at-Vector2(dir*100,2);w.player.velocity=Vector2(dir*400,0);w.cinematic_transitions.update(w,0)
+		w.player.position=p.at+Vector2(dir*2,-2);w.cinematic_transitions.update(w,0);w.player.set_physics_process(false)
+	else: w.player.position = portal.at; w.expansion.interact(w)
+	check(w.pending_room == portal.target, "Compact passage accepts earned Windstep with current trigger policy")
 	w.queue_free(); current_scene = null
 	for tick in 3: await process_frame
 	print("INTEGRATION CANDIDATE: %d failure(s)" % failures)

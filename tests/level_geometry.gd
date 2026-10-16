@@ -45,8 +45,13 @@ func run():
 	p.touch.right=true;ticks(12);p.touch={};ticks(20)
 	p.double_jump=false;w.interact()
 	check(w.pending_room==-1 and p.is_on_floor(),"Locked Canal exit keeps safe footing after stop/reapproach")
-	p.double_jump=true;p.position=Vector2(120,1198);w.interact()
-	check(w.pending_room==0,"Canal left exit reapproach still activates with E")
+	p.double_jump=true
+	if w.cinematic_transitions.enabled:
+		p.set_physics_process(true);w.cinematic_transitions.cooldown=0
+		p.position=Vector2(180,1198);p.velocity=Vector2(-400,0);w.cinematic_transitions.update(w,0)
+		p.position=Vector2(118,1198);w.cinematic_transitions.update(w,0);p.set_physics_process(false)
+	else: p.position=Vector2(120,1198);w.interact()
+	check(w.pending_room==0,"Canal left exit reapproach activates with its current passage policy")
 	for i in 41: w._physics_process(1.0/60.0)
 	freeze();await physics_frame;ticks(30)
 	check(w.room==0 and p.is_on_floor(),"Canal reciprocal arrival remains supported")

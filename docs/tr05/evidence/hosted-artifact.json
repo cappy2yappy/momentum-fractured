@@ -1,0 +1,10 @@
+{
+  "run": 38933528377,
+  "conclusion": "success",
+  "source": "f168339a6fa6b02f16958ce250636dbe47d4a783",
+  "artifact_id": 12058994075,
+  "bytes": 51784078,
+  "digest": "sha256:042fa63dbea7a0e6011d081e5fe017be53ede3a9356de47d6819ab160171cc78",
+  "expires": "2026-11-15T16:39:24Z",
+  "download": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38933528377/artifacts/12058994075"
+}

@@ -1,0 +1,24 @@
+{
+  "baseline": "b950373efb5c4621d7da7e0be1506db048e3043a",
+  "runtime": "f168339a6fa6b02f16958ce250636dbe47d4a783",
+  "source_suites": 25,
+  "source_assertions": 1607,
+  "native_assertions": 54,
+  "native_failures": 0,
+  "launchers": 7,
+  "windows": {
+    "runtime_source": "f168339a6fa6b02f16958ce250636dbe47d4a783",
+    "base": "b950373efb5c4621d7da7e0be1506db048e3043a",
+    "engine": "4.6.1.stable.official.14d19694e",
+    "pck_resources": 573,
+    "binary_sha256": "44c28d78d5f2dd6705bbb3331956e9b1f038cb1dc7436f83ccb22bcc6112e854",
+    "binary_bytes": 120886264,
+    "forbidden_resources": [],
+    "demo_launchers": 6,
+    "fresh_launchers": 1,
+    "zip_sha256": "1adda063d7e5cefb479f9c5a29fa08956e3bc55e1acb42581a6cfbd66628b0f4",
+    "zip_bytes": 51918291,
+    "zip_crc": "PASS"
+  },
+  "exported_resource_assertions": 54
+}

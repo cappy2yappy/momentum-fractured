@@ -1,0 +1,65 @@
+[
+  {
+    "launcher": "Play-Canal-Automatic.cmd",
+    "exit": 0,
+    "seconds": 0.53,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Door-East.cmd",
+    "exit": 0,
+    "seconds": 0.47,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Door-West.cmd",
+    "exit": 0,
+    "seconds": 0.47,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Fresh.cmd",
+    "exit": 0,
+    "seconds": 0.45,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Stair-Cinematic.cmd",
+    "exit": 0,
+    "seconds": 0.44,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Stair-Descending.cmd",
+    "exit": 0,
+    "seconds": 0.47,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  },
+  {
+    "launcher": "Play-Stair-Reduced-Motion.cmd",
+    "exit": 0,
+    "seconds": 0.47,
+    "log_present": true,
+    "engine_banner": true,
+    "errors": [],
+    "passed": true
+  }
+]
