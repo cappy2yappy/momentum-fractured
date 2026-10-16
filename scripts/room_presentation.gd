@@ -36,15 +36,7 @@ static func draw_background(w):
 	var size=w.room_size(w.room)
 	var font=ThemeDB.fallback_font
 	if w.room==14:
-		# Distant stepped roofs and antenna masts frame the horizontal roof route.
-		w.draw_rect(Rect2(0,0,size.x,560),Color(0.12,0.12,0.20,0.28))
-		for x in range(100,2500,390):
-			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(x-30,460,290,840)): continue
-			w.draw_rect(Rect2(x,700,230,600),Color("272634"))
-			w.draw_line(Vector2(x-30,700),Vector2(x+115,630),Color("60576a"),7)
-			w.draw_line(Vector2(x+115,630),Vector2(x+260,700),Color("60576a"),7)
-			w.draw_line(Vector2(x+80,630),Vector2(x+80,460),Color("474454"),5)
-		w.draw_string(font,Vector2(1340,580),"UPPER WATCH",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("c4bda4"))
+		w.BellroofWalk.draw_backdrop(w)
 	elif w.room==15:
 		# Retaining arches, canal depth bands and pipework behind the dry descent.
 		for y in [420,680,940,1200]:

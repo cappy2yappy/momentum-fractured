@@ -12,6 +12,7 @@ const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const MixedTransitions = preload("res://scripts/mixed_transitions.gd")
 const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
 const LevelGeometry = preload("res://scripts/level_geometry.gd")
+const BellroofWalk = preload("res://scripts/bellroof_walk.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -113,6 +114,7 @@ func _ready():
 	player.momentum.enabled = "--momentum-prototype" in OS.get_cmdline_user_args() or "--momentum" in OS.get_cmdline_user_args()
 	register_metsys_progress()
 	build_room(checkpoint_room)
+	checkpoint_position = BellroofWalk.stage_checkpoint(self,checkpoint_position)
 	player.position = checkpoint_position
 	camera.reset_smoothing()
 
@@ -199,6 +201,7 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	BellroofWalk.build(self)
 	mixed_transitions.room_loaded(self)
 	embodied_transitions.room_loaded(self)
 	queue_redraw()
@@ -507,6 +510,7 @@ func respawn():
 	fall_recovering = false
 	player.hp = 3
 	build_room(checkpoint_room)
+	checkpoint_position = BellroofWalk.stage_checkpoint(self,checkpoint_position)
 	player.position = checkpoint_position
 	player.velocity = Vector2.ZERO
 	player.attack_time = 0
