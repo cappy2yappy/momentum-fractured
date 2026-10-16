@@ -52,3 +52,10 @@ No separated character body/hair paint rig, Aseprite authoring, PSD layers, opti
 4. Level/Art can expand the approved masonry treatment across corrected Bellroof masses and Canal boundaries, always using actual collision rectangles. Current pilot is one solid module, not a room reskin.
 
 No merge performed.
+
+## Publication
+
+- Draft PR: [#41 — ART05](https://github.com/cappy2yappy/momentum-fractured/pull/41), stacked on PR39.
+- Published tested checkpoint: `1522aa846f35b0ac8d3368852d0c2407d7c73f4f`.
+- Branch: `art/art05-animation-pipeline`; local checkout `work/art05-animation` in the Kaze project mirror.
+- [Continuation state](../art/art05/NEXT_TASK.md). The subsequent publication commit changes documentation only. No owner acknowledgment or completed gameplay binding is implied.
