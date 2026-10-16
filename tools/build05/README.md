@@ -22,9 +22,11 @@ Acceptance re-extracts the final ZIP into a directory containing spaces, audits
 PCK entry MD5s/world data/forbidden files and both Mach-O architectures, boots the
 release binary and all seven real launchers, then mounts the exact exported PCK
 into the matching native editor for scripted gameplay QA. Source test harnesses
-remain outside the distribution. The native 54-check input/capture fixture
+remain outside the distribution. The native 54-check input fixture
 covers Canal, reciprocal R13, stop/reverse, held-E safety and both stair directions.
-Six additional mounted-pack suites cover Bellroof paths/geometry, momentum, save
+Hosted Intel runs headlessly and skips screenshot waits only: a prior rendered
+fixture timed out on that runner. Local Apple Silicon validation uses graphical
+captures and a real graphical release launch. Six additional mounted-pack suites cover Bellroof paths/geometry, momentum, save
 compatibility and progression. The geometry audit's output path alone is adapted
 to an absolute disposable directory because mounted `res://` is read-only.
 This proves exported resources under the matching engine; graphical input checks

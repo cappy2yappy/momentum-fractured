@@ -1,22 +1,28 @@
 """Build the pinned PR39 Mac candidate; keep game bytes and saves untouched."""
 from pathlib import Path
-import argparse,datetime,hashlib,json,os,platform,re,shutil,subprocess,zipfile
+import argparse,datetime,hashlib,json,os,platform,re,shutil,subprocess,time,zipfile
 from audit import audit_pack
 SOURCE='5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c'
 r=Path(os.environ['BUILD05_SOURCE_ROOT']).resolve();control=Path(__file__).resolve().parent
 out=r/'build/build05';evidence=out/'evidence';evidence.mkdir(parents=True,exist_ok=True)
-p=argparse.ArgumentParser();p.add_argument('--godot',required=True);p.add_argument('--verify-only',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--godot',required=True);p.add_argument('--verify-only',action='store_true');p.add_argument('--headless-native',action='store_true');a=p.parse_args()
 rows=[]
 def hard(text):
  return re.findall(r'^.*(?:SCRIPT ERROR|Parse Error|Failed to load|FAIL:|Could not open).*$|^ERROR:.*$',text,re.M)
 def run(label,cmd,env=None,timeout=180,expected=None):
- result=subprocess.run(list(map(str,cmd)),cwd=r,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
- text=result.stdout;(evidence/(label+'.log')).write_text(text)
+ started=time.monotonic()
+ try:
+  result=subprocess.run(list(map(str,cmd)),cwd=r,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
+  text=result.stdout;rc=result.returncode
+ except subprocess.TimeoutExpired as exc:
+  text=exc.stdout or '';text=text.decode(errors='replace') if isinstance(text,bytes) else text
+  text+='\nERROR: Test exceeded '+str(timeout)+' second bound\n';rc=124
+ (evidence/(label+'.log')).write_text(text)
  # Godot's macOS headless certificate diagnostic is unrelated to gameplay.
  errors=[x for x in hard(text) if 'ret != noErr' not in x and not any(s in x for s in ['RID allocations','RID of type','resources still in use','Pages in use exist at exit'])]
- row=dict(test=label,exit=result.returncode,passes=len(re.findall(r'^PASS:',text,re.M)),errors=errors,expected=expected)
- row['passed']=result.returncode==0 and not errors and (expected is None or expected in text)
- rows.append(row);(out/'QA_RESULTS.json').write_text(json.dumps(dict(source=SOURCE,host=platform.platform(),architecture=platform.machine(),checks=rows),indent=2)+'\n')
+ row=dict(test=label,exit=rc,seconds=round(time.monotonic()-started,2),passes=len(re.findall(r'^PASS:',text,re.M)),errors=errors,expected=expected)
+ row['passed']=rc==0 and not errors and (expected is None or expected in text)
+ rows.append(row);(out/'QA_RESULTS.json').write_text(json.dumps(dict(source=SOURCE,host=platform.platform(),architecture=platform.machine(),native_capture_mode='headless; no screenshots' if a.headless_native else 'graphical capture',checks=rows),indent=2)+'\n')
  print(label, 'PASS' if row['passed'] else 'FAIL',row['passes'],flush=True)
  assert row['passed'],text[-5000:]
  return text
@@ -100,8 +106,8 @@ run('release-startup',[binary,'--headless','--fixed-fps','60','--quit-after','12
 for launcher in sorted(extract.glob('Play-*.command')):
  launcher.chmod(0o755);run(launcher.stem,[launcher,'--headless','--fixed-fps','60','--quit-after','120'],profile('launchers'),90,'Godot Engine v4.6.1')
 # Tests remain external to the shipped PCK. Mount that exact PCK before scene load.
-env=profile('packaged-native');env.update(BUILD05_PACK=str(next(app.rglob("*.pck"))),BUILD05_CAPTURE_DIR=str(evidence/'native-captures'))
-run('packaged-native',[a.godot,'--path',r,'--fixed-fps','60','--script',control/'packaged_native.gd','--','--test'],env,300,'54 checks, 0 failure(s)')
+env=profile('packaged-native');env.update(BUILD05_PACK=str(next(app.rglob("*.pck"))),BUILD05_CAPTURE_DIR=str(evidence/'native-captures'),BUILD05_CAPTURE_MODE='headless' if a.headless_native else 'graphical')
+run('packaged-native',[a.godot]+(['--headless'] if a.headless_native else [])+['--path',r,'--fixed-fps','60','--script',control/'packaged_native.gd','--','--test'],env,300,'54 checks, 0 failure(s)')
 for suite in ['intentional_space','audit_intentional_space','movement_momentum','save_compatibility','expansion_gates_save','skyworks_progression']:
  method='_run' if suite in ['movement_momentum','save_compatibility','skyworks_progression'] else 'run'
  wrapper=out/('packaged-'+suite+'.gd');wrapper.write_text('extends "res://tests/'+suite+'.gd"\nfunc _init():\n\tif not ProjectSettings.load_resource_pack(OS.get_environment("BUILD05_PACK"),true):\n\t\tpush_error("Mac PCK mount failed");quit(1);return\n\tcall_deferred("'+method+'")\n')
