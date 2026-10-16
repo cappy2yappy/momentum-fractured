@@ -1,0 +1,14 @@
+fatal: not a git repository (or any of the parent directories): .git
+PASS: single scoped hook: const LevelGeometry = preload("res://scripts/level_geometry.gd")
+PASS: single scoped hook: rect = LevelGeometry.perimeter_landing(room,room_size(room),rect)
+PASS: single scoped hook: if pending_arrival == Vector2.INF: player.position = LevelGeometry.legacy_arrival(room,player.position)
+Traceback (most recent call last):
+  File "C:\Users\TonyS\.codex\.chatgpt-projects\g-p-6aa9b0443c20819186909618bb6be970\skill-audit-run\tools\verify_tr04_preservation.py", line 15, in <module>
+    check(world==original('scripts/world.gd').decode().replace('\r\n','\n'),'world PR31 text after removing four reviewed geometry/render hooks (LF normalized)')
+  File "C:\Users\TonyS\.codex\.chatgpt-projects\g-p-6aa9b0443c20819186909618bb6be970\skill-audit-run\tools\verify_tr04_preservation.py", line 6, in original
+    def original(path):return subprocess.check_output(['git','-c','safe.directory=*','show',base+':'+path],cwd=r)
+  File "C:\Program Files\Python310\lib\subprocess.py", line 420, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "C:\Program Files\Python310\lib\subprocess.py", line 524, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-c', 'safe.directory=*', 'show', 'c2c6b08bfb3b85ad174dcc7ef60bddf1a3a48c15:scripts/world.gd']' returned non-zero exit status 128.

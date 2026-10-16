@@ -1,0 +1,11 @@
+fatal: not a git repository (or any of the parent directories): .git
+Traceback (most recent call last):
+  File "C:\Users\TonyS\.codex\.chatgpt-projects\g-p-6aa9b0443c20819186909618bb6be970\skill-audit-run\tools\verify_tr03_preservation.py", line 11, in <module>
+    check(original(path)==(ROOT/path).read_bytes(),path+' matches TR-02 byte for byte')
+  File "C:\Users\TonyS\.codex\.chatgpt-projects\g-p-6aa9b0443c20819186909618bb6be970\skill-audit-run\tools\verify_tr03_preservation.py", line 6, in original
+    def original(path):return subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT)
+  File "C:\Program Files\Python310\lib\subprocess.py", line 420, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "C:\Program Files\Python310\lib\subprocess.py", line 524, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', 'e9a2d1ab0537f3f903c543b080451b3556961179:scripts/player.gd']' returned non-zero exit status 128.

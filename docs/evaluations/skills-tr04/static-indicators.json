@@ -1,0 +1,3972 @@
+{
+  "divergent": {
+    "commit": "002d004c50b865406e58b3ec86508adab926d7f4",
+    "skill_count": 181,
+    "skills": [
+      "skills/bevy-2d-animation/SKILL.md",
+      "skills/bevy-3d-lighting/SKILL.md",
+      "skills/bevy-3d-materials/SKILL.md",
+      "skills/bevy-3d-world-building/SKILL.md",
+      "skills/bevy-ability-system/SKILL.md",
+      "skills/bevy-adapt-2d-to-3d/SKILL.md",
+      "skills/bevy-adapt-3d-to-2d/SKILL.md",
+      "skills/bevy-adapt-desktop-to-mobile/SKILL.md",
+      "skills/bevy-adapt-mobile-to-desktop/SKILL.md",
+      "skills/bevy-ai-navigation/SKILL.md",
+      "skills/bevy-animation-graph/SKILL.md",
+      "skills/bevy-animation/SKILL.md",
+      "skills/bevy-app-resources/SKILL.md",
+      "skills/bevy-asset-scenes/SKILL.md",
+      "skills/bevy-audio-systems/SKILL.md",
+      "skills/bevy-camera-systems/SKILL.md",
+      "skills/bevy-character-movement/SKILL.md",
+      "skills/bevy-combat-system/SKILL.md",
+      "skills/bevy-data-resources/SKILL.md",
+      "skills/bevy-debugging-profiling/SKILL.md",
+      "skills/bevy-dialogue-system/SKILL.md",
+      "skills/bevy-economy-system/SKILL.md",
+      "skills/bevy-ecs-composition/SKILL.md",
+      "skills/bevy-events-messaging/SKILL.md",
+      "skills/bevy-game-loop-collection/SKILL.md",
+      "skills/bevy-game-loop-harvest/SKILL.md",
+      "skills/bevy-game-loop-time-trial/SKILL.md",
+      "skills/bevy-game-loop-waves/SKILL.md",
+      "skills/bevy-genre-action-rpg/SKILL.md",
+      "skills/bevy-genre-card-game/SKILL.md",
+      "skills/bevy-genre-educational/SKILL.md",
+      "skills/bevy-genre-fighting/SKILL.md",
+      "skills/bevy-genre-horror/SKILL.md",
+      "skills/bevy-genre-idle-clicker/SKILL.md",
+      "skills/bevy-genre-metroidvania/SKILL.md",
+      "skills/bevy-genre-open-world/SKILL.md",
+      "skills/bevy-genre-party/SKILL.md",
+      "skills/bevy-genre-platformer/SKILL.md",
+      "skills/bevy-genre-puzzle/SKILL.md",
+      "skills/bevy-genre-racing/SKILL.md",
+      "skills/bevy-genre-rhythm/SKILL.md",
+      "skills/bevy-genre-roguelike/SKILL.md",
+      "skills/bevy-genre-romance/SKILL.md",
+      "skills/bevy-genre-rts/SKILL.md",
+      "skills/bevy-genre-sandbox/SKILL.md",
+      "skills/bevy-genre-shooter-fps/SKILL.md",
+      "skills/bevy-genre-shooter/SKILL.md",
+      "skills/bevy-genre-simulation/SKILL.md",
+      "skills/bevy-genre-sports/SKILL.md",
+      "skills/bevy-genre-stealth/SKILL.md",
+      "skills/bevy-genre-survival/SKILL.md",
+      "skills/bevy-genre-tower-defense/SKILL.md",
+      "skills/bevy-genre-visual-novel/SKILL.md",
+      "skills/bevy-input-handling/SKILL.md",
+      "skills/bevy-inventory-system/SKILL.md",
+      "skills/bevy-master/SKILL.md",
+      "skills/bevy-mechanic-revival/SKILL.md",
+      "skills/bevy-mechanic-secrets/SKILL.md",
+      "skills/bevy-navigation/SKILL.md",
+      "skills/bevy-particles/SKILL.md",
+      "skills/bevy-performance/SKILL.md",
+      "skills/bevy-physics-2d/SKILL.md",
+      "skills/bevy-physics-3d/SKILL.md",
+      "skills/bevy-platform-desktop/SKILL.md",
+      "skills/bevy-platform-mobile/SKILL.md",
+      "skills/bevy-platform-web/SKILL.md",
+      "skills/bevy-procedural-generation/SKILL.md",
+      "skills/bevy-project-foundations/SKILL.md",
+      "skills/bevy-project-templates/SKILL.md",
+      "skills/bevy-quest-system/SKILL.md",
+      "skills/bevy-rpg-stats/SKILL.md",
+      "skills/bevy-save-load/SKILL.md",
+      "skills/bevy-shaders/SKILL.md",
+      "skills/bevy-spatial-queries/SKILL.md",
+      "skills/bevy-state-machines/SKILL.md",
+      "skills/bevy-testing-patterns/SKILL.md",
+      "skills/bevy-tilemap/SKILL.md",
+      "skills/bevy-turn-system/SKILL.md",
+      "skills/bevy-tweening/SKILL.md",
+      "skills/bevy-ui-layout/SKILL.md",
+      "skills/bevy-ui-text/SKILL.md",
+      "skills/bevy-ui-theming/SKILL.md",
+      "skills/godot-2d-animation/SKILL.md",
+      "skills/godot-2d-physics/SKILL.md",
+      "skills/godot-3d-lighting/SKILL.md",
+      "skills/godot-3d-materials/SKILL.md",
+      "skills/godot-3d-world-building/SKILL.md",
+      "skills/godot-ability-system/SKILL.md",
+      "skills/godot-adapt-2d-to-3d/SKILL.md",
+      "skills/godot-adapt-3d-to-2d/SKILL.md",
+      "skills/godot-adapt-desktop-to-mobile/SKILL.md",
+      "skills/godot-adapt-mobile-to-desktop/SKILL.md",
+      "skills/godot-adapt-single-to-multiplayer/SKILL.md",
+      "skills/godot-agent-vision/SKILL.md",
+      "skills/godot-ai-navigation/SKILL.md",
+      "skills/godot-analyst/SKILL.md",
+      "skills/godot-animation-player/SKILL.md",
+      "skills/godot-animation-tree-mastery/SKILL.md",
+      "skills/godot-audio-systems/SKILL.md",
+      "skills/godot-auditor/SKILL.md",
+      "skills/godot-autoload-architecture/SKILL.md",
+      "skills/godot-builder/SKILL.md",
+      "skills/godot-camera-systems/SKILL.md",
+      "skills/godot-characterbody-2d/SKILL.md",
+      "skills/godot-combat-system/SKILL.md",
+      "skills/godot-composition-apps/SKILL.md",
+      "skills/godot-composition/SKILL.md",
+      "skills/godot-debugging-profiling/SKILL.md",
+      "skills/godot-dialogue-system/SKILL.md",
+      "skills/godot-economy-system/SKILL.md",
+      "skills/godot-export-builds/SKILL.md",
+      "skills/godot-game-loop-collection/SKILL.md",
+      "skills/godot-game-loop-harvest/SKILL.md",
+      "skills/godot-game-loop-time-trial/SKILL.md",
+      "skills/godot-game-loop-waves/SKILL.md",
+      "skills/godot-gdscript-mastery/SKILL.md",
+      "skills/godot-genre-action-rpg/SKILL.md",
+      "skills/godot-genre-battle-royale/SKILL.md",
+      "skills/godot-genre-card-game/SKILL.md",
+      "skills/godot-genre-educational/SKILL.md",
+      "skills/godot-genre-fighting/SKILL.md",
+      "skills/godot-genre-horror/SKILL.md",
+      "skills/godot-genre-idle-clicker/SKILL.md",
+      "skills/godot-genre-metroidvania/SKILL.md",
+      "skills/godot-genre-moba/SKILL.md",
+      "skills/godot-genre-open-world/SKILL.md",
+      "skills/godot-genre-party/SKILL.md",
+      "skills/godot-genre-platformer/SKILL.md",
+      "skills/godot-genre-puzzle/SKILL.md",
+      "skills/godot-genre-racing/SKILL.md",
+      "skills/godot-genre-rhythm/SKILL.md",
+      "skills/godot-genre-roguelike/SKILL.md",
+      "skills/godot-genre-romance/SKILL.md",
+      "skills/godot-genre-rts/SKILL.md",
+      "skills/godot-genre-sandbox/SKILL.md",
+      "skills/godot-genre-shooter-fps/SKILL.md",
+      "skills/godot-genre-shooter/SKILL.md",
+      "skills/godot-genre-simulation/SKILL.md",
+      "skills/godot-genre-sports/SKILL.md",
+      "skills/godot-genre-stealth/SKILL.md",
+      "skills/godot-genre-survival/SKILL.md",
+      "skills/godot-genre-tower-defense/SKILL.md",
+      "skills/godot-genre-visual-novel/SKILL.md",
+      "skills/godot-input-handling/SKILL.md",
+      "skills/godot-inventory-system/SKILL.md",
+      "skills/godot-master/SKILL.md",
+      "skills/godot-mechanic-revival/SKILL.md",
+      "skills/godot-mechanic-secrets/SKILL.md",
+      "skills/godot-monte-carlo-balancer/SKILL.md",
+      "skills/godot-multiplayer-networking/SKILL.md",
+      "skills/godot-navigation-pathfinding/SKILL.md",
+      "skills/godot-particles/SKILL.md",
+      "skills/godot-performance-optimization/SKILL.md",
+      "skills/godot-physics-3d/SKILL.md",
+      "skills/godot-platform-console/SKILL.md",
+      "skills/godot-platform-desktop/SKILL.md",
+      "skills/godot-platform-mobile/SKILL.md",
+      "skills/godot-platform-vr/SKILL.md",
+      "skills/godot-platform-web/SKILL.md",
+      "skills/godot-procedural-generation/SKILL.md",
+      "skills/godot-project-foundations/SKILL.md",
+      "skills/godot-project-templates/SKILL.md",
+      "skills/godot-quest-system/SKILL.md",
+      "skills/godot-raycasting-queries/SKILL.md",
+      "skills/godot-resource-data-patterns/SKILL.md",
+      "skills/godot-rpg-stats/SKILL.md",
+      "skills/godot-save-load-systems/SKILL.md",
+      "skills/godot-scene-management/SKILL.md",
+      "skills/godot-server-architecture/SKILL.md",
+      "skills/godot-shaders-basics/SKILL.md",
+      "skills/godot-signal-architecture/SKILL.md",
+      "skills/godot-state-machine-advanced/SKILL.md",
+      "skills/godot-testing-patterns/SKILL.md",
+      "skills/godot-theme-easter/SKILL.md",
+      "skills/godot-tilemap-mastery/SKILL.md",
+      "skills/godot-turn-system/SKILL.md",
+      "skills/godot-tweening/SKILL.md",
+      "skills/godot-ui-containers/SKILL.md",
+      "skills/godot-ui-rich-text/SKILL.md",
+      "skills/godot-ui-theming/SKILL.md",
+      "skills/godot-version-migration/SKILL.md"
+    ],
+    "executable_source_count": 2504,
+    "indicator_counts": {
+      "process_execution": 31,
+      "destructive_or_overwrite": 96,
+      "network_or_install": 22301,
+      "instruction_boundary": 0
+    },
+    "indicators": [
+      {
+        "path": "scripts/generate_star_history.py",
+        "line": 371,
+        "indicator": "process_execution",
+        "excerpt": "out = subprocess.check_output("
+      },
+      {
+        "path": "scripts/generate_star_history.py",
+        "line": 374,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "path": "scripts/generate_star_history.py",
+        "line": 377,
+        "indicator": "process_execution",
+        "excerpt": "except (OSError, subprocess.SubprocessError):"
+      },
+      {
+        "path": "scripts/generate_star_history.py",
+        "line": 744,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "json_path.write_text(json.dumps(payload, indent=2) + \"\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "scripts/generate_star_history.py",
+        "line": 754,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(svg, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skills/godot-adapt-desktop-to-mobile/scripts/offline_save_sync.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open_encrypted_with_pass(SAVE_PATH, FileAccess.WRITE, \"secure_mobile_key_123!\")"
+      },
+      {
+        "path": "skills/godot-adapt-mobile-to-desktop/references/desktop-port-deep.md",
+        "line": 75,
+        "indicator": "process_execution",
+        "excerpt": "Lightweight first scene saves `user://settings.cfg`, then `OS.create_process(executable, [\"--main-pack\", \"game_data.pck\"])` and quits \u2014 keeps main pack clean for heavy titles."
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/capture.py",
+        "line": 170,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run(cmd, check=True, capture_output=True, text=True)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/capture.py",
+        "line": 171,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.CalledProcessError as e:"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/capture.py",
+        "line": 281,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "Path(tmp).unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/capture.py",
+        "line": 306,
+        "indicator": "process_execution",
+        "excerpt": "proc = subprocess.run([wmctrl, \"-l\"], capture_output=True, text=True, check=False)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/capture.py",
+        "line": 314,
+        "indicator": "process_execution",
+        "excerpt": "geo = subprocess.run("
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/editor_bridge/plugin.gd",
+        "line": 78,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var df := FileAccess.open(DONE, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/ensure_gitignore.py",
+        "line": 32,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "gi.write_text("
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 66,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(bridge)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 77,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(dest)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 88,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(text, encoding=\"utf-8\", newline=\"\\n\")"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 158,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(dest)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 168,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "done.unlink()"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 171,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "p.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 173,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "req.write_text(mode.strip().lower() + \"\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 249,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.Popen("
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 251,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 252,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 268,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "p.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-agent-vision/scripts/stage_editor_bridge.py",
+        "line": 269,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "png.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-builder/scripts/base.py",
+        "line": 26,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run(cmd, capture_output=True, text=True)"
+      },
+      {
+        "path": "skills/godot-builder/scripts/stop_project.py",
+        "line": 10,
+        "indicator": "process_execution",
+        "excerpt": "if platform.system().lower() == 'windows': subprocess.run([\"taskkill\", \"/F\", \"/PID\", str(args.pid)])"
+      },
+      {
+        "path": "skills/godot-builder/scripts/stop_project.py",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "if platform.system().lower() == 'windows': subprocess.run([\"taskkill\", \"/F\", \"/PID\", str(args.pid)])"
+      },
+      {
+        "path": "skills/godot-builder/scripts/stop_project.py",
+        "line": 11,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "else: os.kill(args.pid, 9)"
+      },
+      {
+        "path": "skills/godot-combat-system/scripts/combat_logger.gd",
+        "line": 14,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(LOG_FILE, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-export-builds/scripts/export_universal_manager.gd",
+        "line": 20,
+        "indicator": "process_execution",
+        "excerpt": "var exit_code = OS.execute(OS.get_executable_path(), [\"--headless\", \"--export-release\", preset_name, path], output)"
+      },
+      {
+        "path": "skills/godot-export-builds/scripts/export_version_sync.gd",
+        "line": 9,
+        "indicator": "process_execution",
+        "excerpt": "var exit_code = OS.execute(\"git\", [\"describe\", \"--always\", \"--tags\"], output)"
+      },
+      {
+        "path": "skills/godot-game-loop-collection/references/collection-loop-advanced.md",
+        "line": 9,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://save.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-game-loop-harvest/scripts/harvest_autosave_manager.gd",
+        "line": 24,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(save_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-horror/references/expert-horror-patterns.md",
+        "line": 122,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(\"user://save.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-idle-clicker/references/expert-idle-clicker-patterns.md",
+        "line": 166,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-idle-clicker/scripts/offline_progression_manager.gd",
+        "line": 19,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-metroidvania/scripts/metroid_game_state.gd",
+        "line": 19,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var f = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-moba/SKILL.md",
+        "line": 165,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-moba/references/moba-meta-systems-deep.md",
+        "line": 133,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-moba/scripts/replay_manager.gd",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-open-world/scripts/binary_save_manager.gd",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-puzzle/scripts/puzzle_saver.gd",
+        "line": 21,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-racing/references/racing-systems-deep.md",
+        "line": 150,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-racing/scripts/ghost_recorder.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-roguelike/scripts/json_state_serializer.gd",
+        "line": 14,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-roguelike/scripts/meta_progression_manager.gd",
+        "line": 49,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-romance/scripts/route_manager.gd",
+        "line": 69,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-sandbox/scripts/sandbox_world_serializer.gd",
+        "line": 21,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-genre-simulation/scripts/simulation_patterns.gd",
+        "line": 39,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-inventory-system/references/elite-technical-patterns.md",
+        "line": 69,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://inv.json\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/adapt-mobile-to-desktop-desktop-port-deep.md",
+        "line": 75,
+        "indicator": "process_execution",
+        "excerpt": "Lightweight first scene saves `user://settings.cfg`, then `OS.create_process(executable, [\"--main-pack\", \"game_data.pck\"])` and quits \u2014 keeps main pack clean for heavy titles."
+      },
+      {
+        "path": "skills/godot-master/references/game-loop-collection-collection-loop-advanced.md",
+        "line": 9,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://save.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/genre-horror-expert-horror-patterns.md",
+        "line": 122,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(\"user://save.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/genre-idle-clicker-expert-idle-clicker-patterns.md",
+        "line": 166,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/genre-moba-moba-meta-systems-deep.md",
+        "line": 133,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/genre-moba.md",
+        "line": 165,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/genre-racing-racing-systems-deep.md",
+        "line": 150,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/inventory-system-elite-technical-patterns.md",
+        "line": 69,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://inv.json\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/save-load-systems-save-patterns-deep.md",
+        "line": 16,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var save_file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/references/save-load-systems-save-patterns-deep.md",
+        "line": 67,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var save_file := FileAccess.open(\"user://savegame.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/adapt_desktop_to_mobile_offline_save_sync.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open_encrypted_with_pass(SAVE_PATH, FileAccess.WRITE, \"secure_mobile_key_123!\")"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_capture.py",
+        "line": 170,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run(cmd, check=True, capture_output=True, text=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_capture.py",
+        "line": 171,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.CalledProcessError as e:"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_capture.py",
+        "line": 281,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "Path(tmp).unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_capture.py",
+        "line": 306,
+        "indicator": "process_execution",
+        "excerpt": "proc = subprocess.run([wmctrl, \"-l\"], capture_output=True, text=True, check=False)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_capture.py",
+        "line": 314,
+        "indicator": "process_execution",
+        "excerpt": "geo = subprocess.run("
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_editor_bridge_plugin.gd",
+        "line": 78,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var df := FileAccess.open(DONE, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_ensure_gitignore.py",
+        "line": 32,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "gi.write_text("
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 66,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(bridge)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 77,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(dest)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 88,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(text, encoding=\"utf-8\", newline=\"\\n\")"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 158,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(dest)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 168,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "done.unlink()"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 171,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "p.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 173,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "req.write_text(mode.strip().lower() + \"\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 249,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.Popen("
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 251,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 252,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 268,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "p.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/agent_vision_stage_editor_bridge.py",
+        "line": 269,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "png.unlink(missing_ok=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/builder_base.py",
+        "line": 26,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run(cmd, capture_output=True, text=True)"
+      },
+      {
+        "path": "skills/godot-master/scripts/builder_stop_project.py",
+        "line": 10,
+        "indicator": "process_execution",
+        "excerpt": "if platform.system().lower() == 'windows': subprocess.run([\"taskkill\", \"/F\", \"/PID\", str(args.pid)])"
+      },
+      {
+        "path": "skills/godot-master/scripts/builder_stop_project.py",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "if platform.system().lower() == 'windows': subprocess.run([\"taskkill\", \"/F\", \"/PID\", str(args.pid)])"
+      },
+      {
+        "path": "skills/godot-master/scripts/builder_stop_project.py",
+        "line": 11,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "else: os.kill(args.pid, 9)"
+      },
+      {
+        "path": "skills/godot-master/scripts/combat_system_combat_logger.gd",
+        "line": 14,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(LOG_FILE, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/export_builds_export_universal_manager.gd",
+        "line": 20,
+        "indicator": "process_execution",
+        "excerpt": "var exit_code = OS.execute(OS.get_executable_path(), [\"--headless\", \"--export-release\", preset_name, path], output)"
+      },
+      {
+        "path": "skills/godot-master/scripts/export_builds_export_version_sync.gd",
+        "line": 9,
+        "indicator": "process_execution",
+        "excerpt": "var exit_code = OS.execute(\"git\", [\"describe\", \"--always\", \"--tags\"], output)"
+      },
+      {
+        "path": "skills/godot-master/scripts/game_loop_harvest_harvest_autosave_manager.gd",
+        "line": 24,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(save_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_idle_clicker_offline_progression_manager.gd",
+        "line": 19,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_metroidvania_metroid_game_state.gd",
+        "line": 19,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var f = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_moba_replay_manager.gd",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://replays/\" + match_id + \".dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_open_world_binary_save_manager.gd",
+        "line": 10,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_puzzle_puzzle_saver.gd",
+        "line": 21,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_racing_ghost_recorder.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_roguelike_json_state_serializer.gd",
+        "line": 14,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_roguelike_meta_progression_manager.gd",
+        "line": 49,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_romance_route_manager.gd",
+        "line": 69,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_sandbox_sandbox_world_serializer.gd",
+        "line": 21,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/genre_simulation_simulation_patterns.gd",
+        "line": 39,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/mechanic_revival_revival_death_analytics.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "file = FileAccess.open(LOG_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/platform_console_achievement_offline_queue.gd",
+        "line": 29,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var f = FileAccess.open(_queue_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/platform_console_async_save_manager.gd",
+        "line": 26,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(temp_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/platform_desktop_native_shell_executor.gd",
+        "line": 9,
+        "indicator": "process_execution",
+        "excerpt": "var err = OS.execute(command, args, output, true)"
+      },
+      {
+        "path": "skills/godot-master/scripts/platform_desktop_platform_desktop_patterns.gd",
+        "line": 78,
+        "indicator": "process_execution",
+        "excerpt": "return OS.create_process(OS.get_executable_path(), [\"--headless\", \"--no-window\"])"
+      },
+      {
+        "path": "skills/godot-master/scripts/project_foundations_feature_scaffolder.gd",
+        "line": 95,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/project_foundations_feature_scaffolder.gd",
+        "line": 122,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(feature_path + \"README.md\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/project_foundations_project_bootstrapper.gd",
+        "line": 46,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(path + \"/.gdignore\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/save_load_systems_save_load_patterns.gd",
+        "line": 18,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://\" + path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/save_load_systems_save_load_patterns.gd",
+        "line": 34,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://\" + path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-master/scripts/save_load_systems_save_migration_manager.gd",
+        "line": 16,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open_encrypted_with_pass(SAVE_PATH, FileAccess.WRITE, ENCRYPTION_KEY)"
+      },
+      {
+        "path": "skills/godot-master/scripts/save_load_systems_save_system_encryption.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-mechanic-revival/scripts/revival_death_analytics.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "file = FileAccess.open(LOG_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-platform-console/scripts/achievement_offline_queue.gd",
+        "line": 29,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var f = FileAccess.open(_queue_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-platform-console/scripts/async_save_manager.gd",
+        "line": 26,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(temp_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-platform-desktop/scripts/native_shell_executor.gd",
+        "line": 9,
+        "indicator": "process_execution",
+        "excerpt": "var err = OS.execute(command, args, output, true)"
+      },
+      {
+        "path": "skills/godot-platform-desktop/scripts/platform_desktop_patterns.gd",
+        "line": 78,
+        "indicator": "process_execution",
+        "excerpt": "return OS.create_process(OS.get_executable_path(), [\"--headless\", \"--no-window\"])"
+      },
+      {
+        "path": "skills/godot-project-foundations/scripts/feature_scaffolder.gd",
+        "line": 95,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-project-foundations/scripts/feature_scaffolder.gd",
+        "line": 122,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(feature_path + \"README.md\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-project-foundations/scripts/project_bootstrapper.gd",
+        "line": 46,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(path + \"/.gdignore\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/references/save-patterns-deep.md",
+        "line": 16,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var save_file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/references/save-patterns-deep.md",
+        "line": 67,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var save_file := FileAccess.open(\"user://savegame.dat\", FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/scripts/save_load_patterns.gd",
+        "line": 18,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://\" + path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/scripts/save_load_patterns.gd",
+        "line": 34,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"user://\" + path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/scripts/save_migration_manager.gd",
+        "line": 16,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open_encrypted_with_pass(SAVE_PATH, FileAccess.WRITE, ENCRYPTION_KEY)"
+      },
+      {
+        "path": "skills/godot-save-load-systems/scripts/save_system_encryption.gd",
+        "line": 28,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)"
+      }
+    ]
+  },
+  "awesome": {
+    "commit": "0a70cfc64672d512c5b5b6006b5dcb5cf90dbdbd",
+    "skill_count": 75,
+    "skills": [
+      "router/SKILL.md",
+      "skills/disciplines/ai-behavior-trees-utility-ai/SKILL.md",
+      "skills/disciplines/audio-design/SKILL.md",
+      "skills/disciplines/camera-systems/SKILL.md",
+      "skills/disciplines/create-game-assets/SKILL.md",
+      "skills/disciplines/dialogue-systems/SKILL.md",
+      "skills/disciplines/game-ai/SKILL.md",
+      "skills/disciplines/game-feel/SKILL.md",
+      "skills/disciplines/game-ui-ux/SKILL.md",
+      "skills/disciplines/input-systems/SKILL.md",
+      "skills/disciplines/level-design/SKILL.md",
+      "skills/disciplines/performance-optimization/SKILL.md",
+      "skills/disciplines/physics-tuning/SKILL.md",
+      "skills/disciplines/procedural-gen/SKILL.md",
+      "skills/disciplines/save-systems/SKILL.md",
+      "skills/disciplines/shader-programming/SKILL.md",
+      "skills/genres/card-game/SKILL.md",
+      "skills/genres/fps-shooter/SKILL.md",
+      "skills/genres/platformer/SKILL.md",
+      "skills/genres/puzzle/SKILL.md",
+      "skills/genres/roguelike/SKILL.md",
+      "skills/genres/rpg/SKILL.md",
+      "skills/genres/survival-crafting/SKILL.md",
+      "skills/genres/tower-defense/SKILL.md",
+      "skills/genres/visual-novel/SKILL.md",
+      "skills/godot/godot-2d-movement/SKILL.md",
+      "skills/godot/godot-3d-essentials/SKILL.md",
+      "skills/godot/godot-animation/SKILL.md",
+      "skills/godot/godot-audio/SKILL.md",
+      "skills/godot/godot-csharp/SKILL.md",
+      "skills/godot/godot-export/SKILL.md",
+      "skills/godot/godot-gdscript-headless-testing/SKILL.md",
+      "skills/godot/godot-gdscript/SKILL.md",
+      "skills/godot/godot-multiplayer/SKILL.md",
+      "skills/godot/godot-nodes-scenes/SKILL.md",
+      "skills/godot/godot-physics/SKILL.md",
+      "skills/godot/godot-resources/SKILL.md",
+      "skills/godot/godot-shaders/SKILL.md",
+      "skills/godot/godot-signals-groups/SKILL.md",
+      "skills/godot/godot-tilemap/SKILL.md",
+      "skills/godot/godot-ui-control/SKILL.md",
+      "skills/other-engines/bevy-ecs/SKILL.md",
+      "skills/other-engines/love2d-core/SKILL.md",
+      "skills/other-engines/pygame-core/SKILL.md",
+      "skills/other-engines/roblox-characters/SKILL.md",
+      "skills/other-engines/roblox-datastores/SKILL.md",
+      "skills/other-engines/roblox-luau/SKILL.md",
+      "skills/other-engines/roblox-networking/SKILL.md",
+      "skills/other-engines/roblox-physics/SKILL.md",
+      "skills/other-engines/roblox-studio-workflow/SKILL.md",
+      "skills/other-engines/roblox-ui/SKILL.md",
+      "skills/unity/unity-animation/SKILL.md",
+      "skills/unity/unity-build-pipeline/SKILL.md",
+      "skills/unity/unity-csharp-scripting/SKILL.md",
+      "skills/unity/unity-input-system/SKILL.md",
+      "skills/unity/unity-navmesh/SKILL.md",
+      "skills/unity/unity-physics/SKILL.md",
+      "skills/unity/unity-scriptableobjects/SKILL.md",
+      "skills/unity/unity-tilemap-2d/SKILL.md",
+      "skills/unreal/unreal-behavior-trees/SKILL.md",
+      "skills/unreal/unreal-blueprints/SKILL.md",
+      "skills/unreal/unreal-cpp-gameplay/SKILL.md",
+      "skills/unreal/unreal-enhanced-input/SKILL.md",
+      "skills/unreal/unreal-niagara/SKILL.md",
+      "skills/unreal/unreal-packaging/SKILL.md",
+      "skills/web-engines/phaser-arcade-physics/SKILL.md",
+      "skills/web-engines/phaser-core/SKILL.md",
+      "skills/web-engines/pixijs-rendering/SKILL.md",
+      "skills/web-engines/threejs-gltf-loading/SKILL.md",
+      "skills/web-engines/threejs-materials-lighting/SKILL.md",
+      "skills/web-engines/threejs-scene-setup/SKILL.md",
+      "skills/workflows/game-jam/SKILL.md",
+      "skills/workflows/itch-publish/SKILL.md",
+      "skills/workflows/prototype-fast/SKILL.md",
+      "skills/workflows/steam-publish/SKILL.md"
+    ],
+    "executable_source_count": 7,
+    "indicator_counts": {
+      "process_execution": 3,
+      "destructive_or_overwrite": 8,
+      "network_or_install": 156,
+      "instruction_boundary": 0
+    },
+    "indicators": [
+      {
+        "path": "scripts/generate-site.py",
+        "line": 315,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "target.write_text(content, encoding=\"utf-8\")"
+      },
+      {
+        "path": "scripts/generate-site.py",
+        "line": 529,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(out)"
+      },
+      {
+        "path": "skills/disciplines/save-systems/SKILL.md",
+        "line": 80,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var f := FileAccess.open(tmp, FileAccess.WRITE)"
+      },
+      {
+        "path": "tests/test_asset_tools.py",
+        "line": 43,
+        "indicator": "process_execution",
+        "excerpt": "def run_tool(self, script: Path, *args: str) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_asset_tools.py",
+        "line": 44,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 17,
+        "indicator": "process_execution",
+        "excerpt": "SPEC.loader.exec_module(validate_skills)"
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 44,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(f\"---\\n{fields}\\n---\\n\\n{body}\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 121,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(agents / \"openai.yaml\").write_text("
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 135,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "readme.write_text("
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 149,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "router.write_text("
+      },
+      {
+        "path": "tests/test_validate_skills.py",
+        "line": 178,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "manifest.write_text(json.dumps({\"plugins\": plugins}), encoding=\"utf-8\")"
+      }
+    ]
+  },
+  "haxqer": {
+    "commit": "037c03e9858ae748bf66c010aeb9942dbe9b93d6",
+    "skill_count": 1,
+    "skills": [
+      "skill/godot/SKILL.md"
+    ],
+    "executable_source_count": 168,
+    "indicator_counts": {
+      "process_execution": 201,
+      "destructive_or_overwrite": 265,
+      "network_or_install": 23,
+      "instruction_boundary": 0
+    },
+    "indicators": [
+      {
+        "path": "scripts/package_skill.sh",
+        "line": 34,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(os.path.join(root, dir_name))"
+      },
+      {
+        "path": "skill/godot/references/playbooks.md",
+        "line": 1613,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "run_gdscript '{\"code\":\"DirAccess.make_dir_recursive_absolute(\\\"user://saves\\\")\\nvar file: FileAccess = FileAccess.open(\\\"user://saves/slot_0.json\\\", FileAccess.WRITE)\\nfile.store_string(\\\"not json at all\\\")\\nfile.close()"
+      },
+      {
+        "path": "skill/godot/scripts/assets/make_sfx.py",
+        "line": 867,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(header + data)"
+      },
+      {
+        "path": "skill/godot/scripts/debug/lint_project.py",
+        "line": 999,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "# `FileAccess.open(path, FileAccess.WRITE)` and friends create the file, so the"
+      },
+      {
+        "path": "skill/godot/scripts/debug/lint_project.py",
+        "line": 2615,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "f\"it through `FileAccess.open(\u2026, FileAccess.WRITE)` / `ResourceSaver.save()`, \""
+      },
+      {
+        "path": "skill/godot/scripts/debug/probe_environment.py",
+        "line": 25,
+        "indicator": "process_execution",
+        "excerpt": "def run(command: list[str]) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/probe_environment.py",
+        "line": 27,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run(command, capture_output=True, text=True, check=False, timeout=30)"
+      },
+      {
+        "path": "skill/godot/scripts/debug/probe_environment.py",
+        "line": 28,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/probe_environment.py",
+        "line": 29,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.CompletedProcess(command, -1, \"\", \"timed out after 30s\")"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 154,
+        "indicator": "process_execution",
+        "excerpt": "proc = subprocess.Popen("
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 156,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 157,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.PIPE,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 158,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.STDOUT,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 176,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 181,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 187,
+        "indicator": "process_execution",
+        "excerpt": "def _kill_group(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_project.py",
+        "line": 219,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "log_path.write_text(output, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_scenario.py",
+        "line": 114,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_scenario.py",
+        "line": 120,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_scenario.py",
+        "line": 122,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as exc:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/run_scenario.py",
+        "line": 134,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "args.log_file.expanduser().resolve().write_text(combined, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/debug/scenario_runner.gd",
+        "line": 622,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(absolute_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skill/godot/scripts/debug/scenario_runner.gd",
+        "line": 925,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(absolute_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 248,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 249,
+        "indicator": "process_execution",
+        "excerpt": "[godot_bin, \"--version\"], capture_output=True, text=True, check=False, stdin=subprocess.DEVNULL"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 282,
+        "indicator": "process_execution",
+        "excerpt": "def kill_group(proc: subprocess.Popen) -> None:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 294,
+        "indicator": "process_execution",
+        "excerpt": "proc = subprocess.Popen("
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 296,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 297,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.PIPE,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 298,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.STDOUT,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 305,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 312,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/smoke_scenes.py",
+        "line": 346,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(log_dir / f\"{safe}.log\").write_text(output, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 153,
+        "indicator": "process_execution",
+        "excerpt": "def command_result(completed: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 157,
+        "indicator": "process_execution",
+        "excerpt": "def run_bounded(command: list[str], timeout: float) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 159,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 165,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 167,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as exc:"
+      },
+      {
+        "path": "skill/godot/scripts/debug/validate_project.py",
+        "line": 170,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.CompletedProcess(command, -1, stdout, stderr + f\"\\n[validate_project] timed out after {timeout}s\")"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 154,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([binary, \"--version\"], capture_output=True, text=True,"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 187,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "probe.write_text(\"x\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 188,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "probe.unlink()"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 241,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False,"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 266,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=300)"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 797,
+        "indicator": "process_execution",
+        "excerpt": "spec.loader.exec_module(module)"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 1045,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "index_path.write_text(json.dumps(index, separators=(\",\", \":\")), encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/docs/api_lookup.py",
+        "line": 1198,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(str(path), ignore_errors=True)"
+      },
+      {
+        "path": "skill/godot/scripts/export/add_export_preset.gd",
+        "line": 280,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var handle := FileAccess.open(config_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skill/godot/scripts/export/export_project.py",
+        "line": 283,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run([godot_bin, \"--version\"], capture_output=True, text=True, check=False)"
+      },
+      {
+        "path": "skill/godot/scripts/export/export_project.py",
+        "line": 501,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run(command, check=False)"
+      },
+      {
+        "path": "skill/godot/scripts/import/import_project.py",
+        "line": 26,
+        "indicator": "process_execution",
+        "excerpt": "def run_bounded(command: list[str], timeout: float) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "skill/godot/scripts/import/import_project.py",
+        "line": 28,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run(command, capture_output=True, text=True, check=False, timeout=timeout)"
+      },
+      {
+        "path": "skill/godot/scripts/import/import_project.py",
+        "line": 29,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as exc:"
+      },
+      {
+        "path": "skill/godot/scripts/import/import_project.py",
+        "line": 32,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.CompletedProcess(command, -1, stdout, stderr + f\"\\n[import_project] timed out after {timeout}s\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/move_resource.py",
+        "line": 790,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.backup_dir, ignore_errors=True)"
+      },
+      {
+        "path": "skill/godot/scripts/project/move_resource.py",
+        "line": 849,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/project/move_resource.py",
+        "line": 852,
+        "indicator": "process_execution",
+        "excerpt": "except (OSError, subprocess.SubprocessError) as error:"
+      },
+      {
+        "path": "skill/godot/scripts/project/move_resource.py",
+        "line": 915,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/project/move_resource.py",
+        "line": 918,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/scripts/project/project_batch.gd",
+        "line": 39,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var backup := FileAccess.open(backup_path if backup_path.begins_with(\"res://\") else \"res://\" + backup_path, FileAccess.WRITE)"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 461,
+        "indicator": "process_execution",
+        "excerpt": "def run(step: str, command: list[str], timeout: float = 300.0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 462,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=timeout)"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 479,
+        "indicator": "process_execution",
+        "excerpt": "out = subprocess.run([godot_bin, \"--version\"], capture_output=True, text=True,"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 481,
+        "indicator": "process_execution",
+        "excerpt": "except (OSError, subprocess.SubprocessError):"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 633,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as expired:"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 680,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / folder / \".gitkeep\").write_text(\"\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 685,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / \"project.godot\").write_text("
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 699,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / \"icon.svg\").write_text(ICON_SVG, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 701,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / \".gitignore\").write_text(GITIGNORE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 703,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / \".gitattributes\").write_text(GITATTRIBUTES, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 706,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(dest / \"scenarios/boot_check.json\").write_text("
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 746,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "project_file.write_text(\"\".join(out), encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/project/scaffold_project.py",
+        "line": 790,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([sys.executable, str(VALIDATE_SCRIPT), str(dest),"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 229,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(target / name).write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 438,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 440,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.PIPE,"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 443,
+        "indicator": "process_execution",
+        "excerpt": "stderr=subprocess.STDOUT,"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 447,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 451,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as exc:"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 466,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "Path(args.log_file).expanduser().write_text(log_text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 470,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "Path(args.log_file).expanduser().write_text(log_text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 657,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run(command, capture_output=True, text=True, check=False, timeout=args.timeout)"
+      },
+      {
+        "path": "skill/godot/scripts/test/run_tests.py",
+        "line": 658,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "skill/godot/templates/gdscript/save_manager.gd",
+        "line": 40,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file: FileAccess = FileAccess.open(save_path(slot), FileAccess.WRITE)"
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 57,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(str(path), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 276,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 280,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/pickup.gd\").write_text("
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 299,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/hud.gd\").write_text("
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 319,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/broken.gd\").write_text(\"this is not gdscript ((\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_api_lookup.py",
+        "line": 385,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False,"
+      },
+      {
+        "path": "tests/test_ascii_tilemap.py",
+        "line": 392,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_ascii_tilemap.py",
+        "line": 396,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_ascii_tilemap.py",
+        "line": 412,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + chunk(b\"IHDR\", header)"
+      },
+      {
+        "path": "tests/test_ascii_tilemap.py",
+        "line": 426,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_ascii_tilemap.py",
+        "line": 427,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 345,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "song_path.write_text(json.dumps(song), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 507,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/tone.ogg\").write_bytes(base64.b64decode(OGG_SINE_B64))"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 508,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/tone.mp3\").write_bytes(base64.b64decode(MP3_SINE_B64))"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 634,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/notes.txt\").write_text(\"not audio\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 641,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/tone.wav-0123abcd.sample\").write_bytes(b\"\\x00\")"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 663,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/adpcm.wav\").write_bytes(adpcm_wav_header())"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 669,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/truncated.wav\").write_bytes(b\"RIFF\\x04\\x00\\x00\\x00WAVE\")"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 674,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/nonsense.ogg\").write_bytes(b\"this is not an ogg stream\" * 8)"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 714,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 720,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 744,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 769,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(header + b\"data\" + struct.pack(\"<I\", len(data)) + data)"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 799,
+        "indicator": "process_execution",
+        "excerpt": "def run(command: list[str], expected_returncode: int = 0) -> subprocess.CompletedProcess:"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 800,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=300)"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 812,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess) -> dict:"
+      },
+      {
+        "path": "tests/test_audio.py",
+        "line": 825,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess:"
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 429,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 445,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(header + data)"
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 451,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run("
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 472,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes("
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 489,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch_raw(project: Path, operation: str, params: dict, expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_content_ops.py",
+        "line": 490,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_draw_image.py",
+        "line": 522,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_draw_image.py",
+        "line": 525,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_draw_image.py",
+        "line": 538,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_draw_image.py",
+        "line": 539,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_draw_image.py",
+        "line": 542,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=180, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 79,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "base_a.write_bytes(b\"base\")"
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 80,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "base_b.write_bytes(b\"hotfix\")"
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 103,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project_path / \"export_presets.cfg\").write_text("
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 137,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 153,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(temp_root)"
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 166,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_export_wrapper.py",
+        "line": 170,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 86,
+        "indicator": "process_execution",
+        "excerpt": "def run(self, argv: list[str], expect: int = 0, label: str = \"\") -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 87,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(argv, capture_output=True, text=True, check=False,"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 88,
+        "indicator": "process_execution",
+        "excerpt": "timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 96,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch(self, operation: str, params: dict, expect: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 121,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 149,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + chunk(b\"IHDR\", header)"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 159,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/main.gd\").write_text("
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 162,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"autoload/game_state.gd\").write_text("
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 218,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"audio/bgm.ogg\").write_bytes(ogg_fixture())"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 219,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([sys.executable, str(SKILL_ROOT / \"scripts/assets/make_sfx.py\"),"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 1169,
+        "indicator": "process_execution",
+        "excerpt": "helped = subprocess.run([sys.executable, str(script), \"--help\"],"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 1193,
+        "indicator": "process_execution",
+        "excerpt": "lint = subprocess.run(shlex.split(by_script[\"scripts/debug/lint_project.py\"]),"
+      },
+      {
+        "path": "tests/test_help_examples.py",
+        "line": 1263,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 65,
+        "indicator": "process_execution",
+        "excerpt": "dispatcher: Path = DISPATCHER) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 66,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 69,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=120, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 73,
+        "indicator": "process_execution",
+        "excerpt": "def payload_of(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 268,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(scripts / \"core/op_examples.json\").write_text(json.dumps(catalog, indent=2), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_help_op.py",
+        "line": 317,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 66,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"art/square.jpg\").write_bytes(base64.b64decode(JPEG_SQUARE_B64))"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 339,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"art/square.png-0123abcd.ctex\").write_bytes(b\"GST2\")"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 365,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 375,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + chunk(b\"IHDR\", header)"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 409,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 422,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_inspect_image.py",
+        "line": 423,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 631,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/warner.gd\").write_text(WARNING_ONLY_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 694,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/positives.gd\").write_text(INFERENCE_POSITIVES, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 695,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/negatives.gd\").write_text(INFERENCE_NEGATIVES, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 749,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/real_world.gd\").write_text(REAL_WORLD_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 750,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/exporter.gd\").write_text(USER_EXPORT_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 751,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/legacy_system.gd\").write_text(USER_EMPTY_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 752,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/real_world.tscn\").write_text(REAL_WORLD_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 753,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"Panel.cs\").write_text(CSHARP_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 754,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/csharp.tscn\").write_text(CSHARP_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 764,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/genuine.gd\").write_text(GENUINE_GODOT3_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 765,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/genuine.tscn\").write_text(GENUINE_GODOT3_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 782,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / name).write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 792,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "player.write_text(player.read_text(encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 815,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes\" / f\"{name}.tscn\").write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 816,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/template_level.tscn\").write_text(TEMPLATE_LEVEL, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 851,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/positives.gd\").write_text(INFERENCE_POSITIVES, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 852,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/negatives.gd\").write_text(INFERENCE_NEGATIVES, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 853,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/genuine.gd\").write_text(GENUINE_GODOT3_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 854,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/genuine.tscn\").write_text(GENUINE_GODOT3_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 856,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / name).write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 910,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 919,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "settings.write_text("
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 929,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/legacy.gd\").write_text(LEGACY_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 930,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/hud.gd\").write_text(HUD_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 931,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/hud.tscn\").write_text(HUD_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 933,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 944,
+        "indicator": "process_execution",
+        "excerpt": "def run(command: list[str]) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_lint_project.py",
+        "line": 947,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run(command, capture_output=True, text=True, check=False, timeout=300)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 137,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "\\tvar handle := FileAccess.open(\"res://saves/state.json\", FileAccess.WRITE)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 486,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "for needle in (\"hero.png\\\"\", \"%s.png\", '\"res://art/\" +', \"FileAccess.WRITE\","
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 713,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/suppressed.gd\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 734,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"backup/.gdignore\").unlink()"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 757,
+        "indicator": "process_execution",
+        "excerpt": "table = subprocess.run([\"python3\", str(LINTER), \"--list-rules\"],"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 799,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/containers.gd\").write_text(TYPED_CONTAINERS, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1007,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1018,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "target.write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1040,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "settings.write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1056,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(self.project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1059,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(self.project / \"shaders\" / f\"before_{name}.gdshader\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1061,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(self.project / \"shaders\" / f\"after_{name}.gdshader\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1075,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1078,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"shaders\" / f\"{name}.gdshader\").write_text(source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1079,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1084,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1098,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1105,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/suppressed.gd\").unlink()"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1110,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/suppressed.gd\").write_text(backup, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1131,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1133,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"cases/subject.gd\").write_text(source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1134,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"reload.gd\").write_text("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1142,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1146,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1151,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_lint_xref.py",
+        "line": 1162,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([\"python3\", str(LINTER), str(project), *extra],"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 52,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file := FileAccess.open(\"res://lifecycle.txt\", FileAccess.WRITE)"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 291,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_case.gd\").write_text(marker, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 321,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 339,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_example.gd\").unlink()"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 360,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/physics_world.tscn\").write_text(PHYSICS_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 497,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_leaky.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 515,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_broken.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 518,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_foreign.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 548,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/game_state.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 552,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "settings.write_text(settings.read_text(encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 559,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/weapon.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 561,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_global_class.gd\").write_text("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 565,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(project / \".godot\", ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 569,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([GODOT_BIN, \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 593,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(text.replace(\"res://tests/test_case.gd\", \"res://framework_check/test_case.gd\"), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 595,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 598,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 600,
+        "indicator": "process_execution",
+        "excerpt": "parsed = subprocess.run([\"python3\", str(LOG_PARSER), \"-\"], input=combined,"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 628,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 643,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(tests / self.name).write_text(self.suite, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_mini_test.py",
+        "line": 668,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 363,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "bad_json.write_text(\"{ not json\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 366,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "bad_json.write_text('[{\"from\": \"a\"}]', encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 375,
+        "indicator": "process_execution",
+        "excerpt": "outside = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 389,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"export_presets.cfg\").write_text("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 397,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"override.cfg\").write_text("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 415,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/binary.scn\").write_bytes(b\"RSCC\\x00\\x01binary\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 416,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/latin.gd\").write_bytes(b\"# caf\\xe9 res://art/hero.png\\n\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 419,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(addon / \"plugin.cfg\").write_text('sprite=\"res://art/hero.png\"\\n', encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 431,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(addon / \"plugin.cfg\").write_text('sprite=\"res://art/hero.png\"\\n', encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 470,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"legacy/old.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 507,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "map_file.write_text(json.dumps(plan), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 512,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 528,
+        "indicator": "process_execution",
+        "excerpt": "check = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 539,
+        "indicator": "process_execution",
+        "excerpt": "run = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 559,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "probe.write_text(\"\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 563,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "probe.unlink()"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 586,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 602,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/hero.gd\").write_text(HERO_GD, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 603,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/game_state.gd\").write_text(GAME_STATE_GD, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 667,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 681,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_move_resource.py",
+        "line": 693,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + chunk(b\"IHDR\", header)"
+      },
+      {
+        "path": "tests/test_new_ops.py",
+        "line": 278,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_new_ops.py",
+        "line": 286,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_new_ops.py",
+        "line": 299,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + chunk(b\"IHDR\", header)"
+      },
+      {
+        "path": "tests/test_new_ops.py",
+        "line": 312,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch_raw(project: Path, operation: str, params: dict, expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_new_ops.py",
+        "line": 313,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 653,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 657,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(path.read_text(encoding=\"utf-8\") + text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 668,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 671,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 684,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 685,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_node_config.py",
+        "line": 698,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 188,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "orphan.write_text(\"[remap]\\nimporter=\\\"image\\\"\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 209,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(plugin_dir / \"plugin.cfg\").write_text("
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 213,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(plugin_dir / \"plugin.gd\").write_text(\"extends Node\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 216,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(native_dir / \"broken.gdextension\").write_text("
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 233,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 245,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch_raw(project: Path, operation: str, params: dict, expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 246,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_p0_ops.py",
+        "line": 269,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 205,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario.write_text(json.dumps({"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 211,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 213,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 216,
+        "indicator": "process_execution",
+        "excerpt": "except (OSError, ValueError, subprocess.SubprocessError):"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 219,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 252,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([\"bash\", \"-e\", \"-o\", \"pipefail\", \"-c\", script],"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 254,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL, timeout=BLOCK_TIMEOUT)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 255,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 294,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(project, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 299,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(project, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_playbooks_replay.py",
+        "line": 332,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 415,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(project / \"art/big2\", ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 432,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.jpg\").write_bytes(base64.b64decode(JPEG_B64))"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 433,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.webp\").write_bytes(base64.b64decode(WEBP_B64))"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 434,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.exr\").write_bytes(base64.b64decode(EXR_B64))"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 435,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.bmp\").write_bytes(bmp_bytes())"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 436,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.tga\").write_bytes(tga_bytes())"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 437,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.hdr\").write_bytes(hdr_bytes())"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 438,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(folder / \"probe.svg\").write_text("
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 564,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 669,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess[str]) -> dict:"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 682,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 683,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_process_image.py",
+        "line": 686,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=180, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 386,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario.write_text(json.dumps({"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 392,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 394,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 397,
+        "indicator": "process_execution",
+        "excerpt": "except (OSError, ValueError, subprocess.SubprocessError):"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 400,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 420,
+        "indicator": "process_execution",
+        "excerpt": "version = subprocess.run([GODOT_BIN, \"--version\"], capture_output=True, text=True,"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 421,
+        "indicator": "process_execution",
+        "excerpt": "check=False, timeout=60, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 426,
+        "indicator": "process_execution",
+        "excerpt": "except (ImportError, OSError, subprocess.SubprocessError):"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 507,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([\"bash\", \"-e\", \"-o\", \"pipefail\", \"-c\", script],"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 509,
+        "indicator": "process_execution",
+        "excerpt": "env=environment, stdin=subprocess.DEVNULL, timeout=block.timeout)"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 510,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "path": "tests/test_reference_examples.py",
+        "line": 586,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 34,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 39,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scripts/main.gd\").write_text(main_script, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 40,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes/main.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 51,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 61,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 66,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 94,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_run_debug.py",
+        "line": 160,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 241,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/inventory.gd\").write_text(INVENTORY_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 335,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 339,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/game_state.gd\").write_text(AUTOLOAD_SCRIPT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 344,
+        "indicator": "process_execution",
+        "excerpt": "def last_json(result: subprocess.CompletedProcess) -> dict:"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 357,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess:"
+      },
+      {
+        "path": "tests/test_run_gdscript.py",
+        "line": 358,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 70,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gdUnit4/bin/GdUnitCmdTool.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 74,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 83,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 85,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"test/test_stub.gd\").write_text(\"extends RefCounted\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 97,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gdUnit4/bin/GdUnitCmdTool.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 99,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"tests/test_stub.gd\").write_text(\"extends RefCounted\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 112,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text(\"extends SceneTree\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 131,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text("
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 140,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"test/test_stub.gd\").write_text(\"extends RefCounted\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 146,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"addons/gut/gut_cmdln.gd\").write_text("
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 166,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_run_tests_wrapper.py",
+        "line": 170,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 149,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(threaded / \"index.js\").write_text(\"var PThread = {};\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 255,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text('config_version=5\\n\\n[application]\\n\\n'"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 411,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"art/tile.png\").write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\" + b\"\\x00\" * 32)"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 546,
+        "indicator": "process_execution",
+        "excerpt": "booted = subprocess.run([str(binaries[0]), \"--headless\", \"--quit-after\", \"20\"],"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 548,
+        "indicator": "process_execution",
+        "excerpt": "except subprocess.TimeoutExpired as expired:"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 573,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"main.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 576,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "project_file.write_text("
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 583,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"export_presets.cfg\").write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 590,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(directory / \"index.html\").write_text("
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 594,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(directory / \"index.js\").write_text(\"// engine loader\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 595,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(directory / \"index.wasm\").write_bytes(b\"\\x00asm\\x01\\x00\\x00\\x00\" + b\"\\x00\" * 4096)"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 596,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(directory / \"index.pck\").write_bytes(b\"GDPC\" + b\"\\x00\" * 256)"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 597,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(directory / \"index.png\").write_bytes(b\"\\x89PNG\\r\\n\\x1a\\n\")"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 603,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 607,
+        "indicator": "process_execution",
+        "excerpt": "timeout: float = 900.0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 609,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=timeout,"
+      },
+      {
+        "path": "tests/test_scaffold_export.py",
+        "line": 652,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 89,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/coloured_ui.tscn\").write_text(COLOURED_UI_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 90,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/black_ui.tscn\").write_text(BLACK_UI_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 91,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/tree_world.tscn\").write_text(TREE_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 95,
+        "indicator": "process_execution",
+        "excerpt": "def run_case(root: Path, scenario: dict) -> tuple[subprocess.CompletedProcess[str], dict]:"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 97,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario_path.write_text(json.dumps(scenario), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 98,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_scenario_no_vision.py",
+        "line": 515,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 116,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/broken_ui.tscn\").write_text(BROKEN_UI_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 117,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/container_ui.tscn\").write_text(CONTAINER_UI_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 121,
+        "indicator": "process_execution",
+        "excerpt": "def run_case(root: Path, scenario: dict) -> tuple[subprocess.CompletedProcess[str], dict]:"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 123,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario_path.write_text(json.dumps(scenario), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 124,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 410,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 420,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scripts/ready_bug.gd\").write_text("
+      },
+      {
+        "path": "tests/test_scenario_runner.py",
+        "line": 423,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/ready_bug.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_scene_ops.py",
+        "line": 444,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "uid_path.write_text(\"uid://menu-controller-test\\n\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_scene_ops.py",
+        "line": 516,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_scene_ops.py",
+        "line": 519,
+        "indicator": "process_execution",
+        "excerpt": "def run_dispatcher(project_path: Path, operation: str, params: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_scene_ops.py",
+        "line": 598,
+        "indicator": "process_execution",
+        "excerpt": "def run_godot_command(command: list[str]) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_scene_ops.py",
+        "line": 599,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False)"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 252,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(items / \"item_data.gd\").write_text(ITEM_DATA_GD, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 253,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(items / \"pickup.gd\").write_text(PICKUP_GD, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 254,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(items / \"enemy_brain.gd\").write_text(ENEMY_BRAIN_GD, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 262,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 270,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([\"godot\", \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 284,
+        "indicator": "process_execution",
+        "excerpt": "expected_returncode: int = 0) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_script_resources.py",
+        "line": 285,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 536,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 541,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"shaders\" / name).write_text(source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 545,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 875,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 900,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes\" / name).write_text(text, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 903,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([GODOT_BIN, \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 908,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 911,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch(project: Path, operation: str, params: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 912,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 915,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=180, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 926,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 929,
+        "indicator": "process_execution",
+        "excerpt": "stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, check=False,"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 930,
+        "indicator": "process_execution",
+        "excerpt": "timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 931,
+        "indicator": "process_execution",
+        "excerpt": "parsed = subprocess.run([\"python3\", str(LOG_PARSER), \"-\"], input=completed.stdout,"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 949,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario.write_text(json.dumps({"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 956,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 967,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario.write_text(json.dumps({"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 973,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([\"python3\", str(RUN_SCENARIO), str(project), str(scenario)],"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 999,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario.write_text(json.dumps({"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 1005,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([\"python3\", str(RUN_SCENARIO), str(project), str(scenario)],"
+      },
+      {
+        "path": "tests/test_shader_templates.py",
+        "line": 1065,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 69,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch(project: Path, operation: str, params: dict, *extra: str) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 70,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 76,
+        "indicator": "process_execution",
+        "excerpt": "stdin=subprocess.DEVNULL,"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 111,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "empty.write_bytes(b\"\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 115,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "real.write_bytes(b\"PK\\x03\\x04\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 121,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(empty_dir / \"Info.plist\").write_text(\"x\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 220,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 225,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes/main.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 228,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"shaders/effect.gdshader\").write_text(shader_source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 248,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 280,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"shaders/fine.gdshader\").write_text(VALID_SHADER, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 345,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 349,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes\" / name).write_text(source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 353,
+        "indicator": "process_execution",
+        "excerpt": "def check_project(project: Path, params: dict | None = None) -> tuple[dict, subprocess.CompletedProcess[str]]:"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 538,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"art/pixel.svg\").write_text("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 541,
+        "indicator": "process_execution",
+        "excerpt": "imported = subprocess.run([GODOT_BIN, \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 542,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 563,
+        "indicator": "process_execution",
+        "excerpt": "def style(properties: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 651,
+        "indicator": "process_execution",
+        "excerpt": "def batch(shape: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 708,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_text(json.dumps(scenario), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 709,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 711,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 724,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run([GODOT_BIN, \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 725,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, stdin=subprocess.DEVNULL, timeout=300)"
+      },
+      {
+        "path": "tests/test_silent_failures.py",
+        "line": 783,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 162,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"project.godot\").write_text(PROJECT_GODOT, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 164,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scripts\" / name).write_text(body, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 166,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes\" / f\"{scene}.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 173,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes/broken_tree.tscn\").write_text(BROKEN_TREE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 177,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"addons/plugin/panel.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 180,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"ignored/.gdignore\").write_text(\"\", encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 181,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"ignored/skipped.tscn\").write_text("
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 188,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=300)"
+      },
+      {
+        "path": "tests/test_smoke_scenes.py",
+        "line": 482,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(path, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 268,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "path.write_bytes("
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 281,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/world2d.tscn\").write_text(WORLD_2D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 282,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/no_camera2d.tscn\").write_text(NO_CAMERA_2D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 283,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/level2d.tscn\").write_text(LEVEL_2D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 284,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/bare3d.tscn\").write_text(BARE_3D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 285,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/level3d.tscn\").write_text(LEVEL_3D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 286,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/occluded3d.tscn\").write_text(OCCLUDED_3D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 287,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/lit3d.tscn\").write_text(LIT_3D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 288,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(project / \"scenes/ambient3d.tscn\").write_text(AMBIENT_3D_SCENE, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 292,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch(project: Path, op: str, params: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 293,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 301,
+        "indicator": "process_execution",
+        "excerpt": "def run_case(root: Path, scenario: dict, name: str = \"scenario\") -> tuple[subprocess.CompletedProcess[str], dict]:"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 303,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "scenario_path.write_text(json.dumps(scenario), encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 304,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 332,
+        "indicator": "process_execution",
+        "excerpt": "imported = subprocess.run("
+      },
+      {
+        "path": "tests/test_spatial_report.py",
+        "line": 876,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 232,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "settings.write_text("
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 244,
+        "indicator": "process_execution",
+        "excerpt": "subprocess.run([GODOT_BIN, \"--headless\", \"--path\", str(project), \"--import\"],"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 250,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(self.root, ignore_errors=True)"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 253,
+        "indicator": "process_execution",
+        "excerpt": "def dispatch(project: Path, operation: str, params: dict) -> subprocess.CompletedProcess[str]:"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 254,
+        "indicator": "process_execution",
+        "excerpt": "return subprocess.run("
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 257,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=180, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 266,
+        "indicator": "process_execution",
+        "excerpt": "completed = subprocess.run("
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 269,
+        "indicator": "process_execution",
+        "excerpt": "capture_output=True, text=True, check=False, timeout=300, stdin=subprocess.DEVNULL)"
+      },
+      {
+        "path": "tests/test_templates.py",
+        "line": 272,
+        "indicator": "process_execution",
+        "excerpt": "parsed = subprocess.run([\"python3\", str(LOG_PARSER), \"-\"],"
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 66,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"project.godot\").write_text("
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 71,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scripts/main.gd\").write_text(main_script, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 73,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scripts\" / name).write_text(source, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 93,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "(root / \"scenes/main.tscn\").write_text(scene, encoding=\"utf-8\")"
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 98,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 108,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 118,
+        "indicator": "process_execution",
+        "excerpt": "result = subprocess.run("
+      },
+      {
+        "path": "tests/test_warning_visibility.py",
+        "line": 246,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "shutil.rmtree(TEMP_ROOTS.pop(), ignore_errors=True)"
+      }
+    ]
+  },
+  "vl4dt": {
+    "commit": "1ae280d35f2cc3931d4d8eb63f4bac82d6acf4a0",
+    "skill_count": 23,
+    "skills": [
+      "docs/skill-template/SKILL.md",
+      "skills/godot-47-migration/SKILL.md",
+      "skills/godot-animation/SKILL.md",
+      "skills/godot-architecture/SKILL.md",
+      "skills/godot-audio/SKILL.md",
+      "skills/godot-brainstorming/SKILL.md",
+      "skills/godot-code-review/SKILL.md",
+      "skills/godot-csharp-patterns/SKILL.md",
+      "skills/godot-debugging/SKILL.md",
+      "skills/godot-dialog-systems/SKILL.md",
+      "skills/godot-gdscript-patterns/SKILL.md",
+      "skills/godot-headless-workflow/SKILL.md",
+      "skills/godot-i18n/SKILL.md",
+      "skills/godot-input/SKILL.md",
+      "skills/godot-inventory-economy/SKILL.md",
+      "skills/godot-networking/SKILL.md",
+      "skills/godot-performance/SKILL.md",
+      "skills/godot-physics/SKILL.md",
+      "skills/godot-project-setup/SKILL.md",
+      "skills/godot-save-systems/SKILL.md",
+      "skills/godot-shaders-vfx/SKILL.md",
+      "skills/godot-state-management/SKILL.md",
+      "skills/godot-ui/SKILL.md"
+    ],
+    "executable_source_count": 28,
+    "indicator_counts": {
+      "process_execution": 0,
+      "destructive_or_overwrite": 1,
+      "network_or_install": 366,
+      "instruction_boundary": 0
+    },
+    "indicators": [
+      {
+        "path": "skills/godot-save-systems/SKILL.md",
+        "line": 106,
+        "indicator": "destructive_or_overwrite",
+        "excerpt": "var file = FileAccess.open(path, FileAccess.WRITE)"
+      }
+    ]
+  }
+}

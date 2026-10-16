@@ -1,0 +1,2 @@
+# Preserve captured process bytes so recorded transcript SHA-256 stays valid.
+*.txt -text

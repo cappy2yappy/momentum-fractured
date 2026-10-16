@@ -1,0 +1,422 @@
+[
+  {
+    "name": "engine-version",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--version"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.062,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\engine-version",
+    "sha256": "fbd717a8ece1da654ec76bcb2210c7bebdb1112c026408c575c67f015988fa24"
+  },
+  {
+    "name": "import-warmup",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 8.875,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\import-warmup",
+    "sha256": "35de76739a7372e4ae5ad4f315aef74da94511a13696ce92cc7feebe5224890a"
+  },
+  {
+    "name": "import-settled",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 4.032,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\import-settled",
+    "sha256": "fb8ecea67ff37b9b90f817bec4403859d8489ae55dbb2ecb9dbe6468134695e4"
+  },
+  {
+    "name": "baseline-verify_baseline",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_baseline.py"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.109,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-verify_baseline",
+    "sha256": "5a63f6fff6088e1c10d42418c2427cd78c9b4f507e88677d5247160e94b7a2b4"
+  },
+  {
+    "name": "baseline-verify_tr03_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr03_preservation.py"
+    ],
+    "exit": 1,
+    "expected_exit": 0,
+    "seconds": 0.125,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-verify_tr03_preservation",
+    "sha256": "ee6fa9fed8c8f218e9b876183b457585b975645832cdd0bd7e1b56f334a828e8"
+  },
+  {
+    "name": "baseline-verify_tr04_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr04_preservation.py"
+    ],
+    "exit": 1,
+    "expected_exit": 0,
+    "seconds": 0.094,
+    "passes": 3,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-verify_tr04_preservation",
+    "sha256": "8a6355ccbc4ca5e0ab73934b664fd8945c483425e3e0728f20f90ff345877381"
+  },
+  {
+    "name": "baseline-level_geometry",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/level_geometry.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.828,
+    "passes": 78,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-level_geometry",
+    "sha256": "97328327b2a09c027a54c0862b543bbc53f80899a443820bde1c26200d568362"
+  },
+  {
+    "name": "baseline-movement_momentum",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 9.062,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-movement_momentum",
+    "sha256": "727356634dc1a95964dd17356f5c46ad7462b4c4bb1bd5cda01b692cccff089d"
+  },
+  {
+    "name": "baseline-sprite_integration",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.656,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-sprite_integration",
+    "sha256": "989ee33c57630fdfd56f0749da59a1ec3023ae5f26d8fd35be05709f35c3e88f"
+  },
+  {
+    "name": "baseline-art04_transitions",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/art04_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.657,
+    "passes": 111,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-art04_transitions",
+    "sha256": "85f26caf0e2880ff12d845d122a28bfe8f8bdf814490c182011b1604c0a6f2c1"
+  },
+  {
+    "name": "baseline-save_compatibility",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.656,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\baseline-save_compatibility",
+    "sha256": "07e21652e5aa43ee5e4b48518dfb0024841a2f272f3c4bcf7527b26d324a5e06"
+  },
+  {
+    "name": "haxqer-lint",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-upstream\\haxqer\\skill\\godot\\scripts\\debug\\lint_project.py",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--pretty"
+    ],
+    "exit": 1,
+    "expected_exit": 0,
+    "seconds": 0.453,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\haxqer-lint",
+    "sha256": "33fb0c1cb39af156099900bbf069c4dfdf7a198031903f12bf58c7f6ebcac8c1"
+  },
+  {
+    "name": "api-positive",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-upstream\\haxqer\\skill\\godot\\scripts\\docs\\api_lookup.py",
+      "--godot",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--cache-dir",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-api-cache",
+      "--json",
+      "CharacterBody2D.move_and_slide",
+      "CollisionShape2D.one_way_collision",
+      "PhysicsRayQueryParameters2D.create",
+      "AnimationPlayer.play",
+      "CollisionObject2D.collision_layer"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 1.797,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\api-positive",
+    "sha256": "f7d0c00d40c31e898715d8cbd795bfe16f0c422558b3a45d6fa0b110731d9d8f"
+  },
+  {
+    "name": "api-negative",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-upstream\\haxqer\\skill\\godot\\scripts\\docs\\api_lookup.py",
+      "--godot",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--cache-dir",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-api-cache",
+      "--json",
+      "CharacterBody2D.move_and_snap",
+      "CharacterBody2D.move_teleport",
+      "CollisionShape2D.one_way_collision_direction"
+    ],
+    "exit": 1,
+    "expected_exit": 1,
+    "seconds": 0.219,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\api-negative",
+    "sha256": "0e2c0a08d0226f7b79dc18a80d918d57869a4c65f22299ad05da0c6b86742b29"
+  },
+  {
+    "name": "pilot-verify_baseline",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_baseline.py"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.109,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-verify_baseline",
+    "sha256": "5a63f6fff6088e1c10d42418c2427cd78c9b4f507e88677d5247160e94b7a2b4"
+  },
+  {
+    "name": "pilot-verify_tr03_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr03_preservation.py"
+    ],
+    "exit": 1,
+    "expected_exit": 0,
+    "seconds": 0.125,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-verify_tr03_preservation",
+    "sha256": "ee6fa9fed8c8f218e9b876183b457585b975645832cdd0bd7e1b56f334a828e8"
+  },
+  {
+    "name": "pilot-verify_tr04_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr04_preservation.py"
+    ],
+    "exit": 1,
+    "expected_exit": 0,
+    "seconds": 0.125,
+    "passes": 3,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-verify_tr04_preservation",
+    "sha256": "8a6355ccbc4ca5e0ab73934b664fd8945c483425e3e0728f20f90ff345877381"
+  },
+  {
+    "name": "pilot-level_geometry",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/level_geometry.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.828,
+    "passes": 78,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-level_geometry",
+    "sha256": "97328327b2a09c027a54c0862b543bbc53f80899a443820bde1c26200d568362"
+  },
+  {
+    "name": "pilot-movement_momentum",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 9.078,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-movement_momentum",
+    "sha256": "727356634dc1a95964dd17356f5c46ad7462b4c4bb1bd5cda01b692cccff089d"
+  },
+  {
+    "name": "pilot-sprite_integration",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.656,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-sprite_integration",
+    "sha256": "989ee33c57630fdfd56f0749da59a1ec3023ae5f26d8fd35be05709f35c3e88f"
+  },
+  {
+    "name": "pilot-art04_transitions",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/art04_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.657,
+    "passes": 111,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-art04_transitions",
+    "sha256": "1c4127fc2e506af426b533566e26cb22f068d2459b5593eaffa9cc00402d1e4d"
+  },
+  {
+    "name": "pilot-save_compatibility",
+    "command": [
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-run",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.656,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\skill-audit-profiles\\pilot-save_compatibility",
+    "sha256": "07e21652e5aa43ee5e4b48518dfb0024841a2f272f3c4bcf7527b26d324a5e06"
+  }
+]

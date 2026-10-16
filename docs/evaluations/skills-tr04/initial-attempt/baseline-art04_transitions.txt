@@ -1,0 +1,115 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ART04_PROFILE=C:/Users/TonyS/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/skill-audit-profiles/baseline-art04_transitions/Godot/app_userdata/Kaze — Silent District Alpha 0.5.0
+PASS: turn_depth_key remains one nonlooping key
+PASS: turn_depth_key has fixed 320x724 registration
+PASS: enter_depth_key remains one nonlooping key
+PASS: enter_depth_key has fixed 320x724 registration
+PASS: stair_up_key remains one nonlooping key
+PASS: stair_up_key has fixed 320x724 registration
+PASS: stair_down_key remains one nonlooping key
+PASS: stair_down_key has fixed 320x724 registration
+PASS: art-preview [14, 17] starts exactly one proxy on unchanged clock
+PASS: art-preview [14, 17] leaves departure simulation untouched
+PASS: Distinct up/down art follows explicit local orientation
+PASS: Authored stair key is held, never mirrored or cycled
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: art-preview [17, 14] starts exactly one proxy on unchanged clock
+PASS: art-preview [17, 14] leaves departure simulation untouched
+PASS: Distinct up/down art follows explicit local orientation
+PASS: Authored stair key is held, never mirrored or cycled
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: art-preview [14, 13] starts exactly one proxy on unchanged clock
+PASS: art-preview [14, 13] leaves departure simulation untouched
+PASS: Depth uses authored turn before inward contact; reduced holds inward key
+PASS: Depth advances once to authored inward key
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: art-preview [13, 14] starts exactly one proxy on unchanged clock
+PASS: art-preview [13, 14] leaves departure simulation untouched
+PASS: Unsupported outward direction uses labelled approved-idle fallback
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: reduced [14, 17] starts exactly one proxy on unchanged clock
+PASS: reduced [14, 17] leaves departure simulation untouched
+PASS: Distinct up/down art follows explicit local orientation
+PASS: Authored stair key is held, never mirrored or cycled
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Reduced art preview has no staged translation or cycling
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: reduced [17, 14] starts exactly one proxy on unchanged clock
+PASS: reduced [17, 14] leaves departure simulation untouched
+PASS: Distinct up/down art follows explicit local orientation
+PASS: Authored stair key is held, never mirrored or cycled
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Reduced art preview has no staged translation or cycling
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: reduced [14, 13] starts exactly one proxy on unchanged clock
+PASS: reduced [14, 13] leaves departure simulation untouched
+PASS: Depth uses authored turn before inward contact; reduced holds inward key
+PASS: Depth advances once to authored inward key
+PASS: Production pose keeps uniform scale and fixed pivot without squeeze
+PASS: Reduced art preview has no staged translation or cycling
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: reduced [13, 14] starts exactly one proxy on unchanged clock
+PASS: reduced [13, 14] leaves departure simulation untouched
+PASS: Unsupported outward direction uses labelled approved-idle fallback
+PASS: Reduced art preview has no staged translation or cycling
+PASS: Production preview respects actual swap event and exact reciprocal arrival
+PASS: Arrival never invents a front-quarter/reversed-back pose
+PASS: Completion restores actual sprite and removes proxy
+PASS: Actual sprite registration remains untouched
+PASS: Original0.65s clock resumes within floating-point tick tolerance
+PASS: Room swap stays on original below0.32 threshold / tick20
+PASS: Art cleanup restores representation on pause
+PASS: Art key state clears on pause
+PASS: Art cleanup restores representation on death
+PASS: Art key state clears on death
+PASS: Art cleanup restores representation on rebuild
+PASS: Art key state clears on rebuild
+PASS: Art cleanup restores representation on denied
+PASS: Art key state clears on denied
+PASS: R14 original retains exact collision/geometry/gates
+PASS: R14 refined retains exact collision/geometry/gates
+PASS: R14 art-preview retains exact collision/geometry/gates
+PASS: R14 reduced retains exact collision/geometry/gates
+PASS: R14 plain retains exact collision/geometry/gates
+PASS: R15 original retains exact collision/geometry/gates
+PASS: R15 refined retains exact collision/geometry/gates
+PASS: R15 art-preview retains exact collision/geometry/gates
+PASS: R15 reduced retains exact collision/geometry/gates
+PASS: R15 plain retains exact collision/geometry/gates
+PASS: R17 original retains exact collision/geometry/gates
+PASS: R17 refined retains exact collision/geometry/gates
+PASS: R17 art-preview retains exact collision/geometry/gates
+PASS: R17 reduced retains exact collision/geometry/gates
+PASS: R17 plain retains exact collision/geometry/gates
+PASS: Overlapping R14 procedural roof is suppressed in art preview
+PASS: Unrelated R14 procedural roof remains
+PASS: Overlapping R15 arch is suppressed
+PASS: Original/refined drawing remains available byte-for-byte in legacy paths
+PASS: R17 artwork clips at existing room boundary without stretching
+PASS: Art preview leaves exceptional wind-fold policy intact
+ART04 TRANSITIONS: 111 assertions, 0 failure(s)
