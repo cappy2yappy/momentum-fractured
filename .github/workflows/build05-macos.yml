@@ -1,8 +1,5 @@
 name: BUILD05 Integrated macOS candidate
 on:
-  push:
-    branches: [ci/build05-integrated-macos]
-    paths: ['tools/build05/**', '.github/workflows/build05-macos.yml']
   pull_request:
     branches: [feature/alpha-0.6.1-tr05-pr37]
     paths: ['tools/build05/**', '.github/workflows/build05-macos.yml']

@@ -105,6 +105,11 @@ run('packaged-native',[a.godot,'--path',r,'--fixed-fps','60','--script',control/
 for suite in ['intentional_space','audit_intentional_space','movement_momentum','save_compatibility','expansion_gates_save','skyworks_progression']:
  method='_run' if suite in ['movement_momentum','save_compatibility','skyworks_progression'] else 'run'
  wrapper=out/('packaged-'+suite+'.gd');wrapper.write_text('extends "res://tests/'+suite+'.gd"\nfunc _init():\n\tif not ProjectSettings.load_resource_pack(OS.get_environment("BUILD05_PACK"),true):\n\t\tpush_error("Mac PCK mount failed");quit(1);return\n\tcall_deferred("'+method+'")\n')
+ if suite=='audit_intentional_space':
+  text=(r/'tests/audit_intentional_space.gd').read_text()
+  init='func _init():\n\tif not ProjectSettings.load_resource_pack(OS.get_environment("BUILD05_PACK"),true):\n\t\tpush_error("Mac PCK mount failed");quit(1);return\n\tcall_deferred("run")'
+  text=text.replace('func _init(): call_deferred("run")',init).replace('"res://build/ld03"',json.dumps(str(evidence/'packaged-space-audit')))
+  wrapper.write_text(text)
  run('packaged-'+suite,[a.godot,'--headless','--path',r,'--fixed-fps','60','--script',wrapper,'--','--test'],env,120)
  assert rows[-1]['passes']>0
 manifest=dict(source_commit=SOURCE,pr39_runtime='f168339a6fa6b02f16958ce250636dbe47d4a783',geometry_base='b950373efb5c4621d7da7e0be1506db048e3043a',engine='4.6.1.stable.official.14d19694e',architectures=architectures.split(),native_host=platform.machine(),timestamp_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),archive=archive.name,sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),bytes=archive.stat().st_size,pck_entries=audit['entry_count'],members=members,qa_status='passed',signing='unsigned, unnotarized',limits=['stair gait unfinished','scripted fixtures, no human full campaign','gamepad and sustained FPS not certified'])
