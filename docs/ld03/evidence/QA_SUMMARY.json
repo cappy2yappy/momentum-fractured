@@ -1,0 +1,12 @@
+{
+  "actions": 31,
+  "behavioral_suites": 24,
+  "passing_assertions": 1292,
+  "failed_assertions": 0,
+  "script_errors": 0,
+  "nonzero_exits": [],
+  "native_route_assertions": 63,
+  "packed_route_assertions": 63,
+  "native_transition_assertions": 11,
+  "native_executable_exit": 0
+}

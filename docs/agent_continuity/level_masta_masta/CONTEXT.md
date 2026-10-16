@@ -1,3 +1,14 @@
+# Current context — LD03 — 2026-10-16 UTC
+
+Draft PR37, feature/alpha-0.6.1-ld03-intentional-space. PR33 base1835fcca; runtime1dc714e2249cf39ada9fdcc5cd2225bdda5c5cc0; hosted source3f03bb92f69b67bbf5f3505bd4b0112a82e729df. Fetch actual PR head before continuing.
+
+Delivered Bellroof service walk/log court, six solid masses/six one-way steps, three returns and blocked-save staging. Original upper route and other20 room layouts preserved. Full31-action batch1292 passes, native63/packed63/transition11; Windows candidate hosted in run38847365650. No merge. Read docs/agent_handoffs/LD03_PM_REPORT.md and docs/ld03.
+
+Initial checker JSON-precision failure fixed; do not remove source guards or assert full-world completion. Other-room P2 recovery/readability work, creator playtest, original art and human/performance review remain. Separate transition/ART05 agents own their changes; do not silently integrate their candidate work. Continue from GitHub head, not old local commit identities.
+
+---
+Previous continuity follows unchanged:
+
 # Current context — TR04 / LD02 — 2026-10-16
 
 Dedicated branch feature/alpha-0.6.1-tr04-geometry; draft PR33. Base PR31 c2c6b08bfb3b85ad174dcc7ef60bddf1a3a48c15; runtime e7c308abd93de6f2191fbf000961d6fa1bb80721. Fetch the actual PR head before resuming; no merge.

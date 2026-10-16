@@ -18,3 +18,8 @@ Publication used connected Git-data commits because local push credentials were 
 ## 2026-10-16 — TR04 / LD02
 
 Recovered PR31, created dedicated PR33, repaired19 perimeter landings/one arrival, reused material atlas, completed specialist source review,21-room audit/captures, final1240 checks and native Windows11+11 input checks. No merge. PM report: docs/agent_handoffs/TR04_LD02_PM_REPORT.md. Creator/art/story decisions remain open.
+
+
+## 2026-10-16 - LD03
+
+Bellroof lower service walk and optional log court implemented from PR33;63 new route/save checks,21 all-room signatures, full1292-pass batch, native/packed Windows checks. Draft PR37; hosted run38847365650. PM return docs/agent_handoffs/LD03_PM_REPORT.md. No merge; creator and remaining world/art review pending.
