@@ -1,0 +1,146 @@
+{
+  "origin": "native Godot4.6.1 Apple M4 OpenGL3 on macOS; PNGs are actual1280x720 framebuffer captures",
+  "gif_timing": "each authored frame50ms (20fps), final frame450ms includes400ms endpoint review hold; GIFs are derivatives, not continuous recording",
+  "files": [
+    {
+      "path": "docs/art/art05/evidence/BASELINE.txt",
+      "sha256": "929eb504b2c6aae83db99f51b67abc9429f33f22a438b1b99ea985666f414cc4",
+      "bytes": 365
+    },
+    {
+      "path": "docs/art/art05/evidence/NATIVE_RENDER.txt",
+      "sha256": "fb65217923abd0402b2849301d035da7fafc3716788615d73527506b0e5eb1b3",
+      "bytes": 3024
+    },
+    {
+      "path": "docs/art/art05/evidence/PRESERVATION.txt",
+      "sha256": "7f4b3c1b5120849ad329f9197fab1e7a23a0b7d86916576654011bebe24a91e1",
+      "bytes": 2848
+    },
+    {
+      "path": "docs/art/art05/evidence/TECHNICAL_QA.json",
+      "sha256": "b51cb0528437b32e9c0ef4d3063b2a9f150b501e8e3f30ff5b01c8edec4797e7",
+      "bytes": 1217
+    },
+    {
+      "path": "docs/art/art05/evidence/TRANSITION_REGRESSION.txt",
+      "sha256": "5c55b2e118e96ba7160976907febc5c2f7e36dd1d48895388cf572439e71901e",
+      "bytes": 17771
+    },
+    {
+      "path": "docs/art/art05/evidence/bellroof_after.png",
+      "sha256": "04b0b01949a06b2c11c24f45d8abf557e4418b6d0d583036c0c7493753ed2518",
+      "bytes": 1141744
+    },
+    {
+      "path": "docs/art/art05/evidence/bellroof_before.png",
+      "sha256": "5c458b3c546180901d6182bdb9fef4f413e383d7c67bc55bf99def50361bf338",
+      "bytes": 1120443
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_00.png",
+      "sha256": "2dfb5aa6c92e9681659fdd46e39fe7112f4dd0e46ececcd7a61e8689823514d7",
+      "bytes": 107179
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_01.png",
+      "sha256": "849204938aa2afbf2ca49774eaeddf3521410f2c5e8ccd5e2be14a536bfaaff7",
+      "bytes": 105517
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_02.png",
+      "sha256": "c6e37f719f4d7a4bbb7a5906467acca552bec144bba15bf2dc2ab2805c7de502",
+      "bytes": 106341
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_03.png",
+      "sha256": "6d664e07e445d237ab37420732369195dddf2fd61f10e4f9f1c9a44d0ffd8287",
+      "bytes": 106645
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_04.png",
+      "sha256": "100850811d1c5c8f1360534d29fdedf7c249a6e2f6abe9153be1466269746699",
+      "bytes": 107862
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_05.png",
+      "sha256": "6537dd5f1f0b6be3dd444432c17a72b646d18ef057ba9ee46aa13f9b834180ed",
+      "bytes": 106604
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_06.png",
+      "sha256": "3cf0c68e8d9b4d3e8cb645c83f3105b2bac169091f553b0198e41347b989311a",
+      "bytes": 108584
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_07.png",
+      "sha256": "fcb4551d3a6a60ca49a1ec954f60a5546516ce66175d2c5bb20d9ed9425c867f",
+      "bytes": 106859
+    },
+    {
+      "path": "docs/art/art05/evidence/enter_depth_native.gif",
+      "sha256": "8c16737bbb630f443fdc4a36d6d88109726f919dbacbeffa320eab641a18b818",
+      "bytes": 365063
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_00.png",
+      "sha256": "28c2334bcb675fa7e14e89d8d5533315702d854c2251756302f149fd784f0d2b",
+      "bytes": 125778
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_01.png",
+      "sha256": "3edb1e1b45ad409b4dc09dc45580d4cb47367433eb51dfde608753a2f17bcce3",
+      "bytes": 120699
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_02.png",
+      "sha256": "04a44439c074f69d7d8e1a93085f4505d30e9918ac9b1c003b2493a40c1054ce",
+      "bytes": 123530
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_03.png",
+      "sha256": "ecfc952948eef6a2bfcf51ba1bdf0f5d4b23be50161ca2719b390ecd93ab891b",
+      "bytes": 124040
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_04.png",
+      "sha256": "f56afa57b0b00ee9e18b2e2f86a506e420a8f77dee4d51250d706cc07b851004",
+      "bytes": 123814
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_05.png",
+      "sha256": "90250e4a2bf53e832adc5062a6f214c5fe746c78280fd5735c74cd600287706b",
+      "bytes": 123208
+    },
+    {
+      "path": "docs/art/art05/evidence/stair_up_native.gif",
+      "sha256": "cb6b3606ee8ed9a99fb4e2dfc5ce44dcf545d5898706d9c9f4c67b424e34b634",
+      "bytes": 301811
+    },
+    {
+      "path": "docs/art/art05/evidence/turn_depth_00.png",
+      "sha256": "c6618ccb16b50e45d1020bf1ed82080ad6e7df0443b21c76c2deaf9b589474a0",
+      "bytes": 113672
+    },
+    {
+      "path": "docs/art/art05/evidence/turn_depth_01.png",
+      "sha256": "8529a69726f7ab0515a41caf40780bfc07ad2c79fbbef3dadff882b45516f9c7",
+      "bytes": 113570
+    },
+    {
+      "path": "docs/art/art05/evidence/turn_depth_02.png",
+      "sha256": "5491ba1b6453dc5221f3135602c160bb5c4ce8fe37954d3a61d151c52235cf8b",
+      "bytes": 112244
+    },
+    {
+      "path": "docs/art/art05/evidence/turn_depth_03.png",
+      "sha256": "8807245811e5480f1452565db29ed0b20bdd4efadc6d06d5b1c834a72bd047c0",
+      "bytes": 106126
+    },
+    {
+      "path": "docs/art/art05/evidence/turn_depth_native.gif",
+      "sha256": "fba3f9216cae47e5f280d453b9c6c7ad458c0f511f5e4a620240571df6a5e9a7",
+      "bytes": 187205
+    }
+  ]
+}

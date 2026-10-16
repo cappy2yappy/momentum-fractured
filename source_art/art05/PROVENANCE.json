@@ -1,0 +1,36 @@
+{
+  "source_pr30": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "geometry_pr37": "b950373efb5c4621d7da7e0be1506db048e3043a",
+  "transition_pr39": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "references": [
+    {
+      "path": "assets/art04/kaze/turn_depth_key.png",
+      "sha256": "878ee13ed80dec5a9cfbc32f9720d7a1a7531b36c629f5f9748bffa6a73cbbaa",
+      "matches_pr30_bytes": true
+    },
+    {
+      "path": "assets/art04/kaze/enter_depth_key.png",
+      "sha256": "42fb6eb7ca51528fef1c3599aa95e2e4774171712ca79131f3cc244d07f9a147",
+      "matches_pr30_bytes": true
+    },
+    {
+      "path": "assets/art04/kaze/stair_up_key.png",
+      "sha256": "87e161915266e18ec7225fcca5b173b35e94abe1537e91972f27102af1ee7deb",
+      "matches_pr30_bytes": true
+    },
+    {
+      "path": "assets/art04/kaze/ART04_key_poses.tres",
+      "sha256": "dcb87a0d26f676909337ac00925f1284abf4e5c529156db19053dbbaf57626c0",
+      "matches_pr30_bytes": true
+    },
+    {
+      "path": "assets/art04/prefabs/kaze_key_preview.tscn",
+      "sha256": "ff0f20094ed8f0d72bd824df86ed5b23f94f03b5800beb42f692c5e727d77bdb",
+      "matches_pr30_bytes": true
+    }
+  ],
+  "source_contract": "actual PR30 PNG dimensions320x724, SpriteFrames single keys; prefab offset0,-238 scale.303125; pivot160,600 from ART04_ASSETS.json",
+  "new_art": "built-in image_gen edits from actual approved reference images; no third-party artwork copied",
+  "sources": "four new flattened RGBA raster masters; editable ORA frame layers + hidden registration guide; no separated body/hair paint layers claimed",
+  "failed_attempt": "initial entry generation output moderation rejection; no output retained; retried with neutral adult game-animation wording"
+}

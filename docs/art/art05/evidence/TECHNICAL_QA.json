@@ -1,0 +1,56 @@
+{
+  "checks": 78,
+  "failures": 0,
+  "turn_heel_contour": [
+    {
+      "frame": 0,
+      "heel_roi_px": [
+        150,
+        580,
+        25,
+        30
+      ],
+      "ground_error_world_px": -0.303125,
+      "heel_contact_centroid_x_px": 158.39285714285714
+    },
+    {
+      "frame": 1,
+      "heel_roi_px": [
+        150,
+        580,
+        25,
+        30
+      ],
+      "ground_error_world_px": -0.303125,
+      "heel_contact_centroid_x_px": 158.675
+    },
+    {
+      "frame": 2,
+      "heel_roi_px": [
+        150,
+        580,
+        25,
+        30
+      ],
+      "ground_error_world_px": 0.0,
+      "heel_contact_centroid_x_px": 160.51162790697674
+    },
+    {
+      "frame": 3,
+      "heel_roi_px": [
+        150,
+        580,
+        25,
+        30
+      ],
+      "ground_error_world_px": 0.0,
+      "heel_contact_centroid_x_px": 157.28333333333333
+    }
+  ],
+  "max_ground_error_world_px": 0.303125,
+  "horizontal_contact_drift_world_px": 0.9785767926356587,
+  "source_clipping_rejected": [
+    "stair_up"
+  ],
+  "limits": "Contour ROI tests contact height/drift; rotation, silhouette, anatomy, identity and motion continuity require sequence review. Entry/stair WIP are not production accepted."
+}

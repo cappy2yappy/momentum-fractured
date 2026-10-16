@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "cell_size": [320, 724],
+  "pivot_px": [160, 600],
+  "engine_scale": 0.303125,
+  "clips": [
+    {"id": "turn_depth", "master": "turn_master.png", "grid": [4,1], "scale": 0.47, "roots": [[450,694],[380,694],[292,694],[198,694]], "fps":20, "loop":false, "status":"candidate", "phases":["profile_key","quarter_rear_inbetween","rear_quarter_inbetween","rear_key"], "contacts":["right","right","right","settle"], "review":"Complete four-frame turn candidate only; entry/exit bundle remains incomplete."},
+    {"id": "enter_depth", "master": "entry_master.png", "grid": [4,2], "scale": 0.65, "roots": [[223,499],[218,500],[205,501],[191,499],[209,488],[211,486],[209,486],[206,485]], "fps":20, "loop":false, "status":"WIP", "phases":["contact","settle","passing_attempt","swing","contact_attempt","settle_attempt","passing_attempt","swing_attempt"], "contacts":["review","review","review","review","review","review","review","review"], "review":"Alternation/crossed legs and seam from rear turn need correction; not a certified gait."},
+    {"id": "stair_up", "master": "stair_up_master.png", "grid": [3,2], "scale": 0.59, "roots": [[288,503],[297,506],[292,501],[283,492],[291,492],[294,492]], "fps":20, "loop":true, "status":"WIP_REJECTED", "phases":["contact","compression_attempt","passing_attempt","opposite_contact_attempt","compression_attempt","passing_attempt"], "contacts":["review","review","review","review","review","review"], "review":"Source cell clipping and missing alternating weight transfer. Inspection only; do not bind to TR05."}
+  ],
+  "environment": {"master":"masonry_master.png","crop":[43,208,1840,692],"size":[180,80],"placement":[520,1220],"room":14,"layer":"solid_face_overlay","status":"candidate"}
+}
