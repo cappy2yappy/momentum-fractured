@@ -12,6 +12,7 @@ static func pilot_portal(w, at: Vector2) -> Dictionary:
 	return {}
 
 static func draw_exit(w, at: Vector2, color: Color):
+	if w.cinematic_transitions.draw_exit(w,at): return
 	if w.embodied_transitions.draw_exit(w,at): return
 	if w.mixed_transitions.draw_exit(w,at): return
 	var portal = pilot_portal(w, at)

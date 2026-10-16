@@ -51,7 +51,14 @@ func run():
 			for candidate in w.expansion.portals(pair[0]):
 				if candidate.target==pair[1]: portal=candidate
 			check(portal!=null,"Reciprocal definition %d -> %d"%pair)
-			if w.mixed_transitions.is_walk(w.room,portal.target):
+			if w.cinematic_transitions.automatic(w,w.room,portal.target):
+				var p=w.cinematic_transitions.endpoint(w,w.room,portal.target);var dir=int(p.heading)
+				w.player.set_physics_process(true);w.cinematic_transitions.cooldown=0
+				w.player.position=portal.at+Vector2(-120*dir,-2);w.player.velocity=Vector2(400*dir,0)
+				w.cinematic_transitions.update(w,0)
+				w.player.position=portal.at+Vector2(4*dir,-2);w.cinematic_transitions.update(w,0)
+				w.player.set_physics_process(false)
+			elif w.mixed_transitions.is_walk(w.room,portal.target):
 				var dir=w.MixedTransitions.WALK[w.room].direction
 				w.player.set_physics_process(true);w.mixed_transitions.cooldown=0
 				w.player.position=portal.at+Vector2(-120*dir,-2);w.player.velocity=Vector2(400*dir,0)
@@ -62,10 +69,13 @@ func run():
 				w.player.position=portal.at;w.expansion.interact(w)
 			for tick in 45: w._physics_process(1.0/60.0)
 			freeze()
-			check(w.room==pair[1] and w.player.position.distance_to(portal.arrival)<1,"Transition exact arrival %d -> %d"%pair)
+			var expected=portal.arrival
+			var reciprocal=w.cinematic_transitions.endpoint(w,pair[1],pair[0])
+			if w.cinematic_transitions.enabled and reciprocal.get("mode","")=="horizontal_walk": expected=w.cinematic_transitions.arrival_position(w,reciprocal)
+			check(w.room==pair[1] and w.player.position.distance_to(expected)<1,"Transition exact safe arrival %d -> %d"%pair)
 			w.player.velocity=Vector2.ZERO;w.player.set_physics_process(true)
 			for tick in 8: await physics_frame
-			check(w.player.is_on_floor() and w.player.position.distance_to(portal.arrival)<5,"Arrival settles on safe floor %d -> %d"%pair)
+			check(w.player.is_on_floor() and w.player.position.distance_to(expected)<5,"Arrival settles on safe floor %d -> %d"%pair)
 			freeze()
 	# Every mandatory ordinary step is conservative and each room has a recovery floor.
 	for index in range(13,21):

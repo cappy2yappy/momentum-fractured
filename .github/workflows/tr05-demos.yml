@@ -1,0 +1,65 @@
+name: TR05 Windows demonstration download
+on:
+  push:
+    branches: [feature/alpha-0.6.1-tr05-pr37]
+    paths: ['.github/workflows/tr05-demos.yml', 'scripts/**', 'tools/package_tr05.py']
+  pull_request:
+    branches: [feature/alpha-0.6.1-ld03-intentional-space]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-demos:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Install official Godot 4.6.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/godot"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot/editor.zip"
+          unzip -q "$RUNNER_TEMP/godot/editor.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+          curl --retry 3 -fL https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz -o "$RUNNER_TEMP/godot/templates.tpz"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+          unzip -jq "$RUNNER_TEMP/godot/templates.tpz" templates/windows_release_x86_64.exe -d "$HOME/.local/share/godot/export_templates/4.6.1.stable"
+      - name: Verify source and transition behavior
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/tr05/windows
+          GODOT=Godot_v4.6.1-stable_linux.x86_64
+          "$GODOT" --headless --editor --path . --import --quit > build/tr05/import-warmup.log 2>&1
+          "$GODOT" --headless --editor --path . --import --quit > build/tr05/import.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/tr05/import.log
+          python3 tools/verify_baseline.py
+          "$GODOT" --headless --path . --script res://tests/cinematic_transitions.gd -- --test > build/tr05/transition-checks.log 2>&1
+          grep -q '0 failure(s)' build/tr05/transition-checks.log
+          ! grep -E 'SCRIPT ERROR|Parse Error|FAIL:' build/tr05/transition-checks.log
+      - name: Export and package demonstrations
+        shell: bash
+        run: |
+          set -euo pipefail
+          Godot_v4.6.1-stable_linux.x86_64 --headless --path . --export-release 'Windows Desktop' build/tr05/windows/Kaze-TR05-Windows.exe > build/tr05/export.log 2>&1
+          ! grep -E 'SCRIPT ERROR|Parse Error|Failed to load' build/tr05/export.log
+          python3 tools/package_tr05.py --source "$(git rev-parse HEAD)" > build/tr05/package.log
+          git rev-parse HEAD > build/tr05/HOSTED_BUILD_REF.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-TR05-Windows-Demos
+          path: |
+            build/tr05/Kaze-TR05-Windows-Demos.zip
+            build/tr05/windows-manifest.json
+            build/tr05/HOSTED_BUILD_REF.txt
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: TR05-hosted-build-evidence
+          path: build/tr05/*.log
