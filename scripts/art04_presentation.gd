@@ -65,6 +65,11 @@ func draw_supports(e,w):
 	if not e.production_active() or not e.structural_dressing: return
 	if w.room==14: w.draw_texture(Roof,Vector2(706,922))
 	elif w.room==15: w.draw_texture(Masonry,Vector2(1292,970))
+	elif w.room==17:
+		# Recessed wall return closes the cropped stair silhouette at the wall.
+		# Same approved atlas; background only, never an extra collision column.
+		var material=preload("res://assets/web/terrain-materials.png")
+		w.draw_texture_rect_region(material,Rect2(1776,1210,24,130),Rect2(0,96,24,130),Color(0.5,0.52,0.6))
 
 func is_door(e,w,at:Vector2) -> bool:
 	return e.production_active() and e.depth_demo and w.room==14 and at==Vector2(120,1100)
