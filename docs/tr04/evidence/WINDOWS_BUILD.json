@@ -1,0 +1,11 @@
+{
+  "runtime_source": "e7c308abd93de6f2191fbf000961d6fa1bb80721",
+  "base": "c2c6b08bfb3b85ad174dcc7ef60bddf1a3a48c15",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "resources": 569,
+  "binary_sha256": "3382080ef316b4d434593d9ab5341477c76c92949c3b6e268b803f5001cb4975",
+  "binary_bytes": 120873072,
+  "zip_bytes": 52080656,
+  "zip_sha256": "186bc376cd188a2cef343d426d6833b96384b0f8a0d5898c88dbbb29ae778bbb",
+  "zip_crc": "PASS"
+}

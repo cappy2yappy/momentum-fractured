@@ -1,0 +1,628 @@
+[
+  {
+    "name": "import_warmup",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "seconds": 5.078,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": true,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-import_warmup",
+    "warnings": [
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "name": "import",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--editor",
+      "--import",
+      "--quit"
+    ],
+    "exit": 0,
+    "seconds": 5.141,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-import",
+    "warnings": [
+      "WARNING: 1 RID of type \"CanvasItem\" was leaked.",
+      "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+      "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit.",
+      "WARNING: ObjectDB instances leaked at exit (run with --verbose for details)."
+    ]
+  },
+  {
+    "name": "verify_baseline",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_baseline.py"
+    ],
+    "exit": 0,
+    "seconds": 0.093,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-verify_baseline",
+    "warnings": []
+  },
+  {
+    "name": "verify_tr03_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr03_preservation.py"
+    ],
+    "exit": 0,
+    "seconds": 0.86,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-verify_tr03_preservation",
+    "warnings": []
+  },
+  {
+    "name": "verify_tr04_preservation",
+    "command": [
+      "C:\\Program Files\\Python310\\python.exe",
+      "tools/verify_tr04_preservation.py"
+    ],
+    "exit": 0,
+    "seconds": 1.687,
+    "passes": 46,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-verify_tr04_preservation",
+    "warnings": []
+  },
+  {
+    "name": "approved_baseline",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/approved_baseline.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 2.141,
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-approved_baseline",
+    "warnings": []
+  },
+  {
+    "name": "approved_combat_swing",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/approved_combat_swing.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 7,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-approved_combat_swing",
+    "warnings": []
+  },
+  {
+    "name": "annex_expansion",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/annex_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 3.828,
+    "passes": 34,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-annex_expansion",
+    "warnings": []
+  },
+  {
+    "name": "annex_traversal",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/annex_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 8.985,
+    "passes": 6,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-annex_traversal",
+    "warnings": []
+  },
+  {
+    "name": "save_compatibility",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/save_compatibility.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.671,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-save_compatibility",
+    "warnings": []
+  },
+  {
+    "name": "skyworks_progression",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/skyworks_progression.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 5.391,
+    "passes": 33,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-skyworks_progression",
+    "warnings": []
+  },
+  {
+    "name": "storm_keeper",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/storm_keeper.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.75,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-storm_keeper",
+    "warnings": []
+  },
+  {
+    "name": "movement_momentum",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/movement_momentum.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 9.078,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-movement_momentum",
+    "warnings": []
+  },
+  {
+    "name": "sprite_integration",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/sprite_integration.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-sprite_integration",
+    "warnings": []
+  },
+  {
+    "name": "world_expansion",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/world_expansion.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.547,
+    "passes": 193,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-world_expansion",
+    "warnings": []
+  },
+  {
+    "name": "expansion_gates_save",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/expansion_gates_save.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.0,
+    "passes": 17,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-expansion_gates_save",
+    "warnings": []
+  },
+  {
+    "name": "expansion_traversal",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/expansion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 98.266,
+    "passes": 125,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-expansion_traversal",
+    "warnings": []
+  },
+  {
+    "name": "gameplay_stabilization",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/gameplay_stabilization.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 16,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-gameplay_stabilization",
+    "warnings": []
+  },
+  {
+    "name": "traversal_transitions",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/traversal_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 8,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-traversal_transitions",
+    "warnings": []
+  },
+  {
+    "name": "world_cohesion_traversal",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/world_cohesion_traversal.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 60.5,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-world_cohesion_traversal",
+    "warnings": []
+  },
+  {
+    "name": "integration_candidate",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/integration_candidate.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.657,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-integration_candidate",
+    "warnings": []
+  },
+  {
+    "name": "integration_descent",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://tests/integration_descent.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.75,
+    "passes": 26,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-integration_descent",
+    "warnings": []
+  },
+  {
+    "name": "room_transition_prototype",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/room_transition_prototype.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 1.312,
+    "passes": 93,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-room_transition_prototype",
+    "warnings": []
+  },
+  {
+    "name": "mixed_transitions",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/mixed_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 4.281,
+    "passes": 109,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-mixed_transitions",
+    "warnings": []
+  },
+  {
+    "name": "embodied_transitions",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/embodied_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 2.688,
+    "passes": 80,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-embodied_transitions",
+    "warnings": []
+  },
+  {
+    "name": "art04_transitions",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/art04_transitions.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 111,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-art04_transitions",
+    "warnings": []
+  },
+  {
+    "name": "level_geometry",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/level_geometry.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.828,
+    "passes": 78,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-level_geometry",
+    "warnings": []
+  },
+  {
+    "name": "profile_prepare",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--prepare"
+    ],
+    "exit": 0,
+    "seconds": 0.657,
+    "passes": 2,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-restart-1792119011215621700",
+    "warnings": []
+  },
+  {
+    "name": "profile_reload",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/integration_profile.gd",
+      "--",
+      "--reload"
+    ],
+    "exit": 0,
+    "seconds": 0.656,
+    "passes": 5,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-restart-1792119011215621700",
+    "warnings": []
+  },
+  {
+    "name": "endpoint_audit",
+    "command": [
+      "../sprite-engine/Godot_v4.6.1-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04",
+      "--script",
+      "res://tests/audit_embodied_endpoints.gd",
+      "--",
+      "--test"
+    ],
+    "exit": 0,
+    "seconds": 0.672,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "diagnostic_only": false,
+    "profile": "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\kaze-tr04\\build\\tr04\\qa\\profile-endpoint_audit",
+    "warnings": []
+  }
+]

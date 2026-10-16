@@ -1,0 +1,11 @@
+{
+  "actions": 30,
+  "behavioral_suites": 22,
+  "assertions": 1240,
+  "failures": 0,
+  "script_errors": 0,
+  "nonzero_exits": [],
+  "native_assertions": 11,
+  "packed_assertions": 11,
+  "native_executable_exit": 0
+}

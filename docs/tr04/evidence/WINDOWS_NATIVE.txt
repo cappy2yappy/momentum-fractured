@@ -1,0 +1,15 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS: ART04 preview explicitly enabled for native fixture
+PASS: Native Windows walk stop at Canal wall
+PASS: Native key reapproach enters existing E radius
+PASS: Native E Canal transition completes safely
+PASS: Native Windows run stop at Canal wall
+PASS: Native key reapproach enters existing E radius
+PASS: Native E Canal transition completes safely
+PASS: Native ART04 stair 14->17 cleanup and arrival
+PASS: Native ART04 stair 17->14 cleanup and arrival
+PASS: Native ART04 depth doorway 14->13 cleanup and arrival
+PASS: Native ART04 depth doorway 13->14 cleanup and arrival
+WINDOWS SCRIPTED PLAYTEST: 0 failure(s); not a human campaign playthrough
