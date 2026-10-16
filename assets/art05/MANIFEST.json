@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "cell_size": [
+    320,
+    724
+  ],
+  "pivot_px": [
+    160,
+    600
+  ],
+  "engine_scale": 0.303125,
+  "source_pr30": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "foundation_pr39": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "clips": [
+    {
+      "id": "turn_depth",
+      "fps": 20,
+      "loop": false,
+      "status": "candidate",
+      "review": "Complete four-frame turn candidate only; entry/exit bundle remains incomplete.",
+      "path": "assets/art05/kaze/turn_depth.png",
+      "sha256": "fcbab2ecc43263a58397556a94ad082b0f1b9cc6ac0f0140cce38f80c8690385",
+      "master_sha256": "2ce39b4fef5eaef24f085bbb92001a100234713c29ed946a79809ab255cb8277",
+      "frames": [
+        {
+          "index": 0,
+          "region": [
+            0,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            0,
+            0,
+            543,
+            724
+          ],
+          "source_root_px": [
+            450,
+            694
+          ],
+          "source_scale": 0.47,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "profile_key",
+          "contact_foot": "right",
+          "alpha_bbox": [
+            14,
+            293,
+            199,
+            601
+          ],
+          "alpha_margin_px": 14,
+          "source_cell_clipped": false,
+          "sha256_rgba": "cfaf24e9cd47ff3e7145d7615290a08f63c3ea60da9c6c1e5e4983ac7661c3bf"
+        },
+        {
+          "index": 1,
+          "region": [
+            320,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            543,
+            0,
+            543,
+            724
+          ],
+          "source_root_px": [
+            380,
+            694
+          ],
+          "source_scale": 0.47,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "quarter_rear_inbetween",
+          "contact_foot": "right",
+          "alpha_bbox": [
+            29,
+            288,
+            210,
+            601
+          ],
+          "alpha_margin_px": 29,
+          "source_cell_clipped": false,
+          "sha256_rgba": "d0d507deae68c00557a5818dda31b8f9e2684e56deb585b04c1e97cb2085917d"
+        },
+        {
+          "index": 2,
+          "region": [
+            640,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1086,
+            0,
+            543,
+            724
+          ],
+          "source_root_px": [
+            292,
+            694
+          ],
+          "source_scale": 0.47,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "rear_quarter_inbetween",
+          "contact_foot": "right",
+          "alpha_bbox": [
+            44,
+            288,
+            213,
+            601
+          ],
+          "alpha_margin_px": 44,
+          "source_cell_clipped": false,
+          "sha256_rgba": "ea898ee3c36fa69d719936aff933b79f06f9c283951fbca0bf71d88de838fb63"
+        },
+        {
+          "index": 3,
+          "region": [
+            960,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1629,
+            0,
+            543,
+            724
+          ],
+          "source_root_px": [
+            198,
+            694
+          ],
+          "source_scale": 0.47,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "rear_key",
+          "contact_foot": "settle",
+          "alpha_bbox": [
+            70,
+            288,
+            216,
+            601
+          ],
+          "alpha_margin_px": 70,
+          "source_cell_clipped": false,
+          "sha256_rgba": "f8ce307763d476b1b7f7050229ba47f04c2f8f9d7094f25ff2ff690a04ebad05"
+        }
+      ]
+    },
+    {
+      "id": "enter_depth",
+      "fps": 20,
+      "loop": false,
+      "status": "WIP",
+      "review": "Alternation/crossed legs and seam from rear turn need correction; not a certified gait.",
+      "path": "assets/art05/kaze/enter_depth.png",
+      "sha256": "4827434a060b3b7db9d6ecb729896d28bb711c371abd79e514473342168a5876",
+      "master_sha256": "b6873b5f38e1bd0b3f3af167c552305d07ebafefc776b7ce8b7d14ee2d5188d3",
+      "frames": [
+        {
+          "index": 0,
+          "region": [
+            0,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "source_root_px": [
+            223,
+            499
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "contact",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            64,
+            290,
+            238,
+            601
+          ],
+          "alpha_margin_px": 64,
+          "source_cell_clipped": false,
+          "sha256_rgba": "353ba92ac2435d0dcc82834e6f53ee5b8ea51ff136178d5313777b3854722c80"
+        },
+        {
+          "index": 1,
+          "region": [
+            320,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            384,
+            0,
+            384,
+            512
+          ],
+          "source_root_px": [
+            218,
+            500
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "settle",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            56,
+            288,
+            223,
+            600
+          ],
+          "alpha_margin_px": 56,
+          "source_cell_clipped": false,
+          "sha256_rgba": "4e10ba9b7bc4dc5634ac546d33834b77331b54eb4c3c6bc94a6f2c044129a867"
+        },
+        {
+          "index": 2,
+          "region": [
+            640,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            768,
+            0,
+            384,
+            512
+          ],
+          "source_root_px": [
+            205,
+            501
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "passing_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            53,
+            290,
+            217,
+            600
+          ],
+          "alpha_margin_px": 53,
+          "source_cell_clipped": false,
+          "sha256_rgba": "81fa4e8f1ca77cbc0750ed22136cff2b2474ca4917e2eb7ad728d0d6f69d9bff"
+        },
+        {
+          "index": 3,
+          "region": [
+            960,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1152,
+            0,
+            384,
+            512
+          ],
+          "source_root_px": [
+            191,
+            499
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "swing",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            56,
+            290,
+            221,
+            601
+          ],
+          "alpha_margin_px": 56,
+          "source_cell_clipped": false,
+          "sha256_rgba": "1383eec38afef8a666d8f68edefffb70e0a60a4f08898bef5de4b0718e65cfec"
+        },
+        {
+          "index": 4,
+          "region": [
+            1280,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            0,
+            512,
+            384,
+            512
+          ],
+          "source_root_px": [
+            209,
+            488
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "contact_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            74,
+            288,
+            231,
+            600
+          ],
+          "alpha_margin_px": 74,
+          "source_cell_clipped": false,
+          "sha256_rgba": "cba53bdd1236b0a6bcaf48af15025314b6424fe84dcbb8caf9221974f35c5a78"
+        },
+        {
+          "index": 5,
+          "region": [
+            1600,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            384,
+            512,
+            384,
+            512
+          ],
+          "source_root_px": [
+            211,
+            486
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "settle_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            65,
+            290,
+            234,
+            601
+          ],
+          "alpha_margin_px": 65,
+          "source_cell_clipped": false,
+          "sha256_rgba": "253230b6473d45708504062ceb49027e44e260f08a0381e7240c2c326b011c49"
+        },
+        {
+          "index": 6,
+          "region": [
+            1920,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            768,
+            512,
+            384,
+            512
+          ],
+          "source_root_px": [
+            209,
+            486
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "passing_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            49,
+            290,
+            235,
+            601
+          ],
+          "alpha_margin_px": 49,
+          "source_cell_clipped": false,
+          "sha256_rgba": "9f57164289745df3ea91b2a49d95c58fa289695fcdbb7d9732037c4b304dee12"
+        },
+        {
+          "index": 7,
+          "region": [
+            2240,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1152,
+            512,
+            384,
+            512
+          ],
+          "source_root_px": [
+            206,
+            485
+          ],
+          "source_scale": 0.65,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "swing_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            60,
+            290,
+            230,
+            601
+          ],
+          "alpha_margin_px": 60,
+          "source_cell_clipped": false,
+          "sha256_rgba": "c95d91439337c410948d520dcac54faaec6fb5c1f4cfc0e41ac1010101a6068b"
+        }
+      ]
+    },
+    {
+      "id": "stair_up",
+      "fps": 20,
+      "loop": true,
+      "status": "WIP_REJECTED",
+      "review": "Source cell clipping and missing alternating weight transfer. Inspection only; do not bind to TR05.",
+      "path": "assets/art05/kaze/stair_up.png",
+      "sha256": "2bf2b31ab0449fbf4c69a94cec93b16e0d86a3d08102234d179705caec6214b3",
+      "master_sha256": "ca41c4f566351070b799fc92e52d15177eee0729e92dc00045edcbf565e38d31",
+      "frames": [
+        {
+          "index": 0,
+          "region": [
+            0,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "source_root_px": [
+            288,
+            503
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "contact",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            40,
+            305,
+            292,
+            605
+          ],
+          "alpha_margin_px": 28,
+          "source_cell_clipped": true,
+          "sha256_rgba": "e08161f83495670803d55878e1638e3947a1d0434f8609c156e32287c8558ae7"
+        },
+        {
+          "index": 1,
+          "region": [
+            320,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "source_root_px": [
+            297,
+            506
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "compression_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            40,
+            306,
+            233,
+            604
+          ],
+          "alpha_margin_px": 40,
+          "source_cell_clipped": true,
+          "sha256_rgba": "d06a005a740db0c1bb7ad86f776869dc06ac2ee44d320da07f751f9300383686"
+        },
+        {
+          "index": 2,
+          "region": [
+            640,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "source_root_px": [
+            292,
+            501
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "passing_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            35,
+            304,
+            247,
+            605
+          ],
+          "alpha_margin_px": 35,
+          "source_cell_clipped": true,
+          "sha256_rgba": "83bfb70a6fec8e0132b4a5038315adb5d216e21b6592a96d7665b237f50c2e21"
+        },
+        {
+          "index": 3,
+          "region": [
+            960,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "source_root_px": [
+            283,
+            492
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "opposite_contact_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            36,
+            310,
+            295,
+            601
+          ],
+          "alpha_margin_px": 25,
+          "source_cell_clipped": true,
+          "sha256_rgba": "f78c32ba67d94fa4b42d9938e2ebe2305170468a3c824fc90aa175da685ccf1b"
+        },
+        {
+          "index": 4,
+          "region": [
+            1280,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "source_root_px": [
+            291,
+            492
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "compression_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            36,
+            310,
+            253,
+            601
+          ],
+          "alpha_margin_px": 36,
+          "source_cell_clipped": true,
+          "sha256_rgba": "2ba6dc3fa6c29360085262fa7a2194a400c4dec0757e5f1b6602206ba465d9f6"
+        },
+        {
+          "index": 5,
+          "region": [
+            1600,
+            0,
+            320,
+            724
+          ],
+          "source_cell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "source_root_px": [
+            294,
+            492
+          ],
+          "source_scale": 0.59,
+          "pivot_px": [
+            160,
+            600
+          ],
+          "duration_ms": 50.0,
+          "phase": "passing_attempt",
+          "contact_foot": "review",
+          "alpha_bbox": [
+            29,
+            310,
+            246,
+            602
+          ],
+          "alpha_margin_px": 29,
+          "source_cell_clipped": true,
+          "sha256_rgba": "5eb131ece26a01245ba98122a8fd08ea58c0c39a6fb9ac8585e4d5c3de024080"
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "master": "masonry_master.png",
+    "crop": [
+      43,
+      208,
+      1840,
+      692
+    ],
+    "size": [
+      180,
+      80
+    ],
+    "placement": [
+      520,
+      1220
+    ],
+    "room": 14,
+    "layer": "solid_face_overlay",
+    "status": "candidate",
+    "path": "assets/art05/environment/bellroof_west_masonry.png",
+    "sha256": "c45ca79f69e37ec83df28bcb687a0e3bc1b3a6a011ed7f06c0b6ccb17e16e223",
+    "master_sha256": "0763740a2870b94697d36cab5419e6812b6462e55a16929e941f6a1dd32576e6",
+    "world_rect": [
+      520,
+      1220,
+      180,
+      80
+    ],
+    "no_collision_nodes": true
+  }
+}

@@ -1,0 +1,86 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+ART05_TESTBED ready | viewport=(1280.0, 720.0) zoom=1.0 | renderer=Apple M4
+ART05_NATIVE engine=4.6.1-stable (official) gpu=Apple M4 driver=opengl3
+PASS: real SpriteFrames count turn_depth
+PASS: authored20fps turn_depth
+PASS: frame registered turn_depth0
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered turn_depth1
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered turn_depth2
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered turn_depth3
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: real SpriteFrames count enter_depth
+PASS: authored20fps enter_depth
+PASS: frame registered enter_depth0
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth1
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth2
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth3
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth4
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth5
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth6
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered enter_depth7
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: real SpriteFrames count stair_up
+PASS: authored20fps stair_up
+PASS: frame registered stair_up0
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered stair_up1
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered stair_up2
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered stair_up3
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered stair_up4
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: frame registered stair_up5
+PASS: fixed pivot/scale
+PASS: native capture1280x720
+PASS: native actual-speed playback visits all4 turn frames
+PASS: Godot nonloop playback completes0.20s clip
+PASS: native capture1280x720
+PASS: native capture1280x720
+PASS: art overlay preserves exact colliders
+PASS: art overlay leaves player simulation unchanged
+PASS: Bellroof camera zoom1.0
+PASS: art exactly fits PR37 solid rectangle
+PASS: candidate requires explicit consumer opt-in
+PASS: WIP refused by proxy adapter: enter_depth
+PASS: WIP refused by proxy adapter: stair_up
+PASS: TR39 real render proxy accepts turn frame0
+PASS: TR39 real proxy texture frame parity
+PASS: TR39 real render proxy accepts turn frame1
+PASS: TR39 real proxy texture frame parity
+PASS: TR39 real render proxy accepts turn frame2
+PASS: TR39 real proxy texture frame parity
+PASS: TR39 real render proxy accepts turn frame3
+PASS: TR39 real proxy texture frame parity
+PASS: render adapter preserves world geometry
+ART05_NATIVE: 80 checks, 0 failure(s)

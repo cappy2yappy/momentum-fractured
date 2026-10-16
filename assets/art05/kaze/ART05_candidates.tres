@@ -1,0 +1,100 @@
+[gd_resource type="SpriteFrames" load_steps="22" format="3"]
+
+[ext_resource type="Texture2D" path="res://assets/art05/kaze/turn_depth.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/art05/kaze/enter_depth.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/art05/kaze/stair_up.png" id="3"]
+
+[sub_resource type="AtlasTexture" id="turn_depth_0"]
+atlas = ExtResource("1")
+region = Rect2(0,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="turn_depth_1"]
+atlas = ExtResource("1")
+region = Rect2(320,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="turn_depth_2"]
+atlas = ExtResource("1")
+region = Rect2(640,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="turn_depth_3"]
+atlas = ExtResource("1")
+region = Rect2(960,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_0"]
+atlas = ExtResource("2")
+region = Rect2(0,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_1"]
+atlas = ExtResource("2")
+region = Rect2(320,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_2"]
+atlas = ExtResource("2")
+region = Rect2(640,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_3"]
+atlas = ExtResource("2")
+region = Rect2(960,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_4"]
+atlas = ExtResource("2")
+region = Rect2(1280,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_5"]
+atlas = ExtResource("2")
+region = Rect2(1600,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_6"]
+atlas = ExtResource("2")
+region = Rect2(1920,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="enter_depth_7"]
+atlas = ExtResource("2")
+region = Rect2(2240,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_0"]
+atlas = ExtResource("3")
+region = Rect2(0,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_1"]
+atlas = ExtResource("3")
+region = Rect2(320,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_2"]
+atlas = ExtResource("3")
+region = Rect2(640,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_3"]
+atlas = ExtResource("3")
+region = Rect2(960,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_4"]
+atlas = ExtResource("3")
+region = Rect2(1280,0,320,724)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="stair_up_5"]
+atlas = ExtResource("3")
+region = Rect2(1600,0,320,724)
+filter_clip = true
+
+[resource]
+animations = [{"frames": [{"duration": 1.0, "texture": SubResource("turn_depth_0")},{"duration": 1.0, "texture": SubResource("turn_depth_1")},{"duration": 1.0, "texture": SubResource("turn_depth_2")},{"duration": 1.0, "texture": SubResource("turn_depth_3")}], "loop": false, "name": &"turn_depth", "speed": 20.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("enter_depth_0")},{"duration": 1.0, "texture": SubResource("enter_depth_1")},{"duration": 1.0, "texture": SubResource("enter_depth_2")},{"duration": 1.0, "texture": SubResource("enter_depth_3")},{"duration": 1.0, "texture": SubResource("enter_depth_4")},{"duration": 1.0, "texture": SubResource("enter_depth_5")},{"duration": 1.0, "texture": SubResource("enter_depth_6")},{"duration": 1.0, "texture": SubResource("enter_depth_7")}], "loop": false, "name": &"enter_depth", "speed": 20.0},
+{"frames": [{"duration": 1.0, "texture": SubResource("stair_up_0")},{"duration": 1.0, "texture": SubResource("stair_up_1")},{"duration": 1.0, "texture": SubResource("stair_up_2")},{"duration": 1.0, "texture": SubResource("stair_up_3")},{"duration": 1.0, "texture": SubResource("stair_up_4")},{"duration": 1.0, "texture": SubResource("stair_up_5")}], "loop": true, "name": &"stair_up", "speed": 20.0}]

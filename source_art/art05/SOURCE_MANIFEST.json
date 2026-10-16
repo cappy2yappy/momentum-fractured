@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "source_art/art05/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "source_art/art05/PROMPTS.json",
+      "sha256": "1f92746bfdcc2364bd22174bb7b7b73566e65cde5551aed4c823e941418207ea",
+      "bytes": 5079
+    },
+    {
+      "path": "source_art/art05/PROVENANCE.json",
+      "sha256": "a2e064f9fcdfad99f08cbfee75a81f3f24f48df1d4740f4f3a63711aa1c7a7be",
+      "bytes": 1708
+    },
+    {
+      "path": "source_art/art05/authoring.json",
+      "sha256": "d72cd751dd6c2306fb8619d135d58b8ed74e893f4adcdc7476c07c5993459d8d",
+      "bytes": 1753
+    },
+    {
+      "path": "source_art/art05/enter_depth.ora",
+      "sha256": "8071022d923049f50fa9cd722daa30f29d99a912040ba437bd8282b4ceb75930",
+      "bytes": 588255
+    },
+    {
+      "path": "source_art/art05/entry_master.png",
+      "sha256": "b6873b5f38e1bd0b3f3af167c552305d07ebafefc776b7ce8b7d14ee2d5188d3",
+      "bytes": 1964035
+    },
+    {
+      "path": "source_art/art05/masonry_master.png",
+      "sha256": "0763740a2870b94697d36cab5419e6812b6462e55a16929e941f6a1dd32576e6",
+      "bytes": 2016500
+    },
+    {
+      "path": "source_art/art05/stair_up.ora",
+      "sha256": "c7946174f725aef352b71ded52637d11d1dd6d60f7ad98750179172420edac87",
+      "bytes": 576513
+    },
+    {
+      "path": "source_art/art05/stair_up_master.png",
+      "sha256": "ca41c4f566351070b799fc92e52d15177eee0729e92dc00045edcbf565e38d31",
+      "bytes": 2043933
+    },
+    {
+      "path": "source_art/art05/turn_depth.ora",
+      "sha256": "c9f01c115e3852579ed8fc3cf56417f7d067a715556d9f47b9b979a9be2de3e1",
+      "bytes": 352879
+    },
+    {
+      "path": "source_art/art05/turn_master.png",
+      "sha256": "2ce39b4fef5eaef24f085bbb92001a100234713c29ed946a79809ab255cb8277",
+      "bytes": 1080972
+    }
+  ]
+}

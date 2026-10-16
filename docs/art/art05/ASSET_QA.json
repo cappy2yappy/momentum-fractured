@@ -1,0 +1,15 @@
+{
+  "automatic_checks": [
+    "PNG CRC/IEND and full decode",
+    "RGBA zero hidden RGB",
+    "fixed cell/pivot and shared clip scale",
+    "12px exported cell margins",
+    "source-cell boundary detection (stair rejected)",
+    "distinct frame hashes",
+    "SpriteFrames regions/count/FPS exported"
+  ],
+  "artistic_acceptance": "human review still required; technical tests cannot prove identity/anatomy",
+  "rejected_clips": [
+    "stair_up"
+  ]
+}
