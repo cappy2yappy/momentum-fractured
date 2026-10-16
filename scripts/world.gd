@@ -11,6 +11,7 @@ const Expansion = preload("res://scripts/world_expansion.gd")
 const RoomPresentation = preload("res://scripts/room_presentation.gd")
 const MixedTransitions = preload("res://scripts/mixed_transitions.gd")
 const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
+const LevelGeometry = preload("res://scripts/level_geometry.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -408,6 +409,7 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 		announce("Storm Keeper defeated. Attune the relay with E.", 8)
 
 func add_platform(rect: Rect2):
+	rect = LevelGeometry.perimeter_landing(room,room_size(room),rect)
 	platforms.append(rect)
 	var body = StaticBody2D.new()
 	var shape = CollisionShape2D.new()
@@ -635,6 +637,7 @@ func _physics_process(dt):
 			build_room(target)
 			var destination = left_exit_position() if moving_east else right_exit_position()
 			player.position = destination + Vector2(110 if moving_east else -140, -2) if pending_arrival == Vector2.INF else pending_arrival
+			if pending_arrival == Vector2.INF: player.position = LevelGeometry.legacy_arrival(room,player.position)
 			pending_arrival = Vector2.INF
 			player.velocity = Vector2.ZERO
 			mixed_transitions.arrived(self)
@@ -741,9 +744,7 @@ func _draw():
 	RoomPresentation.draw_background(self)
 	for rect in platforms:
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
-		draw_rect(rect, Color("252631"))
-		draw_rect(Rect2(rect.position, Vector2(rect.size.x, 7)), Color("aaa18b"))
-		draw_rect(Rect2(rect.position + Vector2(0, 7), Vector2(rect.size.x, 9)), Color("54535c"))
+		LevelGeometry.draw_surface(self,rect)
 	for gate in kunai_gates:
 		if opened_kunai_gates.get(gate["id"], false): continue
 		var color = {"wind": Color("79d69a"), "fire": Color("ed7852"), "electric": Color("5ec8ee")}[gate["element"]]

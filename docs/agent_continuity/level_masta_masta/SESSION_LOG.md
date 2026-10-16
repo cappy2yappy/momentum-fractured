@@ -13,3 +13,8 @@ Creator dispatch: Lane A owns safe staging/level work under assignment880718f51b
 Executed evidence:20-suite batch plus preservation/profile1003 PASS/zero failures; final real-double-tap80 and exported-resource80 passed; four packed profile comparisons passed. Native scripted1280x720/zoom1 captures and software-render draw samples committed. Windows cross-export and isolated-profile package created; native Windows/PowerShell, gamepad hardware/mapping, sustained60FPS and finished animation acceptance remain open. Complete report: docs/agent_handoffs/TR03_LANE_A_PM_REPORT.md.
 
 Publication used connected Git-data commits because local push credentials were absent. Tree equivalence verified; never force-update remote to local history. Next ownership: PM/creator comparison, Art Mane approved pose production, Build Shogun native Windows QA. No unsupervised background work or merge authorization.
+
+
+## 2026-10-16 — TR04 / LD02
+
+Recovered PR31, created dedicated PR33, repaired19 perimeter landings/one arrival, reused material atlas, completed specialist source review,21-room audit/captures, final1240 checks and native Windows11+11 input checks. No merge. PM report: docs/agent_handoffs/TR04_LD02_PM_REPORT.md. Creator/art/story decisions remain open.

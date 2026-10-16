@@ -1,3 +1,18 @@
+# Current TR04 / LD02 status — 2026-10-16 UTC
+
+PR33: https://github.com/cappy2yappy/momentum-fractured/pull/33 (draft, do not merge).
+Based on PR31 c2c6b08bfb3b85ad174dcc7ef60bddf1a3a48c15; runtime repair e7c308abd93de6f2191fbf000961d6fa1bb80721.
+
+All21 rooms audited;19 perimeter landings repaired across11 rooms; Canal left-exit stop/reapproach and Terrace arrival fixed. Biome material surfaces and R17 stair wall return added. Controller, combat, abilities, saves, gates and29-link topology preserved. Approved ART04 remains an opt-in held-key comparison; complete cycles are still missing.
+
+Final30 QA actions /22 behavioral suites /1240 passes; native Windows and packed-resource key fixtures11 each, EXE boot exit0. Windows candidate packaged/hash recorded. No human campaign, gamepad or sustained FPS certification. Inherited editor/export shutdown diagnostics disclosed. Authored terrain, missing animation frames and creator acceptance remain open.
+
+Next: creator repair playtest; Art Mane terrain/cycle delivery; Story Agent decision on ruins-escape proposal. Read docs/agent_handoffs/TR04_LD02_PM_REPORT.md and docs/tr04/QA_RESULTS.md. Milestone verdict: ready for creator playtest, further art refinement pending; not complete.
+
+---
+
+Historical status follows unchanged:
+
 # Current DEV-06 status — 2026-10-13 UTC
 
 Alpha 0.6 World Expansion & Momentum: **candidate implemented; creator acceptance pending**.

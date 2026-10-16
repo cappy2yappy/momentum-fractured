@@ -20,7 +20,13 @@ func _run():
 		world.player.set_physics_process(false)
 		var signature = []
 		for rect in world.platforms: signature.append([rect.position.x, rect.position.y, rect.size.x, rect.size.y])
-		check(JSON.stringify(signature) == JSON.stringify(approved[str(index)].platforms), "Room %d original collision geometry is unchanged" % index)
+		var expected=approved[str(index)].platforms.duplicate(true)
+		# TR04 creator-authorized perimeter repairs. Keep historical reference intact.
+		# Only these two endpoint ledges may differ in the original eight rooms.
+		for row in expected:
+			if index==2 and row==[2220.0,850.0,260.0,40.0]: row[2]=380.0
+			if index==4 and row==[2130.0,1080.0,270.0,40.0]: row[2]=470.0
+		check(JSON.stringify(signature) == JSON.stringify(expected), "Room %d geometry matches approved foundation plus explicit TR04 endpoint repairs" % index)
 		check(world.platforms.size() >= 6, "Room %d loads original geometry" % index)
 		check(world.room_discovery_level(index) == 2, "Room %d registers MetSys exploration" % index)
 	world.build_room(0)
