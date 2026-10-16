@@ -100,7 +100,7 @@ run('release-startup',[binary,'--headless','--fixed-fps','60','--quit-after','12
 for launcher in sorted(extract.glob('Play-*.command')):
  launcher.chmod(0o755);run(launcher.stem,[launcher,'--headless','--fixed-fps','60','--quit-after','120'],profile('launchers'),90,'Godot Engine v4.6.1')
 # Tests remain external to the shipped PCK. Mount that exact PCK before scene load.
-env=profile('packaged-native');env.update(BUILD05_PACK=str(extract/pack),BUILD05_CAPTURE_DIR=str(evidence/'native-captures'))
+env=profile('packaged-native');env.update(BUILD05_PACK=str(next(app.rglob("*.pck"))),BUILD05_CAPTURE_DIR=str(evidence/'native-captures'))
 run('packaged-native',[a.godot,'--path',r,'--fixed-fps','60','--script',control/'packaged_native.gd','--','--test'],env,300,'54 checks, 0 failure(s)')
 for suite in ['intentional_space','audit_intentional_space','movement_momentum','save_compatibility','expansion_gates_save','skyworks_progression']:
  method='_run' if suite in ['movement_momentum','save_compatibility','skyworks_progression'] else 'run'
