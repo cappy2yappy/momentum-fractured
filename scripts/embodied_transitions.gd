@@ -57,6 +57,7 @@ func production_active() -> bool:
 	return (art_preview or comparison=="art-preview") and not comparison in ["original","plain"]
 
 func policy(w,index:int,target:int) -> Dictionary:
+	if w.cinematic_transitions.enabled: return w.cinematic_transitions.policy(w,index,target)
 	var key="%d:%d"%[index,target]
 	if w.mixed_transitions.is_special(index,target): return {"mode":"wind_fold","trigger":"interact"}
 	if w.mixed_transitions.is_walk(index,target):

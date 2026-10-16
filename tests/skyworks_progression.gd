@@ -39,7 +39,7 @@ func _run():
 	check(world.can_enter(10), "Earned sigils open the new region")
 	world.request_room(10)
 	await transition()
-	check(world.room == 10 and world.player.position.x == 230, "Actual transition reaches the SkyWorks entrance")
+	check(world.room == 10 and world.player.position.x == (184 if world.cinematic_transitions.enabled else 230), "Actual transition reaches the inward SkyWorks entrance")
 	check(not world.can_enter(11), "Wind seal cannot be bypassed at the route door")
 	await shoot("fire", Vector2(2000, 758))
 	check(not world.opened_kunai_gates.get("skyworks_wind_intake", false), "Wrong element does not release intake")
