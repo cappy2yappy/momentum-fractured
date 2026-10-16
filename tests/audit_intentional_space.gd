@@ -1,6 +1,14 @@
 extends SceneTree
 var failures=0
 func _init(): call_deferred("run")
+func same_signature(a,b):
+	if a.size()!=b.size(): return false
+	for i in a.size():
+		for j in 4:
+			# Recorded JSON rounds generated Vector2 float32 thirds. Compare
+			# geometry to a thousandth of a pixel, preserving order and count.
+			if absf(float(a[i][j])-float(b[i][j]))>0.001: return false
+	return true
 func run():
 	await process_frame
 	var w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w;w.set_physics_process(false);w.player.set_physics_process(false)
@@ -11,9 +19,9 @@ func run():
 		for e in w.enemies: e.set_physics_process(false)
 		var rects=[]
 		for r in w.platforms: rects.append([r.position.x,r.position.y,r.size.x,r.size.y])
-		var unchanged=rects==before[index].platforms
+		var unchanged=same_signature(rects,before[index].platforms)
 		if index!=14:
-			print("PASS: " if unchanged else "FAIL: ","Room %d exact PR33 collision rectangles"%index)
+			print("PASS: " if unchanged else "FAIL: ","Room %d PR33 collision signature (0.001px serialization tolerance)"%index)
 			if not unchanged: failures+=1
 		else:
 			var retained=true
