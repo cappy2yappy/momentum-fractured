@@ -1,0 +1,9 @@
+{
+  "test": "actual release graphical launcher startup",
+  "architecture": "arm64",
+  "exit": 0,
+  "graphics_banner": "OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4",
+  "errors": [],
+  "scope": "180 rendered frames via real persistent Fresh launcher; no human campaign claim",
+  "passed": true
+}

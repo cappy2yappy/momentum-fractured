@@ -1,0 +1,51 @@
+name: BUILD05 Integrated macOS candidate
+on:
+  pull_request:
+    branches: [feature/alpha-0.6.1-tr05-pr37]
+    paths: ['tools/build05/**', '.github/workflows/build05-macos.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: build05-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  macos-candidate:
+    runs-on: macos-15-intel
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c
+          path: game-source
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install verified official Godot 4.6.1 Universal
+        run: python3 tools/build05/install.py
+      - name: Source QA, Universal export, packaged resource and launcher QA
+        env:
+          BUILD05_SOURCE_ROOT: ${{ github.workspace }}/game-source
+        run: python3 tools/build05/candidate.py --godot "$GODOT" --headless-native
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Kaze-BUILD05-macOS-Universal-5dfc4c4f
+          path: |
+            game-source/build/build05/Kaze-BUILD05-macOS-Universal-5dfc4c4f.zip
+            game-source/build/build05/MANIFEST.json
+            game-source/build/build05/QA_RESULTS.json
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BUILD05-native-macOS-QA-evidence
+          path: |
+            game-source/build/build05/evidence/
+            game-source/build/tr05/qa/*.log
+            game-source/build/tr05/qa/results.json
+          if-no-files-found: warn
+          retention-days: 30

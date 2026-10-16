@@ -1,0 +1,143 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "host": "macOS-27.0.1-arm64-arm-64bit",
+  "architecture": "arm64",
+  "native_capture_mode": "graphical capture",
+  "checks": [
+    {
+      "test": "release-startup",
+      "exit": 0,
+      "seconds": 1.77,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Canal-Automatic",
+      "exit": 0,
+      "seconds": 0.45,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Door-East",
+      "exit": 0,
+      "seconds": 0.52,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Door-West",
+      "exit": 0,
+      "seconds": 0.53,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Fresh",
+      "exit": 0,
+      "seconds": 0.53,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Cinematic",
+      "exit": 0,
+      "seconds": 0.52,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Descending",
+      "exit": 0,
+      "seconds": 0.62,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Reduced-Motion",
+      "exit": 0,
+      "seconds": 0.53,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "packaged-native",
+      "exit": 0,
+      "seconds": 20.17,
+      "passes": 54,
+      "errors": [],
+      "expected": "54 checks, 0 failure(s)",
+      "passed": true
+    },
+    {
+      "test": "packaged-intentional_space",
+      "exit": 0,
+      "seconds": 0.69,
+      "passes": 63,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-audit_intentional_space",
+      "exit": 0,
+      "seconds": 0.57,
+      "passes": 21,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-movement_momentum",
+      "exit": 0,
+      "seconds": 0.68,
+      "passes": 53,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-save_compatibility",
+      "exit": 0,
+      "seconds": 0.58,
+      "passes": 11,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-expansion_gates_save",
+      "exit": 0,
+      "seconds": 0.59,
+      "passes": 17,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-skyworks_progression",
+      "exit": 0,
+      "seconds": 0.67,
+      "passes": 33,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    }
+  ]
+}
