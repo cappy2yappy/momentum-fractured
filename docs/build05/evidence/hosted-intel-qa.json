@@ -1,0 +1,197 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "host": "macOS-15.7.9-x86_64-i386-64bit-Mach-O",
+  "architecture": "x86_64",
+  "native_capture_mode": "headless; no screenshots",
+  "checks": [
+    {
+      "test": "import-warmup",
+      "exit": 0,
+      "seconds": 47.57,
+      "passes": 0,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "import",
+      "exit": 0,
+      "seconds": 12.02,
+      "passes": 0,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "baseline",
+      "exit": 0,
+      "seconds": 0.12,
+      "passes": 0,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "preservation",
+      "exit": 0,
+      "seconds": 1.12,
+      "passes": 59,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "source-suites",
+      "exit": 0,
+      "seconds": 70.03,
+      "passes": 0,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "export",
+      "exit": 0,
+      "seconds": 36.18,
+      "passes": 0,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "release-startup",
+      "exit": 0,
+      "seconds": 1.66,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Canal-Automatic",
+      "exit": 0,
+      "seconds": 2.1,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Door-East",
+      "exit": 0,
+      "seconds": 2.14,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Door-West",
+      "exit": 0,
+      "seconds": 2.09,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Fresh",
+      "exit": 0,
+      "seconds": 2.2,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Cinematic",
+      "exit": 0,
+      "seconds": 2.21,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Descending",
+      "exit": 0,
+      "seconds": 1.9,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "Play-Stair-Reduced-Motion",
+      "exit": 0,
+      "seconds": 1.81,
+      "passes": 0,
+      "errors": [],
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "packaged-native",
+      "exit": 0,
+      "seconds": 9.3,
+      "passes": 54,
+      "errors": [],
+      "expected": "54 checks, 0 failure(s)",
+      "passed": true
+    },
+    {
+      "test": "packaged-intentional_space",
+      "exit": 0,
+      "seconds": 3.24,
+      "passes": 63,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-audit_intentional_space",
+      "exit": 0,
+      "seconds": 2.86,
+      "passes": 21,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-movement_momentum",
+      "exit": 0,
+      "seconds": 4.51,
+      "passes": 53,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-save_compatibility",
+      "exit": 0,
+      "seconds": 3.26,
+      "passes": 11,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-expansion_gates_save",
+      "exit": 0,
+      "seconds": 2.83,
+      "passes": 17,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "packaged-skyworks_progression",
+      "exit": 0,
+      "seconds": 3.27,
+      "passes": 33,
+      "errors": [],
+      "expected": null,
+      "passed": true
+    }
+  ]
+}

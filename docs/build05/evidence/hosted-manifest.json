@@ -1,0 +1,125 @@
+{
+  "source_commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "pr39_runtime": "f168339a6fa6b02f16958ce250636dbe47d4a783",
+  "geometry_base": "b950373efb5c4621d7da7e0be1506db048e3043a",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "native_host": "x86_64",
+  "timestamp_utc": "2026-10-16T19:06:08.981053+00:00",
+  "archive": "Kaze-BUILD05-macOS-Universal-5dfc4c4f.zip",
+  "sha256": "7389b03b6e9106d899c27d4ef279cd930add4bea87a08ae542a9ef544e6ea4c4",
+  "bytes": 76894543,
+  "pck_entries": 573,
+  "members": [
+    {
+      "path": "Play-Stair-Cinematic.command",
+      "bytes": 314,
+      "sha256": "26ff0daecbe8d9b34b4ffb5d9489a66d7cfa67a98488a25ab2cee13cd7b50bf6"
+    },
+    {
+      "path": "Play-Canal-Automatic.command",
+      "bytes": 314,
+      "sha256": "80bed5effb9e0b0aeb317498be570babdfae812506dfff1addff4c41c87e3212"
+    },
+    {
+      "path": "Play-Fresh.command",
+      "bytes": 225,
+      "sha256": "843263924d77faf529d7d4ea03a155fb33b5518e8f2d93ba2472952b1bc24ea8"
+    },
+    {
+      "path": "Play-Stair-Reduced-Motion.command",
+      "bytes": 350,
+      "sha256": "eece3311017ac95c177e45419ea59eb126a86085a2856e495a338c3b01a77561"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/MacOS/Kaze \u0393\u00c7\u00f6 Silent District Alpha 0.5.0",
+      "bytes": 183849535,
+      "sha256": "aa1a4febbb87876717d6d2fc9b65ad0878696d1e676b64c1bb1c18775bb1f070"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/Resources/icon.icns",
+      "bytes": 67500,
+      "sha256": "779ff524928785811d6d4c61f47a26491160b1092db9b610e85fcdfd9b2d2b2a"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/Resources/Kaze \u0393\u00c7\u00f6 Silent District Alpha 0.5.0.pck",
+      "bytes": 16444936,
+      "sha256": "079614b709967eb75abd6535d64aefb83072fe8e0c131a94f9948e251d3f38e7"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/Resources/PrivacyInfo.xcprivacy",
+      "bytes": 229,
+      "sha256": "0535353bb08c25b8ce5ed9ac7e442a5994f402e0f6cbc4bed668cfc63c2ceac3"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/Info.plist",
+      "bytes": 1908,
+      "sha256": "3ac172d88aaa3702da4bc558fb0e145644f9b59b5845388acec97b824595edc0"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/PkgInfo",
+      "bytes": 9,
+      "sha256": "7e50a30efad50208a173203ced60818d693bb61266b75aa10927d1a2adce80cb"
+    },
+    {
+      "path": "fixtures/Stair-Descending.json",
+      "bytes": 714,
+      "sha256": "6348bf0b3bdaf41e88c6b15f926e800133074d19372560d94d28438cad8925da"
+    },
+    {
+      "path": "fixtures/Door-West.json",
+      "bytes": 713,
+      "sha256": "1d696d5a19e9e5000c73a3100aa0dcf11a8f74f459093e2c580a8c569f8c2c1b"
+    },
+    {
+      "path": "fixtures/Canal-Automatic.json",
+      "bytes": 713,
+      "sha256": "13552157899e2e5005160b1fe07711d34e3d09ad1de14dd858ad6376810480fa"
+    },
+    {
+      "path": "fixtures/Stair-Cinematic.json",
+      "bytes": 713,
+      "sha256": "495665c486c56f572a1652e1df7efd136c72cc931f8570896d835ee100eb64fb"
+    },
+    {
+      "path": "fixtures/Door-East.json",
+      "bytes": 713,
+      "sha256": "27153bafa64ee1af9084b55da6c0bc3746960449bc7d279a4dd379fa577bfd87"
+    },
+    {
+      "path": "fixtures/Stair-Reduced-Motion.json",
+      "bytes": 713,
+      "sha256": "495665c486c56f572a1652e1df7efd136c72cc931f8570896d835ee100eb64fb"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 1529,
+      "sha256": "9af85f348dd552de49824e9bac5ea164d878e47d2f187b0796ab8029e6a67371"
+    },
+    {
+      "path": "Play-Door-East.command",
+      "bytes": 296,
+      "sha256": "55eea60fff4ad2ca3466871b6421f62b74a95d37b7f26c058fa068a5d7cdf515"
+    },
+    {
+      "path": "Play-Stair-Descending.command",
+      "bytes": 317,
+      "sha256": "bea7412cb4c8f30ae98e8a83b36b4f6d3b045c5c55b439efd33b99b083ab3443"
+    },
+    {
+      "path": "Play-Door-West.command",
+      "bytes": 296,
+      "sha256": "ab37f6a834f44b4a1ca2b68f81e6d2ad81088d2908949876af2031a1a2d2e44b"
+    }
+  ],
+  "qa_status": "passed",
+  "signing": "unsigned, unnotarized",
+  "limits": [
+    "stair gait unfinished",
+    "scripted fixtures, no human full campaign",
+    "gamepad and sustained FPS not certified"
+  ]
+}

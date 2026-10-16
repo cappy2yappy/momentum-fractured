@@ -1,0 +1,285 @@
+{
+  "status": "passed",
+  "source_commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "controls_commit": "416477542a0fd1cb0a44ca3631e97338e08d00dc",
+  "draft_pr": "https://github.com/cappy2yappy/momentum-fractured/pull/40",
+  "run": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/38951786047",
+  "artifacts": [
+    {
+      "id": 12068098774,
+      "name": "BUILD05-native-macOS-QA-evidence",
+      "size_in_bytes": 61233,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12068098774",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12068098774/zip",
+      "expired": false,
+      "created_at": "2026-10-16T19:06:18Z",
+      "expires_at": "2026-11-15T19:06:16Z",
+      "updated_at": "2026-10-16T19:06:18Z",
+      "digest": "sha256:ab894d13e563d0472fe3b9e11d940a086aa666688b721a2fa0c7534e8877d67d",
+      "workflow_run": {
+        "id": 38951786047,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build05-integrated-macos",
+        "head_sha": "416477542a0fd1cb0a44ca3631e97338e08d00dc"
+      }
+    },
+    {
+      "id": 12067919040,
+      "name": "Kaze-BUILD05-macOS-Universal-5dfc4c4f",
+      "size_in_bytes": 76614524,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12067919040",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12067919040/zip",
+      "expired": false,
+      "created_at": "2026-10-16T19:06:16Z",
+      "expires_at": "2026-11-15T19:06:09Z",
+      "updated_at": "2026-10-16T19:06:16Z",
+      "digest": "sha256:d5a7e03039d9d56ff7cccf86c4d38f10c3cc34e5884058b17bb26e55f1ffe9ba",
+      "workflow_run": {
+        "id": 38951786047,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build05-integrated-macos",
+        "head_sha": "416477542a0fd1cb0a44ca3631e97338e08d00dc"
+      }
+    }
+  ],
+  "outer_digests_verified": true,
+  "inner_archive_sha256": "7389b03b6e9106d899c27d4ef279cd930add4bea87a08ae542a9ef544e6ea4c4",
+  "inner_archive_bytes": 76894543,
+  "all_member_hashes_verified": true,
+  "zip_crc": "passed",
+  "source_suites": 25,
+  "source_assertions": 1607,
+  "packaged_assertions_per_native_host": 252,
+  "architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "pack_audit": {
+    "entries": 573,
+    "world_data_verified": true,
+    "forbidden_entries": [],
+    "all_pck_member_md5s_verified": true
+  },
+  "shipped_executable_modes": [
+    {
+      "path": "Play-Stair-Cinematic.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Canal-Automatic.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Fresh.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Stair-Reduced-Motion.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Kaze-BUILD05.app/Contents/MacOS/Kaze \u0393\u00c7\u00f6 Silent District Alpha 0.5.0",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Door-East.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Stair-Descending.command",
+      "mode": "0o100755"
+    },
+    {
+      "path": "Play-Door-West.command",
+      "mode": "0o100755"
+    }
+  ],
+  "rendered_capture_hashes": [
+    {
+      "path": "passage_13-0_after.png",
+      "bytes": 1129847,
+      "sha256": "65dae45f636c9a8715bb12904ced987944f9b7704e730ebc4160e9395998de31"
+    },
+    {
+      "path": "passage_13-0_after_sprint.png",
+      "bytes": 1129269,
+      "sha256": "7ae464ca6e94a4eb52d6aaf79e0ae8ba4d4f8c03e22679ab86f627a7694650b2"
+    },
+    {
+      "path": "passage_13-0_before.png",
+      "bytes": 1064479,
+      "sha256": "d8151c2b6e91649b0777dbfc4fa4ab84028b6ddf7ae7c465dec33bd3cb21e211"
+    },
+    {
+      "path": "passage_13-0_before_sprint.png",
+      "bytes": 1062366,
+      "sha256": "e907a12afe10b05af2e427e896986ba7cd68281e51d72b690bce2b8f426907d2"
+    },
+    {
+      "path": "passage_13-14_after.png",
+      "bytes": 1113402,
+      "sha256": "37e6a3a0c59925982e266adc453f0ac87bb9d34ec3d4155e7efc60a839c6aada"
+    },
+    {
+      "path": "passage_13-14_after_sprint.png",
+      "bytes": 1123509,
+      "sha256": "9e18da7732e36529578706761052b6083a65525ea69241ad5e4426f6969494e6"
+    },
+    {
+      "path": "passage_13-14_before.png",
+      "bytes": 1129329,
+      "sha256": "3f32efb611572302ceffdd7d97ad19c3d0fd07f323dd503bf4781e03e7ba389e"
+    },
+    {
+      "path": "passage_13-14_before_sprint.png",
+      "bytes": 1129306,
+      "sha256": "032d58ffd9024f32705e345a96f78addb3515b5912c1b59af391145c055817b1"
+    },
+    {
+      "path": "passage_14-13_after.png",
+      "bytes": 1121094,
+      "sha256": "255f0fda5641ec695a47a28f71b6c6f6f1aae5c9bbef24f7f84a7ebb1aa43a87"
+    },
+    {
+      "path": "passage_14-13_after_sprint.png",
+      "bytes": 1123829,
+      "sha256": "dfb3c93b7e99291cd4a5fe31cc356d7d284969e53b7950986a596662bd6dcb54"
+    },
+    {
+      "path": "passage_14-13_before.png",
+      "bytes": 1146318,
+      "sha256": "2d1e910491b8d7f66ab8048e79918f1562b8b1b243ddb0e68e82d70972ca4646"
+    },
+    {
+      "path": "passage_14-13_before_sprint.png",
+      "bytes": 1146065,
+      "sha256": "9c68825ff465f610e11008cd1bf81fe972387e137b3ba89d550b0cc70ec777ce"
+    },
+    {
+      "path": "passage_15-16_after.png",
+      "bytes": 762138,
+      "sha256": "176669e5834c7805daf57a2e728d7625e03822735b7037bcb5bb67eb0406d035"
+    },
+    {
+      "path": "passage_15-16_after_sprint.png",
+      "bytes": 764559,
+      "sha256": "e86ad2ca044a52ed7f9c0081e5b404bdeaad0f1bec2f366b34de9821229ccb84"
+    },
+    {
+      "path": "passage_15-16_before.png",
+      "bytes": 960612,
+      "sha256": "6a39738feb91ee01282938e3776a73b271033663338b78abf9cea24bb6ac0c70"
+    },
+    {
+      "path": "passage_15-16_before_sprint.png",
+      "bytes": 960542,
+      "sha256": "d85340d944b4d1aec7fc5151945f4efd8fa964bb9956c089a6d38ced85df6b14"
+    },
+    {
+      "path": "passage_16-15_after.png",
+      "bytes": 933712,
+      "sha256": "278f3364d70935a7870707d9349a4678db121b3c6620a477ce90f448ce702d9d"
+    },
+    {
+      "path": "passage_16-15_after_sprint.png",
+      "bytes": 943122,
+      "sha256": "2bc1e014c630d33c3917655eddd3b6e7011288c931edf6b646a63768f1c6fe4a"
+    },
+    {
+      "path": "passage_16-15_before.png",
+      "bytes": 773249,
+      "sha256": "b9952927fad0662bc3033d28119ffe7c9369eb39d91e3211e2c4e761fc0f1286"
+    },
+    {
+      "path": "passage_16-15_before_sprint.png",
+      "bytes": 773299,
+      "sha256": "1b5315eb63c75cb35bd609c3e17d70dcdfc4bc9b8f331f8a360c1ebe1bf0fc4b"
+    },
+    {
+      "path": "stair_14-17_cinematic_after.png",
+      "bytes": 1051052,
+      "sha256": "ab1f3a38fb741220a765e4507b291ce35452ddb38f0ff9938a1680aa01e275d1"
+    },
+    {
+      "path": "stair_14-17_cinematic_before.png",
+      "bytes": 1003396,
+      "sha256": "56833182524517b7aa560ad910bf89e81b1e28ef8a92feca8aaa2d5fa8942975"
+    },
+    {
+      "path": "stair_14-17_cinematic_close.png",
+      "bytes": 614563,
+      "sha256": "ac4fbf03d9b1959417e544dcfa0dffc89b88ad9beb5c6bcdb59890566e246c73"
+    },
+    {
+      "path": "stair_14-17_cinematic_moving.png",
+      "bytes": 837636,
+      "sha256": "09d7c457d8c82cec5a76798b212f6bbdab8101ecfb1cfa2b2bbf2525eed02301"
+    },
+    {
+      "path": "stair_14-17_reduced_after.png",
+      "bytes": 1051052,
+      "sha256": "ab1f3a38fb741220a765e4507b291ce35452ddb38f0ff9938a1680aa01e275d1"
+    },
+    {
+      "path": "stair_14-17_reduced_before.png",
+      "bytes": 1003366,
+      "sha256": "d5857549906afee4b70f9fe1bcbaf83c679a6a2aba2ddb093b82109cd89d5311"
+    },
+    {
+      "path": "stair_14-17_reduced_close.png",
+      "bytes": 721199,
+      "sha256": "603d7be3df7d714b6b9f6470674083176dd9de2145ec1c4172de4c3b91461154"
+    },
+    {
+      "path": "stair_14-17_reduced_moving.png",
+      "bytes": 900276,
+      "sha256": "f5d1364f1fb22cb6d9d2b4cae5d811f32c847214b9ee0266724c34c1b1a1442c"
+    },
+    {
+      "path": "stair_17-14_cinematic_after.png",
+      "bytes": 1002156,
+      "sha256": "8332a45819893cfd6f2434ca9dd302606ac56feb3db761019c2de548b0d2a9a3"
+    },
+    {
+      "path": "stair_17-14_cinematic_before.png",
+      "bytes": 1063713,
+      "sha256": "adf1189178a4b0728b9efe3fdebcca76bcbd55377a751189cdbb8b215d0f7f41"
+    },
+    {
+      "path": "stair_17-14_cinematic_close.png",
+      "bytes": 634726,
+      "sha256": "66f864c3513c2c6338148ae3b536bff84dfa53fb2e016ea73fcbf49c4ea69d2c"
+    },
+    {
+      "path": "stair_17-14_cinematic_moving.png",
+      "bytes": 868815,
+      "sha256": "26a299475d7b11dd0582bad52e85f26999484e8b8d58f92b8ec4e7a46367527b"
+    },
+    {
+      "path": "stair_17-14_reduced_after.png",
+      "bytes": 1002156,
+      "sha256": "8332a45819893cfd6f2434ca9dd302606ac56feb3db761019c2de548b0d2a9a3"
+    },
+    {
+      "path": "stair_17-14_reduced_before.png",
+      "bytes": 1063604,
+      "sha256": "d1dd15f27f6190a7d63120f8aaba32d5c726c2b41ba50feadd91103e8712285f"
+    },
+    {
+      "path": "stair_17-14_reduced_close.png",
+      "bytes": 770744,
+      "sha256": "071f021a65753d906c844684bb82590ce9a91d5101ac7e930f54704cbd03c3a9"
+    },
+    {
+      "path": "stair_17-14_reduced_moving.png",
+      "bytes": 945790,
+      "sha256": "37c7f7639c7a2cdda0f706ff591c3eb4d1b5825a1132a9f724a2933ea4249a9d"
+    }
+  ],
+  "scopes": {
+    "intel": "macOS 15.7.9, native headless release/7 launchers plus 252 mounted-pack assertions",
+    "arm64": "macOS 27.0.1 Apple M4, downloaded release/7 launchers, 252 mounted-pack assertions with graphical input captures; release Fresh graphical boot 180 frames"
+  }
+}
