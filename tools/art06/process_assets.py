@@ -27,6 +27,7 @@ SPEC = {
     "r18_lantern_bracket":  ("a21_lantern.png",   "fit",  (None, 96)),
     "r18_routing_plate":    ("a23_plate.png",     "fit",  (150, None)),
     "r18_steam_column":     ("a24_steam.png",     "fit",  (None, 220)),
+    "r18_back_wall":        ("a25_backwall.png",  "fit",  (None, 700)),
 }
 
 def clean(im):

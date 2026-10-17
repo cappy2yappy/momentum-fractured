@@ -14,6 +14,12 @@
    "occludes_player": false,
    "note": "Damaged buildings, desaturated; behind everything except the approved district background."
   },
+  "bg_wall": {
+   "z": -35,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Ruined recessed back wall; arch openings are true alpha so the approved district background shows through. Drawn BEFORE runtime markers."
+  },
   "bg_props": {
    "z": -30,
    "collides": false,
@@ -484,10 +490,10 @@
    "layer": "bg_far",
    "asset": "r18_damaged_building",
    "rect": [
-    1860,
-    0,
-    400,
-    369
+    1880,
+    370,
+    260,
+    240
    ],
    "modulate": [
     0.55,
@@ -495,17 +501,17 @@
     0.7,
     1
    ],
-   "note": "upper-city facade seen through the broken roof; bottom kept above anchor_3 clear zone"
+   "note": "base tucked behind back-wall crown (y600); clear of anchor_2/anchor_3"
   },
   {
    "id": "bldg_west",
    "layer": "bg_far",
    "asset": "r18_damaged_building",
    "rect": [
-    260,
-    380,
-    360,
-    330
+    250,
+    300,
+    340,
+    312
    ],
    "flip_h": true,
    "modulate": [
@@ -514,6 +520,41 @@
     0.6,
     1
    ]
+  },
+  {
+   "id": "back_wall_a",
+   "layer": "bg_wall",
+   "asset": "r18_back_wall",
+   "rect": [
+    0,
+    600,
+    2178,
+    700
+   ],
+   "modulate": [
+    0.78,
+    0.78,
+    0.86,
+    1
+   ]
+  },
+  {
+   "id": "back_wall_b",
+   "layer": "bg_wall",
+   "asset": "r18_back_wall",
+   "rect": [
+    2178,
+    600,
+    2178,
+    700
+   ],
+   "modulate": [
+    0.78,
+    0.78,
+    0.86,
+    1
+   ],
+   "note": "second repeat; clipped at world edge x2600"
   },
   {
    "id": "pipe_run_hi",
@@ -803,5 +844,8 @@
    ],
    "why": "patrol bounds 755..1145 on S2"
   }
+ ],
+ "keep_clear_exempt_layers": [
+  "bg_wall"
  ]
 }

@@ -14,6 +14,23 @@ func grab(path: String):
 	await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png(path)
 
+var saved := {}
+func set_markers(w, on: bool):
+	if not on:
+		saved = {"hazards": w.expansion.hazards.duplicate(), "gates": w.opened_kunai_gates.duplicate(), "lore": w.expansion_flags.duplicate(), "anchors": w.tether_anchors.duplicate()}
+		w.expansion.hazards.clear()
+		for g in w.kunai_gates: w.opened_kunai_gates[g.id] = true
+		w.expansion_flags["lore_%d" % ROOM] = true
+		w.tether_anchors.clear()
+		for n in get_nodes_in_group("kaze_grapple_anchor"): n.remove_from_group("kaze_grapple_anchor"); n.set_meta("art06_hidden", true)
+		w.expansion.hide_portals = true
+	else:
+		w.expansion.hazards.assign(saved.hazards); w.opened_kunai_gates = saved.gates; w.expansion_flags = saved.lore; w.tether_anchors.assign(saved.anchors)
+		for n in w.geometry.get_children():
+			if n.has_meta("art06_hidden"): n.add_to_group("kaze_grapple_anchor"); n.remove_meta("art06_hidden")
+		w.expansion.hide_portals = false
+	w.queue_redraw()
+
 func run():
 	DirAccess.make_dir_recursive_absolute(out)
 	root.transparent_bg = false
@@ -21,7 +38,11 @@ func run():
 	root.add_child(w); current_scene = w
 	await process_frame
 	w.embodied_transitions.production_art = Suppress.new()
+	w.expansion = load("res://tools/art06/expansion_markers_off.gd").new()
 	w.build_room(ROOM)
+	# Anchors are drawn only when tether is unlocked; enable it visually so the
+	# three R18 anchors appear in review frames (no physics/save effect: test mode).
+	w.player.tether_unlocked = true
 	await process_frame
 	var sig := JSON.stringify(w.platforms)
 	w.player.set_physics_process(false); w.player.set_process(false)
@@ -45,6 +66,12 @@ func run():
 		for e in w.enemies: e.visible = false
 		for h in hud_layers: h.visible = false
 		await grab(out + "/%s_plate.png" % k)
+		# Same frame with runtime interactive markers (doors, labels, gate bars, anchors,
+		# hazard telegraph, lore marker) switched off; the diff isolates those markers,
+		# which the real integration draws AFTER the dressing (draw_background hook).
+		await set_markers(w, false)
+		await grab(out + "/%s_plate_nomarkers.png" % k)
+		await set_markers(w, true)
 		# actors on transparent background
 		root.transparent_bg = true
 		w.self_modulate.a = 0.0

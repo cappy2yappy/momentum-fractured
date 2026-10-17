@@ -27,9 +27,10 @@ for s in d["supports"]:
 items = [(p["id"], p.get("layer"), p["rect"]) for p in d["props"]]
 items += [(s["id"], "support", s.get("rect") or [s["x"], s["top"], s["w"], s["bottom"]-s["top"]]) for s in d["supports"]]
 exempt = {("isolator", "exit_east")}
+exempt_layers = set(d.get("keep_clear_exempt_layers", []))  # drawn before runtime markers
 for k in d["keep_clear"]:
     for iid, layer, r in items:
-        if (iid, k["id"]) in exempt: continue
+        if (iid, k["id"]) in exempt or layer in exempt_layers: continue
         hit = circ_rect(k["circle"], r) if "circle" in k else inter(k["rect"], r)
         ok(not hit, f"{iid} ({layer}) intrudes keep-clear {k['id']}: {k['why']}")
 # 4. Foreground occluders only where no keep-clear and no walkable surface within 120px.

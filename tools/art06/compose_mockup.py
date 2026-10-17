@@ -9,9 +9,9 @@ Usage: compose_mockup.py LAYOUT ASSET_DIR PASS_DIR OUT_DIR [GEOMETRY_JSON]
 """
 import json, sys
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageEnhance
+from PIL import Image, ImageDraw, ImageEnhance, ImageChops, ImageFilter
 
-ORDER = ["bg_far", "bg_props", "support", "surface", "gate_dressing"]
+ORDER = ["bg_far", "bg_wall", "bg_props", "support", "surface", "gate_dressing"]
 SUPPORT_DARKEN = 0.85
 
 def load(asset_dir, name, cache={}):
@@ -72,6 +72,18 @@ def world_layer(layout, assets, layer):
         put(modulate(im, p.get("modulate")), x, y)
     return canvas
 
+def markers(passes, view):
+    """Runtime-drawn interactive markers = pixels that change when markers are switched off.
+    Enclosed interiors (door frames, anchor rings) are filled so they stay intact."""
+    a = Image.open(passes / f"{view}_plate.png").convert("RGB")
+    b = Image.open(passes / f"{view}_plate_nomarkers.png").convert("RGB")
+    diff = ImageChops.difference(a, b).convert("L").point(lambda v: 255 if v > 4 else 0)
+    diff = diff.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.MinFilter(3))
+    outside = diff.copy(); ImageDraw.floodfill(outside, (0, 0), 128)
+    mask = outside.point(lambda v: 0 if v == 128 else 255)
+    m = a.convert("RGBA"); m.putalpha(mask)
+    return m
+
 def to_screen(world_img, cam):
     cx, cy = cam["center"]; z = cam["zoom"]
     tl = (cx - 640 / z, cy - 360 / z)
@@ -100,8 +112,9 @@ def main(layout_p, assets, passes, out, geo_p=None):
     cams = json.load(open(passes / "cameras.json")); geo = json.load(open(geo_p)) if geo_p else None
     layers = {L: world_layer(layout, assets, L) for L in ORDER + ["fg_occluder"]}
     for view, cam in cams.items():
-        img = Image.open(passes / f"{view}_plate.png").convert("RGBA")
+        img = Image.open(passes / f"{view}_plate_nomarkers.png").convert("RGBA")
         for L in ORDER: img.alpha_composite(to_screen(layers[L], cam))
+        img.alpha_composite(markers(passes, view))
         img.alpha_composite(Image.open(passes / f"{view}_actors.png").convert("RGBA"))
         img.alpha_composite(to_screen(layers["fg_occluder"], cam))
         hud = passes / f"{view}_hud.png"
