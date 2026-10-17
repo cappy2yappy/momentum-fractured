@@ -65,11 +65,13 @@ def main():
             ys, xs = np.where(arr[:, :, 3] > A)
             bottom = int(ys.max()) + 1
             hidden = int(((arr[:, :, 3] == 0) & (arr[:, :, :3].sum(axis=2) != 0)).sum())
+            veil = int(((arr[:, :, 3] > 0) & (arr[:, :, 3] < 10)).sum())
             margin = int(min(xs.min(), ys.min(), cell[0] - 1 - xs.max(), cell[1] - 1 - ys.max()))
-            row = {"index": i, "bottom_row": bottom, "baseline_ok": bottom == base, "hidden_rgb_px": hidden, "margin_px": margin}
+            row = {"index": i, "bottom_row": bottom, "baseline_ok": bottom == base, "hidden_rgb_px": hidden, "low_alpha_px": veil, "margin_px": margin}
             inv.append(row)
             if bottom != base: report["problems"].append(f"{clip['id']}[{i}] baseline {bottom}!={base}")
             if hidden: report["problems"].append(f"{clip['id']}[{i}] hidden RGB")
+            if veil: report["problems"].append(f"{clip['id']}[{i}] low-alpha veil {veil}px")
             if margin < 12: report["problems"].append(f"{clip['id']}[{i}] margin {margin}<12")
         pairs, n = [], len(fr)
         for i in range(n):

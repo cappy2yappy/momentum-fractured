@@ -12,6 +12,7 @@ import numpy as np
 from PIL import Image
 
 A_THR = 8  # alpha threshold for "opaque"
+ALPHA_FLOOR = 10  # generator leaves a faint alpha veil (1-7); anything below this is zeroed
 
 
 def bbox(a):
@@ -47,19 +48,22 @@ def _gap_boundaries(proj, n):
 
 def _clean_dust(cell, min_frac=0.004):
     """Zero alpha of tiny disconnected specks; keep all substantial components (body, long hair strands)."""
+    arr = np.array(cell)
+    veil = (arr[:, :, 3] > 0) & (arr[:, :, 3] < ALPHA_FLOOR)
+    arr[veil] = 0
+    cell = Image.fromarray(arr)
     try:
         from scipy import ndimage
     except ImportError:
-        return cell, 0
-    arr = np.array(cell)
+        return cell, int(veil.sum())
     mask = arr[:, :, 3] > A_THR
     lab, n = ndimage.label(mask, structure=np.ones((3, 3)))
     if n <= 1:
-        return cell, 0
+        return cell, int(veil.sum())
     areas = ndimage.sum(mask, lab, index=np.arange(1, n + 1))
     keep = areas >= max(areas.max() * min_frac, 1)
     kill = ~np.isin(lab, np.where(keep)[0] + 1) & mask
-    removed = int(kill.sum())
+    removed = int(kill.sum()) + int(veil.sum())
     arr[kill] = 0
     arr[(arr[:, :, 3] > 0) & ~mask & ~np.isin(lab, np.where(keep)[0] + 1)] = 0
     return Image.fromarray(arr), removed
@@ -128,7 +132,7 @@ def register_clip(clip, cells, contract, ss):
         cropped = bool(dx + sb[0] < 0 or dy + sb[1] < 0 or dx + sb[2] > cw * ss or dy + sb[3] > ch * ss)
         arr = np.array(canvas)
         # clean hidden RGB (ART05 rule)
-        arr[arr[:, :, 3] == 0] = 0
+        arr[arr[:, :, 3] < ALPHA_FLOOR] = 0
         fb = bbox(arr[:, :, 3])
         margin = min(fb[0], fb[1], cw * ss - fb[2], ch * ss - fb[3])
         edge_touch_src = bool(b[0] <= 1 or b[1] <= 1 or b[2] >= cell.width - 1 or b[3] >= cell.height - 1)
