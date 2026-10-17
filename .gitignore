@@ -3,3 +3,4 @@
 build/
 *.log
 tools/art06/_patched/
+tools/art06/__pycache__/
