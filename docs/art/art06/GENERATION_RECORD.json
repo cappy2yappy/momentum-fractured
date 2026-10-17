@@ -1,0 +1,190 @@
+{
+ "tool": "Higgsfield MCP, model gpt_image_2_5 (OpenAI GPT Image 2.5), quality high, resolution 2k; assets with background=transparent (native alpha, no background removal pass)",
+ "references": {
+  "crossing": "PR28 review_1280_03_supported_crossing.png (media 286d5c10)",
+  "staircase": "PR28 review_1280_02_staircase.png (media 531afa44)",
+  "layers": "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)",
+  "r18": "native R18 before overview (media 61b1e35a)"
+ },
+ "note": "Prompts are recorded in condensed form; the full submitted text is preserved in Higgsfield job history under each job_id.",
+ "jobs": [
+  {
+   "master": "c0",
+   "job_id": "68057761-1200-4864-b70b-2b3b7e65ca0e",
+   "references": [
+    "native R18 before overview (media 61b1e35a)",
+    "PR28 review_1280_02_staircase.png (media 531afa44)",
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "concepts/r18_concept_01_whole_room.png",
+   "prompt": "Whole-room PUMP GALLERY concept registered loosely to the native R18 layout (image 1): keep platform layout; repaint every ledge as supported masonry/timber; three pump drums behind ledges; post-attack collapsed roof, shoring, abandoned tools; night indigo canal-city background matching PR28/PR30 palette and materials. No characters/text/UI."
+  },
+  {
+   "master": "c1",
+   "job_id": "1b077b69-490f-4ab4-b335-d044dda97940",
+   "references": [
+    "PR28 review_1280_02_staircase.png (media 531afa44)",
+    "PR28 review_1280_03_supported_crossing.png (media 286d5c10)",
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "concepts/r18_concept_02_machine_hall.png",
+   "prompt": "Gameplay-scale machine hall: stone walkway on two piers with relieving arch, giant pump drum and flywheel behind in a root-cracked masonry bay, arched windows to night city, dark foreground pipe/shoring silhouettes, post-attack props. Style of PR28/PR30."
+  },
+  {
+   "master": "c2",
+   "job_id": "69de4e80-0feb-4a08-8d14-70af4aeb0f63",
+   "references": [
+    "PR28 review_1280_02_staircase.png (media 531afa44)",
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "concepts/r18_concept_03_east_isolator.png",
+   "prompt": "East end: masonry ledge to iron service bulkhead, electric isolator barrier with porcelain insulators and cyan arcing, damaged two-storey service building with blown roof and shoring, wet pipes meeting insulated cable trays. Style of PR28/PR30."
+  },
+  {
+   "master": "a10_pier",
+   "job_id": "fb171017-3061-4920-bf1e-d26900809c5e",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_masonry_pier",
+   "prompt": "Single isolated 2D game asset on a fully transparent background, strict flat side view: tall rectangular masonry support pier, weathered grey ashlar, mossy joints, stepped plinth, flat top."
+  },
+  {
+   "master": "a11_ledge",
+   "job_id": "1294e610-c810-4c79-9ffb-4fd90f271bd8",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_ledge_cap_tile",
+   "prompt": "Single isolated 2D game asset on a fully transparent background, strict flat side view: long horizontal stone walkway slab edge-on, flat pale capstone top with highlight, ashlar front face, uniform height for horizontal tiling."
+  },
+  {
+   "master": "a12_pump",
+   "job_id": "b3469b3c-4581-4c4a-8d42-7ad50c10a371",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_pump_drum",
+   "prompt": "Isolated background prop, flat side view: riveted iron pump drum on stone base, spoked flywheel, valve wheels, brass gauge, roots; slightly desaturated."
+  },
+  {
+   "master": "a13_pipe_h",
+   "job_id": "1d289dc2-47d0-4f59-a8da-b7d2594057f1",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_pipe_h_tile",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: long straight riveted iron water pipe with flanges, constant thickness, tileable."
+  },
+  {
+   "master": "a14_pipe_elbow",
+   "job_id": "22b3ebc4-9df6-405a-9368-d9d7313a3169",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_pipe_elbow",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: vertical iron pipe turning 90 degrees right at top, gauge, valve wheel, wall clamps."
+  },
+  {
+   "master": "a15_arch",
+   "job_id": "501ef931-8f4b-403a-808a-cfc995920d98",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_relief_arch",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: wide shallow segmental relieving arch on two springers, open transparent underside, flat top."
+  },
+  {
+   "master": "a16_beam",
+   "job_id": "97468126-1214-4050-ad17-d58829f97710",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_timber_beam",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: long dark lacquered timber beam with iron straps and knee braces."
+  },
+  {
+   "master": "a17_broken",
+   "job_id": "de7b25d9-037b-4db6-8f19-b6f1b27cbdf9",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_broken_support",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: broken stone column propped by emergency timber shoring and rope, rubble, scorch marks."
+  },
+  {
+   "master": "a18_building",
+   "job_id": "39e6313f-0f99-4c98-8d55-c498daf06f67",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)",
+    "PR28 review_1280_02_staircase.png (media 531afa44)"
+   ],
+   "output": "r18_damaged_building",
+   "prompt": "Isolated background building: damaged two-storey Japanese-style brick and timber utility building, partly collapsed scorched tile roof, one warm window, tarp, props; desaturated night tones."
+  },
+  {
+   "master": "a19_fg",
+   "job_id": "07e72a35-1813-41f5-b533-67c9d2e3c8d1",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_fg_pipe_roots",
+   "prompt": "Isolated foreground occluder: near-black vertical pipe, cables and roots, faint cool rim light."
+  },
+  {
+   "master": "a20_isolator",
+   "job_id": "adb0f904-46fb-4aa2-aee3-8be79e42d12f",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_isolator_frame",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: tall electrical isolator doorway frame, iron posts with porcelain insulators and copper bus bars, textless hazard plate, open middle."
+  },
+  {
+   "master": "a21_lantern",
+   "job_id": "d7a4d741-e702-4051-a2cb-798f64f5a14c",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_lantern_bracket",
+   "prompt": "Isolated prop: iron wall bracket with glowing paper lantern."
+  },
+  {
+   "master": "a22_floor",
+   "job_id": "9f927bde-1c95-4241-b681-374d709dbe76",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_floor_face_tile",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: thick stone maintenance floor edge-on, flat capstone top, ashlar face with drainage grate, tileable."
+  },
+  {
+   "master": "a23_plate",
+   "job_id": "5346eaae-4a81-4c18-a61d-d1814a1ca14a",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_routing_plate",
+   "prompt": "Isolated wall decal: corroded brass routing plate with branching-pipe diagram (no letters) beside a newer tin repair patch with chalk mark."
+  },
+  {
+   "master": "a24_steam",
+   "job_id": "d2bd7bf9-e7ae-47f8-a8bc-99f14603c54f",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)"
+   ],
+   "output": "r18_steam_column",
+   "prompt": "Isolated effect: soft rising steam column, semi-transparent."
+  },
+  {
+   "master": "a25_backwall",
+   "job_id": "8c4bd7c5-fc75-47c7-aa4e-d6237a2ec139",
+   "references": [
+    "PR30 ENVIRONMENT_LAYERS.png (media 47ccb53c)",
+    "PR28 review_1280_02_staircase.png (media 531afa44)"
+   ],
+   "output": "r18_back_wall",
+   "prompt": "Single isolated 2D game asset on a fully transparent background: long dark recessed masonry wall with empty transparent round-arched windows, pilasters, ruined broken top edge, cool night tones, tileable."
+  }
+ ]
+}

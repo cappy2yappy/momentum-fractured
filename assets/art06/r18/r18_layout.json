@@ -1,0 +1,851 @@
+{
+ "room": 18,
+ "name": "PUMP GALLERY",
+ "world_size": [
+  2600,
+  1440
+ ],
+ "geometry_source": "PR39/PR41 runtime scripts/world_expansion.gd SHELVES[18] + generated stair slabs, dumped natively (docs/art/art06/captures/before/r18_geometry.json)",
+ "status": "Pilot dressing registered to CURRENT colliders. Generated slabs (class interim_catwalk) are expected to change under issue #43; re-fit when Level Masta's R18 geometry lands.",
+ "layers": {
+  "bg_far": {
+   "z": -40,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Damaged buildings, desaturated; behind everything except the approved district background."
+  },
+  "bg_wall": {
+   "z": -35,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Ruined recessed back wall; arch openings are true alpha so the approved district background shows through. Drawn BEFORE runtime markers."
+  },
+  "bg_props": {
+   "z": -30,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Pump drums, pipes, plates, steam. Machine room interior, recessed."
+  },
+  "support": {
+   "z": -20,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Piers, arches, beams that visually carry ledges. Darkened 15% so they read as behind the walking plane."
+  },
+  "surface": {
+   "z": -10,
+   "collides": "matches_collider",
+   "occludes_player": false,
+   "note": "Ledge caps and floor face drawn EXACTLY inside collider rectangles; top edge = collider top."
+  },
+  "gate_dressing": {
+   "z": -5,
+   "collides": false,
+   "occludes_player": false,
+   "note": "Isolator frame around the existing electric gate collider; gate's own runtime bars stay visible."
+  },
+  "fg_occluder": {
+   "z": 20,
+   "collides": false,
+   "occludes_player": true,
+   "note": "Only in zones with no route, exit, anchor, hazard or enemy lane."
+  }
+ },
+ "surfaces": [
+  {
+   "id": "floor",
+   "rect": [
+    0,
+    1300,
+    2600,
+    140
+   ],
+   "collider": "solid",
+   "tile": "r18_floor_face_tile"
+  },
+  {
+   "id": "S0_lower_bay",
+   "rect": [
+    1040,
+    1180,
+    320,
+    40
+   ],
+   "collider": "one_way",
+   "class": "authored",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "S1_west",
+   "rect": [
+    0,
+    1000,
+    580,
+    40
+   ],
+   "collider": "one_way",
+   "class": "authored",
+   "tile": "r18_ledge_cap_tile",
+   "note": "perimeter_landing extends x80 to x0"
+  },
+  {
+   "id": "S2_guard",
+   "rect": [
+    700,
+    800,
+    500,
+    40
+   ],
+   "collider": "one_way",
+   "class": "authored",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "S3_east",
+   "rect": [
+    2000,
+    760,
+    600,
+    40
+   ],
+   "collider": "one_way",
+   "class": "authored",
+   "tile": "r18_ledge_cap_tile",
+   "note": "perimeter_landing extends to x2600"
+  },
+  {
+   "id": "S4_upper",
+   "rect": [
+    1380,
+    620,
+    450,
+    40
+   ],
+   "collider": "one_way",
+   "class": "authored",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G1",
+   "rect": [
+    760,
+    1120,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G2",
+   "rect": [
+    470,
+    1060,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G3",
+   "rect": [
+    386.6667,
+    933.3333,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G4",
+   "rect": [
+    593.3334,
+    866.6666,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G5",
+   "rect": [
+    1065,
+    792,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G6",
+   "rect": [
+    1330,
+    784,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G7",
+   "rect": [
+    1595,
+    776,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G8",
+   "rect": [
+    1860,
+    768,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G9",
+   "rect": [
+    1901.6667,
+    713.3333,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  },
+  {
+   "id": "G10",
+   "rect": [
+    1678.3333,
+    666.6667,
+    300,
+    40
+   ],
+   "collider": "one_way",
+   "class": "interim_catwalk",
+   "tile": "r18_ledge_cap_tile"
+  }
+ ],
+ "supports": [
+  {
+   "id": "pier_S1",
+   "asset": "r18_masonry_pier",
+   "x": 470,
+   "top": 1040,
+   "bottom": 1300,
+   "w": 96,
+   "carries": [
+    "S1_west",
+    "G2"
+   ]
+  },
+  {
+   "id": "pier_S2_w",
+   "asset": "r18_masonry_pier",
+   "x": 760,
+   "top": 840,
+   "bottom": 1300,
+   "w": 96,
+   "carries": [
+    "S2_guard",
+    "G1",
+    "G4"
+   ]
+  },
+  {
+   "id": "pier_S2_e",
+   "asset": "r18_masonry_pier",
+   "x": 1012,
+   "top": 840,
+   "bottom": 1300,
+   "w": 96,
+   "carries": [
+    "S2_guard",
+    "G5"
+   ],
+   "note": "passes behind S0 west end; clear of undercroft doorway"
+  },
+  {
+   "id": "pier_S0_e",
+   "asset": "r18_masonry_pier",
+   "x": 1288,
+   "top": 1220,
+   "bottom": 1300,
+   "w": 72
+  },
+  {
+   "id": "pier_S4_w",
+   "asset": "r18_masonry_pier",
+   "x": 1390,
+   "top": 660,
+   "bottom": 1300,
+   "w": 88,
+   "carries": [
+    "S4_upper",
+    "G6"
+   ]
+  },
+  {
+   "id": "pier_S4_e",
+   "asset": "r18_masonry_pier",
+   "x": 1736,
+   "top": 660,
+   "bottom": 1300,
+   "w": 88,
+   "carries": [
+    "S4_upper",
+    "G7",
+    "G10"
+   ]
+  },
+  {
+   "id": "pier_S3_w",
+   "asset": "r18_masonry_pier",
+   "x": 2030,
+   "top": 800,
+   "bottom": 1300,
+   "w": 96,
+   "carries": [
+    "S3_east",
+    "G8",
+    "G9"
+   ]
+  },
+  {
+   "id": "pier_S3_e",
+   "asset": "r18_masonry_pier",
+   "x": 2470,
+   "top": 800,
+   "bottom": 1300,
+   "w": 96,
+   "carries": [
+    "S3_east"
+   ]
+  },
+  {
+   "id": "arch_S2",
+   "asset": "r18_relief_arch",
+   "rect": [
+    856,
+    840,
+    248,
+    100
+   ]
+  },
+  {
+   "id": "arch_S3",
+   "asset": "r18_relief_arch",
+   "rect": [
+    2126,
+    800,
+    344,
+    138
+   ]
+  },
+  {
+   "id": "arch_S4",
+   "asset": "r18_relief_arch",
+   "rect": [
+    1478,
+    660,
+    258,
+    104
+   ]
+  },
+  {
+   "id": "arch_S0",
+   "asset": "r18_relief_arch",
+   "rect": [
+    1112,
+    1220,
+    176,
+    72
+   ],
+   "note": "keeps the 80px under-ledge void reading as OPEN, not solid"
+  },
+  {
+   "id": "beam_G3",
+   "asset": "r18_timber_beam",
+   "rect": [
+    386.6667,
+    973.3333,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G4",
+   "asset": "r18_timber_beam",
+   "rect": [
+    593.3334,
+    906.6666,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G5",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1065,
+    832,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G6",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1330,
+    824,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G7",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1595,
+    816,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G8",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1860,
+    808,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G9",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1901.6667,
+    753.3333,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G10",
+   "asset": "r18_timber_beam",
+   "rect": [
+    1678.3333,
+    706.6667,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G1",
+   "asset": "r18_timber_beam",
+   "rect": [
+    760,
+    1160,
+    300,
+    60
+   ]
+  },
+  {
+   "id": "beam_G2",
+   "asset": "r18_timber_beam",
+   "rect": [
+    470,
+    1100,
+    300,
+    48
+   ]
+  }
+ ],
+ "props": [
+  {
+   "id": "bldg_east",
+   "layer": "bg_far",
+   "asset": "r18_damaged_building",
+   "rect": [
+    1880,
+    370,
+    260,
+    240
+   ],
+   "modulate": [
+    0.55,
+    0.55,
+    0.7,
+    1
+   ],
+   "note": "base tucked behind back-wall crown (y600); clear of anchor_2/anchor_3"
+  },
+  {
+   "id": "bldg_west",
+   "layer": "bg_far",
+   "asset": "r18_damaged_building",
+   "rect": [
+    250,
+    300,
+    340,
+    312
+   ],
+   "flip_h": true,
+   "modulate": [
+    0.45,
+    0.45,
+    0.6,
+    1
+   ]
+  },
+  {
+   "id": "back_wall_a",
+   "layer": "bg_wall",
+   "asset": "r18_back_wall",
+   "rect": [
+    0,
+    600,
+    2178,
+    700
+   ],
+   "modulate": [
+    0.78,
+    0.78,
+    0.86,
+    1
+   ]
+  },
+  {
+   "id": "back_wall_b",
+   "layer": "bg_wall",
+   "asset": "r18_back_wall",
+   "rect": [
+    2178,
+    600,
+    2178,
+    700
+   ],
+   "modulate": [
+    0.78,
+    0.78,
+    0.86,
+    1
+   ],
+   "note": "second repeat; clipped at world edge x2600"
+  },
+  {
+   "id": "pipe_run_hi",
+   "layer": "bg_props",
+   "asset": "r18_pipe_h_tile",
+   "rect": [
+    0,
+    600,
+    1390,
+    44
+   ],
+   "tile": true
+  },
+  {
+   "id": "pump_w",
+   "layer": "bg_props",
+   "asset": "r18_pump_drum",
+   "rect": [
+    140,
+    1060,
+    420,
+    240
+   ]
+  },
+  {
+   "id": "pump_c",
+   "layer": "bg_props",
+   "asset": "r18_pump_drum",
+   "rect": [
+    1450,
+    1060,
+    420,
+    240
+   ]
+  },
+  {
+   "id": "pump_e",
+   "layer": "bg_props",
+   "asset": "r18_pump_drum",
+   "rect": [
+    2130,
+    1104,
+    340,
+    196
+   ]
+  },
+  {
+   "id": "elbow_w",
+   "layer": "bg_props",
+   "asset": "r18_pipe_elbow",
+   "rect": [
+    250,
+    620,
+    250,
+    440
+   ]
+  },
+  {
+   "id": "elbow_c",
+   "layer": "bg_props",
+   "asset": "r18_pipe_elbow",
+   "rect": [
+    1500,
+    640,
+    250,
+    440
+   ]
+  },
+  {
+   "id": "routing_plate",
+   "layer": "bg_props",
+   "asset": "r18_routing_plate",
+   "rect": [
+    1300,
+    1050,
+    150,
+    106
+   ],
+   "note": "ST-03: old routing plate beside newer repair patch; non-interactive"
+  },
+  {
+   "id": "steam_c",
+   "layer": "bg_props",
+   "asset": "r18_steam_column",
+   "rect": [
+    1610,
+    850,
+    60,
+    214
+   ],
+   "modulate": [
+    1,
+    1,
+    1,
+    0.55
+   ]
+  },
+  {
+   "id": "broken_col",
+   "layer": "support",
+   "asset": "r18_broken_support",
+   "rect": [
+    1890,
+    916,
+    246,
+    384
+   ],
+   "note": "post-attack damage; behind G8/G9 catwalks"
+  },
+  {
+   "id": "lantern_1",
+   "layer": "bg_props",
+   "asset": "r18_lantern_bracket",
+   "rect": [
+    560,
+    900,
+    98,
+    100
+   ]
+  },
+  {
+   "id": "lantern_2",
+   "layer": "bg_props",
+   "asset": "r18_lantern_bracket",
+   "rect": [
+    640,
+    700,
+    98,
+    100
+   ]
+  },
+  {
+   "id": "lantern_3",
+   "layer": "bg_props",
+   "asset": "r18_lantern_bracket",
+   "rect": [
+    1824,
+    520,
+    98,
+    100
+   ]
+  },
+  {
+   "id": "lantern_4",
+   "layer": "bg_props",
+   "asset": "r18_lantern_bracket",
+   "rect": [
+    2126,
+    640,
+    98,
+    100
+   ]
+  },
+  {
+   "id": "isolator",
+   "layer": "gate_dressing",
+   "asset": "r18_isolator_frame",
+   "rect": [
+    2290,
+    516,
+    160,
+    244
+   ],
+   "note": "frames gate collider x2355..2385 y520..760; the 30px gate band is inside the open middle"
+  },
+  {
+   "id": "fg_top_left",
+   "layer": "fg_occluder",
+   "asset": "r18_fg_pipe_roots",
+   "rect": [
+    -30,
+    -40,
+    218,
+    524
+   ],
+   "modulate": [
+    0.8,
+    0.8,
+    0.9,
+    0.92
+   ]
+  },
+  {
+   "id": "fg_top_right",
+   "layer": "fg_occluder",
+   "asset": "r18_fg_pipe_roots",
+   "rect": [
+    2440,
+    -60,
+    190,
+    460
+   ],
+   "flip_h": true,
+   "modulate": [
+    0.8,
+    0.8,
+    0.9,
+    0.92
+   ]
+  }
+ ],
+ "keep_clear": [
+  {
+   "id": "anchor_1",
+   "circle": [
+    930,
+    510,
+    70
+   ],
+   "why": "tether anchor readability"
+  },
+  {
+   "id": "anchor_2",
+   "circle": [
+    1650,
+    340,
+    70
+   ],
+   "why": "tether anchor readability"
+  },
+  {
+   "id": "anchor_3",
+   "circle": [
+    2220,
+    460,
+    70
+   ],
+   "why": "tether anchor readability"
+  },
+  {
+   "id": "hazard_vent",
+   "rect": [
+    640,
+    1150,
+    100,
+    150
+   ],
+   "why": "timed vent telegraph must stay visible"
+  },
+  {
+   "id": "exit_west",
+   "rect": [
+    40,
+    780,
+    200,
+    220
+   ],
+   "why": "R16 passage + arrival"
+  },
+  {
+   "id": "exit_undercroft",
+   "rect": [
+    1110,
+    960,
+    180,
+    220
+   ],
+   "why": "R8 background doorway"
+  },
+  {
+   "id": "exit_east",
+   "rect": [
+    2400,
+    540,
+    200,
+    220
+   ],
+   "why": "R19 passage behind gate"
+  },
+  {
+   "id": "lore",
+   "rect": [
+    1660,
+    560,
+    60,
+    60
+   ],
+   "why": "lore pickup"
+  },
+  {
+   "id": "guard_lane",
+   "rect": [
+    755,
+    680,
+    390,
+    120
+   ],
+   "why": "patrol bounds 755..1145 on S2"
+  }
+ ],
+ "keep_clear_exempt_layers": [
+  "bg_wall"
+ ]
+}
