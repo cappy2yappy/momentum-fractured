@@ -19,14 +19,63 @@ def bbox(a):
     return int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1
 
 
+def _gap_boundaries(proj, n):
+    """n-1 cut positions along one axis, snapped to the widest empty run near each nominal split."""
+    L = len(proj)
+    cuts = []
+    for k in range(1, n):
+        nominal = int(round(k * L / n))
+        half = int(0.2 * L / n)
+        lo, hi = max(1, nominal - half), min(L - 1, nominal + half)
+        window = proj[lo:hi] <= 0
+        best, run, start = (None, 0), 0, None
+        for i, empty in enumerate(window):
+            if empty:
+                if start is None:
+                    start = i
+                run += 1
+                if run > best[1]:
+                    best = (start, run)
+            else:
+                run, start = 0, None
+        if best[0] is None:
+            cuts.append(lo + int(np.argmin(proj[lo:hi])))
+        else:
+            cuts.append(lo + best[0] + best[1] // 2)
+    return [0] + cuts + [L]
+
+
+def _clean_dust(cell, min_frac=0.004):
+    """Zero alpha of tiny disconnected specks; keep all substantial components (body, long hair strands)."""
+    try:
+        from scipy import ndimage
+    except ImportError:
+        return cell, 0
+    arr = np.array(cell)
+    mask = arr[:, :, 3] > A_THR
+    lab, n = ndimage.label(mask, structure=np.ones((3, 3)))
+    if n <= 1:
+        return cell, 0
+    areas = ndimage.sum(mask, lab, index=np.arange(1, n + 1))
+    keep = areas >= max(areas.max() * min_frac, 1)
+    kill = ~np.isin(lab, np.where(keep)[0] + 1) & mask
+    removed = int(kill.sum())
+    arr[kill] = 0
+    arr[(arr[:, :, 3] > 0) & ~mask & ~np.isin(lab, np.where(keep)[0] + 1)] = 0
+    return Image.fromarray(arr), removed
+
+
 def cut(img, grid):
     cols, rows = grid
-    w, h = img.size
-    cw, ch = w // cols, h // rows
+    a = np.array(img)[:, :, 3].astype(np.int64)
+    a = np.where(a > A_THR, a, 0)
+    rb = _gap_boundaries(a.sum(axis=1), rows)
     cells = []
     for r in range(rows):
+        band = a[rb[r]:rb[r + 1], :]
+        cb = _gap_boundaries(band.sum(axis=0), cols)
         for c in range(cols):
-            cells.append(img.crop((c * cw, r * ch, (c + 1) * cw, (r + 1) * ch)))
+            cells.append(img.crop((cb[c], rb[r], cb[c + 1], rb[r + 1])))
     return cells
 
 
@@ -76,7 +125,7 @@ def register_clip(clip, cells, contract, ss):
         big = Image.new("RGBA", (cw * ss + 2 * P, ch * ss + 2 * P), (0, 0, 0, 0))
         big.alpha_composite(sc, (dx + P, dy + P))
         canvas = big.crop((P, P, P + cw * ss, P + ch * ss))
-        cropped = int(np.array(sc)[:, :, 3].astype(np.int64).sum() - np.array(canvas)[:, :, 3].astype(np.int64).sum()) != 0
+        cropped = bool(dx + sb[0] < 0 or dy + sb[1] < 0 or dx + sb[2] > cw * ss or dy + sb[3] > ch * ss)
         arr = np.array(canvas)
         # clean hidden RGB (ART05 rule)
         arr[arr[:, :, 3] == 0] = 0
@@ -123,6 +172,9 @@ def main():
     for clip in auth["clips"]:
         raw = Image.open(os.path.join(root, a.raw, clip["raw"])).convert("RGBA")
         cells = cut(raw, clip["grid"])
+        cleaned = [_clean_dust(c) for c in cells]
+        cells = [c for c, _ in cleaned]
+        dust = [d for _, d in cleaned]
         assert len(cells) == len(clip["frames"]), (clip["id"], len(cells))
         entry = {"id": clip["id"], "fps": contract["fps"], "loop": clip["loop"], "status": clip["status"],
                  "raw": clip["raw"], "raw_sha256": hashlib.sha256(open(os.path.join(root, a.raw, clip["raw"]), "rb").read()).hexdigest()}
@@ -133,6 +185,8 @@ def main():
             if not tag:
                 for i, f in enumerate(frames):
                     f.save(os.path.join(root, a.frames, f"{clip['id']}_{i:02d}.png"), optimize=True)
+                for m, d in zip(meta, dust):
+                    m["dust_removed_px"] = d
                 entry["frames"] = meta
                 entry["source_to_cell_scale"] = round(scale, 5)
                 entry["path"] = os.path.relpath(sp, root)

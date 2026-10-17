@@ -3,7 +3,10 @@
  "family": "lateral_transition",
  "note": "Right-facing drawings only. Left-going passages use the engine's existing flip_h=heading<0 convention (player.gd/embodied_transitions.gd); no separately drawn left set is claimed.",
  "contract": {
-  "cell_size": [480, 724],
+  "cell_size": [
+   480,
+   724
+  ],
   "baseline_y": 491,
   "root_x": 240,
   "engine_scale": 0.3825780535911868,
@@ -19,38 +22,95 @@
  "clips": [
   {
    "id": "lat_depart",
-   "raw": "raw/dep_v1.png",
-   "grid": [3, 1],
-   "calibrate": {"mode": "anchor", "anchor": 0, "target_h": 253},
+   "raw": "raw/dep_t1.png",
+   "grid": [
+    3,
+    1
+   ],
+   "calibrate": {
+    "mode": "anchor",
+    "anchor": 0,
+    "target_h": 253
+   },
    "loop": false,
    "status": "candidate",
    "frames": [
-    {"phase": "run_commit", "note": "mid-run, torso starting to lean"},
-    {"phase": "anticipation_drop", "note": "body drops, ~35 deg lean, arms swept back"},
-    {"phase": "launch", "note": "push-off, long low extension"}
+    {
+     "phase": "run_commit",
+     "note": "mid-run, torso starting to lean"
+    },
+    {
+     "phase": "anticipation_drop",
+     "note": "body drops, ~35 deg lean, arms swept back"
+    },
+    {
+     "phase": "launch",
+     "note": "push-off, long low extension"
+    }
    ]
   },
   {
    "id": "lat_travel",
    "raw": "raw/trv_t0.png",
-   "grid": [3, 2],
-   "calibrate": {"mode": "median", "target_h": 253},
+   "grid": [
+    3,
+    2
+   ],
+   "calibrate": {
+    "mode": "median",
+    "target_h": 253
+   },
    "loop": true,
    "status": "candidate",
    "frames": [
-    {"phase": "R_contact"}, {"phase": "R_support_drive"}, {"phase": "flight_L_reach"},
-    {"phase": "L_contact"}, {"phase": "L_support_drive"}, {"phase": "flight_R_reach"}
+    {
+     "phase": "R_contact"
+    },
+    {
+     "phase": "R_support_drive"
+    },
+    {
+     "phase": "flight_L_reach"
+    },
+    {
+     "phase": "L_contact"
+    },
+    {
+     "phase": "L_support_drive"
+    },
+    {
+     "phase": "flight_R_reach"
+    }
    ]
   },
   {
    "id": "lat_emerge",
    "raw": "raw/em_t1.png",
-   "grid": [2, 2],
-   "calibrate": {"mode": "anchor", "anchor": 0, "target_h": 253},
+   "grid": [
+    2,
+    2
+   ],
+   "calibrate": {
+    "mode": "anchor",
+    "anchor": 3,
+    "target_h": 253,
+    "why": "approved game equalizes visible height across idle(96.5px) and run(97px); calibrating on the ready pose avoids a size pop when control resumes"
+   },
    "loop": false,
    "status": "candidate",
    "frames": [
-    {"phase": "burst_in"}, {"phase": "brake_plant"}, {"phase": "recover_absorb"}, {"phase": "ready"}
+    {
+     "phase": "burst_in"
+    },
+    {
+     "phase": "brake_plant"
+    },
+    {
+     "phase": "recover_absorb"
+    },
+    {
+     "phase": "ready"
+    }
    ]
   }
  ]
