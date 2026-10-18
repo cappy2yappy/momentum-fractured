@@ -17,6 +17,34 @@ def pack_bytes(path):
  start=len(data)-12-struct.unpack_from('<Q',data,len(data)-12)[0]
  return data[start:-12]
 
+def pack_records(data,source):
+ """Compare payloads independently of pack offsets/order and prove text scripts."""
+ start=0
+ if data[:4]!=b'GDPC':
+  assert data[:2]==b'MZ' and data[-4:]==b'GDPC'
+  start=len(data)-12-struct.unpack_from('<Q',data,len(data)-12)[0]
+ version,major,minor,patch,flags=struct.unpack_from('<5I',data,start+4)
+ assert version in (2,3) and (major,minor,patch)==(4,6,1) and not flags&1
+ base=struct.unpack_from('<Q',data,start+24)[0]
+ if version==3 or flags&2:base+=start
+ pos=start+96 if version==2 else start+struct.unpack_from('<Q',data,start+32)[0]
+ count=struct.unpack_from('<I',data,pos)[0];pos+=4;records={};scripts={}
+ for _ in range(count):
+  length=struct.unpack_from('<I',data,pos)[0];pos+=4
+  name=data[pos:pos+length].rstrip(b'\0').decode().removeprefix('res://');pos+=length
+  offset,size=struct.unpack_from('<QQ',data,pos);pos+=16
+  md5=data[pos:pos+16];pos+=16;file_flags=struct.unpack_from('<I',data,pos)[0];pos+=4
+  assert file_flags==0 and name not in records
+  payload=data[base+offset:base+offset+size]
+  assert len(payload)==size and hashlib.md5(payload).digest()==md5,name
+  records[name]=digest(payload)
+  if name.endswith('.gd'):
+   assert (source/name).resolve().is_relative_to(source.resolve())
+   assert payload==(source/name).read_bytes(),'Exported script differs from source: '+name
+   scripts[name]=records[name]
+ assert scripts and 'scripts/player.gd' in scripts
+ return records,scripts
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--godot',required=True);p.add_argument('--source',default='baseline');p.add_argument('--graphical',action='store_true');a=p.parse_args()
  root=Path(os.environ['BUILD06_SOURCE_ROOT']).resolve();host={'Windows':'windows','Darwin':'macos'}[platform.system()]
@@ -92,9 +120,13 @@ def main():
   architectures=subprocess.check_output(['lipo','-archs',str(binary)],text=True).split()
   assert set(architectures)=={'x86_64','arm64'}
  first_pack=pack_bytes(packed)
- reproducibility={'export_a_sha256':digest(raw.read_bytes()),'export_b_sha256':digest(repeat.read_bytes()),'export_bytes_identical':raw.read_bytes()==repeat.read_bytes(),'pck_a_sha256':digest(first_pack),'pck_b_sha256':digest(repeat_pack),'pck_bytes_identical':first_pack==repeat_pack}
+ records_a,scripts=pack_records(packed.read_bytes(),root)
+ records_b,_=pack_records(repeat.read_bytes() if host=='windows' else repeat_pack,root)
+ differences=[n for n in sorted(records_a.keys()|records_b.keys()) if records_a.get(n)!=records_b.get(n)]
+ reproducibility={'export_a_sha256':digest(raw.read_bytes()),'export_b_sha256':digest(repeat.read_bytes()),'export_bytes_identical':raw.read_bytes()==repeat.read_bytes(),'pck_a_sha256':digest(first_pack),'pck_b_sha256':digest(repeat_pack),'pck_bytes_identical':first_pack==repeat_pack,'resource_payloads_identical':not differences,'resource_differences':differences,'canonical_resource_sha256':digest(json.dumps(records_a,sort_keys=True).encode()),'source_text_scripts_verified':len(scripts)}
  (evidence/'REPRODUCIBILITY.json').write_text(json.dumps(reproducibility,indent=2)+'\n')
- assert reproducibility['pck_bytes_identical'],'Repeated export changed runtime payload; investigate before publishing'
+ (evidence/'RESOURCE_SHA256.json').write_text(json.dumps(records_a,sort_keys=True,indent=2)+'\n')
+ assert not differences,'Repeated export changed resource payloads: '+str(differences)
  os.environ['BUILD05_SOURCE_ROOT']=str(root)
  loader=importlib.util.spec_from_file_location('build05_pack_audit',CONTROL.parent/'build05/audit.py');audit=importlib.util.module_from_spec(loader);loader.loader.exec_module(audit)
  pack_audit=audit.audit_pack(packed.read_bytes())
