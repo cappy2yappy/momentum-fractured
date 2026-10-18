@@ -104,6 +104,18 @@ func room_loaded(w):
 	if not active: cooldown=0.0
 	queue_redraw()
 
+func supported_exit(w,p:Dictionary,pos:Vector2) -> bool:
+	# A missed airborne crossing may reach the wall beyond the 85px band.
+	# Recover only on the endpoint's actual shelf, never on a nearby floor.
+	if not w.player.is_on_floor(): return false
+	var landing=arrival_position(w,p)
+	for rect in w.platforms:
+		if absf(rect.position.y-(landing.y+2))>1: continue
+		if p.at.x<rect.position.x or p.at.x>rect.end.x: continue
+		if pos.x<rect.position.x+14 or pos.x>rect.end.x-14: continue
+		if absf(pos.y-rect.position.y)<=2: return true
+	return false
+
 func update(w,dt:float):
 	if not enabled: return
 	if w.transition>0:
@@ -125,11 +137,23 @@ func update(w,dt:float):
 		# cooldown alone never triggers a stationary or held-E return.
 		if after<=-16 and corridor: armed[p.target]=true
 		var crossed=(before<0 and after>=0) or (after>=0 and after<=85)
-		var intent=w.player.velocity.x*dir>20 and not w.player.tether_attached
-		if not (armed.get(p.target,false) and cooldown<=0 and corridor and crossed and intent): continue
+		var direction=float(w.player.held("right"))-float(w.player.held("left"))
+		var intent=w.player.velocity.x*dir>20 and direction*dir>=0
+		var recovery=after>=0 and direction*dir>0 and w.player.velocity.x*dir>=-20 and supported_exit(w,p,pos)
+		if w.player.tether_attached: continue
+		if not (armed.get(p.target,false) and cooldown<=0 and ((corridor and crossed and intent) or recovery)): continue
 		armed[p.target]=false
-		if not w.can_enter(p.target):
-			w.announce("PASSAGE LOCKED - CHECK THE ATLAS.",2)
+		var prior_message=w.message
+		var prior_time=w.message_time
+		w.message=""
+		var allowed=w.can_enter(p.target)
+		var hinted=not w.message.is_empty()
+		if not hinted: w.message=prior_message;w.message_time=prior_time
+		if not allowed:
+			# can_enter owns authored prerequisite hints. Expansion gates return
+			# only a bool; retain their existing meaningful need-id fallback.
+			if not hinted:
+				w.announce("Route sealed: "+p.need.replace("_"," ").to_upper()+". Consult the atlas." if not p.need.is_empty() else "PASSAGE LOCKED - CHECK THE ATLAS.",2)
 			cooldown=0.4;continue
 		w.request_room(p.target,p.arrival)
 		break
