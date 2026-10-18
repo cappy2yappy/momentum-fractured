@@ -1,5 +1,5 @@
 # ST-03 — PM Handoff
-Date: October 16, 2026. Status: narrative/world-design review package complete; creator approval of new placement and environment details pending.
+Date: October 16, 2026. Historical ST-03 review snapshot, **amended October 18 via ST-04**: creator has now approved the immediate post-attack placement and Mizuki nomenclature. Opening copy, R0 staging and environmental details are not yet approved. See [ST-04 PM report](../st04/PM_REPORT.md).
 
 ## Delivered
 - Canon recovery and continuity report with immutable sources and newer-character overrides.
@@ -11,14 +11,14 @@ Date: October 16, 2026. Status: narrative/world-design review package complete; 
 
 ## Findings
 Kaze's outside rescues narrow the search area; Mizuki's infiltration exposes the refuge. No change to this causal chain.
-Mikaze/Mentals are unresolved task aliases; use recovered Mizuki/elemental terminology pending clarification.
+**Resolved October 16:** Mizuki is the canonical person; Mikaze/Mizagi were slips, not new characters. Use elemental practitioners/elementals; no new 'Mentals' taxonomy.
 The earliest seven foundation documents are published on the recovery branch, while newer character canon resolves several original open questions.
 PR33 supplies the current geometry reference, not the historical main branch. Its repaired thresholds and 29-link topology stay intact.
-Recommend post-attack survival/search through a damaged working district with ancient layers. Do not equate it with the original refuge, future forest sanctuary, Aria facility or completed campaign.
+**Confirmed October 16:** the 21-room district is immediately post-attack and Kaze searches for survivors. The working-infrastructure/older-layer interpretation remains proposed; do not equate the district with the original refuge, future sanctuary, Aria facility or a completed campaign.
 Conversation-confirmed shelter/survival/ancient-reactive-artifact direction is retained; its assignment to R0 and exact dates/device mechanics are proposed.
 
 ## Review priorities
-Creator: approve section placement, district history, end-of-section knowledge and terminology.
+Creator: section placement and Mizuki terminology approved; still review district history, R0/shelter relation, on-screen wording, R11 name and section-end knowledge.
 Level Masta Masta: use per-room matrix, prioritizing R14 lower-space purpose and preserving recovery/vertical routes.
 Art Mane: coordinate architectural kits against PR33; preserve approved art language and colliders.
 Transition Masta: use spatial brief without extra links/prompts or directional assumptions.

@@ -1,12 +1,16 @@
 # ST-03 — Environmental Storytelling and Development Handoff
 Audience: Level Masta Masta, Art Mane, Transition Masta, PM.
 Recommendations only. This publication does not claim those agents were contacted or that implementation has started.
+**ST-04 update (October 18):** The immediate post-attack district and Mizuki nomenclature are confirmed; use [the approved-versus-proposed R0–R7/R18 beat map](../st04/ENVIRONMENTAL_BEAT_MAP.md). Do not depict R0 as the original clan refuge, a proven emergency-shelter interior, or a named survivor location. PR #37 / PR #39 supersede PR #33 where level geometry or transition behavior differs; re-register art against actual current colliders.
 
 ## Shared deliverable per room
 Use ROOM_PURPOSE_MATRIX as the brief. Supply one annotated gameplay-scale composition showing primary route, optional lane, recovery lane, exits, landmark, existing hazard/anchor, and optional clue. Every reachable area should serve progression, exploration, challenge, recovery or storytelling; not every area needs a pickup.
 Do not use story dressing to hide a geometry defect. Retain believable negative space where it serves views/rope arcs; remove purposeless accessible pockets only through LD review.
 
 ## Priority work packages
+
+**ST-04 immediate coordination:** Prioritize R0–R7 and R18 for non-spoiler environmental guidance: a safe first foothold, abandoned civic space, readable water/bridge/worker systems, neutral defended Archive threshold, and relay/pump connections. Restoration gives Kaze *access to search farther*, never magical survivor detection. Visual freshness/age and damage attribution stay ambiguous until approved. Use existing pickups and transitions only.
+
 | Priority / owner | Scope | Concrete recommendation | Acceptance |
 |---|---|---|---|
 | P0 Level + Art | R14 lower area | Treat as existing roof-maintenance/recovery level with visible ascent back to upper route. Proposed old convoy-view alcove only if it adds purpose without new gate/reward dependency. | A missed swing has readable recovery; no featureless long detour; stair and R9/R13 links retained |
@@ -18,7 +22,7 @@ Do not use story dressing to hide a geometry defect. Retain believable negative 
 | P2 Narrative + Art | Optional historical record pilots R3/R7/R16 | One age-marked inscription/record device each; affinity response proposed | Clear optionality and no named survivor/Mizuki hint; no new mandatory interaction |
 
 ## Geometry/art registration requirements
-PR33 is the review baseline; coordinate against docs/tr04/evidence/geometry_after.json, not screenshot estimates.
+Historical PR33 coordinates below are reference-only. Confirm all present-day placements against the latest geometry in PR #37 and the transition behavior in PR #39 before producing assets; coordinate from collision geometry, not screenshot estimates.
 - R13 left top1200 / R14 left top1100; extend visual cap to x0, matching repaired collider support.
 - R2 right shelf top850 (120px extension), R4 top1080 (200px), R9 top810 (140px). R9 interaction marker830 is not art floor level.
 - R15–20 repaired left/right perimeter strips use existing one-way landings; scenery must not imply a solid column blocking upward motion.
