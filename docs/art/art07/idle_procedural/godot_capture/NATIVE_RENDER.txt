@@ -1,0 +1,5 @@
+command: xvfb-run -a -s "-screen 0 1280x720x24" godot --rendering-method gl_compatibility --rendering-driver opengl3 --resolution 960x540 --path . --script res://tools/art07/capture_idle_godot.gd
+RENDERER adapter=llvmpipe (LLVM 20.1.2, 256 bits) api=4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4 method=gl_compatibility window=(100, 100)
+GODOT 4.6.1-stable (official)
+CAPTURE_DONE frames=16
+note: software GL (llvmpipe) under a virtual display in a cloud sandbox. Not a GPU, not Windows or macOS, not a human play session. Samples are timed ticks of 80 ms, not a continuous recording.

@@ -1,0 +1,506 @@
+{
+  "assets": [
+    {
+      "bytes": 91239,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_00.png",
+      "sha256": "9b67ce2ed68204f616352745993922637ce2c0bc567f648ae5233b6fd123ccca",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_00.png.import",
+      "sha256": "569ddb3a8200404be371178305e81639711f6304b5d987a3635c82bef5bf69e0"
+    },
+    {
+      "bytes": 90050,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_01.png",
+      "sha256": "00419fc09970cca240ef9cc370d1ff9ff3f5469c48771a0319d37229d3120575",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_01.png.import",
+      "sha256": "2c6564e7f9a97e09f4a398c95d56ae902917bb1c17383f5fc794800008eb6af5"
+    },
+    {
+      "bytes": 90493,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_02.png",
+      "sha256": "eb3cf20e6dde438d779f464cc48e967760f63711e4f7ae60b920b45386813445",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_02.png.import",
+      "sha256": "1178950044bbfe53501f8180fe62c60316c51ac1f2fa7dc53b2b14b3745f3c66"
+    },
+    {
+      "bytes": 90702,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_03.png",
+      "sha256": "3df1601b253b8eca11f002e5bb6a6512b1fec835666c39a2b1cd2f59f31b6f0d",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1020,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_03.png.import",
+      "sha256": "e845628556c199e88605f11772e2aca61e2bba22c7f55de6c4d1798de1b69e0c"
+    },
+    {
+      "bytes": 90998,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_04.png",
+      "sha256": "c72fccc4182fb9b1d776c0bd16a7d5e66edd1d3cc2ca1a06329679bd9e53e159",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_04.png.import",
+      "sha256": "1ee0551da3d3e8452efd8234195b8f41f2a7bd3ad7ec2e7152dad9aa465991e1"
+    },
+    {
+      "bytes": 90669,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_05.png",
+      "sha256": "59ce58a00dba6270e4f16ea1fe774c533868f45d222b15da64d9912f19de48b4",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_05.png.import",
+      "sha256": "dcff295e984020f78f707a2b6d3325e3cad3c506e997af66dbfbf43cd6126a53"
+    },
+    {
+      "bytes": 90596,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_06.png",
+      "sha256": "6fe41eb11b5381e565ba6763fa2029be84b8e28fa777f3de5e5ef5e17c43837e",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1020,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_06.png.import",
+      "sha256": "6c1a9c19cca9786914f097b72cb236714e7dc73ea0f9c0cbd3afddf69f959acf"
+    },
+    {
+      "bytes": 90318,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_07.png",
+      "sha256": "ddf4a1cdb109a410effdafaa847f19b280598e31ed0c3d8022ee634f6f7e9167",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1021,
+      "path": "assets/art07/idle_procedural/frames_8f/kaze_idle_procedural_8f_07.png.import",
+      "sha256": "c56d210318600739608f7664647f9edf6685b77e585a4d87553a377075db61b2"
+    },
+    {
+      "bytes": 1029664,
+      "path": "assets/art07/idle_procedural/kaze_idle_procedural_16f_strip.png",
+      "sha256": "3701fca54a4d011a6bfcaa0c85ad1ffdd85a838def9933de91227a5609a144a6",
+      "size": [
+        4352,
+        724
+      ]
+    },
+    {
+      "bytes": 1023,
+      "path": "assets/art07/idle_procedural/kaze_idle_procedural_16f_strip.png.import",
+      "sha256": "ea4764ad7a60ffea87c6ae2df9885d00445685c5fd5dd30e0a12ace0b83db89d"
+    },
+    {
+      "bytes": 537545,
+      "path": "assets/art07/idle_procedural/kaze_idle_procedural_8f_strip.png",
+      "sha256": "507ebcba07aa6335d7f675e01f01e5a3d8a2376d489554099a409d0a2232cf15",
+      "size": [
+        2176,
+        724
+      ]
+    },
+    {
+      "bytes": 1019,
+      "path": "assets/art07/idle_procedural/kaze_idle_procedural_8f_strip.png.import",
+      "sha256": "f91a72badc05356eea3bdc83f9a4c6dcc16d494e1aabdf66aa7861f0fcf71316"
+    },
+    {
+      "bytes": 0,
+      "path": "docs/art/art07/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1759,
+      "path": "docs/art/art07/idle_procedural/GODOT_VALIDATION.json",
+      "sha256": "2871ad518e65176617e2fb1a25ed4114b95d3f551526b748aa7d510be08816a3"
+    },
+    {
+      "bytes": 6600,
+      "path": "docs/art/art07/idle_procedural/QA_REPORT.json",
+      "sha256": "221125c83c5a462f8e464f4d36c551de5a9556653ad759525cc88b633bc7942e"
+    },
+    {
+      "bytes": 4357,
+      "path": "docs/art/art07/idle_procedural/README.md",
+      "sha256": "0d5e26cd15e6e008b306dbf00a3627bebf92057d16291c85f67bef5dcf4886a6"
+    },
+    {
+      "bytes": 241859,
+      "path": "docs/art/art07/idle_procedural/candidate_16f_game_scale_x4.gif",
+      "sha256": "b6b9fd6ecaac4b78a7b2e914bac00d643f3a96ffefb06c05efe7df5bb4839c58",
+      "size": [
+        288,
+        448
+      ]
+    },
+    {
+      "bytes": 27551,
+      "path": "docs/art/art07/idle_procedural/candidate_8f_game_scale_x1.gif",
+      "sha256": "2a789f8373258fa75d363a68282aee1912cbedf57d33c218476dee1094f57491",
+      "size": [
+        72,
+        112
+      ]
+    },
+    {
+      "bytes": 122309,
+      "path": "docs/art/art07/idle_procedural/candidate_8f_game_scale_x4.gif",
+      "sha256": "f5ddb20497aa8977a662752cb6abd2fc9c1bbb91b9cf1063327482fab7efb016",
+      "size": [
+        288,
+        448
+      ]
+    },
+    {
+      "bytes": 201507,
+      "path": "docs/art/art07/idle_procedural/candidate_frames_0_2_4_6_native_res.png",
+      "sha256": "5ead80f65493749933fa73895308346e53611c313f2389e5d4a9fd3995e0f69d",
+      "size": [
+        1088,
+        440
+      ]
+    },
+    {
+      "bytes": 484335,
+      "path": "docs/art/art07/idle_procedural/compare_approved_vs_candidates_game_scale_x4.gif",
+      "sha256": "92177370a7a7a76ae646d643b14c20ca542966e324679e341fc735f4c7eda18e",
+      "size": [
+        864,
+        462
+      ]
+    },
+    {
+      "bytes": 163421,
+      "path": "docs/art/art07/idle_procedural/contact_sheet_game_scale_x4.png",
+      "sha256": "00d76ecf57f18e908198b5f52707283ec248f3556d53e55c1416e23e5ad7e3af",
+      "size": [
+        2304,
+        924
+      ]
+    },
+    {
+      "bytes": 262792,
+      "path": "docs/art/art07/idle_procedural/difference_heat_frames_1_to_7.png",
+      "sha256": "d57e99739d35839b99595a1a74b72989fa64881432875d813bc8248437b2c1cd",
+      "size": [
+        1904,
+        440
+      ]
+    },
+    {
+      "bytes": 587,
+      "path": "docs/art/art07/idle_procedural/godot_capture/NATIVE_RENDER.txt",
+      "sha256": "d5ce17551502a72118b1af7848379cbfb74a69ec11d7dea955e7c71ddcb2428e"
+    },
+    {
+      "bytes": 127688,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_00.png",
+      "sha256": "a3762ac7a8c6bbcaa7cf0b8154f6711ffdf693c1ca007fa28c5f87cfe16bb9e6",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 169771,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_01.png",
+      "sha256": "8605afea6266f416086ce25475837268628f91091ca50727dc03ca89751a09d4",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 118741,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_02.png",
+      "sha256": "a226c94a5c06a0c63d099fd2ac690270407220982ebdf3debe9a791d3afa8547",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 160003,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_03.png",
+      "sha256": "f6f999a46eeff8bcad1b3eee7fdca1c80bd22a6725141568cbb25bcb43365b9e",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 126671,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_04.png",
+      "sha256": "e93f0938c7ea1eabe72dd8fc4680c4354574621deee0afb654d8997394ecb0e4",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 166824,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_05.png",
+      "sha256": "08c10839ab8faf8605b0b7d4b0c7aef68528ba4dadf37b3468b06c1c314201fd",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 126979,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_06.png",
+      "sha256": "5f9f852bffcbc7a195018ae4327b7efcdbd5d32cb83421e99f53f2170101e447",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 170395,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_07.png",
+      "sha256": "e98a753ea946582cb5eae66c6b1b0f1e911a324d4f0019a5a57bd53e81cf60b9",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 125633,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_08.png",
+      "sha256": "19c8fe909e9c632d3957d90afc7cad8cd022a4d3c3e20707bf7aa3556385c11c",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 168315,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_09.png",
+      "sha256": "8e7655659696c5df38c7b156ac2fc4e928d6682e4cde4d37fde4fed7d1fd356b",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 127522,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_10.png",
+      "sha256": "a695d6d20060e236e9d415e09db5368a1125875dc4fbf654374698efbbdf48a5",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 169539,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_11.png",
+      "sha256": "1a5dee8adc4e08e24a8c14b61ca7306b9b5ae97e9aa360190d9dfbd5310ecb07",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 127353,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_12.png",
+      "sha256": "c1d9520c6a8193f140af8858cdd6d257caf50310e6d99be58b7b3f0f1e1843ec",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 166833,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_13.png",
+      "sha256": "0fb1ee154a75abe85754e22e76496388cc5d3f38da099816f21ccaee616832b1",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 126897,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_14.png",
+      "sha256": "95d318e19b27f0c13564de57b186d39fff0bbbd92dc9946a154757eb8b9e4c65",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 169901,
+      "path": "docs/art/art07/idle_procedural/godot_capture/tick_15.png",
+      "sha256": "306b98e3e6daa89e7dd799d1f186a12e498da6d3ec437fc3fb302f295e7ac575",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "bytes": 602109,
+      "path": "docs/art/art07/idle_procedural/godot_native_playback_16ticks.gif",
+      "sha256": "9ce3177ff2e30e744c5178bf9cf3f690fad250311af49618710152ad0b293fb6",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "bytes": 0,
+      "path": "source_art/art07/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 91239,
+      "path": "source_art/art07/idle_procedural/approved_idle_frame1_source.png",
+      "sha256": "9b67ce2ed68204f616352745993922637ce2c0bc567f648ae5233b6fd123ccca",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1486,
+      "path": "source_art/art07/idle_procedural/mask_hair_hard.png",
+      "sha256": "e89c865c2b0195ffcd872df7a71a8185269e44a6730a9f45a90cfb822d40792e",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 812,
+      "path": "source_art/art07/idle_procedural/mask_ribbon_hard.png",
+      "sha256": "67f4763f7312a5197bb221f8b2af4d9e9eee0a9d5e0dc032aa5acc23f7261bba",
+      "size": [
+        272,
+        724
+      ]
+    },
+    {
+      "bytes": 1377,
+      "path": "source_art/art07/idle_procedural/params.json",
+      "sha256": "563048a8e800517f1805d8f3ff3bbc6357e3c7b2be5877ef13ff01bd09ba8e5a"
+    },
+    {
+      "bytes": 12297,
+      "path": "tools/art07/build_idle_candidate.py",
+      "sha256": "1fcd510c83a648a115a84d1e12c7f55cde8eb3a1d11a932056e73719ed4a7c26"
+    },
+    {
+      "bytes": 3010,
+      "path": "tools/art07/capture_idle_godot.gd",
+      "sha256": "175ce61bfaeca7b9333991e48504ac3ade58dd3dfc7188e7e03093d24236e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "tools/art07/capture_idle_godot.gd.uid",
+      "sha256": "06e8a3fcaaa57b18875c1f32621c9a5d5876dd4fb92c0892302507b0fd6837c5"
+    },
+    {
+      "bytes": 8634,
+      "path": "tools/art07/idle_procedural.py",
+      "sha256": "9f9383f12ae3fb442f205a9432f10c57dc076bfab9a70a8711b9fa553c04def7"
+    },
+    {
+      "bytes": 3260,
+      "path": "tools/art07/package_evidence.py",
+      "sha256": "2e560b299001205bd6240a2959ec88cd455ccf87779583c805b1ef852b566f5a"
+    },
+    {
+      "bytes": 4573,
+      "path": "tools/art07/validate_idle_godot.gd",
+      "sha256": "977b5b02668d2cabdffa2245b78cd47ea8f3ab3b5dbcbd2b5b3e81c73650444a"
+    },
+    {
+      "bytes": 19,
+      "path": "tools/art07/validate_idle_godot.gd.uid",
+      "sha256": "9cff6937f692038d5408290dfa942de2d0ebc61f1e44dc10e55eeca777ad1985"
+    },
+    {
+      "bytes": 4309,
+      "path": "tools/art07/write_manifest.py",
+      "sha256": "ed35b71e9517dc2e5341de5fb7f2435f41914c75b2f036eb3dbeafd0e2b66628"
+    }
+  ],
+  "contract": {
+    "baseline_row": 591,
+    "cell_px": [
+      272,
+      724
+    ],
+    "engine_scale": 0.2649908807267889,
+    "flip": "flip_h = facing < 0",
+    "registration": "no per-frame trim, resize or recentre; rows 548 and below are byte-identical to the approved frame",
+    "sets": {
+      "16f": {
+        "engine_change_required": true,
+        "frame_duration_s": 0.08,
+        "hframes": 16,
+        "loop_s": 1.28,
+        "note": "player.gd hardcodes sprite.hframes = 8 and a 0.16 s divisor for idle; this set needs engine edits that were NOT made.",
+        "strip": "assets/art07/idle_procedural/kaze_idle_procedural_16f_strip.png"
+      },
+      "8f": {
+        "engine_change_required": false,
+        "frame_duration_s": 0.16,
+        "hframes": 8,
+        "loop_s": 1.28,
+        "note": "Same dimensions and timing as the live idle strip. Binding it is a texture-path swap that was NOT made.",
+        "strip": "assets/art07/idle_procedural/kaze_idle_procedural_8f_strip.png"
+      }
+    },
+    "sprite_offset": "(0, texture_height/2 - baseline) = (0, -229)"
+  },
+  "honesty": "Deterministic pixel displacement of approved artwork. It is not redrawn animation, adds no new pose, expression or silhouette, and is not equivalent to a hand-animated idle. The approved idle strip is untouched and remains the default.",
+  "method": "procedural_displacement_of_one_approved_frame",
+  "qa": {
+    "godot_validation_passed": true,
+    "godot_validation_summary": "SUMMARY checks=9 failed=0 godot=4.6.1-stable (official)",
+    "pixel_qa_passed_all": true
+  },
+  "schema_version": 1,
+  "source": {
+    "frame_index": 1,
+    "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+    "strip": "assets/kaze/cleaned/kaze_idle_strip.png"
+  },
+  "status": "candidate_optional_not_approved",
+  "task": "ART-07R Phase 1"
+}

@@ -1,0 +1,101 @@
+{
+  "breath": {
+    "chest_center": [
+      150.0,
+      335.0
+    ],
+    "chest_dx_k": 0.008,
+    "chest_sigma_y": 38.0,
+    "falloff_px": 70.0,
+    "k": 0.011,
+    "pivot_y": 450.0
+  },
+  "hair": {
+    "amp_rad": 0.018,
+    "blur_sigma": 3.5,
+    "dilate_px": 3,
+    "lag_cycles": 0.2,
+    "lum_max": 80,
+    "pivot": [
+      122.0,
+      242.0
+    ],
+    "polygon": [
+      [
+        28,
+        262
+      ],
+      [
+        95,
+        232
+      ],
+      [
+        116,
+        222
+      ],
+      [
+        128,
+        250
+      ],
+      [
+        136,
+        300
+      ],
+      [
+        112,
+        312
+      ],
+      [
+        96,
+        340
+      ],
+      [
+        84,
+        372
+      ],
+      [
+        72,
+        388
+      ],
+      [
+        66,
+        424
+      ],
+      [
+        28,
+        424
+      ]
+    ],
+    "ramp_px": [
+      35.0,
+      120.0
+    ],
+    "rgb_max_blue": 95
+  },
+  "method": "procedural_displacement_of_one_approved_frame",
+  "ribbon": {
+    "amp_rad": 0.04,
+    "blur_sigma": 2.0,
+    "dilate_px": 3,
+    "h2_lag_cycles": 0.1,
+    "h2_mix": 0.3,
+    "lag_cycles": 0.3,
+    "pivot": [
+      104.0,
+      250.0
+    ],
+    "ramp_px": [
+      8.0,
+      45.0
+    ],
+    "x_max": 140,
+    "y_max": 312
+  },
+  "schema_version": 1,
+  "source_frame_index": 1,
+  "sway": {
+    "amp_px": 3.0,
+    "y_full": 300.0,
+    "y_pinned": 540.0
+  }
+}

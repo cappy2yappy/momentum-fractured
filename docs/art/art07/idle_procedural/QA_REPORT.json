@@ -1,0 +1,213 @@
+{
+  "method": "procedural displacement of one approved drawing; NOT redrawn animation",
+  "not_run": [
+    "Godot render of the candidate (no Godot binary in the authoring sandbox)",
+    "human review of motion quality",
+    "gamepad or campaign play"
+  ],
+  "passed_all": true,
+  "sets": {
+    "16f": {
+      "adjacent_mean_abs_diff": [
+        1.49681,
+        1.04241,
+        0.76601,
+        0.53266,
+        0.63687,
+        0.97941,
+        1.23021,
+        1.37462,
+        1.30508,
+        1.04237,
+        0.76525,
+        0.53453,
+        0.66013,
+        1.01809,
+        1.31927,
+        1.61508
+      ],
+      "checks": [
+        {
+          "detail": "every frame 272x724; strip 4352x724",
+          "id": "dimensions",
+          "pass": true
+        },
+        {
+          "detail": "frame 0 RGBA identical to approved idle frame 1",
+          "id": "frame0_is_approved_source",
+          "pass": true
+        },
+        {
+          "detail": "differing pixels per frame: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+          "id": "feet_pinned_rows_548_plus",
+          "pass": true
+        },
+        {
+          "detail": "lowest opaque row per frame: [590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590, 590] (baseline contract row 591)",
+          "id": "baseline_row_590",
+          "pass": true
+        },
+        {
+          "detail": "min margin to cell edge per frame: [27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27]",
+          "id": "alpha_margin_ge_12px",
+          "pass": true
+        },
+        {
+          "detail": "16 unique of 16",
+          "id": "all_frames_unique",
+          "pass": true
+        },
+        {
+          "detail": "seam delta 1.6151; other adjacent deltas median 1.0181 max 1.4968",
+          "id": "loop_seam_not_a_pop",
+          "pass": true
+        },
+        {
+          "detail": "min pairwise mean abs diff 0.5327",
+          "id": "no_near_duplicate_pose",
+          "pass": true
+        },
+        {
+          "detail": "max area change 2.97% (source 32328 px)",
+          "id": "silhouette_area_within_3pct",
+          "pass": true
+        },
+        {
+          "detail": "alpha bbox heights [366, 367, 367, 367, 368, 368, 369, 369, 369, 369, 369, 368, 368, 367, 367, 367]",
+          "id": "silhouette_height_within_8px",
+          "pass": true
+        },
+        {
+          "detail": "max per-channel mean colour shift 0.160 levels",
+          "id": "identity_mean_colour_shift_le_2",
+          "pass": true
+        },
+        {
+          "detail": "transparent pixels with RGB per frame: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+          "id": "no_hidden_rgb",
+          "pass": true
+        },
+        {
+          "detail": "semi-transparent pixel count change per frame (%): [0.0, 2.3, 2.5, 3.0, 3.1, 3.5, 3.6, 3.8, 2.8, 3.6, 3.5, 3.5, 3.0, 3.0, 2.4, 2.0]",
+          "id": "edge_softening_le_15pct",
+          "pass": true
+        },
+        {
+          "detail": "max displacement-field gradient 0.614 (1.0 would fold)",
+          "id": "no_fold_jacobian_lt_0p75",
+          "pass": true
+        },
+        {
+          "detail": "head-top rise vs frame 0 (source px): [0, 1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 2, 2, 1, 1, 1]; x0.2650 = up to 0.79 game px",
+          "id": "motion_visible_not_large",
+          "pass": true
+        }
+      ],
+      "frames": 16,
+      "max_displacement_game_px": 1.955,
+      "max_displacement_px": 7.3783,
+      "passed": true,
+      "set": "16f"
+    },
+    "8f": {
+      "adjacent_mean_abs_diff": [
+        2.10795,
+        1.15652,
+        1.42473,
+        2.23121,
+        2.02087,
+        1.12764,
+        1.48344,
+        2.42861
+      ],
+      "checks": [
+        {
+          "detail": "every frame 272x724; strip 2176x724",
+          "id": "dimensions",
+          "pass": true
+        },
+        {
+          "detail": "frame 0 RGBA identical to approved idle frame 1",
+          "id": "frame0_is_approved_source",
+          "pass": true
+        },
+        {
+          "detail": "differing pixels per frame: [0, 0, 0, 0, 0, 0, 0, 0]",
+          "id": "feet_pinned_rows_548_plus",
+          "pass": true
+        },
+        {
+          "detail": "lowest opaque row per frame: [590, 590, 590, 590, 590, 590, 590, 590] (baseline contract row 591)",
+          "id": "baseline_row_590",
+          "pass": true
+        },
+        {
+          "detail": "min margin to cell edge per frame: [27, 27, 27, 27, 27, 27, 27, 27]",
+          "id": "alpha_margin_ge_12px",
+          "pass": true
+        },
+        {
+          "detail": "8 unique of 8",
+          "id": "all_frames_unique",
+          "pass": true
+        },
+        {
+          "detail": "seam delta 2.4286; other adjacent deltas median 1.4834 max 2.2312",
+          "id": "loop_seam_not_a_pop",
+          "pass": true
+        },
+        {
+          "detail": "min pairwise mean abs diff 1.1276",
+          "id": "no_near_duplicate_pose",
+          "pass": true
+        },
+        {
+          "detail": "max area change 2.71% (source 32328 px)",
+          "id": "silhouette_area_within_3pct",
+          "pass": true
+        },
+        {
+          "detail": "alpha bbox heights [366, 367, 368, 369, 369, 369, 368, 367]",
+          "id": "silhouette_height_within_8px",
+          "pass": true
+        },
+        {
+          "detail": "max per-channel mean colour shift 0.160 levels",
+          "id": "identity_mean_colour_shift_le_2",
+          "pass": true
+        },
+        {
+          "detail": "transparent pixels with RGB per frame: [0, 0, 0, 0, 0, 0, 0, 0]",
+          "id": "no_hidden_rgb",
+          "pass": true
+        },
+        {
+          "detail": "semi-transparent pixel count change per frame (%): [0.0, 2.5, 3.1, 3.6, 2.8, 3.5, 3.0, 2.4]",
+          "id": "edge_softening_le_15pct",
+          "pass": true
+        },
+        {
+          "detail": "max displacement-field gradient 0.576 (1.0 would fold)",
+          "id": "no_fold_jacobian_lt_0p75",
+          "pass": true
+        },
+        {
+          "detail": "head-top rise vs frame 0 (source px): [0, 1, 2, 3, 3, 3, 2, 1]; x0.2650 = up to 0.79 game px",
+          "id": "motion_visible_not_large",
+          "pass": true
+        }
+      ],
+      "frames": 8,
+      "max_displacement_game_px": 1.856,
+      "max_displacement_px": 7.0051,
+      "passed": true,
+      "set": "8f"
+    }
+  },
+  "source": {
+    "file": "assets/kaze/cleaned/kaze_idle_strip.png",
+    "frame_index": 1,
+    "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697"
+  },
+  "tool": "tools/art07/build_idle_candidate.py"
+}
