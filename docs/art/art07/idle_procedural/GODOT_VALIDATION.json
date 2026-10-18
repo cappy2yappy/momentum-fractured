@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "detail": "approved, 8f and 16f import and load as Texture2D",
+      "id": "textures_load",
+      "pass": true
+    },
+    {
+      "detail": "8f (2176.0, 724.0) vs approved (2176.0, 724.0) (equal size means identical sprite.offset and drop-in hframes=8)",
+      "id": "size_8f_matches_live_idle_strip",
+      "pass": true
+    },
+    {
+      "detail": "16f (4352.0, 724.0)",
+      "id": "size_16f",
+      "pass": true
+    },
+    {
+      "detail": "approved offset (0.0, -229.0), 8f offset (0.0, -229.0), scale 0.26499088072679",
+      "id": "sprite_offset_unchanged",
+      "pass": true
+    },
+    {
+      "detail": "RGBA bytes of candidate 8f frame 0 vs approved frame 1 read back from Godot textures",
+      "id": "frame0_equals_approved_frame1",
+      "pass": true
+    },
+    {
+      "detail": "24 frames compared to the approved source feet region",
+      "id": "feet_rows_548_plus_identical_in_all_frames",
+      "pass": true
+    },
+    {
+      "detail": "lowest opaque row of each 8f frame read from Godot textures",
+      "id": "baseline_row_590_8f",
+      "pass": true
+    },
+    {
+      "detail": "frames=8 speed=6.250 loop=true",
+      "id": "spriteframes_8f",
+      "pass": true
+    },
+    {
+      "detail": "player.gd style stepping visits 8 distinct frames",
+      "id": "sprite2d_hframes8_cycle",
+      "pass": true
+    }
+  ],
+  "command": "godot --headless --path . --script res://tools/art07/validate_idle_godot.gd",
+  "passed": true,
+  "scope": "Imported-texture contract and pixel checks plus player.gd-style Sprite2D stepping. Does not run the player scene, physics or the default binding.",
+  "script": "tools/art07/validate_idle_godot.gd",
+  "summary": "SUMMARY checks=9 failed=0 godot=4.6.1-stable (official)"
+}
