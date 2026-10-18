@@ -1,0 +1,20 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Locked reward stays locked after saved alternate-side approach: cistern_wind_cache
+PASS: Opened but uncollected state survives reload: cistern_wind_cache
+PASS: Completed reward and seal survive reload: cistern_wind_cache
+PASS: Locked reward stays locked after saved alternate-side approach: relay_electric_seal
+PASS: Opened but uncollected state survives reload: relay_electric_seal
+PASS: Completed reward and seal survive reload: relay_electric_seal
+PASS: Wrong real projectile rejected: lower_sluice_wind
+PASS: Matching real projectile opens: lower_sluice_wind
+PASS: Wrong real projectile rejected: spire_wind_shutter
+PASS: Matching real projectile opens: spire_wind_shutter
+PASS: Wrong real projectile rejected: pump_electric_isolator
+PASS: Matching real projectile opens: pump_electric_isolator
+PASS: Wrong real projectile rejected: coil_fire_service
+PASS: Matching real projectile opens: coil_fire_service
+PASS: Legacy visited array expands without claiming exploration
+PASS: Version 7 earned speed/Archive/checkpoint survive migration
+PASS: Legacy save does not unlock new shortcut or lore
+EXPANSION GATES SAVE: 0 failure(s)

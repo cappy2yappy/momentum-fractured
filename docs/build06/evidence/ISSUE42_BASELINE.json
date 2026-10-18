@@ -1,0 +1,26 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "fixture_source": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+  "test_only_added_files": [
+    "tests/automatic_passage_reliability.gd",
+    "tests/fixtures/transition_test_hud.gd"
+  ],
+  "command": [
+    "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\sprite-engine\\Godot_v4.6.1-stable_win64_console.exe",
+    "--headless",
+    "--path",
+    "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\build06-source-windows",
+    "--fixed-fps",
+    "60",
+    "--script",
+    "res://tests/automatic_passage_reliability.gd",
+    "--",
+    "--tr05-save=C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\build06-issue42-profile\\fresh.json"
+  ],
+  "exit": 1,
+  "seconds": 14.375,
+  "passes": 211,
+  "failures": 94,
+  "script_errors": 0,
+  "expectation": "known baseline failure, not a platform acceptance pass"
+}

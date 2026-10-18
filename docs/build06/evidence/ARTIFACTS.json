@@ -1,0 +1,85 @@
+{
+  "total_count": 4,
+  "artifacts": [
+    {
+      "id": 12126075333,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEyNjA3NTMzMw==",
+      "name": "BUILD06-windows-QA",
+      "size_in_bytes": 196985,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12126075333",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12126075333/zip",
+      "expired": false,
+      "digest": "sha256:1dbd212b5e27aa96dbcefaffebf7436792a58be47bae6f13c59fc3cfdf2f57a8",
+      "created_at": "2026-10-18T04:51:22Z",
+      "updated_at": "2026-10-18T04:51:22Z",
+      "expires_at": "2026-11-17T04:51:21Z",
+      "workflow_run": {
+        "id": 39098330966,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build06-parallel-playtest",
+        "head_sha": "bbec1b0d4494a489711385f8c3dff5137d166773"
+      }
+    },
+    {
+      "id": 12125915950,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEyNTkxNTk1MA==",
+      "name": "Kaze-BUILD06-windows-baseline-5dfc4c4f",
+      "size_in_bytes": 51763712,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125915950",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125915950/zip",
+      "expired": false,
+      "digest": "sha256:f0cd1a453b4b8e75ec8a533d121d5d2266d210d54d5936444550d56c35c0dbbc",
+      "created_at": "2026-10-18T04:51:21Z",
+      "updated_at": "2026-10-18T04:51:21Z",
+      "expires_at": "2026-11-17T04:51:18Z",
+      "workflow_run": {
+        "id": 39098330966,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build06-parallel-playtest",
+        "head_sha": "bbec1b0d4494a489711385f8c3dff5137d166773"
+      }
+    },
+    {
+      "id": 12125846459,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEyNTg0NjQ1OQ==",
+      "name": "BUILD06-macos-QA",
+      "size_in_bytes": 196715,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125846459",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125846459/zip",
+      "expired": false,
+      "digest": "sha256:843b9e5b361eec6438d1dd6420dc99744ec9dc2dff12c3f875841dcf38af1fba",
+      "created_at": "2026-10-18T04:53:15Z",
+      "updated_at": "2026-10-18T04:53:15Z",
+      "expires_at": "2026-11-17T04:53:13Z",
+      "workflow_run": {
+        "id": 39098330966,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build06-parallel-playtest",
+        "head_sha": "bbec1b0d4494a489711385f8c3dff5137d166773"
+      }
+    },
+    {
+      "id": 12125533126,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEyNTUzMzEyNg==",
+      "name": "Kaze-BUILD06-macos-baseline-5dfc4c4f",
+      "size_in_bytes": 76421500,
+      "url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125533126",
+      "archive_download_url": "https://api.github.com/repos/cappy2yappy/momentum-fractured/actions/artifacts/12125533126/zip",
+      "expired": false,
+      "digest": "sha256:cb21b38d61d8c1f11bbd8d56a6411985f277b55390f2fb01a8fe5cfaa04e0642",
+      "created_at": "2026-10-18T04:53:13Z",
+      "updated_at": "2026-10-18T04:53:13Z",
+      "expires_at": "2026-11-17T04:53:07Z",
+      "workflow_run": {
+        "id": 39098330966,
+        "repository_id": 1177046351,
+        "head_repository_id": 1177046351,
+        "head_branch": "ci/build06-parallel-playtest",
+        "head_sha": "bbec1b0d4494a489711385f8c3dff5137d166773"
+      }
+    }
+  ]
+}

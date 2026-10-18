@@ -1,0 +1,491 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "host": "Windows-10-10.0.20348-SP0",
+  "architecture": "AMD64",
+  "mode": "native headless automated",
+  "checks": [
+    {
+      "test": "import-warmup",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      "exit": 0,
+      "seconds": 19.64,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "117c5a183a23cf3f2fb3a2e6d9b15dd708a095e4f29a06a74e72e0682edf12fb",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "import-settled",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      "exit": 0,
+      "seconds": 5.438,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "fb8ecea67ff37b9b90f817bec4403859d8489ae55dbb2ecb9dbe6468134695e4",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "baseline",
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\tools\\verify_baseline.py"
+      ],
+      "exit": 0,
+      "seconds": 0.046,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "5a63f6fff6088e1c10d42418c2427cd78c9b4f507e88677d5247160e94b7a2b4",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "preservation",
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\tools\\verify_tr05_preservation.py"
+      ],
+      "exit": 0,
+      "seconds": 1.079,
+      "passes": 59,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "ae5722889cf3d1cca9ccb18e517a049a40f2c99c1d7e4daed6712b9be0bf0bf9",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "source-regressions",
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\tools\\run_tr05_qa.py",
+        "--godot",
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe"
+      ],
+      "exit": 0,
+      "seconds": 23.531,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b316fc017636ec284f29fe1f46e4eb61611e50ad2cd6e62ca38f1698b97904f",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "export",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--export-release",
+        "Windows Desktop",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\raw.exe"
+      ],
+      "exit": 0,
+      "seconds": 6.172,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "f0125b5637eb13490019b518fa3fc8d94fc43d36742e3e3c775493a15f717ebe",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "export-repeat",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--export-release",
+        "Windows Desktop",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\repeat.exe"
+      ],
+      "exit": 0,
+      "seconds": 4.875,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "8716478f4db3c75c9ae24745a08e78b80da2971603a646f73c804d849214961c",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "native-release-startup",
+      "command": [
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Kaze-BUILD06.exe",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120",
+        "--",
+        "--tr05-save=D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\release-fresh.json"
+      ],
+      "exit": 0,
+      "seconds": 0.688,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Canal-Automatic",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Canal-Automatic.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.625,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Door-East",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Door-East.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.656,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Door-West",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Door-West.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.656,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Fresh",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Fresh.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.641,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Cinematic",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Stair-Cinematic.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.64,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Descending",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Stair-Descending.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.641,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Reduced-Motion",
+      "command": [
+        "C:\\Windows\\system32\\cmd.exe",
+        "/d",
+        "/c",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\Downloaded Candidate With Spaces\\Play-Stair-Reduced-Motion.cmd",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 0.641,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "4b724f3610c5e863fe6e9287e78d4a0bce5252238f69f3c92b8d02f1f1f31a8d",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "native-exported-input",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\tools\\build06\\packaged_native.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 3.25,
+      "passes": 54,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "76d7cb234d4412d92b302e329e140b88d13657154344c1c31f8e6a309cf82c32",
+      "expected": "54 checks, 0 failure(s)",
+      "passed": true
+    },
+    {
+      "test": "exported-intentional_space",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-intentional_space.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 1.031,
+      "passes": 63,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "82ba3da899bb17d06d81c43d8fbfbcce5ef75e9c1b51e59907ebfad0dcac6c39",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-audit_intentional_space",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-audit_intentional_space.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 0.734,
+      "passes": 21,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "7c4d7bd6d8966ef77667a436a5ec35611f69e1215bb5f5c15b542471c984cb2c",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-movement_momentum",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-movement_momentum.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 0.922,
+      "passes": 53,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "727356634dc1a95964dd17356f5c46ad7462b4c4bb1bd5cda01b692cccff089d",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-save_compatibility",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-save_compatibility.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 0.75,
+      "passes": 11,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "07e21652e5aa43ee5e4b48518dfb0024841a2f272f3c4bcf7527b26d324a5e06",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-expansion_gates_save",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-expansion_gates_save.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 0.828,
+      "passes": 17,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "03e8199eb48c2b80a8bf3c4a8fbb55c7bc110ce631fbe0c28f46babc9d12e0d4",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-skyworks_progression",
+      "command": [
+        "D:\\a\\_temp\\build06-engine\\Godot_v4.6.1-stable_win64_console.exe",
+        "--headless",
+        "--path",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "D:\\a\\momentum-fractured\\momentum-fractured\\game-source\\build\\build06\\packaged-skyworks_progression.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 1.016,
+      "passes": 33,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "9dba78acb81e75e7381ee7bfe3e06c8a2a02f13adad91d4f5dd5b3335e67fbc4",
+      "expected": null,
+      "passed": true
+    }
+  ]
+}

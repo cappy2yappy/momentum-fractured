@@ -1,0 +1,18 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "resources_in_each_pack": 573,
+  "changed_resource_count": 2,
+  "changed_resources": [
+    {
+      "resource": "MetSysPlugin.gdc",
+      "a_sha256": "bb4e21dd7c173244be1fc53354340708c57640da6d333d3bca4804161bee5990",
+      "b_sha256": "e2f0aad0ac8b2ce7cf6946ecb30039763a91eb9fb643f575906e7aeda5b492f6"
+    },
+    {
+      "resource": "ScrollingRoomTransitions.gdc",
+      "a_sha256": "cf8d3f1849a89869d5d33f598bda6ed05473dd260787423bee361c9e39db8cd9",
+      "b_sha256": "596f6dceacbc78639b069a8634a2683e767d85145c3bed8a196e8410abd22d40"
+    }
+  ],
+  "note": "Default compressed-token exports differed. No claim of decoded-token equivalence; experimental engine decompression crashed without producing a result."
+}
