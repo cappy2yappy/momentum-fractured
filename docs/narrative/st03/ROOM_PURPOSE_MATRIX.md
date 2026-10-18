@@ -1,6 +1,7 @@
 # ST-03 — All 21 Rooms: Purpose and Relationships
 Mechanics/regions/adjacency: **IMPLEMENTED** at PR33 1835fcca272fd6a925b3d8ad4834fb225a6caef6. Narrative purpose/identity/clue recommendations: **PROPOSED**. Existing note text is identified below; its author/date is not invented.
 Map cells are symbolic, not proof of physical geographic adjacency. Each listed connection exists; access still depends on original gates.
+**ST-04 approved context:** All 21 rooms occur directly after the refuge attack, as a survivor search. Specific room identities/clues below remain proposals; R0 is not established as the exact emergency shelter. R11's runtime checkpoint label is not the clan refuge; replacement proposed, not implemented.
 
 | ID | Room / region | Neighbors | Existing gameplay function | Proposed narrative purpose | Proposed environmental identity |
 |---|---|---|---|---|---|
@@ -15,7 +16,7 @@ Map cells are symbolic, not proof of physical geographic adjacency. Each listed 
 | R8 | Relay Undercroft / Echo Works | 7,9,12,16,18 | Checkpoint, sigil, two returns and underground junction | Make backtracking feel like restored access to a coherent service network | Intake arches, indexed maintenance branches |
 | R9 | Signal Terrace / Storm Keep | 3,8,10,14 | Two sigils including Fire cache; Electric return; lift access | Expose roof-watch and industrial distribution connections | Signal posts and roof-watch parapet |
 | R10 | SkyWorks Approach / SkyWorks | 9,11 | Wind intake gates industrial entry | Read the district as a serviced extension of the city | Intake frontage, suspended supports |
-| R11 | Storm Foundry / SkyWorks | 10,12,19 | Electric relay; Foundry Refuge checkpoint; service branch | Provide respite before the next defended relay | Furnace masonry, pipe supports, sheltered rest bay |
+| R11 | Storm Foundry / SkyWorks | 10,12,19 | Electric relay; checkpoint **currently labeled Foundry Refuge in runtime** (renaming proposed); service branch | Provide respite before the next defended relay | Furnace masonry, pipe supports, sheltered rest bay |
 | R12 | Keeper Relay / SkyWorks | 8,11 | Storm Keeper, attunement, persistent Undercroft return | A local milestone turns a dangerous outward trip into a usable circuit | Relay crown and ruined industrial bastion |
 | R13 | Mooring Loft / Canal Ward | 0,14,20 | Stride I, upper route, late Junction return | Reframe starting area from above and make return legible | Mooring frames and supported overlook |
 | R14 | Bellroof Walk / Canal Ward | 9,13,17 | Roof traversal, optional bell line, stair branch, recovery | Former quiet convoy route ties homes to the watch infrastructure | Roof caps, bell beams, service roof-access stair |
@@ -42,7 +43,7 @@ Each row has a distinct information or navigation purpose; no proposed collectib
 | R8 Relay Undercroft | Old connection diagram matches actual exits; no claim every branch is immediately open | Orient all five endpoints using existing graph, no new shortcuts | Repeat pipe types toward Shrine/Pump and relay marker toward Keeper |
 | R9 Signal Terrace | Existing sigils are access components; ancient significance is proposed | Keep Fire cache protection and repaired east arrival; show roof and intake directions | Register door art at shelf810, not marker830; do not move endpoint |
 | R10 SkyWorks Approach | Maintenance labels connect Wind action to ventilation; no new corporate revelation | Retain Wind lock and three-sigil entry requirements | Match conduit shapes with Terrace/Foundry; retain clear seal cue |
-| R11 Storm Foundry | Crew isolation record connects to Coil; checkpoint is not the clan refuge | Preserve relay, boss approach and service arrival | Keep warning/recovery windows visible; sheltered identity without NPC claim |
+| R11 Storm Foundry | Crew isolation record connects to Coil; checkpoint is **not** the clan refuge; consider the proposed **Foundry Rest Station** display name only after approval | Preserve relay, boss approach and service arrival | Keep warning/recovery windows visible; sheltered identity without NPC claim |
 | R12 Keeper Relay | Post-attunement return is the narrative payoff; no claim Darkness defeated | No replacement with Aria encounter; do not bypass boss/attunement | Attunement before/after light contrast optional, no new collision |
 | R13 Mooring Loft | Old courier-rest marker; not a new faction or mandatory speed trial | Preserve repaired left landing and Stride location; give each route unique landmark | Quay wall return at top1200; actual support behind loft |
 | R14 Bellroof Walk | Existing convoy note; add visually old route marks, not a current rescue destination | LD-03: lower space should visibly be recovery/service access; optional observation stop only after geometry review | Differentiate upper roof lane/lower service level; no opaque infill blocking recovery |
