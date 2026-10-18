@@ -65,8 +65,19 @@ def main():
  preset='Windows Desktop' if host=='windows' else 'macOS'
  raw=out/('raw.exe' if host=='windows' else 'raw.zip')
  repeat=out/('repeat.exe' if host=='windows' else 'repeat.zip')
- run('export',base+['--export-release',preset,raw],export_env,300)
- run('export-repeat',base+['--export-release',preset,repeat],export_env,300)
+ # Packaging-only overlay in the disposable checkout. Text mode makes source
+ # identity directly auditable and avoids observed nondeterministic .gdc tokens.
+ presets=root/'export_presets.cfg';original_presets=presets.read_bytes()
+ assert b'script_export_mode=' not in original_presets
+ export_presets=re.sub(rb'(\[preset\.\d+\]\r?\n)',rb'\1script_export_mode=0\n',original_presets)
+ assert export_presets!=original_presets
+ (evidence/'EXPORT_PRESETS_OVERRIDE.cfg').write_bytes(export_presets)
+ try:
+  presets.write_bytes(export_presets)
+  run('export',base+['--export-release',preset,raw],export_env,300)
+  run('export-repeat',base+['--export-release',preset,repeat],export_env,300)
+ finally:
+  presets.write_bytes(original_presets)
  stage=out/'staging';assert not stage.exists(),'Use a fresh execution checkout'
  stage.mkdir()
  if host=='windows':
@@ -87,7 +98,7 @@ def main():
  os.environ['BUILD05_SOURCE_ROOT']=str(root)
  loader=importlib.util.spec_from_file_location('build05_pack_audit',CONTROL.parent/'build05/audit.py');audit=importlib.util.module_from_spec(loader);loader.loader.exec_module(audit)
  pack_audit=audit.audit_pack(packed.read_bytes())
- assert any('cinematic_transitions.gdc' in n for n in pack_audit['entries'])
+ assert 'scripts/cinematic_transitions.gd' in pack_audit['entries']
  assert not any(n.startswith(('assets/art05/','assets/art06/','assets/art07/')) for n in pack_audit['entries']),'Candidate art unexpectedly packaged'
  (evidence/'PACK_AUDIT.json').write_text(json.dumps(pack_audit,indent=2)+'\n')
  fixtures=stage/'fixtures';fixtures.mkdir()
@@ -144,7 +155,7 @@ def main():
  (evidence/'SOURCE_PRESERVATION.json').write_text(json.dumps(dict(source=sha,tracked_files=len(before),changes=changes,before=before,after=after),indent=2)+'\n')
  assert not changes,changes
  controls=git(CONTROL,'rev-parse','HEAD').decode().strip()
- manifest=dict(source_commit=sha,source_tree=git(root,'rev-parse',sha+'^{tree}').decode().strip(),controls_commit=controls,engine=VERSION,engine_sha256=digest(Path(a.godot).read_bytes()),host=platform.platform(),architectures=architectures,timestamp_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),run_url='https://github.com/'+os.environ.get('GITHUB_REPOSITORY','cappy2yappy/momentum-fractured')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local'),run_attempt=os.environ.get('GITHUB_RUN_ATTEMPT','local'),content=spec,reproducibility=reproducibility,archive=archive.name,archive_sha256=digest(archive.read_bytes()),archive_bytes=archive.stat().st_size,pck_sha256=digest(first_pack),pck_entries=pack_audit['entry_count'],members=members,source_suites=25,source_assertions=1607,exported_assertions=sum(x['passes'] for x in rows if x['test'].startswith(('native-exported','exported-'))),source_files_unchanged=len(before),native_coverage='graphical automated input fixture; headless release/launchers' if a.graphical else 'native headless release, launchers and input fixture',signing='unsigned/unnotarized',limitations=['No hands-on human campaign','No physical gamepad','No sustained FPS','Issue #42 unresolved in baseline'])
+ manifest=dict(source_commit=sha,source_tree=git(root,'rev-parse',sha+'^{tree}').decode().strip(),controls_commit=controls,export_override='script_export_mode=0 (text); original preset restored byte-for-byte',engine=VERSION,engine_sha256=digest(Path(a.godot).read_bytes()),host=platform.platform(),architectures=architectures,timestamp_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),run_url='https://github.com/'+os.environ.get('GITHUB_REPOSITORY','cappy2yappy/momentum-fractured')+'/actions/runs/'+os.environ.get('GITHUB_RUN_ID','local'),run_attempt=os.environ.get('GITHUB_RUN_ATTEMPT','local'),content=spec,reproducibility=reproducibility,archive=archive.name,archive_sha256=digest(archive.read_bytes()),archive_bytes=archive.stat().st_size,pck_sha256=digest(first_pack),pck_entries=pack_audit['entry_count'],members=members,source_suites=25,source_assertions=1607,exported_assertions=sum(x['passes'] for x in rows if x['test'].startswith(('native-exported','exported-'))),source_files_unchanged=len(before),native_coverage='graphical automated input fixture; headless release/launchers' if a.graphical else 'native headless release, launchers and input fixture',signing='unsigned/unnotarized',limitations=['No hands-on human campaign','No physical gamepad','No sustained FPS','Issue #42 unresolved in baseline'])
  (out/'MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
  (out/'SHA256SUMS.txt').write_text(manifest['archive_sha256']+'  '+archive.name+'\n')
  if os.environ.get('BUILD06_INSTALL'):shutil.copy2(os.environ['BUILD06_INSTALL'],evidence/'INSTALL.json')
