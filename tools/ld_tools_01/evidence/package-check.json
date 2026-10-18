@@ -1,0 +1,16 @@
+[
+  {
+    "check": "standalone-import",
+    "exit": 0,
+    "errors": []
+  },
+  {
+    "check": "standalone-edited-preview",
+    "exit": 0,
+    "errors": []
+  },
+  {
+    "check": "ZIP CRC, packaged source equality and cache exclusion",
+    "pass": true
+  }
+]

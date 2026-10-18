@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://duwgwryoho6oo"]
+
+[ext_resource type="Script" uid="uid://ceq0ochl183iy" path="res://tools/ld_tools_01/rectangle_surface.gd" id="1_bqctt"]
+[ext_resource type="Script" uid="uid://8318ho8xoq28" path="res://tools/ld_tools_01/slope_surface.gd" id="2_tld54"]
+
+[sub_resource type="RectangleShape2D" id="Shape_0"]
+resource_local_to_scene = true
+size = Vector2(40, 1440)
+
+[sub_resource type="RectangleShape2D" id="Shape_1"]
+resource_local_to_scene = true
+size = Vector2(40, 1440)
+
+[sub_resource type="RectangleShape2D" id="Shape_2"]
+resource_local_to_scene = true
+size = Vector2(2600, 140)
+
+[sub_resource type="RectangleShape2D" id="Shape_3"]
+resource_local_to_scene = true
+size = Vector2(380, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_4"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_5"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_6"]
+resource_local_to_scene = true
+size = Vector2(580, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_7"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_8"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_9"]
+resource_local_to_scene = true
+size = Vector2(500, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_10"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_11"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_12"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_13"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_14"]
+resource_local_to_scene = true
+size = Vector2(600, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_15"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_16"]
+resource_local_to_scene = true
+size = Vector2(300, 40)
+
+[sub_resource type="RectangleShape2D" id="Shape_17"]
+resource_local_to_scene = true
+size = Vector2(450, 40)
+
+[node name="R18_PumpGallery_Layout" type="Node2D" unique_id=1592150235]
+metadata/format_version = 1
+metadata/room_id = 18
+metadata/baseline = "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c"
+
+[node name="Geometry" type="Node2D" parent="." unique_id=887694459]
+
+[node name="WallWest" type="StaticBody2D" parent="Geometry" unique_id=1747465442]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/WallWest" unique_id=175881476]
+position = Vector2(-20, 720)
+shape = SubResource("Shape_0")
+script = ExtResource("1_bqctt")
+
+[node name="WallEast" type="StaticBody2D" parent="Geometry" unique_id=1173165602]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/WallEast" unique_id=551407250]
+position = Vector2(2620, 720)
+shape = SubResource("Shape_1")
+script = ExtResource("1_bqctt")
+
+[node name="Floor" type="StaticBody2D" parent="Geometry" unique_id=1244591247]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Floor" unique_id=1214344020]
+position = Vector2(1300, 1370)
+shape = SubResource("Shape_2")
+script = ExtResource("1_bqctt")
+
+[node name="Platform_01" type="StaticBody2D" parent="Geometry" unique_id=1542720679]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_01" unique_id=923853878]
+position = Vector2(1270, 1170)
+shape = SubResource("Shape_3")
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_02" type="StaticBody2D" parent="Geometry" unique_id=35009972]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_02" unique_id=1708550059]
+position = Vector2(910, 1140)
+shape = SubResource("Shape_4")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_03" type="StaticBody2D" parent="Geometry" unique_id=1928068756]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_03" unique_id=1520438405]
+position = Vector2(620, 1080)
+shape = SubResource("Shape_5")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_04" type="StaticBody2D" parent="Geometry" unique_id=1867506674]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_04" unique_id=777378167]
+position = Vector2(290, 1020)
+shape = SubResource("Shape_6")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_05" type="StaticBody2D" parent="Geometry" unique_id=664513683]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_05" unique_id=816671890]
+position = Vector2(536.6667, 953.3333)
+shape = SubResource("Shape_7")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_06" type="StaticBody2D" parent="Geometry" unique_id=1439814202]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_06" unique_id=234762550]
+position = Vector2(743.3334, 886.6666)
+shape = SubResource("Shape_8")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_07" type="StaticBody2D" parent="Geometry" unique_id=1952324595]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_07" unique_id=932597282]
+position = Vector2(950, 820)
+shape = SubResource("Shape_9")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_08" type="StaticBody2D" parent="Geometry" unique_id=1572657037]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_08" unique_id=1193264687]
+position = Vector2(1215, 812)
+shape = SubResource("Shape_10")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_09" type="StaticBody2D" parent="Geometry" unique_id=510011340]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_09" unique_id=1386273365]
+position = Vector2(1480, 804)
+shape = SubResource("Shape_11")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_10" type="StaticBody2D" parent="Geometry" unique_id=262246401]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_10" unique_id=1341790640]
+position = Vector2(1745, 796)
+shape = SubResource("Shape_12")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_11" type="StaticBody2D" parent="Geometry" unique_id=531567218]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_11" unique_id=40994885]
+position = Vector2(2010, 788)
+shape = SubResource("Shape_13")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_12" type="StaticBody2D" parent="Geometry" unique_id=1958155638]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_12" unique_id=893849811]
+position = Vector2(2300, 780)
+shape = SubResource("Shape_14")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_13" type="StaticBody2D" parent="Geometry" unique_id=570342197]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_13" unique_id=2086921517]
+position = Vector2(2051.6667, 733.3333)
+shape = SubResource("Shape_15")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_14" type="StaticBody2D" parent="Geometry" unique_id=73426570]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_14" unique_id=1963478731]
+position = Vector2(1828.3333, 686.6667)
+shape = SubResource("Shape_16")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Platform_15" type="StaticBody2D" parent="Geometry" unique_id=1344185922]
+
+[node name="Surface" type="CollisionShape2D" parent="Geometry/Platform_15" unique_id=292484428]
+position = Vector2(1605, 640)
+shape = SubResource("Shape_17")
+one_way_collision = true
+one_way_collision_margin = 8.0
+script = ExtResource("1_bqctt")
+
+[node name="Background" type="Node2D" parent="." unique_id=39697030]
+z_index = -10
+
+[node name="PumpHousing_Decoration" type="Polygon2D" parent="Background" unique_id=1267669851]
+position = Vector2(440, 1100)
+color = Color(0.16, 0.24, 0.26, 1)
+polygon = PackedVector2Array(-100, -220, 100, -220, 140, -170, 140, 200, -140, 200, -140, -170)
+
+[node name="PumpHousing_Decoration2" type="Polygon2D" parent="Background" unique_id=1064871103]
+position = Vector2(1540, 1100)
+color = Color(0.16, 0.24, 0.26, 1)
+polygon = PackedVector2Array(-100, -220, 100, -220, 140, -170, 140, 200, -140, 200, -140, -170)
+
+[node name="Foreground" type="Node2D" parent="." unique_id=623826925]
+z_index = 10
+
+[node name="Pipe_Decoration" type="Polygon2D" parent="Foreground" unique_id=1103751718]
+position = Vector2(1900, 1280)
+color = Color(0.25, 0.36, 0.37, 0.65)
+polygon = PackedVector2Array(-60, 20, -60, -200, -30, -200, -30, -10, 140, -10, 140, 20)
+
+[node name="Markers" type="Node2D" parent="." unique_id=1902734217]
+
+[node name="Ladder_Proposal_NoTraversal" type="Marker2D" parent="Markers" unique_id=231486016]
+position = Vector2(2530, 1100)
+metadata/purpose = "Proposal only. No climb script, trigger, map edge or destination assigned."
+
+[node name="Label" type="Label" parent="Markers/Ladder_Proposal_NoTraversal" unique_id=190701248]
+offset_left = -370.0
+offset_top = -30.0
+text = "LADDER MARKER / NO ABILITY"
+
+[node name="Rails" type="Line2D" parent="Markers/Ladder_Proposal_NoTraversal" unique_id=1663614957]
+points = PackedVector2Array(-18, 0, -18, 160, 18, 160, 18, 0)
+width = 5.0
+default_color = Color(0.6, 0.7, 0.85, 1)
+
+[node name="Rungs" type="Line2D" parent="Markers/Ladder_Proposal_NoTraversal" unique_id=470043500]
+points = PackedVector2Array(-18, 30, 18, 30, 18, 60, -18, 60, -18, 90, 18, 90, 18, 120, -18, 120)
+width = 3.0
+
+[node name="SlopeExample_DISABLED" type="StaticBody2D" parent="." unique_id=50534571]
+
+[node name="Surface" type="CollisionPolygon2D" parent="SlopeExample_DISABLED" unique_id=1825513463]
+position = Vector2(80, 1300)
+polygon = PackedVector2Array(0, 0, 240, -100, 240, 0)
+disabled = true
+script = ExtResource("2_tld54")
