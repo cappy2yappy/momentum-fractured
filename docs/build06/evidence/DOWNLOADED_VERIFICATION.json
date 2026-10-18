@@ -1,0 +1,40 @@
+[
+  {
+    "artifact": "BUILD06-windows-QA",
+    "id": 12126075333,
+    "outer_sha256": "1dbd212b5e27aa96dbcefaffebf7436792a58be47bae6f13c59fc3cfdf2f57a8",
+    "crc": "pass",
+    "type": "QA evidence"
+  },
+  {
+    "artifact": "Kaze-BUILD06-windows-baseline-5dfc4c4f",
+    "id": 12125915950,
+    "outer_sha256": "f0cd1a453b4b8e75ec8a533d121d5d2266d210d54d5936444550d56c35c0dbbc",
+    "inner_sha256": "a96a4d457e79237ac72457b8bbf8fd5b2a60be5e6f6c0dad978e2bf20aba0163",
+    "crc": "pass",
+    "members_verified": 15,
+    "resource_payloads_verified": 514,
+    "exact_source_scripts_verified": 59,
+    "expires_at": "2026-11-17T04:51:18Z",
+    "url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/39098330966/artifacts/12125915950"
+  },
+  {
+    "artifact": "BUILD06-macos-QA",
+    "id": 12125846459,
+    "outer_sha256": "843b9e5b361eec6438d1dd6420dc99744ec9dc2dff12c3f875841dcf38af1fba",
+    "crc": "pass",
+    "type": "QA evidence"
+  },
+  {
+    "artifact": "Kaze-BUILD06-macos-baseline-5dfc4c4f",
+    "id": 12125533126,
+    "outer_sha256": "cb21b38d61d8c1f11bbd8d56a6411985f277b55390f2fb01a8fe5cfaa04e0642",
+    "inner_sha256": "5d2f78d12a57b93206340dfd6b567f74d1f4cc4e13d7390c667dbfdca02033dd",
+    "crc": "pass",
+    "members_verified": 20,
+    "resource_payloads_verified": 514,
+    "exact_source_scripts_verified": 59,
+    "expires_at": "2026-11-17T04:53:07Z",
+    "url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/39098330966/artifacts/12125533126"
+  }
+]

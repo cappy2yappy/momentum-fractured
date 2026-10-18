@@ -1,0 +1,20 @@
+{
+  "artifact": "12125915950",
+  "manifest_source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "manifest_controls": "bbec1b0d4494a489711385f8c3dff5137d166773",
+  "archive_sha256": "a96a4d457e79237ac72457b8bbf8fd5b2a60be5e6f6c0dad978e2bf20aba0163",
+  "command": [
+    "C:\\WINDOWS\\system32\\cmd.exe",
+    "/d",
+    "/c",
+    "C:\\Users\\TonyS\\.codex\\.chatgpt-projects\\g-p-6aa9b0443c20819186909618bb6be970\\build06-downloads\\Hosted Windows With Spaces\\Play-Fresh.cmd",
+    "--headless",
+    "--fixed-fps",
+    "60",
+    "--quit-after",
+    "120"
+  ],
+  "host": "native local Windows",
+  "exit": 0,
+  "coverage": "downloaded hosted Fresh launcher, native headless startup 120 frames; no human playthrough"
+}

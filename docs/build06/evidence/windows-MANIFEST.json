@@ -1,0 +1,70 @@
+{
+  "source_commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "source_tree": "89d6d6052e68fccaad0d0c696c12ba568d3bc124",
+  "controls_commit": "bbec1b0d4494a489711385f8c3dff5137d166773",
+  "export_override": "script_export_mode=0 (text); original preset restored byte-for-byte",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "engine_sha256": "bd9e27c6994a128aaab45cdda4d372de87b91900618ba2de55c6aa29248d5b56",
+  "host": "Windows-10-10.0.20348-SP0",
+  "architectures": [
+    "x86_64"
+  ],
+  "timestamp_utc": "2026-10-18T04:51:18.387919+00:00",
+  "run_url": "https://github.com/cappy2yappy/momentum-fractured/actions/runs/39098330966",
+  "run_attempt": "1",
+  "content": {
+    "commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+    "label": "PR39 baseline comparison",
+    "approved_transition_art": false,
+    "r18_authored_art": false,
+    "art07_idle_candidates": false,
+    "doorway_issue_42_fix": false,
+    "content_note": "Prior baseline assets only. ART04 held stair poses remain a prototype. Issue #42 is known and unfixed in this control build."
+  },
+  "reproducibility": {
+    "export_a_sha256": "050301e36ecac6ba16e24fb5c24a47c0c2ad356633807ca946d9f829e5adb075",
+    "export_b_sha256": "60e358e6f2ff4e2dc272d06ed321442237fbc651550eb518cef6bfc6d8a56612",
+    "export_bytes_identical": false,
+    "pck_a_sha256": "107b6a5f82aefd9428b711fd4e520db3edf870cd39d0e1ff83f884b9fcad8d2c",
+    "pck_b_sha256": "59a0acdda8ad4890d6ce651ce3dfccdd14793b1c7b88db6156c841dcd1cca2b0",
+    "pck_bytes_identical": false,
+    "resource_payloads_identical": true,
+    "resource_differences": [],
+    "canonical_resource_sha256": "dd654a86a48a85f5bc2d250a5331872b900e2b0538147736f182e4d7ba31af34",
+    "source_text_scripts_verified": 59
+  },
+  "archive": "Kaze-BUILD06-windows-baseline-5dfc4c4f.zip",
+  "archive_sha256": "a96a4d457e79237ac72457b8bbf8fd5b2a60be5e6f6c0dad978e2bf20aba0163",
+  "archive_bytes": 51902732,
+  "pck_sha256": "107b6a5f82aefd9428b711fd4e520db3edf870cd39d0e1ff83f884b9fcad8d2c",
+  "pck_entries": 514,
+  "members": {
+    "fixtures/Canal-Automatic.json": "9620252ca05c8284ef9930436c2665da2effb31a4a1043099217b6a0e16a19c9",
+    "fixtures/Door-East.json": "6a4de3a568dc08ffca5f5aa877080a16280bb4f54083a7cef810f00311e2797e",
+    "fixtures/Door-West.json": "b8041710de564d9ad11041cbccc1e5879d200cfc2d440407aa3c5cae12736105",
+    "fixtures/Stair-Cinematic.json": "8597b89217f1c0f4ce1803684df8369f9fe2807050d5803a56cc72df56051510",
+    "fixtures/Stair-Descending.json": "3eac52e2f8d9e3c98e284b83db4927f4429ed793473667772ab86d3794ff80b2",
+    "fixtures/Stair-Reduced-Motion.json": "8597b89217f1c0f4ce1803684df8369f9fe2807050d5803a56cc72df56051510",
+    "Kaze-BUILD06.exe": "050301e36ecac6ba16e24fb5c24a47c0c2ad356633807ca946d9f829e5adb075",
+    "Play-Canal-Automatic.cmd": "776b9e39060451e53759cb5c960773cd3c58a3a14583f96611e5239ef9e92371",
+    "Play-Door-East.cmd": "3f35f727e9b2ed01deb75777526b0ed3dc3f18dce78b5cb209e314976ea0a86b",
+    "Play-Door-West.cmd": "3a722a58a3d6b214943d9d1bc1ad4c5fe7860688f7662f4cfada30577d01ec8f",
+    "Play-Fresh.cmd": "15fb336137c8929a1e9526c0609739bcd0b5c89e73c3c14706ded37fd829270d",
+    "Play-Stair-Cinematic.cmd": "29977a587a9c047845443ce9d9d227ae8b7305ff2c32935523d92814c4a59cab",
+    "Play-Stair-Descending.cmd": "7768bef8779aa8d205fe17ff251204cab93b57ac3ad871a0aa8de3982518aa2d",
+    "Play-Stair-Reduced-Motion.cmd": "0257ceda621f4132e68b100c7af2a95d8d6fcadf64cb7e0cd0c92dc4bcae45d2",
+    "README.txt": "75714362449d54f6462dd3afa2e3c5ade56c8a2ffb059dbd473ba89df2d664a5"
+  },
+  "source_suites": 25,
+  "source_assertions": 1607,
+  "exported_assertions": 252,
+  "source_files_unchanged": 1101,
+  "native_coverage": "native headless release, launchers and input fixture",
+  "signing": "unsigned/unnotarized",
+  "limitations": [
+    "No hands-on human campaign",
+    "No physical gamepad",
+    "No sustained FPS",
+    "Issue #42 unresolved in baseline"
+  ]
+}

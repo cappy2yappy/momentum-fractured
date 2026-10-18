@@ -1,0 +1,2 @@
+# Process logs are verified against their original captured bytes.
+*.log -text -whitespace

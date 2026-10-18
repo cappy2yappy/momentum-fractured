@@ -1,0 +1,59 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+TR05_NATIVE GPU=NVIDIA GeForce RTX 4070 Laptop GPU driver=opengl3 viewport=(1280, 720)
+PASS: Native physical input crosses [13, 0] without E and lands
+PASS: Native physical [13, 0] makes one request
+PASS: Native [13, 0] visible live Kaze restored
+PASS: Native physical input crosses [13, 14] without E and lands
+PASS: Native physical [13, 14] makes one request
+PASS: Native [13, 14] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [13, 14]
+PASS: Native stopped reverse round trip [13, 14] succeeds once
+PASS: Native physical input crosses [14, 13] without E and lands
+PASS: Native physical [14, 13] makes one request
+PASS: Native [14, 13] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [14, 13]
+PASS: Native stopped reverse round trip [14, 13] succeeds once
+PASS: Native physical input crosses [15, 16] without E and lands
+PASS: Native physical [15, 16] makes one request
+PASS: Native [15, 16] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [15, 16]
+PASS: Native stopped reverse round trip [15, 16] succeeds once
+PASS: Native physical input crosses [16, 15] without E and lands
+PASS: Native physical [16, 15] makes one request
+PASS: Native [16, 15] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [16, 15]
+PASS: Native stopped reverse round trip [16, 15] succeeds once
+PASS: Native physical input crosses [13, 0] without E and lands
+PASS: Native physical [13, 0] makes one request
+PASS: Native [13, 0] visible live Kaze restored
+PASS: Native physical input crosses [13, 14] without E and lands
+PASS: Native physical [13, 14] makes one request
+PASS: Native [13, 14] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [13, 14]
+PASS: Native stopped reverse round trip [13, 14] succeeds once
+PASS: Native physical input crosses [14, 13] without E and lands
+PASS: Native physical [14, 13] makes one request
+PASS: Native [14, 13] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [14, 13]
+PASS: Native stopped reverse round trip [14, 13] succeeds once
+PASS: Native physical input crosses [15, 16] without E and lands
+PASS: Native physical [15, 16] makes one request
+PASS: Native [15, 16] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [15, 16]
+PASS: Native stopped reverse round trip [15, 16] succeeds once
+PASS: Native physical input crosses [16, 15] without E and lands
+PASS: Native physical [16, 15] makes one request
+PASS: Native [16, 15] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [16, 15]
+PASS: Native stopped reverse round trip [16, 15] succeeds once
+PASS: Native E stair_14-17_cinematic staircase completes safely
+PASS: Native stair_14-17_cinematic restores camera
+PASS: Native E stair_17-14_cinematic staircase completes safely
+PASS: Native stair_17-14_cinematic restores camera
+PASS: Native E stair_14-17_reduced staircase completes safely
+PASS: Native stair_14-17_reduced restores camera
+PASS: Native E stair_17-14_reduced staircase completes safely
+PASS: Native stair_17-14_reduced restores camera
+TR05 NATIVE: 54 checks, 0 failure(s)

@@ -1,0 +1,17 @@
+{
+  "state": "BUILD06 baseline delivery complete; component integration pending published inputs",
+  "last_agent": "Build Shogun/Codex",
+  "next_agent": "PM/creator review, then engineering candidate handoff",
+  "updated_date": "2026-10-18 America/New_York",
+  "branch": "ci/build06-parallel-playtest",
+  "source_commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "accepted_controls": "bbec1b0d4494a489711385f8c3dff5137d166773",
+  "accepted_run": 39098330966,
+  "draft_pr": 52,
+  "windows_artifact": 12125915950,
+  "macos_artifact": 12125533126,
+  "main_unchanged": "c69efbb43aa49b71dc6c541820934487a170fa7b",
+  "report": "docs/agent_handoffs/BUILD06_PM_REPORT.md",
+  "merge_authorized": false,
+  "production_release_authorized": false
+}

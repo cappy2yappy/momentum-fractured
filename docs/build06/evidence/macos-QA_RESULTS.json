@@ -1,0 +1,470 @@
+{
+  "source": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "host": "macOS-15.7.9-x86_64-i386-64bit",
+  "architecture": "x86_64",
+  "mode": "native headless automated",
+  "checks": [
+    {
+      "test": "import-warmup",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      "exit": 0,
+      "seconds": 23.889,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "d5d7d9328acfffe0ea16148d969f75f4ac18a80bcec7b2922b2378a8d794b70b",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "import-settled",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      "exit": 0,
+      "seconds": 7.893,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 5 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "c1d2be06fd474ec17346a21a669f8328c39351cf16c3a86c5c1d70b98aacd65d",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "baseline",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/tools/verify_baseline.py"
+      ],
+      "exit": 0,
+      "seconds": 0.092,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "929eb504b2c6aae83db99f51b67abc9429f33f22a438b1b99ea985666f414cc4",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "preservation",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/tools/verify_tr05_preservation.py"
+      ],
+      "exit": 0,
+      "seconds": 0.89,
+      "passes": 59,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "7f4b3c1b5120849ad329f9197fab1e7a23a0b7d86916576654011bebe24a91e1",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "source-regressions",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/python",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/tools/run_tr05_qa.py",
+        "--godot",
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot"
+      ],
+      "exit": 0,
+      "seconds": 43.54,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "227dd64eb1bbbe344594b3997d95baba7564a1bcab19ee453c53b89d6be61c93",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "export",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--export-release",
+        "macOS",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/raw.zip"
+      ],
+      "exit": 0,
+      "seconds": 22.7,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "dc2e91ab1a047d978e120721c349f73cc7a5f925f489084c2fe0c5ad79080d2e",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "export-repeat",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--export-release",
+        "macOS",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/repeat.zip"
+      ],
+      "exit": 0,
+      "seconds": 21.458,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [
+        "ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.",
+        "ERROR: 67 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+        "ERROR: 18 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+        "ERROR: 2 RID allocations of type 'PN18TextServerAdvanced27FontAdvancedLinkedVariationE' were leaked at exit."
+      ],
+      "log_sha256": "d36417259e7d9ce6c700843632e5cb4ef8bdf92802faf4c04a0c5035fd108b27",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "native-release-startup",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Kaze-BUILD06.app/Contents/MacOS/Kaze \u2014 Silent District Alpha 0.5.0",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120",
+        "--",
+        "--tr05-save=/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/release-fresh.json"
+      ],
+      "exit": 0,
+      "seconds": 1.697,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Canal-Automatic",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Canal-Automatic.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.333,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Door-East",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Door-East.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.331,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Door-West",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Door-West.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.272,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Fresh",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Fresh.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.819,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Cinematic",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Stair-Cinematic.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.349,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Descending",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Stair-Descending.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.351,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "launcher-Play-Stair-Reduced-Motion",
+      "command": [
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/Downloaded Candidate With Spaces/Play-Stair-Reduced-Motion.command",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--quit-after",
+        "120"
+      ],
+      "exit": 0,
+      "seconds": 1.53,
+      "passes": 0,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "f4c12d2bacb9c3dc42732906e2c8ca54d21c793344083599a8429b044159ebc4",
+      "expected": "Godot Engine v4.6.1",
+      "passed": true
+    },
+    {
+      "test": "native-exported-input",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/tools/build06/packaged_native.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 6.844,
+      "passes": 54,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "b0616771352bdba859fba2770c089d60d15e22dfa934958c42d49054ff284ba6",
+      "expected": "54 checks, 0 failure(s)",
+      "passed": true
+    },
+    {
+      "test": "exported-intentional_space",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-intentional_space.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 2.52,
+      "passes": 63,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "db26e511b2b14b5af71b4ce899fe85e55d8895a03a5ce2a988316bf79727ad76",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-audit_intentional_space",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-audit_intentional_space.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 2.118,
+      "passes": 21,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "0d056755f4ee76ae042d9aa982814baf428c93a8e213374361c5db81ae82b870",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-movement_momentum",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-movement_momentum.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 2.483,
+      "passes": 53,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "e61865c0354677dab47648078e44842b1174b7a38610f56c9c66966c0d7e2477",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-save_compatibility",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-save_compatibility.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 1.865,
+      "passes": 11,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "5922715e33897852b021fc02ed855f5d855951366cc0dd4d32a04901b48d19f9",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-expansion_gates_save",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-expansion_gates_save.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 2.115,
+      "passes": 17,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "7ffc87de0ecd2b6067540e19e97f5ba11335e70098aee3585766767b8669f90a",
+      "expected": null,
+      "passed": true
+    },
+    {
+      "test": "exported-skyworks_progression",
+      "command": [
+        "/Users/runner/work/_temp/build06-engine/Godot.app/Contents/MacOS/Godot",
+        "--headless",
+        "--path",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "/Users/runner/work/momentum-fractured/momentum-fractured/game-source/build/build06/packaged-skyworks_progression.gd",
+        "--",
+        "--test"
+      ],
+      "exit": 0,
+      "seconds": 2.413,
+      "passes": 33,
+      "errors": [],
+      "inherited_diagnostics": [],
+      "log_sha256": "fc0f0b1bbffb8fec46ef186f21d27086bd244bccbd5b8998a3792fd7a720b104",
+      "expected": null,
+      "passed": true
+    }
+  ]
+}
