@@ -1,0 +1,22 @@
+{
+  "exit": 0,
+  "rendered": true,
+  "passes": 305,
+  "failures": 0,
+  "script_errors": 0,
+  "command": [
+    "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-11\\resume-development-of-momentum-fractured-kaze\\work\\engine\\Godot_v4.6.1-stable_win64_console.exe",
+    "--path",
+    "C:\\Users\\TonyS\\Documents\\Codex\\2026-10-16\\kaze-tr-06-automatic-passage-reliability\\work\\tr06",
+    "--fixed-fps",
+    "60",
+    "--rendering-method",
+    "gl_compatibility",
+    "--resolution",
+    "1280x720",
+    "--script",
+    "res://tests/automatic_passage_reliability.gd",
+    "--",
+    "--tr05-save=C:\\Users\\TonyS\\Documents\\Codex\\2026-10-16\\kaze-tr-06-automatic-passage-reliability\\work\\tr06\\build\\tr06\\tr06-r50yblij\\fresh.json"
+  ]
+}
