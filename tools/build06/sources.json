@@ -1,0 +1,11 @@
+{
+  "baseline": {
+    "commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+    "label": "PR39 baseline comparison",
+    "approved_transition_art": false,
+    "r18_authored_art": false,
+    "art07_idle_candidates": false,
+    "doorway_issue_42_fix": false,
+    "content_note": "Prior baseline assets only. ART04 held stair poses remain a prototype. Issue #42 is known and unfixed in this control build."
+  }
+}
