@@ -1,0 +1,98 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Frozen layout contains 18 platform/wall/floor bodies
+PASS: Exact frozen rectangle 0
+PASS: Exact physics policy 0
+PASS: Drawing reads collider resource 0
+PASS: Exact frozen rectangle 1
+PASS: Exact physics policy 1
+PASS: Drawing reads collider resource 1
+PASS: Exact frozen rectangle 2
+PASS: Exact physics policy 2
+PASS: Drawing reads collider resource 2
+PASS: Exact frozen rectangle 3
+PASS: Exact physics policy 3
+PASS: Drawing reads collider resource 3
+PASS: Exact frozen rectangle 4
+PASS: Exact physics policy 4
+PASS: Drawing reads collider resource 4
+PASS: Exact frozen rectangle 5
+PASS: Exact physics policy 5
+PASS: Drawing reads collider resource 5
+PASS: Exact frozen rectangle 6
+PASS: Exact physics policy 6
+PASS: Drawing reads collider resource 6
+PASS: Exact frozen rectangle 7
+PASS: Exact physics policy 7
+PASS: Drawing reads collider resource 7
+PASS: Exact frozen rectangle 8
+PASS: Exact physics policy 8
+PASS: Drawing reads collider resource 8
+PASS: Exact frozen rectangle 9
+PASS: Exact physics policy 9
+PASS: Drawing reads collider resource 9
+PASS: Exact frozen rectangle 10
+PASS: Exact physics policy 10
+PASS: Drawing reads collider resource 10
+PASS: Exact frozen rectangle 11
+PASS: Exact physics policy 11
+PASS: Drawing reads collider resource 11
+PASS: Exact frozen rectangle 12
+PASS: Exact physics policy 12
+PASS: Drawing reads collider resource 12
+PASS: Exact frozen rectangle 13
+PASS: Exact physics policy 13
+PASS: Drawing reads collider resource 13
+PASS: Exact frozen rectangle 14
+PASS: Exact physics policy 14
+PASS: Drawing reads collider resource 14
+PASS: Exact frozen rectangle 15
+PASS: Exact physics policy 15
+PASS: Drawing reads collider resource 15
+PASS: Exact frozen rectangle 16
+PASS: Exact physics policy 16
+PASS: Drawing reads collider resource 16
+PASS: Exact frozen rectangle 17
+PASS: Exact physics policy 17
+PASS: Drawing reads collider resource 17
+PASS: Background decorations have no physics body
+PASS: Foreground decorations have no physics body
+PASS: Ladder is marker only
+PASS: Optional slope starts disabled
+PASS: Read-only rectangle consumer accepts frozen layout
+PASS: Consumer rejects rotated rectangle instead of inventing a bounding collider
+PASS: Legacy rectangle consumer rejects enabled slopes
+PASS: Save-safe invocation
+PASS: Runtime generator count matches frozen layout
+PASS: Runtime R18 rectangle 0 matches authored source
+PASS: Runtime R18 rectangle 1 matches authored source
+PASS: Runtime R18 rectangle 2 matches authored source
+PASS: Runtime R18 rectangle 3 matches authored source
+PASS: Runtime R18 rectangle 4 matches authored source
+PASS: Runtime R18 rectangle 5 matches authored source
+PASS: Runtime R18 rectangle 6 matches authored source
+PASS: Runtime R18 rectangle 7 matches authored source
+PASS: Runtime R18 rectangle 8 matches authored source
+PASS: Runtime R18 rectangle 9 matches authored source
+PASS: Runtime R18 rectangle 10 matches authored source
+PASS: Runtime R18 rectangle 11 matches authored source
+PASS: Runtime R18 rectangle 12 matches authored source
+PASS: Runtime R18 rectangle 13 matches authored source
+PASS: Runtime R18 rectangle 14 matches authored source
+PASS: Runtime R18 rectangle 15 matches authored source
+PASS: Runtime R18 rectangle 16 matches authored source
+PASS: Runtime R18 rectangle 17 matches authored source
+PASS: 21 rooms and 29 links remain
+PASS: Edited scene packs
+PASS: Edited layout saves
+PASS: Move, resize, solid checkbox persist after reload
+PASS: Placed decoration persists after reload
+PASS: Shape resources do not resize another platform
+PASS: Solid blocks downward probe
+PASS: Solid blocks upward probe
+PASS: One-way permits upward probe
+PASS: One-way catches downward probe
+PASS: Disabled surface permits downward probe
+PASS: Optional native polygon slope catches downward probe
+PASS: Slope collision follows slanted visual edge, not rectangular bounds
+LD-TOOLS-01: 95 passes; 0 failure(s)

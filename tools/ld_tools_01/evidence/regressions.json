@@ -1,0 +1,234 @@
+{
+  "engine": "4.6.1.stable.official.14d19694e",
+  "baseline": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+  "suites": [
+    {
+      "suite": "approved_baseline",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 32,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "approved_combat_swing",
+      "exit": 0,
+      "seconds": 0.77,
+      "legacy": false,
+      "passes": 7,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "annex_expansion",
+      "exit": 0,
+      "seconds": 0.84,
+      "legacy": false,
+      "passes": 34,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "annex_traversal",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 6,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "save_compatibility",
+      "exit": 0,
+      "seconds": 0.88,
+      "legacy": false,
+      "passes": 11,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "skyworks_progression",
+      "exit": 0,
+      "seconds": 1.05,
+      "legacy": false,
+      "passes": 33,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "storm_keeper",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "movement_momentum",
+      "exit": 0,
+      "seconds": 0.84,
+      "legacy": false,
+      "passes": 53,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "sprite_integration",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 43,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "world_expansion",
+      "exit": 0,
+      "seconds": 1.14,
+      "legacy": false,
+      "passes": 193,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "expansion_gates_save",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 17,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "expansion_traversal",
+      "exit": 0,
+      "seconds": 1.95,
+      "legacy": false,
+      "passes": 125,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "gameplay_stabilization",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 16,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "traversal_transitions",
+      "exit": 0,
+      "seconds": 0.67,
+      "legacy": false,
+      "passes": 8,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "world_cohesion_traversal",
+      "exit": 0,
+      "seconds": 1.5,
+      "legacy": false,
+      "passes": 56,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "integration_candidate",
+      "exit": 0,
+      "seconds": 0.88,
+      "legacy": false,
+      "passes": 12,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "integration_descent",
+      "exit": 0,
+      "seconds": 0.86,
+      "legacy": false,
+      "passes": 26,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "level_geometry",
+      "exit": 0,
+      "seconds": 1.03,
+      "legacy": false,
+      "passes": 78,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "intentional_space",
+      "exit": 0,
+      "seconds": 0.83,
+      "legacy": false,
+      "passes": 63,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "audit_intentional_space",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": false,
+      "passes": 21,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "cinematic_transitions",
+      "exit": 0,
+      "seconds": 1.12,
+      "legacy": false,
+      "passes": 368,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "room_transition_prototype",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": true,
+      "passes": 93,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "mixed_transitions",
+      "exit": 0,
+      "seconds": 0.94,
+      "legacy": true,
+      "passes": 109,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "embodied_transitions",
+      "exit": 0,
+      "seconds": 0.84,
+      "legacy": true,
+      "passes": 80,
+      "failures": 0,
+      "script_errors": 0
+    },
+    {
+      "suite": "art04_transitions",
+      "exit": 0,
+      "seconds": 0.75,
+      "legacy": true,
+      "passes": 111,
+      "failures": 0,
+      "script_errors": 0
+    }
+  ],
+  "passes": 1607,
+  "failures": 0,
+  "script_errors": 0
+}
