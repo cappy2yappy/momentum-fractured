@@ -87,7 +87,7 @@ jobs:
       matrix:
         variant: ${{ fromJSON(needs.plan.outputs.variants) }}
     runs-on: windows-2022
-    timeout-minutes: 60
+    timeout-minutes: 45
     env:
       PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
       PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
@@ -110,6 +110,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install checksum-pinned editor and export templates
+        timeout-minutes: 15
         run: python tools/pmpilot/install_engine.py
       - name: Assemble pinned source
         run: python tools/pmpilot/pins.py assemble --variant "${{ matrix.variant }}" --source-root game-source
@@ -149,7 +150,7 @@ jobs:
       matrix:
         variant: ${{ fromJSON(needs.plan.outputs.variants) }}
     runs-on: macos-15-intel
-    timeout-minutes: 60
+    timeout-minutes: 45
     env:
       PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
       PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
@@ -172,6 +173,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install checksum-pinned editor and export templates
+        timeout-minutes: 15
         run: python tools/pmpilot/install_engine.py
       - name: Assemble pinned source
         run: python tools/pmpilot/pins.py assemble --variant "${{ matrix.variant }}" --source-root game-source

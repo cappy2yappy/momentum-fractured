@@ -25,7 +25,22 @@ def fetch(name, digest, dest, local=None):
     if local and (Path(local) / name).is_file():
         target.write_bytes((Path(local) / name).read_bytes())
     else:
-        urllib.request.urlretrieve(BASE + name, target)
+        # A bounded socket timeout and retries: an unbounded download hung a hosted macOS job for 35 minutes (run 39207077880).
+        last = None
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(BASE + name, timeout=120) as r, open(target, 'wb') as out:
+                    while True:
+                        chunk = r.read(1 << 20)
+                        if not chunk:
+                            break
+                        out.write(chunk)
+                last = None
+                break
+            except Exception as exc:  # noqa: BLE001
+                last = exc
+                print('download attempt %d of %s failed: %s' % (attempt + 1, name, exc), flush=True)
+        assert last is None, last
     got = hashlib.sha256(target.read_bytes()).hexdigest()
     assert got == digest, 'Checksum mismatch for %s: %s' % (name, got)
     return target
