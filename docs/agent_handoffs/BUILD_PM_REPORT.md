@@ -1,11 +1,156 @@
-# BUILD PM return (ORDER 5), Phase A: preparation only
+# BUILD PM return (ORDER 5)
+
+## Phase B status (2026-10-19): comparison packages built on hosted Windows and macOS
+
+Hosted run **[39205060691](https://github.com/cappy2yappy/momentum-fractured/actions/runs/39205060691)**, purpose `comparison`,
+tooling head `f6dacba` on branch `ci/pm-pilot-comparisons` (PR #56). All 17 jobs succeeded: plan, 5 Windows, 5 macOS,
+5 Apple Silicon smoke. Windows jobs took 2m to 3m40s, macOS 5m to 8m, Apple Silicon smoke about 25 s each. Packages are
+labelled **QA pending** (see below), unsigned, unnotarized, internal playtest only, not a release. No merge, tag, release or
+main update; no binary committed.
+
+Pinned sources (all final per coordinator):
+
+| Variant | Commit | Notes |
+| --- | --- | --- |
+| `baseline-pr39` | `5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c` | control; same source as the BUILD-06 control |
+| `transitions` | `903634afa51237e29fd306ae815c880415230f17` | Transition, 4 commits on PR51 |
+| `geometry` | `0656766d8fe13c702a4808b1d25ddd0855d8922c` | Level, 1 commit on PR51 |
+| `art` | `dfab1cf2efcacb2a792fb578b72be2434b9e4411` | Art, 1 commit on PR51 |
+| `combined` | `49ae3efe21dea6a9eba556ce2fbc8299b00412b9` (tree `2a41ac47390a2a4e025435512d2b623894733270`) | branch `candidate/pm-pilot-combined`: PR51 + Level + Art + Transition, merged cleanly by the coordinator; the build asserts HEAD and tree equal these pins |
+
+Allowlists were derived from `git diff` against PR51 `baedd678` (recorded in `tools/pmpilot/pins.json`; each build also
+writes `PRESERVATION_DIFF.json`). Docs, editable `source_art/` sources and Art's `tools/pm_pilot_art/__pycache__` are
+allowed in the source diff but can never reach a package: the build fails if any pack entry or ZIP member contains
+`__pycache__`, `.pyc`, `source_art/`, `tools/`, `docs/`, `tests/`, `assets/art07/` or `tools/art07/`. That passed for all
+ten packages. The Art branch's committed bytecode is acknowledged and stays out of every package.
+
+Waivers (authorised by the coordinator for Level and combined only): **`expansion build_room PR37 function exact`**.
+Reason: Level's `scripts/world_expansion.gd` change adds the gatehouse rooms inside `build_room`, so the PR37
+function-exactness check in `tools/verify_tr05_preservation.py` reports exactly that one line; I measured it locally
+on `0656766d` and on `49ae3efe` (1 failure each, everything else passes, `verify_baseline.py` 0 failures). The waiver
+string is matched line by line, so any other preservation failure still fails the build. `scripts/world.gd` changes
+(Transition and Level) did not trip any check, so no `world.gd` waiver was needed or used. Transition and Art have no
+waivers. No protected gameplay file (`player.gd`, `guard.gd`, `storm_keeper.gd`, `momentum_profile.gd`,
+`project.godot`, `export_presets.cfg`, `addons/`) differs in any candidate.
+
+Checks every package passed (Windows and macOS hosts): source identity, diff allowlist, cold and settled import, baseline
+and preservation scripts, TR05 suites (25 suites), TR06 suite where present, two exports with equal resource payloads,
+exported scripts equal source, changed assets present in the pack, required entries (`scripts/staged_stair_cinematic.gd`,
+`scripts/canal_gatehouse.gd`, `assets/pm_pilot/canal/*.png.import`, `assets/pm_pilot/wipe/*.png.import` where relevant),
+ART-07 exclusion in source, pack and ZIP, extraction in a path with spaces, release startup, all four launchers actually
+run with the isolation check, 54-check exported input fixture, six exported suites, source unchanged. The generated
+demo seeds equal Transition's own fixture files for the two seeded demos.
+
+### QA pending
+
+The coordinator pinned QA's harness at PR #59 head `455f352e304955c0d4ea400bff62d489ce7834bb`
+(`tools/pm_pilot_qa/run_qa.py`, checked out beside each candidate). Each build runs it as an **informational** step: its
+output is recorded in the QA artifact and, if it does not pass, a finding is written to the manifest, but it does not gate.
+Its cinematic-completion and Canal-containment hooks SKIP until QA publishes them; a skip is not a pass. Every manifest
+carries `qa_status: pending`. I could not read the result files from this sandbox (artifact blobs blocked), so I do not
+state the harness outcome here. Packages stay "QA pending" until the coordinator says otherwise.
+
+### Downloads
+
+Package artifacts (30-day retention; expiry is when GitHub deletes them):
+
+| Artifact | id | size (bytes) | outer SHA-256 | expires (UTC) |
+| --- | --- | --- | --- | --- |
+| PMPILOT-comparison-macos-art | 12166315541 | 77679406 | `6f7159b7f0459a6ee5efeb623b3e834fe3b5a7e4be51d8b8b576bce125048aa3` | 2026-11-18 05:47:57 |
+| PMPILOT-comparison-macos-baseline-pr39 | 12165716423 | 76421224 | `6fb569e669e06264d9f75ca9ef6f878bf21e16f4ef16aa004859081992218765` | 2026-11-18 05:44:49 |
+| PMPILOT-comparison-macos-combined | 12166240723 | 77689419 | `34dd9fdd757662234c9b05b5915587253945cc123a169e49547d936402b84583` | 2026-11-18 05:47:33 |
+| PMPILOT-comparison-macos-geometry | 12166071100 | 76424007 | `69caef73eb306b89d95a7614569fc83ac1bb8f634752a85a2bd01b27345b9e9e` | 2026-11-18 05:46:42 |
+| PMPILOT-comparison-macos-transitions | 12165004319 | 76429591 | `f0771cff28c114872b18d38b7d73766b5152924283e135b59634410d6391b468` | 2026-11-18 05:47:15 |
+| PMPILOT-comparison-windows-art | 12165621966 | 53018767 | `ea457ccafa351e2c95e38875db5335a1428152a59da8dd12f9aef974f88f1ef4` | 2026-11-18 05:39:11 |
+| PMPILOT-comparison-windows-baseline-pr39 | 12165562131 | 51763420 | `3142ae4748fe4327f225a3391866ae460482e787c21eff769198d7c3442ef61a` | 2026-11-18 05:38:04 |
+| PMPILOT-comparison-windows-combined | 12165581290 | 53029735 | `23d0897786a1d57d89d4e5b128d0c2fed10d26fc9fc2598d72eb6537515724b8` | 2026-11-18 05:39:18 |
+| PMPILOT-comparison-windows-geometry | 12165268852 | 51766444 | `e94c3c0721ed69137e786ceafde775cae163e8b66472b21e250acc180cddf17a` | 2026-11-18 05:39:24 |
+| PMPILOT-comparison-windows-transitions | 12165646989 | 51771863 | `69ea2e4ea93dc43fdf5502dc5bc78d32c120c95ab50f3694158808d85c45e89b` | 2026-11-18 05:39:09 |
+
+Evidence artifacts (QA results, logs, `RESOURCE_SHA256.json`, `PRESERVATION_DIFF.json`, `LAUNCHER_ISOLATION.json`, harness output):
+
+| Artifact | id | size (bytes) | outer SHA-256 | expires (UTC) |
+| --- | --- | --- | --- | --- |
+| PMPILOT-QA-comparison-macos-art | 12165891992 | 108417 | `facc3fa978be9b3ffa3d711f3455ad5a131887e6f9b10056c6cc11de644c44eb` | 2026-11-18 05:48:04 |
+| PMPILOT-QA-comparison-macos-baseline-pr39 | 12165302880 | 103950 | `31453ea3cdd9e808fee3c27a42bdb2239eb9f63c0f1d43d00dadfd055fc6a66e` | 2026-11-18 05:44:53 |
+| PMPILOT-QA-comparison-macos-combined | 12165941757 | 110688 | `2b12876226daf265d317f1941cfc21779860b1fa77f842e2804869884b7db1f2` | 2026-11-18 05:47:38 |
+| PMPILOT-QA-comparison-macos-geometry | 12166315352 | 106034 | `7a55959c6f251b7d7213a8ee11dd262c7c7a456ec7ccf947a53c24a69fae7554` | 2026-11-18 05:46:47 |
+| PMPILOT-QA-comparison-macos-transitions | 12166330041 | 106279 | `7c5927139172ce781757f588656a5bc6c41f64ae157feccfb35d6e49ee51abfa` | 2026-11-18 05:47:20 |
+| PMPILOT-QA-comparison-windows-art | 12165029927 | 108555 | `621594542451359167250506057cc329c37911369e883a96cb89c6df4c08284f` | 2026-11-18 05:39:14 |
+| PMPILOT-QA-comparison-windows-baseline-pr39 | 12165910457 | 104077 | `063a0b4c0a6aec47e8b70cde3727a2bd0072e2f21c0f6e5b8eb68cebd79f7b29` | 2026-11-18 05:38:07 |
+| PMPILOT-QA-comparison-windows-combined | 12164823878 | 110812 | `96289378aa3d86ef5fe5692729d7ffc10a1a5194591634b7676435075f86a657` | 2026-11-18 05:39:21 |
+| PMPILOT-QA-comparison-windows-geometry | 12165960516 | 106180 | `e9efa9c954861d62c26236a5341a6ccf618da295a3a29fb9c24e79c1dc1097b6` | 2026-11-18 05:39:28 |
+| PMPILOT-QA-comparison-windows-transitions | 12165955459 | 106436 | `c972d5cbc14eb82722a40442ccd38728ab001d43aa6d6894b4f153628d621967` | 2026-11-18 05:39:12 |
+
+Each package artifact contains the inner `Kaze-PMPILOT-<variant>-<host>-<sha8>.zip`, `MANIFEST.json`, `QA_RESULTS.json` and
+`SHA256SUMS.txt`; the inner ZIP's SHA-256 is in those files. The Apple Silicon smoke recorded these inner macOS ZIP
+hashes in annotations: baseline-pr39 `7ab7a947ffcb9c1e31727aa70444832c04ec9fd6159c970d4fbf0d449d05ca06`, combined
+`3e584d9fe90b5a1ef50eb948521cc05ce06be8fdca5a588c84e0b7dfefb7ef19` (the others are in their SHA256SUMS.txt).
+
+**Download verification not performed here.** This sandbox cannot reach the Actions artifact storage
+(`productionresultssa*.blob.core.windows.net` is refused; checked again with an artifact of this run), so
+`verify_download.py` was not run on the real artifacts. For the creator or any machine with GitHub access and a full clone
+of the repository (`gh auth login` done, `git fetch --all` so every pinned commit exists):
+
+```
+python tools/pmpilot/verify_download.py --run 39205060691 --clone <full clone> --downloads <empty dir> --out <empty dir> --require-complete
+```
+
+It checks every artifact digest against the Actions record, ZIP integrity, the inner SHA-256 against the manifest, every
+member hash, every packed resource payload against an independently re-assembled pinned source, text-script equality,
+ART-07 and forbidden-path absence, and QA artifact pass state. It was only exercised offline here.
+
+### Launch instructions
+
+1. Download the package artifact for your platform, unzip it, then unzip the inner `Kaze-PMPILOT-...zip` into its own
+   writable folder (one folder per variant). Compare the inner ZIP SHA-256 with `SHA256SUMS.txt`.
+2. Windows x86_64: run a `Play-*.cmd`. macOS: run a `Play-*.command`; the app is unsigned and unnotarized, so approve it in
+   System Settings, Privacy and Security if Gatekeeper blocks it.
+3. Launchers: `Play-Fresh` (unseeded, persistent), `Play-Canal-Left` (room 13, hold A to leave left, no E, no flag),
+   `Play-Cinematic-Pilot` (room 14 stair, press E; passes `--pm-staged-stair`), `Play-Cinematic-Reduced` (same plus
+   `--tr05-reduced-motion`; F6 toggles). The same arguments are used in every variant. `--pm-staged-stair` only has an effect
+   in `transitions` and `combined`; elsewhere the stair shows the inherited behavior.
+4. Each launcher uses its own save, `profiles/<variant>-<Name>.json`, and its own user-data folder. Demos reset their seed on
+   every launch; Fresh persists. Do not open the EXE or app directly.
+
+### Tester checklist (observations only; creator acceptance is separate and still pending)
+
+For each of `baseline-pr39`, `transitions`, `geometry`, `art`, `combined`, in that order:
+- [ ] Play-Fresh starts, moves, and a second variant's Fresh starts from nothing.
+- [ ] Play-Canal-Left: the visible door is where the automatic crossing fires; the approach reads as an enclosed hall; hold A through the door and note the wipe, destination and arrival.
+- [ ] Jump and wall-jump around the Canal exit: you cannot climb above the mandatory exit into unintended space; vertical routes elsewhere still work.
+- [ ] `geometry` and `combined` only: solid gatehouse masonry; `art` alone shows no new art (assets present, nothing draws them); `combined` shows Art's door layers over the opening.
+- [ ] Play-Cinematic-Pilot at the stair: about 2.35 s staged sequence in `transitions` and `combined` only; Cinematic-Reduced about 0.95 s without camera move.
+- [ ] Movement, character size, combat and saves feel the same as the baseline.
+- [ ] Note any placeholder labels and any held pose that reads as fake animation.
+
+### Coverage and limits (precise)
+
+- **Hosted Windows** (`windows-2022`, x86_64): native, headless. Real exported EXE and `.cmd` launchers ran with `--headless`
+  for 120 frames. No GPU, window, rendering or input from a person.
+- **Hosted macOS Intel** (`macos-15-intel`, x86_64): native, headless, all checks above.
+- **Hosted Apple Silicon** (`macos-15`, arm64, macOS 15.7.9): a separate smoke job downloaded each macOS package from the same
+  run, verified the inner ZIP SHA-256, confirmed an arm64 slice, and ran all four launchers natively for 120 headless
+  frames (all exit 0, Godot 4.6.1 banner seen). Headless smoke only: it does not run the suites or any graphics.
+- **No graphical or hands-on coverage on any hosted host.** One software-GL capture of the combined source (not the exported
+  package, Linux, xvfb, Mesa llvmpipe, OpenGL compatibility, `PM-Canal-Left` fixture, frame 40 of 45) is in
+  `docs/pm_pilot/build/previews/combined_canal_left_source_swgl.jpg`. It shows the Level masonry gatehouse, Art's door
+  frame, leaf and warm interior glow, the arrow cue and the "WALK THROUGH" labels, with Kaze on the shelf inside the hall.
+  It confirms the layers coexist in the source. It is not the exported package, not a hands-on playthrough, and not creator
+  acceptance. The staged stair was not captured by me.
+- Not covered anywhere: human campaign, physical gamepad, sustained FPS, signing, notarization, creator visual acceptance.
+- Reproducibility means identical repeated resource payloads within a run; cross-run only the `.godot/exported` group varies.
+
+---
+
+# Phase A record (superseded where it conflicts with the above)
+
 
 Owner: Build Shogun. Date: 2026-10-19. Model: Claude Sonnet 5.5 (`claude-sonnet-5-5`) in Claude Code, Linux sandbox.
 Draft PR: https://github.com/cappy2yappy/momentum-fractured/pull/56 (base `fix/tr06-automatic-passage` = PR51 head
 `baedd6786ad4bee2123ea872b437bbb98e6d2721`, branch `ci/pm-pilot-comparisons`).
 
-Status: tooling built and exercised; **no candidate package exists or was published**. Candidate pins are null and the
-workflow refuses to plan them. ART-07 (PR #53, `18491105da5f8dd0b11b616c7da81803ced1fadc`) is excluded and untouched.
+Status at the end of Phase A: tooling built and exercised; no candidate package existed. (Phase B above supersedes this.) ART-07 (PR #53, `18491105da5f8dd0b11b616c7da81803ced1fadc`) is excluded and untouched.
 Nothing was merged, tagged or released; main is untouched; no binary is committed.
 
 ## Commits
@@ -141,7 +286,7 @@ Windows x86_64 cross-export, `--local-smoke`, not deliverables):
   Download verification needs a machine with access, run with `--require-complete` for comparison packages.
 - `pr51-control` has been built only in the local Linux cross-export, not on hosted runners.
 
-## Missing inputs for Phase B, and who supplies them
+## Missing inputs for Phase B (all since supplied by the coordinator, see top)
 
 | # | Input | Owner | State now |
 | --- | --- | --- | --- |
