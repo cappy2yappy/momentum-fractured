@@ -13,7 +13,7 @@ Windows launchers, release binary or macOS bundle; those steps are recorded as
 not executed, never as passed.
 """
 from pathlib import Path
-import argparse, datetime, hashlib, importlib.util, json, os, platform, re, shutil, stat, struct, subprocess, sys, time, zipfile
+import argparse, datetime, fnmatch, hashlib, importlib.util, json, os, platform, re, shutil, stat, struct, subprocess, sys, time, zipfile
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -349,7 +349,7 @@ def main():
     bad = [n for n in pack_audit['entries'] if n.startswith(forbidden)]
     assert not bad, 'Forbidden pack entries: %s' % bad[:5]
     required = spec.get('required_pack_entries', [])
-    missing = [n for n in required if n not in records_a]
+    missing = [n for n in required if not any(fnmatch.fnmatchcase(r, n) for r in records_a)]  # entries may be globs
     assert not missing, 'Required pack entries missing: %s' % missing
     absent = []
     for _status, path in diff['changed']:
@@ -508,5 +508,17 @@ def main():
     print(json.dumps({k: v for k, v in manifest.items() if k not in ('members', 'policy', 'changed_files')}), flush=True)
 
 
+def annotate(level, title, message):
+    """GitHub workflow command: surfaces in the check-run annotations API even when job logs are not readable."""
+    text = message.replace('%', '%25').replace('\r', '').replace('\n', '%0A')
+    print('::%s title=%s::%s' % (level, title, text[:8000]), flush=True)
+
+
 if __name__ == '__main__':
-    main()
+    import traceback
+    try:
+        main()
+    except BaseException as exc:  # noqa: B902 - report then re-raise so the job still fails
+        if os.environ.get('GITHUB_ACTIONS'):
+            annotate('error', 'pmpilot failure', ''.join(traceback.format_exception_only(type(exc), exc))[-3500:] + '\n' + ''.join(traceback.format_tb(exc.__traceback__)[-3:]))
+        raise
