@@ -143,8 +143,12 @@ def main():
     if commit:
         assert head == commit, 'Source HEAD %s is not the pinned commit %s' % (head, commit)
     else:
-        parents = git(root, 'rev-list', '--parents', '-n1', 'HEAD').decode().split()[1:]
-        assert len(parents) == len(members) + 1, 'Composed source does not have the pinned merge shape'
+        cbase = spec['compose']['base']
+        for _m, mcommit in members:
+            subprocess.run(['git', '-c', 'safe.directory=*', '-C', str(root), 'merge-base', '--is-ancestor', mcommit, 'HEAD'], check=True)
+        subprocess.run(['git', '-c', 'safe.directory=*', '-C', str(root), 'merge-base', '--is-ancestor', cbase, 'HEAD'], check=True)
+        first_parent = int(git(root, 'rev-list', '--first-parent', '--count', cbase + '..HEAD').decode())
+        assert first_parent == len(members), 'Composed source does not have the pinned merge shape'
     if spec.get('expected_tree'):
         assert tree == spec['expected_tree']
     assert not git(root, 'status', '--porcelain', '--untracked-files=no').strip(), 'Source must start clean'

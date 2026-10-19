@@ -121,7 +121,7 @@ def assemble(pins, name, root):
                                capture_output=True)
             if r.returncode:
                 git(root, 'merge', '--abort', check=False)
-                raise SystemExit('composition conflict merging %s (%s): %s' % (mname, mcommit, r.stdout.decode(errors='replace')))
+                raise SystemExit('composition failed merging %s (%s): %s %s' % (mname, mcommit, r.stdout.decode(errors='replace'), r.stderr.decode(errors='replace')))
             order.append({'variant': mname, 'commit': mcommit})
         record = {'variant': name, 'mode': 'compose', 'base': base, 'merged': order}
     else:
