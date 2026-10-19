@@ -82,6 +82,24 @@ func fly(index, start:Vector2, toward:int):
 	release_all()
 	return {"start":[start.x,start.y],"toward":toward,"min_feet_y":snappedf(miny,0.1),"escaped":escaped or miny < ROOF_PROBE_Y - 40,"end":[snappedf(w.player.position.x,0.1),snappedf(w.player.position.y,0.1)]}
 
+# Full-height double jump toward a wall: both jumps held to their apex (the highest a ledge can lift Kaze without a wall).
+func double_to_top(index, start:Vector2, toward:int):
+	await place(index,start)
+	var size = w.room_size(index)
+	key(KEY_A if toward < 0 else KEY_D,true);key(KEY_SPACE,true)
+	var miny = start.y;var escaped = false
+	for t in 150:
+		if t == 22: key(KEY_SPACE,false)
+		if t == 32: key(KEY_SPACE,true)
+		if t == 54: key(KEY_SPACE,false)
+		await wait_ticks(1)
+		if not still_here(index): break
+		var p = w.player.position
+		miny = minf(miny,p.y)
+		if p.x < -20 or p.x > size.x + 20: escaped = true;break
+	release_all()
+	return {"start":[start.x,start.y],"toward":toward,"min_feet_y":snappedf(miny,0.1),"escaped":escaped,"end":[snappedf(w.player.position.x,0.1),snappedf(w.player.position.y,0.1)]}
+
 # ---- grapple -----------------------------------------------------------------------------------
 func grapple(index, anchor:Vector2, start:Vector2, toward:int):
 	await place(index,start)
@@ -185,6 +203,9 @@ func run():
 				var f = await fly(index,Vector2(x,r.position.y - 2),side)
 				f["side"] = side
 				room.fly.append(f)
+				var g2 = await double_to_top(index,Vector2(x,r.position.y - 2),side)
+				g2["side"] = side;g2["kind"] = "double_to_top"
+				room.fly.append(g2)
 		room["grapple"] = []
 		reset(index)
 		for a in w.tether_anchors:

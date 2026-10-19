@@ -56,7 +56,7 @@ def summarize(room):
         "wall_escaped": sum(1 for r in rows if r["escaped"]),
         "wall_min_feet_y": min([r["min_feet_y"] for r in rows]) if rows else None,
         "fly_probes": len(fly),
-        "fly_escaped": sum(1 for r in fly if r["escaped"]),
+        "fly_escaped": sum(1 for r in fly if r["escaped"] or r["min_feet_y"] < -8),
         "fly_min_feet_y": min([r["min_feet_y"] for r in fly]) if fly else None,
         "grapple_probes": len(gr),
         "grapple_attached": sum(1 for r in gr if r["attached"]),
@@ -156,10 +156,13 @@ def main():
             if r["escaped"]:
                 add("escape", "Outer face of solid mass %s: wall jumps from a ledge reach feet y %.0f and leave the world." % (r["face_rect"], r["min_feet_y"]),
                     "fixed by the roof course (LD05-F1)", {"before_min_feet_y": r["min_feet_y"], "after": [x["min_feet_y"] for x in f["face"] if x["face_rect"] == r["face_rect"]]})
+        seen_fly = set()
         for r in b.get("fly", []):
-            if r["escaped"]:
-                add("escape", "Jump + double jump + dash from the ledge at (%d,%d) toward the %s wall reaches feet y %.0f and walks off the top." % (r["start"][0], r["start"][1], "left" if r["side"] < 0 else "right", r["min_feet_y"]),
-                    "fixed by the roof course (LD05-F1)", {"before_min_feet_y": r["min_feet_y"], "after": [x["min_feet_y"] for x in f["fly"] if x["start"] == r["start"]]})
+            key = (tuple(r["start"]), r["side"])
+            if (r["escaped"] or r["min_feet_y"] < -8) and key not in seen_fly:
+                seen_fly.add(key)
+                add("escape", "Jump + double jump (+ dash) from the ledge at (%d,%d) toward the %s wall reaches feet y %.0f: above the top of the room, on the wall top." % (r["start"][0], r["start"][1], "left" if r["side"] < 0 else "right", r["min_feet_y"]),
+                    "fixed by the roof course (LD05-F1)", {"before_min_feet_y": r["min_feet_y"], "after": [x["min_feet_y"] for x in f["fly"] if x["start"] == r["start"] and x["side"] == r["side"]]})
         if sb["grapple_probes"]:
             add("legit", "Tether anchors: %d of %d scripted swings attach, best height feet y %.0f. Grapple never reaches the room top." % (sb["grapple_attached"], sb["grapple_probes"], sb["grapple_min_feet_y"]),
                 "kept", sb)
@@ -198,9 +201,13 @@ def main():
             add("legit", "Water pits between floor segments are the room's hazard (fall recovery returns Kaze, costs 1 hp). Intended.", "kept", {})
         for g in [x for x in gates if x["room"] == idx]:
             pass
-        gl = [g for g in gates if g["room"] == idx and g["mode"] == "chain"]
+        gl = [g for g in gates if g["room"] == idx and g["mode"] == "chain" and not g["double_jump"]]
         for g in gl:
-            add("legit", "Gate %s (%dx30 body at %s): bypassed by wall jumps up its side (probe passed=%s, start supported=%s). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision." % (g["gate"], g["height"], g["at"], g["passed"], g["supported_start"]),
+            if not g["supported_start"]:
+                add("legit", "Gate %s (%dx30 body at %s) floats over a gap with no ledge at its base: the wall-jump bypass probe could not be started supported and is not evaluated." % (g["gate"], g["height"], g["at"]),
+                    "kept, not evaluated", g)
+                continue
+            add("legit", "Gate %s (%dx30 body at %s): %s by wall jumps up its side (probe passed=%s). Not a progression defect: entry to the next room is enforced by world.can_enter / expansion.allowed flags, not by collision." % (g["gate"], g["height"], g["at"], "bypassed" if g["passed"] else "held", g["passed"]),
                 "kept, documented", g)
         room_rec = {
             "index": idx, "name": b["name"], "size": size, "intended_route": ROUTE[idx],

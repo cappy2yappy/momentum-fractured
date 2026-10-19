@@ -34,7 +34,7 @@ func run():
 		for r in w.platforms:
 			if r.position.x < 0 or r.position.x >= size.x or r.size.y >= 300: continue
 			min_top = minf(min_top,r.position.y)
-		for a in w.tether_anchors: min_anchor = minf(min_anchor,a.y)
+		for a in w.grapple_candidates(): min_anchor = minf(min_anchor,a.y)
 	check(min_top >= 380.0,"No ledge top is above y=380 (min %.0f): the roof removes nothing legitimate" % min_top)
 	check(min_anchor >= 240.0,"No grapple anchor is above y=240 (min %.0f): swings never reach the roof" % min_anchor)
 
@@ -66,6 +66,10 @@ func run():
 	for pair in [[13,Vector2(324,438),-1],[17,Vector2(1626,418),1],[13,Vector2(1776,558),1]]:
 		var f = await fly(pair[0],pair[1],pair[2])
 		check(not f.escaped and f.min_feet_y >= 100.0,"R%d jump + double jump + dash from (%d,%d): feet y never above %.1f, no exit" % [pair[0],pair[1].x,pair[1].y,f.min_feet_y])
+
+	for pair in [[13,Vector2(324,438),-1],[17,Vector2(1626,418),1]]:
+		var dtop = await double_to_top(pair[0],pair[1],pair[2])
+		check(not dtop.escaped and dtop.min_feet_y >= 100.0 and dtop.min_feet_y <= 130.0,"R%d full double jump from (%d,%d) toward the wall bumps the roof underside at feet y %.1f and cannot leave (base: above the room, on top of the wall)" % [pair[0],pair[1].x,pair[1].y,dtop.min_feet_y])
 
 	# ---- 4. Canal doorway unchanged ---------------------------------------------------------------------------
 	reset(13)
