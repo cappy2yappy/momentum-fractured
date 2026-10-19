@@ -1,0 +1,3971 @@
+{
+ "base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+ "rooms": [
+  {
+   "index": 0,
+   "name": "CANAL HAVEN",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Spawn at the Haven shrine (220,1300). East walk-through (2440,1300) to R1. Depth door (590,780) to R13 (needs Windstep).",
+   "endpoints": [
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 1
+    },
+    {
+     "at": [
+      590.0,
+      780.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 13
+    }
+   ],
+   "gates": [],
+   "anchors": [],
+   "ledges": {
+    "total": 6,
+    "needing_double_jump": 2
+   },
+   "probe_before": {
+    "wall_probes": 2,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -108.4,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 2,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-001",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-002",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-003",
+     "class": "legit",
+     "text": "2 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[860.0, 780.0, 420.0, 48.0], [260.0, 780.0, 390.0, 48.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        860.0,
+        780.0,
+        420.0,
+        48.0
+       ],
+       [
+        260.0,
+        780.0,
+        390.0,
+        48.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-004",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 780) and the roof underside (feet y 116) is 664 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 780.0,
+      "dead_band_px": 664.0
+     }
+    },
+    {
+     "id": "LD05-005",
+     "class": "dead",
+     "text": "1 wall-side walk-through exit(s) leave 98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        1,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "LANTERN MARKET",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "West door back to R0. Windstep pickup (1580,1300) after the market guard. East walk-through (2440,1300) to R2 (needs Windstep).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1300.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 0
+    },
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 2
+    }
+   ],
+   "gates": [],
+   "anchors": [],
+   "ledges": {
+    "total": 6,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 3,
+    "wall_min_feet_y": -158.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-006",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-007",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -158, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -158.1,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-008",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 720) and the roof underside (feet y 116) is 604 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 720.0,
+      "dead_band_px": 604.0
+     }
+    },
+    {
+     "id": "LD05-009",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        0,
+        [
+         120.0,
+         1300.0
+        ]
+       ],
+       [
+        2,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "FLOODED CISTERN",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "West door to R1. Pit-and-ledge ascent east. Wind kunai gate (2150,850) opens the cistern cache. East walk-through (2440,850) to R3. Depth door (470,1120) to R15 (needs the cache and Wind kunai).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1300.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 1
+    },
+    {
+     "at": [
+      2440.0,
+      850.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 3
+    },
+    {
+     "at": [
+      470.0,
+      1120.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 15
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2150.0,
+      850.0
+     ],
+     "element": "wind",
+     "height": 250.0,
+     "id": "cistern_wind_cache"
+    }
+   ],
+   "anchors": [],
+   "ledges": {
+    "total": 10,
+    "needing_double_jump": 3
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -150.9,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-010",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-011",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -151, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -150.9,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-012",
+     "class": "legit",
+     "text": "3 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[1510.0, 870.0, 300.0, 40.0], [1980.0, 1050.0, 250.0, 40.0], [2220.0, 850.0, 380.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        1510.0,
+        870.0,
+        300.0,
+        40.0
+       ],
+       [
+        1980.0,
+        1050.0,
+        250.0,
+        40.0
+       ],
+       [
+        2220.0,
+        850.0,
+        380.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-013",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 850) and the roof underside (feet y 116) is 734 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 850.0,
+      "dead_band_px": 734.0
+     }
+    },
+    {
+     "id": "LD05-014",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        1,
+        [
+         120.0,
+         1300.0
+        ]
+       ],
+       [
+        3,
+        [
+         2440.0,
+         850.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-015",
+     "class": "legit",
+     "text": "Water pits between floor segments are the room's hazard (fall recovery returns Kaze, costs 1 hp). Intended.",
+     "status": "kept",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-016",
+     "class": "legit",
+     "text": "Gate cistern_wind_cache (250x30 body at [2150.0, 850.0]): bypassed by wall jumps up its side (probe passed=True, start supported=False). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2150.0,
+       850.0
+      ],
+      "double_jump": false,
+      "end": [
+       2185.0,
+       1049.9
+      ],
+      "gate": "cistern_wind_cache",
+      "height": 250.0,
+      "min_feet_y": 851.0,
+      "mode": "chain",
+      "passed": true,
+      "room": 2,
+      "side": 1,
+      "supported_start": false
+     }
+    },
+    {
+     "id": "LD05-017",
+     "class": "legit",
+     "text": "Gate cistern_wind_cache (250x30 body at [2150.0, 850.0]): bypassed by wall jumps up its side (probe passed=True, start supported=False). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2150.0,
+       850.0
+      ],
+      "double_jump": true,
+      "end": [
+       2185.0,
+       1049.9
+      ],
+      "gate": "cistern_wind_cache",
+      "height": 250.0,
+      "min_feet_y": 853.0,
+      "mode": "chain",
+      "passed": true,
+      "room": 2,
+      "side": 1,
+      "supported_start": false
+     }
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "ECHO SHRINE",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "West door (120,850) to R2. Wind Tether pickup (1320,1300). East walk-through (2440,1300) to R4 (needs Tether). Depth door (2250,790) to R9 return seal.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      850.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 2
+    },
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 4
+    },
+    {
+     "at": [
+      2250.0,
+      790.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 9
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     1090.0,
+     650.0
+    ],
+    [
+     2170.0,
+     610.0
+    ]
+   ],
+   "ledges": {
+    "total": 6,
+    "needing_double_jump": 5
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -150.9,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-018",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -151, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -150.9,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-019",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-020",
+     "class": "legit",
+     "text": "5 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[0.0, 850.0, 300.0, 40.0], [420.0, 1060.0, 330.0, 40.0], [920.0, 830.0, 360.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        0.0,
+        850.0,
+        300.0,
+        40.0
+       ],
+       [
+        420.0,
+        1060.0,
+        330.0,
+        40.0
+       ],
+       [
+        920.0,
+        830.0,
+        360.0,
+        40.0
+       ],
+       [
+        1480.0,
+        1030.0,
+        340.0,
+        40.0
+       ],
+       [
+        2000.0,
+        790.0,
+        340.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-021",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 790) and the roof underside (feet y 116) is 674 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 790.0,
+      "dead_band_px": 674.0
+     }
+    },
+    {
+     "id": "LD05-022",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        2,
+        [
+         120.0,
+         850.0
+        ]
+       ],
+       [
+        4,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "BROKEN SPAN",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "West door to R3. Fire kunai (1080,980). Span fire cache gate (1990,1080). East walk-through (2440,1080) to R5.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1300.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 3
+    },
+    {
+     "at": [
+      2440.0,
+      1080.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 5
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      1990.0,
+      1080.0
+     ],
+     "element": "fire",
+     "height": 270.0,
+     "id": "span_fire_cache"
+    }
+   ],
+   "anchors": [
+    [
+     780.0,
+     720.0
+    ],
+    [
+     1370.0,
+     610.0
+    ],
+    [
+     1940.0,
+     650.0
+    ]
+   ],
+   "ledges": {
+    "total": 7,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -129.3,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-023",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-024",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -129, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -129.3,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-025",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 890) and the roof underside (feet y 116) is 774 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 890.0,
+      "dead_band_px": 774.0
+     }
+    },
+    {
+     "id": "LD05-026",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        3,
+        [
+         120.0,
+         1300.0
+        ]
+       ],
+       [
+        5,
+        [
+         2440.0,
+         1080.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-027",
+     "class": "legit",
+     "text": "Water pits between floor segments are the room's hazard (fall recovery returns Kaze, costs 1 hp). Intended.",
+     "status": "kept",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-028",
+     "class": "legit",
+     "text": "Gate span_fire_cache (270x30 body at [1990.0, 1080.0]): bypassed by wall jumps up its side (probe passed=True, start supported=False). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1990.0,
+       1080.0
+      ],
+      "double_jump": false,
+      "end": [
+       2025.0,
+       1295.5
+      ],
+      "gate": "span_fire_cache",
+      "height": 270.0,
+      "min_feet_y": 1083.0,
+      "mode": "chain",
+      "passed": true,
+      "room": 4,
+      "side": 1,
+      "supported_start": false
+     }
+    },
+    {
+     "id": "LD05-029",
+     "class": "legit",
+     "text": "Gate span_fire_cache (270x30 body at [1990.0, 1080.0]): bypassed by wall jumps up its side (probe passed=True, start supported=False). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1990.0,
+       1080.0
+      ],
+      "double_jump": true,
+      "end": [
+       2025.0,
+       1295.5
+      ],
+      "gate": "span_fire_cache",
+      "height": 270.0,
+      "min_feet_y": 1083.0,
+      "mode": "chain",
+      "passed": true,
+      "room": 4,
+      "side": 1,
+      "supported_start": false
+     }
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "ASCENT TOWER",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "West door (120,1080). Gale Dash (1320,1300), Electric kunai (1510,930). East walk-through (2440,1300) to R6 (needs Dash). Depth door (2240,930) to R17 (needs Tether and Dash).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1080.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 4
+    },
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 6
+    },
+    {
+     "at": [
+      2240.0,
+      930.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 17
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     820.0,
+     650.0
+    ],
+    [
+     1900.0,
+     520.0
+    ]
+   ],
+   "ledges": {
+    "total": 10,
+    "needing_double_jump": 2
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -129.3,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 2,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 504.9
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 2,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 504.9
+   },
+   "findings": [
+    {
+     "id": "LD05-030",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -129, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -129.3,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-031",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -121, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -120.9,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-032",
+     "class": "legit",
+     "text": "Tether anchors: 0 of 2 scripted swings attach, best height feet y 505. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 4,
+      "wall_escaped": 2,
+      "wall_min_feet_y": -129.3,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 2,
+      "grapple_attached": 0,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 504.9
+     }
+    },
+    {
+     "id": "LD05-033",
+     "class": "legit",
+     "text": "2 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[1760.0, 700.0, 280.0, 40.0], [2130.0, 930.0, 470.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        1760.0,
+        700.0,
+        280.0,
+        40.0
+       ],
+       [
+        2130.0,
+        930.0,
+        470.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-034",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 680) and the roof underside (feet y 116) is 564 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 680.0,
+      "dead_band_px": 564.0
+     }
+    },
+    {
+     "id": "LD05-035",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        4,
+        [
+         120.0,
+         1080.0
+        ]
+       ],
+       [
+        6,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-036",
+     "class": "legit",
+     "text": "Water pits between floor segments are the room's hazard (fall recovery returns Kaze, costs 1 hp). Intended.",
+     "status": "kept",
+     "evidence": {}
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "TIDE WARDEN",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Boss arena. East walk-through (2440,1090) to R7 (needs the Tide Warden defeated).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1300.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 5
+    },
+    {
+     "at": [
+      2440.0,
+      1090.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 7
+    }
+   ],
+   "gates": [],
+   "anchors": [],
+   "ledges": {
+    "total": 5,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -108.4,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-037",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-038",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -99, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -99.3,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-039",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 1000) and the roof underside (feet y 116) is 884 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 1000.0,
+      "dead_band_px": 884.0
+     }
+    },
+    {
+     "id": "LD05-040",
+     "class": "approach",
+     "text": "Door to R7 at (2440,1090): walkable top is +20 px from the door feet (door drawn floating above its shelf).",
+     "status": "fixed by door seating (LD05-F4); endpoint and trigger unchanged",
+     "evidence": {
+      "at": [
+       2440.0,
+       1090.0
+      ],
+      "dead_space_past_door_px": 98.0,
+      "door_span_supported": false,
+      "enclosed_above": false,
+      "interact_radius": null,
+      "mode": "horizontal_walk",
+      "room": 6,
+      "solid_headroom": null,
+      "support": [
+       2020.0,
+       1110.0,
+       580.0,
+       40.0
+      ],
+      "support_reaches_wall": true,
+      "support_top_offset": 20.0,
+      "target": 7,
+      "trigger_to_wall_px": 146.0,
+      "trigger_x": 2440.0,
+      "wall_side": true
+     }
+    },
+    {
+     "id": "LD05-041",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        5,
+        [
+         120.0,
+         1300.0
+        ]
+       ],
+       [
+        7,
+        [
+         2440.0,
+         1090.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "RELAY ARCHIVE",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Relay Archive: electric seal gate (2000,1300), control (2200,1190). East walk-through (2440,1300) to R8 (needs Archive restored).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1090.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 6
+    },
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 8
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2000.0,
+      1300.0
+     ],
+     "element": "electric",
+     "height": 300.0,
+     "id": "relay_electric_seal"
+    }
+   ],
+   "anchors": [
+    [
+     990.0,
+     650.0
+    ],
+    [
+     1480.0,
+     430.0
+    ]
+   ],
+   "ledges": {
+    "total": 6,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 3,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -119.3,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 2,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 454.9
+   },
+   "probe_after": {
+    "wall_probes": 3,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 2,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 454.9
+   },
+   "findings": [
+    {
+     "id": "LD05-042",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -119, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -119.3,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-043",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor leave the world (feet y -108, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -108.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-044",
+     "class": "legit",
+     "text": "Tether anchors: 0 of 2 scripted swings attach, best height feet y 455. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 3,
+      "wall_escaped": 2,
+      "wall_min_feet_y": -119.3,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 2,
+      "grapple_attached": 0,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 454.9
+     }
+    },
+    {
+     "id": "LD05-045",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 650) and the roof underside (feet y 116) is 534 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 650.0,
+      "dead_band_px": 534.0
+     }
+    },
+    {
+     "id": "LD05-046",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        6,
+        [
+         120.0,
+         1090.0
+        ]
+       ],
+       [
+        8,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-047",
+     "class": "legit",
+     "text": "Gate relay_electric_seal (300x30 body at [2000.0, 1300.0]): bypassed by wall jumps up its side (probe passed=False, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2000.0,
+       1300.0
+      ],
+      "double_jump": false,
+      "end": [
+       1970.9,
+       1067.9
+      ],
+      "gate": "relay_electric_seal",
+      "height": 300.0,
+      "min_feet_y": 980.1,
+      "mode": "chain",
+      "passed": false,
+      "room": 7,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-048",
+     "class": "legit",
+     "text": "Gate relay_electric_seal (300x30 body at [2000.0, 1300.0]): bypassed by wall jumps up its side (probe passed=False, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2000.0,
+       1300.0
+      ],
+      "double_jump": true,
+      "end": [
+       1947.9,
+       1024.9
+      ],
+      "gate": "relay_electric_seal",
+      "height": 300.0,
+      "min_feet_y": 980.1,
+      "mode": "chain",
+      "passed": false,
+      "room": 7,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "RELAY UNDERCROFT",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Undercroft shrine (2060,1300), sigil (1470,690). West to R7, east (2440,830) to R9. Depth doors to R16 (550,1110), R18 (1090,920), R12 return (1470,740).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1090.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 7
+    },
+    {
+     "at": [
+      2440.0,
+      830.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 9
+    },
+    {
+     "at": [
+      550.0,
+      1110.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 16
+    },
+    {
+     "at": [
+      1090.0,
+      920.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 18
+    },
+    {
+     "at": [
+      1470.0,
+      740.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 12
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     750.0,
+     660.0
+    ],
+    [
+     1220.0,
+     500.0
+    ],
+    [
+     1800.0,
+     570.0
+    ],
+    [
+     2250.0,
+     530.0
+    ]
+   ],
+   "ledges": {
+    "total": 7,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -119.3,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 4,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 544.9
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 4,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 544.9
+   },
+   "findings": [
+    {
+     "id": "LD05-049",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -119, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -119.3,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-050",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -102, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -101.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-051",
+     "class": "legit",
+     "text": "Tether anchors: 0 of 4 scripted swings attach, best height feet y 545. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 4,
+      "wall_escaped": 2,
+      "wall_min_feet_y": -119.3,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 4,
+      "grapple_attached": 0,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 544.9
+     }
+    },
+    {
+     "id": "LD05-052",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 740) and the roof underside (feet y 116) is 624 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 740.0,
+      "dead_band_px": 624.0
+     }
+    },
+    {
+     "id": "LD05-053",
+     "class": "approach",
+     "text": "Door to R18 at (1090,920): the shelf under it ends at x 1110; the drawn door spans x 1042..1138, so 28 px overhang empty space.",
+     "status": "fixed by the 40 px shelf seat (LD05-F3)",
+     "evidence": {
+      "at": [
+       1090.0,
+       920.0
+      ],
+      "door_span_supported": false,
+      "enclosed_above": false,
+      "interact_radius": 85,
+      "mode": "depth_door",
+      "room": 8,
+      "solid_headroom": null,
+      "support": [
+       770.0,
+       920.0,
+       340.0,
+       40.0
+      ],
+      "support_reaches_wall": false,
+      "support_top_offset": 0.0,
+      "target": 18,
+      "trigger_x": null,
+      "wall_side": false
+     }
+    },
+    {
+     "id": "LD05-054",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        7,
+        [
+         120.0,
+         1090.0
+        ]
+       ],
+       [
+        9,
+        [
+         2440.0,
+         830.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "SIGNAL TERRACE",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Three relay sigils: west (1490,600), fire cache (2240,770, behind gate 2110,810). East walk-through (2440,830) to R10 (needs all sigils). Depth doors to R14 (1100,1040) and R3 return (160,620).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      830.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 8
+    },
+    {
+     "at": [
+      2440.0,
+      830.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 10
+    },
+    {
+     "at": [
+      1100.0,
+      1040.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 14
+    },
+    {
+     "at": [
+      160.0,
+      620.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 3
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2110.0,
+      810.0
+     ],
+     "element": "fire",
+     "height": 280.0,
+     "id": "terrace_fire_cache"
+    },
+    {
+     "at": [
+      360.0,
+      620.0
+     ],
+     "element": "electric",
+     "height": 280.0,
+     "id": "terrace_return_relay"
+    }
+   ],
+   "anchors": [
+    [
+     670.0,
+     480.0
+    ],
+    [
+     1250.0,
+     400.0
+    ],
+    [
+     1850.0,
+     430.0
+    ]
+   ],
+   "ledges": {
+    "total": 7,
+    "needing_double_jump": 6
+   },
+   "probe_before": {
+    "wall_probes": 5,
+    "wall_escaped": 3,
+    "wall_min_feet_y": -163.2,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 6,
+    "grapple_attached": 2,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 444.9
+   },
+   "probe_after": {
+    "wall_probes": 5,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 6,
+    "grapple_attached": 2,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 444.9
+   },
+   "findings": [
+    {
+     "id": "LD05-055",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -163, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -163.2,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-056",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -122, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -121.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-057",
+     "class": "legit",
+     "text": "Tether anchors: 2 of 6 scripted swings attach, best height feet y 445. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 5,
+      "wall_escaped": 3,
+      "wall_min_feet_y": -163.2,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 6,
+      "grapple_attached": 2,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 444.9
+     }
+    },
+    {
+     "id": "LD05-058",
+     "class": "legit",
+     "text": "6 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[0.0, 830.0, 650.0, 40.0], [80.0, 620.0, 440.0, 40.0], [380.0, 1040.0, 800.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        0.0,
+        830.0,
+        650.0,
+        40.0
+       ],
+       [
+        80.0,
+        620.0,
+        440.0,
+        40.0
+       ],
+       [
+        380.0,
+        1040.0,
+        800.0,
+        40.0
+       ],
+       [
+        780.0,
+        850.0,
+        440.0,
+        40.0
+       ],
+       [
+        1360.0,
+        640.0,
+        400.0,
+        40.0
+       ],
+       [
+        1980.0,
+        810.0,
+        620.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-059",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 620) and the roof underside (feet y 116) is 504 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 620.0,
+      "dead_band_px": 504.0
+     }
+    },
+    {
+     "id": "LD05-060",
+     "class": "approach",
+     "text": "Door to R10 at (2440,830): walkable top is -20 px from the door feet (door drawn sunk into its shelf).",
+     "status": "fixed by door seating (LD05-F4); endpoint and trigger unchanged",
+     "evidence": {
+      "at": [
+       2440.0,
+       830.0
+      ],
+      "dead_space_past_door_px": 98.0,
+      "door_span_supported": false,
+      "enclosed_above": false,
+      "interact_radius": null,
+      "mode": "horizontal_walk",
+      "room": 9,
+      "solid_headroom": null,
+      "support": [
+       1980.0,
+       810.0,
+       620.0,
+       40.0
+      ],
+      "support_reaches_wall": true,
+      "support_top_offset": -20.0,
+      "target": 10,
+      "trigger_to_wall_px": 146.0,
+      "trigger_x": 2440.0,
+      "wall_side": true
+     }
+    },
+    {
+     "id": "LD05-061",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        8,
+        [
+         120.0,
+         830.0
+        ]
+       ],
+       [
+        10,
+        [
+         2440.0,
+         830.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-062",
+     "class": "legit",
+     "text": "Gate terrace_fire_cache (280x30 body at [2110.0, 810.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2110.0,
+       810.0
+      ],
+      "double_jump": false,
+      "end": [
+       2144.3,
+       534.5
+      ],
+      "gate": "terrace_fire_cache",
+      "height": 280.0,
+      "min_feet_y": 354.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 9,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-063",
+     "class": "legit",
+     "text": "Gate terrace_fire_cache (280x30 body at [2110.0, 810.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2110.0,
+       810.0
+      ],
+      "double_jump": true,
+      "end": [
+       2143.3,
+       352.1
+      ],
+      "gate": "terrace_fire_cache",
+      "height": 280.0,
+      "min_feet_y": 352.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 9,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "SKYWORKS APPROACH",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Skyworks approach. Wind intake gate (2110,810) must be opened to enter R11. East walk-through (2440,760).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      830.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 9
+    },
+    {
+     "at": [
+      2440.0,
+      760.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 11
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2110.0,
+      810.0
+     ],
+     "element": "wind",
+     "height": 280.0,
+     "id": "skyworks_wind_intake"
+    }
+   ],
+   "anchors": [
+    [
+     620.0,
+     560.0
+    ],
+    [
+     1220.0,
+     460.0
+    ],
+    [
+     1880.0,
+     480.0
+    ],
+    [
+     2320.0,
+     420.0
+    ]
+   ],
+   "ledges": {
+    "total": 7,
+    "needing_double_jump": 6
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -160.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 8,
+    "grapple_attached": 8,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 496.8
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 8,
+    "grapple_attached": 8,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 496.8
+   },
+   "findings": [
+    {
+     "id": "LD05-064",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -102, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -101.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-065",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-066",
+     "class": "legit",
+     "text": "Tether anchors: 8 of 8 scripted swings attach, best height feet y 497. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 4,
+      "wall_escaped": 2,
+      "wall_min_feet_y": -160.1,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 8,
+      "grapple_attached": 8,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 496.8
+     }
+    },
+    {
+     "id": "LD05-067",
+     "class": "legit",
+     "text": "6 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[0.0, 830.0, 300.0, 40.0], [350.0, 1040.0, 800.0, 40.0], [920.0, 830.0, 300.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        0.0,
+        830.0,
+        300.0,
+        40.0
+       ],
+       [
+        350.0,
+        1040.0,
+        800.0,
+        40.0
+       ],
+       [
+        920.0,
+        830.0,
+        300.0,
+        40.0
+       ],
+       [
+        1400.0,
+        620.0,
+        360.0,
+        40.0
+       ],
+       [
+        1780.0,
+        810.0,
+        360.0,
+        40.0
+       ],
+       [
+        2240.0,
+        760.0,
+        360.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-068",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 620) and the roof underside (feet y 116) is 504 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 620.0,
+      "dead_band_px": 504.0
+     }
+    },
+    {
+     "id": "LD05-069",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        9,
+        [
+         120.0,
+         830.0
+        ]
+       ],
+       [
+        11,
+        [
+         2440.0,
+         760.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-070",
+     "class": "legit",
+     "text": "Gate skyworks_wind_intake (280x30 body at [2110.0, 810.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2110.0,
+       810.0
+      ],
+      "double_jump": false,
+      "end": [
+       2144.3,
+       534.5
+      ],
+      "gate": "skyworks_wind_intake",
+      "height": 280.0,
+      "min_feet_y": 354.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 10,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-071",
+     "class": "legit",
+     "text": "Gate skyworks_wind_intake (280x30 body at [2110.0, 810.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2110.0,
+       810.0
+      ],
+      "double_jump": true,
+      "end": [
+       2143.3,
+       352.1
+      ],
+      "gate": "skyworks_wind_intake",
+      "height": 280.0,
+      "min_feet_y": 352.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 10,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "STORM FOUNDRY",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Foundry refuge (1720,1300). Electric relay gate (2370,760) must be opened to enter R12. Depth door (890,980) to R19.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      760.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 10
+    },
+    {
+     "at": [
+      2440.0,
+      1300.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 12
+    },
+    {
+     "at": [
+      890.0,
+      980.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 19
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2370.0,
+      760.0
+     ],
+     "element": "electric",
+     "height": 300.0,
+     "id": "foundry_electric_relay"
+    }
+   ],
+   "anchors": [
+    [
+     700.0,
+     560.0
+    ],
+    [
+     1300.0,
+     460.0
+    ],
+    [
+     1940.0,
+     460.0
+    ]
+   ],
+   "ledges": {
+    "total": 7,
+    "needing_double_jump": 6
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 2,
+    "wall_min_feet_y": -160.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 6,
+    "grapple_attached": 2,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 364.9
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 6,
+    "grapple_attached": 2,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": 364.9
+   },
+   "findings": [
+    {
+     "id": "LD05-072",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-073",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-074",
+     "class": "legit",
+     "text": "Tether anchors: 2 of 6 scripted swings attach, best height feet y 365. Grapple never reaches the room top.",
+     "status": "kept",
+     "evidence": {
+      "wall_probes": 4,
+      "wall_escaped": 2,
+      "wall_min_feet_y": -160.1,
+      "fly_probes": 0,
+      "fly_escaped": 0,
+      "fly_min_feet_y": null,
+      "grapple_probes": 6,
+      "grapple_attached": 2,
+      "grapple_escaped": 0,
+      "grapple_min_feet_y": 364.9
+     }
+    },
+    {
+     "id": "LD05-075",
+     "class": "legit",
+     "text": "6 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[0.0, 760.0, 310.0, 40.0], [420.0, 980.0, 600.0, 40.0], [1100.0, 780.0, 380.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        0.0,
+        760.0,
+        310.0,
+        40.0
+       ],
+       [
+        420.0,
+        980.0,
+        600.0,
+        40.0
+       ],
+       [
+        1100.0,
+        780.0,
+        380.0,
+        40.0
+       ],
+       [
+        1500.0,
+        560.0,
+        400.0,
+        40.0
+       ],
+       [
+        2010.0,
+        760.0,
+        590.0,
+        40.0
+       ],
+       [
+        920.0,
+        560.0,
+        240.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-076",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 560) and the roof underside (feet y 116) is 444 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 560.0,
+      "dead_band_px": 444.0
+     }
+    },
+    {
+     "id": "LD05-077",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        10,
+        [
+         120.0,
+         760.0
+        ]
+       ],
+       [
+        12,
+        [
+         2440.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-078",
+     "class": "legit",
+     "text": "Gate foundry_electric_relay (300x30 body at [2370.0, 760.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2370.0,
+       760.0
+      ],
+      "double_jump": false,
+      "end": [
+       2401.9,
+       430.4
+      ],
+      "gate": "foundry_electric_relay",
+      "height": 300.0,
+      "min_feet_y": 304.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 11,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-079",
+     "class": "legit",
+     "text": "Gate foundry_electric_relay (300x30 body at [2370.0, 760.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2370.0,
+       760.0
+      ],
+      "double_jump": true,
+      "end": [
+       2401.9,
+       430.4
+      ],
+      "gate": "foundry_electric_relay",
+      "height": 300.0,
+      "min_feet_y": 304.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 11,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "KEEPER RELAY",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Storm Keeper arena (boss 1320,1300), relay (2220,1300). Depth door (220,830) back to R8 after the Keeper.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1300.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 11
+    },
+    {
+     "at": [
+      220.0,
+      830.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 8
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     760.0,
+     790.0
+    ],
+    [
+     1230.0,
+     590.0
+    ],
+    [
+     1870.0,
+     730.0
+    ]
+   ],
+   "ledges": {
+    "total": 6,
+    "needing_double_jump": 5
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 3,
+    "wall_min_feet_y": -159.2,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-080",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from ledge leave the world (feet y -102, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -101.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-081",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -159, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -159.2,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-082",
+     "class": "legit",
+     "text": "5 ledge(s) need the double jump (static model: rise above 225 px from every ordinary support): [[80.0, 830.0, 480.0, 40.0], [580.0, 1070.0, 320.0, 40.0], [1040.0, 850.0, 350.0, 40.0]]. Ability gating by height; kept.",
+     "status": "kept",
+     "evidence": {
+      "ledges": [
+       [
+        80.0,
+        830.0,
+        480.0,
+        40.0
+       ],
+       [
+        580.0,
+        1070.0,
+        320.0,
+        40.0
+       ],
+       [
+        1040.0,
+        850.0,
+        350.0,
+        40.0
+       ],
+       [
+        1700.0,
+        1030.0,
+        340.0,
+        40.0
+       ],
+       [
+        2180.0,
+        880.0,
+        300.0,
+        40.0
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-083",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 830) and the roof underside (feet y 116) is 714 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 830.0,
+      "dead_band_px": 714.0
+     }
+    },
+    {
+     "id": "LD05-084",
+     "class": "dead",
+     "text": "1 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        11,
+        [
+         120.0,
+         1300.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "MOORING LOFT",
+   "size": [
+    1800.0,
+    1440.0
+   ],
+   "intended_route": "Canal Haven door (120,1200) at the foot of the gatehouse hallway, stepped shelves climb right to the R14 walk-through (1680,560). Stride I (450,440), wind-fold door (900,400) to R20.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1200.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 0
+    },
+    {
+     "at": [
+      1680.0,
+      560.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 14
+    },
+    {
+     "at": [
+      900.0,
+      400.0
+     ],
+     "heading": 0,
+     "mode": "wind_fold",
+     "target": 20
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     900.0,
+     690.0
+    ]
+   ],
+   "ledges": {
+    "total": 16,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 11,
+    "wall_escaped": 4,
+    "wall_min_feet_y": -164.6,
+    "fly_probes": 3,
+    "fly_escaped": 1,
+    "fly_min_feet_y": -14.6,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 11,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 3,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 126.6,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-085",
+     "class": "legit",
+     "text": "left wall: owned by the Canal gatehouse mass and back pier (contract); chains inside the hallway hold at feet y 1018..1080 under the lintel. Unchanged.",
+     "status": "kept (creator-approved Canal geometry)",
+     "evidence": {
+      "min_feet_y": 1018.0
+     }
+    },
+    {
+     "id": "LD05-086",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -144, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -144.0,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-087",
+     "class": "escape",
+     "text": "Outer face of solid mass [0.0, 0.0, 296.0, 1020.0]: wall jumps from a ledge reach feet y -165 and leave the world.",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -164.6,
+      "after": [
+       1080.1,
+       1080.1,
+       116.1,
+       1080.1
+      ]
+     }
+    },
+    {
+     "id": "LD05-088",
+     "class": "escape",
+     "text": "Jump + double jump + dash from the ledge at (324,438) toward the left wall reaches feet y -15 and walks off the top.",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -14.6,
+      "after": [
+       254.1
+      ]
+     }
+    },
+    {
+     "id": "LD05-089",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 400) and the roof underside (feet y 116) is 284 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 400.0,
+      "dead_band_px": 284.0
+     }
+    },
+    {
+     "id": "LD05-090",
+     "class": "dead",
+     "text": "1 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind. (R13 to R0 is already closed by the Canal back pier and is not counted.)",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        14,
+        [
+         1680.0,
+         560.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-091",
+     "class": "misleading",
+     "text": "Dashed grey truss lines (two 9 px strokes per bay) read as walkable ramps; now thin, dim and dashed.",
+     "status": "fixed (LD05-F5), presentation only",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-092",
+     "class": "dead",
+     "text": "60 px crawlspace under the Canal hallway pad (x 0..360, y 1240..1300): Kaze could walk in from the quay floor and stand at the wall.",
+     "status": "fixed by the plinth (LD05-F2)",
+     "evidence": {}
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "BELLROOF WALK",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Bellroof Walk: west door (120,1100) from R13, long roof walk east to R9 walk-through (2440,830). Local stair (1450,480) up to R17.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1100.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 13
+    },
+    {
+     "at": [
+      2440.0,
+      830.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 9
+    },
+    {
+     "at": [
+      1450.0,
+      480.0
+     ],
+     "heading": 0,
+     "mode": "stair_up",
+     "target": 17
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     820.0,
+     620.0
+    ],
+    [
+     1460.0,
+     430.0
+    ],
+    [
+     2090.0,
+     550.0
+    ]
+   ],
+   "ledges": {
+    "total": 29,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 8,
+    "wall_escaped": 8,
+    "wall_min_feet_y": -159.9,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 8,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-093",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -159.9,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-094",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -140, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -139.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-095",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 480) and the roof underside (feet y 116) is 364 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 480.0,
+      "dead_band_px": 364.0
+     }
+    },
+    {
+     "id": "LD05-096",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        13,
+        [
+         120.0,
+         1100.0
+        ]
+       ],
+       [
+        9,
+        [
+         2440.0,
+         830.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "name": "LOWER SLUICE",
+   "size": [
+    2200.0,
+    1440.0
+   ],
+   "intended_route": "Lower Sluice: from the R2 door (120,500) a dry descent east to the R16 walk-through (2080,1120). Optional wind gate (500,500).",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      500.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 2
+    },
+    {
+     "at": [
+      2080.0,
+      1120.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 16
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      500.0,
+      500.0
+     ],
+     "element": "wind",
+     "height": 240.0,
+     "id": "lower_sluice_wind"
+    }
+   ],
+   "anchors": [
+    [
+     960.0,
+     480.0
+    ],
+    [
+     1550.0,
+     660.0
+    ]
+   ],
+   "ledges": {
+    "total": 10,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 4,
+    "wall_min_feet_y": -160.7,
+    "fly_probes": 1,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 45.4,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 1,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 184.1,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-097",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -158, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -158.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-098",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -161, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-099",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 500) and the roof underside (feet y 116) is 384 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 500.0,
+      "dead_band_px": 384.0
+     }
+    },
+    {
+     "id": "LD05-100",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        2,
+        [
+         120.0,
+         500.0
+        ]
+       ],
+       [
+        16,
+        [
+         2080.0,
+         1120.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-101",
+     "class": "misleading",
+     "text": "Four full-width 12 px 'service rails' and 150 px arches read as ledges; now dim and dashed.",
+     "status": "fixed (LD05-F5), presentation only",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-102",
+     "class": "legit",
+     "text": "Gate lower_sluice_wind (240x30 body at [500.0, 500.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       500.0,
+       500.0
+      ],
+      "double_jump": false,
+      "end": [
+       530.6,
+       167.9
+      ],
+      "gate": "lower_sluice_wind",
+      "height": 240.0,
+      "min_feet_y": 45.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 15,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-103",
+     "class": "legit",
+     "text": "Gate lower_sluice_wind (240x30 body at [500.0, 500.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       500.0,
+       500.0
+      ],
+      "double_jump": true,
+      "end": [
+       530.6,
+       167.9
+      ],
+      "gate": "lower_sluice_wind",
+      "height": 240.0,
+      "min_feet_y": 45.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 15,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "name": "ROOT SHRINE",
+   "size": [
+    2000.0,
+    1440.0
+   ],
+   "intended_route": "Root Shrine (420,1120) save. West door R15, east (1880,760) to R8, depth door (1000,430) to R18.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1120.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 15
+    },
+    {
+     "at": [
+      1880.0,
+      760.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 8
+    },
+    {
+     "at": [
+      1000.0,
+      430.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 18
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     950.0,
+     630.0
+    ],
+    [
+     1530.0,
+     470.0
+    ]
+   ],
+   "ledges": {
+    "total": 10,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 4,
+    "wall_min_feet_y": -160.7,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-104",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -161, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-105",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-106",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 430) and the roof underside (feet y 116) is 314 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 430.0,
+      "dead_band_px": 314.0
+     }
+    },
+    {
+     "id": "LD05-107",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        15,
+        [
+         120.0,
+         1120.0
+        ]
+       ],
+       [
+        8,
+        [
+         1880.0,
+         760.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "name": "COUNTERWEIGHT SPIRE",
+   "size": [
+    1800.0,
+    2160.0
+   ],
+   "intended_route": "Counterweight Spire: climb from the R5 door (120,1900) by landings to the top. Stair down (1680,1300) to R14, depth door (1500,420) to R20 behind the spire wind shutter.",
+   "endpoints": [
+    {
+     "at": [
+      1680.0,
+      1300.0
+     ],
+     "heading": 0,
+     "mode": "stair_down",
+     "target": 14
+    },
+    {
+     "at": [
+      120.0,
+      1900.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 5
+    },
+    {
+     "at": [
+      1500.0,
+      420.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 20
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      1430.0,
+      420.0
+     ],
+     "element": "wind",
+     "height": 240.0,
+     "id": "spire_wind_shutter"
+    }
+   ],
+   "anchors": [
+    [
+     900.0,
+     1400.0
+    ],
+    [
+     950.0,
+     780.0
+    ],
+    [
+     1320.0,
+     250.0
+    ]
+   ],
+   "ledges": {
+    "total": 16,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 6,
+    "wall_escaped": 6,
+    "wall_min_feet_y": -154.3,
+    "fly_probes": 1,
+    "fly_escaped": 1,
+    "fly_min_feet_y": -34.6,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 6,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 1,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 266.1,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-108",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -104, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -104.2,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-109",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -154, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -154.3,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-110",
+     "class": "escape",
+     "text": "Jump + double jump + dash from the ledge at (1626,418) toward the right wall reaches feet y -35 and walks off the top.",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -34.6,
+      "after": [
+       266.1
+      ]
+     }
+    },
+    {
+     "id": "LD05-111",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 420) and the roof underside (feet y 116) is 304 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 420.0,
+      "dead_band_px": 304.0
+     }
+    },
+    {
+     "id": "LD05-112",
+     "class": "dead",
+     "text": "1 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        5,
+        [
+         120.0,
+         1900.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-113",
+     "class": "misleading",
+     "text": "Five full-width 'LIFT' landing lines read as ledges; truss lines as R13; now dashed and dim.",
+     "status": "fixed (LD05-F5), presentation only",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-114",
+     "class": "legit",
+     "text": "Gate spire_wind_shutter (240x30 body at [1430.0, 420.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1430.0,
+       420.0
+      ],
+      "double_jump": false,
+      "end": [
+       1460.5,
+       87.9
+      ],
+      "gate": "spire_wind_shutter",
+      "height": 240.0,
+      "min_feet_y": -34.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 17,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-115",
+     "class": "legit",
+     "text": "Gate spire_wind_shutter (240x30 body at [1430.0, 420.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1430.0,
+       420.0
+      ],
+      "double_jump": true,
+      "end": [
+       1460.5,
+       87.9
+      ],
+      "gate": "spire_wind_shutter",
+      "height": 240.0,
+      "min_feet_y": -34.9,
+      "mode": "chain",
+      "passed": true,
+      "room": 17,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "name": "PUMP GALLERY",
+   "size": [
+    2600.0,
+    1440.0
+   ],
+   "intended_route": "Pump Gallery: from R16 door (120,1000) east along the pump walk to the R19 walk-through (2440,760) behind the electric isolator. Depth door (1200,1180) to R8.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      1000.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 16
+    },
+    {
+     "at": [
+      1200.0,
+      1180.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 8
+    },
+    {
+     "at": [
+      2440.0,
+      760.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 19
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      2370.0,
+      760.0
+     ],
+     "element": "electric",
+     "height": 240.0,
+     "id": "pump_electric_isolator"
+    }
+   ],
+   "anchors": [
+    [
+     930.0,
+     510.0
+    ],
+    [
+     1650.0,
+     340.0
+    ],
+    [
+     2220.0,
+     460.0
+    ]
+   ],
+   "ledges": {
+    "total": 16,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 4,
+    "wall_min_feet_y": -160.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 0,
+    "fly_escaped": 0,
+    "fly_min_feet_y": null,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-116",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -158, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -158.4,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-117",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-118",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 620) and the roof underside (feet y 116) is 504 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 620.0,
+      "dead_band_px": 504.0
+     }
+    },
+    {
+     "id": "LD05-119",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58/98 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        16,
+        [
+         120.0,
+         1000.0
+        ]
+       ],
+       [
+        19,
+        [
+         2440.0,
+         760.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-120",
+     "class": "legit",
+     "text": "Gate pump_electric_isolator (240x30 body at [2370.0, 760.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2370.0,
+       760.0
+      ],
+      "double_jump": false,
+      "end": [
+       2400.8,
+       427.9
+      ],
+      "gate": "pump_electric_isolator",
+      "height": 240.0,
+      "min_feet_y": 305.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 18,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-121",
+     "class": "legit",
+     "text": "Gate pump_electric_isolator (240x30 body at [2370.0, 760.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       2370.0,
+       760.0
+      ],
+      "double_jump": true,
+      "end": [
+       2400.8,
+       427.9
+      ],
+      "gate": "pump_electric_isolator",
+      "height": 240.0,
+      "min_feet_y": 305.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 18,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "name": "COIL SERVICE HALL",
+   "size": [
+    2400.0,
+    1440.0
+   ],
+   "intended_route": "Coil Service Hall: from R18 (120,760) across service bays; east walk-through (2280,980) to R11; depth door (1800,480) to R20 behind the coil fire gate.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      760.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 18
+    },
+    {
+     "at": [
+      2280.0,
+      980.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 11
+    },
+    {
+     "at": [
+      1800.0,
+      480.0
+     ],
+     "heading": 0,
+     "mode": "depth_door",
+     "target": 20
+    }
+   ],
+   "gates": [
+    {
+     "at": [
+      1730.0,
+      480.0
+     ],
+     "element": "fire",
+     "height": 240.0,
+     "id": "coil_fire_service"
+    }
+   ],
+   "anchors": [
+    [
+     890.0,
+     670.0
+    ],
+    [
+     1580.0,
+     430.0
+    ]
+   ],
+   "ledges": {
+    "total": 21,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 5,
+    "wall_escaped": 5,
+    "wall_min_feet_y": -160.7,
+    "fly_probes": 2,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 15.4,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 5,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.0,
+    "fly_probes": 2,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 137.4,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-122",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-123",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -161, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.7,
+      "after_min_feet_y": 116.0,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-124",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 480) and the roof underside (feet y 116) is 364 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 480.0,
+      "dead_band_px": 364.0
+     }
+    },
+    {
+     "id": "LD05-125",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        18,
+        [
+         120.0,
+         760.0
+        ]
+       ],
+       [
+        11,
+        [
+         2280.0,
+         980.0
+        ]
+       ]
+      ]
+     }
+    },
+    {
+     "id": "LD05-126",
+     "class": "misleading",
+     "text": "Overhead 10 px conduit across the room read as a ceiling ledge; arches as R15; now dashed and dim.",
+     "status": "fixed (LD05-F5), presentation only",
+     "evidence": {}
+    },
+    {
+     "id": "LD05-127",
+     "class": "legit",
+     "text": "Gate coil_fire_service (240x30 body at [1730.0, 480.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1730.0,
+       480.0
+      ],
+      "double_jump": false,
+      "end": [
+       1760.5,
+       147.9
+      ],
+      "gate": "coil_fire_service",
+      "height": 240.0,
+      "min_feet_y": 25.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 19,
+      "side": 1,
+      "supported_start": true
+     }
+    },
+    {
+     "id": "LD05-128",
+     "class": "legit",
+     "text": "Gate coil_fire_service (240x30 body at [1730.0, 480.0]): bypassed by wall jumps up its side (probe passed=True, start supported=True). Not a progression defect: entry to the next room is enforced by world.can_enter/expansion.allowed flags, not by collision.",
+     "status": "kept, documented",
+     "evidence": {
+      "at": [
+       1730.0,
+       480.0
+      ],
+      "double_jump": true,
+      "end": [
+       1760.5,
+       147.9
+      ],
+      "gate": "coil_fire_service",
+      "height": 240.0,
+      "min_feet_y": 25.1,
+      "mode": "chain",
+      "passed": true,
+      "room": 19,
+      "side": 1,
+      "supported_start": true
+     }
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "name": "RELAY JUNCTION",
+   "size": [
+    2200.0,
+    1440.0
+   ],
+   "intended_route": "Relay Junction: from R17 (120,760) up to the wind-fold (600,520) to R13; east walk-through (2080,1120) to R19.",
+   "endpoints": [
+    {
+     "at": [
+      120.0,
+      760.0
+     ],
+     "heading": -1,
+     "mode": "horizontal_walk",
+     "target": 17
+    },
+    {
+     "at": [
+      2080.0,
+      1120.0
+     ],
+     "heading": 1,
+     "mode": "horizontal_walk",
+     "target": 19
+    },
+    {
+     "at": [
+      600.0,
+      520.0
+     ],
+     "heading": 0,
+     "mode": "wind_fold",
+     "target": 13
+    }
+   ],
+   "gates": [],
+   "anchors": [
+    [
+     900.0,
+     520.0
+    ],
+    [
+     1650.0,
+     700.0
+    ]
+   ],
+   "ledges": {
+    "total": 11,
+    "needing_double_jump": 0
+   },
+   "probe_before": {
+    "wall_probes": 4,
+    "wall_escaped": 4,
+    "wall_min_feet_y": -160.7,
+    "fly_probes": 2,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 55.4,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "probe_after": {
+    "wall_probes": 4,
+    "wall_escaped": 0,
+    "wall_min_feet_y": 116.1,
+    "fly_probes": 2,
+    "fly_escaped": 0,
+    "fly_min_feet_y": 128.6,
+    "grapple_probes": 0,
+    "grapple_attached": 0,
+    "grapple_escaped": 0,
+    "grapple_min_feet_y": null
+   },
+   "findings": [
+    {
+     "id": "LD05-129",
+     "class": "escape",
+     "text": "left wall: chained wall jumps from floor/ledge leave the world (feet y -160, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.1,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-130",
+     "class": "escape",
+     "text": "right wall: chained wall jumps from floor/ledge leave the world (feet y -161, x outside the room).",
+     "status": "fixed by the roof course (LD05-F1)",
+     "evidence": {
+      "before_min_feet_y": -160.7,
+      "after_min_feet_y": 116.1,
+      "after_escaped": false
+     }
+    },
+    {
+     "id": "LD05-131",
+     "class": "dead",
+     "text": "Wall column between the highest ledge (y 520) and the roof underside (feet y 116) is 404 px of bare wall; reachable only by sustained wall jumps, now bounded and harmless.",
+     "status": "kept, bounded",
+     "evidence": {
+      "highest_ledge_top": 520.0,
+      "dead_band_px": 404.0
+     }
+    },
+    {
+     "id": "LD05-132",
+     "class": "dead",
+     "text": "2 wall-side walk-through exit(s) leave 58 px of floor beyond the drawn door where Kaze can stand with the door behind.",
+     "status": "residual (creator decision, see report)",
+     "evidence": {
+      "exits": [
+       [
+        17,
+        [
+         120.0,
+         760.0
+        ]
+       ],
+       [
+        19,
+        [
+         2080.0,
+         1120.0
+        ]
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "wall_probes_before": 91,
+  "wall_escaped_before": 68,
+  "wall_probes_after": 91,
+  "wall_escaped_after": 0,
+  "fly_escaped_before": 2,
+  "fly_escaped_after": 0,
+  "findings": 132
+ }
+}
