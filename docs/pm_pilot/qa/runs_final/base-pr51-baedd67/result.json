@@ -1,0 +1,503 @@
+{
+  "label": "base-pr51-baedd67",
+  "started": "2026-10-19T13:35:09.555880+00:00",
+  "repo": "/tmp/pmqa-wt-s20ieebs/wt",
+  "head": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+  "tracked_modifications": [],
+  "qa_harness_sha256": "b62ba95b066863b8ab8be1e0adaf5dfeaf9f7518887321c30c5e6eb0d1556316",
+  "qa_checkout_head": "a5cb08f170b2e14766c61c945a4435609b823f0b",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "import": {
+    "exit": 0,
+    "seconds": 31.6
+  },
+  "scope_vs_pr51": {
+    "base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+    "changed_files": 0,
+    "by_area": {},
+    "protected": {
+      "scripts/player.gd": "unchanged",
+      "scripts/hud.gd": "unchanged",
+      "scripts/guard.gd": "unchanged",
+      "scripts/storm_keeper.gd": "unchanged",
+      "scripts/momentum_profile.gd": "unchanged",
+      "scripts/level_geometry.gd": "unchanged",
+      "scripts/skyworks_region.gd": "unchanged",
+      "scripts/route_extension.gd": "unchanged",
+      "project.godot": "unchanged",
+      "export_presets.cfg": "unchanged",
+      "docs/APPROVED_GEOMETRY.json": "unchanged",
+      "assets/kaze": "unchanged",
+      "assets/web": "unchanged",
+      "assets/art04": "unchanged"
+    },
+    "scripts_changed": [],
+    "suspicious_binaries": [],
+    "import_files": 0
+  },
+  "automated_headless": {
+    "harness": {
+      "name": "harness_headless",
+      "exit": 0,
+      "seconds": 18.2,
+      "passes": 460,
+      "failures": 0,
+      "skips": 2,
+      "script_errors": 0,
+      "sections": {
+        "start": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 10
+        },
+        "issue42": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 49
+        },
+        "matrix": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 136
+        },
+        "controls": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 22
+        },
+        "hints": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 48
+        },
+        "endpoints": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 157
+        },
+        "save": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 8
+        },
+        "combat": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 7
+        },
+        "graph": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 15
+        },
+        "reduced": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 8
+        },
+        "hook_cinematic_completion": {
+          "fail": 0,
+          "skip": 1,
+          "failures": [],
+          "skips": [
+            "staged stair cinematic not present in this checkout (baseline or non-Transition candidate). Nothing verified. NOT a pass."
+          ],
+          "pass": 0
+        },
+        "hook_canal_containment": {
+          "fail": 0,
+          "skip": 1,
+          "failures": [],
+          "skips": [
+            "Canal gatehouse geometry (mass [P: (0.0, 0.0), S: (296.0, 1020.0)] + pier [P: (0.0, 1020.0), S: (72.0, 180.0)]) absent in this checkout; containment not asserted. Probe data printed above. NOT a pass."
+          ],
+          "pass": 0
+        }
+      },
+      "platform": "os=Linux driver=opengl3 adapter=\"\" display=headless engine=4.6.1-stable (official)",
+      "log": "base-pr51-baedd67/harness_headless.log",
+      "command": [
+        "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+        "--path",
+        "/tmp/pmqa-wt-s20ieebs/wt",
+        "--fixed-fps",
+        "60",
+        "--headless",
+        "--script",
+        "/home/claude/wt-qa/tests/pm_pilot_qa.gd",
+        "--",
+        "--qa-hooks=/home/claude/wt-qa/tools/pm_pilot_qa/hooks"
+      ]
+    },
+    "reduced_cli_default": {
+      "name": "harness_reduced_cli_off",
+      "exit": 0,
+      "seconds": 0.9,
+      "passes": 1,
+      "failures": 0,
+      "skips": 0,
+      "script_errors": 0,
+      "sections": {
+        "reduced_cli": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 1
+        }
+      },
+      "platform": null,
+      "log": "base-pr51-baedd67/harness_reduced_cli_off.log",
+      "command": [
+        "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+        "--path",
+        "/tmp/pmqa-wt-s20ieebs/wt",
+        "--fixed-fps",
+        "60",
+        "--headless",
+        "--script",
+        "/home/claude/wt-qa/tests/pm_pilot_qa.gd",
+        "--",
+        "--qa-hooks=/home/claude/wt-qa/tools/pm_pilot_qa/hooks",
+        "--qa-sections=reduced_cli"
+      ]
+    },
+    "reduced_cli_flag": {
+      "name": "harness_reduced_cli_on",
+      "exit": 0,
+      "seconds": 0.9,
+      "passes": 1,
+      "failures": 0,
+      "skips": 0,
+      "script_errors": 0,
+      "sections": {
+        "reduced_cli": {
+          "fail": 0,
+          "skip": 0,
+          "failures": [],
+          "skips": [],
+          "pass": 1
+        }
+      },
+      "platform": null,
+      "log": "base-pr51-baedd67/harness_reduced_cli_on.log",
+      "command": [
+        "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+        "--path",
+        "/tmp/pmqa-wt-s20ieebs/wt",
+        "--fixed-fps",
+        "60",
+        "--headless",
+        "--script",
+        "/home/claude/wt-qa/tests/pm_pilot_qa.gd",
+        "--",
+        "--qa-hooks=/home/claude/wt-qa/tools/pm_pilot_qa/hooks",
+        "--qa-sections=reduced_cli",
+        "--qa-expect-reduced",
+        "--tr05-reduced-motion"
+      ]
+    },
+    "staged_flagged": {
+      "skipped": "no scripts/staged_stair_cinematic.gd in this checkout"
+    },
+    "candidate_tests": [],
+    "stock": {
+      "tr05_suites": {
+        "exit": 0,
+        "seconds": 23.8,
+        "suites": 25,
+        "assertions_passed": 1607,
+        "assertions_failed": 0,
+        "script_errors": 0,
+        "suites_failed": [],
+        "per_suite": [
+          {
+            "suite": "approved_baseline",
+            "exit": 0,
+            "passes": 32,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "approved_combat_swing",
+            "exit": 0,
+            "passes": 7,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "annex_expansion",
+            "exit": 0,
+            "passes": 34,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "annex_traversal",
+            "exit": 0,
+            "passes": 6,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "save_compatibility",
+            "exit": 0,
+            "passes": 11,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "skyworks_progression",
+            "exit": 0,
+            "passes": 33,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "storm_keeper",
+            "exit": 0,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "movement_momentum",
+            "exit": 0,
+            "passes": 53,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "sprite_integration",
+            "exit": 0,
+            "passes": 43,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "world_expansion",
+            "exit": 0,
+            "passes": 193,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "expansion_gates_save",
+            "exit": 0,
+            "passes": 17,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "expansion_traversal",
+            "exit": 0,
+            "passes": 125,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "gameplay_stabilization",
+            "exit": 0,
+            "passes": 16,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "traversal_transitions",
+            "exit": 0,
+            "passes": 8,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "world_cohesion_traversal",
+            "exit": 0,
+            "passes": 56,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "integration_candidate",
+            "exit": 0,
+            "passes": 12,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "integration_descent",
+            "exit": 0,
+            "passes": 26,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "level_geometry",
+            "exit": 0,
+            "passes": 78,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "intentional_space",
+            "exit": 0,
+            "passes": 63,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "audit_intentional_space",
+            "exit": 0,
+            "passes": 21,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "cinematic_transitions",
+            "exit": 0,
+            "passes": 368,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": false
+          },
+          {
+            "suite": "room_transition_prototype",
+            "exit": 0,
+            "passes": 93,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": true
+          },
+          {
+            "suite": "mixed_transitions",
+            "exit": 0,
+            "passes": 109,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": true
+          },
+          {
+            "suite": "embodied_transitions",
+            "exit": 0,
+            "passes": 80,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": true
+          },
+          {
+            "suite": "art04_transitions",
+            "exit": 0,
+            "passes": 111,
+            "failures": 0,
+            "script_errors": 0,
+            "legacy": true
+          }
+        ]
+      },
+      "verify_baseline.py": {
+        "exit": 0,
+        "seconds": 0.0,
+        "passes": 0,
+        "failures": 0
+      },
+      "verify_tr05_preservation.py": {
+        "exit": 0,
+        "seconds": 0.2,
+        "passes": 59,
+        "failures": 0
+      }
+    },
+    "author_tr06_test": {
+      "exit": 0,
+      "seconds": 12.1,
+      "borrowed": false,
+      "borrowed_files_sha256": {},
+      "test_sha256": "1280d39148c27f059cc120da60e3d659894987bbd7c2a19caccfa94f8d47cd9f",
+      "summary": {
+        "exit": 0,
+        "rendered": false,
+        "passes": 305,
+        "failures": 0,
+        "script_errors": 0,
+        "command": [
+          "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+          "--path",
+          "/tmp/pmqa-wt-s20ieebs/wt",
+          "--fixed-fps",
+          "60",
+          "--headless",
+          "--script",
+          "res://tests/automatic_passage_reliability.gd",
+          "--",
+          "--tr05-save=/tmp/pmqa-wt-s20ieebs/wt/build/tr06/tr06-wdpisu_8/fresh.json"
+        ]
+      }
+    }
+  },
+  "graphical": {
+    "skipped": "not requested (--rendered)"
+  },
+  "human": "none: no human playtest or creator acceptance performed by this runner",
+  "platform": {
+    "this_run": "os=Linux driver=opengl3 adapter=\"\" display=headless engine=4.6.1-stable (official)",
+    "note": "Linux cloud only. Windows and macOS belong to Build (export/launch) and the creator."
+  },
+  "untested": [
+    "native Windows/macOS play",
+    "physical gamepad",
+    "sustained performance",
+    "unseeded full-campaign traversal",
+    "creator visual acceptance of transition presentation",
+    "candidate-specific hooks (see skips)"
+  ],
+  "hooks_verified": {
+    "canal_containment": false,
+    "cinematic_completion": false
+  },
+  "pending_hooks_skipped": [
+    "hook_canal_containment: Canal gatehouse geometry (mass [P: (0.0, 0.0), S: (296.0, 1020.0)] + pier [P: (0.0, 1020.0), S: (72.0, 180.0)]) absent in this checkout; containment not asserted. Probe data printed above. NOT a pass.",
+    "hook_cinematic_completion: not present in this checkout or not verified (needs --pm-staged-stair build)"
+  ],
+  "candidate_test_failures": [],
+  "verdict": "PASS_WITH_SKIPS",
+  "finished": "2026-10-19T13:36:37.717835+00:00"
+}

@@ -1,0 +1,587 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: start
+HARNESS: script=/home/claude/wt-qa/tests/pm_pilot_qa.gd hud_stub=true
+PLATFORM: os=Linux driver=opengl3 adapter="" display=headless engine=4.6.1-stable (official)
+PASS: [start] Fresh normal start (not --test) in R0
+PASS: [start] Starting abilities: 3 HP, no Windstep, no Tether, no Dash
+PASS: [start] No elemental kunai at start
+PASS: [start] No progression flags at start
+PASS: [start] Speed upgrade 0 and checkpoint R0
+PASS: [start] Controller checksum matches approved manifest (movement untouched)
+PASS: [start] Disposable profile: no pre-existing save file
+PASS: [start] Cinematic controller enabled, reduced motion off by default
+PASS: [start] Fresh real-key R0->R1 walk arrives supported
+PASS: [start] Control state restored after transition: R0->R1 fresh walk
+SECTION: issue42
+PASS: [issue42] offset=0 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=0 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=0 style=jump pos=(117.5583, 1229.916) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=0 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=0 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=0 cannot loop
+PASS: [issue42] offset=5 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=5 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=5 style=jump pos=(117.5546, 1217.426) vel=(-400.0, -750.0) floor=false wall_stopped=false airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=5 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=5 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=5 cannot loop
+PASS: [issue42] offset=10 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=10 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=10 style=jump pos=(117.5546, 1217.426) vel=(-400.0, -750.0) floor=false wall_stopped=false airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=10 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=10 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=10 cannot loop
+PASS: [issue42] offset=15 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=15 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=15 style=jump pos=(14.07262, 1299.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=15 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=15 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=15 cannot loop
+PASS: [issue42] offset=20 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=20 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=20 style=jump pos=(14.0001, 1299.925) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=20 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=20 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=20 cannot loop
+PASS: [issue42] offset=25 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=25 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=25 style=jump pos=(14.07418, 1299.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=25 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=25 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=25 cannot loop
+PASS: [issue42] offset=30 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=30 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=30 style=jump pos=(14.07418, 1299.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=30 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=30 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=30 cannot loop
+PASS: [issue42] offset=35 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=35 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=35 style=jump pos=(14.07518, 1299.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=35 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=35 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=35 cannot loop
+PASS: [issue42] offset=40 fresh normal save, R0, no Windstep
+PASS: [issue42] offset=40 fresh R0->R1 arrival supported
+TRACE issue42 pair=[1, 0] offset=40 style=jump pos=(14.07473, 1299.934) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [issue42] issue42 real keys [1, 0] jump offset=40 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] jump offset=40 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] jump offset=40 cannot loop
+TRACE issue42 pair=[1, 0] offset=0 style=walk pos=(117.5602, 1299.916) vel=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [issue42] issue42 real keys [1, 0] walk offset=0 requests exactly once
+PASS: [issue42] issue42 real keys [1, 0] walk offset=0 lands supported in target
+PASS: [issue42] issue42 stopped arrival [1, 0] walk offset=0 cannot loop
+PASS: [issue42] Kaze responds to real input after arrival: issue42 walk
+SECTION: matrix
+TRACE matrix pair=[13, 0] offset=0 style=walk pos=(114.1667, 1199.935) vel=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 0] walk offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] walk offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] walk offset=0 cannot loop
+TRACE matrix pair=[13, 0] offset=0 style=sprint pos=(112.1113, 1199.932) vel=(-600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 0] sprint offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] sprint offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] sprint offset=0 cannot loop
+TRACE matrix pair=[13, 0] offset=0 style=dash pos=(116.1667, 1199.934) vel=(-920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 0] dash offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] dash offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] dash offset=0 cannot loop
+TRACE matrix pair=[13, 0] offset=0 style=jump pos=(114.1636, 1129.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [matrix] matrix real keys [13, 0] jump offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] jump offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] jump offset=0 cannot loop
+TRACE matrix pair=[13, 0] offset=10 style=jump pos=(14.07552, 1199.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 0] jump offset=10 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] jump offset=10 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] jump offset=10 cannot loop
+TRACE matrix pair=[13, 0] offset=20 style=jump pos=(14.00014, 1199.925) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 0] jump offset=20 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] jump offset=20 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] jump offset=20 cannot loop
+TRACE matrix pair=[13, 0] offset=30 style=jump pos=(14.07587, 1199.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 0] jump offset=30 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] jump offset=30 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] jump offset=30 cannot loop
+TRACE matrix pair=[13, 0] offset=40 style=jump pos=(14.0758, 1199.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 0] jump offset=40 requests exactly once
+PASS: [matrix] matrix real keys [13, 0] jump offset=40 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 0] jump offset=40 cannot loop
+PASS: [matrix] Control state restored after transition: matrix [13, 0]
+PASS: [matrix] Kaze responds to real input after arrival: matrix [13, 0]
+TRACE matrix pair=[13, 14] offset=0 style=walk pos=(1685.832, 559.9337) vel=(400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 14] walk offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] walk offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] walk offset=0 cannot loop
+TRACE matrix pair=[13, 14] offset=0 style=sprint pos=(1687.891, 559.9337) vel=(600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 14] sprint offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] sprint offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] sprint offset=0 cannot loop
+TRACE matrix pair=[13, 14] offset=0 style=dash pos=(1683.834, 559.9337) vel=(920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [13, 14] dash offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] dash offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] dash offset=0 cannot loop
+TRACE matrix pair=[13, 14] offset=0 style=jump pos=(1685.836, 489.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [matrix] matrix real keys [13, 14] jump offset=0 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] jump offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] jump offset=0 cannot loop
+TRACE matrix pair=[13, 14] offset=10 style=jump pos=(1785.924, 559.9981) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 14] jump offset=10 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] jump offset=10 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] jump offset=10 cannot loop
+TRACE matrix pair=[13, 14] offset=20 style=jump pos=(1785.999, 559.9252) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 14] jump offset=20 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] jump offset=20 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] jump offset=20 cannot loop
+TRACE matrix pair=[13, 14] offset=30 style=jump pos=(1785.924, 559.9997) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 14] jump offset=30 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] jump offset=30 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] jump offset=30 cannot loop
+TRACE matrix pair=[13, 14] offset=40 style=jump pos=(1785.924, 559.9998) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [13, 14] jump offset=40 requests exactly once
+PASS: [matrix] matrix real keys [13, 14] jump offset=40 lands supported in target
+PASS: [matrix] matrix stopped arrival [13, 14] jump offset=40 cannot loop
+PASS: [matrix] Control state restored after transition: matrix [13, 14]
+PASS: [matrix] Kaze responds to real input after arrival: matrix [13, 14]
+TRACE matrix pair=[14, 13] offset=0 style=walk pos=(114.1663, 1099.935) vel=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [14, 13] walk offset=0 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] walk offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] walk offset=0 cannot loop
+TRACE matrix pair=[14, 13] offset=0 style=sprint pos=(112.1111, 1099.936) vel=(-600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [14, 13] sprint offset=0 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] sprint offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] sprint offset=0 cannot loop
+TRACE matrix pair=[14, 13] offset=0 style=dash pos=(116.1669, 1099.925) vel=(-920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [14, 13] dash offset=0 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] dash offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] dash offset=0 cannot loop
+TRACE matrix pair=[14, 13] offset=0 style=jump pos=(114.1632, 1029.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [matrix] matrix real keys [14, 13] jump offset=0 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] jump offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] jump offset=0 cannot loop
+TRACE matrix pair=[14, 13] offset=10 style=jump pos=(14.07593, 1099.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [14, 13] jump offset=10 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] jump offset=10 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] jump offset=10 cannot loop
+TRACE matrix pair=[14, 13] offset=20 style=jump pos=(14.00018, 1099.925) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [14, 13] jump offset=20 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] jump offset=20 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] jump offset=20 cannot loop
+TRACE matrix pair=[14, 13] offset=30 style=jump pos=(14.07596, 1099.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [14, 13] jump offset=30 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] jump offset=30 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] jump offset=30 cannot loop
+TRACE matrix pair=[14, 13] offset=40 style=jump pos=(14.07596, 1099.934) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [14, 13] jump offset=40 requests exactly once
+PASS: [matrix] matrix real keys [14, 13] jump offset=40 lands supported in target
+PASS: [matrix] matrix stopped arrival [14, 13] jump offset=40 cannot loop
+PASS: [matrix] Control state restored after transition: matrix [14, 13]
+PASS: [matrix] Kaze responds to real input after arrival: matrix [14, 13]
+TRACE matrix pair=[1, 2] offset=0 style=walk pos=(2445.835, 1299.934) vel=(400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 2] walk offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] walk offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] walk offset=0 cannot loop
+TRACE matrix pair=[1, 2] offset=0 style=sprint pos=(2447.888, 1299.934) vel=(600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 2] sprint offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] sprint offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] sprint offset=0 cannot loop
+TRACE matrix pair=[1, 2] offset=0 style=dash pos=(2443.832, 1299.934) vel=(920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 2] dash offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] dash offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] dash offset=0 cannot loop
+TRACE matrix pair=[1, 2] offset=0 style=jump pos=(2445.838, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [matrix] matrix real keys [1, 2] jump offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] jump offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] jump offset=0 cannot loop
+TRACE matrix pair=[1, 2] offset=10 style=jump pos=(2585.924, 1299.998) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 2] jump offset=10 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] jump offset=10 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] jump offset=10 cannot loop
+TRACE matrix pair=[1, 2] offset=20 style=jump pos=(2585.924, 1299.998) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 2] jump offset=20 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] jump offset=20 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] jump offset=20 cannot loop
+TRACE matrix pair=[1, 2] offset=30 style=jump pos=(2585.924, 1299.999) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 2] jump offset=30 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] jump offset=30 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] jump offset=30 cannot loop
+TRACE matrix pair=[1, 2] offset=40 style=jump pos=(2585.924, 1300.0) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 2] jump offset=40 requests exactly once
+PASS: [matrix] matrix real keys [1, 2] jump offset=40 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 2] jump offset=40 cannot loop
+PASS: [matrix] Control state restored after transition: matrix [1, 2]
+PASS: [matrix] Kaze responds to real input after arrival: matrix [1, 2]
+TRACE matrix pair=[1, 0] offset=0 style=walk pos=(114.1715, 1299.933) vel=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 0] walk offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] walk offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] walk offset=0 cannot loop
+TRACE matrix pair=[1, 0] offset=0 style=sprint pos=(112.1133, 1299.932) vel=(-600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 0] sprint offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] sprint offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] sprint offset=0 cannot loop
+TRACE matrix pair=[1, 0] offset=0 style=dash pos=(116.1657, 1299.924) vel=(-920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: [matrix] matrix real keys [1, 0] dash offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] dash offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] dash offset=0 cannot loop
+TRACE matrix pair=[1, 0] offset=0 style=jump pos=(114.1695, 1229.925) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [matrix] matrix real keys [1, 0] jump offset=0 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] jump offset=0 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] jump offset=0 cannot loop
+TRACE matrix pair=[1, 0] offset=10 style=jump pos=(14.07263, 1299.933) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 0] jump offset=10 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] jump offset=10 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] jump offset=10 cannot loop
+TRACE matrix pair=[1, 0] offset=20 style=jump pos=(14.00013, 1299.925) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 0] jump offset=20 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] jump offset=20 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] jump offset=20 cannot loop
+TRACE matrix pair=[1, 0] offset=30 style=jump pos=(14.07522, 1299.934) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 0] jump offset=30 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] jump offset=30 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] jump offset=30 cannot loop
+TRACE matrix pair=[1, 0] offset=40 style=jump pos=(14.07474, 1299.934) vel=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [matrix] matrix real keys [1, 0] jump offset=40 requests exactly once
+PASS: [matrix] matrix real keys [1, 0] jump offset=40 lands supported in target
+PASS: [matrix] matrix stopped arrival [1, 0] jump offset=40 cannot loop
+PASS: [matrix] Control state restored after transition: matrix [1, 0]
+PASS: [matrix] Kaze responds to real input after arrival: matrix [1, 0]
+PASS: [matrix] R0->R13 depth door stays explicit E interaction
+PASS: [matrix] R0->R13 refused without Windstep
+PASS: [matrix] R0->R13 locked E gives a hint: Route sealed: WINDSTEP. Consult the atlas.
+PASS: [matrix] R0->R13 E door with Windstep arrives supported in Canal
+PASS: [matrix] Control state restored after transition: R0->R13 E
+PASS: [matrix] R13 left exit endpoint feet are (120,1200): (120.0, 1200.0)
+SECTION: controls
+PASS: [controls] Stop before threshold stays in [13, 0]
+PASS: [controls] Reverse away from [13, 0] does not activate
+PASS: [controls] Held direction through [13, 0]: one request, no arrival loop (room=0 requests=1)
+PASS: [controls] Stop before threshold stays in [13, 14]
+PASS: [controls] Reverse away from [13, 14] does not activate
+PASS: [controls] Held direction through [13, 14]: one request, no arrival loop (room=14 requests=1)
+PASS: [controls] Stop before threshold stays in [14, 13]
+PASS: [controls] Reverse away from [14, 13] does not activate
+PASS: [controls] Held direction through [14, 13]: one request, no arrival loop (room=13 requests=1)
+PASS: [controls] Stop before threshold stays in [1, 0]
+PASS: [controls] Reverse away from [1, 0] does not activate
+PASS: [controls] Held direction through [1, 0]: one request, no arrival loop (room=0 requests=1)
+PASS: [controls] Stop before threshold stays in [1, 2]
+PASS: [controls] Reverse away from [1, 2] does not activate
+PASS: [controls] Held direction through [1, 2]: one request, no arrival loop (room=2 requests=1)
+PASS: [controls] R13->R14 arrival reached; cooldown now 0.45
+PASS: [controls] Immediate reverse within the arrival cooldown does not bounce back
+PASS: [controls] Deliberate reverse after cooldown crosses back exactly once
+PASS: [controls] Release fixture reaches wall airborne through physics
+PASS: [controls] Airborne wall approach released to idle does not activate
+PASS: [controls] Inward key at missed wall exit does not activate
+PASS: [controls] Outward reapproach recovers missed wall exit (grounded, no softlock)
+SECTION: hints
+PASS: [hints] Wrong height: armed outward wall contact on lower floor cannot transition
+PASS: [hints] Tether-attached state rejected at supported wall exit
+PASS: [hints] Backward-velocity crossing rejected
+PASS: [hints] Crossing 120px above the exit rejected
+PASS: [hints] Locked R1->R2 keeps specific hint containing 'Windstep': 'The sluice climb needs Windstep.'
+PASS: [hints] Locked R1->R2 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R3->R4 keeps specific hint containing 'Wind Tether': 'The broken span needs a Wind Tether.'
+PASS: [hints] Locked R3->R4 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R5->R6 keeps specific hint containing 'Gale Dash': 'The storm gate needs Gale Dash.'
+PASS: [hints] Locked R5->R6 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R6->R7 keeps specific hint containing 'Tide Warden': 'The Tide Warden seals the archive.'
+PASS: [hints] Locked R6->R7 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R7->R8 keeps specific hint containing 'Relay Archive': 'Restore the Relay Archive before exploring its annexes.'
+PASS: [hints] Locked R7->R8 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R9->R10 keeps specific hint containing 'relay sigils': 'Recover all three relay sigils to power the SkyWorks lift.'
+PASS: [hints] Locked R9->R10 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R10->R11 keeps specific hint containing 'Wind Kunai': 'Use Wind Kunai to release the intake seal.'
+PASS: [hints] Locked R10->R11 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Locked R11->R12 keeps specific hint containing 'Electric Kunai': 'Use Electric Kunai to open the Foundry relay.'
+PASS: [hints] Locked R11->R12 hint not overwritten by PASSAGE LOCKED
+PASS: [hints] Repeat of identical hint text and timer still preserved
+PASS: [hints] Gated R1->R2 retains prerequisite text 'The sluice climb needs Windstep.' (got 'The sluice climb needs Windstep.')
+PASS: [hints] Gated R3->R4 retains prerequisite text 'The broken span needs a Wind Tether.' (got 'The broken span needs a Wind Tether.')
+PASS: [hints] Gated R5->R6 retains prerequisite text 'The storm gate needs Gale Dash.' (got 'The storm gate needs Gale Dash.')
+PASS: [hints] Gated R6->R7 retains prerequisite text 'The Tide Warden seals the archive.' (got 'The Tide Warden seals the archive.')
+PASS: [hints] Gated R7->R8 retains prerequisite text 'Restore the Relay Archive before exploring its annexes.' (got 'Restore the Relay Archive before exploring its annexes.')
+PASS: [hints] Gated R9->R10 retains prerequisite text 'Recover all three relay sigils to power the SkyWorks lift.' (got 'Recover all three relay sigils to power the SkyWorks lift.')
+PASS: [hints] Gated R10->R11 retains prerequisite text 'Use Wind Kunai to release the intake seal.' (got 'Use Wind Kunai to release the intake seal.')
+PASS: [hints] Gated R11->R12 retains prerequisite text 'Use Electric Kunai to open the Foundry relay.' (got 'Use Electric Kunai to open the Foundry relay.')
+PASS: [hints] Gated R13->R0 retains prerequisite text 'Route sealed: WINDSTEP. Consult the atlas.' (got 'Route sealed: WINDSTEP. Consult the atlas.')
+PASS: [hints] Gated R13->R14 retains prerequisite text 'Route sealed: WINDSTEP. Consult the atlas.' (got 'Route sealed: WINDSTEP. Consult the atlas.')
+PASS: [hints] Gated R14->R13 retains prerequisite text 'Route sealed: WINDSTEP. Consult the atlas.' (got 'Route sealed: WINDSTEP. Consult the atlas.')
+PASS: [hints] Gated R14->R9 retains prerequisite text 'Route sealed: RELAY. Consult the atlas.' (got 'Route sealed: RELAY. Consult the atlas.')
+PASS: [hints] Gated R15->R2 retains prerequisite text 'Route sealed: SLUICE. Consult the atlas.' (got 'Route sealed: SLUICE. Consult the atlas.')
+PASS: [hints] Gated R15->R16 retains prerequisite text 'Route sealed: RELAY. Consult the atlas.' (got 'Route sealed: RELAY. Consult the atlas.')
+PASS: [hints] Gated R16->R15 retains prerequisite text 'Route sealed: RELAY. Consult the atlas.' (got 'Route sealed: RELAY. Consult the atlas.')
+PASS: [hints] Gated R16->R8 retains prerequisite text 'Route sealed: RELAY. Consult the atlas.' (got 'Route sealed: RELAY. Consult the atlas.')
+PASS: [hints] Gated R17->R5 retains prerequisite text 'Route sealed: CLIMB. Consult the atlas.' (got 'Route sealed: CLIMB. Consult the atlas.')
+PASS: [hints] Gated R18->R16 retains prerequisite text 'Route sealed: RELAY. Consult the atlas.' (got 'Route sealed: RELAY. Consult the atlas.')
+PASS: [hints] Gated R18->R19 retains prerequisite text 'Route sealed: PUMP. Consult the atlas.' (got 'Route sealed: PUMP. Consult the atlas.')
+PASS: [hints] Gated R19->R18 retains prerequisite text 'Route sealed: PUMP. Consult the atlas.' (got 'Route sealed: PUMP. Consult the atlas.')
+PASS: [hints] Gated R19->R11 retains prerequisite text 'Route sealed: REGIONAL. Consult the atlas.' (got 'Route sealed: REGIONAL. Consult the atlas.')
+PASS: [hints] Gated R20->R17 retains prerequisite text 'Route sealed: SPIRE. Consult the atlas.' (got 'Route sealed: SPIRE. Consult the atlas.')
+PASS: [hints] Gated R20->R19 retains prerequisite text 'Route sealed: COIL. Consult the atlas.' (got 'Route sealed: COIL. Consult the atlas.')
+QA gated automatic endpoints tested=23
+PASS: [hints] At least 20 gated automatic endpoints exercised (23)
+PASS: [hints] Locked Windstep gate blocks real walking
+PASS: [hints] Real-key locked R1->R2 shows Windstep hint: 'The sluice climb needs Windstep.'
+TRACE unlock-pass room=2 pos=(223.3888, 1299.934) vel=(0.0, 0.0) floor=true cooldown=0.1 armed={ 1: true } req=1 msg=The sluice climb needs Windstep.
+PASS: [hints] After Windstep, R1->R2 passes with real keys
+SECTION: endpoints
+PASS: [endpoints] 39 automatic horizontal_walk endpoints (found 39)
+TRACE endpoints pair=[0, 1] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [0, 1] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [0, 1] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [0, 1] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [0, 1]
+TRACE endpoints pair=[1, 0] offset=0 style=jump pos=(114.1655, 1229.926) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [1, 0] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [1, 0] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [1, 0] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [1, 0]
+TRACE endpoints pair=[1, 2] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [1, 2] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [1, 2] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [1, 2] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [1, 2]
+TRACE endpoints pair=[2, 1] offset=0 style=jump pos=(114.1635, 1229.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [2, 1] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [2, 1] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [2, 1] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [2, 1]
+TRACE endpoints pair=[2, 3] offset=0 style=jump pos=(2445.837, 779.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [2, 3] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [2, 3] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [2, 3] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [2, 3]
+TRACE endpoints pair=[3, 2] offset=0 style=jump pos=(114.1636, 779.9266) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [3, 2] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [3, 2] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [3, 2] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [3, 2]
+TRACE endpoints pair=[3, 4] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [3, 4] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [3, 4] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [3, 4] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [3, 4]
+TRACE endpoints pair=[4, 3] offset=0 style=jump pos=(114.1634, 1229.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [4, 3] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [4, 3] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [4, 3] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [4, 3]
+TRACE endpoints pair=[4, 5] offset=0 style=jump pos=(2445.837, 1009.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [4, 5] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [4, 5] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [4, 5] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [4, 5]
+TRACE endpoints pair=[5, 4] offset=0 style=jump pos=(114.1634, 1009.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [5, 4] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [5, 4] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [5, 4] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [5, 4]
+TRACE endpoints pair=[5, 6] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [5, 6] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [5, 6] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [5, 6] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [5, 6]
+TRACE endpoints pair=[6, 5] offset=0 style=jump pos=(114.1655, 1229.926) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [6, 5] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [6, 5] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [6, 5] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [6, 5]
+TRACE endpoints pair=[6, 7] offset=0 style=jump pos=(2443.504, 1039.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [6, 7] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [6, 7] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [6, 7] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [6, 7]
+TRACE endpoints pair=[7, 6] offset=0 style=jump pos=(114.1635, 1019.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [7, 6] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [7, 6] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [7, 6] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [7, 6]
+TRACE endpoints pair=[7, 8] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [7, 8] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [7, 8] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [7, 8] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [7, 8]
+TRACE endpoints pair=[8, 7] offset=0 style=jump pos=(114.164, 1019.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [8, 7] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [8, 7] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [8, 7] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [8, 7]
+TRACE endpoints pair=[8, 9] offset=0 style=jump pos=(2445.837, 759.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [8, 9] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [8, 9] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [8, 9] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [8, 9]
+TRACE endpoints pair=[9, 8] offset=0 style=jump pos=(114.1631, 759.9269) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [9, 8] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [9, 8] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [9, 8] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [9, 8]
+TRACE endpoints pair=[9, 10] offset=0 style=jump pos=(2585.924, 809.999) vel=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: [endpoints] endpoints real keys [9, 10] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [9, 10] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [9, 10] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [9, 10]
+TRACE endpoints pair=[10, 9] offset=0 style=jump pos=(114.1636, 759.9266) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [10, 9] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [10, 9] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [10, 9] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [10, 9]
+TRACE endpoints pair=[10, 11] offset=0 style=jump pos=(2445.837, 689.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [10, 11] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [10, 11] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [10, 11] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [10, 11]
+TRACE endpoints pair=[11, 10] offset=0 style=jump pos=(114.1636, 689.9266) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [11, 10] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [11, 10] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [11, 10] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [11, 10]
+TRACE endpoints pair=[11, 12] offset=0 style=jump pos=(2445.837, 1229.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [11, 12] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [11, 12] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [11, 12] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [11, 12]
+TRACE endpoints pair=[12, 11] offset=0 style=jump pos=(114.1655, 1229.926) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [12, 11] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [12, 11] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [12, 11] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [12, 11]
+TRACE endpoints pair=[13, 0] offset=0 style=jump pos=(114.1634, 1129.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [13, 0] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [13, 0] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [13, 0] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [13, 0]
+TRACE endpoints pair=[13, 14] offset=0 style=jump pos=(1685.836, 489.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [13, 14] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [13, 14] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [13, 14] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [13, 14]
+TRACE endpoints pair=[14, 13] offset=0 style=jump pos=(114.163, 1029.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [14, 13] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [14, 13] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [14, 13] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [14, 13]
+TRACE endpoints pair=[14, 9] offset=0 style=jump pos=(2445.837, 759.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [14, 9] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [14, 9] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [14, 9] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [14, 9]
+TRACE endpoints pair=[15, 2] offset=0 style=jump pos=(114.1648, 429.9264) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [15, 2] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [15, 2] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [15, 2] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [15, 2]
+TRACE endpoints pair=[15, 16] offset=0 style=jump pos=(2085.837, 1049.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [15, 16] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [15, 16] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [15, 16] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [15, 16]
+TRACE endpoints pair=[16, 15] offset=0 style=jump pos=(114.163, 1049.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [16, 15] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [16, 15] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [16, 15] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [16, 15]
+TRACE endpoints pair=[16, 8] offset=0 style=jump pos=(1885.836, 689.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [16, 8] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [16, 8] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [16, 8] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [16, 8]
+TRACE endpoints pair=[17, 5] offset=0 style=jump pos=(114.163, 1829.927) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [17, 5] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [17, 5] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [17, 5] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [17, 5]
+TRACE endpoints pair=[18, 16] offset=0 style=jump pos=(114.1639, 929.9261) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [18, 16] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [18, 16] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [18, 16] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [18, 16]
+TRACE endpoints pair=[18, 19] offset=0 style=jump pos=(2445.837, 689.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [18, 19] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [18, 19] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [18, 19] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [18, 19]
+TRACE endpoints pair=[19, 18] offset=0 style=jump pos=(114.1632, 689.9269) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [19, 18] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [19, 18] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [19, 18] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [19, 18]
+TRACE endpoints pair=[19, 11] offset=0 style=jump pos=(2285.837, 909.9266) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [19, 11] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [19, 11] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [19, 11] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [19, 11]
+TRACE endpoints pair=[20, 17] offset=0 style=jump pos=(114.1639, 689.9261) vel=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [20, 17] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [20, 17] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [20, 17] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [20, 17]
+TRACE endpoints pair=[20, 19] offset=0 style=jump pos=(2085.837, 1049.927) vel=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: [endpoints] endpoints real keys [20, 19] jump offset=0 requests exactly once
+PASS: [endpoints] endpoints real keys [20, 19] jump offset=0 lands supported in target
+PASS: [endpoints] endpoints stopped arrival [20, 19] jump offset=0 cannot loop
+PASS: [endpoints] Control state restored after transition: endpoints [20, 19]
+SECTION: save
+PASS: [save] Save test runs in normal (non --test) mode
+PASS: [save] Save writes the file
+PASS: [save] In-session reload restores abilities
+PASS: [save] Reload restores gates, fragments, cleared encounters
+PASS: [save] Reload restores checkpoint and flags
+PASS: [save] A brand-new scene instance loading the same file restores the kit and checkpoint
+ERROR: Parse JSON failed. Error at line 0: Expected key
+   at: parse_string (core/io/json.cpp:624)
+   GDScript backtrace (most recent call first):
+       [0] load_progress (res://scripts/world.gd:709)
+       [1] sec_save (/home/claude/wt-qa/tests/pm_pilot_qa.gd:406)
+       [2] new_world (/home/claude/wt-qa/tests/pm_pilot_qa.gd:114)
+       [3] wait_ticks (/home/claude/wt-qa/tests/pm_pilot_qa.gd:50)
+PASS: [save] Corrupt save does not grant abilities or crash
+PASS: [save] Round trip used only its own path; default profile save untouched
+SECTION: combat
+PASS: [combat] Melee strike connects at existing reach
+PASS: [combat] Melee strike does not hit behind the player
+PASS: [combat] Parry stuns the attacker without damage
+PASS: [combat] Missed parry takes 1 damage and grants protection
+PASS: [combat] Combo queues a follow-up
+PASS: [combat] Real J key attack with live physics damages the guard (hp 6 -> 5)
+PASS: [combat] Attack recovers; player control continues
+SECTION: graph
+PASS: [graph] 21 rooms and 29 links preserved (21 rooms, 29 links)
+PASS: [graph] 58 classified endpoints, 39 automatic, 19 explicit (58/39)
+PASS: [graph] Every graph edge has an endpoint in both directions
+PASS: [graph] All 21 rooms reachable with full kit (21)
+PASS: [graph] Fresh kit: R1->R2 gated
+PASS: [graph] With double_jump: R1->R2 opens
+PASS: [graph] Fresh kit: R3->R4 gated
+PASS: [graph] With tether_unlocked: R3->R4 opens
+PASS: [graph] Fresh kit: R5->R6 gated
+PASS: [graph] With dash_unlocked: R5->R6 opens
+PASS: [graph] Fresh: R6->R7 gated by boss
+PASS: [graph] Boss defeated opens R6->R7
+PASS: [graph] Fresh: R7->R8 gated by relay archive
+PASS: [graph] Completed opens R7->R8
+PASS: [graph] Original eight-room geometry equals approved reference (plus recorded TR04 repairs)
+SECTION: reduced
+PASS: [reduced] Reduced motion off at start of section
+PASS: [reduced] F6 enables reduced motion across all three controllers
+PASS: [reduced] F6 announces reduced motion: REDUCED MOTION ON
+PASS: [reduced] Reduced-motion real-key crossing R1->R0 completes once
+PASS: [reduced] Reduced motion: camera never zooms (max 1.000)
+PASS: [reduced] Control state restored after transition: reduced-motion crossing
+PASS: [reduced] F6 toggles back to cinematic motion
+PASS: [reduced] Camera at rest zoom after toggling back
+SECTION: hook_cinematic_completion
+SKIP: [hook_cinematic_completion] staged stair cinematic not present in this checkout (baseline or non-Transition candidate). Nothing verified. NOT a pass.
+SECTION: hook_canal_containment
+QA CANAL probe pad_mid min_feet_y=792.091613769531 min_in_hall=792.091613769531 min_x=14.0751152038574 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe pad_mouth min_feet_y=1006.93347167969 min_in_hall=1006.93347167969 min_x=14.0150814056396 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe pad_door_side min_feet_y=788.591430664062 min_in_hall=788.591430664062 min_x=14.0747184753418 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe shelf min_feet_y=572.775695800781 min_in_hall=572.775695800781 min_x=14.0150814056396 left_room=false left_world=false inside_solid=true end=(71.40833, 611.7757)
+QA CANAL probe pad_hold_left min_feet_y=-30.9122982025146 min_in_hall=-30.9122982025146 min_x=14.0747098922729 left_room=false left_world=false inside_solid=true end=(50.74198, 2.420672)
+QA CANAL probe pad_door_hold min_feet_y=-30.9122982025146 min_in_hall=-30.9122982025146 min_x=14.0747098922729 left_room=false left_world=false inside_solid=true end=(50.74198, 2.420672)
+QA CANAL probe wall_184_left min_feet_y=-72.7701950073242 min_in_hall=-72.7701950073242 min_x=-1482.59228515625 left_room=false left_world=true inside_solid=true end=(83.69548, 553.7318)
+QA CANAL probe wall_282_left min_feet_y=-27.1521320343018 min_in_hall=-27.1521320343018 min_x=-1252.59167480469 left_room=true left_world=true inside_solid=true end=(590.0, 778.0)
+QA CANAL probe wall_282_right min_feet_y=-180.073348999023 min_in_hall=inf min_x=282.722229003906 left_room=false left_world=true inside_solid=false end=(2680.591, 190.4267)
+QA CANAL probe pad_right_hold min_feet_y=148.5927734375 min_in_hall=1082.42541503906 min_x=250.722229003906 left_room=true left_world=false inside_solid=true end=(184.0, 1098.0)
+SKIP: [hook_canal_containment] Canal gatehouse geometry (mass [P: (0.0, 0.0), S: (296.0, 1020.0)] + pier [P: (0.0, 1020.0), S: (72.0, 180.0)]) absent in this checkout; containment not asserted. Probe data printed above. NOT a pass.
+QA SUMMARY: 460 checks, 0 failure(s), 2 skip(s)
