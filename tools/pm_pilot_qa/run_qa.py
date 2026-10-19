@@ -205,7 +205,7 @@ def main():
     ap.add_argument('--keep', action='store_true')
     a = ap.parse_args()
 
-    out = Path(a.out) if a.out else QA / 'docs/pm_pilot/qa/runs' / a.label
+    out = Path(a.out).resolve() if a.out else QA / 'docs/pm_pilot/qa/runs' / a.label
     out.mkdir(parents=True, exist_ok=True)
     temp = None
     if a.commit:
