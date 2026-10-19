@@ -17,7 +17,9 @@ var held={}
 var only=[]
 var hooks_dir=""
 var expect_reduced=false
-const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","hook_cinematic_completion","hook_canal_containment"]
+var expect_canal=false
+var out_dir=""
+const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","capture","hook_cinematic_completion","hook_canal_containment"]
 
 func _init(): call_deferred("run")
 
@@ -527,6 +529,60 @@ func sec_reduced_cli():
 	else:
 		check(not c.reduced,"Without --tr05-reduced-motion the session starts cinematic")
 
+func shot(name):
+	await process_frame
+	await RenderingServer.frame_post_draw
+	DirAccess.make_dir_recursive_absolute(out_dir)
+	var img=root.get_texture().get_image()
+	img.save_png(out_dir.path_join(name+".png"))
+	print("CAPTURE ",name," room=",w.room," feet=",w.player.position," transition=",w.transition)
+
+func sec_capture():
+	begin("capture")
+	if DisplayServer.get_name()=="headless" or out_dir=="":
+		skip("capture needs a rendered display and --qa-out=<dir> (graphical category only). NOT a pass.")
+		return
+	# Canal-left: fixture start on the hall shelf, then real A key through the door.
+	release_all();reset(13)
+	var c=w.cinematic_transitions
+	w.player.position=Vector2(330,1158);w.player.velocity=Vector2.ZERO
+	w.camera.reset_smoothing();live();await wait_ticks(8)
+	await shot("canal_01_start_on_shelf")
+	var before=c.request_count;var got={}
+	key(KEY_A,true)
+	for tick in 300:
+		await wait_ticks(1)
+		var x=w.player.position.x
+		if not got.has("a") and x<=250: got["a"]=true;await shot("canal_02_approach")
+		if not got.has("b") and x<=150 and w.room==13: got["b"]=true;await shot("canal_03_at_door")
+		if c.request_count>before: break
+	key(KEY_A,false)
+	check(c.request_count==before+1,"Capture run: Canal-left crossed by real A key")
+	await wait_ticks(12);await shot("canal_04_transition_early")
+	await wait_ticks(14);await shot("canal_05_transition_mid")
+	for tick in 120:
+		await wait_ticks(1)
+		if w.transition<=0 and w.room==0: break
+	await wait_ticks(30);await shot("canal_06_arrived_R0")
+	check(w.room==0 and w.player.is_on_floor(),"Capture run: arrived in R0 supported")
+	# Staged stair (only when the Transition pilot is present and enabled).
+	var st=c.get("staged")
+	if st==null or not st.enabled:
+		skip("staged stair captures need a Transition candidate run with --pm-staged-stair. NOT a pass.")
+		return
+	release_all();reset(14)
+	w.player.position=c.endpoint(w,14,17).at+Vector2(-30,-2);w.player.velocity=Vector2.ZERO
+	w.camera.reset_smoothing();live();await wait_ticks(8)
+	await shot("stair_00_before")
+	key(KEY_E,true)
+	var marks={14:"stair_01_enter_early",40:"stair_02_enter_late",60:"stair_03_loader",78:"stair_04_loader_late",100:"stair_05_arrive_early",125:"stair_06_arrive_late",170:"stair_07_control_back"}
+	var n=0
+	while n<180:
+		await wait_ticks(1);n+=1
+		if marks.has(n): await shot(marks[n])
+	key(KEY_E,false)
+	check(w.room==17 and st.phase=="" and w.transition<=0,"Capture run: stair sequence finished in R17 with control back")
+
 func run_hook(name):
 	begin(name)
 	var path=hooks_dir.path_join(name+".gd") if hooks_dir!="" else ""
@@ -542,10 +598,13 @@ func run():
 		if a.begins_with("--qa-sections="): only=a.substr(14).split(",")
 		if a.begins_with("--qa-hooks="): hooks_dir=a.substr(11)
 		if a=="--qa-expect-reduced": expect_reduced=true
+		if a=="--qa-expect-canal": expect_canal=true
+		if a.begins_with("--qa-out="): out_dir=a.substr(9)
 	var order=[["start",sec_start],["issue42",sec_issue42],["matrix",sec_matrix],["controls",sec_controls],["hints",sec_hints],["endpoints",sec_endpoints],["save",sec_save],["combat",sec_combat],["graph",sec_graph],["reduced",sec_reduced]]
 	for row in order:
 		if want(row[0]) and not (only.is_empty() and row[0]=="reduced_cli"): await new_world();await row[1].call()
 	if "reduced_cli" in only: await new_world();await sec_reduced_cli()
+	if "capture" in only: await new_world();await sec_capture()
 	await new_world()
 	if want("hook_cinematic_completion"): await run_hook("hook_cinematic_completion")
 	if want("hook_canal_containment"): await run_hook("hook_canal_containment")
