@@ -1,0 +1,19 @@
+{
+  "exit": 0,
+  "rendered": false,
+  "passes": 305,
+  "failures": 0,
+  "script_errors": 0,
+  "command": [
+    "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+    "--path",
+    "/home/claude/wt-transitions",
+    "--fixed-fps",
+    "60",
+    "--headless",
+    "--script",
+    "res://tests/automatic_passage_reliability.gd",
+    "--",
+    "--tr05-save=<disposable>"
+  ]
+}

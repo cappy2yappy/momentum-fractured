@@ -542,6 +542,7 @@ func recover_from_fall():
 func request_room(target, arrival = Vector2.INF):
 	if transition > 0 or target < 0 or target >= ROOM_COUNT: return
 	if not can_enter(target): return
+	if cinematic_transitions.intercept(self,target,arrival): return # PM staged stair pilot (opt-in)
 	cinematic_transitions.begin(self,target)
 	mixed_transitions.begin(self,target)
 	embodied_transitions.begin(self,target)
