@@ -1,0 +1,56 @@
+{
+ "version": 8,
+ "checkpoint_room": 13,
+ "checkpoint_position": [
+  330,
+  1158
+ ],
+ "double_jump": true,
+ "tether_unlocked": true,
+ "dash_unlocked": true,
+ "completed": true,
+ "guard_defeated": true,
+ "boss_defeated": true,
+ "speed_upgrade_level": 0,
+ "kunai_unlocked": {
+  "wind": true,
+  "fire": true,
+  "electric": true
+ },
+ "opened_kunai_gates": {
+  "skyworks_wind_intake": true,
+  "cistern_wind_cache": true,
+  "spire_wind_shutter": true
+ },
+ "relay_fragments": {
+  "undercroft_sigil": true,
+  "terrace_west": true,
+  "terrace_fire_cache": true
+ },
+ "expansion_flags": {
+  "junction_return": true
+ },
+ "visited": [
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  true,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false
+ ]
+}

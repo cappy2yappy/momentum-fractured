@@ -53,8 +53,12 @@ func run():
 		p.position=Vector2(180,1198);p.velocity=Vector2(-400,0);w.cinematic_transitions.update(w,0)
 		p.position=Vector2(118,1198);w.cinematic_transitions.update(w,0);p.set_physics_process(false)
 	else: p.position=Vector2(120,1198);w.interact()
-	check(w.pending_room==0,"Canal left exit reapproach activates with its current passage policy")
-	for i in 41: w._physics_process(1.0/60.0)
+	# TR-08 reviewed change: the current Canal policy is the embodied doorway, which owns
+	# the accepted request before releasing the unchanged loader (bounded wait below).
+	check(w.pending_room==0 or (w.cinematic_transitions.tr08.canal.phase!="" and w.cinematic_transitions.tr08.canal.target==0),"Canal left exit reapproach activates with its current passage policy")
+	for i in 300:
+		w._physics_process(1.0/60.0)
+		if i>=40 and not w.cinematic_transitions.tr08.owns() and w.transition<=0: break
 	freeze();await physics_frame;ticks(30)
 	check(w.room==0 and p.is_on_floor(),"Canal reciprocal arrival remains supported")
 	w.build_room(10);freeze();w.request_room(9)
