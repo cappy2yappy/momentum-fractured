@@ -1,0 +1,315 @@
+{
+ "schema": "art08/1",
+ "interface_version": "v1",
+ "status": "SKELETON: no frames shipped yet; every clip is unfinished until its strip exists",
+ "cell": [
+  480,
+  724
+ ],
+ "pivot": [
+  240,
+  600
+ ],
+ "engine_scale_world": 0.303125,
+ "clips": [
+  {
+   "name": "stair_ascend_enter",
+   "strip": "assets/art08/kaze_stair_ascend_enter_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "floor walk to first tread",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_ascend_loop",
+   "strip": "assets/art08/kaze_stair_ascend_loop_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 14,
+   "loop": true,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "one stride pair climbing up-right",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_ascend_exit",
+   "strip": "assets/art08/kaze_stair_ascend_exit_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "last tread to level floor",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_descend_enter",
+   "strip": "assets/art08/kaze_stair_descend_enter_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "floor walk to first tread down",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_descend_loop",
+   "strip": "assets/art08/kaze_stair_descend_loop_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 14,
+   "loop": true,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "one stride pair descending down-right",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_descend_exit",
+   "strip": "assets/art08/kaze_stair_descend_exit_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "last tread to level floor",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "stair_arrive_idle_settle",
+   "strip": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "settle after arrival",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_approach_walk",
+   "strip": "assets/art08/kaze_door_approach_walk_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": true,
+   "facing": "right (flip_h for left)",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "slow lateral walk",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_turn_to_rear",
+   "strip": "assets/art08/kaze_door_turn_to_rear_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right profile to rear (flip_h for left)",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "turn into the opening",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_cross",
+   "strip": "assets/art08/kaze_door_cross_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "rear",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "walk away over sill into opening",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_emerge",
+   "strip": "assets/art08/kaze_door_emerge_strip.png",
+   "hframes": 6,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "front three-quarter",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "step out toward camera",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_turn_to_side",
+   "strip": "assets/art08/kaze_door_turn_to_side_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "front three-quarter to right profile",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "turn to travel direction",
+   "sha256": null,
+   "bytes": null
+  },
+  {
+   "name": "door_walk_out",
+   "strip": "assets/art08/kaze_door_walk_out_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": true,
+   "facing": "right (flip_h for left)",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "slow lateral walk away",
+   "sha256": null,
+   "bytes": null
+  }
+ ]
+}
