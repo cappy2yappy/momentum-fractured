@@ -1,0 +1,497 @@
+{
+ "schema_version": 1,
+ "pilot": "ART-PM (ORDER 3)",
+ "base": "PR51 baedd6786ad4bee2123ea872b437bbb98e6d2721",
+ "contract": "CANAL_CONTRACT v1 (LEVEL)",
+ "contract_rects": {
+  "L0_hall_back_wall": [
+   72,
+   1020,
+   224,
+   180
+  ],
+  "L1_door_interior": [
+   72,
+   1068,
+   96,
+   132
+  ],
+  "L1_door_aperture": [
+   72,
+   1068,
+   96,
+   132
+  ],
+  "L1_door_frame": [
+   40,
+   1032,
+   160,
+   168
+  ],
+  "L1_door_leaf": [
+   72,
+   1068,
+   96,
+   132
+  ],
+  "L2_gatehouse_face": [
+   0,
+   0,
+   296,
+   1020
+  ],
+  "L2_lintel_course": [
+   72,
+   960,
+   224,
+   60
+  ],
+  "L3_back_pier": [
+   0,
+   1020,
+   72,
+   180
+  ],
+  "L4_mouth_corbel": [
+   284,
+   1004,
+   40,
+   40
+  ]
+ },
+ "labels_legend": [
+  "authored drawing",
+  "held pose",
+  "deformation",
+  "procedural architecture",
+  "unfinished"
+ ],
+ "honesty": "No new Kaze drawings were created. Deformation used in the preview: horizontal flip (player.gd behaviour) and a dark tint. Authored entry, traversal and departure poses are missing: docs/pm_pilot/art/MISSING_ANIMATION.md.",
+ "assets": [
+  {
+   "id": "canal_L0_hall_back_wall",
+   "path": "assets/pm_pilot/canal/canal_L0_hall_back_wall.png",
+   "sha256": "84baf2ce2a47d2b0302eed15872f89594a681375642eb51c38e148a55420ac16",
+   "size": [
+    224,
+    180
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    72,
+    1020,
+    224,
+    180
+   ],
+   "anchor_top_left_room_px": [
+    72,
+    1020
+   ],
+   "draw_order_back_to_front": 0,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L1_door_interior",
+   "path": "assets/pm_pilot/canal/canal_L1_door_interior.png",
+   "sha256": "51b37a582e07883cd8b4c6e1ac83614fe1c82849aaa0e40bbdb19c611bab5c55",
+   "size": [
+    96,
+    132
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    72,
+    1068,
+    96,
+    132
+   ],
+   "anchor_top_left_room_px": [
+    72,
+    1068
+   ],
+   "draw_order_back_to_front": 1,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L1_door_frame",
+   "path": "assets/pm_pilot/canal/canal_L1_door_frame.png",
+   "sha256": "ac42d71d034451926ee7ff17bc276292c31521164a5c2b410f4445c634e76096",
+   "size": [
+    160,
+    168
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    40,
+    1032,
+    160,
+    168
+   ],
+   "anchor_top_left_room_px": [
+    40,
+    1032
+   ],
+   "draw_order_back_to_front": 2,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L1_door_leaf",
+   "path": "assets/pm_pilot/canal/canal_L1_door_leaf.png",
+   "sha256": "9d5acd303d4e94643056a4224ffbea449329dedf8d3b13994f1e4b288a6f6759",
+   "size": [
+    96,
+    132
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    72,
+    1068,
+    96,
+    132
+   ],
+   "anchor_top_left_room_px": [
+    72,
+    1068
+   ],
+   "draw_order_back_to_front": 3,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L2_gatehouse_face",
+   "path": "assets/pm_pilot/canal/canal_L2_gatehouse_face.png",
+   "sha256": "8859efbe940137b0bcc0ebed8a60459ae64cccbd55bc9a02330991b3d082e7f6",
+   "size": [
+    296,
+    1020
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    0,
+    0,
+    296,
+    1020
+   ],
+   "anchor_top_left_room_px": [
+    0,
+    0
+   ],
+   "draw_order_back_to_front": 4,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L2_lintel_course",
+   "path": "assets/pm_pilot/canal/canal_L2_lintel_course.png",
+   "sha256": "7ecf1b396da24ac43990e7b85dcf57c3dd3c236399e641c76806373897fcff40",
+   "size": [
+    224,
+    60
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    72,
+    960,
+    224,
+    60
+   ],
+   "anchor_top_left_room_px": [
+    72,
+    960
+   ],
+   "draw_order_back_to_front": 5,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L3_back_pier",
+   "path": "assets/pm_pilot/canal/canal_L3_back_pier.png",
+   "sha256": "43c03b70f7fbad1e8ed12f00af766c6ced6836527c3468782f1eeb1a785b92bc",
+   "size": [
+    72,
+    180
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    0,
+    1020,
+    72,
+    180
+   ],
+   "anchor_top_left_room_px": [
+    0,
+    1020
+   ],
+   "draw_order_back_to_front": 6,
+   "in_front_of_kaze": false,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "canal_L4_mouth_corbel",
+   "path": "assets/pm_pilot/canal/canal_L4_mouth_corbel.png",
+   "sha256": "a30eee4d70e238f55e9145e7631a995f9bf642c2fa72cb9c1dbdf23c46060807",
+   "size": [
+    40,
+    40
+   ],
+   "mode": "RGBA",
+   "room": 13,
+   "room_rect": [
+    284,
+    1004,
+    40,
+    40
+   ],
+   "anchor_top_left_room_px": [
+    284,
+    1004
+   ],
+   "draw_order_back_to_front": 8,
+   "in_front_of_kaze": true,
+   "scale": 1.0,
+   "label": "procedural architecture",
+   "generator": "tools/pm_pilot_art/build_canal.py",
+   "import_notes": "lossless, mipmaps off, default filter; draw with draw_texture at room_rect position, no scaling",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "wipe_panel_a",
+   "path": "assets/pm_pilot/wipe/wipe_panel_a.png",
+   "sha256": "5f22b42299f0738594fb6300ef70ee5cdd3e49e7f0070b464b111e9814f4d88d",
+   "size": [
+    1822,
+    488
+   ],
+   "mode": "RGBA",
+   "space": "screen (1280x720 viewport)",
+   "anchor_top_left_screen_px": "animated; see integration note",
+   "draw_order_back_to_front": "transition overlay (above cinematic z3)",
+   "scale": 1.0,
+   "travel": "toward -x (leftward); flip_h for rightward exits",
+   "label": "procedural architecture (wipe kit, original Kaze wind-cloth direction; not Persona art)",
+   "generator": "tools/pm_pilot_art/build_wipe.py",
+   "import_notes": "lossless, no mipmaps; tilted 6 degrees; stack 5 rows spaced 170 px; panel rows overlap",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "wipe_panel_b",
+   "path": "assets/pm_pilot/wipe/wipe_panel_b.png",
+   "sha256": "b0a4f1c814cbd5a5957c442963901d45d37c8eb01d331926cd79b96c5d7bcc37",
+   "size": [
+    1822,
+    488
+   ],
+   "mode": "RGBA",
+   "space": "screen (1280x720 viewport)",
+   "anchor_top_left_screen_px": "animated; see integration note",
+   "draw_order_back_to_front": "transition overlay (above cinematic z3)",
+   "scale": 1.0,
+   "travel": "toward -x (leftward); flip_h for rightward exits",
+   "label": "procedural architecture (wipe kit, original Kaze wind-cloth direction; not Persona art)",
+   "generator": "tools/pm_pilot_art/build_wipe.py",
+   "import_notes": "lossless, no mipmaps; tilted 6 degrees; stack 5 rows spaced 170 px; panel rows overlap",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "wipe_panel_c",
+   "path": "assets/pm_pilot/wipe/wipe_panel_c.png",
+   "sha256": "44fd4c631c7c8d2ccf5215625569ff2a5de4f6de4234e9c1279df6c1db08ddba",
+   "size": [
+    1822,
+    488
+   ],
+   "mode": "RGBA",
+   "space": "screen (1280x720 viewport)",
+   "anchor_top_left_screen_px": "animated; see integration note",
+   "draw_order_back_to_front": "transition overlay (above cinematic z3)",
+   "scale": 1.0,
+   "travel": "toward -x (leftward); flip_h for rightward exits",
+   "label": "procedural architecture (wipe kit, original Kaze wind-cloth direction; not Persona art)",
+   "generator": "tools/pm_pilot_art/build_wipe.py",
+   "import_notes": "lossless, no mipmaps; tilted 6 degrees; stack 5 rows spaced 170 px; panel rows overlap",
+   "status": "technical candidate; creator visual acceptance pending"
+  },
+  {
+   "id": "wipe_badge_plate",
+   "path": "assets/pm_pilot/wipe/wipe_badge_plate.png",
+   "sha256": "3c4f3a57a153e349a938cc6fcb0bce71b9f00b01600f4a5af3ec0cb1781bf02d",
+   "size": [
+    460,
+    54
+   ],
+   "mode": "RGBA",
+   "space": "screen",
+   "anchor_top_left_screen_px": [
+    410,
+    480
+   ],
+   "scale": 1.0,
+   "label": "procedural architecture (UI plate, no text baked in)",
+   "generator": "tools/pm_pilot_art/build_wipe.py",
+   "import_notes": "engine draws destination text over it",
+   "status": "technical candidate; creator visual acceptance pending"
+  }
+ ],
+ "referenced_not_copied": [
+  {
+   "id": "turn_depth_key",
+   "path": "assets/art04/kaze/turn_depth_key.png",
+   "sha256": "878ee13ed80dec5a9cfbc32f9720d7a1a7531b36c629f5f9748bffa6a73cbbaa",
+   "size": [
+    320,
+    724
+   ],
+   "pivot": [
+    160,
+    600
+   ],
+   "scale": 0.303125,
+   "offset": [
+    0,
+    -238
+   ],
+   "label": "held pose",
+   "note": "single held drawing, not animation; ART-04 PR30 source a6b76b9938825307bdcd4efb687c7198ea0d8681; referenced in place, not copied or modified; not used in the Canal staging preview"
+  },
+  {
+   "id": "enter_depth_key",
+   "path": "assets/art04/kaze/enter_depth_key.png",
+   "sha256": "42fb6eb7ca51528fef1c3599aa95e2e4774171712ca79131f3cc244d07f9a147",
+   "size": [
+    320,
+    724
+   ],
+   "pivot": [
+    160,
+    600
+   ],
+   "scale": 0.303125,
+   "offset": [
+    0,
+    -238
+   ],
+   "label": "held pose",
+   "note": "single held drawing, not animation; ART-04 PR30 source a6b76b9938825307bdcd4efb687c7198ea0d8681; referenced in place, not copied or modified; not used in the Canal staging preview"
+  },
+  {
+   "id": "stair_up_key",
+   "path": "assets/art04/kaze/stair_up_key.png",
+   "sha256": "87e161915266e18ec7225fcca5b173b35e94abe1537e91972f27102af1ee7deb",
+   "size": [
+    320,
+    724
+   ],
+   "pivot": [
+    160,
+    600
+   ],
+   "scale": 0.303125,
+   "offset": [
+    0,
+    -238
+   ],
+   "label": "held pose",
+   "note": "single held drawing, not animation; ART-04 PR30 source a6b76b9938825307bdcd4efb687c7198ea0d8681; referenced in place, not copied or modified; not used in the Canal staging preview"
+  },
+  {
+   "id": "stair_down_key",
+   "path": "assets/art04/kaze/stair_down_key.png",
+   "sha256": "1d170617d1957440d9eb2ecf15c133d93fb0935b2b28528c211cd0ecd509cf24",
+   "size": [
+    320,
+    724
+   ],
+   "pivot": [
+    160,
+    600
+   ],
+   "scale": 0.303125,
+   "offset": [
+    0,
+    -238
+   ],
+   "label": "held pose",
+   "note": "single held drawing, not animation; ART-04 PR30 source a6b76b9938825307bdcd4efb687c7198ea0d8681; referenced in place, not copied or modified; not used in the Canal staging preview"
+  },
+  {
+   "id": "kaze_idle_strip",
+   "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+   "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+   "size": [
+    2176,
+    724
+   ],
+   "frames": 8,
+   "scale": 0.2649908807267889,
+   "ground_baseline": 591,
+   "label": "authored drawing (approved cleaned strip)",
+   "note": "used in the staging preview exactly as scripts/player.gd registers it (centered sprite, offset y = height/2 - baseline, flip_h when facing < 0)"
+  },
+  {
+   "id": "kaze_run_strip",
+   "path": "assets/kaze/cleaned/kaze_run_strip.png",
+   "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+   "size": [
+    2176,
+    724
+   ],
+   "frames": 8,
+   "scale": 0.3825780535911868,
+   "ground_baseline": 491,
+   "label": "authored drawing (approved cleaned strip)",
+   "note": "used in the staging preview exactly as scripts/player.gd registers it (centered sprite, offset y = height/2 - baseline, flip_h when facing < 0)"
+  }
+ ],
+ "inspected_not_imported": [
+  {
+   "source": "PR41 60859a861b4dbcde25f2fe274bae7400bd9eb11b",
+   "note": "turn_depth candidate right-to-rear only; enter_depth WIP with defects; stair_up rejected. Nothing copied."
+  },
+  {
+   "source": "PR47 4b11bef0b3727f1647029cb04568b96a2e09c9fd",
+   "note": "R18 art inspected for style reference only. Nothing copied."
+  },
+  {
+   "source": "PR53 ART-07",
+   "note": "excluded by order; not read."
+  }
+ ]
+}
