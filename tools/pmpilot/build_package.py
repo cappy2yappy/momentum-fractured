@@ -221,7 +221,7 @@ def main():
     harness = None
     qa_pin = pins.get('qa_harness') or {}
     if any(x.get('requires') == 'qa_harness' for x in spec['regression'].get('extra', [])) and not a.quick:
-        harness = out / 'qa-harness'
+        harness = root.parent / ('pmpilot-qa-harness-' + a.variant)  # outside the Godot project directory
         pinlib.git(root, 'worktree', 'add', '--detach', str(harness), qa_pin['commit'])
     base = [a.godot, '--headless', '--path', root]
     # The cold import must be clean on native hosts (BUILD-06 discipline). On the linux smoke host the
@@ -229,7 +229,14 @@ def main():
     _, warm = run('import-warmup', base + ['--editor', '--import', '--quit'], timeout=300, gate=native)
     if not warm['passed']:
         findings.append('linux smoke: cold import reported %d script/UID errors before the cache existed; settled import is gated' % len(warm['errors']))
-    run('import-settled', base + ['--editor', '--import', '--quit'], timeout=300)
+    # The settled import must be clean. The editor occasionally fails to load the MetSys plugin script on one pass
+    # (observed once on hosted Windows, run 39206728741); allow up to two clean re-attempts and record every attempt.
+    for attempt in range(3):
+        _, settled = run('import-settled' if attempt == 0 else 'import-settled-retry%d' % attempt, base + ['--editor', '--import', '--quit'], timeout=300, gate=False)
+        if settled['passed']:
+            break
+        findings.append('settled import attempt %d failed (%d errors); retried' % (attempt + 1, len(settled['errors'])))
+    assert settled['passed'], 'settled import failed 3 times: %s' % settled['errors'][:5]
 
     reg = spec['regression']
     waivers = spec.get('preservation_waivers', [])
