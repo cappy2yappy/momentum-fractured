@@ -38,7 +38,7 @@ concurrency:
 env:
   PMPILOT_VARIANTS: ${{ inputs.variants || 'baseline-pr39' }}
   PMPILOT_PURPOSE: ${{ inputs.purpose || 'preparation-smoke' }}
-  PMPILOT_PLATFORMS: ${{ inputs.platforms || 'windows' }}
+  PMPILOT_PLATFORMS: ${{ inputs.platforms || 'both' }}
   PMPILOT_QUICK: ${{ inputs.quick && '1' || '0' }}
 jobs:
   plan:
