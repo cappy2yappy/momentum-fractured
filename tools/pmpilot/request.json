@@ -1,6 +1,6 @@
 {
-  "variants": "transitions,combined",
-  "purpose": "comparison",
-  "platforms": "windows",
+  "variants": "baseline-pr39",
+  "purpose": "preparation-smoke",
+  "platforms": "both",
   "quick": false
 }
