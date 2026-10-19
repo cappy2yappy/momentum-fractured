@@ -1,0 +1,15 @@
+{
+ "source": "/home/claude/pilot_shared/CANAL_CONTRACT.md v1 (LEVEL, branch feature/pm-pilot-canal-geometry, base baedd678)",
+ "room": 13, "room_size": [1800, 1440], "anchor_feet": [120, 1200],
+ "rects": {
+  "L0_hall_back_wall": [72, 1020, 224, 180],
+  "L1_door_interior": [72, 1068, 96, 132],
+  "L1_door_aperture": [72, 1068, 96, 132],
+  "L1_door_frame": [40, 1032, 160, 168],
+  "L1_door_leaf": [72, 1068, 96, 132],
+  "L2_gatehouse_face": [0, 0, 296, 1020],
+  "L2_lintel_course": [72, 960, 224, 60],
+  "L3_back_pier": [0, 1020, 72, 180],
+  "L4_mouth_corbel": [284, 1004, 40, 40]
+ }
+}
