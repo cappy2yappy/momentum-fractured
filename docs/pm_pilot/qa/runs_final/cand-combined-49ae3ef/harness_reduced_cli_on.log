@@ -1,0 +1,5 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: reduced_cli
+PASS: [reduced_cli] --tr05-reduced-motion starts the session reduced
+QA SUMMARY: 1 checks, 0 failure(s), 0 skip(s)

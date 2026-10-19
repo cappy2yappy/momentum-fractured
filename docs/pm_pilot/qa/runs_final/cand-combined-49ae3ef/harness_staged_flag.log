@@ -1,0 +1,37 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_cinematic_completion
+PASS: [hook_cinematic_completion] Staged stair enabled by its explicit flag only
+QA STAGED full seconds=2.38333333333333 phases=["enter", "load", "arrive"] max_zoom=1.35000002384186 marker=completed last_duration=2.35
+PASS: [hook_cinematic_completion] Full sequence E-to-control 2.38 s (contract 2.35)
+PASS: [hook_cinematic_completion] Phases enter, load, arrive observed: ["enter", "load", "arrive"]
+PASS: [hook_cinematic_completion] Cinematic close-up occurred (max zoom 1.35)
+PASS: [hook_cinematic_completion] Marker reports completed 1, aborted 0, started 1 (completed)
+PASS: [hook_cinematic_completion] Marker clock 2.35 s within 2-3 s
+PASS: [hook_cinematic_completion] Exactly one room request, now in R17
+PASS: [hook_cinematic_completion] Arrival feet at the reciprocal endpoint (1680,1298): (1680.0, 1298.0)
+PASS: [hook_cinematic_completion] Control state restored after transition: staged stair completion
+PASS: [hook_cinematic_completion] HP unchanged and tree not paused
+PASS: [hook_cinematic_completion] E and D held through sequence plus 100 ticks: no bounce, no second sequence
+PASS: [hook_cinematic_completion] Kaze obeys a real key after the sequence (moved -66 px)
+PASS: [hook_cinematic_completion] E mashed throughout starts one sequence and one request
+PASS: [hook_cinematic_completion] Control state restored after transition: E mashing
+PASS: [hook_cinematic_completion] F6 switched reduced motion on
+PASS: [hook_cinematic_completion] Reduced (F6) completes in 0.98 s (contract 0.95)
+PASS: [hook_cinematic_completion] Reduced (F6) no zoom, completed, in R17
+PASS: [hook_cinematic_completion] Control state restored after transition: reduced F6 stair
+PASS: [hook_cinematic_completion] F6 pressed mid-enter completes early (1.15 s) and arrives
+PASS: [hook_cinematic_completion] Control state restored after transition: F6 mid-enter
+PASS: [hook_cinematic_completion] Pause during enter then resume: control back after 0 ticks (marker paused, room 14: sequence is aborted by pause, not resumed)
+PASS: [hook_cinematic_completion] Control state restored after transition: pause mid-enter
+PASS: [hook_cinematic_completion] Pause during arrival then resume: control back in R17 after 0 ticks
+PASS: [hook_cinematic_completion] Control state restored after transition: pause mid-arrival
+PASS: [hook_cinematic_completion] Respawn mid-enter: control and live sprite restored (0 ticks)
+PASS: [hook_cinematic_completion] Control state restored after transition: respawn mid-enter
+PASS: [hook_cinematic_completion] Gated R14->R17 (when locked) starts no sequence and keeps control; locked=true message='Route sealed: CLIMB. Consult the atlas.'
+PASS: [hook_cinematic_completion] R17->R14 stair is not staged and completes once
+PASS: [hook_cinematic_completion] Control state restored after transition: R17->R14 inherited stair
+PASS: [hook_cinematic_completion] R13->R14 lateral passage unchanged with the flag on
+PASS: [hook_cinematic_completion] Control state restored after transition: R13->R14 with flag
+PASS: [hook_cinematic_completion] No sequence exceeded the 4 s safety ceiling (max 2.38 s)
+QA SUMMARY: 32 checks, 0 failure(s), 0 skip(s)
