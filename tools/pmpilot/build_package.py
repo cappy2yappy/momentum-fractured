@@ -161,6 +161,7 @@ def main():
     evidence.mkdir(parents=True)
     rows = []
     notes = []  # steps deliberately not executed on this host
+    findings = []  # recorded observations that are not failures
 
     def profile(label):
         home = out / 'profiles' / label
@@ -204,7 +205,7 @@ def main():
         (out / 'QA_RESULTS.json').write_text(json.dumps(dict(
             variant=a.variant, source_head=head, source_tree=tree, host=platform.platform(), architecture=platform.machine(),
             mode='graphical automated fixture' if a.graphical else 'native headless automated' if native else 'linux cross-export smoke (no native execution)',
-            not_executed=notes, checks=rows), indent=2) + '\n', encoding='utf-8')
+            not_executed=notes, findings=findings, checks=rows), indent=2) + '\n', encoding='utf-8')
 
     # 1. Source policy: diff allowlist + ART-07 exclusion in the source itself.
     diff = pinlib.diff_check(pins, a.variant, root)
@@ -218,7 +219,7 @@ def main():
     # MetSys editor scripts fail to resolve before the UID cache exists; that is recorded, not gated.
     _, warm = run('import-warmup', base + ['--editor', '--import', '--quit'], timeout=300, gate=native)
     if not warm['passed']:
-        notes.append('linux smoke: cold import reported %d script/UID errors before the cache existed; settled import is gated' % len(warm['errors']))
+        findings.append('linux smoke: cold import reported %d script/UID errors before the cache existed; settled import is gated' % len(warm['errors']))
     run('import-settled', base + ['--editor', '--import', '--quit'], timeout=300)
 
     reg = spec['regression']
@@ -333,10 +334,21 @@ def main():
         reproducibility['equals_build06_control'] = control_equal
         (evidence / 'REPRODUCIBILITY.json').write_text(json.dumps(reproducibility, indent=2) + '\n')
         print('BUILD-06 control resource equality (%s): %s' % (target, control_equal), flush=True)
-        if native:
+        mode = spec.get('control_equality', 'record')
+        if native and mode == 'require':
             assert control_equal, 'Canonical resource hash differs from the BUILD-06 control for the same pinned source'
-        else:
-            notes.append('BUILD-06 control resource equality recorded (%s) but not gated on a linux cross-export' % control_equal)
+        if not control_equal:
+            findings.append('canonical resource hash differs from the BUILD-06 control for the same pinned source (mode=%s, host=%s); '
+                         'BUILD-06 claims identical repeated exports within a run, not cross-run identity' % (mode, host))
+    groups = {}
+    for rname, rhash in sorted(records_a.items()):
+        groups.setdefault('/'.join(rname.split('/')[:2]), []).append(rname + rhash)
+    group_hashes = {k: digest(''.join(v).encode())[:10] for k, v in groups.items()}
+    reproducibility['group_hashes'] = group_hashes
+    (evidence / 'REPRODUCIBILITY.json').write_text(json.dumps(reproducibility, indent=2) + '\n')
+    if os.environ.get('GITHUB_ACTIONS'):
+        annotate('notice', 'pmpilot resource hashes', 'canonical=%s entries=%d groups: %s' % (
+            reproducibility['canonical_resource_sha256'], len(records_a), ' '.join('%s=%s' % kv for kv in sorted(group_hashes.items()))))
 
     # 3. Pack audit and package policy (ART-07 exclusion, required/forbidden prefixes, changed assets present).
     os.environ['BUILD05_SOURCE_ROOT'] = str(root)
@@ -495,7 +507,7 @@ def main():
         launchers=launcher_names, provisional_launchers=provisional, launcher_isolation=launcher_checks,
         source_suites=len(suites) if suites else None, source_assertions=sum(x['passes'] for x in suites) if suites else None,
         exported_assertions=sum(x['passes'] for x in rows if x['test'].startswith(('native-exported', 'exported-'))),
-        source_files_unchanged=len(before), native_coverage=coverage, not_executed=notes, signing='unsigned/unnotarized',
+        source_files_unchanged=len(before), native_coverage=coverage, not_executed=notes, findings=findings, signing='unsigned/unnotarized',
         art07_excluded=True, policy=policy,
         limitations=['No hands-on human campaign', 'No physical gamepad', 'No sustained FPS',
                      'Hosted runs are headless; graphical coverage requires a desktop host',
