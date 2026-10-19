@@ -99,12 +99,16 @@ def seed_for(spec, version):
 def launcher_text(host, exe_name, variant, demo, seeded):
     flags = ' '.join(demo.get('flags', []))
     profile_name = variant + '-' + demo['name'] + '.json'
+    userdata = 'userdata-' + variant + '-' + demo['name']
     if host == 'windows':
         seed = 'copy /y "fixtures\\%s.json" "profiles\\%s" >nul\r\n' % (demo['name'], profile_name) if seeded else ''
-        return ('@echo off\r\ncd /d "%~dp0"\r\nif not exist "profiles" mkdir "profiles"\r\n' + seed +
+        # APPDATA points at a launcher-owned folder so user:// logs and caches are isolated too (campaign save is redirected by --tr05-save).
+        return ('@echo off\r\ncd /d "%~dp0"\r\nif not exist "profiles" mkdir "profiles"\r\nif not exist "profiles\\' + userdata + '" mkdir "profiles\\' + userdata + '"\r\n' + seed +
+                'set "APPDATA=%~dp0profiles\\' + userdata + '"\r\n'
                 '"%~dp0' + exe_name + '" %* -- ' + flags + ' "--tr05-save=%~dp0profiles\\' + profile_name + '"\r\nexit /b %errorlevel%\r\n')
     seed = 'cp "$HERE/fixtures/%s.json" "$HERE/profiles/%s"\n' % (demo['name'], profile_name) if seeded else ''
-    return ('#!/bin/bash\nset -euo pipefail\nHERE="$(cd "$(dirname "$0")" && pwd)"\nmkdir -p "$HERE/profiles"\n' + seed +
+    return ('#!/bin/bash\nset -euo pipefail\nHERE="$(cd "$(dirname "$0")" && pwd)"\nmkdir -p "$HERE/profiles/' + userdata + '"\n' + seed +
+            'export HOME="$HERE/profiles/' + userdata + '"\n'
             'exec "$HERE/' + exe_name + '/Contents/MacOS/EXECUTABLE" "$@" -- ' + flags + ' "--tr05-save=$HERE/profiles/' + profile_name + '"\n')
 
 
@@ -214,6 +218,11 @@ def main():
     art07 = [n for n in git(root, 'ls-files').decode().splitlines() if n.startswith(FORBIDDEN_ALWAYS)]
     assert not art07, 'ART-07 files present in source: %s' % art07[:5]
 
+    harness = None
+    qa_pin = pins.get('qa_harness') or {}
+    if any(x.get('requires') == 'qa_harness' for x in spec['regression'].get('extra', [])) and not a.quick:
+        harness = out / 'qa-harness'
+        pinlib.git(root, 'worktree', 'add', '--detach', str(harness), qa_pin['commit'])
     base = [a.godot, '--headless', '--path', root]
     # The cold import must be clean on native hosts (BUILD-06 discipline). On the linux smoke host the
     # MetSys editor scripts fail to resolve before the UID cache exists; that is recorded, not gated.
@@ -257,7 +266,7 @@ def main():
             if reg['tr06'].get('passes') is not None:
                 assert tr06['passes'] == reg['tr06']['passes'], tr06
         for extra in reg.get('extra', []):
-            argv = [x.format(godot=a.godot, root=root, python=sys.executable) for x in extra['argv']]
+            argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant) for x in extra['argv']]
             run('extra-' + extra['name'], argv, timeout=extra.get('timeout', 900), regex=extra.get('pass_regex'))
 
     # 2. Exports (text script mode, restored byte for byte).
@@ -381,6 +390,17 @@ def main():
     fixtures = stage / 'fixtures'
     fixtures.mkdir()
     launcher_names = []
+    fixture_checks = []
+    for demo in demos:
+        if demo.get('seed') is not None and demo.get('fixture_check'):
+            candidate_fixture = root / demo['fixture_check']
+            if candidate_fixture.is_file():
+                same = json.loads(candidate_fixture.read_text(encoding='utf-8')) == seed_for(demo['seed'], demos_doc['save_version'])
+                fixture_checks.append(dict(demo=demo['name'], fixture=demo['fixture_check'], equals_generated_seed=same))
+                assert same, 'Generated seed for %s differs from the candidate fixture %s' % (demo['name'], demo['fixture_check'])
+            else:
+                fixture_checks.append(dict(demo=demo['name'], fixture=demo['fixture_check'], equals_generated_seed=None, note='fixture not present in this source'))
+    (evidence / 'FIXTURE_CHECKS.json').write_text(json.dumps(fixture_checks, indent=2) + '\n')
     for demo in demos:
         seeded = demo.get('seed') is not None
         if seeded:
@@ -447,8 +467,9 @@ def main():
             env = profile('launcher-' + launcher.stem)
             cmd = ([os.environ.get('COMSPEC', 'cmd.exe'), '/d', '/c', str(launcher)] if target == 'windows' else [launcher])
             run('launcher-' + launcher.stem, cmd + ['--headless', '--fixed-fps', '60', '--quit-after', '120'], env, 90, 'Godot Engine v4.6.1')
-            ordinary = [str(x) for x in Path(env['HOME']).rglob(SAVE_NAME)]
             demo = launcher.stem.removeprefix('Play-')
+            owned = extracted / 'profiles' / ('userdata-' + a.variant + '-' + demo)
+            ordinary = [str(x) for x in Path(env['HOME']).rglob(SAVE_NAME)] + [str(x) for x in owned.rglob(SAVE_NAME)]
             profile_file = extracted / 'profiles' / (a.variant + '-' + demo + '.json')
             seeded = (extracted / 'fixtures' / (demo + '.json')).is_file()
             ok_profile = True
@@ -458,7 +479,7 @@ def main():
                 except Exception:
                     ok_profile = False
             row = dict(launcher=launcher.name, ordinary_save_files=ordinary, seeded_profile_present=ok_profile if seeded else None,
-                       isolated=not ordinary and ok_profile)
+                       launcher_owned_userdata_exists=owned.is_dir(), isolated=not ordinary and ok_profile)
             launcher_checks.append(row)
             assert row['isolated'], row
         (evidence / 'LAUNCHER_ISOLATION.json').write_text(json.dumps(launcher_checks, indent=2) + '\n')

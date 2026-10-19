@@ -120,7 +120,21 @@
         "tr06": {
           "passes": null
         },
-        "extra": [],
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-transitions"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness"
+          }
+        ],
         "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
       },
       "demos": "default"
@@ -147,7 +161,21 @@
         "tr06": {
           "passes": null
         },
-        "extra": [],
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-geometry"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness"
+          }
+        ],
         "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
       },
       "demos": "default"
@@ -174,7 +202,21 @@
         "tr06": {
           "passes": null
         },
-        "extra": [],
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-art"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness"
+          }
+        ],
         "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
       },
       "demos": "default"
@@ -207,10 +249,32 @@
         "tr06": {
           "passes": null
         },
-        "extra": [],
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-combined"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness"
+          }
+        ],
         "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
       },
       "demos": "default"
     }
+  },
+  "qa_harness": {
+    "branch": "test/pm-pilot-regressions",
+    "commit": null,
+    "entry": "tools/pm_pilot_qa/run_qa.py",
+    "command": "python tools/pm_pilot_qa/run_qa.py --repo <candidate> --label <name>",
+    "semantics": "exit 0 = PASS or PASS_WITH_SKIPS, 1 = FAIL; cinematic completion and Canal containment hooks SKIP until QA publishes Phase B",
+    "note": "Supplied by the QA agent through the coordinator. Not part of any candidate source; checked out beside it by the builder."
   }
 }

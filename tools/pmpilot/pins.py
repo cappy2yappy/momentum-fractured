@@ -99,6 +99,9 @@ def validate(pins, names, purpose):
                 problems.append(name + ': allowed_paths must be supplied by the owning agent')
             if not (v.get('compare_base') and SHA.fullmatch(v['compare_base'])) and 'compose' not in v:
                 problems.append(name + ': compare_base missing')
+            for extra in (v.get('regression') or {}).get('extra', []):
+                if extra.get('requires') == 'qa_harness' and not SHA.fullmatch(str((pins.get('qa_harness') or {}).get('commit'))):
+                    problems.append(name + ': regression command ' + extra['name'] + ' needs a pinned qa_harness commit')
     return problems
 
 

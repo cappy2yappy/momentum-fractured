@@ -1,14 +1,61 @@
 {
-  "notes": "PROVISIONAL demo launchers. Positions and flags are the TR05 idioms (package_tr05.py). Transition publishes exact arguments for the pilot at /home/claude/pilot_shared/TRANSITION_DEMO_ARGS.md; Phase B replaces these entries (or sets a per-variant demos list in pins.json). Seeded unlocks are QA fixtures, not earned progression.",
+  "notes": "Launchers follow Transition's /home/claude/pilot_shared/TRANSITION_DEMO_ARGS.md (branch feature/pm-pilot-transitions @ 903634afa51237e29fd306ae815c880415230f17 at the time of writing). The same arguments go into every variant so comparisons are like for like: --pm-staged-stair is opt-in and ignored by builds that do not contain the pilot. Seeds equal the Transition fixtures PM-Canal-Left.json and PM-Stair-Cinematic.json (checked against the candidate's own fixture file when it exists in the source). Seeded unlocks are QA fixtures, not earned progression.",
   "save_version": 8,
   "default": [
-    {"name": "Fresh", "seed": null, "flags": [], "persistent": true,
-     "describe": "Unseeded campaign; its own persistent profile inside the package folder."},
-    {"name": "Canal-Left", "seed": {"room": 13, "position": [220, 1198]}, "flags": [], "persistent": false,
-     "describe": "Room 13 canal-left doorway. Hold A to leave through the left threshold. Provisional: same seed as TR05 Canal-Automatic.",
-     "status": "provisional"},
-    {"name": "Cinematic-Pilot", "seed": {"room": 14, "position": [1450, 478]}, "flags": [], "persistent": false,
-     "describe": "Room 14 stair, press E beside the stairs for the staged passage sequence. Provisional: same seed as TR05 Stair-Cinematic.",
-     "status": "provisional"}
+    {
+      "name": "Fresh",
+      "seed": null,
+      "flags": [
+        "--pm-staged-stair"
+      ],
+      "persistent": true,
+      "describe": "Unseeded campaign with the staged stair on; its own persistent profile in the package folder."
+    },
+    {
+      "name": "Canal-Left",
+      "seed": {
+        "room": 13,
+        "position": [
+          330,
+          1158
+        ]
+      },
+      "flags": [],
+      "persistent": false,
+      "fixture_check": "docs/pm_pilot/transition/fixtures/PM-Canal-Left.json",
+      "describe": "Room 13 Mooring Loft, feet (330,1158) on the shelf in the hallway. Hold A: the left exit is an automatic passage, no E."
+    },
+    {
+      "name": "Cinematic-Pilot",
+      "seed": {
+        "room": 14,
+        "position": [
+          1410,
+          478
+        ]
+      },
+      "flags": [
+        "--pm-staged-stair"
+      ],
+      "persistent": false,
+      "fixture_check": "docs/pm_pilot/transition/fixtures/PM-Stair-Cinematic.json",
+      "describe": "Room 14 Bellroof Walk, 40 px left of the stair. Press E at the stair: staged R14 to R17 sequence (about 2.35 s) when the pilot is present."
+    },
+    {
+      "name": "Cinematic-Reduced",
+      "seed": {
+        "room": 14,
+        "position": [
+          1410,
+          478
+        ]
+      },
+      "flags": [
+        "--pm-staged-stair",
+        "--tr05-reduced-motion"
+      ],
+      "persistent": false,
+      "describe": "Same stair, reduced motion from launch (about 0.95 s, no camera move). F6 toggles live."
+    }
   ]
 }
