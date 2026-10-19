@@ -1,0 +1,6 @@
+{
+  "variants": "baseline-pr39",
+  "purpose": "preparation-smoke",
+  "platforms": "both",
+  "quick": false
+}

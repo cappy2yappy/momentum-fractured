@@ -1,7 +1,8 @@
 name: PM pilot comparison packages
 # Parametrised from tools/pmpilot/pins.json. Windows x86_64 builds first; macOS Universal
 # starts only after the Windows job of the same variant succeeded (when both are requested).
-# preparation-smoke accepts only baseline/control variants and labels every artifact PREP.
+# purpose=preparation-smoke accepts only baseline/control variants. The inputs come from workflow_dispatch, or on
+# pull_request events from tools/pmpilot/request.json (a repo-driven request, no dispatch permission needed).
 on:
   workflow_dispatch:
     inputs:
@@ -27,7 +28,6 @@ on:
     branches: [fix/tr06-automatic-passage]
     paths:
       - 'tools/pmpilot/**'
-      - '!tools/pmpilot/pins.json'
       - '!tools/pmpilot/PROVENANCE.json'
       - '.github/workflows/pmpilot-packages.yml'
 permissions:
@@ -35,42 +35,43 @@ permissions:
 concurrency:
   group: pmpilot-${{ github.ref }}-${{ github.event_name }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
-env:
-  PMPILOT_VARIANTS: ${{ inputs.variants || 'baseline-pr39' }}
-  PMPILOT_PURPOSE: ${{ inputs.purpose || 'preparation-smoke' }}
-  PMPILOT_PLATFORMS: ${{ inputs.platforms || 'both' }}
-  PMPILOT_QUICK: ${{ inputs.quick && '1' || '0' }}
 jobs:
   plan:
     runs-on: ubuntu-24.04
     outputs:
       variants: ${{ steps.plan.outputs.variants }}
-      windows: ${{ steps.flags.outputs.windows }}
-      macos: ${{ steps.flags.outputs.macos }}
+      purpose: ${{ steps.plan.outputs.purpose }}
+      platforms: ${{ steps.plan.outputs.platforms }}
+      quick: ${{ steps.plan.outputs.quick }}
+      windows: ${{ steps.plan.outputs.windows }}
+      macos: ${{ steps.plan.outputs.macos }}
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Refuse unpinned or mislabelled requests
+      - name: Resolve request and refuse unpinned or mislabelled variants
         id: plan
+        env:
+          IN_VARIANTS: ${{ inputs.variants }}
+          IN_PURPOSE: ${{ inputs.purpose }}
+          IN_PLATFORMS: ${{ inputs.platforms }}
+          IN_QUICK: ${{ inputs.quick }}
         run: |
-          if [ "$PMPILOT_PURPOSE" = "comparison" ] && [ "$PMPILOT_QUICK" = "1" ]; then echo "quick is not allowed for comparison packages" >&2; exit 2; fi
-          python tools/pmpilot/pins.py plan --variants "$PMPILOT_VARIANTS" --purpose "$PMPILOT_PURPOSE"
-      - name: Platform flags
-        id: flags
-        run: |
-          case "$PMPILOT_PLATFORMS" in
-            windows) echo "windows=true"  >> "$GITHUB_OUTPUT"; echo "macos=false" >> "$GITHUB_OUTPUT";;
-            macos)   echo "windows=false" >> "$GITHUB_OUTPUT"; echo "macos=true"  >> "$GITHUB_OUTPUT";;
-            both)    echo "windows=true"  >> "$GITHUB_OUTPUT"; echo "macos=true"  >> "$GITHUB_OUTPUT";;
-          esac
-      - name: Pin summary
+          python tools/pmpilot/pins.py plan --request tools/pmpilot/request.json \
+            ${IN_VARIANTS:+--variants "$IN_VARIANTS"} ${IN_PURPOSE:+--purpose "$IN_PURPOSE"} \
+            ${IN_PLATFORMS:+--platforms "$IN_PLATFORMS"} ${IN_QUICK:+--quick "$IN_QUICK"}
+      - name: Plan summary
+        env:
+          PLAN_VARIANTS: ${{ steps.plan.outputs.variants }}
+          PLAN_PURPOSE: ${{ steps.plan.outputs.purpose }}
+          PLAN_PLATFORMS: ${{ steps.plan.outputs.platforms }}
         run: |
           echo "### PM pilot plan" >> "$GITHUB_STEP_SUMMARY"
-          echo "purpose: \`$PMPILOT_PURPOSE\`, platforms: \`$PMPILOT_PLATFORMS\`, variants: \`${{ steps.plan.outputs.variants }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "purpose: \`$PLAN_PURPOSE\`, platforms: \`$PLAN_PLATFORMS\`, variants: \`$PLAN_VARIANTS\`" >> "$GITHUB_STEP_SUMMARY"
           echo "controls commit: \`${{ github.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
   windows:
     needs: plan
@@ -81,6 +82,9 @@ jobs:
         variant: ${{ fromJSON(needs.plan.outputs.variants) }}
     runs-on: windows-2022
     timeout-minutes: 60
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+      PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
     defaults:
       run:
         shell: bash
@@ -140,6 +144,9 @@ jobs:
         variant: ${{ fromJSON(needs.plan.outputs.variants) }}
     runs-on: macos-15-intel
     timeout-minutes: 60
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+      PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
     defaults:
       run:
         shell: bash

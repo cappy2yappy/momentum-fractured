@@ -162,8 +162,11 @@ def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest='cmd', required=True)
     a = sub.add_parser('plan')
-    a.add_argument('--variants', required=True)
-    a.add_argument('--purpose', required=True, choices=['preparation-smoke', 'comparison'])
+    a.add_argument('--variants')
+    a.add_argument('--purpose', choices=['preparation-smoke', 'comparison'])
+    a.add_argument('--platforms', choices=['windows', 'macos', 'both'])
+    a.add_argument('--quick', default='')
+    a.add_argument('--request', help='request.json used when the other options are not given (pull_request events)')
     a.add_argument('--pins')
     b = sub.add_parser('assemble')
     b.add_argument('--variant', required=True)
@@ -176,16 +179,27 @@ def main():
     args = p.parse_args()
     pins = load(args.pins)
     if args.cmd == 'plan':
-        names = [n.strip() for n in args.variants.split(',') if n.strip()]
-        problems = validate(pins, names, args.purpose)
+        req = {}
+        if args.request and Path(args.request).is_file():
+            req = json.loads(Path(args.request).read_text(encoding='utf-8'))
+        variants = args.variants or req.get('variants', 'baseline-pr39')
+        purpose = args.purpose or req.get('purpose', 'preparation-smoke')
+        platforms = args.platforms or req.get('platforms', 'both')
+        quick = (args.quick or str(req.get('quick', False))).lower() in ('1', 'true', 'yes')
+        names = [n.strip() for n in variants.split(',') if n.strip()]
+        problems = validate(pins, names, purpose)
+        if purpose == 'comparison' and quick:
+            problems.append('quick is not allowed for comparison packages')
         if problems:
             print('PLAN REFUSED:\n  ' + '\n  '.join(problems), file=sys.stderr)
             raise SystemExit(2)
-        out = json.dumps(names)
-        print(out)
+        out = {'variants': json.dumps(names), 'purpose': purpose, 'platforms': platforms, 'quick': '1' if quick else '0',
+               'windows': 'true' if platforms in ('windows', 'both') else 'false', 'macos': 'true' if platforms in ('macos', 'both') else 'false'}
+        print(json.dumps(out))
         if os.environ.get('GITHUB_OUTPUT'):
             with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
-                f.write('variants=' + out + '\n')
+                for k, v in out.items():
+                    f.write('%s=%s\n' % (k, v))
     elif args.cmd == 'assemble':
         print(json.dumps(assemble(pins, args.variant, args.source_root), indent=2))
     else:
