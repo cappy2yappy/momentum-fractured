@@ -20,6 +20,10 @@ on:
         type: choice
         options: [windows, both, macos]
         default: windows
+      apple_silicon:
+        description: 'Also run the macOS package natively (headless) on a hosted Apple Silicon runner'
+        type: boolean
+        default: false
       quick:
         description: 'Skip long source regression suites (preparation-smoke only; manifest is marked incomplete)'
         type: boolean
@@ -45,6 +49,7 @@ jobs:
       quick: ${{ steps.plan.outputs.quick }}
       windows: ${{ steps.plan.outputs.windows }}
       macos: ${{ steps.plan.outputs.macos }}
+      apple_silicon: ${{ steps.plan.outputs.apple_silicon }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,10 +65,11 @@ jobs:
           IN_PURPOSE: ${{ inputs.purpose }}
           IN_PLATFORMS: ${{ inputs.platforms }}
           IN_QUICK: ${{ inputs.quick }}
+          IN_ARM: ${{ inputs.apple_silicon }}
         run: |
           python tools/pmpilot/pins.py plan --request tools/pmpilot/request.json \
             ${IN_VARIANTS:+--variants "$IN_VARIANTS"} ${IN_PURPOSE:+--purpose "$IN_PURPOSE"} \
-            ${IN_PLATFORMS:+--platforms "$IN_PLATFORMS"} ${IN_QUICK:+--quick "$IN_QUICK"}
+            ${IN_PLATFORMS:+--platforms "$IN_PLATFORMS"} ${IN_QUICK:+--quick "$IN_QUICK"} ${IN_ARM:+--apple-silicon "$IN_ARM"}
       - name: Plan summary
         env:
           PLAN_VARIANTS: ${{ steps.plan.outputs.variants }}
@@ -197,3 +203,28 @@ jobs:
             game-source/build/tr05/qa/results.json
           if-no-files-found: warn
           retention-days: 30
+  macos-arm64:
+    needs: [plan, macos]
+    if: ${{ always() && needs.plan.outputs.apple_silicon == 'true' && needs.macos.result == 'success' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: ${{ fromJSON(needs.plan.outputs.variants) }}
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: PMPILOT-${{ env.PMPILOT_PURPOSE }}-macos-${{ matrix.variant }}
+          path: pkg
+      - name: Run the Universal package natively on Apple Silicon (headless)
+        run: python tools/pmpilot/smoke_extracted.py --artifact-dir pkg --out "$RUNNER_TEMP/arm64-${{ matrix.variant }}"

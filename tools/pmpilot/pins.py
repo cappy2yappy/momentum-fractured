@@ -169,6 +169,7 @@ def main():
     a.add_argument('--purpose', choices=['preparation-smoke', 'comparison'])
     a.add_argument('--platforms', choices=['windows', 'macos', 'both'])
     a.add_argument('--quick', default='')
+    a.add_argument('--apple-silicon', default='')
     a.add_argument('--request', help='request.json used when the other options are not given (pull_request events)')
     a.add_argument('--pins')
     b = sub.add_parser('assemble')
@@ -188,6 +189,7 @@ def main():
         variants = args.variants or req.get('variants', 'baseline-pr39')
         purpose = args.purpose or req.get('purpose', 'preparation-smoke')
         platforms = args.platforms or req.get('platforms', 'both')
+        arm = (args.apple_silicon or str(req.get('apple_silicon', False))).lower() in ('1', 'true', 'yes')
         quick = (args.quick or str(req.get('quick', False))).lower() in ('1', 'true', 'yes')
         names = [n.strip() for n in variants.split(',') if n.strip()]
         problems = validate(pins, names, purpose)
@@ -196,7 +198,7 @@ def main():
         if problems:
             print('PLAN REFUSED:\n  ' + '\n  '.join(problems), file=sys.stderr)
             raise SystemExit(2)
-        out = {'variants': json.dumps(names), 'purpose': purpose, 'platforms': platforms, 'quick': '1' if quick else '0',
+        out = {'variants': json.dumps(names), 'purpose': purpose, 'platforms': platforms, 'quick': '1' if quick else '0', 'apple_silicon': 'true' if arm and platforms in ('macos', 'both') else 'false',
                'windows': 'true' if platforms in ('windows', 'both') else 'false', 'macos': 'true' if platforms in ('macos', 'both') else 'false'}
         print(json.dumps(out))
         if os.environ.get('GITHUB_OUTPUT'):

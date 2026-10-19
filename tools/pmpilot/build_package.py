@@ -267,7 +267,9 @@ def main():
                 assert tr06['passes'] == reg['tr06']['passes'], tr06
         for extra in reg.get('extra', []):
             argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant) for x in extra['argv']]
-            run('extra-' + extra['name'], argv, timeout=extra.get('timeout', 900), regex=extra.get('pass_regex'))
+            _, qrow = run('extra-' + extra['name'], argv, timeout=extra.get('timeout', 900), regex=extra.get('pass_regex'), gate=not extra.get('informational'))
+            if extra.get('informational') and not qrow['passed']:
+                findings.append('informational command %s did not pass (exit %s); recorded, not gating (QA pending)' % (extra['name'], qrow['exit']))
 
     # 2. Exports (text script mode, restored byte for byte).
     export_env = profile('export')
@@ -367,7 +369,7 @@ def main():
     pack_audit = audit.audit_pack(packed.read_bytes())
     assert 'scripts/cinematic_transitions.gd' in pack_audit['entries']
     forbidden = tuple(sorted(set(spec.get('forbidden_pack_prefixes', [])) | set(FORBIDDEN_ALWAYS)))
-    bad = [n for n in pack_audit['entries'] if n.startswith(forbidden)]
+    bad = [n for n in pack_audit['entries'] if n.startswith(forbidden) or '__pycache__' in n or n.endswith('.pyc') or n.startswith('source_art/')]
     assert not bad, 'Forbidden pack entries: %s' % bad[:5]
     required = spec.get('required_pack_entries', [])
     missing = [n for n in required if not any(fnmatch.fnmatchcase(r, n) for r in records_a)]  # entries may be globs
@@ -448,7 +450,7 @@ def main():
             if target == 'macos':
                 (extracted / entry.filename).chmod(entry.external_attr >> 16 & 0o777)
         members_hash = {i.filename: digest(z.read(i)) for i in z.infolist()}
-    package_bad = [n for n in members_hash if n.startswith(FORBIDDEN_ALWAYS) or '/art07/' in n]
+    package_bad = [n for n in members_hash if n.startswith(FORBIDDEN_ALWAYS) or '/art07/' in n or '__pycache__' in n or n.endswith('.pyc') or n.startswith('source_art/')]
     assert not package_bad, package_bad
     if target == 'windows':
         release = extracted / exe_name
@@ -529,7 +531,7 @@ def main():
         source_suites=len(suites) if suites else None, source_assertions=sum(x['passes'] for x in suites) if suites else None,
         exported_assertions=sum(x['passes'] for x in rows if x['test'].startswith(('native-exported', 'exported-'))),
         source_files_unchanged=len(before), native_coverage=coverage, not_executed=notes, findings=findings, signing='unsigned/unnotarized',
-        art07_excluded=True, policy=policy,
+        art07_excluded=True, pycache_and_source_art_excluded=True, qa_status=spec.get('qa_status', 'n/a'), policy=policy,
         limitations=['No hands-on human campaign', 'No physical gamepad', 'No sustained FPS',
                      'Hosted runs are headless; graphical coverage requires a desktop host',
                      'macOS Universal contains arm64 and x86_64; hosted macOS-15-intel executes x86_64 only'])
