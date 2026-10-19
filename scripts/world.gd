@@ -756,8 +756,10 @@ func _draw():
 	if room in [15,16,18,19]:
 		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
 	RoomPresentation.draw_background(self)
+	Expansion.CanalGatehouse.draw(self)
 	for rect in platforms:
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
+		if Expansion.CanalGatehouse.owns(room,rect): continue
 		LevelGeometry.draw_surface(self,rect)
 	for gate in kunai_gates:
 		if opened_kunai_gates.get(gate["id"], false): continue

@@ -1,6 +1,7 @@
 extends RefCounted
 # Append-only LD-01 rooms. Portal endpoints are feet coordinates, not sprite centers.
 const Anchor = preload("res://scripts/grapple_anchor.gd")
+const CanalGatehouse = preload("res://scripts/canal_gatehouse.gd")
 const SIZES = {13: Vector2(1800,1440), 14: Vector2(2600,1440), 15: Vector2(2200,1440), 16: Vector2(2000,1440), 17: Vector2(1800,2160), 18: Vector2(2600,1440), 19: Vector2(2400,1440), 20: Vector2(2200,1440)}
 const NAMES = ["MOORING LOFT", "BELLROOF WALK", "LOWER SLUICE", "ROOT SHRINE", "COUNTERWEIGHT SPIRE", "PUMP GALLERY", "COIL SERVICE HALL", "RELAY JUNCTION"]
 const COLORS = [Color("292434"), Color("302b3b"), Color("1b2a30"), Color("26352e"), Color("282c39"), Color("30352e"), Color("30313f"), Color("29372f")]
@@ -85,6 +86,7 @@ func build_room(w, index):
 		for r in w.platforms:
 			if absf(r.position.y-p.at.y)<1 and p.at.x>r.position.x+20 and p.at.x<r.end.x-20: supported = true
 		if not supported: w.add_platform(pad)
+	if index == 13: CanalGatehouse.build(w)
 	for at in ANCHORS[index]:
 		var anchor = Anchor.new();anchor.position = at;w.geometry.add_child(anchor)
 	if index in GATES:
@@ -132,6 +134,7 @@ func draw_room(w):
 			if w.room==14: continue # LD03 uses grounded service-walk architecture.
 			var at=Vector2(x,size.y-400)
 			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(at-Vector2(160,225),Vector2(390,385))): continue
+			if CanalGatehouse.suppresses_silhouette(w.room,Rect2(at-Vector2(100,220),Vector2(320,220))): continue # the solid gatehouse owns this corner
 			if w.room in [13,14,17]:
 				w.draw_line(at-Vector2(100,220),at+Vector2(100,-120),Color("62566b"),9)
 				w.draw_line(at+Vector2(100,-120),at+Vector2(220,-220),Color("62566b"),9)

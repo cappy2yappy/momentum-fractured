@@ -1,0 +1,1496 @@
+[
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 0,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 1,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585632324219,
+    "wall_side": true
+  },
+  {
+    "at": [
+      590.0,
+      780.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 0,
+    "solid_headroom": null,
+    "support": [
+      260.0,
+      780.0,
+      390.0,
+      48.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 13,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 1,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 0,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.5859375,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 1,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 2,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585632324219,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 2,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      640.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 1,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585815429688,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      850.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 2,
+    "solid_headroom": null,
+    "support": [
+      2220.0,
+      850.0,
+      380.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 3,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -200.910675048828,
+    "wall_side": true
+  },
+  {
+    "at": [
+      470.0,
+      1120.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 2,
+    "solid_headroom": null,
+    "support": [
+      330.0,
+      1120.0,
+      260.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 15,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      850.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 3,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      850.0,
+      300.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 2,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -200.910583496094,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 3,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 4,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585632324219,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2250.0,
+      790.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 3,
+    "solid_headroom": null,
+    "support": [
+      2000.0,
+      790.0,
+      340.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 9,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 4,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      450.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 3,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585815429688,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1080.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 4,
+    "solid_headroom": null,
+    "support": [
+      2130.0,
+      1080.0,
+      470.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 5,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -78.4127426147461,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1080.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 5,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1080.0,
+      280.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 4,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -78.4126815795898,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 5,
+    "solid_headroom": null,
+    "support": [
+      1850.0,
+      1300.0,
+      750.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 6,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 1030.07263183594,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2240.0,
+      930.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 5,
+    "solid_headroom": null,
+    "support": [
+      2130.0,
+      930.0,
+      470.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 17,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 6,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 5,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.5859375,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1090.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": false,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 6,
+    "solid_headroom": null,
+    "support": [
+      2020.0,
+      1110.0,
+      580.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 20.0,
+    "target": 7,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 162.659912109375,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1090.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 7,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1090.0,
+      300.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 6,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 125.493804931641,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 7,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 8,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 141.585632324219,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1090.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 8,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1090.0,
+      310.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 7,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -68.4130249023438,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 8,
+    "solid_headroom": null,
+    "support": [
+      2220.0,
+      830.0,
+      380.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 9,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.038162231445,
+    "wall_side": true
+  },
+  {
+    "at": [
+      550.0,
+      1110.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 8,
+    "solid_headroom": null,
+    "support": [
+      350.0,
+      1110.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 16,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      1090.0,
+      920.0
+    ],
+    "door_span_supported": false,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 8,
+    "solid_headroom": null,
+    "support": [
+      770.0,
+      920.0,
+      340.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 18,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      1470.0,
+      740.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 8,
+    "solid_headroom": null,
+    "support": [
+      1300.0,
+      740.0,
+      340.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 12,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      830.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 9,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      830.0,
+      650.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 8,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.036911010742,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": false,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 9,
+    "solid_headroom": null,
+    "support": [
+      1980.0,
+      810.0,
+      620.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": -20.0,
+    "target": 10,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.573348999023,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1100.0,
+      1040.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 9,
+    "solid_headroom": null,
+    "support": [
+      380.0,
+      1040.0,
+      800.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 14,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      160.0,
+      620.0
+    ],
+    "dead_space_past_door_px": 2426.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 9,
+    "solid_headroom": null,
+    "support": [
+      80.0,
+      620.0,
+      440.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 3,
+    "trigger_to_wall_px": 2426.0,
+    "trigger_x": null,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      830.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 10,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      830.0,
+      300.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 9,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.036911010742,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 10,
+    "solid_headroom": null,
+    "support": [
+      2240.0,
+      760.0,
+      360.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 11,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 11,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      760.0,
+      310.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 10,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 11,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 12,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 860.067016601562,
+    "wall_side": true
+  },
+  {
+    "at": [
+      890.0,
+      980.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 11,
+    "solid_headroom": null,
+    "support": [
+      420.0,
+      980.0,
+      600.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 19,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 12,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1300.0,
+      2600.0,
+      140.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 11,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 930.067932128906,
+    "wall_side": true
+  },
+  {
+    "at": [
+      220.0,
+      830.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 12,
+    "solid_headroom": null,
+    "support": [
+      80.0,
+      830.0,
+      480.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 8,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1200.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": true,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 13,
+    "solid_headroom": 180.0,
+    "support": [
+      0.0,
+      1200.0,
+      360.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 0,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 1198.0,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1680.0,
+      560.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 13,
+    "solid_headroom": null,
+    "support": [
+      1400.0,
+      560.0,
+      400.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 14,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 1680.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.573348999023,
+    "wall_side": true
+  },
+  {
+    "at": [
+      900.0,
+      400.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "wind_fold",
+    "room": 13,
+    "solid_headroom": null,
+    "support": [
+      740.0,
+      400.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 20,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1100.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 14,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1100.0,
+      600.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 13,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -58.4130210876465,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 14,
+    "solid_headroom": null,
+    "support": [
+      1900.0,
+      830.0,
+      700.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 9,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.038162231445,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1450.0,
+      480.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "stair_up",
+    "room": 14,
+    "solid_headroom": null,
+    "support": [
+      1300.0,
+      480.0,
+      380.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 17,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      500.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 15,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      500.0,
+      580.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 2,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.023818969727,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2080.0,
+      1120.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 15,
+    "solid_headroom": null,
+    "support": [
+      1800.0,
+      1120.0,
+      400.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 16,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 2080.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -38.4130477905273,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1120.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 16,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1120.0,
+      580.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 15,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -38.4129257202148,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1880.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 16,
+    "solid_headroom": null,
+    "support": [
+      1300.0,
+      760.0,
+      700.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 8,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 1880.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1000.0,
+      430.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 16,
+    "solid_headroom": null,
+    "support": [
+      840.0,
+      430.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 18,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      1680.0,
+      1300.0
+    ],
+    "dead_space_past_door_px": 106.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "stair_down",
+    "room": 17,
+    "solid_headroom": null,
+    "support": [
+      1200.0,
+      1300.0,
+      600.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 14,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": null,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      1900.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 17,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1900.0,
+      600.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 5,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": 741.594665527344,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1500.0,
+      420.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 17,
+    "solid_headroom": null,
+    "support": [
+      1200.0,
+      420.0,
+      450.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 20,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      1000.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 18,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      1000.0,
+      580.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 16,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -158.412063598633,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1200.0,
+      1180.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 18,
+    "solid_headroom": null,
+    "support": [
+      1040.0,
+      1180.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 8,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      2440.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 98.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 18,
+    "solid_headroom": null,
+    "support": [
+      2000.0,
+      760.0,
+      600.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 19,
+    "trigger_to_wall_px": 146.0,
+    "trigger_x": 2440.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      120.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 19,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      760.0,
+      530.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 18,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2280.0,
+      980.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 19,
+    "solid_headroom": null,
+    "support": [
+      1850.0,
+      980.0,
+      550.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 11,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 2280.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -178.412155151367,
+    "wall_side": true
+  },
+  {
+    "at": [
+      1800.0,
+      480.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "depth_door",
+    "room": 19,
+    "solid_headroom": null,
+    "support": [
+      1640.0,
+      480.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 20,
+    "trigger_x": null,
+    "wall_side": false
+  },
+  {
+    "at": [
+      120.0,
+      760.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 20,
+    "solid_headroom": null,
+    "support": [
+      0.0,
+      760.0,
+      580.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 17,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 120.0,
+    "wall_jump_escaped_room": true,
+    "wall_jump_min_feet_y": -232.566329956055,
+    "wall_side": true
+  },
+  {
+    "at": [
+      2080.0,
+      1120.0
+    ],
+    "dead_space_past_door_px": 58.0,
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": null,
+    "mode": "horizontal_walk",
+    "room": 20,
+    "solid_headroom": null,
+    "support": [
+      1400.0,
+      1120.0,
+      800.0,
+      40.0
+    ],
+    "support_reaches_wall": true,
+    "support_top_offset": 0.0,
+    "target": 19,
+    "trigger_to_wall_px": 106.0,
+    "trigger_x": 2080.0,
+    "wall_jump_escaped_room": false,
+    "wall_jump_min_feet_y": -38.4130477905273,
+    "wall_side": true
+  },
+  {
+    "at": [
+      600.0,
+      520.0
+    ],
+    "door_span_supported": true,
+    "enclosed_above": false,
+    "interact_radius": 85,
+    "mode": "wind_fold",
+    "room": 20,
+    "solid_headroom": null,
+    "support": [
+      440.0,
+      520.0,
+      320.0,
+      40.0
+    ],
+    "support_reaches_wall": false,
+    "support_top_offset": 0.0,
+    "target": 13,
+    "trigger_x": null,
+    "wall_side": false
+  }
+]
