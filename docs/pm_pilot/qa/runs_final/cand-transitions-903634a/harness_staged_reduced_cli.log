@@ -1,0 +1,10 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_cinematic_completion
+PASS: [hook_cinematic_completion] Staged stair enabled by its explicit flag only
+PASS: [hook_cinematic_completion] --tr05-reduced-motion starts the session reduced
+PASS: [hook_cinematic_completion] Reduced (CLI) staged stair completes in 0.98 s (contract 0.95)
+PASS: [hook_cinematic_completion] Reduced (CLI) never zooms the camera (max 1.000)
+PASS: [hook_cinematic_completion] Reduced (CLI) completes once into R17
+PASS: [hook_cinematic_completion] Control state restored after transition: reduced CLI stair
+QA SUMMARY: 6 checks, 0 failure(s), 0 skip(s)

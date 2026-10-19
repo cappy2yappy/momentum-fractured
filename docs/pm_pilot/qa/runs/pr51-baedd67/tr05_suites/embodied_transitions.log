@@ -1,0 +1,84 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: 21-room /29-link graph preserved
+PASS: Refined scoped comparison defaults active
+PASS: Depth demonstration opt-in only
+PASS: Ambiguous doorway remains fallback by default
+PASS: Stair directions authored explicitly, not room-y inferred
+PASS: Exceptional wind-fold remains original
+PASS: All58 directed endpoints classified without invented links
+PASS: Existing E activation and clock 14->17
+PASS: Exactly one visible render representation during staging
+PASS: Proxy never alters departure simulation position/velocity
+PASS: Actual sprite registration and facing unchanged
+PASS: Stair contact rises/descends in explicit direction
+PASS: Authoritative exact reciprocal arrival retained
+PASS: Interactive arrival still stops simulation
+PASS: Completion restores actual character and clears proxy
+PASS: Completion never changes actual clip scale/pivot
+PASS: Existing E activation and clock 17->14
+PASS: Exactly one visible render representation during staging
+PASS: Proxy never alters departure simulation position/velocity
+PASS: Actual sprite registration and facing unchanged
+PASS: Stair contact rises/descends in explicit direction
+PASS: Authoritative exact reciprocal arrival retained
+PASS: Interactive arrival still stops simulation
+PASS: Completion restores actual character and clears proxy
+PASS: Completion never changes actual clip scale/pivot
+PASS: Existing E activation and clock 14->13
+PASS: Exactly one visible render representation during staging
+PASS: Proxy never alters departure simulation position/velocity
+PASS: Actual sprite registration and facing unchanged
+PASS: Inward entry stays on doorway depth axis after approach
+PASS: Depth turn uses labeled render-only quarter placeholder
+PASS: Authoritative exact reciprocal arrival retained
+PASS: Interactive arrival still stops simulation
+PASS: Completion restores actual character and clears proxy
+PASS: Completion never changes actual clip scale/pivot
+PASS: Existing E activation and clock 13->14
+PASS: Exactly one visible render representation during staging
+PASS: Proxy never alters departure simulation position/velocity
+PASS: Actual sprite registration and facing unchanged
+PASS: Inward entry stays on doorway depth axis after approach
+PASS: Depth turn uses labeled render-only quarter placeholder
+PASS: Authoritative exact reciprocal arrival retained
+PASS: Interactive arrival still stops simulation
+PASS: Completion restores actual character and clears proxy
+PASS: Completion never changes actual clip scale/pivot
+PASS: Repeated E cannot restart embodied clock
+PASS: Original0.65s clock resumes within floating-point tick tolerance
+PASS: Room swap stays on original below0.32 threshold / tick20
+PASS: Pause restores visuals without discarding pending authoritative transition
+PASS: Original0.65s clock resumes within floating-point tick tolerance
+PASS: Room swap stays on original below0.32 threshold / tick20
+PASS: Death restores actual sprite and cancels transition
+PASS: Unrelated rebuild restores proxy-hidden character
+PASS: Denied gate cannot hide character or start staging
+PASS: Dressing toggle leaves platforms, colliders, gates unchanged R14
+PASS: Dressing toggle leaves platforms, colliders, gates unchanged R15
+PASS: Live grounded intent selects walk from R15
+PASS: Running reuses current approved eight-frame clip
+PASS: Live passage keeps exact TR-02 x carry / arrival
+PASS: Actual directional double-tap activates existing run state
+PASS: Live grounded intent selects run from R15
+PASS: Running reuses current approved eight-frame clip
+PASS: Live passage keeps exact TR-02 x carry / arrival
+PASS: Live grounded intent selects walk from R16
+PASS: Running reuses current approved eight-frame clip
+PASS: Live passage keeps exact TR-02 x carry / arrival
+PASS: Actual directional double-tap activates existing run state
+PASS: Live grounded intent selects run from R16
+PASS: Running reuses current approved eight-frame clip
+PASS: Live passage keeps exact TR-02 x carry / arrival
+PASS: Explicit comparison route original
+PASS: Comparison mode never changes destination
+PASS: Explicit comparison route refined
+PASS: Comparison mode never changes destination
+PASS: Explicit comparison route reduced
+PASS: Reduced motion uses static pose without translation or cycling
+PASS: Comparison mode never changes destination
+PASS: Explicit comparison route plain
+PASS: Comparison mode never changes destination
+PASS: Existing keyboard E mapping preserved
+LIMITATION: gamepad interaction mapping inherited=false; physical hardware not available
+EMBODIED TRANSITIONS: 80 assertions, 0 failure(s)

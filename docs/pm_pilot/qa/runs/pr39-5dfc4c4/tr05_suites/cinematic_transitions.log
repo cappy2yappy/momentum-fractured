@@ -1,0 +1,372 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: TR05 is ordinary default, not a launcher-only effect
+PASS: R0->R1 side passage automatic
+PASS: E does not activate ordinary R0->R1
+PASS: Directional crossing requests R0->R1 once
+PASS: R0->R1 completes0.65s without duplicate E
+PASS: R1 arrival is inward and facing away from door
+PASS: R1 actual character restored
+PASS: R1 arrival capsule has no immediate solid overlap
+PASS: R1 reciprocal threshold cannot loop while stationary
+PASS: R0->R13 meaningful entrance retains interaction
+PASS: R1->R0 side passage automatic
+PASS: E does not activate ordinary R1->R0
+PASS: Directional crossing requests R1->R0 once
+PASS: R1->R0 completes0.65s without duplicate E
+PASS: R0 arrival is inward and facing away from door
+PASS: R0 actual character restored
+PASS: R0 arrival capsule has no immediate solid overlap
+PASS: R0 reciprocal threshold cannot loop while stationary
+PASS: R1->R2 side passage automatic
+PASS: E does not activate ordinary R1->R2
+PASS: Directional crossing requests R1->R2 once
+PASS: R1->R2 completes0.65s without duplicate E
+PASS: R2 arrival is inward and facing away from door
+PASS: R2 actual character restored
+PASS: R2 arrival capsule has no immediate solid overlap
+PASS: R2 reciprocal threshold cannot loop while stationary
+PASS: R2->R1 side passage automatic
+PASS: E does not activate ordinary R2->R1
+PASS: Directional crossing requests R2->R1 once
+PASS: R2->R1 completes0.65s without duplicate E
+PASS: R1 arrival is inward and facing away from door
+PASS: R1 actual character restored
+PASS: R1 arrival capsule has no immediate solid overlap
+PASS: R1 reciprocal threshold cannot loop while stationary
+PASS: R2->R3 side passage automatic
+PASS: E does not activate ordinary R2->R3
+PASS: Directional crossing requests R2->R3 once
+PASS: R2->R3 completes0.65s without duplicate E
+PASS: R3 arrival is inward and facing away from door
+PASS: R3 actual character restored
+PASS: R3 arrival capsule has no immediate solid overlap
+PASS: R3 reciprocal threshold cannot loop while stationary
+PASS: R2->R15 meaningful entrance retains interaction
+PASS: R3->R2 side passage automatic
+PASS: E does not activate ordinary R3->R2
+PASS: Directional crossing requests R3->R2 once
+PASS: R3->R2 completes0.65s without duplicate E
+PASS: R2 arrival is inward and facing away from door
+PASS: R2 actual character restored
+PASS: R2 arrival capsule has no immediate solid overlap
+PASS: R2 reciprocal threshold cannot loop while stationary
+PASS: R3->R4 side passage automatic
+PASS: E does not activate ordinary R3->R4
+PASS: Directional crossing requests R3->R4 once
+PASS: R3->R4 completes0.65s without duplicate E
+PASS: R4 arrival is inward and facing away from door
+PASS: R4 actual character restored
+PASS: R4 arrival capsule has no immediate solid overlap
+PASS: R4 reciprocal threshold cannot loop while stationary
+PASS: R3->R9 meaningful entrance retains interaction
+PASS: R4->R3 side passage automatic
+PASS: E does not activate ordinary R4->R3
+PASS: Directional crossing requests R4->R3 once
+PASS: R4->R3 completes0.65s without duplicate E
+PASS: R3 arrival is inward and facing away from door
+PASS: R3 actual character restored
+PASS: R3 arrival capsule has no immediate solid overlap
+PASS: R3 reciprocal threshold cannot loop while stationary
+PASS: R4->R5 side passage automatic
+PASS: E does not activate ordinary R4->R5
+PASS: Directional crossing requests R4->R5 once
+PASS: R4->R5 completes0.65s without duplicate E
+PASS: R5 arrival is inward and facing away from door
+PASS: R5 actual character restored
+PASS: R5 arrival capsule has no immediate solid overlap
+PASS: R5 reciprocal threshold cannot loop while stationary
+PASS: R5->R4 side passage automatic
+PASS: E does not activate ordinary R5->R4
+PASS: Directional crossing requests R5->R4 once
+PASS: R5->R4 completes0.65s without duplicate E
+PASS: R4 arrival is inward and facing away from door
+PASS: R4 actual character restored
+PASS: R4 arrival capsule has no immediate solid overlap
+PASS: R4 reciprocal threshold cannot loop while stationary
+PASS: R5->R6 side passage automatic
+PASS: E does not activate ordinary R5->R6
+PASS: Directional crossing requests R5->R6 once
+PASS: R5->R6 completes0.65s without duplicate E
+PASS: R6 arrival is inward and facing away from door
+PASS: R6 actual character restored
+PASS: R6 arrival capsule has no immediate solid overlap
+PASS: R6 reciprocal threshold cannot loop while stationary
+PASS: R5->R17 meaningful entrance retains interaction
+PASS: R6->R5 side passage automatic
+PASS: E does not activate ordinary R6->R5
+PASS: Directional crossing requests R6->R5 once
+PASS: R6->R5 completes0.65s without duplicate E
+PASS: R5 arrival is inward and facing away from door
+PASS: R5 actual character restored
+PASS: R5 arrival capsule has no immediate solid overlap
+PASS: R5 reciprocal threshold cannot loop while stationary
+PASS: R6->R7 side passage automatic
+PASS: E does not activate ordinary R6->R7
+PASS: Directional crossing requests R6->R7 once
+PASS: R6->R7 completes0.65s without duplicate E
+PASS: R7 arrival is inward and facing away from door
+PASS: R7 actual character restored
+PASS: R7 arrival capsule has no immediate solid overlap
+PASS: R7 reciprocal threshold cannot loop while stationary
+PASS: R7->R6 side passage automatic
+PASS: E does not activate ordinary R7->R6
+PASS: Directional crossing requests R7->R6 once
+PASS: R7->R6 completes0.65s without duplicate E
+PASS: R6 arrival is inward and facing away from door
+PASS: R6 actual character restored
+PASS: R6 arrival capsule has no immediate solid overlap
+PASS: R6 reciprocal threshold cannot loop while stationary
+PASS: R7->R8 side passage automatic
+PASS: E does not activate ordinary R7->R8
+PASS: Directional crossing requests R7->R8 once
+PASS: R7->R8 completes0.65s without duplicate E
+PASS: R8 arrival is inward and facing away from door
+PASS: R8 actual character restored
+PASS: R8 arrival capsule has no immediate solid overlap
+PASS: R8 reciprocal threshold cannot loop while stationary
+PASS: R8->R7 side passage automatic
+PASS: E does not activate ordinary R8->R7
+PASS: Directional crossing requests R8->R7 once
+PASS: R8->R7 completes0.65s without duplicate E
+PASS: R7 arrival is inward and facing away from door
+PASS: R7 actual character restored
+PASS: R7 arrival capsule has no immediate solid overlap
+PASS: R7 reciprocal threshold cannot loop while stationary
+PASS: R8->R9 side passage automatic
+PASS: E does not activate ordinary R8->R9
+PASS: Directional crossing requests R8->R9 once
+PASS: R8->R9 completes0.65s without duplicate E
+PASS: R9 arrival is inward and facing away from door
+PASS: R9 actual character restored
+PASS: R9 arrival capsule has no immediate solid overlap
+PASS: R9 reciprocal threshold cannot loop while stationary
+PASS: R8->R16 meaningful entrance retains interaction
+PASS: R8->R18 meaningful entrance retains interaction
+PASS: R8->R12 meaningful entrance retains interaction
+PASS: R9->R8 side passage automatic
+PASS: E does not activate ordinary R9->R8
+PASS: Directional crossing requests R9->R8 once
+PASS: R9->R8 completes0.65s without duplicate E
+PASS: R8 arrival is inward and facing away from door
+PASS: R8 actual character restored
+PASS: R8 arrival capsule has no immediate solid overlap
+PASS: R8 reciprocal threshold cannot loop while stationary
+PASS: R9->R10 side passage automatic
+PASS: E does not activate ordinary R9->R10
+PASS: Directional crossing requests R9->R10 once
+PASS: R9->R10 completes0.65s without duplicate E
+PASS: R10 arrival is inward and facing away from door
+PASS: R10 actual character restored
+PASS: R10 arrival capsule has no immediate solid overlap
+PASS: R10 reciprocal threshold cannot loop while stationary
+PASS: R9->R14 meaningful entrance retains interaction
+PASS: R9->R3 meaningful entrance retains interaction
+PASS: R10->R9 side passage automatic
+PASS: E does not activate ordinary R10->R9
+PASS: Directional crossing requests R10->R9 once
+PASS: R10->R9 completes0.65s without duplicate E
+PASS: R9 arrival is inward and facing away from door
+PASS: R9 actual character restored
+PASS: R9 arrival capsule has no immediate solid overlap
+PASS: R9 reciprocal threshold cannot loop while stationary
+PASS: R10->R11 side passage automatic
+PASS: E does not activate ordinary R10->R11
+PASS: Directional crossing requests R10->R11 once
+PASS: R10->R11 completes0.65s without duplicate E
+PASS: R11 arrival is inward and facing away from door
+PASS: R11 actual character restored
+PASS: R11 arrival capsule has no immediate solid overlap
+PASS: R11 reciprocal threshold cannot loop while stationary
+PASS: R11->R10 side passage automatic
+PASS: E does not activate ordinary R11->R10
+PASS: Directional crossing requests R11->R10 once
+PASS: R11->R10 completes0.65s without duplicate E
+PASS: R10 arrival is inward and facing away from door
+PASS: R10 actual character restored
+PASS: R10 arrival capsule has no immediate solid overlap
+PASS: R10 reciprocal threshold cannot loop while stationary
+PASS: R11->R12 side passage automatic
+PASS: E does not activate ordinary R11->R12
+PASS: Directional crossing requests R11->R12 once
+PASS: R11->R12 completes0.65s without duplicate E
+PASS: R12 arrival is inward and facing away from door
+PASS: R12 actual character restored
+PASS: R12 arrival capsule has no immediate solid overlap
+PASS: R12 reciprocal threshold cannot loop while stationary
+PASS: R11->R19 meaningful entrance retains interaction
+PASS: R12->R11 side passage automatic
+PASS: E does not activate ordinary R12->R11
+PASS: Directional crossing requests R12->R11 once
+PASS: R12->R11 completes0.65s without duplicate E
+PASS: R11 arrival is inward and facing away from door
+PASS: R11 actual character restored
+PASS: R11 arrival capsule has no immediate solid overlap
+PASS: R11 reciprocal threshold cannot loop while stationary
+PASS: R12->R8 meaningful entrance retains interaction
+PASS: R13->R0 side passage automatic
+PASS: E does not activate ordinary R13->R0
+PASS: Directional crossing requests R13->R0 once
+PASS: R13->R0 completes0.65s without duplicate E
+PASS: R0 actual character restored
+PASS: R0 arrival capsule has no immediate solid overlap
+PASS: R13->R14 side passage automatic
+PASS: E does not activate ordinary R13->R14
+PASS: Directional crossing requests R13->R14 once
+PASS: R13->R14 completes0.65s without duplicate E
+PASS: R14 arrival is inward and facing away from door
+PASS: R14 actual character restored
+PASS: R14 arrival capsule has no immediate solid overlap
+PASS: R14 reciprocal threshold cannot loop while stationary
+PASS: R13->R20 meaningful entrance retains interaction
+PASS: R14->R13 side passage automatic
+PASS: E does not activate ordinary R14->R13
+PASS: Directional crossing requests R14->R13 once
+PASS: R14->R13 completes0.65s without duplicate E
+PASS: R13 arrival is inward and facing away from door
+PASS: R13 actual character restored
+PASS: R13 arrival capsule has no immediate solid overlap
+PASS: R13 reciprocal threshold cannot loop while stationary
+PASS: R14->R9 side passage automatic
+PASS: E does not activate ordinary R14->R9
+PASS: Directional crossing requests R14->R9 once
+PASS: R14->R9 completes0.65s without duplicate E
+PASS: R9 actual character restored
+PASS: R9 arrival capsule has no immediate solid overlap
+PASS: R14->R17 meaningful entrance retains interaction
+PASS: R15->R2 side passage automatic
+PASS: E does not activate ordinary R15->R2
+PASS: Directional crossing requests R15->R2 once
+PASS: R15->R2 completes0.65s without duplicate E
+PASS: R2 actual character restored
+PASS: R2 arrival capsule has no immediate solid overlap
+PASS: R15->R16 side passage automatic
+PASS: E does not activate ordinary R15->R16
+PASS: Directional crossing requests R15->R16 once
+PASS: R15->R16 completes0.65s without duplicate E
+PASS: R16 arrival is inward and facing away from door
+PASS: R16 actual character restored
+PASS: R16 arrival capsule has no immediate solid overlap
+PASS: R16 reciprocal threshold cannot loop while stationary
+PASS: R16->R15 side passage automatic
+PASS: E does not activate ordinary R16->R15
+PASS: Directional crossing requests R16->R15 once
+PASS: R16->R15 completes0.65s without duplicate E
+PASS: R15 arrival is inward and facing away from door
+PASS: R15 actual character restored
+PASS: R15 arrival capsule has no immediate solid overlap
+PASS: R15 reciprocal threshold cannot loop while stationary
+PASS: R16->R8 side passage automatic
+PASS: E does not activate ordinary R16->R8
+PASS: Directional crossing requests R16->R8 once
+PASS: R16->R8 completes0.65s without duplicate E
+PASS: R8 actual character restored
+PASS: R8 arrival capsule has no immediate solid overlap
+PASS: R16->R18 meaningful entrance retains interaction
+PASS: R17->R14 meaningful entrance retains interaction
+PASS: R17->R5 side passage automatic
+PASS: E does not activate ordinary R17->R5
+PASS: Directional crossing requests R17->R5 once
+PASS: R17->R5 completes0.65s without duplicate E
+PASS: R5 actual character restored
+PASS: R5 arrival capsule has no immediate solid overlap
+PASS: R17->R20 meaningful entrance retains interaction
+PASS: R18->R16 side passage automatic
+PASS: E does not activate ordinary R18->R16
+PASS: Directional crossing requests R18->R16 once
+PASS: R18->R16 completes0.65s without duplicate E
+PASS: R16 actual character restored
+PASS: R16 arrival capsule has no immediate solid overlap
+PASS: R18->R8 meaningful entrance retains interaction
+PASS: R18->R19 side passage automatic
+PASS: E does not activate ordinary R18->R19
+PASS: Directional crossing requests R18->R19 once
+PASS: R18->R19 completes0.65s without duplicate E
+PASS: R19 arrival is inward and facing away from door
+PASS: R19 actual character restored
+PASS: R19 arrival capsule has no immediate solid overlap
+PASS: R19 reciprocal threshold cannot loop while stationary
+PASS: R19->R18 side passage automatic
+PASS: E does not activate ordinary R19->R18
+PASS: Directional crossing requests R19->R18 once
+PASS: R19->R18 completes0.65s without duplicate E
+PASS: R18 arrival is inward and facing away from door
+PASS: R18 actual character restored
+PASS: R18 arrival capsule has no immediate solid overlap
+PASS: R18 reciprocal threshold cannot loop while stationary
+PASS: R19->R11 side passage automatic
+PASS: E does not activate ordinary R19->R11
+PASS: Directional crossing requests R19->R11 once
+PASS: R19->R11 completes0.65s without duplicate E
+PASS: R11 actual character restored
+PASS: R11 arrival capsule has no immediate solid overlap
+PASS: R19->R20 meaningful entrance retains interaction
+PASS: R20->R17 side passage automatic
+PASS: E does not activate ordinary R20->R17
+PASS: Directional crossing requests R20->R17 once
+PASS: R20->R17 completes0.65s without duplicate E
+PASS: R17 actual character restored
+PASS: R17 arrival capsule has no immediate solid overlap
+PASS: R20->R19 side passage automatic
+PASS: E does not activate ordinary R20->R19
+PASS: Directional crossing requests R20->R19 once
+PASS: R20->R19 completes0.65s without duplicate E
+PASS: R19 actual character restored
+PASS: R19 arrival capsule has no immediate solid overlap
+PASS: R20->R13 meaningful entrance retains interaction
+AUTOMATIC ENDPOINTS=39
+PASS: Required pilot [13, 0] is horizontal
+PASS: [13, 0] rejects wrong_height crossing
+PASS: [13, 0] rejects backwards crossing
+PASS: [13, 0] rejects tether crossing
+PASS: Required pilot [13, 14] is horizontal
+PASS: [13, 14] rejects wrong_height crossing
+PASS: [13, 14] rejects backwards crossing
+PASS: [13, 14] rejects tether crossing
+PASS: Required pilot [14, 13] is horizontal
+PASS: [14, 13] rejects wrong_height crossing
+PASS: [14, 13] rejects backwards crossing
+PASS: [14, 13] rejects tether crossing
+PASS: Required pilot [15, 16] is horizontal
+PASS: [15, 16] rejects wrong_height crossing
+PASS: [15, 16] rejects backwards crossing
+PASS: [15, 16] rejects tether crossing
+PASS: Required pilot [16, 15] is horizontal
+PASS: [16, 15] rejects wrong_height crossing
+PASS: [16, 15] rejects backwards crossing
+PASS: [16, 15] rejects tether crossing
+PASS: Canal-left keeps windstep gate
+PASS: Archive passage remains locked without completion
+PASS: Stair [14, 17] uses E and existing clock
+PASS: Cinematic stair visibly moves Kaze along correct rise
+PASS: Cinematic stair gets close-up framing
+PASS: Cinematic never drives collision-body root motion
+PASS: Stair [14, 17] arrives and restores live Kaze
+PASS: Camera fully restored after stair [14, 17]
+PASS: Stair [17, 14] uses E and existing clock
+PASS: Cinematic stair visibly moves Kaze along correct rise
+PASS: Cinematic stair gets close-up framing
+PASS: Cinematic never drives collision-body root motion
+PASS: Stair [17, 14] arrives and restores live Kaze
+PASS: Camera fully restored after stair [17, 14]
+PASS: Stair [14, 17] uses E and existing clock
+PASS: Reduced staircase keeps camera and pose stationary
+PASS: Cinematic never drives collision-body root motion
+PASS: Stair [14, 17] arrives and restores live Kaze
+PASS: Camera fully restored after stair [14, 17]
+PASS: Stair [17, 14] uses E and existing clock
+PASS: Reduced staircase keeps camera and pose stationary
+PASS: Cinematic never drives collision-body root motion
+PASS: Stair [17, 14] arrives and restores live Kaze
+PASS: Camera fully restored after stair [17, 14]
+PASS: Camera restores on respawn
+PASS: Camera restores on rebuild
+PASS: Camera restores on pause
+PASS: F6 enables reduced motion during active stair
+PASS: Camera restores on toggle
+PASS: Meaningful interior depth entrance0->13 still uses E
+PASS: Exceptional wind-fold keeps E and its own policy
+PASS: Silent locked artwork agrees with authoritative gate
+PASS: Silent locked artwork agrees with authoritative gate
+PASS: Room graph stays21 rooms and15 expansion links
+TR05: 368 checks, 0 failure(s)
