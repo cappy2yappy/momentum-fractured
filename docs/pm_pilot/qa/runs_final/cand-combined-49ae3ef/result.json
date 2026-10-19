@@ -1,15 +1,15 @@
 {
   "label": "cand-combined-49ae3ef",
-  "started": "2026-10-19T13:02:38.111246+00:00",
-  "repo": "/tmp/pmqa-wt-o69_rbnd/wt",
+  "started": "2026-10-19T13:09:57.393993+00:00",
+  "repo": "/tmp/pmqa-wt-3r8mgad2/wt",
   "head": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
   "tracked_modifications": [],
   "qa_harness_sha256": "b62ba95b066863b8ab8be1e0adaf5dfeaf9f7518887321c30c5e6eb0d1556316",
-  "qa_checkout_head": "ddf2caf731d4301623be051198249d69ab4c69f8",
+  "qa_checkout_head": "e24f9f5eba2943b896d10b4035d238ab039263ed",
   "engine": "4.6.1.stable.official.14d19694e",
   "import": {
     "exit": 0,
-    "seconds": 40.1
+    "seconds": 38.1
   },
   "scope_vs_pr51": {
     "base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
@@ -60,7 +60,7 @@
     "harness": {
       "name": "harness_headless",
       "exit": 0,
-      "seconds": 23.0,
+      "seconds": 23.4,
       "passes": 488,
       "failures": 0,
       "skips": 1,
@@ -158,7 +158,7 @@
       "command": [
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--headless",
@@ -172,7 +172,7 @@
     "reduced_cli_default": {
       "name": "harness_reduced_cli_off",
       "exit": 0,
-      "seconds": 1.1,
+      "seconds": 1.4,
       "passes": 1,
       "failures": 0,
       "skips": 0,
@@ -191,7 +191,7 @@
       "command": [
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--headless",
@@ -224,7 +224,7 @@
       "command": [
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--headless",
@@ -240,7 +240,7 @@
     "staged_flagged": {
       "name": "harness_staged_flag",
       "exit": 0,
-      "seconds": 1.9,
+      "seconds": 2.2,
       "passes": 32,
       "failures": 0,
       "skips": 0,
@@ -259,7 +259,7 @@
       "command": [
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--headless",
@@ -274,7 +274,7 @@
     "staged_reduced_cli": {
       "name": "harness_staged_reduced_cli",
       "exit": 0,
-      "seconds": 1.2,
+      "seconds": 1.1,
       "passes": 6,
       "failures": 0,
       "skips": 0,
@@ -293,7 +293,7 @@
       "command": [
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--headless",
@@ -314,7 +314,7 @@
           "--pm-staged-stair"
         ],
         "exit": 0,
-        "seconds": 2.7,
+        "seconds": 2.6,
         "passes": 50,
         "failures": 0,
         "script_errors": 0,
@@ -325,7 +325,7 @@
         "suite": "pm_canal_left_passage",
         "flags": [],
         "exit": 0,
-        "seconds": 3.3,
+        "seconds": 2.8,
         "passes": 56,
         "failures": 0,
         "script_errors": 0,
@@ -347,7 +347,7 @@
         "suite": "audit_exit_alignment",
         "flags": [],
         "exit": 0,
-        "seconds": 11.6,
+        "seconds": 12.3,
         "passes": 0,
         "failures": 0,
         "script_errors": 0,
@@ -361,7 +361,7 @@
           "--pm-staged-stair"
         ],
         "exit": 1,
-        "seconds": 1.8,
+        "seconds": 1.6,
         "passes": 359,
         "failures": 9,
         "script_errors": 0,
@@ -382,7 +382,7 @@
     "stock": {
       "tr05_suites": {
         "exit": 0,
-        "seconds": 28.3,
+        "seconds": 27.1,
         "suites": 25,
         "assertions_passed": 1607,
         "assertions_failed": 0,
@@ -599,7 +599,7 @@
       },
       "verify_tr05_preservation.py": {
         "exit": 1,
-        "seconds": 0.2,
+        "seconds": 0.3,
         "passes": 58,
         "failures": 1
       }
@@ -619,14 +619,14 @@
         "command": [
           "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
           "--path",
-          "/tmp/pmqa-wt-o69_rbnd/wt",
+          "/tmp/pmqa-wt-3r8mgad2/wt",
           "--fixed-fps",
           "60",
           "--headless",
           "--script",
           "res://tests/automatic_passage_reliability.gd",
           "--",
-          "--tr05-save=/tmp/pmqa-wt-o69_rbnd/wt/build/tr06/tr06-9c62jshn/fresh.json"
+          "--tr05-save=/tmp/pmqa-wt-3r8mgad2/wt/build/tr06/tr06-adkqm_bz/fresh.json"
         ]
       }
     }
@@ -634,7 +634,7 @@
   "graphical": {
     "name": "harness_graphical_swgl",
     "exit": 0,
-    "seconds": 227.7,
+    "seconds": 223.1,
     "passes": 67,
     "failures": 0,
     "skips": 0,
@@ -671,7 +671,7 @@
       "-screen 0 1280x720x24",
       "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
       "--path",
-      "/tmp/pmqa-wt-o69_rbnd/wt",
+      "/tmp/pmqa-wt-3r8mgad2/wt",
       "--fixed-fps",
       "60",
       "--rendering-method",
@@ -689,7 +689,7 @@
     "captures": {
       "name": "harness_captures_swgl",
       "exit": 0,
-      "seconds": 22.5,
+      "seconds": 22.9,
       "passes": 3,
       "failures": 0,
       "skips": 0,
@@ -712,7 +712,7 @@
         "-screen 0 1280x720x24",
         "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
         "--path",
-        "/tmp/pmqa-wt-o69_rbnd/wt",
+        "/tmp/pmqa-wt-3r8mgad2/wt",
         "--fixed-fps",
         "60",
         "--rendering-method",
@@ -726,10 +726,10 @@
         "--",
         "--qa-hooks=/home/claude/wt-qa/tools/pm_pilot_qa/hooks",
         "--qa-sections=capture",
-        "--qa-out=docs/pm_pilot/qa/runs_final/cand-combined-49ae3ef/captures",
+        "--qa-out=/home/claude/wt-qa/docs/pm_pilot/qa/runs_final/cand-combined-49ae3ef/captures",
         "--pm-staged-stair"
       ],
-      "jpeg_files": 0
+      "jpeg_files": 14
     }
   },
   "human": "none: no human playtest or creator acceptance performed by this runner",
@@ -752,5 +752,5 @@
   "pending_hooks_skipped": [],
   "candidate_test_failures": [],
   "verdict": "FAIL",
-  "finished": "2026-10-19T13:09:10.904566+00:00"
+  "finished": "2026-10-19T13:16:24.123435+00:00"
 }
