@@ -1,0 +1,71 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PM CANAL geometry=STUB from CANAL_CONTRACT v1 rectangles
+PASS: Runtime Canal endpoint matches contract door centre/floor and heading
+PASS: Runtime R13 arrival matches contract (184,1198)
+PASS: Trigger line lies inside the drawn aperture
+PASS: Kaze 28x60 capsule at the trigger is fully inside the aperture
+PASS: Frame encloses aperture; both sit on the walking surface
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 121->120 at feet y 1198 fires
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 125->121 at feet y 1198 does not fire
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 124->119 at feet y 1110 fires
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 124->119 at feet y 1107 does not fire
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 124->119 at feet y 1208 fires
+PASS: Inward line x>=136 arms the passage
+PASS: Crossing 124->119 at feet y 1210 does not fire
+PASS: Never armed (no inward x>=136 sample): no activation
+TRACE pair=[13, 0] offset=0 style=walk pos=(114.1667, 1199.935) velocity=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] walk offset=0 requests exactly once
+PASS: Real keys [13, 0] walk offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=sprint pos=(112.1113, 1199.932) velocity=(-600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] sprint offset=0 requests exactly once
+PASS: Real keys [13, 0] sprint offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=dash pos=(116.1667, 1199.934) velocity=(-920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] dash offset=0 requests exactly once
+PASS: Real keys [13, 0] dash offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=jump pos=(114.1636, 1129.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [13, 0] jump offset=0 requests exactly once
+PASS: Real keys [13, 0] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=10 style=jump pos=(86.00002, 1199.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=10 requests exactly once
+PASS: Real keys [13, 0] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=20 style=jump pos=(86.00002, 1199.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=20 requests exactly once
+PASS: Real keys [13, 0] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=30 style=jump pos=(86.00058, 1199.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=30 requests exactly once
+PASS: Real keys [13, 0] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=40 style=jump pos=(86.00002, 1199.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=40 requests exactly once
+PASS: Real keys [13, 0] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Idle inside the opening holding E does not activate
+PASS: Walking inward away from the door does not activate
+PASS: Vertical jump under the ceiling does not activate
+PASS: Vertical jump stays in the hallway
+STOP x=166.666595458984
+PASS: Stop before the trigger line stays in R13
+PASS: Reverse after stopping does not activate
+RELEASED x=86.0751571655273 floor=true requests=0
+PASS: Released airborne approach settles without a held-direction activation
+PASS: Inward tap at the door does not activate
+PASS: Outward reapproach activates exactly once
+PIER-WALK x=498.333618164062 room=0 requests=1
+PASS: Walking into the opening from just inside activates once
+PASS: R0 -> R13 arrives in the hallway at the contract arrival
+PASS: Hallway arrival capsule clear of pier/mass/ceiling
+PASS: Idle after hallway arrival cannot loop back
+PM CANAL stubbed=true
+PM CANAL LEFT: 55 checks, 0 failure(s)
