@@ -2,9 +2,9 @@
 
 ## Phase B status (2026-10-19): comparison packages built on hosted Windows and macOS
 
-Hosted run **[39205060691](https://github.com/cappy2yappy/momentum-fractured/actions/runs/39205060691)**, purpose `comparison`,
-tooling head `f6dacba` on branch `ci/pm-pilot-comparisons` (PR #56). All 17 jobs succeeded: plan, 5 Windows, 5 macOS,
-5 Apple Silicon smoke. Windows jobs took 2m to 3m40s, macOS 5m to 8m, Apple Silicon smoke about 25 s each. Packages are
+Hosted run **[39211674090](https://github.com/cappy2yappy/momentum-fractured/actions/runs/39211674090)**, purpose `comparison`,
+tooling head `0e49d3c` on branch `ci/pm-pilot-comparisons` (PR #56). All 16 jobs succeeded: plan, 5 Windows, 5 macOS,
+5 Apple Silicon smoke. Windows jobs took 2m to 3m46s, macOS 5m40s to 9m41s, Apple Silicon smoke 17 to 25 s each. Packages are
 labelled **QA pending** (see below), unsigned, unnotarized, internal playtest only, not a release. No merge, tag, release or
 main update; no binary committed.
 
@@ -41,6 +41,16 @@ ART-07 exclusion in source, pack and ZIP, extraction in a path with spaces, rele
 run with the isolation check, 54-check exported input fixture, six exported suites, source unchanged. The generated
 demo seeds equal Transition's own fixture files for the two seeded demos.
 
+### Incidents during Phase B (honest log)
+
+- Run 39206728741: Windows `combined` failed once at the settled import (`MetSysPlugin` could not load `res://addons/MetroidvaniaSystem/Database`
+  while the QA harness checkout sat inside the project folder); the four other variants passed. I moved the harness checkout outside the
+  project and added a bounded settled-import retry (up to two re-attempts, every attempt logged as a finding). Whether the retry was needed in
+  the final run is recorded in the manifests, which I cannot read here.
+- Run 39207077880: macOS `geometry` hung 35 minutes downloading the editor with no timeout. I added a 120 s socket timeout with 4 attempts and a
+  15 minute step timeout, which cancelled that run. No code under test was involved.
+- `workflow_dispatch` is still unavailable (403), so each push of this PR re-runs the configured request (the PR path filter matches the whole PR diff).
+
 ### QA pending
 
 The coordinator pinned QA's harness at PR #59 head `455f352e304955c0d4ea400bff62d489ce7834bb`
@@ -52,48 +62,61 @@ state the harness outcome here. Packages stay "QA pending" until the coordinator
 
 ### Downloads
 
-Package artifacts (30-day retention; expiry is when GitHub deletes them):
+Package artifacts of run 39211674090 (30-day retention; expiry is when GitHub deletes them):
 
 | Artifact | id | size (bytes) | outer SHA-256 | expires (UTC) |
 | --- | --- | --- | --- | --- |
-| PMPILOT-comparison-macos-art | 12166315541 | 77679406 | `6f7159b7f0459a6ee5efeb623b3e834fe3b5a7e4be51d8b8b576bce125048aa3` | 2026-11-18 05:47:57 |
-| PMPILOT-comparison-macos-baseline-pr39 | 12165716423 | 76421224 | `6fb569e669e06264d9f75ca9ef6f878bf21e16f4ef16aa004859081992218765` | 2026-11-18 05:44:49 |
-| PMPILOT-comparison-macos-combined | 12166240723 | 77689419 | `34dd9fdd757662234c9b05b5915587253945cc123a169e49547d936402b84583` | 2026-11-18 05:47:33 |
-| PMPILOT-comparison-macos-geometry | 12166071100 | 76424007 | `69caef73eb306b89d95a7614569fc83ac1bb8f634752a85a2bd01b27345b9e9e` | 2026-11-18 05:46:42 |
-| PMPILOT-comparison-macos-transitions | 12165004319 | 76429591 | `f0771cff28c114872b18d38b7d73766b5152924283e135b59634410d6391b468` | 2026-11-18 05:47:15 |
-| PMPILOT-comparison-windows-art | 12165621966 | 53018767 | `ea457ccafa351e2c95e38875db5335a1428152a59da8dd12f9aef974f88f1ef4` | 2026-11-18 05:39:11 |
-| PMPILOT-comparison-windows-baseline-pr39 | 12165562131 | 51763420 | `3142ae4748fe4327f225a3391866ae460482e787c21eff769198d7c3442ef61a` | 2026-11-18 05:38:04 |
-| PMPILOT-comparison-windows-combined | 12165581290 | 53029735 | `23d0897786a1d57d89d4e5b128d0c2fed10d26fc9fc2598d72eb6537515724b8` | 2026-11-18 05:39:18 |
-| PMPILOT-comparison-windows-geometry | 12165268852 | 51766444 | `e94c3c0721ed69137e786ceafde775cae163e8b66472b21e250acc180cddf17a` | 2026-11-18 05:39:24 |
-| PMPILOT-comparison-windows-transitions | 12165646989 | 51771863 | `69ea2e4ea93dc43fdf5502dc5bc78d32c120c95ab50f3694158808d85c45e89b` | 2026-11-18 05:39:09 |
+| PMPILOT-comparison-macos-art | 12169121941 | 77679413 | `50ebac52a335424fdcf858aec56eff1632e25e721fc67fc5d8690f3cabd28442` | 2026-11-18 07:14:24 |
+| PMPILOT-comparison-macos-baseline-pr39 | 12169076337 | 76421228 | `b71254c12aee2df3f111815d3eefc5177fed4f47a895dc20265263abb549983b` | 2026-11-18 07:10:37 |
+| PMPILOT-comparison-macos-combined | 12169380923 | 77689430 | `14025e428a51a79ebbc9d81077a4df1ad84b85bd34cbc6697a2dcb31ff8d9983` | 2026-11-18 07:13:17 |
+| PMPILOT-comparison-macos-geometry | 12169375725 | 76424025 | `bcc0e6bfdd784e2a85a5665581f9c8218841d0f482b77c076665984d2a2b9f3f` | 2026-11-18 07:11:57 |
+| PMPILOT-comparison-macos-transitions | 12168938051 | 76429604 | `24c469285a3c3ae9632e283b03bb97295ed7fa915859ef8d676438366b678c44` | 2026-11-18 07:14:34 |
+| PMPILOT-comparison-windows-art | 12168084988 | 53018763 | `8260b4a63d469c3418943b23c6418b1bd1b965a491ec31797beea5a785d60bf8` | 2026-11-18 07:04:39 |
+| PMPILOT-comparison-windows-baseline-pr39 | 12168561583 | 51763438 | `488e297c44345ba0385c20df211836826e5cc85872f7613debc4e8227cd8f9fc` | 2026-11-18 07:03:13 |
+| PMPILOT-comparison-windows-combined | 12168313973 | 53029729 | `5973457b78da908ae495a6a9fd36dffc94f3ab53c5274185fb42fba9d77a4ee8` | 2026-11-18 07:04:54 |
+| PMPILOT-comparison-windows-geometry | 12168114813 | 51766451 | `c9a216340e5967edad4c759fe3a4934aed5bb97ffdda15173b8a166bf5372f79` | 2026-11-18 07:04:29 |
+| PMPILOT-comparison-windows-transitions | 12168309004 | 51771858 | `cb7543dbe6a3632d76f011ce058580981f1b7946a122cc1e0500d62fb0b2d470` | 2026-11-18 07:04:35 |
 
 Evidence artifacts (QA results, logs, `RESOURCE_SHA256.json`, `PRESERVATION_DIFF.json`, `LAUNCHER_ISOLATION.json`, harness output):
 
 | Artifact | id | size (bytes) | outer SHA-256 | expires (UTC) |
 | --- | --- | --- | --- | --- |
-| PMPILOT-QA-comparison-macos-art | 12165891992 | 108417 | `facc3fa978be9b3ffa3d711f3455ad5a131887e6f9b10056c6cc11de644c44eb` | 2026-11-18 05:48:04 |
-| PMPILOT-QA-comparison-macos-baseline-pr39 | 12165302880 | 103950 | `31453ea3cdd9e808fee3c27a42bdb2239eb9f63c0f1d43d00dadfd055fc6a66e` | 2026-11-18 05:44:53 |
-| PMPILOT-QA-comparison-macos-combined | 12165941757 | 110688 | `2b12876226daf265d317f1941cfc21779860b1fa77f842e2804869884b7db1f2` | 2026-11-18 05:47:38 |
-| PMPILOT-QA-comparison-macos-geometry | 12166315352 | 106034 | `7a55959c6f251b7d7213a8ee11dd262c7c7a456ec7ccf947a53c24a69fae7554` | 2026-11-18 05:46:47 |
-| PMPILOT-QA-comparison-macos-transitions | 12166330041 | 106279 | `7c5927139172ce781757f588656a5bc6c41f64ae157feccfb35d6e49ee51abfa` | 2026-11-18 05:47:20 |
-| PMPILOT-QA-comparison-windows-art | 12165029927 | 108555 | `621594542451359167250506057cc329c37911369e883a96cb89c6df4c08284f` | 2026-11-18 05:39:14 |
-| PMPILOT-QA-comparison-windows-baseline-pr39 | 12165910457 | 104077 | `063a0b4c0a6aec47e8b70cde3727a2bd0072e2f21c0f6e5b8eb68cebd79f7b29` | 2026-11-18 05:38:07 |
-| PMPILOT-QA-comparison-windows-combined | 12164823878 | 110812 | `96289378aa3d86ef5fe5692729d7ffc10a1a5194591634b7676435075f86a657` | 2026-11-18 05:39:21 |
-| PMPILOT-QA-comparison-windows-geometry | 12165960516 | 106180 | `e9efa9c954861d62c26236a5341a6ccf618da295a3a29fb9c24e79c1dc1097b6` | 2026-11-18 05:39:28 |
-| PMPILOT-QA-comparison-windows-transitions | 12165955459 | 106436 | `c972d5cbc14eb82722a40442ccd38728ab001d43aa6d6894b4f153628d621967` | 2026-11-18 05:39:12 |
+| PMPILOT-QA-comparison-macos-art | 12169286522 | 107886 | `7dda2b63e6169d12e1c809f662632ae19055d0d2f04e08d49ab98169a813ca37` | 2026-11-18 07:14:30 |
+| PMPILOT-QA-comparison-macos-baseline-pr39 | 12168484159 | 103959 | `29928ac81918ea3013cbfcc81cbb15458411ec0ee13a1e2456d23d890db90507` | 2026-11-18 07:10:42 |
+| PMPILOT-QA-comparison-macos-combined | 12169555226 | 110136 | `f5028aa679d11bc55b1a496902e06ad194f50c9c312bf5a730eb8cc5a52dbe9e` | 2026-11-18 07:13:23 |
+| PMPILOT-QA-comparison-macos-geometry | 12169036884 | 105490 | `e070e74d659c2c6edc5aea104775251ffa3ed4a04b65009c65cd5f4f4e7748bb` | 2026-11-18 07:12:03 |
+| PMPILOT-QA-comparison-macos-transitions | 12169595317 | 105763 | `220e960cc3e9e51a08cb6828ca7fb1c26c04a32527fe892f67d409a37f8abf71` | 2026-11-18 07:14:41 |
+| PMPILOT-QA-comparison-windows-art | 12168871375 | 108022 | `af0e2d9925cd53178ded3bf8fc2be910c7e323771c0bc0e8d723a745ed406840` | 2026-11-18 07:04:42 |
+| PMPILOT-QA-comparison-windows-baseline-pr39 | 12168845760 | 104085 | `5bd94893a13ace9924a7b639217ba2eb54efe52414d38b97aaf054b9ae6c62c7` | 2026-11-18 07:03:15 |
+| PMPILOT-QA-comparison-windows-combined | 12168169581 | 110279 | `da07c9ea5755b1856c0a00fe40443e498e565cd1a0c87ca8ce39e8174766066d` | 2026-11-18 07:04:57 |
+| PMPILOT-QA-comparison-windows-geometry | 12168303877 | 105638 | `e8dc6ece8b6525f1ce5b36fa38901d56922b699efb78a172dca37f6501acc4ea` | 2026-11-18 07:04:32 |
+| PMPILOT-QA-comparison-windows-transitions | 12168249192 | 105871 | `40342169fa5878f85eaf86eca8445a1a9975b02f9a9e99d0dae49ada17561368` | 2026-11-18 07:04:38 |
 
 Each package artifact contains the inner `Kaze-PMPILOT-<variant>-<host>-<sha8>.zip`, `MANIFEST.json`, `QA_RESULTS.json` and
-`SHA256SUMS.txt`; the inner ZIP's SHA-256 is in those files. The Apple Silicon smoke recorded these inner macOS ZIP
-hashes in annotations: baseline-pr39 `7ab7a947ffcb9c1e31727aa70444832c04ec9fd6159c970d4fbf0d449d05ca06`, combined
-`3e584d9fe90b5a1ef50eb948521cc05ce06be8fdca5a588c84e0b7dfefb7ef19` (the others are in their SHA256SUMS.txt).
+`SHA256SUMS.txt`; the inner ZIP's SHA-256 is in those files. The Apple Silicon smoke recorded these inner **macOS** ZIP
+hashes in its annotations (each smoke verified the hash it extracted against SHA256SUMS.txt):
+
+| Variant | Inner macOS ZIP SHA-256 |
+| --- | --- |
+| baseline-pr39 | `954159ebe3b6f83cce63ad3016d60ba099a41f1872208f2958604f34d26671bf` |
+| transitions | `5ab043aa8a885843e0295abe467fab446676636386bd12fb32e50c0ec2872eaa` |
+| geometry | `945783ef094767eca10834e0ccc03215b3f7619fa8c3a5e6be054e60f94f12a8` |
+| art | `2351e49dd646fe074feb90770bf425fba490d72cbe940671d6d85b7dc0116668` |
+| combined | `b7d2c2692e402acc8f1e4a96b5183ae87d275b9a236383943cf08f3e2b5809b6` |
+
+Inner Windows ZIP hashes are only inside the Windows artifacts (`SHA256SUMS.txt`); I could not read them here.
+
+Earlier Phase B runs also left artifacts that expire on their own: 39205060691 (all green, tooling `f6dacba`),
+39206728741 (one Windows `combined` failure, see below, so incomplete) and 39207077880 (superseded; one macOS download hung).
+Use only the run 39211674090 set; the others were built from the same pins by earlier tooling revisions.
 
 **Download verification not performed here.** This sandbox cannot reach the Actions artifact storage
-(`productionresultssa*.blob.core.windows.net` is refused; checked again with an artifact of this run), so
+(`productionresultssa*.blob.core.windows.net` is refused; checked again with artifacts of the earlier Phase B run), so
 `verify_download.py` was not run on the real artifacts. For the creator or any machine with GitHub access and a full clone
 of the repository (`gh auth login` done, `git fetch --all` so every pinned commit exists):
 
 ```
-python tools/pmpilot/verify_download.py --run 39205060691 --clone <full clone> --downloads <empty dir> --out <empty dir> --require-complete
+python tools/pmpilot/verify_download.py --run 39211674090 --clone <full clone> --downloads <empty dir> --out <empty dir> --require-complete
 ```
 
 It checks every artifact digest against the Actions record, ZIP integrity, the inner SHA-256 against the manifest, every
