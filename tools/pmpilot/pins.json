@@ -1,0 +1,388 @@
+{
+  "schema": 1,
+  "notes": "Source pins for PM pilot comparison packages. A null commit means the owning agent has not supplied that SHA; the workflow refuses to plan such a variant. Candidate pins, allowed_paths and demos are supplied by Transition, Level and Art owners through the coordinator (Phase B).",
+  "control_provenance": {
+    "pr52": {
+      "pull_request": 52,
+      "head": "336c1094f0b0a2da5872a5db67566907b8d12324",
+      "base": "ci/build05-integrated-macos",
+      "base_sha": "32e75a884b62d08f9e024eab5b01429e87ed12f7",
+      "hosted_controls_commit": "bbec1b0d4494a489711385f8c3dff5137d166773",
+      "windows_run": 39098330966,
+      "note": "BUILD-06 PR39 baseline control. Unchanged and not re-run by this lane.",
+      "windows_artifacts": {
+        "package": {
+          "id": 12125915950,
+          "outer_sha256": "f0cd1a453b4b8e75ec8a533d121d5d2266d210d54d5936444550d56c35c0dbbc",
+          "inner_sha256": "a96a4d457e79237ac72457b8bbf8fd5b2a60be5e6f6c0dad978e2bf20aba0163",
+          "expires_at": "2026-11-17T04:51:18Z"
+        },
+        "qa": {
+          "id": 12126075333,
+          "expires_at": "2026-11-17T04:51:21Z"
+        }
+      },
+      "macos_artifacts": {
+        "package": {
+          "id": 12125533126,
+          "outer_sha256": "cb21b38d61d8c1f11bbd8d56a6411985f277b55390f2fb01a8fe5cfaa04e0642",
+          "inner_sha256": "5d2f78d12a57b93206340dfd6b567f74d1f4cc4e13d7390c667dbfdca02033dd",
+          "expires_at": "2026-11-17T04:53:07Z"
+        },
+        "qa": {
+          "id": 12125846459,
+          "expires_at": "2026-11-17T04:53:13Z"
+        }
+      }
+    }
+  },
+  "variants": {
+    "baseline-pr39": {
+      "label": "PR39 baseline (issue 42 unfixed, same source as BUILD-06 control)",
+      "kind": "baseline",
+      "commit": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+      "compare_base": null,
+      "allowed_paths": [],
+      "forbidden_pack_prefixes": [
+        "assets/art05/",
+        "assets/art06/",
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": true,
+        "tr05": {
+          "suites": 25,
+          "assertions": 1607
+        },
+        "tr06": null,
+        "extra": [],
+        "packaged_native_regex": "54 checks, 0 failure\\(s\\)"
+      },
+      "demos": "default",
+      "control_canonical_resource_sha256": {
+        "windows": "dd654a86a48a85f5bc2d250a5331872b900e2b0538147736f182e4d7ba31af34",
+        "macos": "4f1fa289e953d26bab5c40de774fae96dac916a2170d8b613efb1596a8751121",
+        "source": "PR52 docs/build06/evidence/{windows,macos}-MANIFEST.json reproducibility.canonical_resource_sha256 (514 entries each), run 39098330966"
+      }
+    },
+    "pr51-control": {
+      "label": "PR51 head (PR39 plus TR06 doorway recovery), the base every candidate branches from",
+      "kind": "control",
+      "commit": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+      "compare_base": "5dfc4c4f077c5408ecbe49f1cafafea1dcb1003c",
+      "allowed_paths": [
+        "scripts/cinematic_transitions.gd",
+        "tests/automatic_passage_reliability.gd",
+        "tests/fixtures/transition_test_hud.gd",
+        "tools/run_tr06_qa.py",
+        "docs/tr06/**"
+      ],
+      "forbidden_pack_prefixes": [
+        "assets/art05/",
+        "assets/art06/",
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": true,
+        "tr05": {
+          "suites": 25,
+          "assertions": 1607
+        },
+        "tr06": {
+          "passes": 305
+        },
+        "extra": [],
+        "packaged_native_regex": "54 checks, 0 failure\\(s\\)"
+      },
+      "demos": "default"
+    },
+    "transitions": {
+      "label": "Transition-only candidate (feature/pm-pilot-transitions on PR51)",
+      "kind": "candidate",
+      "owner": "Transition",
+      "branch": "feature/pm-pilot-transitions",
+      "commit": "903634afa51237e29fd306ae815c880415230f17",
+      "compare_base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+      "allowed_paths": [
+        "scripts/cinematic_transitions.gd",
+        "scripts/world.gd",
+        "scripts/staged_stair_cinematic.gd",
+        "scripts/transition_pilot_data.gd",
+        "tests/capture_pm_transition.gd",
+        "tests/pm_canal_left_passage.gd",
+        "tests/pm_staged_stair_cinematic.gd",
+        "tools/run_pm_transition_qa.py",
+        "docs/pm_pilot/transition/**",
+        "docs/agent_handoffs/TRANSITION_PM_REPORT.md"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-transitions",
+              "--godot",
+              "{godot}"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness",
+            "informational": true
+          }
+        ],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "default",
+      "preservation_waivers": [],
+      "required_pack_entries": [
+        "scripts/staged_stair_cinematic.gd",
+        "scripts/transition_pilot_data.gd"
+      ],
+      "qa_status": "pending"
+    },
+    "geometry": {
+      "label": "Canal geometry-only candidate (feature/pm-pilot-canal-geometry on PR51)",
+      "kind": "candidate",
+      "owner": "Level",
+      "branch": "feature/pm-pilot-canal-geometry",
+      "commit": "0656766d8fe13c702a4808b1d25ddd0855d8922c",
+      "compare_base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+      "allowed_paths": [
+        "scripts/canal_gatehouse.gd",
+        "scripts/canal_gatehouse.gd.uid",
+        "scripts/world.gd",
+        "scripts/world_expansion.gd",
+        "tests/audit_exit_alignment.gd",
+        "tests/audit_exit_alignment.gd.uid",
+        "tests/audit_intentional_space.gd",
+        "tests/canal_geometry.gd",
+        "tests/canal_geometry.gd.uid",
+        "tests/capture_canal.gd",
+        "tests/capture_canal.gd.uid",
+        "tests/level_geometry.gd",
+        "tests/fixtures/**",
+        "tools/run_canal_qa.py",
+        "docs/pm_pilot/CANAL_CONTRACT.md",
+        "docs/pm_pilot/EXIT_AUDIT.md",
+        "docs/pm_pilot/exit_audit.json",
+        "docs/pm_pilot/level/**",
+        "docs/pm_pilot/logs/**",
+        "docs/agent_handoffs/LEVEL_PM_REPORT.md"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-geometry",
+              "--godot",
+              "{godot}"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness",
+            "informational": true
+          }
+        ],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "default",
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/canal_gatehouse.gd"
+      ],
+      "qa_status": "pending"
+    },
+    "art": {
+      "label": "Passage-cinematic art-only candidate (art/pm-pilot-passage-cinematic on PR51)",
+      "kind": "candidate",
+      "owner": "Art",
+      "branch": "art/pm-pilot-passage-cinematic",
+      "commit": "dfab1cf2efcacb2a792fb578b72be2434b9e4411",
+      "compare_base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+      "allowed_paths": [
+        "assets/pm_pilot/**",
+        "source_art/pm_pilot/**",
+        "tools/pm_pilot_art/**",
+        "docs/pm_pilot/art/**",
+        "docs/agent_handoffs/ART_PM_REPORT.md"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-art",
+              "--godot",
+              "{godot}"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness",
+            "informational": true
+          }
+        ],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "default",
+      "preservation_waivers": [],
+      "required_pack_entries": [
+        "assets/pm_pilot/canal/*.png.import",
+        "assets/pm_pilot/wipe/*.png.import"
+      ],
+      "qa_status": "pending"
+    },
+    "combined": {
+      "label": "Combined candidate (branch candidate/pm-pilot-combined: PR51 + Level + Art + Transition, clean merges)",
+      "kind": "combined",
+      "owner": "Build",
+      "allowed_paths": [
+        "assets/pm_pilot/**",
+        "docs/agent_handoffs/ART_PM_REPORT.md",
+        "docs/agent_handoffs/LEVEL_PM_REPORT.md",
+        "docs/agent_handoffs/TRANSITION_PM_REPORT.md",
+        "docs/pm_pilot/CANAL_CONTRACT.md",
+        "docs/pm_pilot/EXIT_AUDIT.md",
+        "docs/pm_pilot/art/**",
+        "docs/pm_pilot/exit_audit.json",
+        "docs/pm_pilot/level/**",
+        "docs/pm_pilot/logs/**",
+        "docs/pm_pilot/transition/**",
+        "scripts/canal_gatehouse.gd",
+        "scripts/canal_gatehouse.gd.uid",
+        "scripts/cinematic_transitions.gd",
+        "scripts/staged_stair_cinematic.gd",
+        "scripts/transition_pilot_data.gd",
+        "scripts/world.gd",
+        "scripts/world_expansion.gd",
+        "source_art/pm_pilot/**",
+        "tests/audit_exit_alignment.gd",
+        "tests/audit_exit_alignment.gd.uid",
+        "tests/audit_intentional_space.gd",
+        "tests/canal_geometry.gd",
+        "tests/canal_geometry.gd.uid",
+        "tests/capture_canal.gd",
+        "tests/capture_canal.gd.uid",
+        "tests/capture_pm_transition.gd",
+        "tests/fixtures/**",
+        "tests/level_geometry.gd",
+        "tests/pm_canal_left_passage.gd",
+        "tests/pm_staged_stair_cinematic.gd",
+        "tools/pm_pilot_art/**",
+        "tools/run_canal_qa.py",
+        "tools/run_pm_transition_qa.py"
+      ],
+      "allow_protected": [],
+      "expected_tree": "2a41ac47390a2a4e025435512d2b623894733270",
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [
+          {
+            "name": "pm-pilot-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_qa.py",
+              "--repo",
+              "{root}",
+              "--label",
+              "build-combined",
+              "--godot",
+              "{godot}"
+            ],
+            "timeout": 3600,
+            "requires": "qa_harness",
+            "informational": true
+          }
+        ],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "default",
+      "commit": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "compare_base": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/staged_stair_cinematic.gd",
+        "scripts/canal_gatehouse.gd",
+        "assets/pm_pilot/canal/*.png.import"
+      ],
+      "qa_status": "pending"
+    }
+  },
+  "qa_harness": {
+    "branch": "test/pm-pilot-regressions",
+    "commit": "455f352e304955c0d4ea400bff62d489ce7834bb",
+    "entry": "tools/pm_pilot_qa/run_qa.py",
+    "command": "python tools/pm_pilot_qa/run_qa.py --repo <candidate> --label <name>",
+    "semantics": "exit 0 = PASS or PASS_WITH_SKIPS, 1 = FAIL; cinematic completion and Canal containment hooks SKIP until QA publishes Phase B",
+    "note": "Supplied by the QA agent through the coordinator. Not part of any candidate source; checked out beside it by the builder.",
+    "status": "QA pending: harness head pinned mid Phase B; hooks for cinematic completion and Canal containment may still SKIP. Results are recorded, not gating."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": "baseline-pr39,transitions,geometry,art,combined",
+  "purpose": "comparison",
+  "platforms": "both",
+  "apple_silicon": true,
+  "quick": false
+}

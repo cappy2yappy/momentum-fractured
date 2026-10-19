@@ -1,0 +1,232 @@
+name: PM pilot comparison packages
+# Parametrised from tools/pmpilot/pins.json. Windows x86_64 builds first; macOS Universal
+# starts only after the Windows job of the same variant succeeded (when both are requested).
+# purpose=preparation-smoke accepts only baseline/control variants. The inputs come from workflow_dispatch, or on
+# pull_request events from tools/pmpilot/request.json (a repo-driven request, no dispatch permission needed).
+on:
+  workflow_dispatch:
+    inputs:
+      variants:
+        description: 'Comma list of pins.json variants (baseline-pr39, pr51-control, transitions, geometry, art, combined)'
+        required: true
+        default: 'baseline-pr39'
+      purpose:
+        description: 'preparation-smoke (baseline/control only) or comparison (candidates, needs pinned SHAs)'
+        type: choice
+        options: [preparation-smoke, comparison]
+        default: preparation-smoke
+      platforms:
+        description: 'Which hosts to build'
+        type: choice
+        options: [windows, both, macos]
+        default: windows
+      apple_silicon:
+        description: 'Also run the macOS package natively (headless) on a hosted Apple Silicon runner'
+        type: boolean
+        default: false
+      quick:
+        description: 'Skip long source regression suites (preparation-smoke only; manifest is marked incomplete)'
+        type: boolean
+        default: false
+  pull_request:
+    branches: [fix/tr06-automatic-passage]
+    paths:
+      - 'tools/pmpilot/**'
+      - '!tools/pmpilot/PROVENANCE.json'
+      - '.github/workflows/pmpilot-packages.yml'
+permissions:
+  contents: read
+concurrency:
+  group: pmpilot-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      variants: ${{ steps.plan.outputs.variants }}
+      purpose: ${{ steps.plan.outputs.purpose }}
+      platforms: ${{ steps.plan.outputs.platforms }}
+      quick: ${{ steps.plan.outputs.quick }}
+      windows: ${{ steps.plan.outputs.windows }}
+      macos: ${{ steps.plan.outputs.macos }}
+      apple_silicon: ${{ steps.plan.outputs.apple_silicon }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Resolve request and refuse unpinned or mislabelled variants
+        id: plan
+        env:
+          IN_VARIANTS: ${{ inputs.variants }}
+          IN_PURPOSE: ${{ inputs.purpose }}
+          IN_PLATFORMS: ${{ inputs.platforms }}
+          IN_QUICK: ${{ inputs.quick }}
+          IN_ARM: ${{ inputs.apple_silicon }}
+        run: |
+          python tools/pmpilot/pins.py plan --request tools/pmpilot/request.json \
+            ${IN_VARIANTS:+--variants "$IN_VARIANTS"} ${IN_PURPOSE:+--purpose "$IN_PURPOSE"} \
+            ${IN_PLATFORMS:+--platforms "$IN_PLATFORMS"} ${IN_QUICK:+--quick "$IN_QUICK"} ${IN_ARM:+--apple-silicon "$IN_ARM"}
+      - name: Plan summary
+        env:
+          PLAN_VARIANTS: ${{ steps.plan.outputs.variants }}
+          PLAN_PURPOSE: ${{ steps.plan.outputs.purpose }}
+          PLAN_PLATFORMS: ${{ steps.plan.outputs.platforms }}
+        run: |
+          echo "### PM pilot plan" >> "$GITHUB_STEP_SUMMARY"
+          echo "purpose: \`$PLAN_PURPOSE\`, platforms: \`$PLAN_PLATFORMS\`, variants: \`$PLAN_VARIANTS\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "controls commit: \`${{ github.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
+  windows:
+    needs: plan
+    if: ${{ needs.plan.outputs.windows == 'true' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: ${{ fromJSON(needs.plan.outputs.variants) }}
+    runs-on: windows-2022
+    timeout-minutes: 45
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+      PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Preserve exact source line endings on ephemeral runner
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          path: game-source
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install checksum-pinned editor and export templates
+        timeout-minutes: 15
+        run: python tools/pmpilot/install_engine.py
+      - name: Assemble pinned source
+        run: python tools/pmpilot/pins.py assemble --variant "${{ matrix.variant }}" --source-root game-source
+      - name: Validate source and native Windows package
+        env:
+          PMPILOT_SOURCE_ROOT: ${{ github.workspace }}/game-source
+        run: |
+          ARGS=""
+          if [ "$PMPILOT_QUICK" = "1" ]; then ARGS="--quick"; fi
+          python tools/pmpilot/build_package.py --godot "$GODOT" --variant "${{ matrix.variant }}" --purpose "$PMPILOT_PURPOSE" $ARGS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PMPILOT-${{ env.PMPILOT_PURPOSE }}-windows-${{ matrix.variant }}
+          path: |
+            game-source/build/pmpilot/${{ matrix.variant }}/Kaze-PMPILOT-*.zip
+            game-source/build/pmpilot/${{ matrix.variant }}/MANIFEST.json
+            game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
+            game-source/build/pmpilot/${{ matrix.variant }}/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PMPILOT-QA-${{ env.PMPILOT_PURPOSE }}-windows-${{ matrix.variant }}
+          path: |
+            game-source/build/pmpilot/${{ matrix.variant }}/evidence/
+            game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
+            game-source/build/tr05/qa/*.log
+            game-source/build/tr05/qa/results.json
+          if-no-files-found: warn
+          retention-days: 30
+  macos:
+    needs: [plan, windows]
+    if: ${{ always() && needs.plan.outputs.macos == 'true' && (needs.windows.result == 'success' || needs.windows.result == 'skipped') }}
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: ${{ fromJSON(needs.plan.outputs.variants) }}
+    runs-on: macos-15-intel
+    timeout-minutes: 45
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+      PMPILOT_QUICK: ${{ needs.plan.outputs.quick }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Preserve exact source line endings on ephemeral runner
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+        with:
+          path: game-source
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install checksum-pinned editor and export templates
+        timeout-minutes: 15
+        run: python tools/pmpilot/install_engine.py
+      - name: Assemble pinned source
+        run: python tools/pmpilot/pins.py assemble --variant "${{ matrix.variant }}" --source-root game-source
+      - name: Validate source and native macOS Universal package
+        env:
+          PMPILOT_SOURCE_ROOT: ${{ github.workspace }}/game-source
+        run: |
+          ARGS=""
+          if [ "$PMPILOT_QUICK" = "1" ]; then ARGS="--quick"; fi
+          python tools/pmpilot/build_package.py --godot "$GODOT" --variant "${{ matrix.variant }}" --purpose "$PMPILOT_PURPOSE" $ARGS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PMPILOT-${{ env.PMPILOT_PURPOSE }}-macos-${{ matrix.variant }}
+          path: |
+            game-source/build/pmpilot/${{ matrix.variant }}/Kaze-PMPILOT-*.zip
+            game-source/build/pmpilot/${{ matrix.variant }}/MANIFEST.json
+            game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
+            game-source/build/pmpilot/${{ matrix.variant }}/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PMPILOT-QA-${{ env.PMPILOT_PURPOSE }}-macos-${{ matrix.variant }}
+          path: |
+            game-source/build/pmpilot/${{ matrix.variant }}/evidence/
+            game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
+            game-source/build/tr05/qa/*.log
+            game-source/build/tr05/qa/results.json
+          if-no-files-found: warn
+          retention-days: 30
+  macos-arm64:
+    needs: [plan, macos]
+    if: ${{ always() && needs.plan.outputs.apple_silicon == 'true' && needs.macos.result == 'success' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: ${{ fromJSON(needs.plan.outputs.variants) }}
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      PMPILOT_PURPOSE: ${{ needs.plan.outputs.purpose }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: PMPILOT-${{ env.PMPILOT_PURPOSE }}-macos-${{ matrix.variant }}
+          path: pkg
+      - name: Run the Universal package natively on Apple Silicon (headless)
+        run: python tools/pmpilot/smoke_extracted.py --artifact-dir pkg --out "$RUNNER_TEMP/arm64-${{ matrix.variant }}"

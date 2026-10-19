@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "allowlist_source_commits": {
+    "PR52_head": "336c1094f0b0a2da5872a5db67566907b8d12324",
+    "PR40_base_of_PR52": "32e75a884b62d08f9e024eab5b01429e87ed12f7"
+  },
+  "not_copied": [
+    ".github/workflows/build06-playtest.yml (re-authored as pmpilot-packages.yml)",
+    "tools/build06/sources.json (replaced by pins.json)",
+    "all docs/build06/evidence/*, previews and PM report (control provenance is cited, not duplicated)"
+  ],
+  "files": [
+    {
+      "path": "tools/pmpilot/packaged_native.gd",
+      "source_commit": "336c1094f0b0a2da5872a5db67566907b8d12324",
+      "source_path": "tools/build06/packaged_native.gd",
+      "source_sha256": "9def7c15ed0fbe0be8d8e0c66207688b2ffb2748db05a06f325a93666b28f945",
+      "mode": "verbatim",
+      "note": "",
+      "verbatim_sha256": "9def7c15ed0fbe0be8d8e0c66207688b2ffb2748db05a06f325a93666b28f945"
+    },
+    {
+      "path": "tools/pmpilot/audit_pack.py",
+      "source_commit": "32e75a884b62d08f9e024eab5b01429e87ed12f7",
+      "source_path": "tools/build05/audit.py",
+      "source_sha256": "2bc8a500d5b09bcfa68ee6532dabb3ef2b5f77c683eac6fac0a56c502f88ea59",
+      "mode": "verbatim",
+      "note": "Source is the PR52 base (PR #40, ci/build05-integrated-macos); candidate.py loaded it from there.",
+      "verbatim_sha256": "2bc8a500d5b09bcfa68ee6532dabb3ef2b5f77c683eac6fac0a56c502f88ea59"
+    },
+    {
+      "path": "tools/pmpilot/install_engine.py",
+      "source_commit": "336c1094f0b0a2da5872a5db67566907b8d12324",
+      "source_path": "tools/build06/install.py",
+      "source_sha256": "d3a0c21bd01809652992840f902948b72774d131504db54bd09ad26c24f7c8b0",
+      "sha256_at_provenance_time": null,
+      "mode": "derived",
+      "note": "Same pinned URLs, SHA-256 digests and version assertion. Renamed env vars (PMPILOT_*), folder name, both targets templates, --templates-only/--local-dir smoke mode."
+    },
+    {
+      "path": "tools/pmpilot/build_package.py",
+      "source_commit": "336c1094f0b0a2da5872a5db67566907b8d12324",
+      "source_path": "tools/build06/candidate.py",
+      "source_sha256": "389db4c91dd734be0d44d21a3fb14a80f0482cd49a0dc4ae84520317d4fd4e54",
+      "sha256_at_provenance_time": null,
+      "mode": "derived",
+      "note": "pack_bytes, pack_records, export text-script override, repeat-export equality, spaces-path extraction, launcher idiom kept. Added: variant/pins/demos parametrisation, diff-allowlist preservation, ART-07 and package policy, per-launcher isolation check, composed sources, linux cross-export smoke mode, BUILD-06 control resource equality."
+    },
+    {
+      "path": "tools/pmpilot/verify_download.py",
+      "source_commit": "336c1094f0b0a2da5872a5db67566907b8d12324",
+      "source_path": "docs/build06/verify_delivery.py",
+      "source_sha256": "ee93cd073f4f2b89ed5eae7c043343a63ed2684c97472c6917bd2dfeb1d130f3",
+      "sha256_at_provenance_time": null,
+      "mode": "derived",
+      "note": "Same digest/CRC/member/resource/script verification; now re-assembles pinned source from pins at the controls commit, variant-aware, offline --from-dir mode."
+    }
+  ]
+}
