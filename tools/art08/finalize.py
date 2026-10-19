@@ -21,6 +21,9 @@ REG = [
  ("stair_descend_exit", "stair_descend_exit", 16, False, "right", "candidate", PROFILE_PROV, "last tread down to level floor"),
  ("stair_arrive_idle_settle", "stair_arrive_idle_settle", 12, False, "right", "candidate", PROFILE_PROV, "short closing step then standing; ends in a standing profile pose"),
  ("door_approach_walk", "walk_loop", 12, True, "right (flip_h for left)", "candidate", PROFILE_PROV, "slow flat walk, 100 px step; drawn facing right, ribbon trails left"),
+ ("door_turn_to_rear", "door_turn_to_rear", 16, False, "right profile to rear (flip_h for left)", "stand_in", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved", "4 frames; right-to-rear turn drawn once, left exit uses flip_h (ribbon side flips, creator decision)"),
+ ("door_cross", "door_cross", 12, False, "rear", "candidate", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script", "walk away over the sill: frames 5-6 are the sill step (high knee lift); root_motion is screen-space depth travel"),
+ ("door_emerge", "door_emerge", 12, False, "front three-quarter", "candidate", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script", "steps out toward camera; arms nearly static (donor arm is a bent fist pose), hands off to door_walk_out by a cut"),
  ("door_walk_out", "walk_loop", 12, True, "right (flip_h for left)", "candidate", PROFILE_PROV, "alias of door_approach_walk: identical drawn frames, same strip file"),
 ]
 EXTRA = {}   # filled by door builders (rear/front/reuse clips) via extra_registry.json
@@ -29,9 +32,10 @@ def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
 def contacts(meta):
     t = meta["times"]; near, far, heel = [], [], []
     for i, (tt, p) in enumerate(zip(t, meta["poses"])):
+        if "near_leg" not in p: continue
         if p["near_leg"]["state"] == "stance": near.append(i)
         if p["far_leg"]["state"] == "stance": far.append(i)
-        if abs(tt - round(tt)) < 0.01: heel.append(i)
+        if "near_leg" in p and abs(tt - round(tt)) < 0.01: heel.append(i)
     return near, far, heel
 
 def main():
@@ -50,6 +54,9 @@ def main():
         dst = os.path.join(ASSETS, f"kaze_{dst_name}_strip.png")
         shutil.copyfile(sp, dst)
         near, far, heel = contacts(meta)
+        if name == "door_cross": heel = [0, 4]
+        if name == "door_emerge": heel = [0, 4]
+        if name == "door_turn_to_rear": heel = []
         out["clips"].append(dict(name=name, strip=f"assets/art08/kaze_{dst_name}_strip.png", hframes=len(meta["times"]), vframes=1,
             cell=[480, 724], pivot=[240, 600], fps=fps, loop=loop, facing=facing,
             root_motion_px_per_frame=[[round(a, 2), round(b, 2)] for a, b in meta["root_motion"]],

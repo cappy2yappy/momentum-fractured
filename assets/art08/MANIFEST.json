@@ -539,13 +539,35 @@
    "fps": 16,
    "loop": false,
    "facing": "right profile to rear (flip_h for left)",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "turn into the opening",
-   "sha256": null,
-   "bytes": null,
-   "status": "unfinished"
+   "root_motion_px_per_frame": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "contact_frames": [],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved",
+   "status": "stand_in",
+   "note": "4 frames; right-to-rear turn drawn once, left exit uses flip_h (ribbon side flips, creator decision)",
+   "alias_of": null,
+   "sha256": "3a96c2b3a76bb88ee4dc170f266531a9a5ac49f65f1b27a54c5ebfa3a921241a",
+   "bytes": 269474
   },
   {
    "name": "door_cross",
@@ -563,13 +585,54 @@
    "fps": 12,
    "loop": false,
    "facing": "rear",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "walk away over sill into opening",
-   "sha256": null,
-   "bytes": null,
-   "status": "unfinished"
+   "root_motion_px_per_frame": [
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script",
+   "status": "candidate",
+   "note": "walk away over the sill: frames 5-6 are the sill step (high knee lift); root_motion is screen-space depth travel",
+   "alias_of": null,
+   "sha256": "11a7561739a7c09bfbd92e08630ed9c43b3d2c01e0e1aa342d902066acf5b6eb",
+   "bytes": 461769
   },
   {
    "name": "door_emerge",
@@ -587,13 +650,46 @@
    "fps": 12,
    "loop": false,
    "facing": "front three-quarter",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "step out toward camera",
-   "sha256": null,
-   "bytes": null,
-   "status": "unfinished"
+   "root_motion_px_per_frame": [
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script",
+   "status": "candidate",
+   "note": "steps out toward camera; arms nearly static (donor arm is a bent fist pose), hands off to door_walk_out by a cut",
+   "alias_of": null,
+   "sha256": "c323db56f3c6b33419d245aefb3822889bb31080449e2a70ee66c2724ea58a2e",
+   "bytes": 298969
   },
   {
    "name": "door_turn_to_side",

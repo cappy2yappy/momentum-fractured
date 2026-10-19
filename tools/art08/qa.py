@@ -80,14 +80,17 @@ def run_clip(name, loop=False, plan_fn=None, expected_lowest=None):
     # joint angle ranges from the poses
     L = rig.Rig.ik
     hip, knee = [], []
-    for p in meta["poses"]:
+    for p in (meta["poses"] if "near_leg" in meta["poses"][0] else []):
         for side in ("near", "far"):
             k, a = L(np.array(p["pelvis"]), np.array(p[side + "_leg"]["ankle"]), 65.5, 65.5)
             v1 = k - np.array(p["pelvis"]); v2 = a - k
             hip.append(math.degrees(math.atan2(v1[1], v1[0])))
             cosk = np.dot(-v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)); knee.append(180 - math.degrees(math.acos(max(-1, min(1, cosk)))))
-    rep["leg_angles_deg"] = dict(thigh_dir_range=[round(min(hip)), round(max(hip))], knee_flex_range=[round(min(knee)), round(max(knee))])
-    rep["arm_angles_deg"] = dict(upper_range=[round(min(p["near_arm"]["upper"] for p in meta["poses"])), round(max(p["near_arm"]["upper"] for p in meta["poses"]))])
+    if hip:
+        rep["leg_angles_deg"] = dict(thigh_dir_range=[round(min(hip)), round(max(hip))], knee_flex_range=[round(min(knee)), round(max(knee))])
+        rep["arm_angles_deg"] = dict(upper_range=[round(min(p["near_arm"]["upper"] for p in meta["poses"])), round(max(p["near_arm"]["upper"] for p in meta["poses"]))])
+    else:
+        rep["leg_angles_deg"] = None
     # unique frames
     hashes = {f.tobytes().__hash__() for f in frames}
     rep["unique_frames"] = len(hashes)
@@ -105,7 +108,7 @@ def run_clip(name, loop=False, plan_fn=None, expected_lowest=None):
     cm = [class_means(f) for f in frames]
     rep["class_means_first"] = cm[0]
     # contact / baseline expectation from analytic sole position
-    rep["stance_flags"] = [[p["near_leg"]["state"][0], p["far_leg"]["state"][0]] for p in meta["poses"]]
+    rep["stance_flags"] = [[p["near_leg"]["state"][0], p["far_leg"]["state"][0]] for p in meta["poses"]] if "near_leg" in meta["poses"][0] else None
     return rep, frames, meta
 
 if __name__ == "__main__":
@@ -113,4 +116,4 @@ if __name__ == "__main__":
     for name in sys.argv[1:]:
         rep, _, _ = run_clip(name, loop=name.endswith("loop") or name == "walk_loop")
         json.dump(rep, open(os.path.join(OUTQ, name + ".json"), "w"), indent=1)
-        print(json.dumps({k: rep[k] for k in ("clip", "frames", "leg_band_xor", "upper_band_xor", "leg_angles_deg", "min_margin_px", "max_components", "height_range", "lowest_rows", "palette_outside_pct", "unique_frames", "hidden_rgb_pixels")}))
+        print(json.dumps({k: rep.get(k) for k in ("clip", "frames", "leg_band_xor", "upper_band_xor", "leg_angles_deg", "min_margin_px", "max_components", "height_range", "lowest_rows", "palette_outside_pct", "unique_frames", "hidden_rgb_pixels")}))

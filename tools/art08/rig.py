@@ -70,11 +70,11 @@ class Rig:
         out.append(P[-1])
         return out
 
-    def _tube(self, name, pts, u0, half, e=14.0):
+    def _tube(self, name, pts, u0, half, e=14.0, rest=None):
         """Draw strip `name` bent along polyline pts (cell px, 1x). u runs along the smoothed path and is
         rescaled so the path length equals the rest length (no stretch). Returns premultiplied SS canvas."""
         strip = self._premult(self.img[name])
-        rest = float(np.linalg.norm(np.array(pts[1]) - np.array(pts[0])) + np.linalg.norm(np.array(pts[2]) - np.array(pts[1])))
+        if rest is None: rest = float(np.linalg.norm(np.array(pts[1]) - np.array(pts[0])) + np.linalg.norm(np.array(pts[2]) - np.array(pts[1])))
         path = self._smooth_path(pts, rest, e)
         W, H = CELL[0] * SS, CELL[1] * SS
         allp = np.array(path)

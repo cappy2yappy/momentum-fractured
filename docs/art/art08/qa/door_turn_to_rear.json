@@ -1,0 +1,58 @@
+{
+ "clip": "door_turn_to_rear",
+ "frames": 4,
+ "cell": [
+  480,
+  724
+ ],
+ "leg_band_xor": {
+  "min_adjacent": 0.372,
+  "mean_adjacent": 0.503,
+  "min_any_pair": 0.372,
+  "mean_pairs": 0.56
+ },
+ "upper_band_xor": {
+  "min_adjacent": 0.157,
+  "mean_adjacent": 0.208
+ },
+ "leg_angles_deg": null,
+ "unique_frames": 4,
+ "hidden_rgb_pixels": 0,
+ "low_alpha_pixels_1_to_19": 557,
+ "min_margin_px": 94,
+ "max_components": 1,
+ "height_range": [
+  308,
+  313
+ ],
+ "lowest_rows": [
+  600,
+  600,
+  600,
+  600
+ ],
+ "palette_outside_pct": [
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "class_means_first": {
+  "green": [
+   1.7,
+   191.6,
+   64.9
+  ],
+  "purple": [
+   100.2,
+   45.4,
+   137.4
+  ],
+  "skin": [
+   176.5,
+   101.8,
+   74.0
+  ]
+ },
+ "stance_flags": null
+}
