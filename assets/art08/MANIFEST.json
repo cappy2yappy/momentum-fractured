@@ -1,7 +1,6 @@
 {
  "schema": "art08/1",
- "interface_version": "v1",
- "status": "SKELETON: no frames shipped yet; every clip is unfinished until its strip exists",
+ "interface_version": "v2",
  "cell": [
   480,
   724
@@ -11,6 +10,12 @@
   600
  ],
  "engine_scale_world": 0.303125,
+ "source_scale_note": "Kaze is about 308 px tall in the 724 px cell (approved ART-04 density); in-world playback scale 0.303125; cinematic playback is an upscale of this density (see INTEGRATION.md)",
+ "status_legend": {
+  "candidate": "real multi-frame animation, creator visual acceptance pending",
+  "stand_in": "usable but not final art, see note",
+  "unfinished": "no frames shipped"
+ },
  "clips": [
   {
    "name": "stair_ascend_enter",
@@ -28,12 +33,44 @@
    "fps": 16,
    "loop": false,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "floor walk to first tread",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     37.5,
+     0.0
+    ],
+    [
+     41.25,
+     -9.99
+    ],
+    [
+     41.25,
+     -13.01
+    ],
+    [
+     41.25,
+     -13.01
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "floor foot to first tread; last frame is the heel strike on tread 1",
+   "alias_of": null,
+   "sha256": "67f27fb5397faa0e24cc979109917d41f31e946ccb6b84485dbec6e9b8eadcda",
+   "bytes": 281124
   },
   {
    "name": "stair_ascend_loop",
@@ -51,12 +88,66 @@
    "fps": 14,
    "loop": true,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "one stride pair climbing up-right",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     41.25,
+     -9.99
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -12.16
+    ]
+   ],
+   "contact_frames": [
+    3,
+    7
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "one stride pair = 2 treads; plays from the phase right after enter",
+   "alias_of": null,
+   "sha256": "e18a4fb55dcc2359ace06224ee338e350799561e410c33d9bd7b28047d3c06f6",
+   "bytes": 491038
   },
   {
    "name": "stair_ascend_exit",
@@ -74,12 +165,44 @@
    "fps": 16,
    "loop": false,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "last tread to level floor",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     41.25,
+     -8.69
+    ],
+    [
+     41.25,
+     -11.31
+    ],
+    [
+     41.25,
+     -11.31
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "last tread to level floor; last frame is the heel strike on the level top",
+   "alias_of": null,
+   "sha256": "59e9643a4b0b75f0d2021171b64ccafab0153e1f6ea005baed4206980d1f4006",
+   "bytes": 285050
   },
   {
    "name": "stair_descend_enter",
@@ -97,12 +220,44 @@
    "fps": 16,
    "loop": false,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "floor walk to first tread down",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     37.5,
+     0.0
+    ],
+    [
+     41.25,
+     8.69
+    ],
+    [
+     41.25,
+     11.31
+    ],
+    [
+     41.25,
+     11.31
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "floor foot to first tread down",
+   "alias_of": null,
+   "sha256": "dcc736f27327ddfbc20a5592c3f7ad939b8169d2119a29f6e30ab17d8057bfa4",
+   "bytes": 280408
   },
   {
    "name": "stair_descend_loop",
@@ -120,12 +275,66 @@
    "fps": 14,
    "loop": true,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "one stride pair descending down-right",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     41.25,
+     8.69
+    ],
+    [
+     47.0,
+     9.34
+    ],
+    [
+     47.0,
+     12.16
+    ],
+    [
+     47.0,
+     12.16
+    ],
+    [
+     47.0,
+     9.34
+    ],
+    [
+     47.0,
+     9.34
+    ],
+    [
+     47.0,
+     12.16
+    ],
+    [
+     47.0,
+     12.16
+    ]
+   ],
+   "contact_frames": [
+    3,
+    7
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "heel-first, upright counter-lean",
+   "alias_of": null,
+   "sha256": "59672fd0bdc5d36ef751a0cff162acc0fd6d5ddb89aa4667dd230889c6c5bdd4",
+   "bytes": 514934
   },
   {
    "name": "stair_descend_exit",
@@ -143,12 +352,44 @@
    "fps": 16,
    "loop": false,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "last tread to level floor",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     47.0,
+     9.34
+    ],
+    [
+     41.25,
+     9.99
+    ],
+    [
+     41.25,
+     13.01
+    ],
+    [
+     41.25,
+     13.01
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "last tread down to level floor",
+   "alias_of": null,
+   "sha256": "e4bc0cf67443d1c95cecaccb7cdf4d402234ba16b0932891945c3b91ed00b96d",
+   "bytes": 295686
   },
   {
    "name": "stair_arrive_idle_settle",
@@ -166,12 +407,44 @@
    "fps": 12,
    "loop": false,
    "facing": "right",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "settle after arrival",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     51.58,
+     -8.69
+    ],
+    [
+     15.5,
+     0.0
+    ],
+    [
+     5.17,
+     0.0
+    ],
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "short closing step then standing; ends in a standing profile pose",
+   "alias_of": null,
+   "sha256": "0487d6da45313126c55c1efff4e74adbfbbfaee23e553c23a6f192fd3d0bd9ef",
+   "bytes": 291001
   },
   {
    "name": "door_approach_walk",
@@ -189,12 +462,66 @@
    "fps": 12,
    "loop": true,
    "facing": "right (flip_h for left)",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "slow lateral walk",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "far_foot": [
+     0,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "slow flat walk, 100 px step; drawn facing right, ribbon trails left",
+   "alias_of": null,
+   "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+   "bytes": 475626
   },
   {
    "name": "door_turn_to_rear",
@@ -217,7 +544,8 @@
    "provenance": "unfinished",
    "note": "turn into the opening",
    "sha256": null,
-   "bytes": null
+   "bytes": null,
+   "status": "unfinished"
   },
   {
    "name": "door_cross",
@@ -240,7 +568,8 @@
    "provenance": "unfinished",
    "note": "walk away over sill into opening",
    "sha256": null,
-   "bytes": null
+   "bytes": null,
+   "status": "unfinished"
   },
   {
    "name": "door_emerge",
@@ -263,7 +592,8 @@
    "provenance": "unfinished",
    "note": "step out toward camera",
    "sha256": null,
-   "bytes": null
+   "bytes": null,
+   "status": "unfinished"
   },
   {
    "name": "door_turn_to_side",
@@ -286,11 +616,12 @@
    "provenance": "unfinished",
    "note": "turn to travel direction",
    "sha256": null,
-   "bytes": null
+   "bytes": null,
+   "status": "unfinished"
   },
   {
    "name": "door_walk_out",
-   "strip": "assets/art08/kaze_door_walk_out_strip.png",
+   "strip": "assets/art08/kaze_door_approach_walk_strip.png",
    "hframes": 8,
    "vframes": 1,
    "cell": [
@@ -304,12 +635,66 @@
    "fps": 12,
    "loop": true,
    "facing": "right (flip_h for left)",
-   "root_motion_px_per_frame": null,
-   "contact_frames": null,
-   "provenance": "unfinished",
-   "note": "slow lateral walk away",
-   "sha256": null,
-   "bytes": null
+   "root_motion_px_per_frame": [
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "far_foot": [
+     0,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "alias of door_approach_walk: identical drawn frames, same strip file",
+   "alias_of": "door_approach_walk",
+   "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+   "bytes": 475626
   }
  ]
 }
