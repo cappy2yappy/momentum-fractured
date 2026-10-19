@@ -1,0 +1,14 @@
+{
+  "notes": "PROVISIONAL demo launchers. Positions and flags are the TR05 idioms (package_tr05.py). Transition publishes exact arguments for the pilot at /home/claude/pilot_shared/TRANSITION_DEMO_ARGS.md; Phase B replaces these entries (or sets a per-variant demos list in pins.json). Seeded unlocks are QA fixtures, not earned progression.",
+  "save_version": 8,
+  "default": [
+    {"name": "Fresh", "seed": null, "flags": [], "persistent": true,
+     "describe": "Unseeded campaign; its own persistent profile inside the package folder."},
+    {"name": "Canal-Left", "seed": {"room": 13, "position": [220, 1198]}, "flags": [], "persistent": false,
+     "describe": "Room 13 canal-left doorway. Hold A to leave through the left threshold. Provisional: same seed as TR05 Canal-Automatic.",
+     "status": "provisional"},
+    {"name": "Cinematic-Pilot", "seed": {"room": 14, "position": [1450, 478]}, "flags": [], "persistent": false,
+     "describe": "Room 14 stair, press E beside the stairs for the staged passage sequence. Provisional: same seed as TR05 Stair-Cinematic.",
+     "status": "provisional"}
+  ]
+}
