@@ -20,7 +20,17 @@ func run():
 		var rects=[]
 		for r in w.platforms: rects.append([r.position.x,r.position.y,r.size.x,r.size.y])
 		var unchanged=same_signature(rects,before[index].platforms)
-		if index!=14:
+		if index==13:
+			# LEVEL pilot: every PR33 rectangle retained in order; the Canal-left gatehouse adds exactly its back pier and mass.
+			var retained13=true
+			for r in before[index].platforms:
+				var found=false
+				for q in rects: found=found or same_signature([q],[r])
+				retained13=retained13 and found
+			var ok13=retained13 and rects.size()==before[index].platforms.size()+2
+			print("PASS: " if ok13 else "FAIL: ","Room 13 retains every PR33 rectangle and adds only the 2 Canal gatehouse rectangles")
+			if not ok13: failures+=1
+		elif index!=14:
 			print("PASS: " if unchanged else "FAIL: ","Room %d PR33 collision signature (0.001px serialization tolerance)"%index)
 			if not unchanged: failures+=1
 		else:

@@ -1,0 +1,6 @@
+run_tr05_qa exit 0
+run_tr04_qa exit 1
+run_ld03_qa exit 1
+run_tr06_qa exit 0
+run_canal_qa exit 0
+done
