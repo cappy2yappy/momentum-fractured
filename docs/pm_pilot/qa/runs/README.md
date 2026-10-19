@@ -1,0 +1,1 @@
+Phase A history. These two runs (pr39-5dfc4c4, pr51-baedd67) were produced by the Phase A harness (tests/pm_pilot_qa.gd SHA-256 f3f3754e69f5e26b0b1298e77dbca224299a604de76814343016aa9755c0ae5d, commit 455f352). Kept unchanged. Phase B runs with the final harness are in ../runs_final/ (harness SHA-256 recorded in each result.json).

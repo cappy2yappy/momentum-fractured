@@ -69,3 +69,12 @@ HOME=/tmp/qa-profile XDG_DATA_HOME=/tmp/qa-profile /home/claude/godot_bin/Godot_
 ```
 
 Run `--import` once per fresh worktree first (about 40 s). Never commit stray `.import` files the import creates.
+
+## Phase B additions
+
+* `--expect-canal`: candidate must carry the Canal geometry; absence FAILs instead of SKIPping `hook_canal_containment`.
+* Output of the final-harness runs: `docs/pm_pilot/qa/runs_final/<label>/` (Phase A runs stay in `runs/` as history).
+* `--rendered` now also runs the `capture` section (Canal-left and, with the Transition build, the staged stair) and stores JPEG derivatives in `<run>/captures/`.
+* Extra processes per run: `harness_staged_flag` and `harness_staged_reduced_cli` (`--pm-staged-stair`, with and without `--tr05-reduced-motion`), the candidate's own suites, and the stock `cinematic_transitions` suite with the flag (9 failures are known and by design).
+* `scope_vs_pr51` in `result.json` lists changed areas, protected-file status and suspicious binaries.
+* Verdict `FAIL` also results from `verify_tr05_preservation.py` failing; see the report for the one known, explained instance.
