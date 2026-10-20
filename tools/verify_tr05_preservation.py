@@ -6,8 +6,21 @@ def original(path):return subprocess.check_output(['git','-c','safe.directory=*'
 def check(ok,label):
  print(('PASS: ' if ok else 'FAIL: ')+label)
  if not ok:failures.append(label)
+# Creator-approved narrow differences (ST-04 copy PR #72; defensive export filter).
+# Each entry is (new text, original text). A file may differ from PR37 only by these exact swaps.
+ALLOWED={
+ 'scripts/skyworks_region.gd':[
+  ('Foundry Rest Station restored. The Keeper waits east.','Foundry Refuge restored. The Keeper waits east.'),
+  ('FOUNDRY REST STATION \u2022 E','FOUNDRY REFUGE \u2022 E')],
+ 'export_presets.cfg':[
+  ('build/*,.autoconverted/*,source_art/*','build/*,.autoconverted/*')],
+}
+def normalized(path,data):
+ for new,old in ALLOWED.get(path,[]):
+  data=data.replace(new.encode(),old.encode())
+ return data
 for path in ['scripts/player.gd','scripts/bellroof_walk.gd','scripts/level_geometry.gd','scripts/mixed_transitions.gd','scripts/route_extension.gd','scripts/skyworks_region.gd','scripts/guard.gd','scripts/storm_keeper.gd','scripts/hud.gd','scripts/momentum_profile.gd','project.godot','export_presets.cfg','world/MapData.txt']:
- check((r/path).read_bytes()==original(path),path+' PR37 exact')
+ check(normalized(path,(r/path).read_bytes())==original(path),path+(' PR37 exact' if path not in ALLOWED else ' PR37 exact (allowed approved swaps only)'))
 for group in ['assets/kaze/cleaned','assets/web','assets/art04']:
  for p in sorted((r/group).rglob('*')):
   if p.is_file() and p.suffix in ['.png','.tres','.tscn']:
