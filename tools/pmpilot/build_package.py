@@ -340,7 +340,7 @@ def main():
             if reg['tr06'].get('passes') is not None:
                 assert tr06['passes'] == reg['tr06']['passes'], tr06
         for extra in reg.get('extra', []):
-            argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant) for x in extra['argv']]
+            argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant, head=head) for x in extra['argv']]
             _, qrow = run('extra-' + extra['name'], argv, timeout=extra.get('timeout', 900), regex=extra.get('pass_regex'), gate=not extra.get('informational'))
             if extra.get('informational') and not qrow['passed']:
                 findings.append('informational command %s did not pass (exit %s); recorded, not gating (QA pending)' % (extra['name'], qrow['exit']))
