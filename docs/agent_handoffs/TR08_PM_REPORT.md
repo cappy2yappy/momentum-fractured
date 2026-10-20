@@ -176,3 +176,11 @@ What I saw:
 2. **Art:** `door_turn_to_side`, plus a newly authored left-facing `door_turn_to_rear`. Both bind by path with no code change.
 3. **Coordinator / QA:** run the W3 hooks on the head SHA. The stage is a visible CanvasLayer at layer 6, and the doorway layer is layer 2 (follows the viewport). Then update `native_cinematic_transitions` waits if that suite is kept.
 4. **Build Shogun:** use `TR08_DEMO_ARGS.md`.
+
+## Appendix: rendered issue #42 run
+
+`tests/automatic_passage_reliability.gd` was run at head `416b0f52` under xvfb with Mesa llvmpipe (`gl_compatibility` / `opengl3`, 1280x720, `--fixed-fps 60`), run directly with a 3500 s limit.
+
+Result: **305 / 0, exit 0**, identical to the headless run and to the PR51 rendered baseline.
+
+Log: `docs/tr08/evidence/rendered_xvfb_automatic_passage_reliability.log.txt`.
