@@ -57,5 +57,220 @@
       "persistent": false,
       "describe": "Same stair, reduced motion from launch (about 0.95 s, no camera move). F6 toggles live."
     }
+  ],
+  "notes_w3": "Wave 3 launcher set (BUILD-07). Arguments follow Transition's docs/tr08 fixtures (PR64 head 775ef9ff) and are PROVISIONAL until /home/claude/wave3_shared/TR08_DEMO_ARGS.md or docs/tr08/DEMO_ARGS.md on the Transition branch confirms them. TR-08 is the default presentation in builds that contain it: do NOT pass --pm-staged-stair there (it turns TR-08 off). Builds without TR-08 (control, level-only, art-only) get flags_no_tr08 so their stair shows the pilot staged stair, the state the creator rejected, for a like-for-like comparison. --ld05-open-top is ignored by builds without LD-05. Seeded unlocks are QA fixtures, not earned progression.",
+  "w3": [
+    {
+      "name": "Fresh",
+      "seed": null,
+      "flags": [],
+      "flags_no_tr08": [
+        "--pm-staged-stair"
+      ],
+      "persistent": true,
+      "status": "provisional",
+      "describe": "Unseeded campaign, its own persistent profile in the package folder."
+    },
+    {
+      "name": "Stair-Fullscreen",
+      "seed": {
+        "room": 14,
+        "position": [
+          1410,
+          478
+        ]
+      },
+      "flags": [],
+      "flags_no_tr08": [
+        "--pm-staged-stair"
+      ],
+      "persistent": false,
+      "status": "provisional",
+      "fixture_check": [
+        "docs/tr08/fixtures/TR08-Stair-Ascend.json",
+        "docs/pm_pilot/transition/fixtures/PM-Stair-Cinematic.json"
+      ],
+      "describe": "Room 14 Bellroof Walk, 40 px left of the stair. Press E at the stair: R14 to R17. Full-screen staircase test (TR-08 builds)."
+    },
+    {
+      "name": "Stair-Return",
+      "seed": {
+        "room": 17,
+        "position": [
+          1650,
+          1298
+        ]
+      },
+      "flags": [],
+      "flags_no_tr08": [
+        "--pm-staged-stair"
+      ],
+      "persistent": false,
+      "status": "provisional",
+      "fixture_check": [
+        "docs/tr08/fixtures/TR08-Stair-Descend.json"
+      ],
+      "describe": "Room 17 at the return stair. Press E at the stair: R17 back to R14 (descending clip)."
+    },
+    {
+      "name": "Canal-Doorway",
+      "seed": {
+        "room": 13,
+        "position": [
+          330,
+          1158
+        ]
+      },
+      "flags": [],
+      "flags_no_tr08": [],
+      "persistent": false,
+      "status": "provisional",
+      "fixture_check": [
+        "docs/tr08/fixtures/TR08-Canal-Exit.json",
+        "docs/pm_pilot/transition/fixtures/PM-Canal-Left.json"
+      ],
+      "describe": "Room 13 Mooring Loft, feet (330,1158) on the shelf in the hallway. Hold A: the left exit is an automatic passage (no E) to the Canal door. Watch whether Kaze passes through the doorway or the screen wipes."
+    },
+    {
+      "name": "Canal-Return",
+      "seed": {
+        "room": 0,
+        "position": [
+          650,
+          778
+        ]
+      },
+      "flags": [],
+      "flags_no_tr08": [],
+      "persistent": false,
+      "status": "provisional",
+      "fixture_check": [
+        "docs/tr08/fixtures/TR08-Canal-Return.json"
+      ],
+      "describe": "Room 0 Canal Haven at the Canal door: the other side of the same doorway (R0 to R13)."
+    },
+    {
+      "name": "Geometry-Test",
+      "seed": {
+        "room": 13,
+        "position": [
+          330,
+          1158
+        ],
+        "overrides": {
+          "visited": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "flags": [],
+      "flags_no_tr08": [],
+      "persistent": false,
+      "status": "provisional",
+      "describe": "LD-05 geometry test: all 21 rooms already visited on the map, all abilities unlocked, start R13. Walk the rooms listed in GEOMETRY_TEST.txt and try to leave the intended space; roof course and wall caps are on."
+    },
+    {
+      "name": "Geometry-OpenTop",
+      "seed": {
+        "room": 13,
+        "position": [
+          330,
+          1158
+        ],
+        "overrides": {
+          "visited": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "flags": [
+        "--ld05-open-top"
+      ],
+      "flags_no_tr08": [
+        "--ld05-open-top"
+      ],
+      "persistent": false,
+      "status": "provisional",
+      "describe": "Same as Geometry-Test with the LD-05 roof course switched off (--ld05-open-top), for before/after comparison. No effect in builds without LD-05."
+    },
+    {
+      "name": "Reduced-Stair",
+      "seed": {
+        "room": 14,
+        "position": [
+          1410,
+          478
+        ]
+      },
+      "flags": [
+        "--tr05-reduced-motion"
+      ],
+      "flags_no_tr08": [
+        "--pm-staged-stair",
+        "--tr05-reduced-motion"
+      ],
+      "persistent": false,
+      "status": "provisional",
+      "describe": "Same as Stair-Fullscreen with reduced motion from launch. F6 toggles live."
+    },
+    {
+      "name": "Reduced-Canal",
+      "seed": {
+        "room": 13,
+        "position": [
+          330,
+          1158
+        ]
+      },
+      "flags": [
+        "--tr05-reduced-motion"
+      ],
+      "flags_no_tr08": [
+        "--tr05-reduced-motion"
+      ],
+      "persistent": false,
+      "status": "provisional",
+      "describe": "Same as Canal-Doorway with reduced motion from launch. F6 toggles live."
+    }
   ]
 }

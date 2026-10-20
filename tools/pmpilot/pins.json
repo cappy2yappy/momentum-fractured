@@ -374,6 +374,287 @@
         "assets/pm_pilot/canal/*.png.import"
       ],
       "qa_status": "pending"
+    },
+    "w3-control": {
+      "label": "Wave 3 control: candidate/pm-pilot-combined PR61 head (the build the creator rejected on the macOS playtest)",
+      "kind": "control",
+      "owner": "Coordinator",
+      "branch": "candidate/pm-pilot-combined",
+      "pull_request": 61,
+      "commit": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/",
+        "assets/art08/",
+        "source_art/art08/",
+        "tools/art08/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": false,
+      "expect_art08": false,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/staged_stair_cinematic.gd",
+        "scripts/canal_gatehouse.gd",
+        "assets/pm_pilot/canal/*.png.import"
+      ],
+      "qa_status": "pending",
+      "expected_tree": "2a41ac47390a2a4e025435512d2b623894733270"
+    },
+    "w3-transition": {
+      "label": "Wave 3 Transition-only: TR-08 on the PR61 control (stage 1: engine with labelled stand-ins until real clips are bound)",
+      "kind": "candidate",
+      "owner": "Transition",
+      "branch": "feature/tr08-fullscreen-embodied-cinematics",
+      "pull_request": 64,
+      "commit": "775ef9ff07154e6d57c2d19368792d09722a28c4",
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [
+        "scripts/cinematic_transitions.gd",
+        "scripts/transition_pilot_data.gd",
+        "scripts/tr08_*.gd",
+        "scripts/tr08_*.gd.uid",
+        "tests/cinematic_transitions.gd",
+        "tests/pm_canal_left_passage.gd",
+        "tests/level_geometry.gd",
+        "tests/world_expansion.gd",
+        "tests/tr08_*.gd",
+        "tests/tr08_*.gd.uid",
+        "tests/capture_tr08.gd",
+        "tests/capture_tr08.gd.uid",
+        "tools/tr08_*.py",
+        "docs/tr08/**",
+        "docs/agent_handoffs/TR08_PM_REPORT.md"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/",
+        "assets/art08/",
+        "source_art/art08/",
+        "tools/art08/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": true,
+      "expect_art08": false,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/tr08_embodied_cinematics.gd",
+        "scripts/tr08_clip_library.gd",
+        "scripts/tr08_stair_stage.gd",
+        "scripts/tr08_canal_doorway.gd"
+      ],
+      "qa_status": "pending"
+    },
+    "w3-level": {
+      "label": "Wave 3 Level-only: LD-05 intentional boundaries on the PR61 control",
+      "kind": "candidate",
+      "owner": "Level",
+      "branch": "feature/ld05-intentional-world-boundaries",
+      "pull_request": 63,
+      "commit": "a6e3de254185cb76b1546c2723b707f4154e9f68",
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [
+        "scripts/room_boundary.gd",
+        "scripts/room_presentation.gd",
+        "scripts/world.gd",
+        "scripts/world_expansion.gd",
+        "scripts/*.gd.uid",
+        "tests/ld05_boundaries.gd",
+        "tests/ld05_boundaries.gd.uid",
+        "tools/ld05/**",
+        "docs/ld05/**",
+        "docs/agent_handoffs/LD05_PM_REPORT.md",
+        "docs/pm_pilot/level/**",
+        "docs/*.png.import",
+        "docs/*.jpg.import"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/",
+        "assets/art08/",
+        "source_art/art08/",
+        "tools/art08/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": false,
+      "expect_art08": false,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/room_boundary.gd"
+      ],
+      "qa_status": "pending"
+    },
+    "w3-art": {
+      "label": "Wave 3 Art-only: ART-08 clip PNGs on the PR61 control (candidate / stand-in / unfinished; none creator-approved; nothing plays them)",
+      "kind": "candidate",
+      "owner": "Art",
+      "branch": "art/art08-embodied-cinematic-animation",
+      "pull_request": 62,
+      "commit": "61b321944f44df573a0d9d5d231d3d358823ef0d",
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [
+        "assets/art08/**",
+        "source_art/art08/**",
+        "tools/art08/**",
+        "docs/art/art08/**",
+        "docs/agent_handoffs/ART08_PM_REPORT.md"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": false,
+      "expect_art08": true,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "assets/art08/MANIFEST.json",
+        "assets/art08/kaze_*_strip.png.import"
+      ],
+      "qa_status": "pending"
+    },
+    "w3-combined": {
+      "label": "Wave 3 combined test candidate (coordinator branch: Transition real clips + Level + Art; SHA to come)",
+      "kind": "combined",
+      "owner": "Coordinator",
+      "branch": "(to be created by the coordinator)",
+      "pull_request": null,
+      "commit": null,
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [
+        "assets/art08/**",
+        "docs/*.jpg.import",
+        "docs/*.png.import",
+        "docs/agent_handoffs/ART08_PM_REPORT.md",
+        "docs/agent_handoffs/LD05_PM_REPORT.md",
+        "docs/agent_handoffs/TR08_PM_REPORT.md",
+        "docs/art/art08/**",
+        "docs/ld05/**",
+        "docs/pm_pilot/level/**",
+        "docs/tr08/**",
+        "scripts/*.gd.uid",
+        "scripts/cinematic_transitions.gd",
+        "scripts/room_boundary.gd",
+        "scripts/room_presentation.gd",
+        "scripts/tr08_*.gd",
+        "scripts/tr08_*.gd.uid",
+        "scripts/transition_pilot_data.gd",
+        "scripts/world.gd",
+        "scripts/world_expansion.gd",
+        "source_art/art08/**",
+        "tests/capture_tr08.gd",
+        "tests/capture_tr08.gd.uid",
+        "tests/cinematic_transitions.gd",
+        "tests/ld05_boundaries.gd",
+        "tests/ld05_boundaries.gd.uid",
+        "tests/level_geometry.gd",
+        "tests/pm_canal_left_passage.gd",
+        "tests/tr08_*.gd",
+        "tests/tr08_*.gd.uid",
+        "tests/world_expansion.gd",
+        "tools/art08/**",
+        "tools/ld05/**",
+        "tools/tr08_*.py"
+      ],
+      "allow_protected": [],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": true,
+      "expect_art08": true,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "scripts/tr08_embodied_cinematics.gd",
+        "scripts/room_boundary.gd",
+        "assets/art08/MANIFEST.json",
+        "assets/art08/kaze_*_strip.png.import"
+      ],
+      "qa_status": "pending",
+      "expected_tree": null,
+      "allowed_paths_note": "union of the three candidate allowlists; the coordinator's merge may also need merge-resolution files, which then fail the diff check and are reported"
     }
   },
   "qa_harness": {
@@ -384,5 +665,12 @@
     "semantics": "exit 0 = PASS or PASS_WITH_SKIPS, 1 = FAIL; cinematic completion and Canal containment hooks SKIP until QA publishes Phase B",
     "note": "Supplied by the QA agent through the coordinator. Not part of any candidate source; checked out beside it by the builder.",
     "status": "QA pending: harness head pinned mid Phase B; hooks for cinematic completion and Canal containment may still SKIP. Results are recorded, not gating."
+  },
+  "wave3": {
+    "base_commit": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+    "base_tree": "2a41ac47390a2a4e025435512d2b623894733270",
+    "base_branch": "candidate/pm-pilot-combined",
+    "pr51_commit": "baedd6786ad4bee2123ea872b437bbb98e6d2721",
+    "note": "BUILD-07. Candidate pins are the SHAs on origin at Phase A; the coordinator re-pins them at Phase B. w3-combined has commit null until the coordinator supplies the combined Wave 3 branch SHA. No QA harness command is wired for w3 variants (QA wave 3 runs its own harness on pushed SHAs)."
   }
 }
