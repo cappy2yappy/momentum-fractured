@@ -11,9 +11,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--repo', type=Path, required=True)
     ap.add_argument('--variants', default='w3-control,w3-transition,w3-level,w3-art')
+    ap.add_argument('--pins')
     ap.add_argument('--work', type=Path, default=Path(tempfile.mkdtemp(prefix='w3prep-')))
     a = ap.parse_args()
-    pins = pinlib.load()
+    pins = pinlib.load(a.pins)
     demos_doc = json.loads((HERE / 'demos.json').read_text(encoding='utf-8'))
     report, bad = {}, 0
     for name in a.variants.split(','):
@@ -37,11 +38,15 @@ def main():
             for kind in ('windows', 'macos'):
                 for d in demos:
                     bp.launcher_text(kind, 'X.exe', name, d, d.get('seed') is not None)
+            gd = []
+            for rel in spec.get('require_gdignore', []):
+                gd.append(dict(path=rel + '/.gdignore', tracked=pinlib.git(wt, 'ls-files', '--', rel + '/.gdignore') == rel + '/.gdignore'))
+            overlay = spec.get('build_gdignore', [])
             tree_ok = (not spec.get('expected_tree')) or spec['expected_tree'] == pinlib.git(wt, 'rev-parse', 'HEAD^{tree}')
             r = dict(commit=commit, changed=len(diff['changed']), diff_violations=diff['violations'], inventory_problems=inv['problems'],
                      art08=(inv['art08']['manifest'] or {}).get('label_counts'), ld05=bool(inv['ld05']), tr08=inv['tr08']['tr08_present'],
-                     tr08_flags=sorted(inv['tr08']['flags']), fixtures=fx, expected_tree_ok=tree_ok)
-            if diff['violations'] or inv['problems'] or not tree_ok or any(x['equals_generated_seed'] is False for x in fx):
+                     tr08_flags=sorted(inv['tr08']['flags']), fixtures=fx, expected_tree_ok=tree_ok, gdignore_tracked=gd, gdignore_build_overlay=overlay)
+            if diff['violations'] or inv['problems'] or not tree_ok or any(not g['tracked'] for g in gd) or any(x['equals_generated_seed'] is False for x in fx):
                 bad += 1
             report[name] = r
         finally:

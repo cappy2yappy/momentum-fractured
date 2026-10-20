@@ -227,6 +227,9 @@ def main():
     # Build-time packaging exclusions: a .gdignore in a source-art folder keeps it out of the project resource set (and so out of
     # the pack). Untracked, not part of the pinned tree, recorded in the manifest. The owner should commit it.
     overlays = []
+    for rel in spec.get('require_gdignore', []):  # the owner committed it: assert, never create
+        tracked = git(root, 'ls-files', '--', rel + '/.gdignore').decode().strip()
+        assert tracked == rel + '/.gdignore', 'Pinned source must TRACK %s/.gdignore (no build-time overlay in this mode)' % rel
     for rel in spec.get('build_gdignore', []):
         if (root / rel).is_dir() and not (root / rel / '.gdignore').exists():
             (root / rel / '.gdignore').write_text('', encoding='utf-8')
@@ -410,6 +413,7 @@ def main():
     records_a, scripts = pack_records(packed.read_bytes(), root)
     records_b, _ = pack_records(repeat.read_bytes() if target == 'windows' else repeat_pack, root)
     differences = [n for n in sorted(records_a.keys() | records_b.keys()) if records_a.get(n) != records_b.get(n)]
+    pack_file_list_sha256 = digest('\n'.join(sorted(records_a)).encode())
     reproducibility = {'export_a_sha256': digest(raw.read_bytes()), 'export_b_sha256': digest(repeat.read_bytes()),
                        'export_bytes_identical': raw.read_bytes() == repeat.read_bytes(), 'pck_a_sha256': digest(first_pack),
                        'pck_b_sha256': digest(repeat_pack), 'pck_bytes_identical': first_pack == repeat_pack,
@@ -593,12 +597,8 @@ def main():
     # 6. Exported-resource suites (the exported pack is mounted into the editor binary; works on any host).
     env = profile('packaged')
     env.update(BUILD06_PACK=str(export_pack), BUILD06_CAPTURE_DIR=str(evidence / 'native-captures'), BUILD06_GRAPHICAL='1' if a.graphical else '0')
-    _ntext, nrow = run('native-exported-input', [a.godot] + ([] if a.graphical else ['--headless']) + ['--path', root, '--fixed-fps', '60', '--script', HERE / 'packaged_native.gd', '--', '--test'],
-        env, 300, regex=reg['packaged_native_regex'], gate=not spec.get('native_input_informational'))
-    if spec.get('native_input_informational') and not nrow['passed']:
-        nf = [l for l in _ntext.splitlines() if l.startswith('FAIL')]
-        findings.append('native-exported-input did NOT pass (%d FAIL lines, informational for this variant: the suite encodes pre-TR-08 presentation timing, cause not verified): %s' % (len(nf), ' // '.join(sorted(set(nf))[:25])))
-        nrow['recorded_fail_lines'] = nf
+    run('native-exported-input', [a.godot] + ([] if a.graphical else ['--headless']) + ['--path', root, '--fixed-fps', '60', '--script', HERE / 'packaged_native.gd', '--', '--test'],
+        env, 300, regex=reg['packaged_native_regex'])  # BLOCKING for every variant
     for suite in ['intentional_space', 'audit_intentional_space', 'movement_momentum', 'save_compatibility', 'expansion_gates_save', 'skyworks_progression']:
         method = '_run' if suite in ['movement_momentum', 'save_compatibility', 'skyworks_progression'] else 'run'
         wrapper = out / ('packaged-' + suite + '.gd')
@@ -645,7 +645,7 @@ def main():
         inventory_sha256=digest(json.dumps(inventory, sort_keys=True).encode()) if inventory else None,
         art08_label_counts=(inventory['art08']['manifest'] or {}).get('label_counts') if inventory else None,
         art08_creator_approved_clips=0 if inventory else None,
-        build_overlays=overlays,
+        build_overlays=overlays, pack_file_list_sha256=pack_file_list_sha256,
         launcher_args={'Play-' + d['name']: d.get('flags', []) for d in demos},
         limitations=['No hands-on human campaign', 'No physical gamepad', 'No sustained FPS',
                      'Hosted runs are headless; graphical coverage requires a desktop host',
@@ -656,12 +656,43 @@ def main():
         shutil.copy2(os.environ['PMPILOT_INSTALL'], evidence / 'INSTALL.json')
     save_results()
     print(json.dumps({k: v for k, v in manifest.items() if k not in ('members', 'policy', 'changed_files')}), flush=True)
+    emit_facts(manifest, inventory, rows, pins['variants'][a.variant], launcher_checks)
+
+
+def emit_facts(manifest, inventory, rows, spec, launcher_checks):
+    """Echo the key integrity facts into check-run annotations, which are readable through the REST API when artifacts and logs are not.
+    GitHub keeps at most 10 notices per step; this emits 4 (plus the resource-hash notice)."""
+    if not os.environ.get('GITHUB_ACTIONS'):
+        return
+    v = manifest['variant']
+    annotate('notice', 'pmpilot facts identity %s' % v, json.dumps(dict(
+        variant=v, target=manifest['target'], source_head=manifest['source_head'], source_tree=manifest['source_tree'], pinned_commit=spec.get('commit'),
+        head_equals_pin=manifest['source_head'] == spec.get('commit'), expected_tree=spec.get('expected_tree'), tree_equals_expected=(manifest['source_tree'] == spec['expected_tree']) if spec.get('expected_tree') else None,
+        controls_commit=manifest['controls_commit'], run_url=manifest['run_url'], archive=manifest['archive'], archive_sha256_inner=manifest['archive_sha256'],
+        archive_bytes=manifest['archive_bytes'], pck_sha256=manifest['pck_sha256'], pck_entries=manifest['pck_entries'],
+        pack_file_list_sha256=manifest['pack_file_list_sha256'], canonical_resource_sha256=manifest['reproducibility']['canonical_resource_sha256'],
+        export_bytes_identical=manifest['reproducibility']['export_bytes_identical'], resource_payloads_identical=manifest['reproducibility']['resource_payloads_identical'],
+        members=len(manifest['members']), compare_base=manifest['compare_base'], changed_files=len(manifest['changed_files'])), sort_keys=True))
+    checks = [dict(t=r['test'], ok=r['passed'], passes=r['passes'], exit=r['exit'], err=len(r['errors'])) for r in rows]
+    annotate('notice', 'pmpilot facts checks %s' % v, json.dumps(dict(
+        variant=v, complete_checks=manifest['complete_checks'], checks=checks, findings=manifest['findings'], not_executed=manifest['not_executed'],
+        build_overlays=manifest['build_overlays'], launcher_isolation=[(l['launcher'], l['isolated']) for l in launcher_checks],
+        source_suites=manifest['source_suites'], source_assertions=manifest['source_assertions'], exported_assertions=manifest['exported_assertions'],
+        validation=manifest['validation_levels']['native_graphical_validation'], export_success=manifest['validation_levels']['export_success']), sort_keys=True))
+    if inventory:
+        clips = [[c['name'], c['provenance_label'], c['sha256'], c['alias_of'], c['in_exported_pack']] for c in (inventory['art08']['clips'] or [])]
+        annotate('notice', 'pmpilot facts inventory %s' % v, json.dumps(dict(
+            variant=v, art08_present=inventory['art08']['present'], art08_manifest_sha256=(inventory['art08']['manifest'] or {}).get('manifest_sha256'),
+            art08_label_counts=(inventory['art08']['manifest'] or {}).get('label_counts'), art08_creator_approved=0, clips=clips,
+            art07_excluded=inventory['art07']['excluded'], ld05=(inventory['ld05'] or {}).get('switches'), tr08_present=inventory['tr08']['tr08_present'],
+            inventory_problems=inventory['problems'], inventory_sha256=manifest['inventory_sha256']), sort_keys=True))
+    annotate('notice', 'pmpilot facts launchers %s' % v, json.dumps(manifest['launcher_args'], sort_keys=True))
 
 
 def annotate(level, title, message):
     """GitHub workflow command: surfaces in the check-run annotations API even when job logs are not readable."""
     text = message.replace('%', '%25').replace('\r', '').replace('\n', '%0A')
-    print('::%s title=%s::%s' % (level, title, text[:8000]), flush=True)
+    print('::%s title=%s::%s' % (level, title, text[:60000]), flush=True)
 
 
 if __name__ == '__main__':

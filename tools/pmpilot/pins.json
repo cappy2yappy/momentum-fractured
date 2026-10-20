@@ -458,6 +458,7 @@
         "tests/capture_tr08.gd.uid",
         "tests/cinematic_transitions.gd",
         "tests/level_geometry.gd",
+        "tests/native_cinematic_transitions.gd",
         "tests/pm_canal_left_passage.gd",
         "tests/tr08_*.gd",
         "tests/tr08_*.gd.uid",
@@ -515,8 +516,7 @@
         "assets/art08/MANIFEST.json",
         "assets/art08/kaze_*_strip.png.import"
       ],
-      "qa_status": "pending",
-      "native_input_informational": true
+      "qa_status": "pending"
     },
     "w3-level": {
       "label": "Wave 3 Level-only: LD-05 intentional boundaries on the PR61 control",
@@ -694,6 +694,7 @@
         "tests/ld05_boundaries.gd",
         "tests/ld05_boundaries.gd.uid",
         "tests/level_geometry.gd",
+        "tests/native_cinematic_transitions.gd",
         "tests/pm_canal_left_passage.gd",
         "tests/tr08_*.gd",
         "tests/tr08_*.gd.uid",
@@ -755,7 +756,6 @@
       "qa_status": "pending",
       "expected_tree": "d76d23c9e57b189d29010943cd2ffcd02b35dcaf",
       "allowed_paths_note": "includes deletion of the two .pyc files tracked under tools/pm_pilot_art/__pycache__ in the control 49ae3efe",
-      "native_input_informational": true,
       "build_gdignore": [
         "source_art/art08"
       ]
