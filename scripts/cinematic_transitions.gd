@@ -1,5 +1,9 @@
 extends Node2D
 ## TR-05: endpoint intent and cinematic presentation. Never owns world topology.
+const PilotData = preload("res://scripts/transition_pilot_data.gd")
+const StagedStair = preload("res://scripts/staged_stair_cinematic.gd")
+var staged = StagedStair.new()
+var art: Dictionary = {}
 var enabled = true
 var reduced = false
 var plain = false
@@ -23,6 +27,8 @@ func configure(w):
 	enabled=not "--tr05-legacy" in args
 	reduced="--tr05-reduced-motion" in args or w.embodied_transitions.comparison=="reduced"
 	plain="--tr05-plain" in args or w.embodied_transitions.comparison=="plain"
+	art=PilotData.load_art()
+	add_child(staged);staged.configure(w,self,args)
 	if not enabled: return
 	w.embodied_transitions.depth_demo=false # R13/R14 is a reciprocal SIDE passage.
 	w.embodied_transitions.art_preview=true
@@ -99,6 +105,7 @@ func policy(w,index:int,target:int) -> Dictionary:
 	return {"mode":"depth_door","trigger":"interact","exit_heading":w.player.facing,"arrival_heading":1 if p.arrival==Vector2.INF or p.arrival.x<w.room_size(target).x/2 else -1}
 
 func room_loaded(w):
+	staged.room_loaded(w)
 	sampled=false;armed.clear()
 	if active and (w.transition<=0 or w.room!=chosen.get("target",-1) or w.pending_room!=-1): cancel(w)
 	if not active: cooldown=0.0
@@ -171,7 +178,7 @@ func begin(w,target:int):
 		w.mixed_transitions.active_walk=true
 		w.mixed_transitions.direction=int(chosen.heading)
 		w.mixed_transitions.carried_x=carried_x
-	if chosen.mode in ["stair_up","stair_down"] and not reduced and not plain:
+	if chosen.mode in ["stair_up","stair_down"] and not reduced and not plain and staged.phase=="":
 		camera_state={"zoom":w.camera.zoom,"position":w.camera.position,"offset":w.camera.offset,"smoothing":w.camera.position_smoothing_enabled}
 		w.camera.position_smoothing_enabled=false
 
@@ -190,6 +197,11 @@ func arrived(w):
 	elif chosen.mode in ["stair_up","stair_down"]:
 		w.player.facing=int(w.embodied_transitions.PILOTS["%d:%d"%[w.pending_from_room,w.room]].arrival_heading)
 	cooldown=0.45;armed.clear();sampled=false
+	staged.arrived(w)
+
+## PM pilot hook from world.request_room (after can_enter). See staged_stair_cinematic.gd.
+func intercept(w,target:int,arrival:Vector2) -> bool:
+	return enabled and staged.intercept(w,target,arrival)
 
 func arrival_position(w,p:Dictionary) -> Vector2:
 	var at=p.at-Vector2(int(p.heading)*64,2)
@@ -207,6 +219,10 @@ func label(w,p:Dictionary) -> String:
 	return w.mixed_transitions.label(w,p)
 
 func present(w):
+	if staged.phase!="":
+		# The staged pilot owns camera and proxy for its whole sequence.
+		staged.tick(w)
+		if staged.phase!="": return
 	if not enabled or not active: return
 	if w.transition<=0: finish(w);return
 	var e=w.embodied_transitions
@@ -246,6 +262,7 @@ func finish(w):
 	queue_redraw()
 
 func cancel(w):
+	staged.cancel(w)
 	finish(w);armed.clear();sampled=false;cooldown=0.45
 
 func _process(_dt):
@@ -257,6 +274,7 @@ func _unhandled_key_input(event):
 		world.embodied_transitions.comparison="reduced" if reduced else ("plain" if plain else "art-preview")
 		world.mixed_transitions.graphic_mode="reduced" if reduced else ("plain" if plain else "graphic")
 		if reduced: restore_camera(world)
+		staged.reduced_changed(world)
 		world.announce("REDUCED MOTION ON" if reduced else "CINEMATIC MOTION ON",2)
 		get_viewport().set_input_as_handled()
 
@@ -266,6 +284,8 @@ func draw_exit(w,at:Vector2) -> bool:
 		if p.at!=at or p.mode!="horizontal_walk": continue
 		var allowed=passage_allowed(w,p)
 		var color=Color("d9c9ad") if allowed else Color("c48e78")
+		if "%d:%d"%[w.room,p.target]==PilotData.canal_key():
+			draw_canal_door(w,p,allowed,color);return true
 		w.draw_rect(Rect2(at-Vector2(48,132),Vector2(96,132)),Color("141c29"))
 		for side in [-1,1]: w.draw_rect(Rect2(at+Vector2(side*52-6,-140),Vector2(12,140)),Color("677074"))
 		w.draw_line(at+Vector2(-60,-140),at+Vector2(60,-140),Color("92908a"),8)
@@ -276,3 +296,44 @@ func draw_exit(w,at:Vector2) -> bool:
 		w.draw_string(ThemeDB.fallback_font,at+Vector2(-70,28),"WALK THROUGH" if allowed else "LOCKED",HORIZONTAL_ALIGNMENT_LEFT,-1,13,color)
 		return true
 	return false
+
+## PM pilot: Canal-left door drawn exactly on the contract aperture/frame, so the
+## visible opening and the unchanged x=120 trigger coincide. Presentation only.
+func draw_canal_door(w,p:Dictionary,allowed:bool,color:Color):
+	var d=PilotData.CANAL_LEFT
+	var ap:Rect2=d.aperture
+	var fr:Rect2=d.frame
+	if art.has("L1_door_frame"):
+		# Combined Art Mane layers, absolute room positions, back to front.
+		for row in PilotData.CANAL_ART:
+			if not art.has(row[0]): continue
+			var tint=PilotData.LOCKED_TINT if not allowed and row[0] in ["L1_door_interior","L1_door_leaf"] else Color.WHITE
+			w.draw_texture(art[row[0]],row[2],tint)
+		# The hall back wall is drawn after the world's platforms: repaint any walkable
+		# surface it overlaps (R13 shelf 200,1160) so ledges stay legible.
+		var hall=Rect2(72,1020,224,180)
+		for rect in w.platforms:
+			if rect.size.y==40 and rect.intersects(hall) and rect.position.y<hall.end.y-1: w.LevelGeometry.draw_surface(w,rect)
+	else:
+		# Procedural stand-in on the same contract rectangles.
+		w.draw_rect(Rect2(fr.position,Vector2(ap.position.x-fr.position.x,fr.size.y)),Color("4d535e"))
+		w.draw_rect(Rect2(Vector2(ap.end.x,fr.position.y),Vector2(fr.end.x-ap.end.x,fr.size.y)),Color("4d535e"))
+		w.draw_rect(Rect2(fr.position,Vector2(fr.size.x,ap.position.y-fr.position.y)),Color("6a6e72"))
+		for y in range(int(ap.position.y)+30,int(fr.end.y),33):
+			w.draw_line(Vector2(fr.position.x,y),Vector2(ap.position.x,y),Color("3a3f49"),2)
+			w.draw_line(Vector2(ap.end.x,y),Vector2(fr.end.x,y),Color("3a3f49"),2)
+		w.draw_line(Vector2(fr.position.x,ap.position.y),Vector2(fr.end.x,ap.position.y),Color("92908a"),4)
+		w.draw_rect(ap,Color("10161f") if allowed else Color("2a1a1c"))
+	w.draw_line(Vector2(ap.position.x,ap.end.y-3),Vector2(ap.end.x,ap.end.y-3),color,4)
+	# Threshold tick at the real trigger line (feet x = trigger_x).
+	w.draw_line(Vector2(d.trigger_x,ap.end.y-12),Vector2(d.trigger_x,ap.end.y),Color(color,0.8),3)
+	var dir=int(p.heading);var c=Vector2(ap.get_center().x,ap.position.y+60)
+	w.draw_line(c+Vector2(-18*dir,0),c+Vector2(18*dir,0),color,3)
+	w.draw_polyline(PackedVector2Array([c+Vector2(4*dir,-12),c+Vector2(18*dir,0),c+Vector2(4*dir,12)]),color,3)
+	w.draw_string(ThemeDB.fallback_font,Vector2(ap.position.x-26,ap.end.y+28),"WALK THROUGH" if allowed else "LOCKED",HORIZONTAL_ALIGNMENT_LEFT,-1,13,color)
+
+## L4 mouth corbel sits in front of Kaze (this node is z 3), never over the aperture.
+func _draw():
+	if not enabled or not is_instance_valid(world) or world.room!=PilotData.CANAL_LEFT.room: return
+	var row=PilotData.CANAL_FRONT
+	if art.has(row[0]): draw_texture(art[row[0]],row[2])

@@ -1,0 +1,320 @@
+[
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_00_before.png",
+    "phase": "before",
+    "room": 14,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_01_t0.13_enter.png",
+    "phase": "enter",
+    "placeholder": "APPROACH · APPROVED RUN CYCLE",
+    "room": 14,
+    "t": 0.15,
+    "transition": 0,
+    "zoom": 1.04357862472534
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_02_t0.30_enter.png",
+    "phase": "enter",
+    "placeholder": "ASCENT · HELD ART-04 KEY ON 3 TREADS · FULL GAIT PENDING",
+    "room": 14,
+    "t": 0.316666666666667,
+    "transition": 0,
+    "zoom": 1.15701353549957
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_03_t0.52_enter.png",
+    "phase": "enter",
+    "placeholder": "ASCENT · HELD ART-04 KEY ON 3 TREADS · FULL GAIT PENDING",
+    "room": 14,
+    "t": 0.533333333333333,
+    "transition": 0,
+    "zoom": 1.30817711353302
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_04_t0.75_enter.png",
+    "phase": "enter",
+    "placeholder": "ASCENT · HELD ART-04 KEY ON 3 TREADS · FULL GAIT PENDING",
+    "room": 14,
+    "t": 0.766666666666667,
+    "transition": 0,
+    "zoom": 1.35000002384186
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_05_t1.00_load.png",
+    "phase": "load",
+    "placeholder": "LOADER 0.65 S (INHERITED)",
+    "room": 14,
+    "t": 1.01666666666667,
+    "transition": 0.483333333333333,
+    "zoom": 1.35000002384186
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_cinematic_06_t1.18_load.png",
+    "phase": "load",
+    "placeholder": "LOADER 0.65 S (INHERITED)",
+    "room": 17,
+    "t": 1.2,
+    "transition": 0.3,
+    "zoom": 1.35000002384186
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_cinematic_07_t1.45_load.png",
+    "phase": "load",
+    "placeholder": "LOADER 0.65 S (INHERITED)",
+    "room": 17,
+    "t": 1.46666666666667,
+    "transition": 0.033333333333333,
+    "zoom": 1.35000002384186
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_cinematic_08_t1.75_arrive.png",
+    "phase": "arrive",
+    "placeholder": "ARRIVAL KEY PENDING · APPROVED IDLE CYCLE",
+    "room": 17,
+    "t": 1.76666666666667,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.26826977729797
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_cinematic_09_t2.05_arrive.png",
+    "phase": "arrive",
+    "placeholder": "ARRIVAL KEY PENDING · APPROVED IDLE CYCLE",
+    "room": 17,
+    "t": 2.06666666666667,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.09074079990387
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_cinematic_10_t2.30_arrive.png",
+    "phase": "arrive",
+    "placeholder": "ARRIVAL KEY PENDING · APPROVED IDLE CYCLE",
+    "room": 17,
+    "t": 2.31666666666667,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.00157248973846
+  },
+  {
+    "duration": 2.35,
+    "feet": [
+      1680.0,
+      1299.998046875
+    ],
+    "file": "pm_stair_14-17_cinematic_99_control.png",
+    "phase": "control",
+    "result": "completed",
+    "room": 17,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_reduced_00_before.png",
+    "phase": "before",
+    "room": 14,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_reduced_01_t0.08_enter.png",
+    "phase": "enter",
+    "placeholder": "REDUCED MOTION · HELD ART-04 STAIR KEY · FULL GAIT PENDING",
+    "room": 14,
+    "t": 0.1,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1410.0,
+      479.998046875
+    ],
+    "file": "pm_stair_14-17_reduced_02_t0.40_load.png",
+    "phase": "load",
+    "placeholder": "LOADER 0.65 S (INHERITED)",
+    "room": 14,
+    "t": 0.416666666666667,
+    "transition": 0.383333333333333,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_reduced_03_t0.70_load.png",
+    "phase": "load",
+    "placeholder": "LOADER 0.65 S (INHERITED)",
+    "room": 17,
+    "t": 0.716666666666667,
+    "transition": 0.083333333333333,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      1680.0,
+      1298.0
+    ],
+    "file": "pm_stair_14-17_reduced_04_t0.90_arrive.png",
+    "phase": "arrive",
+    "placeholder": "ARRIVAL KEY PENDING · APPROVED IDLE CYCLE",
+    "room": 17,
+    "t": 0.916666666666667,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.0
+  },
+  {
+    "duration": 0.950000000000001,
+    "feet": [
+      1680.0,
+      1299.998046875
+    ],
+    "file": "pm_stair_14-17_reduced_99_control.png",
+    "phase": "control",
+    "result": "completed",
+    "room": 17,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.0
+  },
+  {
+    "art": true,
+    "feet": [
+      330.0,
+      1199.998046875
+    ],
+    "file": "pm_canal_00_approach.png",
+    "geometry": "LEVEL combined",
+    "room": 13,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      190.833465576172,
+      1199.93383789062
+    ],
+    "file": "pm_canal_01_hallway.png",
+    "geometry": "LEVEL combined",
+    "room": 13,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      137.500122070312,
+      1199.93383789062
+    ],
+    "file": "pm_canal_02_in_aperture.png",
+    "geometry": "LEVEL combined",
+    "room": 13,
+    "transition": 0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      117.500228881836,
+      1199.93432617188
+    ],
+    "file": "pm_canal_03_trigger.png",
+    "geometry": "LEVEL combined",
+    "room": 13,
+    "transition": 0.616666666666667,
+    "trigger_x": 120.0,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      117.500228881836,
+      1199.93432617188
+    ],
+    "file": "pm_canal_04_wipe.png",
+    "room": 13,
+    "transition": 0.45,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      550.610900878906,
+      779.933715820312
+    ],
+    "file": "pm_canal_05_arrived_r0.png",
+    "room": 0,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      184.0,
+      1199.998046875
+    ],
+    "file": "pm_canal_06_arrived_hallway.png",
+    "geometry": "LEVEL combined",
+    "room": 13,
+    "transition": -0.000000000000000284494650060196,
+    "zoom": 1.0
+  },
+  {
+    "feet": [
+      330.0,
+      1198.0
+    ],
+    "file": "pm_canal_07_locked.png",
+    "locked": true,
+    "room": 13,
+    "transition": 0,
+    "zoom": 1.0
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "suite": "pm_staged_stair_cinematic",
+    "exit": 0,
+    "seconds": 4.62,
+    "passes": 50,
+    "failures": 0,
+    "script_errors": 0,
+    "flags": [
+      "--test",
+      "--pm-staged-stair"
+    ]
+  },
+  {
+    "suite": "pm_canal_left_passage",
+    "exit": 0,
+    "seconds": 2.85,
+    "passes": 55,
+    "failures": 0,
+    "script_errors": 0,
+    "flags": []
+  },
+  {
+    "suite": "automatic_passage_reliability",
+    "exit": 0,
+    "seconds": 18.95,
+    "passes": 305,
+    "failures": 0,
+    "script_errors": 0,
+    "flags": []
+  }
+]

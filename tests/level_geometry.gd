@@ -19,6 +19,8 @@ func run():
 		w.build_room(index);freeze();await physics_frame
 		for at in w.LevelGeometry.LANDINGS[index]:
 			var edge=28 if at.x<200 else w.room_size(index).x-28
+			# R13 left: the LEVEL pilot gatehouse back pier occupies x 0..72, so the stopped-capsule contact is its face.
+			if index==13 and at.x<200: edge=90
 			p.position=Vector2(edge,at.y-2);p.velocity=Vector2.ZERO;p.touch={};ticks(30)
 			check(p.is_on_floor() and absf(p.position.y-at.y)<1,"R%d %s perimeter supports stopped capsule"%[index,at])
 			var grounded=true
@@ -41,7 +43,7 @@ func run():
 	w.build_room(13);freeze();await physics_frame
 	p.position=Vector2(450,440);p.velocity=Vector2.ZERO;p.touch={};w.expansion.update(w,1.0/60.0)
 	check(p.speed_upgrade_level==1,"Real Stride pickup still collects while stopped")
-	p.position=Vector2(28,1198);p.velocity=Vector2.ZERO;ticks(120)
+	p.position=Vector2(90,1198);p.velocity=Vector2.ZERO;ticks(120) # pier face at x72 (was the wall at x0)
 	p.touch.right=true;ticks(12);p.touch={};ticks(20)
 	p.double_jump=false;w.interact()
 	check(w.pending_room==-1 and p.is_on_floor(),"Locked Canal exit keeps safe footing after stop/reapproach")
