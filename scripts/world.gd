@@ -14,6 +14,7 @@ const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
 const CinematicTransitions = preload("res://scripts/cinematic_transitions.gd")
 const LevelGeometry = preload("res://scripts/level_geometry.gd")
 const BellroofWalk = preload("res://scripts/bellroof_walk.gd")
+const RoomBoundary = preload("res://scripts/room_boundary.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -69,6 +70,7 @@ var cleared_encounters: Dictionary = {}
 var pending_arrival = Vector2.INF
 var extension = Extension.new()
 var platforms: Array[Rect2] = []
+var boundary_rects: Array[Rect2] = [] # LD-05 visible roof course and footings; never part of `platforms`
 var tether_anchors: Array[Vector2] = []
 var tether_effect_anchor = Vector2.ZERO
 var tether_effect_time = 0.0
@@ -157,6 +159,7 @@ func build_room(index):
 	platforms.clear()
 	tether_anchors.clear()
 	kunai_gates.clear()
+	RoomBoundary.build_roof(self) # LD-05: first body in the room's geometry, ahead of the legacy walls and floors
 	var bounds = room_size(room)
 	camera.limit_right = int(bounds.x);camera.limit_bottom = int(bounds.y)
 	for rect in [Rect2(-40, 0, 40, bounds.y), Rect2(bounds.x, 0, 40, bounds.y)]: add_platform(rect)
@@ -205,6 +208,7 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	RoomBoundary.build(self)
 	BellroofWalk.build(self)
 	mixed_transitions.room_loaded(self)
 	embodied_transitions.room_loaded(self)
@@ -762,6 +766,7 @@ func _draw():
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
 		if Expansion.CanalGatehouse.owns(room,rect): continue
 		LevelGeometry.draw_surface(self,rect)
+	RoomBoundary.draw(self)
 	for gate in kunai_gates:
 		if opened_kunai_gates.get(gate["id"], false): continue
 		var color = {"wind": Color("79d69a"), "fire": Color("ed7852"), "electric": Color("5ec8ee")}[gate["element"]]
@@ -832,7 +837,11 @@ func draw_tether_effect():
 
 func draw_door(at: Vector2, color = Color("d1b08e")):
 	# Presentation only: interaction radius, destination and landing stay unchanged.
+	# LD-05: draw the door on the walkable top it stands over (R6->R7, R9->R10 endpoints sit 20 px off their shelf).
+	var seat = RoomBoundary.seat_offset(self,at)
+	if seat != 0.0: draw_set_transform(Vector2(0,seat))
 	RoomPresentation.draw_exit(self, at, color)
+	if seat != 0.0: draw_set_transform(Vector2.ZERO)
 
 func draw_water(rect: Rect2):
 	draw_rect(rect, Color("15364a"))

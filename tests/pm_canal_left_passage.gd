@@ -102,14 +102,25 @@ func no_unintended():
 	# Leftmost reachable feet x against the pier, and recovery only on the pad.
 	# Leftmost reachable feet x: walk in from the hallway and hold left against the pier.
 	await canal_stage(140);before=c.request_count
-	key(KEY_A,true);await wait_ticks(60);key(KEY_A,false)
+	# TR-08 reviewed change: the embodied doorway turn/cross precedes the room request,
+	# so wait for the request and the hidden swap (bounded) instead of a fixed 60 ticks.
+	key(KEY_A,true)
+	for tick in 150:
+		await wait_ticks(1)
+		if w.room==0: break
+	key(KEY_A,false)
 	print("PIER-WALK x=",w.player.position.x," room=",w.room," requests=",c.request_count-before)
 	check(c.request_count==before+1 and w.room==0,"Walking into the opening from just inside activates once")
 	# Arrival from R0 into the hallway and no reciprocal loop.
 	reset(0);w.player.position=Vector2(590,778);live();await wait_ticks(3)
 	before=c.request_count
 	key(KEY_E,true);await wait_ticks(1);key(KEY_E,false)
-	await wait_ticks(45);ensure_geometry()
+	# TR-08 reviewed change: wait for the embodied passage to hand back control (bounded)
+	# instead of a fixed 45 ticks; the arrival point itself is unchanged.
+	for tick in 300:
+		await wait_ticks(1)
+		if w.room==13 and not c.tr08.owns() and w.transition<=0: break
+	ensure_geometry()
 	check(w.room==13 and w.player.position.distance_to(Data.CANAL_LEFT.arrival)<3,"R0 -> R13 arrives in the hallway at the contract arrival")
 	await physics_frame
 	var query=PhysicsShapeQueryParameters2D.new()
