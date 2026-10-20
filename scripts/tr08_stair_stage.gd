@@ -119,11 +119,14 @@ func plan():
 	var p=Vector2.ZERO
 	path.append(p)
 	var loop_total=Vector2.ZERO
+	var soles=[]
 	for name in queue:
 		var c=clip(name);var s=scale_of(c)
 		if name.ends_with("_loop"): loop_total=Library.motion_total(c)*s
 		for i in c.frames.size():
 			var rm:Vector2=c.root_motion[i] if c.root_motion.size()>i else Vector2.ZERO
+			if c.get("soles",[]).size()>i and c.soles[i]!=Vector2.INF and name!="stair_arrive_idle_settle":
+				soles.append(p+Vector2(c.soles[i].x*heading,c.soles[i].y)*s)
 			for k in 4:
 				p+=Vector2(rm.x*heading,rm.y)*s/4.0;path.append(p)
 	var span=path[path.size()-1].y-path[0].y
@@ -145,6 +148,13 @@ func plan():
 		var to=risers[k] if k<count else path[path.size()-1].x+far*heading
 		levels.append([prev,to,path[0].y+k*height])
 		prev=to
+	# Seat each tread under the lowest measured sole that falls on it (planted feet never
+	# float above or sink into a tread). Root-path heights remain where no sole lands.
+	for l in levels:
+		var x0=minf(l[0],l[1]);var x1=maxf(l[0],l[1]);var best=-INF
+		for q in soles:
+			if q.x>=x0+6 and q.x<=x1-6: best=maxf(best,q.y)
+		if best>-INF and absf(best-l[2])<absf(height)*1.5: l[2]=best
 
 func release(w):
 	if request_time>=0: return
@@ -205,11 +215,11 @@ func next_clip():
 func frame_camera(snap:bool):
 	var lo=Vector2(INF,INF);var hi=-lo
 	for p in path: lo=lo.min(p);hi=hi.max(p)
-	var center=(lo+hi)/2.0+Vector2(0,-figure_px*0.42)
+	var center=(lo+hi)/2.0+Vector2(0,-figure_px*0.36)
 	if still:
 		cam=center;zoom=1.0
 	else:
-		var goal=feet+Vector2(heading*110,-figure_px*0.42)
+		var goal=feet+Vector2(heading*110,-figure_px*0.36)
 		goal.x=clampf(goal.x,lo.x-60,hi.x+60)
 		cam=goal if snap else cam.lerp(goal,0.12)
 		var progress=clampf((elapsed-cover_at)/2.0,0,1)
@@ -384,7 +394,7 @@ func draw_front():
 	var plate=smooth((elapsed-0.05)/0.3)
 	if close_start>=0: plate*=1.0-smooth((elapsed-close_start-close_in-close_out*0.4)/maxf(0.01,close_out*0.6))
 	var title=("ASCEND  >  " if rise<0 else "DESCEND  >  ")+destination
-	if plate>0.01: draw_plate(o,art,Vector2(410,600),plate,title,font,ivory,indigo)
+	if plate>0.01: draw_plate(o,art,Vector2(410,663),plate,title,font,ivory,indigo)
 	# Honest status of the clip on screen, top bar.
 	if kaze.visible and a>0.05 and not kaze.clip.is_empty():
 		var text=kaze.status()

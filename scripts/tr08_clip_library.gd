@@ -150,6 +150,7 @@ static func build(manifest_path:=MANIFEST_PATH) -> Dictionary:
 		clip.texture=load(clip.strip)
 		clip.texture_left=load(clip.strip_left) if not str(clip.strip_left).is_empty() and ResourceLoader.exists(clip.strip_left) else null
 		if float(clip.figure)<=0.0: clip.figure=measure_figure(clip)
+		clip.soles=measure_soles(clip) if str(clip.bound).begins_with("art08") else []
 		if clip.root_motion.is_empty() and name.begins_with("stair_") and name!="stair_arrive_idle_settle":
 			# Real stair clip without root motion: drive it along the stand-in step so the
 			# feet still travel the flight. Reported as a binding note, never silently.
@@ -185,6 +186,28 @@ static func measure_figure(clip:Dictionary) -> float:
 				if image.get_pixel(x,y).a>0.5: hit=true;break
 			if hit: top=mini(top,y);break
 	return maxf(64.0,float(clip.pivot[1])-top)
+
+## Lowest opaque point (sole) of each frame, relative to the pivot, source px. Used to
+## seat stage treads under planted feet. Only measured for ART-08 strips, whose cells are
+## clean registered alpha; the reused approved strips carry padding below the baseline.
+static func measure_soles(clip:Dictionary) -> Array:
+	var out=[]
+	var tex=clip.texture
+	if tex==null: return out
+	var image:Image=tex.get_image()
+	if image==null or image.is_empty(): return out
+	if image.is_compressed(): image.decompress()
+	var w=int(clip.cell[0]);var h=mini(int(clip.cell[1]),image.get_height())
+	for frame in clip.frames:
+		var x0=int(frame)*w;var found=Vector2.INF
+		for y in range(h-1,-1,-1):
+			var xs=[]
+			for x in range(x0,mini(x0+w,image.get_width()),2):
+				if image.get_pixel(x,y).a>0.5: xs.append(x-x0)
+			if xs.size()>=3:
+				found=Vector2(float(xs[0]+xs[-1])/2.0-float(clip.pivot[0]),float(y)-float(clip.pivot[1]));break
+		out.append(found)
+	return out
 
 ## Seconds for one pass of the clip at rate 1.
 static func duration(clip:Dictionary) -> float:
