@@ -6,6 +6,9 @@ func key(code,pressed):
 func wait_ticks(count):
 	for i in count: await physics_frame
 func shot(name):
+	# TR-08 reviewed change: a headless display never posts a drawn frame, so the
+	# capture is skipped there (checks still run); rendered runs capture as before.
+	if DisplayServer.get_name()=="headless": await process_frame;return
 	await process_frame;await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png(output+"/"+name+".png")
 func live():
@@ -29,6 +32,11 @@ func run():
 			await wait_ticks(22)
 			key(KEY_A if p.heading<0 else KEY_D,false)
 			await wait_ticks(52)
+			# TR-08 reviewed change: the embodied Canal doorway runs around the unchanged
+			# loader; wait (bounded) until it hands back control before observing.
+			for tick in 300:
+				if not w.cinematic_transitions.tr08.owns() and w.transition<=0: break
+				await wait_ticks(1)
 			check(w.room==pair[1] and w.player.is_on_floor(),"Native physical input crosses %s without E and lands"%[pair])
 			check(w.cinematic_transitions.request_count==before+1,"Native physical %s makes one request"%[pair])
 			check(w.player.sprite.visible and not w.embodied_transitions.proxy.visible,"Native %s visible live Kaze restored"%[pair])
@@ -46,7 +54,7 @@ func run():
 			freeze()
 	for still in [false,true]:
 		for pair in [[14,17],[17,14]]:
-			reset(pair[0]);var c=w.cinematic_transitions;c.reduced=still
+			reset(pair[0]);var c=w.cinematic_transitions;c.reduced=still;c.tr08.reduced=still
 			w.embodied_transitions.comparison="reduced" if still else "art-preview"
 			var p=c.endpoint(w,pair[0],pair[1]);w.player.position=p.at-Vector2(0,2);w.player.velocity=Vector2.ZERO;w.player.animate(0);w.camera.reset_smoothing();w.message_time=0
 			var prefix="stair_%d-%d_%s"%[pair[0],pair[1],"reduced" if still else "cinematic"]
@@ -55,6 +63,12 @@ func run():
 			await wait_ticks(5);await shot(prefix+"_moving")
 			await wait_ticks(6);await shot(prefix+"_close")
 			await wait_ticks(44)
+			# TR-08 reviewed change: the full-screen stair cinematic lasts about 2.9 s
+			# (1.3 s reduced); wait (bounded) for it to hand back control.
+			for tick in 300:
+				if not c.tr08.owns() and w.transition<=0: break
+				await wait_ticks(1)
+			await wait_ticks(3)
 			check(w.room==pair[1] and w.player.is_on_floor() and w.player.sprite.visible,"Native E %s staircase completes safely"%prefix)
 			check(w.camera.zoom==Vector2.ONE and w.camera.position==Vector2(0,-110),"Native %s restores camera"%prefix)
 			await shot(prefix+"_after");freeze()

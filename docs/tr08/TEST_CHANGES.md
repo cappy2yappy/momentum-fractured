@@ -49,9 +49,26 @@ The old version ran a fixed 45 ticks after the crossing. The embodied doorway's 
 
 56 / 0, identical to the PR61 count.
 
+## tests/native_cinematic_transitions.gd (TR05 native suite)
+
+Build's exported-pack run found this suite failing on TR-08. I reproduced the failure on the source tree: the original file, with only the headless capture guard added, gives 54 checks with 7 failures. All 7 are fixed-time observations that land while a TR-08 sequence is still running:
+- `Native physical input crosses [13, 0] without E and lands`: 1 failure. The observation point is 74 ticks after the key press, while the embodied doorway is still playing.
+- `Native [13, 0] visible live Kaze restored`: 2 failures. Same cause: the doorway layer is still drawing Kaze.
+- `Native E stair_<pair>_<mode> staircase completes safely`: 4 failures. The check runs 56 ticks after E, but the cinematic lasts about 2.9 s (1.3 s reduced).
+
+With the bounded waits below, the same assertions pass. That confirms stale timing, not a regression.
+
+| Change | Old | New (same assertions) |
+| --- | --- | --- |
+| Passage observation | Hold the key 22 ticks, then a fixed 52 ticks | The same hold and 52 ticks, then wait until TR-08 hands back control and the loader has finished (at most 300 more ticks) |
+| Stair observation | A fixed 44 ticks after the `_close` shot | The same 44 ticks, then wait until TR-08 hands back control (at most 300 ticks), plus 3 ticks to settle |
+| Stair reduced flag | `c.reduced=still` | Also sets `c.tr08.reduced=still`, so the reduced pass really runs the reduced TR-08 cinematic |
+| `shot()` | Always awaits `RenderingServer.frame_post_draw` | Skipped on the headless display server, which never posts a drawn frame. That is why this suite hung at the baseline (exit 124, 0 checks). Rendered runs capture exactly as before. |
+
+Results at this branch: headless **54 / 0**; rendered under xvfb (Mesa llvmpipe, `gl_compatibility`, 1280x720) **54 / 0**, with 37 captures in `build/tr05/native`. Logs are in `docs/tr08/evidence/*native_cinematic_transitions.log.txt`.
+
 ## Unchanged and still passing
 
 - `tests/automatic_passage_reliability.gd` (issue #42): 305 / 0, not edited.
 - `tests/pm_staged_stair_cinematic.gd`: 50 / 0, not edited. It runs with `--pm-staged-stair`, which turns TR-08 off and restores the PR57 opt-in pilot.
 - All other `tools/run_tr05_qa.py` suites: counts identical to the baseline.
-- `tests/native_cinematic_transitions.gd` is a rendered-only suite and is not part of the headless runners. Its stair and Canal checks also use fixed tick waits; see the PM report for its status.

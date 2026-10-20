@@ -184,3 +184,15 @@ What I saw:
 Result: **305 / 0, exit 0**, identical to the headless run and to the PR51 rendered baseline.
 
 Log: `docs/tr08/evidence/rendered_xvfb_automatic_passage_reliability.log.txt`.
+
+## Appendix: native_cinematic_transitions (test-only follow-up)
+
+Build's exported-pack run reported `tests/native_cinematic_transitions.gd` failing on TR-08. On the source tree the original file gives 7 failures out of 54. All 7 come from fixed tick waits that observe while the TR-08 doorway or stair sequence is still running, so they are stale timing, not a regression.
+
+I updated the file with bounded waits, the reduced flag, and a headless skip in `shot()`. Details are in `docs/tr08/TEST_CHANGES.md`. Results:
+- Headless: **54 / 0.**
+- Rendered under xvfb: **54 / 0.**
+
+No product file changed in this follow-up.
+
+Visual nit seen in the rendered native shots, not fixed under this test-only order: in reduced motion the fixed stage framing centres on the whole flight. At the very start of the R17 to R14 descent, Kaze is partly cut off at the right edge. A later product change should clamp the reduced framing to keep the figure on screen.

@@ -1,0 +1,73 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+ERROR: Condition "status < 0" is true. Returning: ERR_CANT_OPEN
+   at: init_output_device (drivers/alsa/audio_driver_alsa.cpp:90)
+WARNING: All audio drivers failed, falling back to the dummy driver.
+     at: initialize (servers/audio/audio_server.cpp:247)
+
+TR05_NATIVE GPU=llvmpipe (LLVM 20.1.2, 256 bits) driver=opengl3 viewport=(1280, 720)
+PASS: Native physical input crosses [13, 0] without E and lands
+PASS: Native physical [13, 0] makes one request
+PASS: Native [13, 0] visible live Kaze restored
+PASS: Native physical input crosses [13, 14] without E and lands
+PASS: Native physical [13, 14] makes one request
+PASS: Native [13, 14] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [13, 14]
+PASS: Native stopped reverse round trip [13, 14] succeeds once
+PASS: Native physical input crosses [14, 13] without E and lands
+PASS: Native physical [14, 13] makes one request
+PASS: Native [14, 13] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [14, 13]
+PASS: Native stopped reverse round trip [14, 13] succeeds once
+PASS: Native physical input crosses [15, 16] without E and lands
+PASS: Native physical [15, 16] makes one request
+PASS: Native [15, 16] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [15, 16]
+PASS: Native stopped reverse round trip [15, 16] succeeds once
+PASS: Native physical input crosses [16, 15] without E and lands
+PASS: Native physical [16, 15] makes one request
+PASS: Native [16, 15] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [16, 15]
+PASS: Native stopped reverse round trip [16, 15] succeeds once
+PASS: Native physical input crosses [13, 0] without E and lands
+PASS: Native physical [13, 0] makes one request
+PASS: Native [13, 0] visible live Kaze restored
+PASS: Native physical input crosses [13, 14] without E and lands
+PASS: Native physical [13, 14] makes one request
+PASS: Native [13, 14] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [13, 14]
+PASS: Native stopped reverse round trip [13, 14] succeeds once
+PASS: Native physical input crosses [14, 13] without E and lands
+PASS: Native physical [14, 13] makes one request
+PASS: Native [14, 13] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [14, 13]
+PASS: Native stopped reverse round trip [14, 13] succeeds once
+PASS: Native physical input crosses [15, 16] without E and lands
+PASS: Native physical [15, 16] makes one request
+PASS: Native [15, 16] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [15, 16]
+PASS: Native stopped reverse round trip [15, 16] succeeds once
+PASS: Native physical input crosses [16, 15] without E and lands
+PASS: Native physical [16, 15] makes one request
+PASS: Native [16, 15] visible live Kaze restored
+PASS: Native held E cannot loop reciprocal [16, 15]
+PASS: Native stopped reverse round trip [16, 15] succeeds once
+PASS: Native E stair_14-17_cinematic staircase completes safely
+PASS: Native stair_14-17_cinematic restores camera
+PASS: Native E stair_17-14_cinematic staircase completes safely
+PASS: Native stair_17-14_cinematic restores camera
+PASS: Native E stair_14-17_reduced staircase completes safely
+PASS: Native stair_14-17_reduced restores camera
+PASS: Native E stair_17-14_reduced staircase completes safely
+PASS: Native stair_17-14_reduced restores camera
+TR05 NATIVE: 54 checks, 0 failure(s)
