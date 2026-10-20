@@ -1,4 +1,4 @@
-# QA_W3 PM report: independent QA, ORDER 4, Wave 3, Phase A (reference and regression planning)
+# QA_W3 PM report: independent QA, ORDER 4, Wave 3 (Phase A plus candidate evaluation)
 
 Branch `test/wave3-independent-qa`, based on PR59 head `c44f2b8163867e211f7d2297d6dcfad26c36abe7` (draft PR base `test/pm-pilot-regressions`). The head SHA of this increment is in the push verification line of the PR description (a report cannot contain its own hash). Test-only: nothing under `scripts/`, `assets/` or `project.godot` changed, and no implementation worktree was touched.
 
@@ -49,3 +49,54 @@ Measurement validity (rendered self-test): a synthetic textured full-viewport st
 * Stage 1 candidates with stand-in frames can legitimately fail `TRUE-ANIM`; QA reports which.
 
 Environment: Godot 4.6.1.stable, Linux 6.18 cloud VM, Python 3 with Pillow and numpy, xvfb. Model: Claude Sonnet 5.5. Nothing merged; main untouched; ART-07 untouched.
+
+
+# Candidate evaluation (final pins)
+
+Tested SHAs: Transition TR-08 `308bbf105dc6ea0eaaa14f7aadaa626abf4ca13a` (supersedes `775ef9ff`), Level LD-05 `a6e3de25`, Art ART-08 `61b32194`, combined `candidate/wave3-combined` `cb1a59c4395584c08f6fb4cb45ae8a57fdfcd5f8`. No newer heads were on origin at the last check. Same command, `--rendered`, detached worktree at each exact SHA. Run folders: `docs/wave3/qa/runs/<label>/`.
+
+## Readiness recommendation: NOT READY
+
+Both the combined candidate and TR-08 end in ACCEPTANCE_FAILURES. There are no hard regressions (core, #42 suite and stock suites are green), but the automated acceptance gates are not met and no creator review has happened. QA does not claim creative acceptance of any kind.
+
+## Results
+
+| | TR-08 `308bbf10` | Combined `cb1a59c4` |
+| --- | --- | --- |
+| Core harness | 460 / 0 | 460 / 0 |
+| Issue #42 author suite | 305 / 0 | 305 / 0 |
+| Stock suites | 25 suites, 1,617 assertions, 0 failed | same |
+| Wave 3 checks | 93 pass / 10 fail / 5 skip | 104 / 9 / 6 |
+| Acceptance items | 4 failing of 15 | 4 failing of 15 |
+
+Passing items on both: true multi-frame door movement (10/0), staircase ascent and descent, Canal IN and OUT, destination labels, reduced motion (30/0), correct arrivals, doorway reliability (369/0), save and progression, graph integrity. Control restoration and cancel pass with 4 skips. Durations pass: stair 2.88 s, Canal OUT 2.18 s, Canal IN 2.38 s; reduced motion 1.35 s (stair) and 1.72 s (Canal). Both stair directions and both Canal directions complete with one request and one room swap.
+
+## Defects (reproducible)
+
+Repro: `python3 tools/pm_pilot_qa/run_w3.py --sha <sha> --label x --rendered`, then read `result.json` and the named hook log.
+
+1. Stair true animation fails narrowly (both TR-08 and combined). `W3-STAIR-ASCEND-TRUE-ANIM`: 88% of 8 moving windows show a pose change (need 90%), 21 distinct poses; descent 89% of 9, 22 poses. The single held-while-moving window is the `kaze_stair_arrive_idle_settle` strip frame 3 at about t=2.1 s. Fix candidate: add motion to that settle frame or stop actor travel during it.
+2. Stair letterbox: `W3-STAIR-*-NO-LETTERBOX` 3.9% bars added (limit 2%). The stage fills the viewport and Kaze reaches about 65% of height; the bars are the top debug label strip and bottom destination bar. A human should judge whether those are acceptable HUD, since the metric cannot tell.
+3. `ART08:true_animation`: `door_turn_to_side` has no PNG (150 of 151 art08_check checks pass). All shipped clips are true animation (70 frames, no adjacent identical frames). Loop seam distances 0.454 / 0.444 / 0.245.
+4. Vertical routes (combined, Level LD-05): escapes drop from 131 to 0 of 928 probes, but the ROUTES comparison loses pairs against PR61: R13 2>0 full, R15 0>1 base, R16 2>0 full. See the directed result below. `W3-REACH-NO-ESCAPE` and one ROUTES check are flagged in the TR-08 run, where Level's roof is not present, as expected for that tree.
+5. Canal doorway presentation (informational, not an acceptance item): the Canal sequences are a world-camera presentation. Kaze reaches 34% (OUT) and 23% (IN) of viewport height, bars 14.8% and 5.2%, so the doorway full-screen, no-letterbox and scale checks fail. Raise with the creator whether Canal should match the stair presentation.
+6. Art interface gaps (measured, heuristic): Kaze is about 308 px tall in the 480x724 cell, so the 560 to 720 px cinematic height is a 1.8 to 2.3x upscale; foot slide outliers (stair_descend_loop up to 14 px, door_cross up to 19 px, stair_arrive_idle_settle 29 to 102 px by convention, Art claims 1.5 px); colour distance to the approved idle strip about 0.31, versus 0.32 to 0.37 for the approved ART-04 keys these derive from (inherited, not new drift).
+
+## Directed checks
+
+* Level R15 inconclusive pair (base kit 0>1): directed probes with walk, hop, jump and wall patterns for 900 to 2400 ticks found a jump-chain route to endpoint 1 only with the full kit. The base-kit pair stays inconclusive. Level should confirm R15 is not entered without Windstep, since a lost base-kit pair could be a real gate change.
+* R13 2>0 existed on PR61 only through an escape (x to -2322, y to 1528); not a legitimate route. R16 lost pair disappears with longer probes.
+* Level claims 19 ledges bump the roof on a full double jump and 87 wall chains stop at the roof. QA did not separately verify that none is a required route.
+* Level's own residuals (38 past-door strips, 664 px bare wall columns, kunai gate bodies bypassable by wall jump, R6 and R9 shelves 20 px off) were not re-measured.
+
+## Combined interaction (roof course against cinematics)
+
+Hook `hook_w3_combined.gd`: no boundary or roof solid overlaps Kaze at any endpoint or during any sequence; arrival points stay valid (arrivals 20/0 on the combined tree). The roof band is inside the camera view on 36 of 180 (ascend) and 144 of 180 (descend) stair ticks, but the opaque stair stage layer covers it; Canal sequences have 0 roof-in-view ticks. The roof-visible checks are SKIP and need a human capture review.
+
+## Runner changes made while evaluating
+
+TR-08 uses an off flag, so `--pm-staged-stair` is passed only to checkouts lacking `scripts/tr08_embodied_cinematics.gd`; the first TR-08 run was invalid for that reason and was rerun. The actor filter initially excluded paths containing "door", which hid the art08 door clips and caused false `DOOR-CANAL-*-VISIBLE` failures; files with a `kaze_` basename now bypass it. The R0 to R13 E-door wait in the core harness now waits for control to return. `verify_tr05_preservation.py` exiting 1 on trees with Level's `build_room` edit is reported as a note.
+
+## Categories and limits
+
+Automated headless and software-GL (llvmpipe) are separate in the runbook. Human review: none done; roof visibility over cinematics, label placement and all creative qualities are for the creator. Platform: Linux only. Untested: Windows, macOS, gamepad, performance, unseeded campaign, watchdog timeout. Heuristics: foot slide, identity drift and bar detection are heuristic; reach probes find only what scripted patterns find. Captures were pruned to a few JPEGs per run. Nothing merged, main untouched, ART-07 untouched, implementation worktrees untouched.

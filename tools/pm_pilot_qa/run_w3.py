@@ -46,6 +46,7 @@ ACCEPTANCE = [
     ('control_restoration_and_cancel', r'W3-.*-(CONTROL|CANCEL-[A-Z]+|HELD-E|HELD-KEY)$|Control state restored', 'completion, pause, death, room change; timeout is not forceable externally'),
     ('doorway_reliability_issue42', r'SECTION:(issue42|matrix|controls|endpoints)|AUTHOR_TR06', 'issue #42 matrix, endpoint sweep, author suite 305/0'),
     ('vertical_routes_vs_escapes', r'W3-REACH-|hook_canal_containment', 'wall-jump probes with real input; lost routes vs controls; escapes'),
+    ('combined_level_roof_with_cinematics', r'W3-COMBINED', 'roof course vs stair stage and Canal sequences; roof-in-view ticks need human capture review'),
     ('save_and_progression', r'SECTION:save|W3-.*-PROGRESSION$', ''),
     ('graph_integrity', r'SECTION:graph', ''),
 ]
@@ -176,6 +177,7 @@ def main():
             auto['canal_containment_hook'] = run_hook(a.godot, repo, out, 'hook_canal_containment', 'hook_canal_containment', canal, False, 900, str(hooks))
         auto['stair'] = run_hook(a.godot, repo, out, 'w3_stair_headless', 'hook_w3_stair', [], False, 900, str(hooks))
         auto['doorway'] = run_hook(a.godot, repo, out, 'w3_doorway_headless', 'hook_w3_doorway', [], False, 900, str(hooks))
+        auto['combined'] = run_hook(a.godot, repo, out, 'w3_combined_headless', 'hook_w3_combined', [], False, 900, str(hooks))
         if not a.no_reach:
             reach_args = ['--qa-reach-label=' + a.label] + (['--qa-reach-quick'] if a.quick else [])
             auto['reach'] = run_hook(a.godot, repo, out, 'w3_reach_headless', 'hook_w3_reach', ['--qa-out=' + str(out)] + reach_args, False, a.timeout, str(hooks))
@@ -210,6 +212,7 @@ def main():
                 cap = out / 'captures'
                 graphical['stair'] = run_hook(a.godot, repo, out, 'w3_stair_swgl', 'hook_w3_stair', ['--qa-out=' + str(cap)], True, a.timeout, str(hooks))
                 graphical['doorway'] = run_hook(a.godot, repo, out, 'w3_doorway_swgl', 'hook_w3_doorway', ['--qa-out=' + str(cap)], True, a.timeout, str(hooks))
+                graphical['combined'] = run_hook(a.godot, repo, out, 'w3_combined_swgl', 'hook_w3_combined', ['--qa-out=' + str(cap)], True, a.timeout, str(hooks))
                 graphical['selftest'] = run_hook(a.godot, repo, out, 'w3_selftest_swgl', 'hook_w3_selftest', ['--qa-out=' + str(out / 'selftest')], True, 600, str(hooks))
                 graphical['captures_jpeg'] = rq.convert_captures(out, a.label)
                 pres = re.compile(r'\|W3-.*-(FULLSCREEN|NO-LETTERBOX|KAZE-SCALE|NOT-WIPE)$')

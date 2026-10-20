@@ -68,8 +68,10 @@ func tex_info(s):
 	var ok=false
 	for k in KEEP:
 		if k in low: ok=true
-	for k in SKIP:
-		if k in low: ok=false
+	# Scenery art is excluded by keyword, but a Kaze clip (file name starting kaze_) is never scenery even if it says door.
+	if not path.get_file().to_lower().begins_with("kaze_"):
+		for k in SKIP:
+			if k in low: ok=false
 	if not ok: return {}
 	var size=tex.get_size() if not (tex is AtlasTexture) else tex.region.size
 	return {"tex":path,"frame":frame,"hframes":hf,"vframes":vf,"region":region,"cell":Vector2(size.x/hf,size.y/vf)}
