@@ -45,4 +45,5 @@ docs/art/art08/descent/transition_settle_patch.diff: add stair_descend_arrive_se
 - Creator acceptance of the descent is not claimed.
 
 ## SHAs
-See the closing section appended after push (commit, GitHub re-download verification).
+Asset commit 750e194fff747a71c0f629c5b9a5b7a287354491 on art/art08-embodied-cinematic-animation (confirmed through gh api repos/cappy2yappy/momentum-fractured/commits/<branch>). All 12 shipped strip PNGs re-downloaded from GitHub at that SHA and compared with MANIFEST.json: 12 verified, 0 mismatches. Descent strips: enter 0cc04d4178ab, loop 0c5bc6402148, exit f171d7e4f303, descend_arrive_settle 15d6c4452945 (SHA256 prefixes; full values in assets/art08/MANIFEST.json). Ascent, door and ascent settle strips are byte identical to the earlier verified set. A later docs-only commit adds this section; it changes no PNG.
+Environment: Godot 4.6.1, xvfb llvmpipe gl_compatibility; python numpy, opencv, scipy, PIL; model Claude Sonnet 5.5.
