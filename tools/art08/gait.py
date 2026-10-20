@@ -24,6 +24,8 @@ def ankle_stance(X, Y, u, f_heel=16.0, f_toe=-34.0, u1=0.16, u2=0.52):
     GH = np.array([X - SOLE_HALF, Y]); GT = np.array([X + SOLE_HALF, Y])
     if u < u1:
         f = lerp(f_heel, 0.0, sm(u / u1)); beta = -f
+        if f < 0:   # toe-first landing (descent): the toe is the contact point, heel still raised
+            return GT - rot(TOE, beta), f
         return GH - rot(HEEL, beta), f
     if u < u2:
         return GH - HEEL, 0.0
@@ -32,9 +34,9 @@ def ankle_stance(X, Y, u, f_heel=16.0, f_toe=-34.0, u1=0.16, u2=0.52):
 
 class Plan:
     """foot placements indexed j in [jmin, jmax]; outside the range extrapolate flat using the end steps."""
-    def __init__(self, X, Y, h_mid, h_ex, clearance, lean=8.0, arm_amp=34.0, stairs=False, lean_bob=1.5, counter=0.0, hold=(), flat_land=(), h_fn=None):
+    def __init__(self, X, Y, h_mid, h_ex, clearance, lean=8.0, arm_amp=34.0, stairs=False, lean_bob=1.5, counter=0.0, hold=(), flat_land=(), h_fn=None, heel_deg=16.0):
         self.X = dict(X); self.Y = dict(Y)
-        self.hold = set(hold); self.flat_land = set(flat_land); self.h_fn = h_fn
+        self.heel_deg = heel_deg; self.hold = set(hold); self.flat_land = set(flat_land); self.h_fn = h_fn
         self.h_mid = h_mid; self.h_ex = h_ex; self.clear = clearance
         self.lean = lean; self.arm_amp = arm_amp; self.lean_bob = lean_bob
     def foot(self, j):
@@ -44,14 +46,14 @@ class Plan:
         """ankle world position + foot angle of foot j at time t (stance or swing around its own cycle)"""
         u = t - j
         if j in self.hold and u > 0.0:
-            return ankle_stance(self.X[j], self.Y[j], min(u, 0.5), f_heel=0.0 if j in self.flat_land else 16.0) + ("stance",)
+            return ankle_stance(self.X[j], self.Y[j], min(u, 0.5), f_heel=0.0 if j in self.flat_land else self.heel_deg) + ("stance",)
         if 0.0 <= u <= 1.0:
-            return ankle_stance(self.X[j], self.Y[j], u, f_heel=0.0 if j in self.flat_land else 16.0) + ("stance",)
+            return ankle_stance(self.X[j], self.Y[j], u, f_heel=0.0 if j in self.flat_land else self.heel_deg) + ("stance",)
         # swing before landing: foot j is in the air during t in [j-1, j]; it left from foot j-2
         if -1.0 <= u < 0.0:
             s = (u + 1.0)
             a0, f0 = ankle_stance(self.X[j - 2], self.Y[j - 2], 1.0)
-            a1, f1 = ankle_stance(self.X[j], self.Y[j], 0.0, f_heel=0.0 if j in self.flat_land else 16.0)
+            a1, f1 = ankle_stance(self.X[j], self.Y[j], 0.0, f_heel=0.0 if j in self.flat_land else self.heel_deg)
             ex = s - math.sin(2 * math.pi * s) / (2 * math.pi) * 0.85
             gy = sm(min(1.0, s * 1.5)) if a1[1] < a0[1] else sm(max(0.0, s * 1.5 - 0.5))
             if a1[1] > a0[1]: gy = s ** 1.2 * 0.0 + sm(min(1.0, s * 1.3))

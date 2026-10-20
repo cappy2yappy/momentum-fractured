@@ -8,17 +8,19 @@ import rig
 ROOT = rig.ROOT
 FR = os.path.join(ROOT, "source_art/art08/frames")
 ASSETS = os.path.join(ROOT, "assets/art08")
-VERSION = "v2"
+VERSION = "v3"
 
 PROFILE_PROV = "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"
+DOWN_PROV = "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"
 REG = [
  # name, source frames name, fps, loop, facing, status, provenance, note
  ("stair_ascend_enter", "stair_ascend_enter", 16, False, "right", "candidate", PROFILE_PROV, "floor foot to first tread; last frame is the heel strike on tread 1"),
  ("stair_ascend_loop", "stair_ascend_loop", 14, True, "right", "candidate", PROFILE_PROV, "one stride pair = 2 treads; plays from the phase right after enter"),
  ("stair_ascend_exit", "stair_ascend_exit", 16, False, "right", "candidate", PROFILE_PROV, "last tread to level floor; last frame is the heel strike on the level top"),
- ("stair_descend_enter", "stair_descend_enter", 16, False, "right", "candidate", PROFILE_PROV, "floor foot to first tread down"),
- ("stair_descend_loop", "stair_descend_loop", 14, True, "right", "candidate", PROFILE_PROV, "heel-first, upright counter-lean"),
- ("stair_descend_exit", "stair_descend_exit", 16, False, "right", "candidate", PROFILE_PROV, "last tread down to level floor"),
+ ("stair_descend_enter", "stair_descend_enter", 16, False, "right (drawn facing right; flip_h for the leftward R17 to R14 descent, which restores the ribbon side of the approved stair_down_key)", "candidate", DOWN_PROV, "REVISED v2 (ART-08 descent fix): floor foot to first tread down, toe-first landing, upright spine; pitch 100 px, drop 30 px per tread"),
+ ("stair_descend_loop", "stair_descend_loop", 14, True, "right (flip_h for leftward)", "candidate", DOWN_PROV, "REVISED v2: 8 frames = 2 treads, toe-first landings, upright torso, forearm counter-swing; pitch 100 px, drop 30 px per tread"),
+ ("stair_descend_exit", "stair_descend_exit", 16, False, "right (flip_h for leftward)", "candidate", DOWN_PROV, "REVISED v2: last tread down to level floor"),
+ ("stair_descend_arrive_settle", "stair_descend_arrive_settle", 12, False, "right (flip_h for leftward)", "candidate", DOWN_PROV, "NEW v2 clip: descent-specific arrival settle (the shared stair_arrive_idle_settle belongs to the ascent and rises 8.7 px); Transition should queue this after stair_descend_exit"),
  ("stair_arrive_idle_settle", "stair_arrive_idle_settle", 12, False, "right", "candidate", PROFILE_PROV, "short closing step then standing; ends in a standing profile pose"),
  ("door_approach_walk", "walk_loop", 12, True, "right (flip_h for left)", "candidate", PROFILE_PROV, "slow flat walk, 100 px step; drawn facing right, ribbon trails left"),
  ("door_turn_to_rear", "door_turn_to_rear", 16, False, "right profile to rear (flip_h for left)", "stand_in", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved", "4 frames; right-to-rear turn drawn once, left exit uses flip_h (ribbon side flips, creator decision)"),
@@ -73,7 +75,7 @@ def main():
     for name, c in cur.items():
         if name not in seen:
             c2 = dict(c); c2["provenance"] = "unfinished"; c2["status"] = "unfinished"; out["clips"].append(c2)
-    order = ["stair_ascend_enter","stair_ascend_loop","stair_ascend_exit","stair_descend_enter","stair_descend_loop","stair_descend_exit","stair_arrive_idle_settle","door_approach_walk","door_turn_to_rear","door_cross","door_emerge","door_turn_to_side","door_walk_out"]
+    order = ["stair_ascend_enter","stair_ascend_loop","stair_ascend_exit","stair_descend_enter","stair_descend_loop","stair_descend_exit","stair_descend_arrive_settle","stair_arrive_idle_settle","door_approach_walk","door_turn_to_rear","door_cross","door_emerge","door_turn_to_side","door_walk_out"]
     out["clips"].sort(key=lambda c: order.index(c["name"]))
     json.dump(out, open(os.path.join(ASSETS, "MANIFEST.json"), "w"), indent=1)
     print("clips", [(c["name"], c["status"]) for c in out["clips"]])
