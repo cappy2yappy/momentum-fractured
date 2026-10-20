@@ -15,12 +15,16 @@ const CELL=64.0
 var rooms_filter=[]
 var label="run"
 var quick=false
+var extra=false
+var ticks_arg=0
 
 func args():
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--qa-reach-rooms="): rooms_filter=Array(a.substr(17).split(",")).map(func(s): return int(s))
 		if a.begins_with("--qa-reach-label="): label=a.substr(17)
 		if a=="--qa-reach-quick": quick=true
+		if a=="--qa-reach-extra": extra=true
+		if a.begins_with("--qa-reach-ticks="): ticks_arg=int(a.substr(17))
 
 func cell(p): return "%d,%d"%[int(floor(p.x/CELL)),int(floor(p.y/CELL))]
 
@@ -50,6 +54,11 @@ func probe(room,start,key_dir,pattern,kit,ticks,eps):
 				if q.held.get(KEY_SPACE,false) and t>=release: q.key(KEY_SPACE,false)
 				if t%90==40: q.key(KEY_SHIFT,true)
 				if t%90==41: q.key(KEY_SHIFT,false)
+			"walk":
+				pass
+			"hop":
+				if t%60==0: q.key(KEY_SPACE,true)
+				if t%60==12: q.key(KEY_SPACE,false)
 			"dash":
 				if t%14==0: q.key(KEY_SPACE,true)
 				if t%14==9: q.key(KEY_SPACE,false)
@@ -76,6 +85,8 @@ func run(qa):
 	var report={"label":label,"rooms":{}}
 	var ticks=240 if quick else 360
 	var patterns=["jump","wall"] if quick else ["jump","hold","wall","dash"]
+	if extra: patterns=["walk","hop","jump","wall"]
+	if ticks_arg>0: ticks=ticks_arg
 	var kits=["full"] if quick else ["full","base"]
 	var total=0;var escapes=[];var changes=0
 	for room in 21:
@@ -92,6 +103,7 @@ func run(qa):
 					for dir in [KEY_A,KEY_D]:
 						var r=await probe(room,start,dir,pattern,kit,ticks,eps)
 						total+=1;info.probes+=1
+						if extra: print('QA W3 PROBE R%d ep%d %s %s %s touched=%s x[%.0f..%.0f] y[%.0f..%.0f] end_stand=%d'%[room,si,kit,pattern,'A' if dir==KEY_A else 'D',r.touched,r.min_x,r.max_x,r.min_y,r.max_y,r.stand.size()])
 						for k in r.cells: info.cells["%s|%s"%[kit,k]]=true
 						for k in r.stand: info.stand["%s|%s"%[kit,k]]=true
 						for ti in r.touched: info.touch_pairs["%d>%d|%s"%[si,ti,kit]]=true

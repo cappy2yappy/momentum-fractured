@@ -1,0 +1,15 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_canal_containment
+QA CANAL probe pad_mid min_feet_y=792.091613769531 min_in_hall=792.091613769531 min_x=14.0751152038574 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe pad_mouth min_feet_y=1006.93347167969 min_in_hall=1006.93347167969 min_x=14.0150814056396 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe pad_door_side min_feet_y=788.591430664062 min_in_hall=788.591430664062 min_x=14.0747184753418 left_room=true left_world=false inside_solid=true end=(590.0, 778.0)
+QA CANAL probe shelf min_feet_y=572.775695800781 min_in_hall=572.775695800781 min_x=14.0150814056396 left_room=false left_world=false inside_solid=true end=(71.40833, 611.7757)
+QA CANAL probe pad_hold_left min_feet_y=-30.9122982025146 min_in_hall=-30.9122982025146 min_x=14.0747098922729 left_room=false left_world=false inside_solid=true end=(50.74198, 2.420672)
+QA CANAL probe pad_door_hold min_feet_y=-30.9122982025146 min_in_hall=-30.9122982025146 min_x=14.0747098922729 left_room=false left_world=false inside_solid=true end=(50.74198, 2.420672)
+QA CANAL probe wall_184_left min_feet_y=-72.7701950073242 min_in_hall=-72.7701950073242 min_x=-1482.59228515625 left_room=false left_world=true inside_solid=true end=(83.69548, 553.7318)
+QA CANAL probe wall_282_left min_feet_y=-27.1521320343018 min_in_hall=-27.1521320343018 min_x=-1252.59167480469 left_room=true left_world=true inside_solid=true end=(590.0, 778.0)
+QA CANAL probe wall_282_right min_feet_y=-180.073348999023 min_in_hall=inf min_x=282.722229003906 left_room=false left_world=true inside_solid=false end=(2680.591, 190.4267)
+QA CANAL probe pad_right_hold min_feet_y=148.5927734375 min_in_hall=1082.42541503906 min_x=250.722229003906 left_room=true left_world=false inside_solid=true end=(184.0, 1098.0)
+SKIP: [hook_canal_containment] Canal gatehouse geometry (mass [P: (0.0, 0.0), S: (296.0, 1020.0)] + pier [P: (0.0, 1020.0), S: (72.0, 180.0)]) absent in this checkout; containment not asserted. Probe data printed above. NOT a pass.
+QA SUMMARY: 0 checks, 0 failure(s), 1 skip(s)

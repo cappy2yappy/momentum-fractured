@@ -1,0 +1,68 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_w3_doorway
+QA W3 DOOR-CANAL-OUT seconds=1.16666666666667 ended=true rooms=[13, 0] requests=1 max_zoom=1.0 labels=["field:embodied_transitions.target_room(active overlay)", "field:mixed_transitions.gd.destination"] swap_tick=51
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-DURATION] input to control back 1.17 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-ONCE] one room request and one swap R13 to R0 (requests 1, rooms [13, 0])
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-ARRIVAL] arrives in R0 supported, feet (496.6669, 779.9337) within 120 px of (496.67, 779.93) (distance 0.0)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-FACING] arrival facing -1 equals the PR61 ground truth -1
+QA W3 TRUTH 13:0 {"facing":-1,"room":0,"x":496.666870117188,"y":779.933654785156}
+PASS: [hook_w3_doorway] Control state restored after transition: W3 DOOR-CANAL-OUT completion
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-PROGRESSION] abilities, gates, fragments, flags, HP unchanged
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-LABEL] destination label 'CANAL HAVEN' evidence: ["field:embodied_transitions.target_room(active overlay)", "field:mixed_transitions.gd.destination"] (pixel placement is a human review item)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-VISIBLE] Kaze visible on 100% of the 51 ticks before the room swap (need >=70%; a wipe that hides Kaze fails)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-THRESHOLD] the visible actor reaches the doorway at (120.0, 1200.0) before the swap (within 60 px x, 140 px y)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-POSES] at least 5 distinct frames shown before the swap (turn, step, cross): 9
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-NOT-WIPE] pixel flatness at the swap needs a rendered run. NOT a pass.
+QA W3 DOOR-CANAL-OUT animation={"bad_windows":[{"distinct":1.0,"frame":0.0,"leg":0.038,"t":0.6,"tex":"res://assets/kaze/cleaned/kaze_idle_strip.png"},{"distinct":1.0,"frame":1.0,"leg":0.038,"t":0.75,"tex":"res://assets/kaze/cleaned/kaze_idle_strip.png"}],"distinct_poses_total":9.0,"held_while_moving":2.0,"max_leg_diff_all":1.383,"moving_windows":8.0,"samples":85.0,"true_motion_fraction":0.75,"verdict":"NOT_ANIMATION"}
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 75% of 8 moving windows, distinct poses 9 ()
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.34 of viewport from sprite rects)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-HELD-KEY] key held through the sequence and 120 ticks after: one request, no bounce (requests +1, room 0)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-CONTROL] Kaze obeys real keys after the sequence (moved 65 right, -65 left)
+QA W3 DOOR-CANAL-IN seconds=0.66666666666667 ended=true rooms=[0, 13] requests=1 max_zoom=1.0 labels=["field:embodied_transitions.target_room(active overlay)"] swap_tick=21
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-IN-DURATION] input to control back 0.67 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-ONCE] one room request and one swap R0 to R13 (requests 1, rooms [0, 13])
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-ARRIVAL] arrives in R13 supported, feet (184.0, 1199.998) within 12 px of (184.0, 1200.0) (distance 0.0)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-FACING] arrival facing 1 equals the PR61 ground truth 1
+QA W3 TRUTH 0:13 {"facing":1,"room":13,"x":184.0,"y":1199.998046875}
+PASS: [hook_w3_doorway] Control state restored after transition: W3 DOOR-CANAL-IN completion
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-PROGRESSION] abilities, gates, fragments, flags, HP unchanged
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-LABEL] destination label 'MOORING LOFT' evidence: ["field:embodied_transitions.target_room(active overlay)"] (pixel placement is a human review item)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-VISIBLE] Kaze visible on 100% of the 21 ticks before the room swap (need >=70%; a wipe that hides Kaze fails)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-THRESHOLD] the visible actor reaches the doorway at (590.0, 780.0) before the swap (within 60 px x, 140 px y)
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-IN-POSES] at least 5 distinct frames shown before the swap (turn, step, cross): 1
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-IN-NOT-WIPE] pixel flatness at the swap needs a rendered run. NOT a pass.
+QA W3 DOOR-CANAL-IN animation={"bad_windows":[{"distinct":1.0,"frame":0.0,"leg":0.0,"t":0.15,"tex":"res://assets/kaze/cleaned/kaze_idle_strip.png"},{"distinct":1.0,"frame":0.0,"leg":0.0,"t":0.3,"tex":"res://assets/kaze/cleaned/kaze_idle_strip.png"}],"distinct_poses_total":2.0,"held_while_moving":2.0,"max_leg_diff_all":0.917,"moving_windows":2.0,"samples":55.0,"true_motion_fraction":0.0,"verdict":"NOT_ANIMATION"}
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-IN-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 0% of 2 moving windows, distinct poses 2 ()
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-IN-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.19 of viewport from sprite rects)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-HELD-KEY] key held through the sequence and 120 ticks after: one request, no bounce (requests +1, room 13)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-CONTROL] Kaze obeys real keys after the sequence (moved 93 right, -85 left)
+QA W3 DOOR-CANAL-OUT-REDUCED seconds=1.16666666666667 ended=true rooms=[13, 0] requests=1 max_zoom=1.0 labels=["field:mixed_transitions.gd.destination", "field:embodied_transitions.target_room(active overlay)"] swap_tick=51
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-COMPLETES] real F6 reduced motion completes into R0 in 1.17 s
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-NO-ZOOM] camera never zooms (max 1.000)
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-SHORTER] reduced 1.17 s shorter than full 1.17 s
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-LABEL] destination label kept: ["field:mixed_transitions.gd.destination", "field:embodied_transitions.target_room(active overlay)"]
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-FRAMES] true frames or first/last cross-fade still shown (9 distinct frames)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-ARRIVAL] arrives in R0 supported, feet (496.6669, 779.9337) within 120 px of (496.67, 779.93) (distance 0.0)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-REDUCED-FACING] arrival facing -1 equals the PR61 ground truth -1
+QA W3 TRUTH 13:0 {"facing":-1,"room":0,"x":496.666870117188,"y":779.933654785156}
+PASS: [hook_w3_doorway] Control state restored after transition: W3 DOOR-CANAL-OUT-REDUCED
+QA W3 DOOR-CANAL-IN-REDUCED seconds=0.66666666666667 ended=true rooms=[0, 13] requests=1 max_zoom=1.0 labels=["field:embodied_transitions.target_room(active overlay)"] swap_tick=21
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-COMPLETES] real F6 reduced motion completes into R13 in 0.67 s
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-NO-ZOOM] camera never zooms (max 1.000)
+FAIL: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-SHORTER] reduced 0.67 s shorter than full 0.67 s
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-LABEL] destination label kept: ["field:embodied_transitions.target_room(active overlay)"]
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-FRAMES] true frames or first/last cross-fade still shown (3 distinct frames)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-ARRIVAL] arrives in R13 supported, feet (184.0, 1199.998) within 12 px of (184.0, 1200.0) (distance 0.0)
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-REDUCED-FACING] arrival facing 1 equals the PR61 ground truth 1
+QA W3 TRUTH 0:13 {"facing":1,"room":13,"x":184.0,"y":1199.998046875}
+PASS: [hook_w3_doorway] Control state restored after transition: W3 DOOR-CANAL-IN-REDUCED
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-CANCEL-PAUSE] pause mid-sequence then resume: control back after 0 ticks
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-CANCEL-DEATH] respawn mid-sequence: control and sprite restored after 0 ticks
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-CANCEL-ROOMCHANGE] room rebuilt mid-sequence: control restored after 0 ticks
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-OUT-CANCEL-TIMEOUT] a stall cannot be forced candidate-agnostically; only the 6 s ceiling is asserted. NOT a pass.
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-CANCEL-PAUSE] pause mid-sequence then resume: control back after 21 ticks
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-CANCEL-DEATH] respawn mid-sequence: control and sprite restored after 0 ticks
+PASS: [hook_w3_doorway] [W3-DOOR-CANAL-IN-CANCEL-ROOMCHANGE] room rebuilt mid-sequence: control restored after 26 ticks
+SKIP: [hook_w3_doorway] [W3-DOOR-CANAL-IN-CANCEL-TIMEOUT] a stall cannot be forced candidate-agnostically; only the 6 s ceiling is asserted. NOT a pass.
+QA SUMMARY: 48 checks, 7 failure(s), 6 skip(s)

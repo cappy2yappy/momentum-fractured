@@ -1,0 +1,289 @@
+{
+ "approved_internal_color_spread": {
+  "mean": 0.164,
+  "max": 0.296
+ },
+ "art04_stair_key_height_px": 307,
+ "clips": [
+  {
+   "name": "stair_ascend_enter",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.308,
+    "max": 0.324
+   },
+   "within_clip_color_drift": 0.059,
+   "height_vs_art04_key": {
+    "min": 0.993,
+    "max": 1.023
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 2,
+    "mean": 3.5,
+    "max": 4.25
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 3,
+    "mean": 2.5,
+    "max": 4.25
+   }
+  },
+  {
+   "name": "stair_ascend_loop",
+   "frames": 8,
+   "color_dist_to_approved_idle": {
+    "mean": 0.306,
+    "max": 0.329
+   },
+   "within_clip_color_drift": 0.05,
+   "height_vs_art04_key": {
+    "min": 0.961,
+    "max": 1.023
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 6,
+    "mean": 3.17,
+    "max": 6.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 6,
+    "mean": 2.21,
+    "max": 4.0
+   }
+  },
+  {
+   "name": "stair_ascend_exit",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.305,
+    "max": 0.327
+   },
+   "within_clip_color_drift": 0.046,
+   "height_vs_art04_key": {
+    "min": 0.964,
+    "max": 1.023
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 3,
+    "mean": 4.25,
+    "max": 5.75
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 3,
+    "mean": 2.33,
+    "max": 4.25
+   }
+  },
+  {
+   "name": "stair_descend_enter",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.313,
+    "max": 0.338
+   },
+   "within_clip_color_drift": 0.083,
+   "height_vs_art04_key": {
+    "min": 1.007,
+    "max": 1.046
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 1,
+    "mean": 3.25,
+    "max": 3.25
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 1,
+    "mean": 5.5,
+    "max": 5.5
+   }
+  },
+  {
+   "name": "stair_descend_loop",
+   "frames": 8,
+   "color_dist_to_approved_idle": {
+    "mean": 0.309,
+    "max": 0.339
+   },
+   "within_clip_color_drift": 0.064,
+   "height_vs_art04_key": {
+    "min": 0.977,
+    "max": 1.039
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 5,
+    "mean": 5.2,
+    "max": 14.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 5,
+    "mean": 4.05,
+    "max": 8.25
+   }
+  },
+  {
+   "name": "stair_descend_exit",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.316,
+    "max": 0.356
+   },
+   "within_clip_color_drift": 0.083,
+   "height_vs_art04_key": {
+    "min": 1.007,
+    "max": 1.036
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 2,
+    "mean": 7.25,
+    "max": 8.75
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 2,
+    "mean": 4.38,
+    "max": 5.75
+   }
+  },
+  {
+   "name": "stair_arrive_idle_settle",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.307,
+    "max": 0.324
+   },
+   "within_clip_color_drift": 0.068,
+   "height_vs_art04_key": {
+    "min": 1.0,
+    "max": 1.046
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 3,
+    "mean": 47.06,
+    "max": 102.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 3,
+    "mean": 19.64,
+    "max": 29.33
+   }
+  },
+  {
+   "name": "door_approach_walk",
+   "frames": 8,
+   "color_dist_to_approved_idle": {
+    "mean": 0.312,
+    "max": 0.332
+   },
+   "within_clip_color_drift": 0.061,
+   "height_vs_art04_key": {
+    "min": 0.997,
+    "max": 1.052
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 7,
+    "mean": 2.43,
+    "max": 4.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 7,
+    "mean": 2.43,
+    "max": 4.0
+   }
+  },
+  {
+   "name": "door_turn_to_rear",
+   "frames": 4,
+   "color_dist_to_approved_idle": {
+    "mean": 0.271,
+    "max": 0.286
+   },
+   "within_clip_color_drift": 0.101,
+   "height_vs_art04_key": {
+    "min": 1.0,
+    "max": 1.016
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 3,
+    "mean": 3.67,
+    "max": 6.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 3,
+    "mean": 3.67,
+    "max": 6.0
+   }
+  },
+  {
+   "name": "door_cross",
+   "frames": 8,
+   "color_dist_to_approved_idle": {
+    "mean": 0.274,
+    "max": 0.276
+   },
+   "within_clip_color_drift": 0.023,
+   "height_vs_art04_key": {
+    "min": 1.016,
+    "max": 1.088
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 6,
+    "mean": 4.75,
+    "max": 19.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 6,
+    "mean": 4.75,
+    "max": 19.0
+   }
+  },
+  {
+   "name": "door_emerge",
+   "frames": 6,
+   "color_dist_to_approved_idle": {
+    "mean": 0.133,
+    "max": 0.134
+   },
+   "within_clip_color_drift": 0.026,
+   "height_vs_art04_key": {
+    "min": 0.98,
+    "max": 1.072
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 4,
+    "mean": 1.38,
+    "max": 2.5
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 4,
+    "mean": 1.38,
+    "max": 2.5
+   }
+  },
+  {
+   "name": "door_turn_to_side",
+   "status": "no strip"
+  },
+  {
+   "name": "door_walk_out",
+   "frames": 8,
+   "color_dist_to_approved_idle": {
+    "mean": 0.312,
+    "max": 0.332
+   },
+   "within_clip_color_drift": 0.061,
+   "height_vs_art04_key": {
+    "min": 0.997,
+    "max": 1.052
+   },
+   "foot_slide_enter": {
+    "stance_pairs": 7,
+    "mean": 2.43,
+    "max": 4.0
+   },
+   "foot_slide_leave": {
+    "stance_pairs": 7,
+    "mean": 2.43,
+    "max": 4.0
+   }
+  }
+ ]
+}

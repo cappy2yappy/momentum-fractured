@@ -1,0 +1,791 @@
+{
+  "label": "art08-61b3219",
+  "tested_sha": "61b321944f44df573a0d9d5d231d3d358823ef0d",
+  "started": "2026-10-19T22:29:51.956535+00:00",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "qa_checkout_head": "e9eec5b509be5cb1833c42fed64926767aafa759",
+  "harness_sha256": "1936c50bb1cab888305e61d374e3114ac29a78f897744b3a8254a943067d8ee3",
+  "hooks_sha256": {
+    "README.md": "648760922e18d90148ce6584dbbf8c3b772dacac119a702fb60cfada4ec67667",
+    "hook_canal_containment.gd": "546583559673d98c6cb9d7a2b70cfcafe117f61244dd32e1bff429ba3670bf29",
+    "hook_canal_containment.gd.uid": "52cb3fea8a18c2b883a305531b714ee02ba24b241d1486aee2d0500ae7dc2d0c",
+    "hook_cinematic_completion.gd": "02aff46d0e86bbe8d2cd3a93c9a26dbe12040dd50cd48f556b83e33a9778d962",
+    "hook_cinematic_completion.gd.uid": "bd0af14537280dac51804e3e5066877be668273653170fbb5de1e2ed6b156e0d",
+    "hook_w3_doorway.gd": "1cca6faddb473ef24e4fbe3d7d2e247dbd8e69f3b48fa752b4dde3ada625cf66",
+    "hook_w3_doorway.gd.uid": "56dea9769596d7b5f75681879d217a0e7b8743983fce81df54b925f2820d4d4b",
+    "hook_w3_reach.gd": "cd0f221885abb151c9156c92600c69de502180c8a82b4e46c44fe3589f14bf54",
+    "hook_w3_selftest.gd": "2813a6b098cf2a5f981aa972e0c4dc6e84f84d05dff20c3c7a0ea369f4bfb839",
+    "hook_w3_stair.gd": "505e66c3318947c80fb2269820cd469a8cee7c519bda0cd48d854f43abaecfe0",
+    "hook_w3_stair.gd.uid": "0813dc26ddd649858d5d01e7c57458152988416df2d5566a2bd38e019863f00c",
+    "r13_baseline_platforms.json": "c2b77302580bad3a48235fcd48aa0d372525610c1b9450909ade6113551a70c7",
+    "w3_ground_truth.json": "720fd53fe1176cc094837ac0301023e4beaf00aad2ec9f3431f9b344707ab72d",
+    "w3_lib.gd": "5a55afcbbd39b21a853c4e7f2e86053deb102b5b8fe346e203944317406e3ddb",
+    "w3_lib.gd.uid": "c1c57d387f01017e651e6286c101d9f49fe0234141b71fc9923aa379a1a78454",
+    "w3_reach_truth_c49.json": "df399af6e7bdb384e5c90b78dc349de802346ba76693b7c07472b43f47618643",
+    "w3_reach_truth_pr51.json": "26d8fea5ad34fcd0a9533b33b2dfb3381c27984a7a51dc803ca8029f04973de0"
+  },
+  "analyzer_sha256": "f67a4a0fcaf9c0c34d57dcdcfa35e1def4a477e17aab073a61364bfc4af6fd3b",
+  "import": {
+    "exit": 0,
+    "seconds": 48.8
+  },
+  "automated_headless": {
+    "stair": {
+      "name": "w3_stair_headless",
+      "exit": 1,
+      "seconds": 3.4,
+      "passes": 46,
+      "failures": 4,
+      "skips": 4,
+      "script_errors": 0,
+      "sections": {
+        "hook_w3_stair": {
+          "fail": 4,
+          "skip": 4,
+          "failures": [
+            "[W3-STAIR-ASCEND-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 50% of 6 moving windows, distinct poses 8 ()",
+            "[W3-STAIR-DESCEND-DURATION] E to control back 0.67 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)",
+            "[W3-STAIR-DESCEND-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 100% of 5 moving windows, distinct poses 3 ()",
+            "[W3-STAIR-DESCEND-REDUCED-SHORTER] reduced 0.67 s is shorter than full 0.67 s"
+          ],
+          "skips": [
+            "[W3-STAIR-ASCEND-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.34 of viewport from sprite rects)",
+            "[W3-STAIR-DESCEND-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.30 of viewport from sprite rects)",
+            "[W3-STAIR-ASCEND-CANCEL-TIMEOUT] a stall cannot be forced from outside a candidate-agnostic harness; only the 6 s ceiling in DURATION is asserted. NOT a pass.",
+            "[W3-STAIR-DESCEND-CANCEL-TIMEOUT] a stall cannot be forced from outside a candidate-agnostic harness; only the 6 s ceiling in DURATION is asserted. NOT a pass."
+          ],
+          "pass": 46
+        }
+      },
+      "platform": null,
+      "log": "art08-61b3219/w3_stair_headless.log",
+      "command": [
+        "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+        "--path",
+        "/tmp/w3qa-wt-l3n3hhdx/wt",
+        "--fixed-fps",
+        "60",
+        "--headless",
+        "--script",
+        "/home/claude/w3-qa/tests/pm_pilot_qa.gd",
+        "--",
+        "--qa-hooks=/home/claude/w3-qa/tools/pm_pilot_qa/hooks",
+        "--qa-sections=hook_w3_stair",
+        "--pm-staged-stair"
+      ],
+      "checks": {
+        "hook_w3_stair|W3-STAIR-ASCEND-STARTS": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-DURATION": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-ONCE": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-ARRIVAL": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-FACING": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-ASCEND completion": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-PROGRESSION": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-LABEL": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-TRUE-ANIM": "FAIL",
+        "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN": "SKIP",
+        "hook_w3_stair|W3-STAIR-ASCEND-HELD-E": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-CONTROL": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-STARTS": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-DURATION": "FAIL",
+        "hook_w3_stair|W3-STAIR-DESCEND-ONCE": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-ARRIVAL": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-FACING": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-DESCEND completion": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-PROGRESSION": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-LABEL": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-TRUE-ANIM": "FAIL",
+        "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN": "SKIP",
+        "hook_w3_stair|W3-STAIR-DESCEND-HELD-E": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-CONTROL": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FLAG": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-COMPLETES": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-SHORTER": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-NO-ZOOM": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-LABEL": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FRAMES": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-ARRIVAL": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FACING": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-ASCEND-REDUCED": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FLAG": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-COMPLETES": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-SHORTER": "FAIL",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-NO-ZOOM": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-LABEL": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FRAMES": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-ARRIVAL": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FACING": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-DESCEND-REDUCED": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-PAUSE": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-ASCEND pause": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-DEATH": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-ROOMCHANGE": "PASS",
+        "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-TIMEOUT": "SKIP",
+        "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-PAUSE": "PASS",
+        "hook_w3_stair|Control state restored after transition: W3 STAIR-DESCEND pause": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-DEATH": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-ROOMCHANGE": "PASS",
+        "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-TIMEOUT": "SKIP",
+        "hook_w3_stair|W3-STAIR-LOCKED": "PASS",
+        "hook_w3_stair|W3-NEIGHBOUR": "PASS"
+      }
+    },
+    "doorway": {
+      "name": "w3_doorway_headless",
+      "exit": 1,
+      "seconds": 2.7,
+      "passes": 41,
+      "failures": 7,
+      "skips": 6,
+      "script_errors": 0,
+      "sections": {
+        "hook_w3_doorway": {
+          "fail": 7,
+          "skip": 6,
+          "failures": [
+            "[W3-DOOR-CANAL-OUT-DURATION] input to control back 1.17 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)",
+            "[W3-DOOR-CANAL-OUT-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 75% of 8 moving windows, distinct poses 9 ()",
+            "[W3-DOOR-CANAL-IN-DURATION] input to control back 0.67 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)",
+            "[W3-DOOR-CANAL-IN-POSES] at least 5 distinct frames shown before the swap (turn, step, cross): 1",
+            "[W3-DOOR-CANAL-IN-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 0% of 2 moving windows, distinct poses 2 ()",
+            "[W3-DOOR-CANAL-OUT-REDUCED-SHORTER] reduced 1.17 s shorter than full 1.17 s",
+            "[W3-DOOR-CANAL-IN-REDUCED-SHORTER] reduced 0.67 s shorter than full 0.67 s"
+          ],
+          "skips": [
+            "[W3-DOOR-CANAL-OUT-NOT-WIPE] pixel flatness at the swap needs a rendered run. NOT a pass.",
+            "[W3-DOOR-CANAL-OUT-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.34 of viewport from sprite rects)",
+            "[W3-DOOR-CANAL-IN-NOT-WIPE] pixel flatness at the swap needs a rendered run. NOT a pass.",
+            "[W3-DOOR-CANAL-IN-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.19 of viewport from sprite rects)",
+            "[W3-DOOR-CANAL-OUT-CANCEL-TIMEOUT] a stall cannot be forced candidate-agnostically; only the 6 s ceiling is asserted. NOT a pass.",
+            "[W3-DOOR-CANAL-IN-CANCEL-TIMEOUT] a stall cannot be forced candidate-agnostically; only the 6 s ceiling is asserted. NOT a pass."
+          ],
+          "pass": 41
+        }
+      },
+      "platform": null,
+      "log": "art08-61b3219/w3_doorway_headless.log",
+      "command": [
+        "/home/claude/godot_bin/Godot_v4.6.1-stable_linux.x86_64",
+        "--path",
+        "/tmp/w3qa-wt-l3n3hhdx/wt",
+        "--fixed-fps",
+        "60",
+        "--headless",
+        "--script",
+        "/home/claude/w3-qa/tests/pm_pilot_qa.gd",
+        "--",
+        "--qa-hooks=/home/claude/w3-qa/tools/pm_pilot_qa/hooks",
+        "--qa-sections=hook_w3_doorway",
+        "--pm-staged-stair"
+      ],
+      "checks": {
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-DURATION": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-ONCE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-ARRIVAL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-FACING": "PASS",
+        "hook_w3_doorway|Control state restored after transition: W3 DOOR-CANAL-OUT completion": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-PROGRESSION": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-LABEL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-VISIBLE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-THRESHOLD": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-POSES": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE": "SKIP",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-TRUE-ANIM": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-FULLSCREEN": "SKIP",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-HELD-KEY": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CONTROL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-DURATION": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-ONCE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-ARRIVAL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-FACING": "PASS",
+        "hook_w3_doorway|Control state restored after transition: W3 DOOR-CANAL-IN completion": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-PROGRESSION": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-LABEL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-VISIBLE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-THRESHOLD": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-POSES": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE": "SKIP",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-TRUE-ANIM": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-FULLSCREEN": "SKIP",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-HELD-KEY": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CONTROL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-COMPLETES": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-NO-ZOOM": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-SHORTER": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-LABEL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-FRAMES": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-ARRIVAL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-FACING": "PASS",
+        "hook_w3_doorway|Control state restored after transition: W3 DOOR-CANAL-OUT-REDUCED": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-COMPLETES": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-NO-ZOOM": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-SHORTER": "FAIL",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-LABEL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-FRAMES": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-ARRIVAL": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-FACING": "PASS",
+        "hook_w3_doorway|Control state restored after transition: W3 DOOR-CANAL-IN-REDUCED": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-PAUSE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-DEATH": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-ROOMCHANGE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-TIMEOUT": "SKIP",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-PAUSE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-DEATH": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-ROOMCHANGE": "PASS",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-TIMEOUT": "SKIP"
+      }
+    },
+    "art08": {
+      "exit": 1,
+      "status": "FAIL",
+      "seconds": 2.0,
+      "summary": "{\"status\": \"FAIL\", \"checks_run\": 151, \"failures\": 1, \"total_frames\": 70}"
+    },
+    "analyzer_controls": {
+      "exit": 0,
+      "ok": true
+    }
+  },
+  "software_gl_graphical": {
+    "skipped": "not requested (--rendered)"
+  },
+  "w3_checks": {
+    "hook_w3_stair|W3-STAIR-ASCEND-STARTS": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-DURATION": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-ONCE": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-ARRIVAL": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-FACING": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-PROGRESSION": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-LABEL": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-TRUE-ANIM": "FAIL",
+    "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN": "SKIP",
+    "hook_w3_stair|W3-STAIR-ASCEND-HELD-E": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-CONTROL": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-STARTS": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-DURATION": "FAIL",
+    "hook_w3_stair|W3-STAIR-DESCEND-ONCE": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-ARRIVAL": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-FACING": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-PROGRESSION": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-LABEL": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-TRUE-ANIM": "FAIL",
+    "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN": "SKIP",
+    "hook_w3_stair|W3-STAIR-DESCEND-HELD-E": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-CONTROL": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FLAG": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-COMPLETES": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-SHORTER": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-NO-ZOOM": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-LABEL": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FRAMES": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-ARRIVAL": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-FACING": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FLAG": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-COMPLETES": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-SHORTER": "FAIL",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-NO-ZOOM": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-LABEL": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FRAMES": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-ARRIVAL": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-FACING": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-PAUSE": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-DEATH": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-ROOMCHANGE": "PASS",
+    "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-TIMEOUT": "SKIP",
+    "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-PAUSE": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-DEATH": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-ROOMCHANGE": "PASS",
+    "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-TIMEOUT": "SKIP",
+    "hook_w3_stair|W3-STAIR-LOCKED": "PASS",
+    "hook_w3_stair|W3-NEIGHBOUR": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-DURATION": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-ONCE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-ARRIVAL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-FACING": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-PROGRESSION": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-LABEL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-VISIBLE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-THRESHOLD": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-POSES": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE": "SKIP",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-TRUE-ANIM": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-FULLSCREEN": "SKIP",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-HELD-KEY": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-CONTROL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-DURATION": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-ONCE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-ARRIVAL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-FACING": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-PROGRESSION": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-LABEL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-VISIBLE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-THRESHOLD": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-POSES": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE": "SKIP",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-TRUE-ANIM": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-FULLSCREEN": "SKIP",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-HELD-KEY": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-CONTROL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-COMPLETES": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-NO-ZOOM": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-SHORTER": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-LABEL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-FRAMES": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-ARRIVAL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-FACING": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-COMPLETES": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-NO-ZOOM": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-SHORTER": "FAIL",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-LABEL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-FRAMES": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-ARRIVAL": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-FACING": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-PAUSE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-DEATH": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-ROOMCHANGE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-TIMEOUT": "SKIP",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-PAUSE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-DEATH": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-ROOMCHANGE": "PASS",
+    "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-TIMEOUT": "SKIP"
+  },
+  "w3_totals": {
+    "pass_": 77,
+    "fail": 11,
+    "skip": 10
+  },
+  "acceptance": [
+    {
+      "item": "fullscreen_stair_presentation",
+      "status": "PASS_WITH_SKIPS",
+      "passes": 0,
+      "fails": 0,
+      "skips": 2,
+      "failed_checks": [],
+      "skipped_checks": [
+        "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN",
+        "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN"
+      ],
+      "note": "rendered only; stage-layer coverage, letterbox bars, Kaze scale"
+    },
+    {
+      "item": "true_multiframe_stair_movement",
+      "status": "FAIL",
+      "passes": 0,
+      "fails": 3,
+      "skips": 0,
+      "failed_checks": [
+        "ART08:true_animation",
+        "hook_w3_stair|W3-STAIR-ASCEND-TRUE-ANIM",
+        "hook_w3_stair|W3-STAIR-DESCEND-TRUE-ANIM"
+      ],
+      "skipped_checks": [],
+      "note": "playback pose analysis plus shipped-strip analysis"
+    },
+    {
+      "item": "true_multiframe_door_movement",
+      "status": "FAIL",
+      "passes": 5,
+      "fails": 3,
+      "skips": 2,
+      "failed_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-POSES",
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-TRUE-ANIM",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-TRUE-ANIM"
+      ],
+      "skipped_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE"
+      ],
+      "note": "Kaze physically passes the threshold with true frames"
+    },
+    {
+      "item": "staircase_ascent",
+      "status": "PASS",
+      "passes": 8,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "staircase_descent",
+      "status": "FAIL",
+      "passes": 7,
+      "fails": 1,
+      "skips": 0,
+      "failed_checks": [
+        "hook_w3_stair|W3-STAIR-DESCEND-DURATION"
+      ],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "canal_doorway_entry_R0_to_R13",
+      "status": "FAIL",
+      "passes": 6,
+      "fails": 1,
+      "skips": 0,
+      "failed_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-DURATION"
+      ],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "canal_doorway_emergence_R13_to_R0",
+      "status": "FAIL",
+      "passes": 6,
+      "fails": 1,
+      "skips": 0,
+      "failed_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-DURATION"
+      ],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "destination_label_present",
+      "status": "PASS",
+      "passes": 8,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": "data/field evidence; pixel placement is a human review item"
+    },
+    {
+      "item": "reduced_motion",
+      "status": "FAIL",
+      "passes": 27,
+      "fails": 3,
+      "skips": 0,
+      "failed_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-REDUCED-SHORTER",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-REDUCED-SHORTER",
+        "hook_w3_stair|W3-STAIR-DESCEND-REDUCED-SHORTER"
+      ],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "correct_room_arrivals",
+      "status": "PASS",
+      "passes": 16,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "control_restoration_and_cancel",
+      "status": "PASS_WITH_SKIPS",
+      "passes": 30,
+      "fails": 0,
+      "skips": 4,
+      "failed_checks": [],
+      "skipped_checks": [
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-CANCEL-TIMEOUT",
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-CANCEL-TIMEOUT",
+        "hook_w3_stair|W3-STAIR-ASCEND-CANCEL-TIMEOUT",
+        "hook_w3_stair|W3-STAIR-DESCEND-CANCEL-TIMEOUT"
+      ],
+      "note": "completion, pause, death, room change; timeout is not forceable externally"
+    },
+    {
+      "item": "doorway_reliability_issue42",
+      "status": "NOT_RUN",
+      "passes": 0,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": "issue #42 matrix, endpoint sweep, author suite 305/0"
+    },
+    {
+      "item": "vertical_routes_vs_escapes",
+      "status": "NOT_RUN",
+      "passes": 0,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": "wall-jump probes with real input; lost routes vs controls; escapes"
+    },
+    {
+      "item": "save_and_progression",
+      "status": "PASS",
+      "passes": 4,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": ""
+    },
+    {
+      "item": "graph_integrity",
+      "status": "NOT_RUN",
+      "passes": 0,
+      "fails": 0,
+      "skips": 0,
+      "failed_checks": [],
+      "skipped_checks": [],
+      "note": ""
+    }
+  ],
+  "vs_controls": {
+    "pr51-baedd67": {
+      "baseline": "pr51-baedd67.json",
+      "changed": 17,
+      "improved": [
+        "hook_w3_stair|W3-STAIR-ASCEND-DURATION",
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-SHORTER"
+      ],
+      "regressed": [],
+      "detail": {
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE": [
+          "PASS",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_reach|W3-REACH-NO-ESCAPE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-DURATION": [
+          "FAIL",
+          "PASS"
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-REDUCED-SHORTER": [
+          "FAIL",
+          "PASS"
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ]
+      }
+    },
+    "pr57-903634a": {
+      "baseline": "pr57-903634a.json",
+      "changed": 15,
+      "improved": [],
+      "regressed": [],
+      "detail": {
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE": [
+          "PASS",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_reach|W3-REACH-NO-ESCAPE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ]
+      }
+    },
+    "pr61-49ae3ef": {
+      "baseline": "pr61-49ae3ef.json",
+      "changed": 15,
+      "improved": [],
+      "regressed": [],
+      "detail": {
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-IN-NOT-WIPE": [
+          "PASS",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_doorway|W3-DOOR-CANAL-OUT-NOT-WIPE": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_reach|W3-REACH-NO-ESCAPE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-ASCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-FULLSCREEN": [
+          "FAIL",
+          "SKIP"
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-KAZE-SCALE": [
+          "FAIL",
+          null
+        ],
+        "hook_w3_stair|W3-STAIR-DESCEND-NO-LETTERBOX": [
+          "FAIL",
+          null
+        ]
+      }
+    }
+  },
+  "regression_summary": {
+    "core_harness": "not run",
+    "stock": "not run",
+    "author_tr06": "not run"
+  },
+  "human": "none: no human playtest or creator acceptance performed. Presentation quality, label placement and animation quality require the creator.",
+  "platform": "Linux cloud only (headless dummy renderer; software GL llvmpipe for the graphical subset). Windows and macOS belong to Build and the creator.",
+  "untested": [
+    "native Windows/macOS play",
+    "physical gamepad",
+    "sustained performance",
+    "unseeded full-campaign traversal",
+    "creator visual acceptance",
+    "candidate watchdog timeout path (not forceable from outside)",
+    "pixel placement of the destination label"
+  ],
+  "notes": [],
+  "automated_verdict": "ACCEPTANCE_FAILURES",
+  "hard_regressions": [],
+  "acceptance_failing": [
+    "true_multiframe_stair_movement",
+    "true_multiframe_door_movement",
+    "staircase_descent",
+    "canal_doorway_entry_R0_to_R13",
+    "canal_doorway_emergence_R13_to_R0",
+    "reduced_motion"
+  ],
+  "acceptance_with_skips_or_not_run": [
+    "fullscreen_stair_presentation",
+    "control_restoration_and_cancel",
+    "doorway_reliability_issue42",
+    "vertical_routes_vs_escapes",
+    "graph_integrity"
+  ],
+  "readiness": "NOT READY: automated acceptance failures remain",
+  "finished": "2026-10-19T22:30:49.481485+00:00"
+}

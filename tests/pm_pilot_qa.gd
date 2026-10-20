@@ -231,7 +231,8 @@ func sec_matrix():
 	key(KEY_E,true);await wait_ticks(2);key(KEY_E,false)
 	for t in 400:
 		await wait_ticks(1)
-		if w.room==13 and w.transition<=0: break
+		# control must be back (a presented sequence may swap rooms before it ends): physics on and Kaze's own sprite visible
+		if w.room==13 and w.transition<=0 and w.player.is_physics_processing() and w.player.sprite.visible: break
 	await wait_ticks(20)
 	check(w.room==13 and w.player.is_on_floor(),"R0->R13 E door with Windstep arrives supported in Canal")
 	restored("R0->R13 E")

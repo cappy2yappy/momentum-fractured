@@ -86,7 +86,10 @@ def parse_checks(text):
 
 
 def run_hook(godot, repo, out, name, section, extra, rendered, timeout, hooks):
-    r = rq.run_godot_harness(godot, repo, out, name, ['--qa-sections=' + section, '--pm-staged-stair'] + extra, rendered, timeout, hooks)
+    # TR-08 and later make the cinematics DEFAULT-ON and treat --pm-staged-stair as an OFF flag (previous opt-in pilot), so
+    # the flag is passed only to checkouts that do not carry scripts/tr08_embodied_cinematics.gd (PR57/PR61 controls).
+    flags = [] if (Path(repo) / 'scripts/tr08_embodied_cinematics.gd').exists() else ['--pm-staged-stair']
+    r = rq.run_godot_harness(godot, repo, out, name, ['--qa-sections=' + section] + flags + extra, rendered, timeout, hooks)
     r['checks'] = parse_checks(Path(out / (name + '.log')).read_text(errors='replace'))
     return r
 

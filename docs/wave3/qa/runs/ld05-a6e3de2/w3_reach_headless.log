@@ -1,0 +1,31 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_w3_reach
+QA W3 REACH R0 probes=32 cells=727 stand=61 touch=5 escapes=0 room_changes=5 min_y=116
+QA W3 REACH R1 probes=32 cells=650 stand=66 touch=4 escapes=0 room_changes=5 min_y=116
+QA W3 REACH R2 probes=48 cells=798 stand=56 touch=12 escapes=0 room_changes=15 min_y=116
+QA W3 REACH R3 probes=48 cells=845 stand=75 touch=10 escapes=0 room_changes=5 min_y=116
+QA W3 REACH R4 probes=32 cells=572 stand=30 touch=4 escapes=0 room_changes=12 min_y=116
+QA W3 REACH R5 probes=48 cells=829 stand=66 touch=7 escapes=0 room_changes=12 min_y=116
+QA W3 REACH R6 probes=32 cells=672 stand=67 touch=7 escapes=0 room_changes=6 min_y=116
+QA W3 REACH R7 probes=32 cells=484 stand=34 touch=4 escapes=0 room_changes=4 min_y=116
+QA W3 REACH R8 probes=80 cells=899 stand=97 touch=38 escapes=0 room_changes=27 min_y=116
+QA W3 REACH R9 probes=64 cells=950 stand=110 touch=13 escapes=0 room_changes=10 min_y=116
+QA W3 REACH R10 probes=32 cells=680 stand=58 touch=6 escapes=0 room_changes=7 min_y=116
+QA W3 REACH R11 probes=48 cells=809 stand=84 touch=14 escapes=0 room_changes=9 min_y=116
+QA W3 REACH R12 probes=32 cells=662 stand=60 touch=4 escapes=0 room_changes=4 min_y=116
+QA W3 REACH R13 probes=48 cells=483 stand=62 touch=12 escapes=0 room_changes=7 min_y=116
+QA W3 REACH R14 probes=48 cells=741 stand=70 touch=14 escapes=0 room_changes=7 min_y=116
+QA W3 REACH R15 probes=32 cells=540 stand=44 touch=6 escapes=0 room_changes=4 min_y=116
+QA W3 REACH R16 probes=48 cells=621 stand=51 touch=14 escapes=0 room_changes=6 min_y=116
+QA W3 REACH R17 probes=48 cells=712 stand=60 touch=10 escapes=0 room_changes=2 min_y=116
+QA W3 REACH R18 probes=48 cells=800 stand=86 touch=10 escapes=0 room_changes=5 min_y=116
+QA W3 REACH R19 probes=48 cells=643 stand=68 touch=12 escapes=0 room_changes=3 min_y=116
+QA W3 REACH R20 probes=48 cells=637 stand=60 touch=15 escapes=0 room_changes=6 min_y=116
+QA W3 REACH wrote /home/claude/w3-qa/docs/wave3/qa/runs/ld05-a6e3de2/w3_reach_ld05-a6e3de2.json
+PASS: [hook_w3_reach] [W3-REACH-NO-ESCAPE] 928 probes with real input: 0 left the room rectangle (x -16..W+16, y above -40): 
+QA W3 REACH compare vs pr51 rooms=21 lost_pairs=5 lost_stand_cells=106 gained_stand_cells=34 lost=["R13 1>0|base", "R13 2>0|full", "R13 2>0|base", "R15 0>1|base", "R16 2>0|full"]
+FAIL: [hook_w3_reach] [W3-REACH-ROUTES-vs-pr51] endpoint reachability pairs found in pr51 and missing now: 5 (R13 1>0|base, R13 2>0|full, R13 2>0|base, R15 0>1|base, R16 2>0|full); stand cells lost 106 / gained 34 are for review
+QA W3 REACH compare vs c49 rooms=21 lost_pairs=3 lost_stand_cells=96 gained_stand_cells=20 lost=["R13 2>0|full", "R15 0>1|base", "R16 2>0|full"]
+FAIL: [hook_w3_reach] [W3-REACH-ROUTES-vs-c49] endpoint reachability pairs found in c49 and missing now: 3 (R13 2>0|full, R15 0>1|base, R16 2>0|full); stand cells lost 96 / gained 20 are for review
+QA SUMMARY: 3 checks, 2 failure(s), 0 skip(s)
