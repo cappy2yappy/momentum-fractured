@@ -1,0 +1,114 @@
+{
+ "clip": "stair_ascend_loop",
+ "frames": 8,
+ "cell": [
+  480,
+  724
+ ],
+ "leg_band_xor": {
+  "min_adjacent": 0.73,
+  "mean_adjacent": 0.791,
+  "min_any_pair": 0.028,
+  "mean_pairs": 0.72
+ },
+ "upper_band_xor": {
+  "min_adjacent": 0.255,
+  "mean_adjacent": 0.316
+ },
+ "leg_angles_deg": {
+  "thigh_dir_range": [
+   -10,
+   101
+  ],
+  "knee_flex_range": [
+   49,
+   133
+  ]
+ },
+ "arm_angles_deg": {
+  "upper_range": [
+   58,
+   126
+  ]
+ },
+ "unique_frames": 8,
+ "hidden_rgb_pixels": 0,
+ "low_alpha_pixels_1_to_19": 0,
+ "min_margin_px": 96,
+ "max_components": 1,
+ "height_range": [
+  296,
+  315
+ ],
+ "lowest_rows": [
+  590,
+  600,
+  609,
+  622,
+  591,
+  600,
+  609,
+  622
+ ],
+ "palette_outside_pct": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "class_means_first": {
+  "green": [
+   1.2,
+   204.3,
+   56.3
+  ],
+  "purple": [
+   104.8,
+   46.9,
+   141.8
+  ],
+  "skin": [
+   170.5,
+   97.3,
+   64.5
+  ]
+ },
+ "stance_flags": [
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ]
+ ]
+}
