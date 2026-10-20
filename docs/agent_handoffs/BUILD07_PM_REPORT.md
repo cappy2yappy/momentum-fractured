@@ -147,7 +147,7 @@ Builds with TR-08 (w3-transition, w3-combined) use no flag (TR-08 default-on). B
 No human playtest, no gamepad, no sustained FPS, no graphical validation, no signing. Hosted runs are headless. The QA Wave 3 informational step ran headless on Windows and macOS hosts but its output was not read by me. Apple Silicon is a launcher smoke only. Artifact bytes were not downloaded or re-hashed by me.
 
 ## Files changed in Phase B
-tools/pmpilot/pins.json, demos.json, build_package.py, request.json (the comparison request is now committed; do not re-push it unless a rerun is wanted), docs/agent_handoffs/BUILD07_PM_REPORT.md.
+tools/pmpilot/pins.json, demos.json, build_package.py, request.json (reset to a cheap preparation-smoke after the comparison run, because every push to this PR re-triggers whatever request.json holds: a report-only push re-ran the comparison as run 39368721353, which could not be cancelled via the API (403) and was superseded by this reset through the concurrency group; to rebuild, push request.json with the five w3 variants, purpose comparison, platforms both, apple_silicon true), docs/agent_handoffs/BUILD07_PM_REPORT.md.
 
 ## Environment
 Model Claude Sonnet 5.5. Hosted: windows-2022, macos-15-intel, macos-15 (Apple Silicon). Engine Godot 4.6.1.stable.official.14d19694e, checksum-pinned install.

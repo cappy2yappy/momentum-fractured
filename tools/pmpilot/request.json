@@ -1,7 +1,7 @@
 {
-  "variants": "w3-control,w3-transition,w3-level,w3-art,w3-combined",
-  "purpose": "comparison",
-  "platforms": "both",
-  "apple_silicon": true,
-  "quick": false
+  "variants": "w3-control",
+  "purpose": "preparation-smoke",
+  "platforms": "windows",
+  "apple_silicon": false,
+  "quick": true
 }
