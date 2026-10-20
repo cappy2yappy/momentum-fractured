@@ -88,24 +88,38 @@ func run():
 	reset(15);w.completed=false;cross(c.endpoint(w,15,16))
 	check(w.pending_room==-1,"Archive passage remains locked without completion")
 	# Both staircase directions: actual visual displacement, camera and cleanup.
+	# TR-08 reviewed change (docs/tr08/TEST_CHANGES.md): the stair is now the default
+	# full-screen cinematic. E opens the stage first and releases the unchanged 0.65 s
+	# loader under the opaque cover; Kaze travels on the stage, never the world camera.
 	for still in [false,true]:
 		for pair in [[14,17],[17,14]]:
-			reset(pair[0]);c.reduced=still;w.embodied_transitions.comparison="reduced" if still else "art-preview"
+			reset(pair[0]);c.reduced=still;c.tr08.reduced=still;w.embodied_transitions.comparison="reduced" if still else "art-preview"
 			var p=c.endpoint(w,pair[0],pair[1]);w.player.position=p.at-Vector2(0,2);w.player.velocity=Vector2.ZERO
 			w.interact();var feet=w.player.position
-			check(w.transition==0.65,"Stair %s uses E and existing clock"%[pair])
-			ticks(3);var first=w.embodied_transitions.proxy.position
-			ticks(12);var second=w.embodied_transitions.proxy.position
-			if still:
-				check(first==second and w.camera.zoom==Vector2.ONE,"Reduced staircase keeps camera and pose stationary")
-			else:
-				check(first.distance_to(second)>25 and signf(second.y-first.y)==w.embodied_transitions.rise,"Cinematic stair visibly moves Kaze along correct rise")
-				check(w.camera.zoom.x>1.3,"Cinematic stair gets close-up framing")
+			var stage=c.tr08.stair
+			check(stage.phase=="open" and w.transition==0,"Stair %s E opens the TR-08 full-screen stage"%[pair])
+			var released=-1
+			for tick in 40:
+				ticks(1)
+				if w.transition>0: released=tick;break
+			check(released>=0 and w.transition>0.6 and w.pending_room==pair[1],"Stair %s releases the existing loader clock under the cover"%[pair])
 			check(w.player.position==feet and w.player.velocity==Vector2.ZERO,"Cinematic never drives collision-body root motion")
-			ticks(28)
-			check(w.room==pair[1] and w.player.sprite.visible,"Stair %s arrives and restores live Kaze"%[pair])
+			while stage.phase=="open": ticks(1)
+			ticks(3);var first=stage.feet
+			ticks(12);var second=stage.feet
+			check(first.distance_to(second)>25 and signf(second.y-first.y)==w.embodied_transitions.PILOTS["%d:%d"%pair].rise,"Stair %s stage visibly moves Kaze along correct rise"%[pair])
+			if still:
+				check(stage.zoom==1.0 and w.camera.zoom==Vector2.ONE,"Reduced staircase keeps fixed framing and world camera")
+			else:
+				check(stage.layer.visible and stage.kaze.base_scale*float(stage.kaze.clip.figure)>=360,"Cinematic stair is full-screen with Kaze at cinematic scale")
+			var guard=0
+			while stage.phase!="" and guard<400:
+				ticks(1);guard+=1
+			var bounds=stage.last_duration<=1.6 if still else (stage.last_duration>=2.5 and stage.last_duration<=4.0)
+			check(w.room==pair[1] and w.player.sprite.visible and stage.last_result=="completed" and bounds,"Stair %s arrives and restores live Kaze (%.2f s)"%[pair,stage.last_duration])
 			check(w.camera.zoom==Vector2.ONE and w.camera.position==Vector2(0,-110) and w.camera.position_smoothing_enabled,"Camera fully restored after stair %s"%[pair])
-	c.reduced=false
+			check(w.player.position==c.endpoint(w,pair[1],pair[0]).at-Vector2(0,2),"Stair %s arrival feet are the unchanged reciprocal endpoint"%[pair])
+	c.reduced=false;c.tr08.reduced=false
 	for reason in ["respawn","rebuild","pause","toggle"]:
 		reset(14);w.embodied_transitions.comparison="art-preview";w.player.position=Vector2(1450,478);w.interact();ticks(8)
 		if reason=="respawn": w.checkpoint_room=0;w.respawn();freeze()
