@@ -136,9 +136,10 @@ func draw_room(w):
 			if w.embodied_transitions.production_art.suppresses_legacy(w.embodied_transitions,w.room,Rect2(at-Vector2(160,225),Vector2(390,385))): continue
 			if CanalGatehouse.suppresses_silhouette(w.room,Rect2(at-Vector2(100,220),Vector2(320,220))): continue # the solid gatehouse owns this corner
 			if w.room in [13,14,17]:
-				w.draw_line(at-Vector2(100,220),at+Vector2(100,-120),Color("62566b"),9)
-				w.draw_line(at+Vector2(100,-120),at+Vector2(220,-220),Color("62566b"),9)
-			elif w.room in [15,19]: w.draw_arc(at,150,PI,TAU,32,Color("4a565d"),14)
+				# LD-05: scenery truss lines are dashed and dim so they cannot be read as walkable ramps.
+				w.RoomBoundary.scenery_line(w,at-Vector2(100,220),at+Vector2(100,-120),Color("62566b"),6)
+				w.RoomBoundary.scenery_line(w,at+Vector2(100,-120),at+Vector2(220,-220),Color("62566b"),6)
+			elif w.room in [15,19]: w.RoomBoundary.scenery_arc(w,at,150,PI,TAU,Color("4a565d"),8)
 			else:
 				w.draw_circle(at,90,Color("37463d"));w.draw_arc(at,65,0,TAU,32,Color("5d6a57"),8)
 		if w.room==13 and w.player.speed_upgrade_level==0:
