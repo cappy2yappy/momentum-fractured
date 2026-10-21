@@ -48,7 +48,7 @@ func play(tag,from,to,dx,key_code,hold_through,use_f6=false):
 		if not hold_through and t==2: q.key(key_code,false)
 	var res=await L.drive(tag,press,to,w.ROOM_NAMES[to],rel,900,8)
 	q.key(key_code,false)
-	print("QA W3 ",tag," seconds=",res.seconds," ended=",res.ended," rooms=",res.rooms," requests=",res.requests," max_zoom=",res.max_zoom," labels=",res.labels.keys()," swap_tick=",res.swap_tick)
+	print("QA W3 ",tag," seconds=",res.seconds," physics_frames=",res.physics_frames_to_control," ended=",res.ended," rooms=",res.rooms," requests=",res.requests," max_zoom=",res.max_zoom," labels=",res.labels.keys()," swap_tick=",res.swap_tick)
 	return [res,snap0]
 
 func through_checks(tag,res,door_at):

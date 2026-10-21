@@ -241,6 +241,7 @@ func snap():
 func drive(name,press,target_room,target_name,extra=null,max_ticks=900,grab_every=0):
 	mark_baseline()
 	var f0=Engine.get_physics_frames()
+	var pf_end=-1
 	var started=false;var quiet=0;var end=-1;var rooms=[w.room]
 	var req0=w.cinematic_transitions.request_count
 	var swap_tick=-1
@@ -286,9 +287,9 @@ func drive(name,press,target_room,target_name,extra=null,max_ticks=900,grab_ever
 		if not started and activity(): started=true
 		if started and controlled(): quiet+=1
 		else: quiet=0
-		if started and quiet>=15: end=tick-14;break
+		if started and quiet>=15: end=tick-14;pf_end=Engine.get_physics_frames()-f0-14;break
 	var secs=(Engine.get_physics_frames()-f0)/60.0
-	return {"started":started,"ended":end>=0,"end_tick":end,"seconds":(end/60.0 if end>=0 else secs),"rooms":rooms,"swap_tick":swap_tick,"max_zoom":max_zoom,
+	return {"started":started,"ended":end>=0,"end_tick":end,"physics_frames_to_control":pf_end,"seconds":(end/60.0 if end>=0 else secs),"rooms":rooms,"swap_tick":swap_tick,"max_zoom":max_zoom,
 		"requests":w.cinematic_transitions.request_count-req0,"labels":label_hits.duplicate(),"new_layers":layers_seen.duplicate(),"grabs":grabs.duplicate(true),"viewport":[viewport.x,viewport.y],"bars_before":bars0}
 
 func export_samples(name):
