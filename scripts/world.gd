@@ -70,7 +70,8 @@ var cleared_encounters: Dictionary = {}
 var pending_arrival = Vector2.INF
 var extension = Extension.new()
 var platforms: Array[Rect2] = []
-var boundary_rects: Array[Rect2] = [] # LD-05 visible roof course and footings; never part of `platforms`
+var boundary_rects: Array[Rect2] = []
+var boundary_polys: Array = [] # LD-05 visible roof course and footings; never part of `platforms`
 var tether_anchors: Array[Vector2] = []
 var tether_effect_anchor = Vector2.ZERO
 var tether_effect_time = 0.0
@@ -78,7 +79,7 @@ var afterimages_spawned = 0
 var metsys_progress: Dictionary = {}
 var metsys
 var hud
-var message = "The rooftop relay is dark. Follow the canal route east."
+var message = "The refuge was attacked. I have to find the others."
 var message_time = 7.0
 var transition = 0.0
 var pending_room = -1
@@ -273,14 +274,14 @@ func gate_label(target_room: int) -> String:
 	return "OPEN"
 
 func current_objective() -> String:
-	if not player.double_jump: return "Defeat the Market sentinel and claim Windstep."
+	if not player.double_jump: return "Search for survivors. Defeat the Market sentinel for Windstep."
 	if not player.tether_unlocked: return "Reach Echo Shrine and recover Wind Tether."
 	if not player.dash_unlocked: return "Cross Broken Span and recover Gale Dash."
 	if not boss_defeated: return "Break the Tide Warden's seal."
 	if not completed: return "Restore the Relay Archive."
 	if not has_required_sigils(): return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
 	if room == 10 and not opened_kunai_gates.get("skyworks_wind_intake", false): return "Use Wind Kunai to release the intake seal."
-	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Refuge. Open the Electric relay."
+	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Rest Station. Open the Electric relay."
 	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
 	if not cleared_encounters.get("storm_keeper", false): return "Follow Signal Terrace east. Reach SkyWorks and face the Storm Keeper."
 	if not skyworks_restored: return "Attune the Keeper Relay beyond the arena."
@@ -775,11 +776,11 @@ func _draw():
 		draw_rect(rect, color, false, 4)
 		for y in range(int(rect.position.y) + 18, int(rect.end.y), 34): draw_line(Vector2(rect.position.x, y), Vector2(rect.end.x, y + 16), Color(color, 0.75), 3)
 	if room == 2:
-		for rect in [Rect2(640, 1260, 290, 180), Rect2(1350, 1260, 330, 180), Rect2(2200, 1260, 180, 180)]: draw_water(rect)
+		for rect in [Rect2(640, 1260, 290, 180), Rect2(1350, 1260, 330, 180), Rect2(2200, 1260, 180, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	elif room == 4:
-		for rect in [Rect2(450, 1260, 550, 180), Rect2(1280, 1260, 770, 180)]: draw_water(rect)
+		for rect in [Rect2(450, 1260, 550, 180), Rect2(1280, 1260, 770, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	elif room == 5:
-		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(rect)
+		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	for anchor in grapple_candidates():
 		var in_range = player.tether_unlocked and player.can_tether_anchor(anchor)
 		var pulse = 3.0 + sin(player.age * 7.0) * 2.0 if in_range else 0.0

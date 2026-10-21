@@ -39,6 +39,9 @@ var last_result = ""
 var last_duration = 0.0
 var shown: Array = []
 var inside = false
+const AUTOMATIC_KEY = "13:0"
+var landing_started = 0
+var rearmed = 0
 var layer = CanvasLayer.new()
 var back = Node2D.new()
 var mask = Node2D.new()
@@ -63,9 +66,17 @@ func configure(w,h):
 
 func applies(w,t:int) -> bool:
 	if not "%d:%d"%[w.room,t] in Data.TR08.canal_pairs: return false
-	# Ground steps only: an airborne, tethered or wall-sliding crossing keeps the
-	# inherited passage instead of counterfeit footsteps.
-	return w.player.is_on_floor() and not w.player.tether_attached
+	if w.player.tether_attached: return false
+	# Ground steps only. An airborne crossing keeps the inherited passage, EXCEPT the
+	# automatic exit right after stepping off a ledge (the Play-Canal-Doorway walk off
+	# the hallway shelf crosses x=120 about 1 px above the pad): see can_land().
+	return w.player.is_on_floor() or can_land(w,t)
+
+## TR08 hang fix (2): the automatic R13 exit crossed while airborne within a short time of
+## being grounded lets the REAL body finish its fall under unchanged physics and input,
+## then plays the grounded sequence. Never for a body that was not recently grounded.
+func can_land(w,t:int) -> bool:
+	return "%d:%d"%[w.room,t]==AUTOMATIC_KEY and w.player.is_physics_processing() and host.grounded_age<=Data.TR08.canal.land_recent_ticks
 
 func door_for(index:int) -> Dictionary:
 	var c=Data.TR08.canal
@@ -76,6 +87,8 @@ func door_for(index:int) -> Dictionary:
 
 ## Owns the accepted request (world.request_room already passed can_enter).
 func begin(w,t:int,at:Vector2):
+	if not w.player.is_on_floor():
+		begin_landing(w,t,at);return
 	key="%d:%d"%[w.room,t];source=w.room;target=t;arrival=at
 	still=host.reduced
 	rate=Data.TR08.canal.reduced_rate if still else 1.0
@@ -100,6 +113,36 @@ func begin(w,t:int,at:Vector2):
 	if lead>0: start_phase("approach","door_approach_walk",travel)
 	else: start_phase("turn","door_turn_to_rear",travel)
 	redraw()
+
+## Owns the accepted airborne request while the live body lands (physics and input
+## untouched, sprite live, nothing drawn). Falls back to the inherited request if the
+## body does not land inside the doorway lane in time.
+func begin_landing(w,t:int,at:Vector2):
+	key="%d:%d"%[w.room,t];source=w.room;target=t;arrival=at
+	door=door_for(source)
+	elapsed=0.0;request_time=-1.0;swap_time=-1.0;releasing=false;shown.clear()
+	last_result="";landing_started+=1
+	phase="land";phase_time=0.0
+	layer.visible=false
+
+func tick_landing(w):
+	var p=w.player
+	var lane:Vector2=door.lane
+	var inside=p.position.x>=door.aperture.position.x and p.position.x<=door.aperture.end.x
+	if p.is_on_floor() and inside and absf(p.position.y-door.at.y)<=3:
+		phase=""
+		begin(w,target,arrival)
+		return
+	if phase_time>Data.TR08.canal.land_timeout or p.tether_attached or not inside or not p.is_physics_processing():
+		fallback(w,"land_fallback")
+
+## Releases the inherited (PR61) request at once: the exact old behaviour, never a lost
+## crossing.
+func fallback(w,reason:String):
+	phase="";last_result=reason;aborted+=1
+	releasing=true
+	w.request_room(target,arrival)
+	releasing=false
 
 func clip(name:String) -> Dictionary:
 	return host.table[name]
@@ -155,6 +198,8 @@ func tick(w):
 	if phase=="": return
 	var dt=host.cinematic.last_dt
 	elapsed+=dt;phase_time+=dt
+	if phase=="land":
+		tick_landing(w);return
 	if elapsed>Data.TR08.canal.watchdog:
 		restore(w,"watchdog");return
 	if request_time<0 and elapsed>=request_at-0.0001:
@@ -265,6 +310,14 @@ func reduced_changed(w):
 func restore(w,reason:String):
 	var was=phase
 	phase="";releasing=false
+	# TR08 hang fix (1): world.update() disarmed the automatic trigger when it made the
+	# request that this sequence owns. If the sequence ends BEFORE that request reaches
+	# the loader (pause, focus loss, map/kit, watchdog), the crossing never happened:
+	# re-arm it so the unchanged supported-recovery path can fire again when the player
+	# holds the exit direction. Previously Kaze stood in the doorway holding A forever.
+	if was!="" and request_time<0 and key==AUTOMATIC_KEY and reason!="completed" and is_instance_valid(w) and w.room==source:
+		w.cinematic_transitions.armed[target]=true
+		rearmed+=1
 	if is_instance_valid(w) and is_instance_valid(w.player):
 		if was!="" and w.transition<=0:
 			w.player.set_physics_process(true);w.player.velocity=Vector2.ZERO

@@ -6,49 +6,49 @@
   724
  ],
  "leg_band_xor": {
-  "min_adjacent": 0.635,
-  "mean_adjacent": 0.737,
-  "min_any_pair": 0.049,
-  "mean_pairs": 0.676
+  "min_adjacent": 0.445,
+  "mean_adjacent": 0.554,
+  "min_any_pair": 0.009,
+  "mean_pairs": 0.529
  },
  "upper_band_xor": {
-  "min_adjacent": 0.204,
-  "mean_adjacent": 0.312
+  "min_adjacent": 0.202,
+  "mean_adjacent": 0.311
  },
  "leg_angles_deg": {
   "thigh_dir_range": [
-   37,
-   99
+   49,
+   73
   ],
   "knee_flex_range": [
    5,
-   101
+   102
   ]
  },
  "arm_angles_deg": {
   "upper_range": [
-   70,
-   114
+   92,
+   92
   ]
  },
  "unique_frames": 8,
  "hidden_rgb_pixels": 0,
  "low_alpha_pixels_1_to_19": 0,
- "min_margin_px": 88,
- "max_components": 1,
+ "min_margin_px": 108,
+ "max_components": 3,
  "height_range": [
-  302,
-  320
+  316,
+  327
  ],
  "lowest_rows": [
-  609,
-  600,
-  597,
-  623,
-  610,
-  600,
-  598,
-  623
+  606,
+  602,
+  602,
+  615,
+  607,
+  601,
+  602,
+  615
  ],
  "palette_outside_pct": [
   0.0,
@@ -62,18 +62,18 @@
  ],
  "class_means_first": {
   "green": [
-   1.2,
-   204.1,
-   56.2
+   2.9,
+   199.5,
+   63.2
   ],
   "purple": [
-   105.2,
-   47.1,
-   142.0
+   102.5,
+   45.2,
+   138.2
   ],
   "skin": [
-   174.1,
-   99.4,
+   176.2,
+   101.7,
    65.9
   ]
  },

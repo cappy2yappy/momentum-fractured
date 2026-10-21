@@ -1,0 +1,496 @@
+[
+ {
+  "room": 0,
+  "name": "CANAL HAVEN",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    1
+   ],
+   "3": [
+    13
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 1,
+  "name": "LANTERN MARKET",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    0,
+    2
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 2,
+  "name": "FLOODED CISTERN",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    1
+   ],
+   "9": [
+    3
+   ],
+   "4": [
+    15
+   ]
+  },
+  "findings": [
+   {
+    "kind": "pit",
+    "x0": 640.0,
+    "x1": 930.0,
+    "width": 290.0,
+    "fall_probes": 17,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   },
+   {
+    "kind": "pit",
+    "x0": 1350.0,
+    "x1": 1680.0,
+    "width": 330.0,
+    "fall_probes": 22,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   },
+   {
+    "kind": "pit",
+    "x0": 2200.0,
+    "x1": 2380.0,
+    "width": 180.0,
+    "fall_probes": 8,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   }
+  ]
+ },
+ {
+  "room": 3,
+  "name": "ECHO SHRINE",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    2
+   ],
+   "0": [
+    4
+   ],
+   "5": [
+    9
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 4,
+  "name": "BROKEN SPAN",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    3
+   ],
+   "6": [
+    5
+   ]
+  },
+  "findings": [
+   {
+    "kind": "pit",
+    "x0": 450.0,
+    "x1": 1000.0,
+    "width": 550.0,
+    "fall_probes": 31,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   },
+   {
+    "kind": "pit",
+    "x0": 1280.0,
+    "x1": 2050.0,
+    "width": 770.0,
+    "fall_probes": 46,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   }
+  ]
+ },
+ {
+  "room": 5,
+  "name": "ASCENT TOWER",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "3": [
+    4
+   ],
+   "2": [
+    6
+   ],
+   "9": [
+    17
+   ]
+  },
+  "findings": [
+   {
+    "kind": "pit",
+    "x0": 500.0,
+    "x1": 780.0,
+    "width": 280.0,
+    "fall_probes": 13,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   },
+   {
+    "kind": "pit",
+    "x0": 1500.0,
+    "x1": 1850.0,
+    "width": 350.0,
+    "fall_probes": 16,
+    "note": "no catch floor: a miss costs 1 HP and re-enters at the recovery pose"
+   }
+  ]
+ },
+ {
+  "room": 6,
+  "name": "TIDE WARDEN",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    5
+   ],
+   "4": [
+    7
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 7,
+  "name": "RELAY ARCHIVE",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    6
+   ],
+   "0": [
+    8
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 8,
+  "name": "RELAY UNDERCROFT",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    7
+   ],
+   "6": [
+    9
+   ],
+   "2": [
+    16
+   ],
+   "3": [
+    18
+   ],
+   "4": [
+    12
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 9,
+  "name": "SIGNAL TERRACE",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    8
+   ],
+   "6": [
+    10
+   ],
+   "3": [
+    14
+   ],
+   "2": [
+    3
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 10,
+  "name": "SKYWORKS APPROACH",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    9
+   ],
+   "6": [
+    11
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 11,
+  "name": "STORM FOUNDRY",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    10
+   ],
+   "0": [
+    12
+   ],
+   "2": [
+    19
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 12,
+  "name": "KEEPER RELAY",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "0": [
+    11
+   ],
+   "1": [
+    8
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 13,
+  "name": "MOORING LOFT",
+  "size": [
+   1800.0,
+   1440.0
+  ],
+  "doors": {
+   "14": [
+    0
+   ],
+   "6": [
+    14
+   ],
+   "13": [
+    20
+   ]
+  },
+  "findings": [
+   {
+    "kind": "unreachable",
+    "surface": [
+     0.0,
+     1020.0,
+     72.0,
+     180.0
+    ],
+    "note": "no probe chain from a door or the recovery pose lands here"
+   },
+   {
+    "kind": "recovery",
+    "pos": [
+     230.0,
+     1198.0
+    ],
+    "inside_solid": true,
+    "support_gap": 2.0,
+    "note": "fall recovery pose is not on solid ground"
+   }
+  ]
+ },
+ {
+  "room": 14,
+  "name": "BELLROOF WALK",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "2": [
+    13
+   ],
+   "11": [
+    9
+   ],
+   "14": [
+    17
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 15,
+  "name": "LOWER SLUICE",
+  "size": [
+   2200.0,
+   1440.0
+  ],
+  "doors": {
+   "9": [
+    2
+   ],
+   "1": [
+    16
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 16,
+  "name": "ROOT SHRINE",
+  "size": [
+   2000.0,
+   1440.0
+  ],
+  "doors": {
+   "1": [
+    15
+   ],
+   "6": [
+    8
+   ],
+   "9": [
+    18
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 17,
+  "name": "COUNTERWEIGHT SPIRE",
+  "size": [
+   1800.0,
+   2160.0
+  ],
+  "doors": {
+   "7": [
+    14
+   ],
+   "1": [
+    5
+   ],
+   "15": [
+    20
+   ]
+  },
+  "findings": [
+   {
+    "kind": "recovery",
+    "pos": [
+     1790.0,
+     1298.0
+    ],
+    "inside_solid": true,
+    "support_gap": 2.0,
+    "note": "fall recovery pose is not on solid ground"
+   }
+  ]
+ },
+ {
+  "room": 18,
+  "name": "PUMP GALLERY",
+  "size": [
+   2600.0,
+   1440.0
+  ],
+  "doors": {
+   "4": [
+    16
+   ],
+   "1": [
+    8
+   ],
+   "12": [
+    19
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 19,
+  "name": "COIL SERVICE HALL",
+  "size": [
+   2400.0,
+   1440.0
+  ],
+  "doors": {
+   "10": [
+    18
+   ],
+   "2": [
+    11
+   ],
+   "20": [
+    20
+   ]
+  },
+  "findings": []
+ },
+ {
+  "room": 20,
+  "name": "RELAY JUNCTION",
+  "size": [
+   2200.0,
+   1440.0
+  ],
+  "doors": {
+   "7": [
+    17
+   ],
+   "1": [
+    19
+   ],
+   "10": [
+    13
+   ]
+  },
+  "findings": []
+ }
+]

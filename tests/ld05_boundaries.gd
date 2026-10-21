@@ -127,7 +127,7 @@ func run():
 		for p in w.cinematic_transitions.endpoints(w,index):
 			var d = RB.seat_offset(w,p.at)
 			if d != 0.0: shifted["%d->%d" % [index,p.target]] = d
-	check(shifted == {"6->7":20.0,"9->10":-20.0},"Door seating shifts exactly R6->R7 (+20) and R9->R10 (-20); got %s" % [shifted])
+	check(shifted == {"9->10":-20.0},"Door seating shifts only R9->R10 (-20); R6->R7 is now seated by the LD-05 sill (offset 0); got %s" % [shifted])
 	# the endpoint data themselves are unchanged
 	reset(6);check(w.cinematic_transitions.endpoint(w,6,7).at == Vector2(2440,1090),"R6->R7 endpoint (2440,1090) unchanged")
 	reset(9);check(w.cinematic_transitions.endpoint(w,9,10).at == Vector2(2440,830),"R9->R10 endpoint (2440,830) unchanged")
@@ -154,6 +154,138 @@ func run():
 		if r.position.y < 0: r9 = true
 	check(not r3 and r9,"ORIGINAL_ROOMS_ENABLED=false leaves R0..R7 untouched and keeps R8+ closed")
 	RB.ORIGINAL_ROOMS_ENABLED = true
+
+	# ---- 10. ground level: doorway approaches, sill, pits --------------------------------------------------------
+	# 10a. every walk-through exit opens for a Kaze walking into it along its own shelf (real keys)
+	var walk_total = 0;var walk_ok = 0;var walk_bad = []
+	for index in 21:
+		reset(index)
+		for p in w.cinematic_transitions.endpoints(w,index):
+			if p.mode != "horizontal_walk": continue
+			reset(index)
+			var dir = int(p.heading)
+			var support = Rect2()
+			var found = false
+			for r in w.platforms:
+				if r.position.x < 0 or r.position.x >= w.room_size(index).x: continue
+				if p.at.x >= r.position.x and p.at.x <= r.end.x and absf(r.position.y - p.at.y) <= 40 and (not found or r.position.y < support.position.y): support = r;found = true
+			var sx = clampf(p.at.x - dir * 220.0,support.position.x + 20,support.end.x - 20)
+			await place(index,Vector2(sx,support.position.y - 2))
+			var before_n = w.cinematic_transitions.request_count
+			key(KEY_D if dir > 0 else KEY_A,true)
+			var opened = false
+			for t in 240:
+				await wait_ticks(1)
+				if w.cinematic_transitions.request_count > before_n: opened = true;break
+			key(KEY_D,false);key(KEY_A,false)
+			walk_total += 1
+			if opened: walk_ok += 1
+			else: walk_bad.append("R%d->R%d" % [index,p.target])
+			await wait_ticks(20)
+	check(walk_bad.is_empty(),"All %d walk-through exits open for a walking Kaze on their own shelf (%d / %d; failing: %s)" % [walk_total,walk_ok,walk_total,walk_bad])
+	# 10b. R6 sill: visible, solid, seated, and the walkable approach is continuous
+	reset(6)
+	check(w.boundary_polys.size() == 1 and w.boundary_rects.has(Rect2(2390,1090,210,26)),"R6 has exactly one sill solid (bounding rect 2390,1090,210x26)")
+	var sig6 = []
+	for r in w.platforms: sig6.append([r.position.x,r.position.y,r.size.x,r.size.y])
+	check(JSON.stringify(sig6) == JSON.stringify(base["6"]),"R6 platform list unchanged by the sill (approved geometry untouched)")
+	check(w.cinematic_transitions.endpoint(w,6,7).at == Vector2(2440,1090),"R6->R7 endpoint still (2440,1090)")
+	await place(6,Vector2(2250,1108))
+	var open6 = w.cinematic_transitions.request_count
+	key(KEY_D,true)
+	var fired6 = -1
+	for t in 240:
+		await wait_ticks(1)
+		if w.cinematic_transitions.request_count > open6: fired6 = t;break
+	key(KEY_D,false)
+	check(fired6 >= 0 and fired6 < 120,"R6: walking right along the shelf opens the R7 exit (tick %d; before the sill it never opened)" % fired6)
+	for t in 200:
+		await wait_ticks(1)
+		if w.room == 7 and w.transition <= 0: break
+	await wait_ticks(40)
+	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.x - 227.1) < 3.0,"R6->R7 arrival in R7 at (%.1f,%.1f), unchanged" % [w.player.position.x,w.player.position.y])
+	# return trip: R7 left door to R6 lands on the shelf beside the ramp, not inside it
+	await place(7,Vector2(300,1088))
+	var ret0 = w.cinematic_transitions.request_count
+	key(KEY_A,true)
+	for t in 200:
+		await wait_ticks(1)
+		if w.cinematic_transitions.request_count > ret0: break
+	key(KEY_A,false)
+	for t in 200:
+		await wait_ticks(1)
+		if w.room == 6 and w.transition <= 0: break
+	await wait_ticks(40)
+	var cap6 = Rect2(w.player.position - Vector2(14,60),Vector2(28,60))
+	var inside6 = false
+	for r in w.platforms + w.boundary_rects:
+		if r.intersects(cap6): inside6 = true
+	check(w.room == 6 and w.player.is_on_floor() and not inside6 and w.player.position.x < 2390.0,"R7->R6 arrival at (%.1f,%.1f) stands on the shelf clear of the sill ramp" % [w.player.position.x,w.player.position.y])
+	# the arming window is wide enough for every approach: walk and double-tap run from four starts, plus a run + dash
+	var trials_ok = 0;var trials = 0
+	for sx6 in [2060.0,2200.0,2300.0,2384.0]:
+		for mode in ["walk","run","dash"]:
+			await place(6,Vector2(sx6,1108))
+			var n6 = w.cinematic_transitions.request_count
+			if mode == "run":
+				key(KEY_D,true);await wait_ticks(3);key(KEY_D,false);await wait_ticks(3);key(KEY_D,true)
+			else:
+				key(KEY_D,true)
+			if mode == "dash":
+				await wait_ticks(8);key(KEY_SHIFT,true);await wait_ticks(1);key(KEY_SHIFT,false)
+			var hit = false
+			for t in 240:
+				await wait_ticks(1)
+				if w.cinematic_transitions.request_count > n6: hit = true;break
+			key(KEY_D,false);key(KEY_SHIFT,false)
+			if mode != "dash": trials += 1
+			if mode == "dash":
+				# reported, not asserted: a dash crosses the 17 px arming window in about one tick
+				print("INFO R6 dash from x %d: exit %s" % [sx6,"opened" if hit else "not opened (walk back and cross again)"])
+				await wait_ticks(80)
+				continue
+			if hit: trials_ok += 1
+			else: print("TRIAL MISS start %d mode %s end x %.1f y %.1f" % [sx6,mode,w.player.position.x,w.player.position.y])
+			await wait_ticks(80)
+	check(trials_ok == trials,"R6 exit opens in %d / %d approach trials (walk and double-tap run from four starts)" % [trials_ok,trials])
+	# the ramp is walkable at full speed in both directions and the sill top is the door line
+	await place(6,Vector2(2300,1108))
+	key(KEY_D,true);await wait_ticks(26);key(KEY_D,false)
+	if w.room == 6:
+		check(w.player.position.x > 2380.0 or w.room != 6,"R6: ramp is climbed by walking (x %.1f, y %.1f)" % [w.player.position.x,w.player.position.y])
+	# 10c. pit water: drawn below the floor lip, collider unchanged, falling still costs one HP and recovers on solid ground
+	check(RB.pit_rect(Rect2(450,1260,550,180)).position.y == 1372.0 and RB.pit_rect(Rect2(450,1260,550,180)).end.y == 1440.0,"Pit water is drawn from y 1372 (was 1260, 40 px above the 1300 lip)")
+	RB.PIT_WATER_ALIGNED = false
+	check(RB.pit_rect(Rect2(450,1260,550,180)) == Rect2(450,1260,550,180),"PIT_WATER_ALIGNED=false restores the legacy water rectangle")
+	RB.PIT_WATER_ALIGNED = true
+	for index in [2,4,5]:
+		reset(index)
+		var gaps = []
+		var segs = []
+		for r in w.platforms:
+			if r.position.x >= 0 and r.position.x < w.room_size(index).x and r.position.y == 1300.0: segs.append(r)
+		segs.sort_custom(func(a,b): return a.position.x < b.position.x)
+		var x0 = 0.0
+		for sg in segs:
+			if sg.position.x > x0 + 1: gaps.append(Vector2(x0,sg.position.x))
+			x0 = maxf(x0,sg.end.x)
+		var pit = gaps[0]
+		await place(index,Vector2(pit.x - 30,1298))
+		var hp0 = w.player.hp
+		key(KEY_D,true)
+		var passed_surface = false;var recovered = false
+		for t in 400:
+			await wait_ticks(1)
+			if w.player.position.y > 1380.0: passed_surface = true
+			if passed_surface and w.player.hp < hp0 and w.player.is_on_floor(): recovered = true;break
+		key(KEY_D,false)
+		check(passed_surface and recovered and w.player.hp == hp0 - 1,"R%d pit at x %d..%d: Kaze drops through the drawn water (collider unchanged), loses 1 HP and is returned to solid ground at (%.0f,%.0f)" % [index,pit.x,pit.y,w.player.position.x,w.player.position.y])
+		await wait_ticks(30)
+	# 10d. switch: --ld05-no-sill state
+	RB.SILLS_ENABLED = false
+	reset(6)
+	check(w.boundary_polys.is_empty() and RB.seat_offset(w,Vector2(2440,1090)) == 20.0,"SILLS_ENABLED=false restores the pre-LD-05 shelf and door seat")
+	RB.SILLS_ENABLED = true
 
 	DirAccess.make_dir_recursive_absolute("res://build/ld05")
 	var file = FileAccess.open("res://build/ld05/test_wall_rows.json",FileAccess.WRITE);file.store_string(JSON.stringify(rows,"  "));file.close()

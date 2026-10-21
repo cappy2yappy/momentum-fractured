@@ -1,0 +1,66 @@
+{
+ "label": "v2_after",
+ "metrics": {
+  "stair_descend_enter": {
+   "frames": 4,
+   "spine_deg": {
+    "mean": 6.7,
+    "min": 6.2,
+    "max": 7.5
+   },
+   "head_offset_px": {
+    "mean": 12.5,
+    "min": 12.2,
+    "max": 12.9
+   },
+   "per_frame_spine": [
+    6.4,
+    7.5,
+    6.2,
+    6.7
+   ]
+  },
+  "stair_descend_loop": {
+   "frames": 8,
+   "spine_deg": {
+    "mean": 6.9,
+    "min": 6.2,
+    "max": 7.5
+   },
+   "head_offset_px": {
+    "mean": 12.5,
+    "min": 12.2,
+    "max": 12.7
+   },
+   "per_frame_spine": [
+    6.7,
+    7.5,
+    6.8,
+    7.1,
+    6.8,
+    7.1,
+    6.2,
+    6.9
+   ]
+  },
+  "stair_descend_exit": {
+   "frames": 4,
+   "spine_deg": {
+    "mean": 7.1,
+    "min": 6.7,
+    "max": 7.6
+   },
+   "head_offset_px": {
+    "mean": 12.5,
+    "min": 12.2,
+    "max": 12.9
+   },
+   "per_frame_spine": [
+    6.9,
+    7.6,
+    6.7,
+    7.1
+   ]
+  }
+ }
+}

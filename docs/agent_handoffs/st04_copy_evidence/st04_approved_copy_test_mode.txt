@@ -1,0 +1,38 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+PASS: Fresh opening announcement is the approved text
+PASS: Opening announcement is visible at start
+PASS: Fresh first objective is the approved text
+PASS: Fresh start is still room 0 with no progress
+PASS: Fresh start has no earned progression
+PASS: Old opening text is gone
+PASS: First objective holds until Windstep regardless of later flags
+PASS: After Windstep the Wind Tether objective is unchanged
+PASS: Gale Dash objective unchanged
+PASS: Tide Warden objective unchanged
+PASS: Relay Archive objective unchanged
+PASS: Annex survey objective unchanged
+PASS: R10 intake objective unchanged
+PASS: R12 Keeper objective unchanged
+PASS: Pre-Keeper route objective unchanged
+PASS: R11 objective uses Foundry Rest Station
+PASS: Room 11 is still named STORM FOUNDRY (Storm Foundry)
+PASS: R11 activation announcement uses Foundry Rest Station
+PASS: Checkpoint behaviour unchanged: room, exact position and full health
+PASS: R11 revisit repeats the approved announcement and restores health
+PASS: Interact away from the R11 shrine announces nothing
+INFO: label width new 240.0 old 186.0 px at 18pt, starts x=1575 room width 2600
+PASS: Drawn R11 label stays inside the room with margin
+PASS: Drawn R11 label does not run into the right half of the room beyond x=2000
+PASS: Drawn label source uses uppercase Rest Station with E prompt
+PASS: Save writes after the R11 checkpoint
+PASS: Reload restores R11 checkpoint exactly
+PASS: Reload keeps progression
+PASS: Reloaded R11 objective shows new text
+PASS: Save schema version 8 holds no display strings, so it is unchanged
+PASS: Pre-change save keeps R11 checkpoint
+PASS: Pre-change save keeps progression unchanged
+PASS: Pre-change save keeps gate state
+PASS: Pre-change save shows the new R11 objective
+PASS: No remaining 'Foundry Refuge' display strings in scripts, scenes or tests []
+PASS: Storm Foundry room name still present in ROOM_NAMES
+ST04 copy failures: 0

@@ -92,7 +92,7 @@ func begin(w,t:int,at:Vector2):
 	queue=[stem+"_enter"]
 	for i in (cfg.reduced_loops if still else cfg.loops): queue.append(stem+"_loop")
 	queue.append(stem+"_exit")
-	if not still: queue.append("stair_arrive_idle_settle")
+	if not still: queue.append("stair_descend_arrive_settle" if rise>0 else "stair_arrive_idle_settle")
 	planned=queue.duplicate()
 	plan()
 	phase="open";started+=1;last_result=""
@@ -125,7 +125,7 @@ func plan():
 		if name.ends_with("_loop"): loop_total=Library.motion_total(c)*s
 		for i in c.frames.size():
 			var rm:Vector2=c.root_motion[i] if c.root_motion.size()>i else Vector2.ZERO
-			if c.get("soles",[]).size()>i and c.soles[i]!=Vector2.INF and name!="stair_arrive_idle_settle":
+			if c.get("soles",[]).size()>i and c.soles[i]!=Vector2.INF and name!="stair_arrive_idle_settle" and name!="stair_descend_arrive_settle":
 				soles.append(p+Vector2(c.soles[i].x*heading,c.soles[i].y)*s)
 			for k in 4:
 				p+=Vector2(rm.x*heading,rm.y)*s/4.0;path.append(p)
@@ -249,7 +249,7 @@ func reduced_changed(w):
 		# Shorten what remains, freeze the camera at once; never restart a phase.
 		still=true;rate=Data.TR08.stair.reduced_rate
 		while queue.size()>1 and queue[0].ends_with("_loop"): queue.pop_front()
-		queue.erase("stair_arrive_idle_settle")
+		queue.erase("stair_arrive_idle_settle");queue.erase("stair_descend_arrive_settle")
 		kaze.rate=rate
 		close_in=minf(close_in,Data.TR08.stair.reduced_fade);close_out=minf(close_out,Data.TR08.stair.reduced_fade)
 		frame_camera(true)

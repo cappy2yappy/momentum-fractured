@@ -1,0 +1,54 @@
+{
+ "v1_descent": {
+  "label": "v1 (stair_up donor)",
+  "flat_feet": {
+   "0": {
+    "n": 5,
+    "x_spread": 0.55,
+    "y_spread": 0.0
+   },
+   "1": {
+    "n": 6,
+    "x_spread": 1.76,
+    "y_spread": 0.93
+   },
+   "2": {
+    "n": 6,
+    "x_spread": 1.62,
+    "y_spread": 0.71
+   },
+   "3": {
+    "n": 6,
+    "x_spread": 1.62,
+    "y_spread": 0.71
+   }
+  },
+  "max_x_spread_px": 1.76
+ },
+ "v2_descent": {
+  "label": "v2 (stair_down donor)",
+  "flat_feet": {
+   "0": {
+    "n": 5,
+    "x_spread": 0.25,
+    "y_spread": 0.0
+   },
+   "1": {
+    "n": 6,
+    "x_spread": 1.24,
+    "y_spread": 0.82
+   },
+   "2": {
+    "n": 6,
+    "x_spread": 0.75,
+    "y_spread": 0.74
+   },
+   "3": {
+    "n": 6,
+    "x_spread": 0.75,
+    "y_spread": 0.74
+   }
+  },
+  "max_x_spread_px": 1.24
+ }
+}

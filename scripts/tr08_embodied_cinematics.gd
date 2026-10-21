@@ -19,6 +19,7 @@ var cinematic
 var stair = StairStage.new()
 var canal = CanalDoorway.new()
 var releasing = false
+var grounded_age = 1000000   # world ticks since the live body was last seen grounded
 
 func configure(w,c,args:PackedStringArray):
 	world=w;cinematic=c
@@ -51,11 +52,18 @@ func intercept(w,t:int,at:Vector2) -> bool:
 		canal.begin(w,t,at);return true
 	return false
 
+## Every world tick (CinematicTransitions.present): ground history for the doorway's
+## landing rule. Reset on every room build so a fixture or rebuild never inherits it.
+func observe(w):
+	if w.player.is_physics_processing() and w.player.is_on_floor(): grounded_age=0
+	elif grounded_age<1000000: grounded_age+=1
+
 func tick(w):
 	if stair.phase!="": stair.tick(w)
 	if canal.phase!="": canal.tick(w)
 
 func room_loaded(w):
+	grounded_age=1000000
 	stair.room_loaded(w);canal.room_loaded(w)
 
 func cancel(w):
