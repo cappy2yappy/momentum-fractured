@@ -67,7 +67,11 @@ func run():
 				w.player.set_physics_process(false)
 			else:
 				w.player.position=portal.at;w.expansion.interact(w)
-			for tick in 45: w._physics_process(1.0/60.0)
+			# TR-08 reviewed change: the embodied Canal doorway runs around the unchanged
+			# loader, so keep ticking (bounded) until it hands back control.
+			for tick in 300:
+				w._physics_process(1.0/60.0)
+				if tick>=44 and not w.cinematic_transitions.tr08.owns() and w.transition<=0: break
 			freeze()
 			var expected=portal.arrival
 			var reciprocal=w.cinematic_transitions.endpoint(w,pair[1],pair[0])

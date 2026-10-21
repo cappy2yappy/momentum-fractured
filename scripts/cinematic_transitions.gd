@@ -2,7 +2,9 @@ extends Node2D
 ## TR-05: endpoint intent and cinematic presentation. Never owns world topology.
 const PilotData = preload("res://scripts/transition_pilot_data.gd")
 const StagedStair = preload("res://scripts/staged_stair_cinematic.gd")
+const Tr08 = preload("res://scripts/tr08_embodied_cinematics.gd")
 var staged = StagedStair.new()
+var tr08 = Tr08.new()
 var art: Dictionary = {}
 var enabled = true
 var reduced = false
@@ -18,6 +20,7 @@ var camera_state: Dictionary = {}
 var world
 var request_count = 0
 var arrival_count = 0
+var last_dt = 1.0/60.0
 
 func configure(w):
 	world=w
@@ -29,6 +32,7 @@ func configure(w):
 	plain="--tr05-plain" in args or w.embodied_transitions.comparison=="plain"
 	art=PilotData.load_art()
 	add_child(staged);staged.configure(w,self,args)
+	add_child(tr08);tr08.configure(w,self,args)
 	if not enabled: return
 	w.embodied_transitions.depth_demo=false # R13/R14 is a reciprocal SIDE passage.
 	w.embodied_transitions.art_preview=true
@@ -106,6 +110,7 @@ func policy(w,index:int,target:int) -> Dictionary:
 
 func room_loaded(w):
 	staged.room_loaded(w)
+	tr08.room_loaded(w)
 	sampled=false;armed.clear()
 	if active and (w.transition<=0 or w.room!=chosen.get("target",-1) or w.pending_room!=-1): cancel(w)
 	if not active: cooldown=0.0
@@ -124,6 +129,7 @@ func supported_exit(w,p:Dictionary,pos:Vector2) -> bool:
 	return false
 
 func update(w,dt:float):
+	last_dt=dt
 	if not enabled: return
 	if w.transition>0:
 		sampled=false
@@ -178,7 +184,7 @@ func begin(w,target:int):
 		w.mixed_transitions.active_walk=true
 		w.mixed_transitions.direction=int(chosen.heading)
 		w.mixed_transitions.carried_x=carried_x
-	if chosen.mode in ["stair_up","stair_down"] and not reduced and not plain and staged.phase=="":
+	if chosen.mode in ["stair_up","stair_down"] and not reduced and not plain and staged.phase=="" and not tr08.owns():
 		camera_state={"zoom":w.camera.zoom,"position":w.camera.position,"offset":w.camera.offset,"smoothing":w.camera.position_smoothing_enabled}
 		w.camera.position_smoothing_enabled=false
 
@@ -199,9 +205,12 @@ func arrived(w):
 	cooldown=0.45;armed.clear();sampled=false
 	staged.arrived(w)
 
-## PM pilot hook from world.request_room (after can_enter). See staged_stair_cinematic.gd.
+## Hook from world.request_room (after can_enter). TR-08 (default) owns the R14/R17 stair
+## and the Canal doorway; the PM staged stair pilot only runs when TR-08 is off.
 func intercept(w,target:int,arrival:Vector2) -> bool:
-	return enabled and staged.intercept(w,target,arrival)
+	if not enabled: return false
+	if tr08.intercept(w,target,arrival): return true
+	return staged.intercept(w,target,arrival)
 
 func arrival_position(w,p:Dictionary) -> Vector2:
 	var at=p.at-Vector2(int(p.heading)*64,2)
@@ -219,6 +228,11 @@ func label(w,p:Dictionary) -> String:
 	return w.mixed_transitions.label(w,p)
 
 func present(w):
+	tr08.observe(w)
+	if tr08.owns():
+		# TR-08 owns camera, proxies and composition for its whole sequence.
+		tr08.tick(w)
+		if tr08.owns(): return
 	if staged.phase!="":
 		# The staged pilot owns camera and proxy for its whole sequence.
 		staged.tick(w)
@@ -263,6 +277,7 @@ func finish(w):
 
 func cancel(w):
 	staged.cancel(w)
+	tr08.cancel(w)
 	finish(w);armed.clear();sampled=false;cooldown=0.45
 
 func _process(_dt):
@@ -275,6 +290,7 @@ func _unhandled_key_input(event):
 		world.mixed_transitions.graphic_mode="reduced" if reduced else ("plain" if plain else "graphic")
 		if reduced: restore_camera(world)
 		staged.reduced_changed(world)
+		tr08.reduced_changed(world)
 		world.announce("REDUCED MOTION ON" if reduced else "CINEMATIC MOTION ON",2)
 		get_viewport().set_input_as_handled()
 

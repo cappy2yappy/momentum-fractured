@@ -1,0 +1,187 @@
+{
+ "source_branch": "art/art08-embodied-cinematic-animation",
+ "source_commit": "98d639f32c34d862bbe6ecf1fb4a8c70e1736414",
+ "previous_binding_commit": "81679650bcd0ff8ca6f4b6373b6554027264038a",
+ "interface_version": "v3",
+ "copied_by": "TR-08 explicit allowlist (git show, byte-exact)",
+ "manifest": "assets/art08/MANIFEST.json",
+ "manifest_sha256": "9d69cf58269c8853452c823ec482408a2538019c6ebbdc244dbf62b57e5b304c",
+ "changed_since_previous": [
+  "assets/art08/kaze_stair_arrive_idle_settle_strip.png"
+ ],
+ "not_copied": [
+  "door_turn_to_side (status unfinished, no file)"
+ ],
+ "files": [
+  {
+   "path": "assets/art08/kaze_stair_ascend_enter_strip.png",
+   "sha256": "67f27fb5397faa0e24cc979109917d41f31e946ccb6b84485dbec6e9b8eadcda",
+   "bytes": 281124,
+   "manifest_match": true,
+   "clips": [
+    "stair_ascend_enter"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_ascend_loop_strip.png",
+   "sha256": "e18a4fb55dcc2359ace06224ee338e350799561e410c33d9bd7b28047d3c06f6",
+   "bytes": 491038,
+   "manifest_match": true,
+   "clips": [
+    "stair_ascend_loop"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_ascend_exit_strip.png",
+   "sha256": "59e9643a4b0b75f0d2021171b64ccafab0153e1f6ea005baed4206980d1f4006",
+   "bytes": 285050,
+   "manifest_match": true,
+   "clips": [
+    "stair_ascend_exit"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_descend_enter_strip.png",
+   "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+   "bytes": 245849,
+   "manifest_match": true,
+   "clips": [
+    "stair_descend_enter"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_descend_loop_strip.png",
+   "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+   "bytes": 455284,
+   "manifest_match": true,
+   "clips": [
+    "stair_descend_loop"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_descend_exit_strip.png",
+   "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+   "bytes": 263838,
+   "manifest_match": true,
+   "clips": [
+    "stair_descend_exit"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+   "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+   "bytes": 262630,
+   "manifest_match": true,
+   "clips": [
+    "stair_descend_arrive_settle"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
+   "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+   "bytes": 289377,
+   "manifest_match": true,
+   "clips": [
+    "stair_arrive_idle_settle"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_door_approach_walk_strip.png",
+   "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+   "bytes": 475626,
+   "manifest_match": true,
+   "clips": [
+    "door_approach_walk",
+    "door_walk_out"
+   ],
+   "status": [
+    "candidate",
+    "candidate"
+   ],
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_door_turn_to_rear_strip.png",
+   "sha256": "3a96c2b3a76bb88ee4dc170f266531a9a5ac49f65f1b27a54c5ebfa3a921241a",
+   "bytes": 269474,
+   "manifest_match": true,
+   "clips": [
+    "door_turn_to_rear"
+   ],
+   "status": [
+    "stand_in"
+   ],
+   "provenance": "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_door_cross_strip.png",
+   "sha256": "11a7561739a7c09bfbd92e08630ed9c43b3d2c01e0e1aa342d902066acf5b6eb",
+   "bytes": 461769,
+   "manifest_match": true,
+   "clips": [
+    "door_cross"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_door_emerge_strip.png",
+   "sha256": "c323db56f3c6b33419d245aefb3822889bb31080449e2a70ee66c2724ea58a2e",
+   "bytes": 298969,
+   "manifest_match": true,
+   "clips": [
+    "door_emerge"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script",
+   "import_file": true
+  }
+ ]
+}

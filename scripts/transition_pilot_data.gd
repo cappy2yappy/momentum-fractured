@@ -58,6 +58,38 @@ const STAGED_STAIR = {
 	"flag": "--pm-staged-stair",
 }
 
+## TR-08 (default): embodied stair and Canal doorway presentations. Timings are seconds.
+## The inherited loader clock (0.65 s, swap at 0.33 s) is NOT changed; sequences run
+## around it (see scripts/tr08_*.gd and docs/tr08/README.md).
+const TR08 = {
+	"stair_pairs": ["14:17","17:14"],
+	"canal_pairs": ["13:0","0:13"],
+	"off_flags": ["--tr08-off","--pm-staged-stair"],
+	"debug_label_flag": "--tr08-debug-labels",  # developer clip-name strip on the stair stage
+	"stair": {
+		"layer": 6,                 # above the HUD (1) and the loader fade
+		"cover": 0.30,              # opening wipe covers the world; request released here
+		"open_out": 0.30,           # opening wipe clears off the stage
+		"close_in": 0.30, "close_out": 0.25,
+		"loops": 2, "reduced_loops": 1,
+		"reduced_rate": 1.25, "reduced_fade": 0.15,
+		"figure_px": 430.0,         # Kaze height on the 1280x720 stage (60 percent)
+		"zoom": 1.08,               # gentle push-in over the climb (none when reduced)
+		"watchdog": 6.0,
+	},
+	"canal": {
+		"layer": 2,                 # world-space layer above the HUD loader fade
+		"loader_cover": 0.33,       # inherited loader time from request to hidden swap
+		"r0_door": Vector2(590,780),          # R0 end of the passage (legacy door art, unchanged)
+		"r0_opening": Rect2(560,684,60,89),   # its drawn inner opening (room_presentation.gd)
+		"depth_px": 8.0, "depth_scale": 0.86, "shade": 0.32,
+		"reduced_rate": 1.4,
+		"watchdog": 5.0,
+		"land_recent_ticks": 30,    # hang fix: airborne crossing within 0.5 s of being grounded
+		"land_timeout": 1.5,        # then let the real body land; else the inherited request
+	},
+}
+
 static func canal_key() -> String:
 	return "%d:%d"%[CANAL_LEFT.room,CANAL_LEFT.target]
 

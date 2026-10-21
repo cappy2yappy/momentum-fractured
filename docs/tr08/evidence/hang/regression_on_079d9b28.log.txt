@@ -1,0 +1,151 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+CASE hold_from_rest_d1 -> completed start=-1 done=76 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 1) completes with one request and control back
+FAIL: Hold A from rest (delay 1) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 1) hands back control by tick 200 (76)
+CASE hold_from_rest_d4 -> completed start=-1 done=74 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 4) completes with one request and control back
+FAIL: Hold A from rest (delay 4) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 4) hands back control by tick 200 (74)
+CASE hold_from_rest_d9 -> completed start=-1 done=74 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 9) completes with one request and control back
+FAIL: Hold A from rest (delay 9) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 9) hands back control by tick 200 (74)
+CASE hold_from_rest_d17 -> completed start=-1 done=74 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 17) completes with one request and control back
+FAIL: Hold A from rest (delay 17) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 17) hands back control by tick 200 (74)
+CASE pre_request_focus_off1 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t047 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=0 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+1 really landed before the request
+FAIL: After focus at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off6 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t052 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+6 really landed before the request
+FAIL: After focus at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off12 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=3 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t058 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=3 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+12 really landed before the request
+FAIL: After focus at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off20 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t066 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+20 really landed before the request
+FAIL: After focus at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off28 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=2 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t074 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=2 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+28 really landed before the request
+FAIL: After focus at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off34 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=4 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t080 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=4 armed=false cd=0.00 A=true D=false
+PASS: Interruption focus+34 really landed before the request
+FAIL: After focus at +34 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off1 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t047 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=0 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+1 really landed before the request
+FAIL: After esc at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off6 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t052 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+6 really landed before the request
+FAIL: After esc at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off12 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=3 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t058 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=3 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+12 really landed before the request
+FAIL: After esc at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off20 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t066 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+20 really landed before the request
+FAIL: After esc at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off28 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=2 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t074 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=2 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+28 really landed before the request
+FAIL: After esc at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off34 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=4 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t080 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=4 armed=false cd=0.00 A=true D=false
+PASS: Interruption esc+34 really landed before the request
+FAIL: After esc at +34 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off1 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t047 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=0 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+1 really landed before the request
+FAIL: After map at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off6 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t052 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+6 really landed before the request
+FAIL: After map at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off12 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=3 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t058 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=3 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+12 really landed before the request
+FAIL: After map at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off20 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t066 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+20 really landed before the request
+FAIL: After map at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off28 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=2 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t074 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=2 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+28 really landed before the request
+FAIL: After map at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off34 -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=4 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t059 room=13 phase=canal:cross tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_cross f=0 armed=false cd=0.00 A=true D=false
+   t080 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=4 armed=false cd=0.00 A=true D=false
+PASS: Interruption map+34 really landed before the request
+FAIL: After map at +34 ticks with A held, the passage completes once with control back
+CASE landing_focus -> completed start=-1 done=74 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+FAIL: Interruption (focus) while landing still completes once
+CASE landing_esc -> completed start=-1 done=74 req=1 canal= final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(420.8,779.9) vel=(-400,0) clip= f=0 armed=false cd=0.00 A=false D=false
+FAIL: Interruption (esc) while landing still completes once
+CASE double_retry -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=1 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t052 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(110.9,1199.9) vel=(-173,0) clip= f=1 armed=false cd=0.00 A=true D=false
+FAIL: Two pre-request interruptions then completion: exactly one request, control back
+CASE abort_release_then_press -> in_r13 start=45 done=-1 req=0 canal=paused final: room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(86.0,1200.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(329.3,1159.9) vel=(-43,0) clip= f=0 armed=true cd=0.00 A=true D=false
+   t045 room=13 phase=canal:turn tr=0.000 pend=-1 phys=false floor=true pos=(118.2,1199.9) vel=(0,0) clip=door_turn_to_rear f=0 armed=false cd=0.00 A=true D=false
+   t046 room=13 phase= tr=0.000 pend=-1 phys=true floor=true pos=(118.2,1199.9) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+PASS: After an aborted passage with A released, Kaze stands with control and nothing fires
+FAIL: Pressing A again after the abort exits through the doorway once
+TR08 HANG REGRESSION: 53 checks, 26 failure(s)
