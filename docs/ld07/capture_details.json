@@ -1,0 +1,58 @@
+[
+  {
+    "name": "R6_sill",
+    "room": 6,
+    "center": [
+      2410,
+      1070
+    ],
+    "zoom": 1.6,
+    "overlay": true,
+    "player": [
+      2360,
+      1110
+    ]
+  },
+  {
+    "name": "R8_landing",
+    "room": 8,
+    "center": [
+      1090,
+      870
+    ],
+    "zoom": 1.7,
+    "overlay": true,
+    "player": [
+      1080,
+      920
+    ]
+  },
+  {
+    "name": "R13_plinth",
+    "room": 13,
+    "center": [
+      260,
+      1170
+    ],
+    "zoom": 1.6,
+    "overlay": true,
+    "player": [
+      390,
+      1300
+    ]
+  },
+  {
+    "name": "R4_pit",
+    "room": 4,
+    "center": [
+      450,
+      1260
+    ],
+    "zoom": 1.3,
+    "overlay": true,
+    "player": [
+      410,
+      1300
+    ]
+  }
+]

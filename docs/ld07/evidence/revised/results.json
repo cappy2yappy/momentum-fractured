@@ -1,0 +1,50 @@
+[
+  {
+    "suite": "ld07_ground",
+    "exit": 0,
+    "seconds": 2.33,
+    "passes": 154,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-08d669373aea4ded9b0ef08c65de804a",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/project-ydtcx1tc",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/ld07_ground-engine.log",
+      "--script",
+      "res://tests/ld07_ground.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/project-ydtcx1tc/ld07_ground-save.json",
+      "--test"
+    ]
+  },
+  {
+    "suite": "ld05_boundaries",
+    "exit": 0,
+    "seconds": 26.74,
+    "passes": 171,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-feeab788d08848eb80e7defe5b2c6041",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/project-ydtcx1tc",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/ld05_boundaries-engine.log",
+      "--script",
+      "res://tests/ld05_boundaries.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/revised/project-ydtcx1tc/ld05_boundaries-save.json",
+      "--test"
+    ]
+  }
+]

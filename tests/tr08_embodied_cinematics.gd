@@ -304,8 +304,10 @@ func canal_suite():
 	await setup(0,Vector2(600,778));w.player.double_jump=false;w.message=""
 	await press();await wait_ticks(10)
 	check(t8.canal.phase=="" and w.room==0 and w.message=="Route sealed: WINDSTEP. Consult the atlas.","Canal: locked R0 door keeps its specific hint")
-	# Airborne crossing: no counterfeit footsteps, the inherited passage runs at once.
+	# Airborne crossing just after leaving the floor (TR08 hang fix 2): the live body lands
+	# under unchanged physics, then the embodied passage plays; no counterfeit footsteps.
 	await setup(13,Vector2(300,1198));before=c.request_count
+	var landed_before=t8.canal.landing_started
 	key(KEY_A,true)
 	var jumped=false
 	for tick in 120:
@@ -314,10 +316,14 @@ func canal_suite():
 		if c.request_count>before or t8.owns(): break
 	key(KEY_SPACE,false)
 	var airborne=not w.player.is_on_floor()
-	print("TR08 CANAL AIRBORNE airborne=",airborne," owns=",t8.owns()," requests=",c.request_count-before)
-	if airborne and c.request_count>before: check(not t8.owns(),"Canal: an airborne crossing keeps the inherited passage")
-	key(KEY_A,false);await wait_ticks(120)
-	check(w.room==0 and controlled(),"Canal: airborne approach still reaches R0 with control")
+	print("TR08 CANAL AIRBORNE airborne=",airborne," phase=",t8.phase()," requests=",c.request_count-before)
+	if airborne: check(t8.canal.phase=="land" and c.request_count==before and w.player.is_physics_processing() and w.player.sprite.visible,"Canal: an airborne crossing lets the live body land first (physics on, no proxy)")
+	key(KEY_A,false)
+	for tick in 400:
+		await wait_ticks(1)
+		if controlled() and w.room==0: break
+	check(w.room==0 and controlled() and c.request_count==before+1,"Canal: airborne approach reaches R0 with control, one request")
+	if airborne: check(t8.canal.landing_started==landed_before+1 and t8.canal.last_result=="completed","Canal: after landing the embodied passage completes")
 	# Interruptions.
 	for when in ["turn","cross","emerge","turn_out"]:
 		for reason in ["pause","death","rebuild"]:

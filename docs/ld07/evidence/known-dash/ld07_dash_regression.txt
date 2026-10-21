@@ -1,0 +1,6 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+GN06 room=6 feet=(2585.997, 1089.998) requests=0
+FAIL: GN-06 dash across R6 sill should request R7 automatically
+PASS: GN-06 walking back inward then approaching recovers the exit
+LD07 KNOWN DASH REGRESSION: 2 checks, 1 failure(s)

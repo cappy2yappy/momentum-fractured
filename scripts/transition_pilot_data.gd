@@ -65,6 +65,7 @@ const TR08 = {
 	"stair_pairs": ["14:17","17:14"],
 	"canal_pairs": ["13:0","0:13"],
 	"off_flags": ["--tr08-off","--pm-staged-stair"],
+	"debug_label_flag": "--tr08-debug-labels",  # developer clip-name strip on the stair stage
 	"stair": {
 		"layer": 6,                 # above the HUD (1) and the loader fade
 		"cover": 0.30,              # opening wipe covers the world; request released here
@@ -84,6 +85,8 @@ const TR08 = {
 		"depth_px": 8.0, "depth_scale": 0.86, "shade": 0.32,
 		"reduced_rate": 1.4,
 		"watchdog": 5.0,
+		"land_recent_ticks": 30,    # hang fix: airborne crossing within 0.5 s of being grounded
+		"land_timeout": 1.5,        # then let the real body land; else the inherited request
 	},
 }
 

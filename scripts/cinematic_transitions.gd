@@ -21,6 +21,7 @@ var world
 var request_count = 0
 var arrival_count = 0
 var last_dt = 1.0/60.0
+const ARM_BELOW = 40.0  # GN-06: arming band reaches this far below the endpoint y
 
 func configure(w):
 	world=w
@@ -148,7 +149,12 @@ func update(w,dt:float):
 		var corridor=pos.y>=p.at.y-90 and pos.y<=p.at.y+8 and previous.y>=p.at.y-90 and previous.y<=p.at.y+8
 		# Arrival spawns safely INWARD. Rearm requires leaving the threshold behind;
 		# cooldown alone never triggers a stationary or held-E return.
-		if after<=-16 and corridor: armed[p.target]=true
+		# GN-06: arming (never the crossing) also accepts an inward approach floor seated up
+		# to one platform thickness (40 px) BELOW the endpoint, e.g. the R6 floor at 1110
+		# under the (2440,1090) sill. A 920 px/s dash steps about 15 px a tick and could
+		# reach the corridor only inside the 16 px arm window, so it was never armed.
+		var arm_band=pos.y>=p.at.y-90 and pos.y<=p.at.y+ARM_BELOW and previous.y>=p.at.y-90 and previous.y<=p.at.y+ARM_BELOW
+		if after<=-16 and (corridor or arm_band): armed[p.target]=true
 		var crossed=(before<0 and after>=0) or (after>=0 and after<=85)
 		var direction=float(w.player.held("right"))-float(w.player.held("left"))
 		var intent=w.player.velocity.x*dir>20 and direction*dir>=0
@@ -228,6 +234,7 @@ func label(w,p:Dictionary) -> String:
 	return w.mixed_transitions.label(w,p)
 
 func present(w):
+	tr08.observe(w)
 	if tr08.owns():
 		# TR-08 owns camera, proxies and composition for its whole sequence.
 		tr08.tick(w)
