@@ -1,0 +1,90 @@
+{
+ "clip": "stair_descend_exit",
+ "frames": 4,
+ "cell": [
+  480,
+  724
+ ],
+ "leg_band_xor": {
+  "min_adjacent": 0.446,
+  "mean_adjacent": 0.561,
+  "min_any_pair": 0.446,
+  "mean_pairs": 0.618
+ },
+ "upper_band_xor": {
+  "min_adjacent": 0.212,
+  "mean_adjacent": 0.288
+ },
+ "leg_angles_deg": {
+  "thigh_dir_range": [
+   51,
+   73
+  ],
+  "knee_flex_range": [
+   5,
+   104
+  ]
+ },
+ "arm_angles_deg": {
+  "upper_range": [
+   92,
+   92
+  ]
+ },
+ "unique_frames": 4,
+ "hidden_rgb_pixels": 0,
+ "low_alpha_pixels_1_to_19": 0,
+ "min_margin_px": 107,
+ "max_components": 1,
+ "height_range": [
+  317,
+  328
+ ],
+ "lowest_rows": [
+  607,
+  603,
+  604,
+  616
+ ],
+ "palette_outside_pct": [
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "class_means_first": {
+  "green": [
+   2.9,
+   199.5,
+   63.2
+  ],
+  "purple": [
+   102.5,
+   45.2,
+   138.2
+  ],
+  "skin": [
+   176.2,
+   101.8,
+   65.8
+  ]
+ },
+ "stance_flags": [
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ],
+  [
+   "s",
+   "s"
+  ]
+ ]
+}

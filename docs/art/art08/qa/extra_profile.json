@@ -1,0 +1,140 @@
+{
+ "stair_ascend_enter": {
+  "plant_sole_y_error_px": {
+   "max": 1.0,
+   "mean": 0.8,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 2.71,
+   "mean": 1.45,
+   "n": 3
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "up"
+ },
+ "stair_descend_enter": {
+  "plant_sole_y_error_px": {
+   "max": 1.5,
+   "mean": 0.83,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 4.85,
+   "mean": 2.88,
+   "n": 3
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "down"
+ },
+ "stair_ascend_loop": {
+  "seam_virtual_vs_frame0_xor": 0.1404,
+  "seam_last_to_first_xor": 0.4727,
+  "adjacent_xor_median": 0.4932,
+  "seam_mean_abs_rgb_diff": 1.799,
+  "plant_sole_y_error_px": {
+   "max": 1.5,
+   "mean": 1.07,
+   "n": 10
+  },
+  "plant_contact_x_error_px": {
+   "max": 2.5,
+   "mean": 1.44,
+   "n": 6
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "up"
+ },
+ "stair_descend_loop": {
+  "seam_virtual_vs_frame0_xor": 0.0693,
+  "seam_last_to_first_xor": 0.4411,
+  "adjacent_xor_median": 0.3881,
+  "seam_mean_abs_rgb_diff": 0.963,
+  "plant_sole_y_error_px": {
+   "max": 1.14,
+   "mean": 0.67,
+   "n": 10
+  },
+  "plant_contact_x_error_px": {
+   "max": 2.85,
+   "mean": 2.0,
+   "n": 6
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "down"
+ },
+ "stair_ascend_exit": {
+  "plant_sole_y_error_px": {
+   "max": 1.0,
+   "mean": 0.73,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 2.71,
+   "mean": 1.38,
+   "n": 3
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "up"
+ },
+ "stair_descend_exit": {
+  "plant_sole_y_error_px": {
+   "max": 1.5,
+   "mean": 0.73,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 4.85,
+   "mean": 2.76,
+   "n": 3
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "down"
+ },
+ "stair_arrive_idle_settle": {
+  "plant_sole_y_error_px": {
+   "max": 1.0,
+   "mean": 0.94,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 15.83,
+   "mean": 15.83,
+   "n": 1
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "up"
+ },
+ "stair_descend_arrive_settle": {
+  "plant_sole_y_error_px": {
+   "max": 1.0,
+   "mean": 0.97,
+   "n": 5
+  },
+  "plant_contact_x_error_px": {
+   "max": 28.17,
+   "mean": 28.17,
+   "n": 1
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "down"
+ },
+ "walk_loop": {
+  "seam_virtual_vs_frame0_xor": 0.0,
+  "seam_last_to_first_xor": 0.2913,
+  "adjacent_xor_median": 0.3229,
+  "seam_mean_abs_rgb_diff": 0.0,
+  "plant_sole_y_error_px": {
+   "max": 1.0,
+   "mean": 0.8,
+   "n": 10
+  },
+  "plant_contact_x_error_px": {
+   "max": 2.64,
+   "mean": 1.45,
+   "n": 6
+  },
+  "foot_slide_px_analytic": 0.0,
+  "pelvis_pose_key": "up"
+ }
+}

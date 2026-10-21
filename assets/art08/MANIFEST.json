@@ -1,0 +1,857 @@
+{
+ "schema": "art08/1",
+ "interface_version": "v3",
+ "cell": [
+  480,
+  724
+ ],
+ "pivot": [
+  240,
+  600
+ ],
+ "engine_scale_world": 0.303125,
+ "source_scale_note": "Kaze is about 308 px tall in the 724 px cell (approved ART-04 density); in-world playback scale 0.303125; cinematic playback is an upscale of this density (see INTEGRATION.md)",
+ "status_legend": {
+  "candidate": "real multi-frame animation, creator visual acceptance pending",
+  "stand_in": "usable but not final art, see note",
+  "unfinished": "no frames shipped"
+ },
+ "clips": [
+  {
+   "name": "stair_ascend_enter",
+   "strip": "assets/art08/kaze_stair_ascend_enter_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": [
+    [
+     37.5,
+     0.0
+    ],
+    [
+     41.25,
+     -9.99
+    ],
+    [
+     41.25,
+     -13.01
+    ],
+    [
+     41.25,
+     -13.01
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "floor foot to first tread; last frame is the heel strike on tread 1",
+   "alias_of": null,
+   "sha256": "67f27fb5397faa0e24cc979109917d41f31e946ccb6b84485dbec6e9b8eadcda",
+   "bytes": 281124
+  },
+  {
+   "name": "stair_ascend_loop",
+   "strip": "assets/art08/kaze_stair_ascend_loop_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 14,
+   "loop": true,
+   "facing": "right",
+   "root_motion_px_per_frame": [
+    [
+     41.25,
+     -9.99
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     47.0,
+     -12.16
+    ],
+    [
+     47.0,
+     -12.16
+    ]
+   ],
+   "contact_frames": [
+    3,
+    7
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "one stride pair = 2 treads; plays from the phase right after enter",
+   "alias_of": null,
+   "sha256": "e18a4fb55dcc2359ace06224ee338e350799561e410c33d9bd7b28047d3c06f6",
+   "bytes": 491038
+  },
+  {
+   "name": "stair_ascend_exit",
+   "strip": "assets/art08/kaze_stair_ascend_exit_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": [
+    [
+     47.0,
+     -9.34
+    ],
+    [
+     41.25,
+     -8.69
+    ],
+    [
+     41.25,
+     -11.31
+    ],
+    [
+     41.25,
+     -11.31
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "last tread to level floor; last frame is the heel strike on the level top",
+   "alias_of": null,
+   "sha256": "59e9643a4b0b75f0d2021171b64ccafab0153e1f6ea005baed4206980d1f4006",
+   "bytes": 285050
+  },
+  {
+   "name": "stair_descend_enter",
+   "strip": "assets/art08/kaze_stair_descend_enter_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right (drawn facing right; flip_h for the leftward R17 to R14 descent, which restores the ribbon side of the approved stair_down_key)",
+   "root_motion_px_per_frame": [
+    [
+     23.75,
+     0.0
+    ],
+    [
+     23.75,
+     5.86
+    ],
+    [
+     23.75,
+     7.64
+    ],
+    [
+     23.75,
+     7.64
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "status": "candidate",
+   "note": "REVISED v2 (ART-08 descent fix): floor foot to first tread down, toe-first landing, upright spine; pitch 100 px, drop 30 px per tread",
+   "alias_of": null,
+   "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+   "bytes": 245849
+  },
+  {
+   "name": "stair_descend_loop",
+   "strip": "assets/art08/kaze_stair_descend_loop_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 14,
+   "loop": true,
+   "facing": "right (flip_h for leftward)",
+   "root_motion_px_per_frame": [
+    [
+     23.75,
+     5.86
+    ],
+    [
+     25.0,
+     6.52
+    ],
+    [
+     25.0,
+     8.48
+    ],
+    [
+     25.0,
+     8.48
+    ],
+    [
+     25.0,
+     6.52
+    ],
+    [
+     25.0,
+     6.52
+    ],
+    [
+     25.0,
+     8.48
+    ],
+    [
+     25.0,
+     8.48
+    ]
+   ],
+   "contact_frames": [
+    3,
+    7
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3,
+     7
+    ]
+   },
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "status": "candidate",
+   "note": "REVISED v2: 8 frames = 2 treads, toe-first landings, upright torso, forearm counter-swing; pitch 100 px, drop 30 px per tread",
+   "alias_of": null,
+   "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+   "bytes": 455284
+  },
+  {
+   "name": "stair_descend_exit",
+   "strip": "assets/art08/kaze_stair_descend_exit_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right (flip_h for leftward)",
+   "root_motion_px_per_frame": [
+    [
+     25.0,
+     6.52
+    ],
+    [
+     23.75,
+     7.17
+    ],
+    [
+     23.75,
+     9.33
+    ],
+    [
+     23.75,
+     9.33
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     3
+    ],
+    "far_foot": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "status": "candidate",
+   "note": "REVISED v2: last tread down to level floor",
+   "alias_of": null,
+   "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+   "bytes": 263838
+  },
+  {
+   "name": "stair_descend_arrive_settle",
+   "strip": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "right (flip_h for leftward)",
+   "root_motion_px_per_frame": [
+    [
+     32.42,
+     7.17
+    ],
+    [
+     13.0,
+     0.0
+    ],
+    [
+     4.33,
+     0.0
+    ],
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "status": "candidate",
+   "note": "NEW v2 clip: descent-specific arrival settle (the shared stair_arrive_idle_settle belongs to the ascent and rises 8.7 px); Transition should queue this after stair_descend_exit",
+   "alias_of": null,
+   "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+   "bytes": 262630
+  },
+  {
+   "name": "stair_arrive_idle_settle",
+   "strip": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "right",
+   "root_motion_px_per_frame": [
+    [
+     41.25,
+     -8.69
+    ],
+    [
+     15.5,
+     0.0
+    ],
+    [
+     15.5,
+     0.0
+    ],
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "short closing step then standing; ends in a standing profile pose",
+   "durations": [
+    0.12,
+    0.16,
+    0.2,
+    0.2
+   ],
+   "alias_of": null,
+   "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+   "bytes": 289377
+  },
+  {
+   "name": "door_approach_walk",
+   "strip": "assets/art08/kaze_door_approach_walk_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": true,
+   "facing": "right (flip_h for left)",
+   "root_motion_px_per_frame": [
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "far_foot": [
+     0,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "slow flat walk, 100 px step; drawn facing right, ribbon trails left",
+   "alias_of": null,
+   "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+   "bytes": 475626
+  },
+  {
+   "name": "door_turn_to_rear",
+   "strip": "assets/art08/kaze_door_turn_to_rear_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "right profile to rear (flip_h for left)",
+   "root_motion_px_per_frame": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "contact_frames": [],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved",
+   "status": "stand_in",
+   "note": "4 frames; right-to-rear turn drawn once, left exit uses flip_h (ribbon side flips, creator decision)",
+   "alias_of": null,
+   "sha256": "3a96c2b3a76bb88ee4dc170f266531a9a5ac49f65f1b27a54c5ebfa3a921241a",
+   "bytes": 269474
+  },
+  {
+   "name": "door_cross",
+   "strip": "assets/art08/kaze_door_cross_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "rear",
+   "root_motion_px_per_frame": [
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ],
+    [
+     0.0,
+     -5.4
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script",
+   "status": "candidate",
+   "note": "walk away over the sill: frames 5-6 are the sill step (high knee lift); root_motion is screen-space depth travel",
+   "alias_of": null,
+   "sha256": "11a7561739a7c09bfbd92e08630ed9c43b3d2c01e0e1aa342d902066acf5b6eb",
+   "bytes": 461769
+  },
+  {
+   "name": "door_emerge",
+   "strip": "assets/art08/kaze_door_emerge_strip.png",
+   "hframes": 6,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "front three-quarter",
+   "root_motion_px_per_frame": [
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ],
+    [
+     0.0,
+     9.5
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [],
+    "far_foot": []
+   },
+   "provenance": "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script",
+   "status": "candidate",
+   "note": "steps out toward camera; arms nearly static (donor arm is a bent fist pose), hands off to door_walk_out by a cut",
+   "alias_of": null,
+   "sha256": "c323db56f3c6b33419d245aefb3822889bb31080449e2a70ee66c2724ea58a2e",
+   "bytes": 298969
+  },
+  {
+   "name": "door_turn_to_side",
+   "strip": "assets/art08/kaze_door_turn_to_side_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 16,
+   "loop": false,
+   "facing": "front three-quarter to right profile",
+   "root_motion_px_per_frame": null,
+   "contact_frames": null,
+   "provenance": "unfinished",
+   "note": "turn to travel direction",
+   "sha256": null,
+   "bytes": null,
+   "status": "unfinished"
+  },
+  {
+   "name": "door_walk_out",
+   "strip": "assets/art08/kaze_door_approach_walk_strip.png",
+   "hframes": 8,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": true,
+   "facing": "right (flip_h for left)",
+   "root_motion_px_per_frame": [
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ],
+    [
+     25.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    0,
+    4
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "far_foot": [
+     0,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "status": "candidate",
+   "note": "alias of door_approach_walk: identical drawn frames, same strip file",
+   "alias_of": "door_approach_walk",
+   "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+   "bytes": 475626
+  }
+ ]
+}
