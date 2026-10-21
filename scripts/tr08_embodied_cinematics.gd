@@ -19,6 +19,7 @@ var cinematic
 var stair = StairStage.new()
 var canal = CanalDoorway.new()
 var releasing = false
+var debug_labels = false     # --tr08-debug-labels: show bound ART-08 clip names on the stage
 var grounded_age = 1000000   # world ticks since the live body was last seen grounded
 
 func configure(w,c,args:PackedStringArray):
@@ -29,6 +30,7 @@ func configure(w,c,args:PackedStringArray):
 	for flag in Data.TR08.off_flags:
 		if flag in args: enabled=false
 	reduced=c.reduced
+	debug_labels=Data.TR08.debug_label_flag in args
 	table=Library.build()
 	add_child(stair);stair.configure(w,self)
 	add_child(canal);canal.configure(w,self)
