@@ -28,6 +28,7 @@ REG = [
  ("door_emerge", "door_emerge", 12, False, "front three-quarter", "candidate", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script", "steps out toward camera; arms nearly static (donor arm is a bent fist pose), hands off to door_walk_out by a cut"),
  ("door_walk_out", "walk_loop", 12, True, "right (flip_h for left)", "candidate", PROFILE_PROV, "alias of door_approach_walk: identical drawn frames, same strip file"),
 ]
+DURATIONS = {"stair_arrive_idle_settle": [0.12, 0.16, 0.20, 0.20]}   # seconds per frame (v3.1: a slower closing step; Transition reads durations from the manifest)
 EXTRA = {}   # filled by door builders (rear/front/reuse clips) via extra_registry.json
 def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
 
@@ -63,7 +64,7 @@ def main():
             cell=[480, 724], pivot=[240, 600], fps=fps, loop=loop, facing=facing,
             root_motion_px_per_frame=[[round(a, 2), round(b, 2)] for a, b in meta["root_motion"]],
             contact_frames=heel, plant_frames=dict(near_foot=near, far_foot=far),
-            provenance=prov, status=status, note=note, alias_of=("door_approach_walk" if name == "door_walk_out" else None),
+            provenance=prov, status=status, note=note, **({"durations": DURATIONS[name]} if name in DURATIONS else {}), alias_of=("door_approach_walk" if name == "door_walk_out" else None),
             sha256=sha(dst), bytes=os.path.getsize(dst)))
         seen.add(name)
     # clips from other builders (door rear/front/reuse)

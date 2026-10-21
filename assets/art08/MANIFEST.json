@@ -464,7 +464,7 @@
    "facing": "right",
    "root_motion_px_per_frame": [
     [
-     51.58,
+     41.25,
      -8.69
     ],
     [
@@ -472,7 +472,7 @@
      0.0
     ],
     [
-     5.17,
+     15.5,
      0.0
     ],
     [
@@ -497,9 +497,15 @@
    "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
    "status": "candidate",
    "note": "short closing step then standing; ends in a standing profile pose",
+   "durations": [
+    0.12,
+    0.16,
+    0.2,
+    0.2
+   ],
    "alias_of": null,
-   "sha256": "0487d6da45313126c55c1efff4e74adbfbbfaee23e553c23a6f192fd3d0bd9ef",
-   "bytes": 291001
+   "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+   "bytes": 289377
   },
   {
    "name": "door_approach_walk",
