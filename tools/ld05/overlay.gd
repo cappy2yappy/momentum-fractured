@@ -14,6 +14,9 @@ func _draw():
 	if "boundary_rects" in world:
 		for r in world.boundary_rects:
 			draw_rect(r,Color(1,0.3,0.9,0.9),false,4);draw_rect(r,Color(1,0.3,0.9,0.10))
+	if "boundary_polys" in world:
+		for pts in world.boundary_polys:
+			draw_colored_polygon(pts,Color(1,0.3,0.9,0.10));draw_polyline(pts + PackedVector2Array([pts[0]]),Color(1,0.3,0.9,0.9),4)
 	for a in world.tether_anchors: draw_circle(a,12,Color(0.4,1,0.4,0.9))
 	for p in world.cinematic_transitions.endpoints(world,world.room):
 		draw_line(p.at + Vector2(0,-150),p.at + Vector2(0,10),Color(1,0.2,0.2,0.95),4)

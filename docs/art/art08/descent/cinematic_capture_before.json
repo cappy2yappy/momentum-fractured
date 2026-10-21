@@ -1,0 +1,1459 @@
+{
+	"adapter": "llvmpipe (LLVM 20.1.2, 256 bits)",
+	"bindings": [
+		{
+			"bound": "art08",
+			"clip": "stair_ascend_enter",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_ascend_enter_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_ascend_loop",
+			"fps": 14.0,
+			"frames": 8,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_ascend_loop_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_ascend_exit",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_ascend_exit_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_descend_enter",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_descend_enter_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_descend_loop",
+			"fps": 14.0,
+			"frames": 8,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_descend_loop_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_descend_exit",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_descend_exit_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "stair_arrive_idle_settle",
+			"fps": 12.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_stair_arrive_idle_settle_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "door_approach_walk",
+			"fps": 12.0,
+			"frames": 8,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_door_approach_walk_strip.png"
+		},
+		{
+			"bound": "art08-standin",
+			"clip": "door_turn_to_rear",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_door_turn_to_rear_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "door_cross",
+			"fps": 12.0,
+			"frames": 8,
+			"motion_note": "",
+			"provenance": "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_door_cross_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "door_emerge",
+			"fps": 12.0,
+			"frames": 6,
+			"motion_note": "",
+			"provenance": "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_door_emerge_strip.png"
+		},
+		{
+			"bound": "stand-in",
+			"clip": "door_turn_to_side",
+			"fps": 16.0,
+			"frames": 4,
+			"motion_note": "",
+			"provenance": "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)",
+			"rejected": "status 'unfinished'",
+			"strip": "res://assets/kaze/cleaned/kaze_idle_strip.png"
+		},
+		{
+			"bound": "art08",
+			"clip": "door_walk_out",
+			"fps": 12.0,
+			"frames": 8,
+			"motion_note": "",
+			"provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+			"rejected": "",
+			"strip": "res://assets/art08/kaze_door_approach_walk_strip.png"
+		}
+	],
+	"driver": "opengl3",
+	"engine": "4.6.1-stable (official)",
+	"frames": [
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_-1_t0.00",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "",
+			"physics": true,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.0,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_00_t0.03",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.03,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_01_t0.08",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.08,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_02_t0.13",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.13,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_03_t0.18",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.18,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_04_t0.23",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.23,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_05_t0.28",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:open",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "",
+			"stair_feet": [
+				0.0,
+				0.0
+			],
+			"t": 0.28,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_06_t0.33",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_enter",
+			"stair_feet": [
+				-13.6075963973999,
+				0.0
+			],
+			"t": 0.33,
+			"transition": 0.633
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_07_t0.38",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_enter",
+			"stair_feet": [
+				-54.7705726623535,
+				0.788333356380463
+			],
+			"t": 0.38,
+			"transition": 0.583
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_08_t0.43",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_enter",
+			"stair_feet": [
+				-99.6756362915039,
+				10.2483339309692
+			],
+			"t": 0.43,
+			"transition": 0.533
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_09_t0.48",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_enter",
+			"stair_feet": [
+				-144.580703735352,
+				22.0851287841797
+			],
+			"t": 0.48,
+			"transition": 0.483
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_10_t0.53",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_enter",
+			"stair_feet": [
+				-189.485763549805,
+				34.3972816467285
+			],
+			"t": 0.53,
+			"transition": 0.433
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_11_t0.58",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-232.519775390625,
+				45.3645477294922
+			],
+			"t": 0.58,
+			"transition": 0.383
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_12_t0.63",
+			"live_feet": [
+				1650.0,
+				1299.998046875
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 17,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-271.811706542969,
+				53.6420478820801
+			],
+			"t": 0.63,
+			"transition": 0.333
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_13_t0.68",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-316.05908203125,
+				62.4797286987305
+			],
+			"t": 0.68,
+			"transition": 0.283
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_14_t0.73",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-360.828094482422,
+				72.6554870605469
+			],
+			"t": 0.73,
+			"transition": 0.233
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_15_t0.78",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-405.597106933594,
+				84.23828125
+			],
+			"t": 0.78,
+			"transition": 0.183
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_16_t0.83",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-450.366119384766,
+				95.8210754394531
+			],
+			"t": 0.83,
+			"transition": 0.133
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_17_t0.88",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-495.135131835938,
+				105.741012573242
+			],
+			"t": 0.88,
+			"transition": 0.083
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_18_t0.93",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-539.904113769531,
+				114.637649536133
+			],
+			"t": 0.93,
+			"transition": 0.033
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_19_t0.98",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-584.673034667969,
+				123.534286499023
+			],
+			"t": 0.98,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_20_t1.03",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-629.441955566406,
+				134.477523803711
+			],
+			"t": 1.03,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_21_t1.08",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-674.210876464844,
+				146.060317993164
+			],
+			"t": 1.08,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_22_t1.13",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-718.979797363281,
+				157.643112182617
+			],
+			"t": 1.13,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_23_t1.18",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-749.438110351562,
+				164.264572143555
+			],
+			"t": 1.18,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_24_t1.23",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-790.034057617188,
+				172.689498901367
+			],
+			"t": 1.23,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_25_t1.28",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-834.802978515625,
+				181.586135864258
+			],
+			"t": 1.28,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_26_t1.33",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-879.571899414062,
+				192.657287597656
+			],
+			"t": 1.33,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_27_t1.38",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-924.3408203125,
+				204.240081787109
+			],
+			"t": 1.38,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_28_t1.43",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-969.109741210938,
+				215.822875976562
+			],
+			"t": 1.43,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_29_t1.48",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-1013.87866210938,
+				224.847427368164
+			],
+			"t": 1.48,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_30_t1.53",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-1058.64758300781,
+				233.744064331055
+			],
+			"t": 1.53,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_31_t1.58",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-1103.41650390625,
+				242.896530151367
+			],
+			"t": 1.58,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_32_t1.63",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-1148.18542480469,
+				254.47932434082
+			],
+			"t": 1.63,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_33_t1.68",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_loop",
+			"stair_feet": [
+				-1192.95434570312,
+				266.062103271484
+			],
+			"t": 1.68,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_34_t1.73",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_exit",
+			"stair_feet": [
+				-1227.06396484375,
+				274.887084960938
+			],
+			"t": 1.73,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_35_t1.78",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_exit",
+			"stair_feet": [
+				-1278.22839355469,
+				285.054656982422
+			],
+			"t": 1.78,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_36_t1.83",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_exit",
+			"stair_feet": [
+				-1324.69836425781,
+				295.7529296875
+			],
+			"t": 1.83,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_37_t1.88",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_exit",
+			"stair_feet": [
+				-1369.603515625,
+				308.271911621094
+			],
+			"t": 1.88,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_38_t1.93",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_descend_exit",
+			"stair_feet": [
+				-1414.50866699219,
+				322.434661865234
+			],
+			"t": 1.93,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_39_t1.98",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1459.41381835938,
+				336.597412109375
+			],
+			"t": 1.98,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_40_t2.03",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1501.00036621094,
+				329.591064453125
+			],
+			"t": 2.03,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_41_t2.08",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1532.89038085938,
+				324.920166015625
+			],
+			"t": 2.08,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_42_t2.13",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1545.38732910156,
+				324.920166015625
+			],
+			"t": 2.13,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_43_t2.18",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1552.33178710938,
+				324.920166015625
+			],
+			"t": 2.18,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_44_t2.23",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.23,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_45_t2.28",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:climb",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.28,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_46_t2.33",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.33,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_47_t2.38",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.38,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_48_t2.43",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.43,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_49_t2.48",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.48,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_50_t2.53",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.53,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_51_t2.58",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.58,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_52_t2.63",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.63,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_53_t2.68",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.68,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_54_t2.73",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.73,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_55_t2.78",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.78,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_56_t2.83",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "stair:close",
+			"physics": false,
+			"room": 14,
+			"stair_clip": "stair_arrive_idle_settle",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.83,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_57_t2.88",
+			"live_feet": [
+				1450.0,
+				478.0
+			],
+			"phase": "",
+			"physics": true,
+			"room": 14,
+			"stair_clip": "",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 2.88,
+			"transition": 0.0
+		},
+		{
+			"canal_clip": "",
+			"canal_feet": [
+				0.0,
+				0.0
+			],
+			"frame": "stair_17-14_99_t3.02",
+			"live_feet": [
+				1450.0,
+				479.998046875
+			],
+			"phase": "",
+			"physics": true,
+			"room": 14,
+			"stair_clip": "",
+			"stair_feet": [
+				-1556.5,
+				324.920166015625
+			],
+			"t": 3.02,
+			"transition": 0.0
+		}
+	]
+}

@@ -1,0 +1,7741 @@
+{
+  "rooms": [
+    {
+      "anchors": [],
+      "door": [
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 0,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 1,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            590.0,
+            780.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 0,
+          "solid_headroom": null,
+          "support": [
+            260.0,
+            780.0,
+            390.0,
+            48.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 13,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 1
+        },
+        {
+          "at": [
+            590.0,
+            780.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 13
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 0,
+      "name": "CANAL HAVEN",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            480.0,
+            1110.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            860.0,
+            780.0,
+            420.0,
+            48.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            260.0,
+            780.0,
+            390.0,
+            48.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1400.0,
+            1080.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1850.0,
+            900.0,
+            300.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 1,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 0,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 1,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 2,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 0
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 2
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 1,
+      "name": "LANTERN MARKET",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            370.0,
+            1120.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            790.0,
+            950.0,
+            330.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1450.0,
+            1080.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1800.0,
+            900.0,
+            270.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2140.0,
+            720.0,
+            320.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            267.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.0,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2440.0,
+            718.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 2,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            640.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 1,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            850.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 2,
+          "solid_headroom": null,
+          "support": [
+            2220.0,
+            850.0,
+            380.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 3,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            470.0,
+            1120.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 2,
+          "solid_headroom": null,
+          "support": [
+            330.0,
+            1120.0,
+            260.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 15,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 1
+        },
+        {
+          "at": [
+            2440.0,
+            850.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 3
+        },
+        {
+          "at": [
+            470.0,
+            1120.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 15
+        }
+      ],
+      "enemies": [
+        [
+          1190.0,
+          1100.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2150.0,
+            850.0
+          ],
+          "element": "wind",
+          "height": 250.0,
+          "id": "cistern_wind_cache"
+        }
+      ],
+      "grapple": [],
+      "index": 2,
+      "name": "FLOODED CISTERN",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            640.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            930.0,
+            1300.0,
+            420.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1680.0,
+            1300.0,
+            520.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2380.0,
+            1300.0,
+            220.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            330.0,
+            1120.0,
+            260.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            710.0,
+            940.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1090.0,
+            1100.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1510.0,
+            870.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1980.0,
+            1050.0,
+            250.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2220.0,
+            850.0,
+            380.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2585.9,
+            1112.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 950.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            202.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            848.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          1090.0,
+          650.0
+        ],
+        [
+          2170.0,
+          610.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            850.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 3,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            850.0,
+            300.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 2,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 3,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 4,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2250.0,
+            790.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 3,
+          "solid_headroom": null,
+          "support": [
+            2000.0,
+            790.0,
+            340.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 9,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            850.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 2
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 4
+        },
+        {
+          "at": [
+            2250.0,
+            790.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 9
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 3,
+      "name": "ECHO SHRINE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            850.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            420.0,
+            1060.0,
+            330.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            920.0,
+            830.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1480.0,
+            1030.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2000.0,
+            790.0,
+            340.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            14.1,
+            1112.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 950.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            202.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            848.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          780.0,
+          720.0
+        ],
+        [
+          1370.0,
+          610.0
+        ],
+        [
+          1940.0,
+          650.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 4,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            450.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 3,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1080.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 4,
+          "solid_headroom": null,
+          "support": [
+            2130.0,
+            1080.0,
+            470.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 5,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 3
+        },
+        {
+          "at": [
+            2440.0,
+            1080.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 5
+        }
+      ],
+      "enemies": [
+        [
+          1080.0,
+          1030.0
+        ],
+        [
+          1660.0,
+          890.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            1990.0,
+            1080.0
+          ],
+          "element": "fire",
+          "height": 270.0,
+          "id": "span_fire_cache"
+        }
+      ],
+      "grapple": [],
+      "index": 4,
+      "name": "BROKEN SPAN",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            450.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1000.0,
+            1300.0,
+            280.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2050.0,
+            1300.0,
+            550.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            300.0,
+            1110.0,
+            310.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            930.0,
+            1030.0,
+            270.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1530.0,
+            890.0,
+            270.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2130.0,
+            1080.0,
+            470.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2496.8,
+            1299.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1180.0,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2490.9,
+            175.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.0,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1078.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          820.0,
+          650.0
+        ],
+        [
+          1900.0,
+          520.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1080.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 5,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1080.0,
+            280.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 4,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 5,
+          "solid_headroom": null,
+          "support": [
+            1850.0,
+            1300.0,
+            750.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 6,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2240.0,
+            930.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 5,
+          "solid_headroom": null,
+          "support": [
+            2130.0,
+            930.0,
+            470.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 17,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1080.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 4
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 6
+        },
+        {
+          "at": [
+            2240.0,
+            930.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 17
+        }
+      ],
+      "enemies": [
+        [
+          820.0,
+          900.0
+        ],
+        [
+          1510.0,
+          930.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [
+        {
+          "anchor": [
+            1900.0,
+            520.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 504.9,
+          "side": -1,
+          "start": [
+            1900.0,
+            698.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1900.0,
+            520.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 504.9,
+          "side": 1,
+          "start": [
+            1900.0,
+            698.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 5,
+      "name": "ASCENT TOWER",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            500.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            780.0,
+            1300.0,
+            720.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1850.0,
+            1300.0,
+            750.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1080.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            300.0,
+            1110.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            680.0,
+            900.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1030.0,
+            680.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1390.0,
+            930.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1760.0,
+            700.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2130.0,
+            930.0,
+            470.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            103.2,
+            1299.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1180.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            109.1,
+            175.8
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1078.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2585.9,
+            1074.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1030.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            403.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            928.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 6,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 5,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1090.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": false,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 6,
+          "solid_headroom": null,
+          "support": [
+            2020.0,
+            1110.0,
+            580.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 20.0,
+          "target": 7,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 5
+        },
+        {
+          "at": [
+            2440.0,
+            1090.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 7
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 6,
+      "name": "TIDE WARDEN",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            300.0,
+            1110.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            760.0,
+            1000.0,
+            310.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1510.0,
+            1000.0,
+            310.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2020.0,
+            1110.0,
+            580.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2504.9,
+            1299.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1210.0,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2585.9,
+            527.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1108.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          990.0,
+          650.0
+        ],
+        [
+          1480.0,
+          430.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1090.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 7,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1090.0,
+            300.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 6,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 7,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 8,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1090.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 6
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 8
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2000.0,
+            1300.0
+          ],
+          "element": "electric",
+          "height": 300.0,
+          "id": "relay_electric_seal"
+        }
+      ],
+      "grapple": [
+        {
+          "anchor": [
+            1480.0,
+            430.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 454.9,
+          "side": -1,
+          "start": [
+            1480.0,
+            648.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1480.0,
+            430.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 454.9,
+          "side": 1,
+          "start": [
+            1480.0,
+            648.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 7,
+      "name": "RELAY ARCHIVE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1090.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            390.0,
+            1090.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            820.0,
+            870.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1300.0,
+            650.0,
+            380.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1830.0,
+            880.0,
+            320.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            14.1,
+            1222.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1190.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            284.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1088.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          750.0,
+          660.0
+        ],
+        [
+          1220.0,
+          500.0
+        ],
+        [
+          1800.0,
+          570.0
+        ],
+        [
+          2250.0,
+          530.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1090.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 8,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1090.0,
+            310.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 7,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 8,
+          "solid_headroom": null,
+          "support": [
+            2220.0,
+            830.0,
+            380.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 9,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            550.0,
+            1110.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 8,
+          "solid_headroom": null,
+          "support": [
+            350.0,
+            1110.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 16,
+          "trigger_x": null,
+          "wall_side": false
+        },
+        {
+          "at": [
+            1090.0,
+            920.0
+          ],
+          "door_span_supported": false,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 8,
+          "solid_headroom": null,
+          "support": [
+            770.0,
+            920.0,
+            340.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 18,
+          "trigger_x": null,
+          "wall_side": false
+        },
+        {
+          "at": [
+            1470.0,
+            740.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 8,
+          "solid_headroom": null,
+          "support": [
+            1300.0,
+            740.0,
+            340.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 12,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1090.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 7
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 9
+        },
+        {
+          "at": [
+            550.0,
+            1110.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 16
+        },
+        {
+          "at": [
+            1090.0,
+            920.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 18
+        },
+        {
+          "at": [
+            1470.0,
+            740.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 12
+        }
+      ],
+      "enemies": [
+        [
+          1810.0,
+          1300.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [
+        {
+          "anchor": [
+            1220.0,
+            500.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 544.9,
+          "side": -1,
+          "start": [
+            1314.59997558594,
+            738.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1220.0,
+            500.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 544.9,
+          "side": 1,
+          "start": [
+            1314.59997558594,
+            738.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            2250.0,
+            530.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 634.9,
+          "side": -1,
+          "start": [
+            2250.0,
+            828.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            2250.0,
+            530.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 634.9,
+          "side": 1,
+          "start": [
+            2250.0,
+            828.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 8,
+      "name": "RELAY UNDERCROFT",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1090.0,
+            310.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            350.0,
+            1110.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            770.0,
+            920.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1300.0,
+            740.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1810.0,
+            900.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2220.0,
+            830.0,
+            380.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            100.9,
+            1299.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1190.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            109.0,
+            161.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.0,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1088.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2516.3,
+            933.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 930.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            260.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            828.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          670.0,
+          480.0
+        ],
+        [
+          1250.0,
+          400.0
+        ],
+        [
+          1850.0,
+          430.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            830.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 9,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            830.0,
+            650.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 8,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": false,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 9,
+          "solid_headroom": null,
+          "support": [
+            1980.0,
+            810.0,
+            620.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": -20.0,
+          "target": 10,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1100.0,
+            1040.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 9,
+          "solid_headroom": null,
+          "support": [
+            380.0,
+            1040.0,
+            800.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 14,
+          "trigger_x": null,
+          "wall_side": false
+        },
+        {
+          "at": [
+            160.0,
+            620.0
+          ],
+          "dead_space_past_door_px": 2426.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 9,
+          "solid_headroom": null,
+          "support": [
+            80.0,
+            620.0,
+            440.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 3,
+          "trigger_to_wall_px": 2426.0,
+          "trigger_x": null,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            830.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 8
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 10
+        },
+        {
+          "at": [
+            1100.0,
+            1040.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 14
+        },
+        {
+          "at": [
+            160.0,
+            620.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 3
+        }
+      ],
+      "enemies": [
+        [
+          800.0,
+          1040.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2110.0,
+            810.0
+          ],
+          "element": "fire",
+          "height": 280.0,
+          "id": "terrace_fire_cache"
+        },
+        {
+          "at": [
+            360.0,
+            620.0
+          ],
+          "element": "electric",
+          "height": 280.0,
+          "id": "terrace_return_relay"
+        }
+      ],
+      "grapple": [
+        {
+          "anchor": [
+            670.0,
+            480.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 575.1,
+          "side": -1,
+          "start": [
+            635.400024414062,
+            828.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            670.0,
+            480.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 566.7,
+          "side": 1,
+          "start": [
+            635.400024414062,
+            828.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1250.0,
+            400.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 444.9,
+          "side": -1,
+          "start": [
+            1374.59997558594,
+            638.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1250.0,
+            400.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 444.9,
+          "side": 1,
+          "start": [
+            1374.59997558594,
+            638.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1850.0,
+            430.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 444.9,
+          "side": -1,
+          "start": [
+            1745.40002441406,
+            638.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1850.0,
+            430.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 444.9,
+          "side": 1,
+          "start": [
+            1745.40002441406,
+            638.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 9,
+      "name": "SIGNAL TERRACE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            830.0,
+            650.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            80.0,
+            620.0,
+            440.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            380.0,
+            1040.0,
+            800.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            780.0,
+            850.0,
+            440.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1360.0,
+            640.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1980.0,
+            810.0,
+            620.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            83.7,
+            933.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 930.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            260.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            828.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            284.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            100.0,
+            618.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2549.3,
+            1005.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 910.0,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            284.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            808.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          620.0,
+          560.0
+        ],
+        [
+          1220.0,
+          460.0
+        ],
+        [
+          1880.0,
+          480.0
+        ],
+        [
+          2320.0,
+          420.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            830.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 10,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            830.0,
+            300.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 9,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 10,
+          "solid_headroom": null,
+          "support": [
+            2240.0,
+            760.0,
+            360.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 11,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            830.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 9
+        },
+        {
+          "at": [
+            2440.0,
+            760.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 11
+        }
+      ],
+      "enemies": [
+        [
+          800.0,
+          1040.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2110.0,
+            810.0
+          ],
+          "element": "wind",
+          "height": 280.0,
+          "id": "skyworks_wind_intake"
+        }
+      ],
+      "grapple": [
+        {
+          "anchor": [
+            620.0,
+            560.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 776.4,
+          "side": -1,
+          "start": [
+            620.0,
+            1038.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            620.0,
+            560.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 776.4,
+          "side": 1,
+          "start": [
+            620.0,
+            1038.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1220.0,
+            460.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 567.5,
+          "side": -1,
+          "start": [
+            1205.40002441406,
+            828.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1220.0,
+            460.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 564.8,
+          "side": 1,
+          "start": [
+            1205.40002441406,
+            828.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1880.0,
+            480.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 545.6,
+          "side": -1,
+          "start": [
+            1880.0,
+            808.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1880.0,
+            480.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 545.6,
+          "side": 1,
+          "start": [
+            1880.0,
+            808.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            2320.0,
+            420.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 496.8,
+          "side": -1,
+          "start": [
+            2320.0,
+            758.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            2320.0,
+            420.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 496.8,
+          "side": 1,
+          "start": [
+            2320.0,
+            758.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 10,
+      "name": "SKYWORKS APPROACH",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            350.0,
+            1040.0,
+            800.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            920.0,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1400.0,
+            620.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1780.0,
+            810.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2240.0,
+            760.0,
+            360.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            83.7,
+            933.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 930.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            260.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            828.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            967.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 860.0,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            250.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          700.0,
+          560.0
+        ],
+        [
+          1300.0,
+          460.0
+        ],
+        [
+          1940.0,
+          460.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 11,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            760.0,
+            310.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 10,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 11,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 12,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            890.0,
+            980.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 11,
+          "solid_headroom": null,
+          "support": [
+            420.0,
+            980.0,
+            600.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 19,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 10
+        },
+        {
+          "at": [
+            2440.0,
+            1300.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 12
+        },
+        {
+          "at": [
+            890.0,
+            980.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 19
+        }
+      ],
+      "enemies": [
+        [
+          1100.0,
+          1300.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2370.0,
+            760.0
+          ],
+          "element": "electric",
+          "height": 300.0,
+          "id": "foundry_electric_relay"
+        }
+      ],
+      "grapple": [
+        {
+          "anchor": [
+            700.0,
+            560.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 714.6,
+          "side": -1,
+          "start": [
+            700.0,
+            978.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            700.0,
+            560.0
+          ],
+          "attached": true,
+          "escaped": false,
+          "min_feet_y": 714.6,
+          "side": 1,
+          "start": [
+            700.0,
+            978.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1300.0,
+            460.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 584.9,
+          "side": -1,
+          "start": [
+            1300.0,
+            778.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1300.0,
+            460.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 584.9,
+          "side": 1,
+          "start": [
+            1300.0,
+            778.0
+          ],
+          "toward": 1
+        },
+        {
+          "anchor": [
+            1940.0,
+            460.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 364.9,
+          "side": -1,
+          "start": [
+            1885.40002441406,
+            558.0
+          ],
+          "toward": -1
+        },
+        {
+          "anchor": [
+            1940.0,
+            460.0
+          ],
+          "attached": false,
+          "escaped": false,
+          "min_feet_y": 364.9,
+          "side": 1,
+          "start": [
+            1885.40002441406,
+            558.0
+          ],
+          "toward": 1
+        }
+      ],
+      "index": 11,
+      "name": "STORM FOUNDRY",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            760.0,
+            310.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            420.0,
+            980.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1100.0,
+            780.0,
+            380.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1500.0,
+            560.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2010.0,
+            760.0,
+            590.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            920.0,
+            560.0,
+            240.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            967.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 860.0,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            250.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            967.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 860.0,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            250.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          760.0,
+          790.0
+        ],
+        [
+          1230.0,
+          590.0
+        ],
+        [
+          1870.0,
+          730.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 12,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 11,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            220.0,
+            830.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 12,
+          "solid_headroom": null,
+          "support": [
+            80.0,
+            830.0,
+            480.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 8,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1300.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 11
+        },
+        {
+          "at": [
+            220.0,
+            830.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 8
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 12,
+      "name": "KEEPER RELAY",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            80.0,
+            830.0,
+            480.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            580.0,
+            1070.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1040.0,
+            850.0,
+            350.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1700.0,
+            1030.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2180.0,
+            880.0,
+            300.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            83.7,
+            933.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 930.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            260.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            100.0,
+            828.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            369.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2460.0,
+            878.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          900.0,
+          690.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1200.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": true,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 13,
+          "solid_headroom": 180.0,
+          "support": [
+            0.0,
+            1200.0,
+            360.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 0,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1680.0,
+            560.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 13,
+          "solid_headroom": null,
+          "support": [
+            1400.0,
+            560.0,
+            400.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 14,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 1680.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            900.0,
+            400.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "wind_fold",
+          "room": 13,
+          "solid_headroom": null,
+          "support": [
+            740.0,
+            400.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 20,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1200.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 0
+        },
+        {
+          "at": [
+            1680.0,
+            560.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 14
+        },
+        {
+          "at": [
+            900.0,
+            400.0
+          ],
+          "heading": 0,
+          "mode": "wind_fold",
+          "target": 20
+        }
+      ],
+      "enemies": [
+        [
+          900.0,
+          940.0
+        ]
+      ],
+      "face": [
+        {
+          "above_room_top": false,
+          "end": [
+            114.0,
+            1195.6
+          ],
+          "escaped": false,
+          "face_rect": [
+            0.0,
+            0.0,
+            296.0,
+            1020.0
+          ],
+          "left_room_x": false,
+          "min_feet_y": 1080.1,
+          "start": [
+            310.600006103516,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            116.5,
+            1198.9
+          ],
+          "escaped": false,
+          "face_rect": [
+            0.0,
+            0.0,
+            296.0,
+            1020.0
+          ],
+          "left_room_x": false,
+          "min_feet_y": 1080.1,
+          "start": [
+            310.600006103516,
+            1158.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            310.1,
+            302.4
+          ],
+          "escaped": false,
+          "face_rect": [
+            0.0,
+            0.0,
+            296.0,
+            1020.0
+          ],
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "start": [
+            314.600006103516,
+            438.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            114.0,
+            1170.4
+          ],
+          "escaped": false,
+          "face_rect": [
+            0.0,
+            0.0,
+            296.0,
+            1020.0
+          ],
+          "left_room_x": false,
+          "min_feet_y": 1080.1,
+          "start": [
+            310.600006103516,
+            1198.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        }
+      ],
+      "fly": [
+        {
+          "end": [
+            310.0,
+            440.0
+          ],
+          "escaped": false,
+          "min_feet_y": 254.1,
+          "side": -1,
+          "start": [
+            324.0,
+            438.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            310.0,
+            440.0
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": -1,
+          "start": [
+            324.0,
+            438.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            1785.9,
+            399.6
+          ],
+          "escaped": false,
+          "min_feet_y": 126.6,
+          "side": 1,
+          "start": [
+            1776.0,
+            558.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            1785.9,
+            403.2
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": 1,
+          "start": [
+            1776.0,
+            558.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            1785.9,
+            409.9
+          ],
+          "escaped": false,
+          "min_feet_y": 136.9,
+          "side": 1,
+          "start": [
+            1462.66662597656,
+            531.333312988281
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            1785.9,
+            281.9
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": 1,
+          "start": [
+            1462.66662597656,
+            531.333312988281
+          ],
+          "toward": 1
+        }
+      ],
+      "gates": [],
+      "grapple": [],
+      "index": 13,
+      "name": "MOORING LOFT",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            1800.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            1800.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            200.0,
+            1160.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            500.0,
+            1050.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            720.0,
+            940.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1010.0,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1220.0,
+            720.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1400.0,
+            560.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1186.66662597656,
+            533.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            943.333251953125,
+            506.666687011719,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            600.0,
+            480.0,
+            500.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            525.0,
+            460.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            300.0,
+            440.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            550.0,
+            420.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            740.0,
+            400.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            1200.0,
+            360.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1020.0,
+            72.0,
+            180.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            0.0,
+            296.0,
+            1020.0
+          ]
+        }
+      ],
+      "size": [
+        1800.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            6.6,
+            1298.0
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1298.0,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            116.0,
+            1119.0
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1119.0,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            220.0,
+            1158.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            6.6,
+            1198.0
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1198.0,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1198.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            6.6,
+            1018.0
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 1018.0,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1018.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1736.9,
+            278.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            1785.40002441406,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1684.6,
+            516.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 516.9,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1600.0,
+            718.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1770.3,
+            321.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1785.40002441406,
+            558.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          820.0,
+          620.0
+        ],
+        [
+          1460.0,
+          430.0
+        ],
+        [
+          2090.0,
+          550.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1100.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 14,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1100.0,
+            600.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 13,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 14,
+          "solid_headroom": null,
+          "support": [
+            1900.0,
+            830.0,
+            700.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 9,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1450.0,
+            480.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "stair_up",
+          "room": 14,
+          "solid_headroom": null,
+          "support": [
+            1300.0,
+            480.0,
+            380.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 17,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1100.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 13
+        },
+        {
+          "at": [
+            2440.0,
+            830.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 9
+        },
+        {
+          "at": [
+            1450.0,
+            480.0
+          ],
+          "heading": 0,
+          "mode": "stair_up",
+          "target": 17
+        }
+      ],
+      "enemies": [
+        [
+          950.0,
+          900.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 14,
+      "name": "BELLROOF WALK",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            200.0,
+            1200.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            1100.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            425.0,
+            1060.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            650.0,
+            1020.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            750.0,
+            900.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1000.0,
+            865.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1190.0,
+            830.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1400.0,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1590.0,
+            830.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1837.5,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1900.0,
+            830.0,
+            700.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1827.5,
+            745.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1560.0,
+            660.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1300.0,
+            480.0,
+            380.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1357.5,
+            600.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1300.0,
+            720.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            520.0,
+            1220.0,
+            180.0,
+            80.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            750.0,
+            1110.0,
+            120.0,
+            190.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1030.0,
+            1110.0,
+            120.0,
+            190.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1200.0,
+            1220.0,
+            200.0,
+            80.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            1780.0,
+            1220.0,
+            200.0,
+            80.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            2000.0,
+            1120.0,
+            180.0,
+            180.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            240.0,
+            1200.0,
+            240.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1420.0,
+            1120.0,
+            240.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1480.0,
+            980.0,
+            240.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            2200.0,
+            1040.0,
+            280.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            2280.0,
+            930.0,
+            260.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            2340.0,
+            1200.0,
+            260.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            44.1,
+            348.5
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            220.0,
+            1198.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            267.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1098.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2531.3,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            260.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            828.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            291.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2460.0,
+            1038.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            459.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2520.0,
+            928.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2485.9,
+            313.7
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1198.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          960.0,
+          480.0
+        ],
+        [
+          1550.0,
+          660.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            500.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 15,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            500.0,
+            580.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 2,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2080.0,
+            1120.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 15,
+          "solid_headroom": null,
+          "support": [
+            1800.0,
+            1120.0,
+            400.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 16,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 2080.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            500.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 2
+        },
+        {
+          "at": [
+            2080.0,
+            1120.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 16
+        }
+      ],
+      "enemies": [
+        [
+          1520.0,
+          940.0
+        ]
+      ],
+      "face": [],
+      "fly": [
+        {
+          "end": [
+            14.1,
+            457.1
+          ],
+          "escaped": false,
+          "min_feet_y": 184.1,
+          "side": -1,
+          "start": [
+            24.0,
+            498.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            14.0,
+            500.0
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": -1,
+          "start": [
+            24.0,
+            498.0
+          ],
+          "toward": -1
+        }
+      ],
+      "gates": [
+        {
+          "at": [
+            500.0,
+            500.0
+          ],
+          "element": "wind",
+          "height": 240.0,
+          "id": "lower_sluice_wind"
+        }
+      ],
+      "grapple": [],
+      "index": 15,
+      "name": "LOWER SLUICE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2200.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2200.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1800.0,
+            1120.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1570.0,
+            1080.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1320.0,
+            940.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1195.0,
+            885.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1020.0,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            720.0,
+            720.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            632.5,
+            665.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            470.0,
+            610.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            500.0,
+            580.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2200.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            109.1,
+            246.8
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            104.7,
+            130.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            498.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2131.3,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2185.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2170.3,
+            369.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2185.39990234375,
+            1118.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          950.0,
+          630.0
+        ],
+        [
+          1530.0,
+          470.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1120.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 16,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1120.0,
+            580.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 15,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1880.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 16,
+          "solid_headroom": null,
+          "support": [
+            1300.0,
+            760.0,
+            700.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 8,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 1880.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1000.0,
+            430.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 16,
+          "solid_headroom": null,
+          "support": [
+            840.0,
+            430.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 18,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1120.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 15
+        },
+        {
+          "at": [
+            1880.0,
+            760.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 8
+        },
+        {
+          "at": [
+            1000.0,
+            430.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 18
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [],
+      "gates": [],
+      "grapple": [],
+      "index": 16,
+      "name": "ROOT SHRINE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2000.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2000.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            1120.0,
+            580.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            477.5,
+            1010.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            700.0,
+            900.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1008.33337402344,
+            853.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1241.66674804688,
+            806.666687011719,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1300.0,
+            760.0,
+            700.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1177.5,
+            630.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            780.0,
+            500.0,
+            500.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            840.0,
+            430.0,
+            320.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2000.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            369.5
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1118.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1892.9,
+            116.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            1985.40002441406,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1970.3,
+            250.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1985.40002441406,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          900.0,
+          1400.0
+        ],
+        [
+          950.0,
+          780.0
+        ],
+        [
+          1320.0,
+          250.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            1680.0,
+            1300.0
+          ],
+          "dead_space_past_door_px": 106.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "stair_down",
+          "room": 17,
+          "solid_headroom": null,
+          "support": [
+            1200.0,
+            1300.0,
+            600.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 14,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": null,
+          "wall_side": true
+        },
+        {
+          "at": [
+            120.0,
+            1900.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 17,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1900.0,
+            600.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 5,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1500.0,
+            420.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 17,
+          "solid_headroom": null,
+          "support": [
+            1200.0,
+            420.0,
+            450.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 20,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            1680.0,
+            1300.0
+          ],
+          "heading": 0,
+          "mode": "stair_down",
+          "target": 14
+        },
+        {
+          "at": [
+            120.0,
+            1900.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 5
+        },
+        {
+          "at": [
+            1500.0,
+            420.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 20
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [
+        {
+          "end": [
+            1785.9,
+            539.1
+          ],
+          "escaped": false,
+          "min_feet_y": 266.1,
+          "side": 1,
+          "start": [
+            1626.0,
+            418.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            1785.9,
+            722.7
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": 1,
+          "start": [
+            1626.0,
+            418.0
+          ],
+          "toward": 1
+        }
+      ],
+      "gates": [
+        {
+          "at": [
+            1430.0,
+            420.0
+          ],
+          "element": "wind",
+          "height": 240.0,
+          "id": "spire_wind_shutter"
+        }
+      ],
+      "grapple": [],
+      "index": 17,
+      "name": "COUNTERWEIGHT SPIRE",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            2160.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            1800.0,
+            0.0,
+            40.0,
+            2160.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            2020.0,
+            1800.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            1900.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            360.0,
+            1840.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            520.0,
+            1780.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            720.0,
+            1660.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            960.0,
+            1480.0,
+            340.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1152.5,
+            1390.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1200.0,
+            1300.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1137.5,
+            1235.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            940.0,
+            1170.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            650.0,
+            1040.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            830.0,
+            900.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1007.5,
+            830.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1100.0,
+            760.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1440.0,
+            590.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1200.0,
+            420.0,
+            450.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        1800.0,
+        2160.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            224.0
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            2018.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            267.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1898.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1716.3,
+            393.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            1785.40002441406,
+            2018.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1770.3,
+            267.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1785.40002441406,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1770.3,
+            267.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1720.0,
+            588.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            1777.9,
+            473.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            1630.0,
+            418.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          930.0,
+          510.0
+        ],
+        [
+          1650.0,
+          340.0
+        ],
+        [
+          2220.0,
+          460.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            1000.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 18,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            1000.0,
+            580.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 16,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1200.0,
+            1180.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 18,
+          "solid_headroom": null,
+          "support": [
+            1040.0,
+            1180.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 8,
+          "trigger_x": null,
+          "wall_side": false
+        },
+        {
+          "at": [
+            2440.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 98.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 18,
+          "solid_headroom": null,
+          "support": [
+            2000.0,
+            760.0,
+            600.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 19,
+          "trigger_to_wall_px": 146.0,
+          "trigger_x": 2440.0,
+          "wall_side": true
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            1000.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 16
+        },
+        {
+          "at": [
+            1200.0,
+            1180.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 8
+        },
+        {
+          "at": [
+            2440.0,
+            760.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 19
+        }
+      ],
+      "enemies": [
+        [
+          950.0,
+          800.0
+        ]
+      ],
+      "face": [],
+      "fly": [],
+      "gates": [
+        {
+          "at": [
+            2370.0,
+            760.0
+          ],
+          "element": "electric",
+          "height": 240.0,
+          "id": "pump_electric_isolator"
+        }
+      ],
+      "grapple": [],
+      "index": 18,
+      "name": "PUMP GALLERY",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2600.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2600.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1040.0,
+            1180.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            760.0,
+            1120.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            470.0,
+            1060.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            1000.0,
+            580.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            386.666687011719,
+            933.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            593.333374023438,
+            866.666625976562,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            700.0,
+            800.0,
+            500.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1065.0,
+            792.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1330.0,
+            784.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1595.0,
+            776.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1860.0,
+            768.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            2000.0,
+            760.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1901.66674804688,
+            713.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1678.33325195312,
+            666.666687011719,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1380.0,
+            620.0,
+            450.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2600.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            68.7,
+            158.9
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            250.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            998.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2492.9,
+            116.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2570.3,
+            250.2
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2585.39990234375,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          890.0,
+          670.0
+        ],
+        [
+          1580.0,
+          430.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 19,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            760.0,
+            530.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 18,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2280.0,
+            980.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 19,
+          "solid_headroom": null,
+          "support": [
+            1850.0,
+            980.0,
+            550.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 11,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 2280.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            1800.0,
+            480.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "depth_door",
+          "room": 19,
+          "solid_headroom": null,
+          "support": [
+            1640.0,
+            480.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 20,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 18
+        },
+        {
+          "at": [
+            2280.0,
+            980.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 11
+        },
+        {
+          "at": [
+            1800.0,
+            480.0
+          ],
+          "heading": 0,
+          "mode": "depth_door",
+          "target": 20
+        }
+      ],
+      "enemies": [
+        [
+          950.0,
+          980.0
+        ]
+      ],
+      "face": [],
+      "fly": [
+        {
+          "end": [
+            2385.9,
+            410.4
+          ],
+          "escaped": false,
+          "min_feet_y": 137.4,
+          "side": 1,
+          "start": [
+            2126.0,
+            518.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            2385.9,
+            282.4
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.0,
+          "side": 1,
+          "start": [
+            2126.0,
+            518.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            2385.9,
+            484.1
+          ],
+          "escaped": false,
+          "min_feet_y": 211.1,
+          "side": 1,
+          "start": [
+            1936.0,
+            478.0
+          ],
+          "toward": 1
+        },
+        {
+          "end": [
+            2385.9,
+            461.9
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": 1,
+          "start": [
+            1936.0,
+            478.0
+          ],
+          "toward": 1
+        }
+      ],
+      "gates": [
+        {
+          "at": [
+            1730.0,
+            480.0
+          ],
+          "element": "fire",
+          "height": 240.0,
+          "id": "coil_fire_service"
+        }
+      ],
+      "grapple": [],
+      "index": 19,
+      "name": "COIL SERVICE HALL",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2400.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2400.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1950.0,
+            1140.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1850.0,
+            980.0,
+            550.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1685.0,
+            980.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1370.0,
+            980.0,
+            400.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1213.33337402344,
+            980.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1006.66662597656,
+            980.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            700.0,
+            980.0,
+            500.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            615.0,
+            925.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            430.0,
+            870.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            760.0,
+            530.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            417.5,
+            760.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            670.0,
+            760.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            870.0,
+            760.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1050.0,
+            760.0,
+            320.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1252.5,
+            760.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1370.0,
+            760.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1647.5,
+            700.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1850.0,
+            640.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1550.0,
+            520.0,
+            600.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1640.0,
+            480.0,
+            320.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2400.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            107.1,
+            116.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            250.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2331.3,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2385.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2377.9,
+            216.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.0,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2230.0,
+            1138.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2370.3,
+            369.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.0,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2385.39990234375,
+            978.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    },
+    {
+      "anchors": [
+        [
+          900.0,
+          520.0
+        ],
+        [
+          1650.0,
+          700.0
+        ]
+      ],
+      "door": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 20,
+          "solid_headroom": null,
+          "support": [
+            0.0,
+            760.0,
+            580.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 17,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 120.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            2080.0,
+            1120.0
+          ],
+          "dead_space_past_door_px": 58.0,
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": null,
+          "mode": "horizontal_walk",
+          "room": 20,
+          "solid_headroom": null,
+          "support": [
+            1400.0,
+            1120.0,
+            800.0,
+            40.0
+          ],
+          "support_reaches_wall": true,
+          "support_top_offset": 0.0,
+          "target": 19,
+          "trigger_to_wall_px": 106.0,
+          "trigger_x": 2080.0,
+          "wall_side": true
+        },
+        {
+          "at": [
+            600.0,
+            520.0
+          ],
+          "door_span_supported": true,
+          "enclosed_above": false,
+          "interact_radius": 85,
+          "mode": "wind_fold",
+          "room": 20,
+          "solid_headroom": null,
+          "support": [
+            440.0,
+            520.0,
+            320.0,
+            40.0
+          ],
+          "support_reaches_wall": false,
+          "support_top_offset": 0.0,
+          "target": 13,
+          "trigger_x": null,
+          "wall_side": false
+        }
+      ],
+      "endpoints": [
+        {
+          "at": [
+            120.0,
+            760.0
+          ],
+          "heading": -1,
+          "mode": "horizontal_walk",
+          "target": 17
+        },
+        {
+          "at": [
+            2080.0,
+            1120.0
+          ],
+          "heading": 1,
+          "mode": "horizontal_walk",
+          "target": 19
+        },
+        {
+          "at": [
+            600.0,
+            520.0
+          ],
+          "heading": 0,
+          "mode": "wind_fold",
+          "target": 13
+        }
+      ],
+      "enemies": [],
+      "face": [],
+      "fly": [
+        {
+          "end": [
+            14.1,
+            401.6
+          ],
+          "escaped": false,
+          "min_feet_y": 128.6,
+          "side": -1,
+          "start": [
+            374.0,
+            558.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            14.1,
+            273.6
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": -1,
+          "start": [
+            374.0,
+            558.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            14.1,
+            449.2
+          ],
+          "escaped": false,
+          "min_feet_y": 176.2,
+          "side": -1,
+          "start": [
+            464.0,
+            518.0
+          ],
+          "toward": -1
+        },
+        {
+          "end": [
+            14.1,
+            407.1
+          ],
+          "escaped": false,
+          "kind": "double_to_top",
+          "min_feet_y": 116.1,
+          "side": -1,
+          "start": [
+            464.0,
+            518.0
+          ],
+          "toward": -1
+        }
+      ],
+      "gates": [],
+      "grapple": [],
+      "index": 20,
+      "name": "RELAY JUNCTION",
+      "platforms": [
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            -40.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": true,
+          "one_way": false,
+          "rect": [
+            2200.0,
+            0.0,
+            40.0,
+            1440.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": false,
+          "rect": [
+            0.0,
+            1300.0,
+            2200.0,
+            140.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1400.0,
+            1120.0,
+            800.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1358.33325195312,
+            1046.66662597656,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            1091.66662597656,
+            973.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            750.0,
+            900.0,
+            450.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            610.0,
+            853.333312988281,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            395.0,
+            806.666687011719,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            0.0,
+            760.0,
+            580.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            315.0,
+            660.0,
+            300.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            350.0,
+            560.0,
+            500.0,
+            40.0
+          ]
+        },
+        {
+          "boundary": false,
+          "one_way": true,
+          "rect": [
+            440.0,
+            520.0,
+            320.0,
+            40.0
+          ]
+        }
+      ],
+      "size": [
+        2200.0,
+        1440.0
+      ],
+      "wall": [
+        {
+          "above_room_top": false,
+          "end": [
+            107.1,
+            116.6
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            29.7,
+            250.3
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": -1,
+          "start": [
+            14.6000003814697,
+            758.0
+          ],
+          "ticks_to_top": -1,
+          "toward": -1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2131.3,
+            266.1
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "floor",
+          "side": 1,
+          "start": [
+            2185.39990234375,
+            1298.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        },
+        {
+          "above_room_top": false,
+          "end": [
+            2170.3,
+            369.4
+          ],
+          "escaped": false,
+          "left_room_x": false,
+          "min_feet_y": 116.1,
+          "origin": "ledge",
+          "side": 1,
+          "start": [
+            2185.39990234375,
+            1118.0
+          ],
+          "ticks_to_top": -1,
+          "toward": 1
+        }
+      ]
+    }
+  ]
+}

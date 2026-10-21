@@ -6,14 +6,14 @@
   724
  ],
  "leg_band_xor": {
-  "min_adjacent": 0.302,
-  "mean_adjacent": 0.595,
-  "min_any_pair": 0.302,
-  "mean_pairs": 0.656
+  "min_adjacent": 0.559,
+  "mean_adjacent": 0.664,
+  "min_any_pair": 0.559,
+  "mean_pairs": 0.693
  },
  "upper_band_xor": {
-  "min_adjacent": 0.094,
-  "mean_adjacent": 0.2
+  "min_adjacent": 0.184,
+  "mean_adjacent": 0.229
  },
  "leg_angles_deg": {
   "thigh_dir_range": [
@@ -22,19 +22,19 @@
   ],
   "knee_flex_range": [
    29,
-   89
+   81
   ]
  },
  "arm_angles_deg": {
   "upper_range": [
-   88,
+   90,
    116
   ]
  },
  "unique_frames": 4,
  "hidden_rgb_pixels": 0,
  "low_alpha_pixels_1_to_19": 0,
- "min_margin_px": 91,
+ "min_margin_px": 92,
  "max_components": 1,
  "height_range": [
   308,

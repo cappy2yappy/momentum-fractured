@@ -1,0 +1,205 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+CANAL engine=4.6.1-stable (official) driver=opengl3
+PASS: Door aperture [P: (72.0, 1068.0), S: (96.0, 132.0)] has no collider inside it (found 0)
+PASS: Aperture is centred on door x=120 and stands on y=1200
+PASS: A support rectangle at y=1200 spans the whole aperture
+PASS: Aperture 132 and ceiling clearance 180 versus Kaze height 60
+PASS: Trigger endpoint unchanged: at (120,1200), horizontal_walk, heading -1
+PASS: Trigger x lies where Kaze's whole body is inside the aperture
+PASS: Enclosure mass stays left of x=300 (shelf at 300,440 untouched) and ends at the lintel
+PASS: Route shelf [P: (200.0, 1160.0), S: (400.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (720.0, 940.0), S: (360.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (1220.0, 720.0), S: (400.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (1400.0, 560.0), S: (360.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (600.0, 480.0), S: (500.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (300.0, 440.0), S: (400.0, 40.0)] retained and clear of the enclosure
+PASS: Route shelf [P: (740.0, 400.0), S: (320.0, 40.0)] retained and clear of the enclosure
+PASS: Exit pad is still the extended landing (0,1200,360,40)
+PASS: Colliders exist
+PASS: Enclosure colliders equal the visible rectangles
+PASS: Arrival point in R13 is (184,1198), got (184.0, 1198.0)
+PASS: Walk from mouth requests the R13->R0 passage exactly once
+PASS: Walk from mouth lands supported in R0 ((550.6109, 779.9337))
+PASS: Walk from mouth did not loop after arrival
+PASS: Walk from mouth stays in R0 after settling
+PASS: Walk from inside hall requests the R13->R0 passage exactly once
+PASS: Walk from inside hall lands supported in R0 ((550.6109, 779.9337))
+PASS: Walk from inside hall did not loop after arrival
+PASS: Walk from inside hall stays in R0 after settling
+PASS: Sprint (double tap) from mouth requests the R13->R0 passage exactly once
+PASS: Sprint (double tap) from mouth lands supported in R0 ((507.1667, 779.9337))
+PASS: Sprint (double tap) from mouth did not loop after arrival
+PASS: Sprint (double tap) from mouth stays in R0 after settling
+PASS: Dash from mouth requests the R13->R0 passage exactly once
+PASS: Dash from mouth lands supported in R0 ((405.7777, 779.934))
+PASS: Dash from mouth did not loop after arrival
+PASS: Dash from mouth stays in R0 after settling
+PASS: Dash starting inside hall requests the R13->R0 passage exactly once
+PASS: Dash starting inside hall lands supported in R0 ((405.7777, 779.934))
+PASS: Dash starting inside hall did not loop after arrival
+PASS: Dash starting inside hall stays in R0 after settling
+PASS: Jump at tick 0 requests the R13->R0 passage exactly once
+PASS: Jump at tick 0 lands supported in R0 ((590.0, 779.998))
+PASS: Jump at tick 0 did not loop after arrival
+PASS: Jump at tick 0 stays in R0 after settling
+PASS: Jump at tick 10 requests the R13->R0 passage exactly once
+PASS: Jump at tick 10 lands supported in R0 ((590.0, 779.998))
+PASS: Jump at tick 10 did not loop after arrival
+PASS: Jump at tick 10 stays in R0 after settling
+PASS: Jump at tick 20 requests the R13->R0 passage exactly once
+PASS: Jump at tick 20 lands supported in R0 ((590.0, 779.998))
+PASS: Jump at tick 20 did not loop after arrival
+PASS: Jump at tick 20 stays in R0 after settling
+PASS: Jump at tick 30 requests the R13->R0 passage exactly once
+PASS: Jump at tick 30 lands supported in R0 ((590.0, 779.998))
+PASS: Jump at tick 30 did not loop after arrival
+PASS: Jump at tick 30 stays in R0 after settling
+PASS: Jump at tick 40 requests the R13->R0 passage exactly once
+PASS: Jump at tick 40 lands supported in R0 ((550.6109, 779.9337))
+PASS: Jump at tick 40 did not loop after arrival
+PASS: Jump at tick 40 stays in R0 after settling
+PASS: Jump at tick 50 requests the R13->R0 passage exactly once
+PASS: Jump at tick 50 lands supported in R0 ((550.6109, 779.9337))
+PASS: Jump at tick 50 did not loop after arrival
+PASS: Jump at tick 50 stays in R0 after settling
+PASS: Jump at tick 60 requests the R13->R0 passage exactly once
+PASS: Jump at tick 60 lands supported in R0 ((550.6109, 779.9337))
+PASS: Jump at tick 60 did not loop after arrival
+PASS: Jump at tick 60 stays in R0 after settling
+PASS: Jump at tick 80 requests the R13->R0 passage exactly once
+PASS: Jump at tick 80 lands supported in R0 ((550.6109, 779.9337))
+PASS: Jump at tick 80 did not loop after arrival
+PASS: Jump at tick 80 stays in R0 after settling
+PASS: Jump inside hall bumps ceiling requests the R13->R0 passage exactly once
+PASS: Jump inside hall bumps ceiling lands supported in R0 ((590.0, 779.998))
+PASS: Jump inside hall bumps ceiling did not loop after arrival
+PASS: Jump inside hall bumps ceiling stays in R0 after settling
+PASS: Double jump in hall requests the R13->R0 passage exactly once
+PASS: Double jump in hall lands supported in R0 ((590.0, 779.998))
+PASS: Double jump in hall did not loop after arrival
+PASS: Double jump in hall stays in R0 after settling
+PASS: Fall from shelf (200,1160) requests the R13->R0 passage exactly once
+PASS: Fall from shelf (200,1160) lands supported in R0 ((590.0, 779.998))
+PASS: Fall from shelf (200,1160) did not loop after arrival
+PASS: Fall from shelf (200,1160) stays in R0 after settling
+PASS: Fall from stair step (500,1050) requests the R13->R0 passage exactly once
+PASS: Fall from stair step (500,1050) lands supported in R0 ((590.0, 779.998))
+PASS: Fall from stair step (500,1050) did not loop after arrival
+PASS: Fall from stair step (500,1050) stays in R0 after settling
+PASS: Jump up from floor beside the pad requests the R13->R0 passage exactly once
+PASS: Jump up from floor beside the pad lands supported in R0 ((590.0, 779.998))
+PASS: Jump up from floor beside the pad did not loop after arrival
+PASS: Jump up from floor beside the pad stays in R0 after settling
+PASS: Jump up from floor under the pad requests the R13->R0 passage exactly once
+PASS: Jump up from floor under the pad lands supported in R0 ((590.0, 779.998))
+PASS: Jump up from floor under the pad did not loop after arrival
+PASS: Jump up from floor under the pad stays in R0 after settling
+PASS: Stop in the mouth does not trigger
+PASS: Stopped Kaze stays put left of the mouth and right of the door
+PASS: Resume after stopping requests the R13->R0 passage exactly once
+PASS: Resume after stopping lands supported in R0 ((550.6109, 779.9337))
+PASS: Resume after stopping did not loop after arrival
+PASS: Resume after stopping stays in R0 after settling
+PASS: Reversal requests the R13->R0 passage exactly once
+PASS: Reversal lands supported in R0 ((550.6109, 779.9337))
+PASS: Reversal did not loop after arrival
+PASS: Reversal stays in R0 after settling
+PASS: Reversing before the door leaves the hall without triggering
+PASS: Aborted jump lands safely on the exit support
+PASS: Re-approach after aborted jump requests the R13->R0 passage exactly once
+PASS: Re-approach after aborted jump lands supported in R0 ((550.6109, 779.9337))
+PASS: Re-approach after aborted jump did not loop after arrival
+PASS: Re-approach after aborted jump stays in R0 after settling
+PASS: Leftmost reachable x is the pier face plus radius (min 114.17)
+PASS: Walk from the middle of the hall requests the R13->R0 passage exactly once
+PASS: Walk from the middle of the hall lands supported in R0 ((550.6109, 779.9337))
+PASS: Walk from the middle of the hall did not loop after arrival
+PASS: Walk from the middle of the hall stays in R0 after settling
+PASS: Held left through R13->R0 does not bounce back
+PASS: Cycle 0 R0->R13 by E arrives supported
+PASS: Cycle 0 arrival at (184,1198), got (184.0, 1199.998)
+PASS: Arrival faces into the room
+PASS: Cycle 0 does not bounce back from stationary arrival
+PASS: Cycle 0 held E cannot send Kaze back through the walk-through exit
+PASS: Cycle 0 R13->R0 by walking left
+PASS: Cycle 0 lands supported in R0
+PASS: Cycle 1 R0->R13 by E arrives supported
+PASS: Cycle 1 arrival at (184,1198), got (184.0, 1199.998)
+PASS: Arrival faces into the room
+PASS: Cycle 1 does not bounce back from stationary arrival
+PASS: Cycle 1 held E cannot send Kaze back through the walk-through exit
+PASS: Cycle 1 R13->R0 by walking left
+PASS: Cycle 1 lands supported in R0
+PASS: Cycle 2 R0->R13 by E arrives supported
+PASS: Cycle 2 arrival at (184,1198), got (184.0, 1199.998)
+PASS: Arrival faces into the room
+PASS: Cycle 2 does not bounce back from stationary arrival
+PASS: Cycle 2 held E cannot send Kaze back through the walk-through exit
+PASS: Cycle 2 R13->R0 by walking left
+PASS: Cycle 2 lands supported in R0
+PASS: Stride I not yet collected
+PASS: Stride I pickup at (450,440) collected by real walking from the shelf's left end
+PASS: After Stride I: walk requests the R13->R0 passage exactly once
+PASS: After Stride I: walk lands supported in R0 ((546.9445, 779.9337))
+PASS: After Stride I: walk did not loop after arrival
+PASS: After Stride I: walk stays in R0 after settling
+PASS: After Stride I: sprint requests the R13->R0 passage exactly once
+PASS: After Stride I: sprint lands supported in R0 ((499.2779, 779.9337))
+PASS: After Stride I: sprint did not loop after arrival
+PASS: After Stride I: sprint stays in R0 after settling
+PASS: After Stride I: sprint from the far side of the pad requests the R13->R0 passage exactly once
+PASS: After Stride I: sprint from the far side of the pad lands supported in R0 ((405.7777, 779.934))
+PASS: After Stride I: sprint from the far side of the pad did not loop after arrival
+PASS: After Stride I: sprint from the far side of the pad stays in R0 after settling
+CLIMB hall x=86 toward -1 start=(86.0, 1198.0) end=(176.931, 1199.934) room=13 min_feet_y=1080.06823730469
+PASS: Hall attempt from (86.0, 1198.0) toward -1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (86.0, 1198.0) never clips into the mass
+CLIMB hall x=86 toward 1 start=(86.0, 1198.0) end=(1716.305, 265.3464) room=13 min_feet_y=1080.06811523438
+PASS: Hall attempt from (86.0, 1198.0) toward 1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (86.0, 1198.0) never clips into the mass
+CLIMB hall x=100 toward -1 start=(100.0, 1198.0) end=(176.9308, 1199.934) room=13 min_feet_y=1080.06689453125
+PASS: Hall attempt from (100.0, 1198.0) toward -1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (100.0, 1198.0) never clips into the mass
+CLIMB hall x=100 toward 1 start=(100.0, 1198.0) end=(1716.305, 265.3512) room=13 min_feet_y=1080.0673828125
+PASS: Hall attempt from (100.0, 1198.0) toward 1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (100.0, 1198.0) never clips into the mass
+CLIMB hall x=184 toward -1 start=(184.0, 1198.0) end=(176.931, 1199.934) room=13 min_feet_y=1080.0673828125
+PASS: Hall attempt from (184.0, 1198.0) toward -1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (184.0, 1198.0) never clips into the mass
+CLIMB hall x=184 toward 1 start=(184.0, 1198.0) end=(1707.925, 507.3631) room=13 min_feet_y=1080.07348632812
+PASS: Hall attempt from (184.0, 1198.0) toward 1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (184.0, 1198.0) never clips into the mass
+CLIMB hall x=282 toward -1 start=(282.0, 1198.0) end=(118.1651, 1195.568) room=13 min_feet_y=1080.06787109375
+PASS: Hall attempt from (282.0, 1198.0) toward -1 never rises above the lintel (min feet y 1080.1, limit 1080)
+PASS: Hall attempt from (282.0, 1198.0) never clips into the mass
+CLIMB hall x=282 toward 1 start=(282.0, 1198.0) end=(1687.925, 121.9259) room=13 min_feet_y=1198.0
+PASS: Hall attempt from (282.0, 1198.0) toward 1 never rises above the lintel (min feet y 1198.0, limit 1080)
+PASS: Hall attempt from (282.0, 1198.0) never clips into the mass
+CLIMB shelf (200,1160) under the lintel start=(240.0, 1158.0) end=(116.1653, 1175.071) room=13 min_feet_y=1080.07092285156
+PASS: Wall jumps from the first shelf inside the hall are capped by the lintel (1080.1)
+CLIMB under-pad cavity start=(14.5, 1298.0) end=(6.624, 1298.0) room=13 min_feet_y=1298.0
+PASS: Cavity under the pad stays a dead end (min 1298.0)
+CLIMB exterior face from (330.0, 1158.0) start=(330.0, 1158.0) end=(406.745, 126.5727) room=13 min_feet_y=116.062034606934
+PASS: Exterior face attempt never clips into the mass
+CLIMB exterior face from (400.0, 1158.0) start=(400.0, 1158.0) end=(406.745, 126.5727) room=13 min_feet_y=116.062034606934
+PASS: Exterior face attempt never clips into the mass
+CLIMB exterior face from (520.0, 1048.0) start=(520.0, 1048.0) end=(405.0453, 138.5841) room=13 min_feet_y=116.066162109375
+PASS: Exterior face attempt never clips into the mass
+RESIDUAL exterior face wall-climb min feet y (game-wide wall-jump rule): [116.062034606934, 116.062034606934, 116.066162109375]
+LEG 00 [P: (200.0, 1160.0), S: (400.0, 40.0)] -> [P: (500.0, 1050.0), S: (300.0, 40.0)] reached=true end=(722.612, 1049.933)
+LEG 01 [P: (500.0, 1050.0), S: (300.0, 40.0)] -> [P: (720.0, 940.0), S: (360.0, 40.0)] reached=true end=(972.6118, 939.9328)
+LEG 02 [P: (720.0, 940.0), S: (360.0, 40.0)] -> [P: (1010.0, 830.0), S: (300.0, 40.0)] reached=true end=(1222.612, 829.9328)
+LEG 03 [P: (1010.0, 830.0), S: (300.0, 40.0)] -> [P: (1220.0, 720.0), S: (400.0, 40.0)] reached=true end=(1482.612, 719.9328)
+LEG 04 [P: (1220.0, 720.0), S: (400.0, 40.0)] -> [P: (1400.0, 560.0), S: (360.0, 40.0)] reached=false end=(735.9963, 1299.98)
+LEG 05 [P: (1400.0, 560.0), S: (360.0, 40.0)] -> [P: (1186.667, 533.3333), S: (300.0, 40.0)] reached=true end=(1414.33, 533.2665)
+LEG 06 [P: (1186.667, 533.3333), S: (300.0, 40.0)] -> [P: (943.3333, 506.6667), S: (300.0, 40.0)] reached=true end=(1181.96, 506.6001)
+LEG 07 [P: (943.3333, 506.6667), S: (300.0, 40.0)] -> [P: (600.0, 480.0), S: (500.0, 40.0)] reached=false end=(910.7205, 386.2601)
+LEG 08 [P: (600.0, 480.0), S: (500.0, 40.0)] -> [P: (525.0, 460.0), S: (300.0, 40.0)] reached=false end=(611.3879, 329.9268)
+LEG 09 [P: (525.0, 460.0), S: (300.0, 40.0)] -> [P: (300.0, 440.0), S: (400.0, 40.0)] reached=true end=(310.0759, 439.9334)
+LEG 10 [P: (300.0, 440.0), S: (400.0, 40.0)] -> [P: (550.0, 420.0), S: (300.0, 40.0)] reached=true end=(672.6703, 419.933)
+LEG 11 [P: (550.0, 420.0), S: (300.0, 40.0)] -> [P: (740.0, 400.0), S: (320.0, 40.0)] reached=true end=(759.3179, 399.9336)
+ROUTE_LEGS_OK 9/12
+PASS: Grapple anchor (900,690) can still be tethered from shelf (720,940)
+CANAL: 173 checks, 0 failure(s), route legs ok 9

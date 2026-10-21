@@ -23,6 +23,18 @@ static var ORIGINAL_ROOMS_ENABLED = true
 const EXTENSIONS = {8: [[Rect2(1110,920,40,40),770.0]]}
 const FOOTINGS = {13: [Rect2(0,1240,360,60)]}
 const DOOR_SEAT_RANGE = 24.0
+## GN-01: the R6 -> R7 walk-through trigger only fires for feet y <= endpoint y + 8, but the shelf under the door is 20 px
+## lower, so a walking Kaze never opened the exit. A visible stone sill (20 px rise over 50 px) lifts the walkable top at the
+## door to the endpoint line. Polygon points are room pixels; "door" is the endpoint it seats.
+## The ramp rises 16 px in its first 22 px so the walk-through arming window (feet within 90..-8 px of the endpoint and at
+## least 16 px before it) is 17 px wide at run speed, not 4 px.
+const SILLS = {6: {"poly": [Vector2(2390,1116),Vector2(2390,1110),Vector2(2412,1094),Vector2(2440,1090),Vector2(2600,1090),Vector2(2600,1116)], "door": Vector2(2440,1090), "phase": 2020.0}}
+## GN-02: the legacy pits in R2, R4 and R5 are drawn as water whose surface sits 40 px ABOVE the floor lip they cut, so a
+## pit reads as a raised wall instead of a drop. The collider is unchanged; only the drawn water surface moves below the lip.
+static var PIT_WATER_ALIGNED = true
+## false (or --ld05-no-sill) restores the pre-GN-01 shelf: the R6 -> R7 exit does not open for a walking Kaze.
+static var SILLS_ENABLED = true
+const PIT_WATER_TOP = 1372.0
 
 static func roof_active(index:int) -> bool:
 	if not ROOF_ENABLED or "--ld05-open-top" in OS.get_cmdline_user_args(): return false
@@ -43,12 +55,32 @@ static func solid(w, rect:Rect2):
 
 static func build_roof(w):
 	w.boundary_rects.clear()
+	w.boundary_polys.clear()
 	if roof_active(w.room): solid(w,roof_rect(w))
+
+static func sill_active(index:int) -> bool:
+	return SILLS.has(index) and SILLS_ENABLED and not "--ld05-no-sill" in OS.get_cmdline_user_args()
+
+static func solid_poly(w, points:PackedVector2Array):
+	var body = StaticBody2D.new()
+	var shape = CollisionPolygon2D.new()
+	shape.polygon = points
+	body.add_child(shape);w.geometry.add_child(body)
+	var lo = points[0];var hi = points[0]
+	for p in points:
+		lo = Vector2(minf(lo.x,p.x),minf(lo.y,p.y));hi = Vector2(maxf(hi.x,p.x),maxf(hi.y,p.y))
+	w.boundary_rects.append(Rect2(lo,hi - lo))
+	w.boundary_polys.append(points)
 
 static func build(w):
 	# Seat extensions and footings: separate visible solids. They never edit or replace a platform rectangle.
 	for rect in EXTENSIONS.get(w.room,[]): solid(w,rect[0])
 	for rect in FOOTINGS.get(w.room,[]): solid(w,rect)
+	if sill_active(w.room): solid_poly(w,PackedVector2Array(SILLS[w.room].poly))
+
+static func pit_rect(rect:Rect2) -> Rect2:
+	if not PIT_WATER_ALIGNED or "--ld05-legacy-water" in OS.get_cmdline_user_args(): return rect
+	return Rect2(rect.position.x,PIT_WATER_TOP,rect.size.x,rect.end.y - PIT_WATER_TOP)
 
 static func tile_for(index:int) -> Vector2:
 	if index in [0,1,2,13,14,15]: return Vector2(512,0)
@@ -76,6 +108,7 @@ static func draw(w):
 		masonry(w,rect,Color(0.50,0.54,0.66))
 		w.draw_line(Vector2(rect.position.x,rect.position.y + 1),Vector2(rect.end.x,rect.position.y + 1),Color("30343e"),3)
 		w.draw_line(Vector2(rect.end.x,rect.position.y),rect.end,Color("30343e"),3)
+	if sill_active(w.room): draw_sill(w,SILLS[w.room])
 	if not roof_active(w.room): return
 	# R13: the gatehouse mass already owns x 0..296 of the top edge.
 	var x0 = 296.0 if w.room == 13 else 0.0
@@ -91,9 +124,21 @@ static func draw(w):
 		if x > x0: w.draw_line(Vector2(x,2),Vector2(x,COURSE_H - 6),Color(0.05,0.06,0.10,0.5),3)
 		x += 400.0
 
+static func draw_sill(w, sill:Dictionary):
+	var pts = PackedVector2Array(sill.poly)
+	var tile = tile_for(w.room)
+	var uvs = PackedVector2Array()
+	var size = Terrain.get_size()
+	for p in pts: uvs.append((tile + Vector2(fposmod(p.x - sill.phase,400.0),96.0 + (p.y - sill.door.y))) / size)
+	w.draw_polygon(pts,PackedColorArray([Color(0.72,0.75,0.8)]),uvs,Terrain)
+	# cap along the slope and the flat, then the shaded end face like every other shelf
+	for i in range(1,pts.size() - 2): w.draw_line(pts[i] + Vector2(0,2),pts[i + 1] + Vector2(0,2),Color("a9a58c"),5)
+	w.draw_line(pts[pts.size() - 2],pts[pts.size() - 1],Color("30343e"),3)
+
 ## Door seat: how far the DRAWN door must move so its feet rest on the walkable top it stands over.
 static func seat_offset(w, at:Vector2) -> float:
 	var size = w.room_size(w.room)
+	if sill_active(w.room) and SILLS[w.room].door == at: return 0.0 # the sill is the support: the door already stands on it
 	for r in w.platforms:
 		if r.position.x < 0 or r.position.x >= size.x: continue
 		if at.x - 48 < r.position.x or at.x + 48 > r.end.x: continue

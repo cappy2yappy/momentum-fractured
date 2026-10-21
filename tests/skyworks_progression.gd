@@ -50,7 +50,7 @@ func _run():
 	check(world.room == 11, "Foundry transition completes")
 	world.player.position = Vector2(1720,1300)
 	world.interact()
-	check(world.checkpoint_room == 11 and world.checkpoint_position == Vector2(1720,1298), "Foundry Refuge saves an exact recovery point")
+	check(world.checkpoint_room == 11 and world.checkpoint_position == Vector2(1720,1298), "Foundry Rest Station saves an exact recovery point")
 	check(not world.can_enter(12), "Electric relay locks the Keeper approach")
 	await shoot("electric", Vector2(2250,708))
 	check(world.can_enter(12), "Live Electric projectile opens the arena")

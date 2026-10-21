@@ -1,0 +1,166 @@
+{
+ "before_v3_0750e194": {
+  "consecutive_leg_diff": [
+   1.197,
+   0.735,
+   0.218
+  ],
+  "consecutive_full_diff": [
+   0.527,
+   0.365,
+   0.135
+  ],
+  "frame3_vs_frame2_leg": 0.218,
+  "frame3_vs_others_full": [
+   0.524,
+   0.411,
+   0.135
+  ],
+  "pairwise_full": [
+   [
+    0.0,
+    0.527,
+    0.477,
+    0.524
+   ],
+   [
+    0.527,
+    0.0,
+    0.365,
+    0.411
+   ],
+   [
+    0.477,
+    0.365,
+    0.0,
+    0.135
+   ],
+   [
+    0.524,
+    0.411,
+    0.135,
+    0.0
+   ]
+  ],
+  "analyze": {
+   "label": "before_v3_0750e194",
+   "frames": 4,
+   "distinct": 4,
+   "distinct_needed": 2,
+   "step_fraction": 1.0,
+   "max_leg_diff": 1.1965,
+   "mean_frame_diff": 0.342,
+   "mean_leg_diff": 0.7166,
+   "verdict": "TRUE_ANIMATION",
+   "reason": ""
+  },
+  "raw_rgba_mean_abs_diff_consecutive": [
+   7.977,
+   5.151,
+   2.388
+  ],
+  "identical_pairs": []
+ },
+ "after_v3_1": {
+  "consecutive_leg_diff": [
+   1.315,
+   0.77,
+   0.671
+  ],
+  "consecutive_full_diff": [
+   0.556,
+   0.356,
+   0.315
+  ],
+  "frame3_vs_frame2_leg": 0.671,
+  "frame3_vs_others_full": [
+   0.524,
+   0.446,
+   0.315
+  ],
+  "pairwise_full": [
+   [
+    0.0,
+    0.556,
+    0.498,
+    0.524
+   ],
+   [
+    0.556,
+    0.0,
+    0.356,
+    0.446
+   ],
+   [
+    0.498,
+    0.356,
+    0.0,
+    0.315
+   ],
+   [
+    0.524,
+    0.446,
+    0.315,
+    0.0
+   ]
+  ],
+  "analyze": {
+   "label": "after_v3_1",
+   "frames": 4,
+   "distinct": 4,
+   "distinct_needed": 2,
+   "step_fraction": 1.0,
+   "max_leg_diff": 1.3148,
+   "mean_frame_diff": 0.4092,
+   "mean_leg_diff": 0.9187,
+   "verdict": "TRUE_ANIMATION",
+   "reason": ""
+  },
+  "raw_rgba_mean_abs_diff_consecutive": [
+   7.816,
+   4.965,
+   5.109
+  ],
+  "identical_pairs": []
+ },
+ "thresholds": {
+  "POSE_T": 0.1,
+  "STEP_T": 0.06,
+  "GAIT_T": 0.3,
+  "note": "QA W3 hook gate: a 0.3 s window while the actor travels needs >=2 distinct poses and leg diff >=0.30; 90 percent of windows"
+ },
+ "qa_hook_results": {
+  "before_eb3cc0f": {
+   "true_motion_fraction": 0.875,
+   "moving_windows": 8,
+   "bad_windows": [
+    {
+     "t": 2.25,
+     "frame": 3,
+     "distinct": 1,
+     "leg": 0.0
+    }
+   ],
+   "duration_s": 2.88
+  },
+  "retimed_only": {
+   "true_motion_fraction": 0.889,
+   "moving_windows": 9,
+   "bad_windows": [
+    {
+     "t": 2.25,
+     "frame": 3,
+     "distinct": 1,
+     "leg": 0.0
+    }
+   ]
+  },
+  "after_retimed_plus_durations": {
+   "true_motion_fraction": 1.0,
+   "moving_windows": 8,
+   "bad_windows": [],
+   "duration_s": 3.23,
+   "descent_true_motion_fraction": 1.0
+  }
+ }
+}

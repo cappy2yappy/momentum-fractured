@@ -31,7 +31,7 @@ func interact(world) -> bool:
 		world.checkpoint_room = 11
 		world.checkpoint_position = Vector2(1720, 1298)
 		world.save_progress()
-		world.announce("Foundry Refuge restored. The Keeper waits east.", 5)
+		world.announce("Foundry Rest Station restored. The Keeper waits east.", 5)
 		return true
 	if world.room == 12 and world.player.position.distance_to(Vector2(2220, 1300)) < 120:
 		if not world.cleared_encounters.get("storm_keeper", false):
@@ -58,7 +58,7 @@ func draw_room(world):
 	var font = ThemeDB.fallback_font
 	if world.room == 11:
 		world.draw_circle(Vector2(1720, 1250), 24, Color("b4c895"))
-		world.draw_string(font, Vector2(1575, 1195), "FOUNDRY REFUGE • E", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("e6dcc4"))
+		world.draw_string(font, Vector2(1575, 1195), "FOUNDRY REST STATION • E", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("e6dcc4"))
 	elif world.room == 12:
 		world.draw_rect(Rect2(2170, 1120, 100, 180), Color("2e3c4f"))
 		world.draw_rect(Rect2(2190, 1150, 60, 110), Color("d7b477"), false, 4)

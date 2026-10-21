@@ -92,7 +92,7 @@ func begin(w,t:int,at:Vector2):
 	queue=[stem+"_enter"]
 	for i in (cfg.reduced_loops if still else cfg.loops): queue.append(stem+"_loop")
 	queue.append(stem+"_exit")
-	if not still: queue.append("stair_arrive_idle_settle")
+	if not still: queue.append("stair_descend_arrive_settle" if rise>0 else "stair_arrive_idle_settle")
 	planned=queue.duplicate()
 	plan()
 	phase="open";started+=1;last_result=""
@@ -125,7 +125,7 @@ func plan():
 		if name.ends_with("_loop"): loop_total=Library.motion_total(c)*s
 		for i in c.frames.size():
 			var rm:Vector2=c.root_motion[i] if c.root_motion.size()>i else Vector2.ZERO
-			if c.get("soles",[]).size()>i and c.soles[i]!=Vector2.INF and name!="stair_arrive_idle_settle":
+			if c.get("soles",[]).size()>i and c.soles[i]!=Vector2.INF and name!="stair_arrive_idle_settle" and name!="stair_descend_arrive_settle":
 				soles.append(p+Vector2(c.soles[i].x*heading,c.soles[i].y)*s)
 			for k in 4:
 				p+=Vector2(rm.x*heading,rm.y)*s/4.0;path.append(p)
@@ -249,7 +249,7 @@ func reduced_changed(w):
 		# Shorten what remains, freeze the camera at once; never restart a phase.
 		still=true;rate=Data.TR08.stair.reduced_rate
 		while queue.size()>1 and queue[0].ends_with("_loop"): queue.pop_front()
-		queue.erase("stair_arrive_idle_settle")
+		queue.erase("stair_arrive_idle_settle");queue.erase("stair_descend_arrive_settle")
 		kaze.rate=rate
 		close_in=minf(close_in,Data.TR08.stair.reduced_fade);close_out=minf(close_out,Data.TR08.stair.reduced_fade)
 		frame_camera(true)
@@ -391,16 +391,30 @@ func draw_front():
 					o.draw_line(Vector2(x,y+150),Vector2(x+1822,y+54),Color(rose,0.9),5,true)
 			o.draw_set_transform(Vector2.ZERO,0,Vector2.ONE)
 	# Bottom destination plate (the creator-accepted destination label).
-	var plate=smooth((elapsed-0.05)/0.3)
-	if close_start>=0: plate*=1.0-smooth((elapsed-close_start-close_in-close_out*0.4)/maxf(0.01,close_out*0.6))
+	var plate=plate_alpha()
 	var title=("ASCEND  >  " if rise<0 else "DESCEND  >  ")+destination
 	if plate>0.01: draw_plate(o,art,Vector2(410,663),plate,title,font,ivory,indigo)
-	# Honest status of the clip on screen, top bar.
-	if kaze.visible and a>0.05 and not kaze.clip.is_empty():
-		var text=kaze.status()
-		if kaze.is_standin(): text+="  ·  "+str(kaze.clip.provenance).trim_prefix("STAND-IN: ")
+	# Clip status, top bar: always for a true stand-in (interface hard rule), otherwise
+	# only with the developer flag (TR08 B3b: keeps the letterbox bars clean).
+	var text=top_label()
+	if not text.is_empty() and a>0.05:
 		o.draw_string(font,Vector2(24,38),text,HORIZONTAL_ALIGNMENT_LEFT,1232,15,Color(1.0,0.82,0.45,a) if kaze.is_standin() else Color(0.8,0.78,0.72,0.7*a))
-	if still and a>0.05: o.draw_string(font,Vector2(24,700),"REDUCED MOTION · FIXED FRAMING",HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color(0.85,0.8,0.7,a))
+	if still and host.debug_labels and a>0.05: o.draw_string(font,Vector2(24,700),"REDUCED MOTION · FIXED FRAMING",HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color(0.85,0.8,0.7,a))
+
+## Opacity of the bottom destination plate (creator-accepted label).
+func plate_alpha() -> float:
+	if phase=="": return 0.0
+	var plate=smooth((elapsed-0.05)/0.3)
+	if close_start>=0: plate*=1.0-smooth((elapsed-close_start-close_in-close_out*0.4)/maxf(0.01,close_out*0.6))
+	return plate
+
+## The top-bar clip line the stage draws now ("" when hidden).
+func top_label() -> String:
+	if phase=="" or not kaze.visible or kaze.clip.is_empty(): return ""
+	if not kaze.is_standin() and not host.debug_labels: return ""
+	var text=kaze.status()
+	if kaze.is_standin(): text+="  ·  "+str(kaze.clip.provenance).trim_prefix("STAND-IN: ")
+	return text
 
 ## Leading edge of the wind-cloth panels in authored (-x travel) screen space: in, cover
 ## the world at cover_at, clear; again in to cover at close_start+close_in, then clear.
