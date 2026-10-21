@@ -505,4 +505,3 @@ default_color = Color(0.6, 0.7, 0.85, 1)
 points = PackedVector2Array(-18,30,18,30,18,60,-18,60,-18,90,18,90,18,120,-18,120)
 
 width = 3.0
-

@@ -1,7 +1,9 @@
 # LD-TOOLS-02 — PM handoff
 
-**Branch:** `tools/ld-tools-02-room-creator`  
-**Base:** PR49 `00d74c36212e0493c242c25e15d4200ef094a49c`  
+**Branch:** `tools/ld-tools-02-room-creator`
+
+**Base:** PR49 `00d74c36212e0493c242c25e15d4200ef094a49c`
+
 **Status:** draft for review; default adoption and creator workflow acceptance pending. Do not merge.
 
 ## Delivered

@@ -1,0 +1,19 @@
+{
+  "task": "LD-TOOLS-02",
+  "branch": "tools/ld-tools-02-room-creator",
+  "base": "00d74c36212e0493c242c25e15d4200ef094a49c",
+  "implementation_commit": "07e8cc50d0c4c43921bf2fe5ae1adb5c5f7e2532",
+  "mode": "draft; default-off R18 only; no merge",
+  "pending": [
+    "Mouse-driven new-dock check and screenshot: Mac locked",
+    "Creator workflow/traversal acceptance",
+    "Separate integration with later world candidates"
+  ],
+  "verified": {
+    "headless_assertions": 3495,
+    "native_gameplay_assertions": 186,
+    "headless_editor_assertions": 14,
+    "native_editor_assertions": 14
+  },
+  "diagnostics": "See QA.md; historical add_platform preservation incompatibility and editor engine diagnostics are retained"
+}
