@@ -1,0 +1,10 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+GN06 fps=0 physics=60 time_scale=1.0
+PASS: R6 -> R7: dash across the sill requests R7 once and lands supported (105 of 105)
+PASS: R6 -> R7: plain walk still requests once
+PASS: Every automatic exit opens on a dash approach (156 of 156) []
+PASS: R6: standing on the lower floor inward of the sill never requests
+PASS: R6: walking away from the exit never requests
+GN06 cases=261
+GN06 DASH OFFSETS: 5 checks, 0 failure(s)
