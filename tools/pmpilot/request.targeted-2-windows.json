@@ -1,0 +1,7 @@
+{
+  "variants": "w3-targeted",
+  "purpose": "comparison",
+  "platforms": "windows",
+  "apple_silicon": false,
+  "quick": false
+}

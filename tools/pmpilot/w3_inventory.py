@@ -89,6 +89,8 @@ def art08_inventory(root, pack_records=None):
             in_pack = any(r in pack_records for r in (strip, strip + '.import', strip + '.remap'))
             if not in_pack:
                 problems.append('clip %s strip is not in the exported pack' % c['name'])
+            elif strip + '.import' not in pack_records:
+                problems.append('clip %s strip has no .import entry in the exported pack' % c['name'])
         if pack_records is not None and label == 'unfinished' and strip and any(r.startswith(strip) for r in pack_records):
             problems.append('unfinished clip %s has pack entries' % c['name'])
         row = dict(name=c['name'], provenance_label=label, manifest_status=raw, creator_approved=False, strip=strip,
@@ -187,6 +189,10 @@ def build(root, variant, head, tree, spec=None, launchers=None, pack_records=Non
             problems.append('ART-07 entries in the exported pack: %s' % in_pack[:3])
         has_art08 = rows is not None
         pack_art08 = [n for n in pack_records if n.startswith('assets/art08/')]
+        if has_art08 and 'assets/art08/MANIFEST.json' not in pack_records:
+            problems.append('assets/art08/MANIFEST.json is not in the exported pack')
+        if any(n.startswith('source_art/') for n in pack_records):
+            problems.append('source_art entries in the exported pack')
         if not has_art08 and pack_art08:
             problems.append('pack contains assets/art08 but source has no ART-08 manifest')
         if spec.get('expect_art08') is True and not has_art08:

@@ -759,6 +759,120 @@
       "build_gdignore": [
         "source_art/art08"
       ]
+    },
+    "w3-targeted": {
+      "label": "Wave 3 targeted candidate (candidate/wave3-targeted, PR74: TR-08 eb3cc0fa + LD-05 ground pass + ART-08 v3 descent + committed source_art exclusion)",
+      "kind": "combined",
+      "owner": "Coordinator",
+      "branch": "candidate/wave3-targeted",
+      "pull_request": 74,
+      "commit": "c2c3d958abe8c1eb77e2851d29c00544bef63e80",
+      "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+      "allowed_paths": [
+        ".gitignore",
+        "assets/art08/**",
+        "docs/**",
+        "docs/*.jpg.import",
+        "docs/*.png.import",
+        "docs/agent_handoffs/ART08_PM_REPORT.md",
+        "docs/agent_handoffs/LD05_PM_REPORT.md",
+        "docs/agent_handoffs/TR08_PM_REPORT.md",
+        "docs/art/art08/**",
+        "docs/ld05/**",
+        "docs/pm_pilot/level/**",
+        "docs/tr08/**",
+        "export_presets.cfg",
+        "scripts/*.gd.uid",
+        "scripts/cinematic_transitions.gd",
+        "scripts/room_boundary.gd",
+        "scripts/room_presentation.gd",
+        "scripts/skyworks_region.gd",
+        "scripts/tr08_*.gd",
+        "scripts/tr08_*.gd.uid",
+        "scripts/transition_pilot_data.gd",
+        "scripts/world.gd",
+        "scripts/world_expansion.gd",
+        "source_art/art08/**",
+        "source_art/art08/.gdignore",
+        "tests/capture_st04_copy.gd",
+        "tests/capture_tr08.gd",
+        "tests/capture_tr08.gd.uid",
+        "tests/cinematic_transitions.gd",
+        "tests/ld05_boundaries.gd",
+        "tests/ld05_boundaries.gd.uid",
+        "tests/level_geometry.gd",
+        "tests/native_cinematic_transitions.gd",
+        "tests/pm_canal_left_passage.gd",
+        "tests/skyworks_progression.gd",
+        "tests/st04_approved_copy.gd",
+        "tests/tr08_*.gd",
+        "tests/tr08_*.gd.uid",
+        "tests/world_expansion.gd",
+        "tools/art08/**",
+        "tools/ld05/**",
+        "tools/pm_pilot_art/__pycache__/*",
+        "tools/tr08_*.py",
+        "tools/verify_tr05_preservation.py"
+      ],
+      "allow_protected": [
+        "export_presets.cfg"
+      ],
+      "forbidden_pack_prefixes": [
+        "assets/art07/",
+        "tools/art07/"
+      ],
+      "regression": {
+        "baseline_verifiers": false,
+        "tr05": {
+          "suites": null,
+          "assertions": null
+        },
+        "tr06": {
+          "passes": null
+        },
+        "extra": [
+          {
+            "name": "w3-qa",
+            "argv": [
+              "{python}",
+              "{harness}/tools/pm_pilot_qa/run_w3.py",
+              "--sha",
+              "{head}",
+              "--label",
+              "build07-{variant}",
+              "--only",
+              "w3",
+              "--godot",
+              "{godot}"
+            ],
+            "timeout": 900,
+            "requires": "qa_harness",
+            "informational": true
+          }
+        ],
+        "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
+      },
+      "demos": "w3",
+      "tr08": true,
+      "expect_art08": true,
+      "wave3": true,
+      "preservation_waivers": [
+        "expansion build_room PR37 function exact"
+      ],
+      "required_pack_entries": [
+        "assets/art08/MANIFEST.json",
+        "assets/art08/kaze_*_strip.png.import",
+        "scripts/room_boundary.gd",
+        "scripts/tr08_embodied_cinematics.gd"
+      ],
+      "qa_status": "pending",
+      "expected_tree": "8eb0bb92b34e0405ab9cf689e4652a5f57f3ca53",
+      "require_gdignore": [
+        "source_art/art08"
+      ],
+      "require_export_exclude": [
+        "source_art/*"
+      ]
     }
   },
   "qa_harness": {

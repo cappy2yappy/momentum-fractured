@@ -227,6 +227,8 @@ def main():
     # Build-time packaging exclusions: a .gdignore in a source-art folder keeps it out of the project resource set (and so out of
     # the pack). Untracked, not part of the pinned tree, recorded in the manifest. The owner should commit it.
     overlays = []
+    for pat in spec.get('require_export_exclude', []):  # the export filter itself must cover it (committed in export_presets.cfg)
+        assert all(pat in line for line in (root / 'export_presets.cfg').read_text(encoding='utf-8').splitlines() if line.startswith('exclude_filter=')), 'export_presets.cfg exclude_filter must contain ' + pat
     for rel in spec.get('require_gdignore', []):  # the owner committed it: assert, never create
         tracked = git(root, 'ls-files', '--', rel + '/.gdignore').decode().strip()
         assert tracked == rel + '/.gdignore', 'Pinned source must TRACK %s/.gdignore (no build-time overlay in this mode)' % rel
