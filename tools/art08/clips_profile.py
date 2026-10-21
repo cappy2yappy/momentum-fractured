@@ -7,18 +7,19 @@ P_STAIR, RISE = 188.0, 43.0      # measured from transition_pilot_data STAGED_ST
 FIRST_STEP = 165.0
 FLOOR_STEP = 150.0
 
-def stair_plan(direction, ntreads=3, **kw):
+def stair_plan(direction, ntreads=3, pitch=None, rise=None, first=None, floor=None, after=130.0, **kw):
+    P_STAIR_, RISE_, FIRST_, FLOOR_ = (pitch or P_STAIR), (rise or RISE), (first or FIRST_STEP), (floor or FLOOR_STEP)
     """direction +1 ascend (Y decreases), -1 descend. Feet j<=0 on the floor at Y=0, treads j=1..ntreads, then top/bottom level."""
     X, Y = {}, {}
     sgn = -direction     # screen y: ascending is up (negative)
     for j in range(-6, 0 + 1):
-        X[j] = FLOOR_STEP * j; Y[j] = 0.0
+        X[j] = FLOOR_ * j; Y[j] = 0.0
     for j in range(1, ntreads + 1):
-        X[j] = FIRST_STEP + P_STAIR * (j - 1); Y[j] = sgn * (RISE * j + 3.0 * direction)
+        X[j] = FIRST_ + P_STAIR_ * (j - 1); Y[j] = sgn * (RISE_ * j + 3.0 * direction)
     top = ntreads + 1
-    X[top] = X[ntreads] + FIRST_STEP; Y[top] = sgn * RISE * (ntreads + 1)
+    X[top] = X[ntreads] + FIRST_; Y[top] = sgn * RISE_ * (ntreads + 1)
     for j in range(top + 1, top + 8):
-        X[j] = X[j - 1] + 130.0; Y[j] = Y[top]
+        X[j] = X[j - 1] + after; Y[j] = Y[top]
     return Plan(X, Y, **kw)
 
 def clip_times(kind):
