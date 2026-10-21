@@ -19,7 +19,7 @@ var hooks_dir=""
 var expect_reduced=false
 var expect_canal=false
 var out_dir=""
-const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","capture","hook_cinematic_completion","hook_canal_containment","hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined"]
+const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","capture","hook_cinematic_completion","hook_canal_containment","hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined","hook_w3_canal_stress"]
 
 func _init(): call_deferred("run")
 
@@ -609,7 +609,7 @@ func run():
 	await new_world()
 	if want("hook_cinematic_completion"): await run_hook("hook_cinematic_completion")
 	if want("hook_canal_containment"): await run_hook("hook_canal_containment")
-	for name in ["hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined"]:
+	for name in ["hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined","hook_w3_canal_stress"]:
 		if name in only: await new_world();await run_hook(name)
 	release_all()
 	if is_instance_valid(w): w.queue_free()

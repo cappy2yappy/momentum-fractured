@@ -177,6 +177,7 @@ def main():
             auto['canal_containment_hook'] = run_hook(a.godot, repo, out, 'hook_canal_containment', 'hook_canal_containment', canal, False, 900, str(hooks))
         auto['stair'] = run_hook(a.godot, repo, out, 'w3_stair_headless', 'hook_w3_stair', [], False, 900, str(hooks))
         auto['doorway'] = run_hook(a.godot, repo, out, 'w3_doorway_headless', 'hook_w3_doorway', [], False, 900, str(hooks))
+        auto['canal_stress'] = run_hook(a.godot, repo, out, 'w3_canal_stress_headless', 'hook_w3_canal_stress', [], False, 1500, str(hooks))
         auto['combined'] = run_hook(a.godot, repo, out, 'w3_combined_headless', 'hook_w3_combined', [], False, 900, str(hooks))
         if not a.no_reach:
             reach_args = ['--qa-reach-label=' + a.label] + (['--qa-reach-quick'] if a.quick else [])
