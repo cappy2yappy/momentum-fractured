@@ -76,7 +76,9 @@ def build_all():
     # arrival settle: continuation of the ascent after the exit clip (foot 4 = first top-level foot, held planted)
     st = C.stair_plan(+1, hold=(4,), flat_land=(5,), h_fn=lambda t, h: h + (166 - h) * gait.sm((t - 4.25) / 0.75), **STAIR_UP)
     st.X[5] = st.X[4] + 62.0; st.Y[5] = st.Y[4]
-    out["stair_arrive_idle_settle"] = dict(plan=st, times=[4.25 + 0.75 * (1 - (1 - k / 3.0) ** 2) for k in range(4)], settle=True)
+    # v3.1 (B3a): even spacing. The v2 ease-out put frames 2 and 3 only 0.083 apart in gait time, so frame 3 was a near hold of frame 2
+    # (leg silhouette difference 0.218, under the 0.30 gait gate). Even spacing gives every pair a real step (min leg difference 0.67).
+    out["stair_arrive_idle_settle"] = dict(plan=st, times=[4.25, 4.5, 4.75, 5.0], settle=True)
     # descent arrival settle (new clip, direction specific): foot 4 = first bottom-level foot held planted, foot 5 closes in
     sd = C.stair_plan(-1, hold=(4,), flat_land=(5,), h_fn=lambda t, h: h + (170 - h) * gait.sm((t - 4.25) / 0.75), **DOWN_GEOM, **STAIR_DOWN2)
     sd.X[5] = sd.X[4] + 52.0; sd.Y[5] = sd.Y[4]
