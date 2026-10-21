@@ -1,0 +1,7 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: Real E input entered authored timeline and TR-08 staircase
+PASS: Real-time captured playback completes one authorized transition
+PASS: Real-time playback restores Kaze control
+CIN-TOOLS-01 CAPTURE: 3 checks, 0 failure(s)
