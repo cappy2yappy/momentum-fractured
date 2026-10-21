@@ -391,16 +391,30 @@ func draw_front():
 					o.draw_line(Vector2(x,y+150),Vector2(x+1822,y+54),Color(rose,0.9),5,true)
 			o.draw_set_transform(Vector2.ZERO,0,Vector2.ONE)
 	# Bottom destination plate (the creator-accepted destination label).
-	var plate=smooth((elapsed-0.05)/0.3)
-	if close_start>=0: plate*=1.0-smooth((elapsed-close_start-close_in-close_out*0.4)/maxf(0.01,close_out*0.6))
+	var plate=plate_alpha()
 	var title=("ASCEND  >  " if rise<0 else "DESCEND  >  ")+destination
 	if plate>0.01: draw_plate(o,art,Vector2(410,663),plate,title,font,ivory,indigo)
-	# Honest status of the clip on screen, top bar.
-	if kaze.visible and a>0.05 and not kaze.clip.is_empty():
-		var text=kaze.status()
-		if kaze.is_standin(): text+="  ·  "+str(kaze.clip.provenance).trim_prefix("STAND-IN: ")
+	# Clip status, top bar: always for a true stand-in (interface hard rule), otherwise
+	# only with the developer flag (TR08 B3b: keeps the letterbox bars clean).
+	var text=top_label()
+	if not text.is_empty() and a>0.05:
 		o.draw_string(font,Vector2(24,38),text,HORIZONTAL_ALIGNMENT_LEFT,1232,15,Color(1.0,0.82,0.45,a) if kaze.is_standin() else Color(0.8,0.78,0.72,0.7*a))
-	if still and a>0.05: o.draw_string(font,Vector2(24,700),"REDUCED MOTION · FIXED FRAMING",HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color(0.85,0.8,0.7,a))
+	if still and host.debug_labels and a>0.05: o.draw_string(font,Vector2(24,700),"REDUCED MOTION · FIXED FRAMING",HORIZONTAL_ALIGNMENT_LEFT,-1,13,Color(0.85,0.8,0.7,a))
+
+## Opacity of the bottom destination plate (creator-accepted label).
+func plate_alpha() -> float:
+	if phase=="": return 0.0
+	var plate=smooth((elapsed-0.05)/0.3)
+	if close_start>=0: plate*=1.0-smooth((elapsed-close_start-close_in-close_out*0.4)/maxf(0.01,close_out*0.6))
+	return plate
+
+## The top-bar clip line the stage draws now ("" when hidden).
+func top_label() -> String:
+	if phase=="" or not kaze.visible or kaze.clip.is_empty(): return ""
+	if not kaze.is_standin() and not host.debug_labels: return ""
+	var text=kaze.status()
+	if kaze.is_standin(): text+="  ·  "+str(kaze.clip.provenance).trim_prefix("STAND-IN: ")
+	return text
 
 ## Leading edge of the wind-cloth panels in authored (-x travel) screen space: in, cover
 ## the world at cover_at, clear; again in to cover at close_start+close_in, then clear.

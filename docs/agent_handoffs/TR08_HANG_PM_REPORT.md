@@ -166,3 +166,113 @@ Tests with this binding:
 | `run_tr05_qa.py` | 25 suites, 0 failures |
 
 The Canal Return timeline is identical before and after (diffed).
+
+## Appendix C: B1, QA duration difference (Canal OUT/IN, stair about 0.12 s shorter)
+
+**Verdict: the Return timeline did not change. Nothing on the Return path, the Canal OUT path or the stair was restored, because nothing changed.**
+
+**Method.** `tests/tr08_timeline_dump.gd` drives real keys and records every physics tick from the key press until control returns: room, TR-08 phase, clip, frame index, stage/doorway feet, live feet, loader time and physics state. I ran it with `--fixed-fps` 30, 60 and 144 on:
+- the combined candidate tree `869a3aa`, extracted by `git archive` into a scratch directory;
+- `eb3cc0fa`;
+- the B3b head (this commit).
+
+The JSON is in `docs/tr08/evidence/timeline/` (`comb_*`, `cur_*`, `new_*`).
+
+**Result** (all at 30, 60 and 144 fps):
+
+| Sequence | `869a3aa` vs `eb3cc0fa` |
+| --- | --- |
+| Canal Return R0 -> R13 (E) | 182 ticks vs 182 ticks, **0 differing rows** |
+| Canal OUT R13 -> R0 (grounded) | 115 vs 115, 0 differing rows |
+| Stair R14 -> R17 | 173 vs 173, 0 differing rows |
+| Stair R17 -> R14 | 173 vs 173. 153 rows differ in stage feet positions only: ART-08's revised descent root motion, intended. Same ticks, phases and clip order apart from the new final settle clip. |
+
+The B3b head is identical to `eb3cc0fa` in all four sequences at all three rates.
+
+**Why QA saw 0.12 s.** QA's own logs report two numbers for **every** SHA, including `775ef9ff`, `308bbf10`, `cb1a59c` and `c2c3d95`:
+
+| Sequence | Headless | Software GL |
+| --- | --- | --- |
+| Canal OUT | 2.18 s | 2.07 s |
+| Canal IN | 2.38 s | 2.25 s |
+| Stair | 2.88 s | 2.75 s |
+
+The difference is headless versus rendered measurement within the same SHA, not a change between SHAs.
+
+Mechanism in `tools/pm_pilot_qa/hooks/w3_lib.gd` `drive()`:
+- the duration is the loop's own iteration count (`end/60`);
+- in rendered mode, every grab tick also awaits `process_frame` and `frame_post_draw`;
+- physics ticks keep advancing during those awaits but are not counted, so rendered durations come out short.
+
+A fix for QA would be to measure with `Engine.get_physics_frames()` deltas.
+
+## Appendix D: B3b, stair letterbox (3.9 percent vs the 2 percent gate)
+
+**Cause.** The stair stage drew a developer clip-status line (for example `ART-08 · stair_descend_arrive_settle`) inside the top letterbox bar. The reduced-motion note sat in the bottom bar. QA's detector counts uniform rows from each edge, so the text broke the top band.
+
+**Change** (`scripts/tr08_stair_stage.gd` `top_label()`, `plate_alpha()`; flag `--tr08-debug-labels` in `transition_pilot_data.gd`; `tr08_embodied_cinematics.gd` `debug_labels`):
+
+| Text | Shown when |
+| --- | --- |
+| Top-bar clip line for a **bound ART-08 clip** | Only with `--tr08-debug-labels` |
+| Top-bar line for a **true stand-in** (TR-08 stand-in, or an ART-08 clip with status `stand_in`) | Always, `STAND-IN, ANIMATION PENDING ...`, as the interface requires. No stair clip is a stand-in now, so normally nothing is shown. |
+| Reduced-motion note | Only with the flag |
+| Bottom destination plate (`ASCEND > ...` / `DESCEND > ...`) | Unchanged |
+
+The Canal doorway (both directions, including the creator-rated Return) is untouched. Its in-world stand-in tags for `door_turn_to_rear` and `door_turn_to_side` still show, because those clips are stand-ins.
+
+**New test `tests/tr08_stage_labels.gd`:**
+- Headless: **7 / 0.** No top line for bound clips in either direction (120 samples each). The plate is shown. A forced stand-in is labelled without the flag. The flag shows the ART-08 clip names.
+- Rendered (xvfb): **9 / 0.** Adds a pixel check: the top band is 56 uniform rows in every mid-climb sample.
+- Before the change, captures of the same frames measured 25 to 27 uniform rows (text at y about 30).
+
+**Tests at the B3b head:**
+
+| Suite | Result |
+| --- | --- |
+| `tr08_embodied_cinematics` | 226 / 0 |
+| `tr08_canal_hang_regression` | 53 / 0 |
+| issue #42, headless | 305 / 0 |
+| `native_cinematic_transitions` | 54 / 0 |
+| `pm_staged_stair_cinematic` | 50 / 0 |
+| `pm_canal_left_passage` | 56 / 0 |
+| `run_tr05_qa.py` | 1,617 / 0 / 0 |
+
+## Appendix E: ART-08 B3a ascent settle synced (coordinator cleared)
+
+**Source.** ART-08 head `98d639f32c34d862bbe6ecf1fb4a8c70e1736414` (PR #62), copied by the allowlist procedure: `assets/art08/kaze_stair_arrive_idle_settle_strip.png` and `assets/art08/MANIFEST.json`, byte-exact through `git show`. The existing `.import` was kept because Art did not change it.
+
+**Hashes.**
+- New strip sha256 `0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164`, as Art stated.
+- All 12 shipped strips match their manifest SHA256 and bytes.
+- `docs/tr08/ART08_BINDING.json` is updated (source commit, manifest hash, changed file).
+
+**What changed in the clip.** The manifest row now has per-frame durations [0.12, 0.16, 0.20, 0.20] (0.68 s, was 4 frames at 12 fps = 0.33 s) and new root motion. No code change was needed: the library reads `durations`.
+
+**Per-tick timelines** (`tests/tr08_timeline_dump.gd`; `--fixed-fps` 30, 60 and 144; JSON in `docs/tr08/evidence/timeline/b3a_*`):
+
+| Sequence | vs `869a3aa` | vs the previous head `958709f9` |
+| --- | --- | --- |
+| Canal Return R0 -> R13 | 182 vs 182 ticks, **0 differing rows** | 0 differing rows |
+| Canal OUT R13 -> R0 | 115 vs 115, **0 differing rows** | 0 differing rows |
+| Stair descent R17 -> R14 | | 0 differing rows |
+| Stair ascent R14 -> R17 | | **Changes by design.** Identical through tick 118 (open, enter, two loops, exit). Diverges at tick 119, where the new settle starts. Clip order is unchanged. |
+
+**New ascent E-to-control duration: 3.23 s** (194 ticks at 60 Hz, same at 30 and 144 fps fixed-step). It was 2.88 s (173 ticks), so +0.35 s. Other ways of measuring the same run:
+- `tr08_embodied_cinematics`: 3.25 s from the E key frame.
+- Stage clock: within the 2.5 to 4.0 s bound.
+
+I recaptured the ascent under xvfb and inspected it (`docs/tr08/captures/SHEET_stair_14-17.jpg`): Kaze steps onto the top landing and comes to rest, the top bar is clean, and the bottom plate shows.
+
+**Tests with B3a bound:**
+
+| Suite | Result |
+| --- | --- |
+| `tr08_embodied_cinematics` | 226 / 0 |
+| `tr08_stage_labels` | 7 / 0 |
+| `tr08_canal_hang_regression` | 53 / 0 |
+| issue #42, headless | 305 / 0 |
+| `native_cinematic_transitions` | 54 / 0 |
+| `pm_staged_stair_cinematic` | 50 / 0 |
+| `pm_canal_left_passage` | 56 / 0 |
+| `run_tr05_qa.py` | 1,617 / 0 / 0 |
