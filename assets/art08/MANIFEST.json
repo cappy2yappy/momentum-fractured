@@ -1,6 +1,6 @@
 {
  "schema": "art08/1",
- "interface_version": "v2",
+ "interface_version": "v3",
  "cell": [
   480,
   724
@@ -219,23 +219,23 @@
    ],
    "fps": 16,
    "loop": false,
-   "facing": "right",
+   "facing": "right (drawn facing right; flip_h for the leftward R17 to R14 descent, which restores the ribbon side of the approved stair_down_key)",
    "root_motion_px_per_frame": [
     [
-     37.5,
+     23.75,
      0.0
     ],
     [
-     41.25,
-     8.69
+     23.75,
+     5.86
     ],
     [
-     41.25,
-     11.31
+     23.75,
+     7.64
     ],
     [
-     41.25,
-     11.31
+     23.75,
+     7.64
     ]
    ],
    "contact_frames": [
@@ -252,12 +252,12 @@
      3
     ]
    },
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "status": "candidate",
-   "note": "floor foot to first tread down",
+   "note": "REVISED v2 (ART-08 descent fix): floor foot to first tread down, toe-first landing, upright spine; pitch 100 px, drop 30 px per tread",
    "alias_of": null,
-   "sha256": "dcc736f27327ddfbc20a5592c3f7ad939b8169d2119a29f6e30ab17d8057bfa4",
-   "bytes": 280408
+   "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+   "bytes": 245849
   },
   {
    "name": "stair_descend_loop",
@@ -274,39 +274,39 @@
    ],
    "fps": 14,
    "loop": true,
-   "facing": "right",
+   "facing": "right (flip_h for leftward)",
    "root_motion_px_per_frame": [
     [
-     41.25,
-     8.69
+     23.75,
+     5.86
     ],
     [
-     47.0,
-     9.34
+     25.0,
+     6.52
     ],
     [
-     47.0,
-     12.16
+     25.0,
+     8.48
     ],
     [
-     47.0,
-     12.16
+     25.0,
+     8.48
     ],
     [
-     47.0,
-     9.34
+     25.0,
+     6.52
     ],
     [
-     47.0,
-     9.34
+     25.0,
+     6.52
     ],
     [
-     47.0,
-     12.16
+     25.0,
+     8.48
     ],
     [
-     47.0,
-     12.16
+     25.0,
+     8.48
     ]
    ],
    "contact_frames": [
@@ -329,12 +329,12 @@
      7
     ]
    },
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "status": "candidate",
-   "note": "heel-first, upright counter-lean",
+   "note": "REVISED v2: 8 frames = 2 treads, toe-first landings, upright torso, forearm counter-swing; pitch 100 px, drop 30 px per tread",
    "alias_of": null,
-   "sha256": "59672fd0bdc5d36ef751a0cff162acc0fd6d5ddb89aa4667dd230889c6c5bdd4",
-   "bytes": 514934
+   "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+   "bytes": 455284
   },
   {
    "name": "stair_descend_exit",
@@ -351,23 +351,23 @@
    ],
    "fps": 16,
    "loop": false,
-   "facing": "right",
+   "facing": "right (flip_h for leftward)",
    "root_motion_px_per_frame": [
     [
-     47.0,
-     9.34
+     25.0,
+     6.52
     ],
     [
-     41.25,
-     9.99
+     23.75,
+     7.17
     ],
     [
-     41.25,
-     13.01
+     23.75,
+     9.33
     ],
     [
-     41.25,
-     13.01
+     23.75,
+     9.33
     ]
    ],
    "contact_frames": [
@@ -384,12 +384,67 @@
      3
     ]
    },
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "status": "candidate",
-   "note": "last tread down to level floor",
+   "note": "REVISED v2: last tread down to level floor",
    "alias_of": null,
-   "sha256": "e4bc0cf67443d1c95cecaccb7cdf4d402234ba16b0932891945c3b91ed00b96d",
-   "bytes": 295686
+   "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+   "bytes": 263838
+  },
+  {
+   "name": "stair_descend_arrive_settle",
+   "strip": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+   "hframes": 4,
+   "vframes": 1,
+   "cell": [
+    480,
+    724
+   ],
+   "pivot": [
+    240,
+    600
+   ],
+   "fps": 12,
+   "loop": false,
+   "facing": "right (flip_h for leftward)",
+   "root_motion_px_per_frame": [
+    [
+     32.42,
+     7.17
+    ],
+    [
+     13.0,
+     0.0
+    ],
+    [
+     4.33,
+     0.0
+    ],
+    [
+     0.0,
+     0.0
+    ]
+   ],
+   "contact_frames": [
+    3
+   ],
+   "plant_frames": {
+    "near_foot": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "far_foot": [
+     3
+    ]
+   },
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "status": "candidate",
+   "note": "NEW v2 clip: descent-specific arrival settle (the shared stair_arrive_idle_settle belongs to the ascent and rises 8.7 px); Transition should queue this after stair_descend_exit",
+   "alias_of": null,
+   "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+   "bytes": 262630
   },
   {
    "name": "stair_arrive_idle_settle",
