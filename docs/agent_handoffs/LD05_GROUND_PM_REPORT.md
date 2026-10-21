@@ -1,5 +1,7 @@
 # LD05 ground negative space report (Priority 3, LEVEL MASTA)
 
+Historical report. LD-07 resumed this branch at `fa299cff` on 2026-10-21. See [current audit](../ld07/ROOM_AUDIT.md) and [current QA](../ld07/QA_REPORT.md) for independently re-run Mac results, explicit unresolved GN-06 evidence, and the unapproved roof disposition. Earlier results below are retained as provenance.
+
 Author: LEVEL MASTA. Model: Claude Sonnet 5.5 (claude-sonnet-5-5). Environment: Linux cloud container, Godot 4.6.1 stable, headless real-key probes and tests, xvfb + llvmpipe software GL for captures. No GPU, macOS, Windows or human playtest.
 
 Branch `feature/ld05-intentional-world-boundaries` (draft PR #63, base `candidate/pm-pilot-combined`). Starting head `658ed34c2d182dd650c1d22b8fa6b3a6c43ca837`. Work commit SHA: see section 8 (filled from `gh api .../commits/<branch>` after the push). No merge, no main update.

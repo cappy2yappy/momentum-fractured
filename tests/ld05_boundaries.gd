@@ -203,7 +203,10 @@ func run():
 		await wait_ticks(1)
 		if w.room == 7 and w.transition <= 0: break
 	await wait_ticks(40)
-	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.x - 227.1) < 3.0,"R6->R7 arrival in R7 at (%.1f,%.1f), unchanged" % [w.player.position.x,w.player.position.y])
+	# Carried velocity and the frame in which input is released change the final
+	# stopping x across platforms. Check the real landing contract, not one run's x.
+	var arrival7 = w.cinematic_transitions.arrival_position(w,w.cinematic_transitions.endpoint(w,7,6))
+	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.y - 1090.0) < 1.5 and w.player.position.x >= arrival7.x and w.player.position.x <= 286.0,"R6->R7 stops on the reciprocal shelf, inward of arrival (%.1f,%.1f)" % [w.player.position.x,w.player.position.y])
 	# return trip: R7 left door to R6 lands on the shelf beside the ramp, not inside it
 	await place(7,Vector2(300,1088))
 	var ret0 = w.cinematic_transitions.request_count

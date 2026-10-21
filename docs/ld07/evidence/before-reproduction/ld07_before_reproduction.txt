@@ -1,0 +1,9 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+BEFORE R6 feet=(2585.993, 1109.998) requests=0
+PASS: BEFORE DEFECT R6 walking reaches boundary without opening R7
+BEFORE R8 feet=(1130.0, 1299.938)
+PASS: BEFORE DEFECT R8 drop at x1130 falls past the unsupported door landing y920
+BEFORE R13 feet=(14.01955, 1299.945)
+PASS: BEFORE DEFECT R13 walking enters the 60px under-pad nook
+LD07 BEFORE REPRODUCTION: 3 checks, 0 failure(s)

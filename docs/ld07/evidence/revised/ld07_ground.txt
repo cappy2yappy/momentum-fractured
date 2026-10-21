@@ -1,0 +1,159 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: open-top R0 approved route/platforms retained
+PASS: open-top R0 platform records have runtime collision shapes
+PASS: open-top R0 floor has only its intentional pit intervals: []
+PASS: open-top R1 approved route/platforms retained
+PASS: open-top R1 platform records have runtime collision shapes
+PASS: open-top R1 floor has only its intentional pit intervals: []
+PASS: open-top R2 approved route/platforms retained
+PASS: open-top R2 platform records have runtime collision shapes
+PASS: open-top R2 floor has only its intentional pit intervals: [[640.0, 930.0], [1350.0, 1680.0], [2200.0, 2380.0]]
+PASS: open-top R3 approved route/platforms retained
+PASS: open-top R3 platform records have runtime collision shapes
+PASS: open-top R3 floor has only its intentional pit intervals: []
+PASS: open-top R4 approved route/platforms retained
+PASS: open-top R4 platform records have runtime collision shapes
+PASS: open-top R4 floor has only its intentional pit intervals: [[450.0, 1000.0], [1280.0, 2050.0]]
+PASS: open-top R5 approved route/platforms retained
+PASS: open-top R5 platform records have runtime collision shapes
+PASS: open-top R5 floor has only its intentional pit intervals: [[500.0, 780.0], [1500.0, 1850.0]]
+PASS: open-top R6 approved route/platforms retained
+PASS: open-top R6 platform records have runtime collision shapes
+PASS: open-top R6 floor has only its intentional pit intervals: []
+PASS: open-top R7 approved route/platforms retained
+PASS: open-top R7 platform records have runtime collision shapes
+PASS: open-top R7 floor has only its intentional pit intervals: []
+PASS: open-top R8 approved route/platforms retained
+PASS: open-top R8 platform records have runtime collision shapes
+PASS: open-top R8 floor has only its intentional pit intervals: []
+PASS: open-top R9 approved route/platforms retained
+PASS: open-top R9 platform records have runtime collision shapes
+PASS: open-top R9 floor has only its intentional pit intervals: []
+PASS: open-top R10 approved route/platforms retained
+PASS: open-top R10 platform records have runtime collision shapes
+PASS: open-top R10 floor has only its intentional pit intervals: []
+PASS: open-top R11 approved route/platforms retained
+PASS: open-top R11 platform records have runtime collision shapes
+PASS: open-top R11 floor has only its intentional pit intervals: []
+PASS: open-top R12 approved route/platforms retained
+PASS: open-top R12 platform records have runtime collision shapes
+PASS: open-top R12 floor has only its intentional pit intervals: []
+PASS: open-top R13 approved route/platforms retained
+PASS: open-top R13 platform records have runtime collision shapes
+PASS: open-top R13 floor has only its intentional pit intervals: []
+PASS: open-top R14 approved route/platforms retained
+PASS: open-top R14 platform records have runtime collision shapes
+PASS: open-top R14 floor has only its intentional pit intervals: []
+PASS: open-top R15 approved route/platforms retained
+PASS: open-top R15 platform records have runtime collision shapes
+PASS: open-top R15 floor has only its intentional pit intervals: []
+PASS: open-top R16 approved route/platforms retained
+PASS: open-top R16 platform records have runtime collision shapes
+PASS: open-top R16 floor has only its intentional pit intervals: []
+PASS: open-top R17 approved route/platforms retained
+PASS: open-top R17 platform records have runtime collision shapes
+PASS: open-top R17 floor has only its intentional pit intervals: []
+PASS: open-top R18 approved route/platforms retained
+PASS: open-top R18 platform records have runtime collision shapes
+PASS: open-top R18 floor has only its intentional pit intervals: []
+PASS: open-top R19 approved route/platforms retained
+PASS: open-top R19 platform records have runtime collision shapes
+PASS: open-top R19 floor has only its intentional pit intervals: []
+PASS: open-top R20 approved route/platforms retained
+PASS: open-top R20 platform records have runtime collision shapes
+PASS: open-top R20 floor has only its intentional pit intervals: []
+PASS: open-top R8 jump-height drop lands on extension at (1130,920)
+PASS: open-top R8 stop/reverse crosses the shelf seam without a fall
+PASS: open-top R8 normal jump returns to the shelf
+PASS: open-top R13 quay blocks entry into the former 60px nook at x=360
+PASS: open-top R13 reverse away from plinth remains free
+PASS: open-top R13 quay jump over plinth reaches the automatic Canal exit
+PASS: open-top R6 stop before sill stays supported
+PASS: open-top R6 reversal before doorway does not trigger
+PASS: open-top R6 resume walks up sill and arrives supported in R7
+PASS: open-top Stride I collected by walking at (450,440)
+ITEM_RETURN open-top room=0 feet=(590.0, 779.998)
+PASS: open-top uninterrupted Stride pickup -> shelf descent -> Canal exit
+PASS: open-top repaired-landing fixture writes disposable save
+PASS: open-top save reload/respawn retains earned kit on Canal landing
+PASS: open-top restored Canal landing still exits automatically
+PASS: roof-on R0 approved route/platforms retained
+PASS: roof-on R0 platform records have runtime collision shapes
+PASS: roof-on R0 floor has only its intentional pit intervals: []
+PASS: roof-on R1 approved route/platforms retained
+PASS: roof-on R1 platform records have runtime collision shapes
+PASS: roof-on R1 floor has only its intentional pit intervals: []
+PASS: roof-on R2 approved route/platforms retained
+PASS: roof-on R2 platform records have runtime collision shapes
+PASS: roof-on R2 floor has only its intentional pit intervals: [[640.0, 930.0], [1350.0, 1680.0], [2200.0, 2380.0]]
+PASS: roof-on R3 approved route/platforms retained
+PASS: roof-on R3 platform records have runtime collision shapes
+PASS: roof-on R3 floor has only its intentional pit intervals: []
+PASS: roof-on R4 approved route/platforms retained
+PASS: roof-on R4 platform records have runtime collision shapes
+PASS: roof-on R4 floor has only its intentional pit intervals: [[450.0, 1000.0], [1280.0, 2050.0]]
+PASS: roof-on R5 approved route/platforms retained
+PASS: roof-on R5 platform records have runtime collision shapes
+PASS: roof-on R5 floor has only its intentional pit intervals: [[500.0, 780.0], [1500.0, 1850.0]]
+PASS: roof-on R6 approved route/platforms retained
+PASS: roof-on R6 platform records have runtime collision shapes
+PASS: roof-on R6 floor has only its intentional pit intervals: []
+PASS: roof-on R7 approved route/platforms retained
+PASS: roof-on R7 platform records have runtime collision shapes
+PASS: roof-on R7 floor has only its intentional pit intervals: []
+PASS: roof-on R8 approved route/platforms retained
+PASS: roof-on R8 platform records have runtime collision shapes
+PASS: roof-on R8 floor has only its intentional pit intervals: []
+PASS: roof-on R9 approved route/platforms retained
+PASS: roof-on R9 platform records have runtime collision shapes
+PASS: roof-on R9 floor has only its intentional pit intervals: []
+PASS: roof-on R10 approved route/platforms retained
+PASS: roof-on R10 platform records have runtime collision shapes
+PASS: roof-on R10 floor has only its intentional pit intervals: []
+PASS: roof-on R11 approved route/platforms retained
+PASS: roof-on R11 platform records have runtime collision shapes
+PASS: roof-on R11 floor has only its intentional pit intervals: []
+PASS: roof-on R12 approved route/platforms retained
+PASS: roof-on R12 platform records have runtime collision shapes
+PASS: roof-on R12 floor has only its intentional pit intervals: []
+PASS: roof-on R13 approved route/platforms retained
+PASS: roof-on R13 platform records have runtime collision shapes
+PASS: roof-on R13 floor has only its intentional pit intervals: []
+PASS: roof-on R14 approved route/platforms retained
+PASS: roof-on R14 platform records have runtime collision shapes
+PASS: roof-on R14 floor has only its intentional pit intervals: []
+PASS: roof-on R15 approved route/platforms retained
+PASS: roof-on R15 platform records have runtime collision shapes
+PASS: roof-on R15 floor has only its intentional pit intervals: []
+PASS: roof-on R16 approved route/platforms retained
+PASS: roof-on R16 platform records have runtime collision shapes
+PASS: roof-on R16 floor has only its intentional pit intervals: []
+PASS: roof-on R17 approved route/platforms retained
+PASS: roof-on R17 platform records have runtime collision shapes
+PASS: roof-on R17 floor has only its intentional pit intervals: []
+PASS: roof-on R18 approved route/platforms retained
+PASS: roof-on R18 platform records have runtime collision shapes
+PASS: roof-on R18 floor has only its intentional pit intervals: []
+PASS: roof-on R19 approved route/platforms retained
+PASS: roof-on R19 platform records have runtime collision shapes
+PASS: roof-on R19 floor has only its intentional pit intervals: []
+PASS: roof-on R20 approved route/platforms retained
+PASS: roof-on R20 platform records have runtime collision shapes
+PASS: roof-on R20 floor has only its intentional pit intervals: []
+PASS: roof-on R8 jump-height drop lands on extension at (1130,920)
+PASS: roof-on R8 stop/reverse crosses the shelf seam without a fall
+PASS: roof-on R8 normal jump returns to the shelf
+PASS: roof-on R13 quay blocks entry into the former 60px nook at x=360
+PASS: roof-on R13 reverse away from plinth remains free
+PASS: roof-on R13 quay jump over plinth reaches the automatic Canal exit
+PASS: roof-on R6 stop before sill stays supported
+PASS: roof-on R6 reversal before doorway does not trigger
+PASS: roof-on R6 resume walks up sill and arrives supported in R7
+PASS: roof-on Stride I collected by walking at (450,440)
+ITEM_RETURN roof-on room=0 feet=(590.0, 779.998)
+PASS: roof-on uninterrupted Stride pickup -> shelf descent -> Canal exit
+PASS: roof-on repaired-landing fixture writes disposable save
+PASS: roof-on save reload/respawn retains earned kit on Canal landing
+PASS: roof-on restored Canal landing still exits automatically
+LD07 GROUND: 154 checks, 0 failure(s)

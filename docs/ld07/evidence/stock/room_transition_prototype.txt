@@ -1,0 +1,96 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Primary interaction remains E
+PASS: Room 0 bounded style selection
+PASS: Room 1 bounded style selection
+PASS: Room 2 bounded style selection
+PASS: Room 3 bounded style selection
+PASS: Room 4 bounded style selection
+PASS: Room 5 bounded style selection
+PASS: Room 6 bounded style selection
+PASS: Room 7 bounded style selection
+PASS: Room 8 bounded style selection
+PASS: Room 9 bounded style selection
+PASS: Room 10 bounded style selection
+PASS: Room 11 bounded style selection
+PASS: Room 12 bounded style selection
+PASS: Room 13 bounded style selection
+PASS: Room 14 bounded style selection
+PASS: Room 15 bounded style selection
+PASS: Room 16 bounded style selection
+PASS: Room 17 bounded style selection
+PASS: Room 18 bounded style selection
+PASS: Room 19 bounded style selection
+PASS: Room 20 bounded style selection
+PASS: R14 -> R13 rejects offset (85.0, 0.0)
+PASS: R14 -> R13 rejects offset (0.0, -85.0)
+PASS: R14 -> R13 rejects offset (86.0, 0.0)
+PASS: R14 -> R13 rejects missing windstep with feedback
+PASS: R14 -> R13 accepts inside original radius and preserves explicit arrival
+PASS: Repeated input cannot restart or change departure
+PASS: Departure uses bounded wind-fold accent
+PASS: Exact reciprocal destination/feet coordinates
+PASS: Transition ends with physics restored and player visible
+PASS: Arrival is above existing supported dry landing
+PASS: Transit preserves checkpoint
+PASS: Reciprocal return also enforces windstep
+PASS: Reciprocal E interaction returns to pilot room
+PASS: Return keeps exact original arrival
+PASS: Presentation leaves collision platform set unchanged
+PASS: Death resets existing clock/pending target and restores physics
+PASS: R14 -> R9 rejects offset (85.0, 0.0)
+PASS: R14 -> R9 rejects offset (0.0, -85.0)
+PASS: R14 -> R9 rejects offset (86.0, 0.0)
+PASS: R14 -> R9 rejects missing relay with feedback
+PASS: R14 -> R9 accepts inside original radius and preserves explicit arrival
+PASS: Repeated input cannot restart or change departure
+PASS: Departure uses bounded wind-fold accent
+PASS: Exact reciprocal destination/feet coordinates
+PASS: Transition ends with physics restored and player visible
+PASS: Arrival is above existing supported dry landing
+PASS: Transit preserves checkpoint
+PASS: Reciprocal return also enforces relay
+PASS: Reciprocal E interaction returns to pilot room
+PASS: Return keeps exact original arrival
+PASS: Presentation leaves collision platform set unchanged
+PASS: Death resets existing clock/pending target and restores physics
+PASS: R14 -> R17 rejects offset (85.0, 0.0)
+PASS: R14 -> R17 rejects offset (0.0, -85.0)
+PASS: R14 -> R17 rejects offset (86.0, 0.0)
+PASS: R14 -> R17 rejects missing climb with feedback
+PASS: R14 -> R17 accepts inside original radius and preserves explicit arrival
+PASS: Repeated input cannot restart or change departure
+PASS: Departure uses bounded wind-fold accent
+PASS: Exact reciprocal destination/feet coordinates
+PASS: Transition ends with physics restored and player visible
+PASS: Arrival is above existing supported dry landing
+PASS: Transit preserves checkpoint
+PASS: Reciprocal return also enforces climb
+PASS: Reciprocal E interaction returns to pilot room
+PASS: Return keeps exact original arrival
+PASS: Presentation leaves collision platform set unchanged
+PASS: Death resets existing clock/pending target and restores physics
+PASS: R15 -> R2 rejects offset (85.0, 0.0)
+PASS: R15 -> R2 rejects offset (0.0, -85.0)
+PASS: R15 -> R2 rejects offset (86.0, 0.0)
+PASS: R15 -> R2 rejects missing sluice with feedback
+PASS: R15 -> R2 accepts inside original radius and preserves explicit arrival
+PASS: Repeated input cannot restart or change departure
+PASS: Departure uses bounded wind-fold accent
+PASS: Exact reciprocal destination/feet coordinates
+PASS: Transition ends with physics restored and player visible
+PASS: Arrival is above existing supported dry landing
+PASS: Transit preserves checkpoint
+PASS: Reciprocal return also enforces sluice
+PASS: Reciprocal E interaction returns to pilot room
+PASS: Return keeps exact original arrival
+PASS: Presentation leaves collision platform set unchanged
+PASS: Death resets existing clock/pending target and restores physics
+PASS: Prototype fixture saves using unchanged save API
+PASS: Reload preserves ability and checkpoint state
+PASS: Loading does not rewrite save payload
+PASS: Actual E key activates pilot via normal world input path
+PASS: Held E does not bounce back after timer completes; physics restored
+PASS: Unchanged original exit rejects outside 105px radius
+PASS: Unchanged original room transition remains functional
+ROOM TRANSITION PROTOTYPE: 0 failure(s)
