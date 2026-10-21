@@ -237,3 +237,42 @@ The Canal doorway (both directions, including the creator-rated Return) is untou
 | `pm_staged_stair_cinematic` | 50 / 0 |
 | `pm_canal_left_passage` | 56 / 0 |
 | `run_tr05_qa.py` | 1,617 / 0 / 0 |
+
+## Appendix E: ART-08 B3a ascent settle synced (coordinator cleared)
+
+**Source.** ART-08 head `98d639f32c34d862bbe6ecf1fb4a8c70e1736414` (PR #62), copied by the allowlist procedure: `assets/art08/kaze_stair_arrive_idle_settle_strip.png` and `assets/art08/MANIFEST.json`, byte-exact through `git show`. The existing `.import` was kept because Art did not change it.
+
+**Hashes.**
+- New strip sha256 `0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164`, as Art stated.
+- All 12 shipped strips match their manifest SHA256 and bytes.
+- `docs/tr08/ART08_BINDING.json` is updated (source commit, manifest hash, changed file).
+
+**What changed in the clip.** The manifest row now has per-frame durations [0.12, 0.16, 0.20, 0.20] (0.68 s, was 4 frames at 12 fps = 0.33 s) and new root motion. No code change was needed: the library reads `durations`.
+
+**Per-tick timelines** (`tests/tr08_timeline_dump.gd`; `--fixed-fps` 30, 60 and 144; JSON in `docs/tr08/evidence/timeline/b3a_*`):
+
+| Sequence | vs `869a3aa` | vs the previous head `958709f9` |
+| --- | --- | --- |
+| Canal Return R0 -> R13 | 182 vs 182 ticks, **0 differing rows** | 0 differing rows |
+| Canal OUT R13 -> R0 | 115 vs 115, **0 differing rows** | 0 differing rows |
+| Stair descent R17 -> R14 | | 0 differing rows |
+| Stair ascent R14 -> R17 | | **Changes by design.** Identical through tick 118 (open, enter, two loops, exit). Diverges at tick 119, where the new settle starts. Clip order is unchanged. |
+
+**New ascent E-to-control duration: 3.23 s** (194 ticks at 60 Hz, same at 30 and 144 fps fixed-step). It was 2.88 s (173 ticks), so +0.35 s. Other ways of measuring the same run:
+- `tr08_embodied_cinematics`: 3.25 s from the E key frame.
+- Stage clock: within the 2.5 to 4.0 s bound.
+
+I recaptured the ascent under xvfb and inspected it (`docs/tr08/captures/SHEET_stair_14-17.jpg`): Kaze steps onto the top landing and comes to rest, the top bar is clean, and the bottom plate shows.
+
+**Tests with B3a bound:**
+
+| Suite | Result |
+| --- | --- |
+| `tr08_embodied_cinematics` | 226 / 0 |
+| `tr08_stage_labels` | 7 / 0 |
+| `tr08_canal_hang_regression` | 53 / 0 |
+| issue #42, headless | 305 / 0 |
+| `native_cinematic_transitions` | 54 / 0 |
+| `pm_staged_stair_cinematic` | 50 / 0 |
+| `pm_canal_left_passage` | 56 / 0 |
+| `run_tr05_qa.py` | 1,617 / 0 / 0 |

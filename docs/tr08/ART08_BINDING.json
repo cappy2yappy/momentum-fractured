@@ -1,16 +1,13 @@
 {
  "source_branch": "art/art08-embodied-cinematic-animation",
- "source_commit": "81679650bcd0ff8ca6f4b6373b6554027264038a",
- "previous_binding_commit": "61b321944f44df573a0d9d5d231d3d358823ef0d",
+ "source_commit": "98d639f32c34d862bbe6ecf1fb4a8c70e1736414",
+ "previous_binding_commit": "81679650bcd0ff8ca6f4b6373b6554027264038a",
  "interface_version": "v3",
  "copied_by": "TR-08 explicit allowlist (git show, byte-exact)",
  "manifest": "assets/art08/MANIFEST.json",
- "manifest_sha256": "70e3c7eb481ae583230d07bcef8f624a72ac8b857f72941219267674f469b1ff",
+ "manifest_sha256": "9d69cf58269c8853452c823ec482408a2538019c6ebbdc244dbf62b57e5b304c",
  "changed_since_previous": [
-  "assets/art08/kaze_stair_descend_enter_strip.png",
-  "assets/art08/kaze_stair_descend_loop_strip.png",
-  "assets/art08/kaze_stair_descend_exit_strip.png",
-  "assets/art08/kaze_stair_descend_arrive_settle_strip.png"
+  "assets/art08/kaze_stair_arrive_idle_settle_strip.png"
  ],
  "not_copied": [
   "door_turn_to_side (status unfinished, no file)"
@@ -116,8 +113,8 @@
   },
   {
    "path": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
-   "sha256": "0487d6da45313126c55c1efff4e74adbfbbfaee23e553c23a6f192fd3d0bd9ef",
-   "bytes": 291001,
+   "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+   "bytes": 289377,
    "manifest_match": true,
    "clips": [
     "stair_arrive_idle_settle"
