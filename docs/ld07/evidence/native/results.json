@@ -1,0 +1,70 @@
+[
+  {
+    "suite": "ld07_ground",
+    "exit": 0,
+    "seconds": 5.9,
+    "passes": 154,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-372b9cc90a384e62907ac49301dc9005",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/ld07_ground-engine.log",
+      "--script",
+      "res://tests/ld07_ground.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv/ld07_ground-save.json",
+      "--test"
+    ]
+  },
+  {
+    "suite": "automatic_passage_reliability",
+    "exit": 0,
+    "seconds": 38.93,
+    "passes": 305,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-5e57ab871b504367935ba6ff0594104d",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/automatic_passage_reliability-engine.log",
+      "--script",
+      "res://tests/automatic_passage_reliability.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv/automatic_passage_reliability-save.json"
+    ]
+  },
+  {
+    "suite": "canal_geometry",
+    "exit": 0,
+    "seconds": 27.25,
+    "passes": 173,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-82935be57bda410b9003aa8a9daebd4d",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/canal_geometry-engine.log",
+      "--script",
+      "res://tests/canal_geometry.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/native/project-xvd8m1vv/canal_geometry-save.json",
+      "--test"
+    ]
+  }
+]

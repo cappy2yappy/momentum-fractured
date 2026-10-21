@@ -1,0 +1,212 @@
+[
+  {
+    "name": "R00_overview",
+    "room": 0,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R01_overview",
+    "room": 1,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R02_overview",
+    "room": 2,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R03_overview",
+    "room": 3,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R04_overview",
+    "room": 4,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R05_overview",
+    "room": 5,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R06_overview",
+    "room": 6,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R07_overview",
+    "room": 7,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R08_overview",
+    "room": 8,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R09_overview",
+    "room": 9,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R10_overview",
+    "room": 10,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R11_overview",
+    "room": 11,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R12_overview",
+    "room": 12,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R13_overview",
+    "room": 13,
+    "center": [
+      900.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R14_overview",
+    "room": 14,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R15_overview",
+    "room": 15,
+    "center": [
+      1100.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R16_overview",
+    "room": 16,
+    "center": [
+      1000.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R17_overview",
+    "room": 17,
+    "center": [
+      900.0,
+      1080.0
+    ],
+    "zoom": 0.30092592592592593,
+    "overlay": true
+  },
+  {
+    "name": "R18_overview",
+    "room": 18,
+    "center": [
+      1300.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R19_overview",
+    "room": 19,
+    "center": [
+      1200.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  },
+  {
+    "name": "R20_overview",
+    "room": 20,
+    "center": [
+      1100.0,
+      720.0
+    ],
+    "zoom": 0.4513888888888889,
+    "overlay": true
+  }
+]

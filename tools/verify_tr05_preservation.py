@@ -33,7 +33,18 @@ for name in ['configure_input','can_enter','world_edges','room_size','left_exit_
  check(function(new,name)==function(old,name),name+' PR37 function exact')
 new=(r/'scripts/world_expansion.gd').read_text();old=original('scripts/world_expansion.gd').decode().replace('\r\n','\n')
 for name in ['portals','allowed','regional','build_room','update']:
- check(function(new,name)==function(old,name),'expansion '+name+' PR37 function exact')
+ current=function(new,name)
+ if name=='build_room':
+  # PR58 added this exact, room-scoped enclosure hook. Keep the PR37
+  # comparison for every other byte, and independently lock its implementation.
+  hook='\tif index == 13: CanalGatehouse.build(w)\n'
+  check(current.count(hook)==1,'single PR58 R13 gatehouse build hook')
+  current=current.replace(hook,'')
+ check(current==function(old,name),'expansion '+name+' PR37 function exact after scoped PR58 hook')
+pilot='0656766d8fe13c702a4808b1d25ddd0855d8922c'
+gatehouse=subprocess.check_output(['git','show',pilot+':scripts/canal_gatehouse.gd'],cwd=r)
+check((r/'scripts/canal_gatehouse.gd').read_bytes()==gatehouse,'Canal gatehouse implementation PR58 exact')
+check(new.count('const CanalGatehouse = preload("res://scripts/canal_gatehouse.gd")\n')==1,'single exact PR58 gatehouse preload')
 check('transition = 0.65' in (r/'scripts/world.gd').read_text(),'0.65s loader retained')
 check('if transition < 0.32 and pending_room >= 0:' in (r/'scripts/world.gd').read_text(),'existing hidden-swap threshold retained')
 print('TR05 PRESERVATION:',len(failures),'failure(s)');raise SystemExit(bool(failures))

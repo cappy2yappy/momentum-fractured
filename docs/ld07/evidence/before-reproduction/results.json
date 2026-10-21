@@ -1,0 +1,26 @@
+[
+  {
+    "suite": "ld07_before_reproduction",
+    "exit": 0,
+    "seconds": 1.03,
+    "passes": 3,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-b457ee8836b54aeda3b14690684f0924",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/before-reproduction/project-1eex_yzl",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/before-reproduction/ld07_before_reproduction-engine.log",
+      "--script",
+      "res://tests/ld07_before_reproduction.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/before-reproduction/project-1eex_yzl/ld07_before_reproduction-save.json",
+      "--test"
+    ]
+  }
+]

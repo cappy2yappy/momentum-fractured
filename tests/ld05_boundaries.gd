@@ -190,6 +190,9 @@ func run():
 	for r in w.platforms: sig6.append([r.position.x,r.position.y,r.size.x,r.size.y])
 	check(JSON.stringify(sig6) == JSON.stringify(base["6"]),"R6 platform list unchanged by the sill (approved geometry untouched)")
 	check(w.cinematic_transitions.endpoint(w,6,7).at == Vector2(2440,1090),"R6->R7 endpoint still (2440,1090)")
+	# Pin the Stride I upgrade (+5% speed, persisted in the save) so the slide after arrival does not depend on the profile:
+	# level 0 gives x 223.4, level 1 gives x 227.1 (same arrival, longer run-out). Found by QA B2 on a clean profile.
+	w.player.speed_upgrade_level = 0
 	await place(6,Vector2(2250,1108))
 	var open6 = w.cinematic_transitions.request_count
 	key(KEY_D,true)
@@ -203,7 +206,11 @@ func run():
 		await wait_ticks(1)
 		if w.room == 7 and w.transition <= 0: break
 	await wait_ticks(40)
-	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.x - 227.1) < 3.0,"R6->R7 arrival in R7 at (%.1f,%.1f), unchanged" % [w.player.position.x,w.player.position.y])
+	# Carried velocity and the frame in which input is released change the final
+	# stopping x across platforms. Check the real landing contract, not one run's x.
+	var arrival7 = w.cinematic_transitions.arrival_position(w,w.cinematic_transitions.endpoint(w,7,6))
+	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.y - 1090.0) < 1.5 and w.player.position.x >= arrival7.x and w.player.position.x <= 286.0,"R6->R7 stops on the reciprocal shelf, inward of arrival (%.1f,%.1f)" % [w.player.position.x,w.player.position.y])
+	check(w.room == 7 and w.player.is_on_floor() and absf(w.player.position.x - 223.4) < 1.5,"R6->R7 arrival in R7 at (%.1f,%.1f), Stride level 0 expects x 223.4 +/- 1.5" % [w.player.position.x,w.player.position.y])
 	# return trip: R7 left door to R6 lands on the shelf beside the ramp, not inside it
 	await place(7,Vector2(300,1088))
 	var ret0 = w.cinematic_transitions.request_count

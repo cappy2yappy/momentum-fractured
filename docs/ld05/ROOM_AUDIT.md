@@ -1,5 +1,7 @@
 # LD-05 room-by-room audit (21 rooms)
 
+Historical comparison audit. Its roof-on "fixed" labels do not establish creator approval. [LD-07's current ground audit](../ld07/ROOM_AUDIT.md) supersedes acceptance dispositions while preserving both roof modes and the evidence below.
+
 Base candidate 49ae3efe. Data: `docs/ld05/room_audit.json`, probes `tools/ld05/room_probe.gd` and `tools/ld05/gate_probe.gd`, builder `tools/ld05/build_audit.py`. All movement probes use real InputEventKey input and real physics (no position or velocity writes except the fixture start pose); `player.gd` is untouched.
 
 Classes: **legit** legitimate vertical exploration (keep), **escape** unintended escape (fix), **misleading** misleading platform, **dead** dead reachable space, **approach** unsupported approach.

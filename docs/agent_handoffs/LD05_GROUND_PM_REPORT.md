@@ -1,5 +1,7 @@
 # LD05 ground negative space report (Priority 3, LEVEL MASTA)
 
+Historical report. LD-07 resumed this branch at `fa299cff` on 2026-10-21. See [current audit](../ld07/ROOM_AUDIT.md) and [current QA](../ld07/QA_REPORT.md) for independently re-run Mac results, explicit unresolved GN-06 evidence, and the unapproved roof disposition. Earlier results below are retained as provenance.
+
 Author: LEVEL MASTA. Model: Claude Sonnet 5.5 (claude-sonnet-5-5). Environment: Linux cloud container, Godot 4.6.1 stable, headless real-key probes and tests, xvfb + llvmpipe software GL for captures. No GPU, macOS, Windows or human playtest.
 
 Branch `feature/ld05-intentional-world-boundaries` (draft PR #63, base `candidate/pm-pilot-combined`). Starting head `658ed34c2d182dd650c1d22b8fa6b3a6c43ca837`. Work commit SHA: see section 8 (filled from `gh api .../commits/<branch>` after the push). No merge, no main update.
@@ -65,3 +67,9 @@ Raw data: `docs/ld05/raw/` (`door_walk_*.json`, `ground_probe_gates_*.json.gz`, 
 ## 8. SHAs and verification
 
 Filled after push, see the delivery message and `gh api repos/cappy2yappy/momentum-fractured/commits/feature/ld05-intentional-world-boundaries`.
+
+## 9. B2 follow-up: R6 to R7 arrival x 223.4 vs 227.1 (QA on c2c3d958)
+
+Cause: not TR-08 and not the integration. The arrival pose is identical (feet y 1089.9, on the floor, 107 px inside the R7 door, clear of the door frame whose right edge is x 198); only the run-out after arrival differs. The persisted Stride I upgrade (`speed_upgrade_level`, +5% speed, unlocked at R13 (450,440) and stored in the save) lengthens the slide: level 0 comes to rest at x 223.4, level 1 at x 227.1. My development profile had the upgrade saved, so the expectation 227.1 was written under it; QA's clean profile has level 0. Evidence, same probe on each tree (real keys, 10-tick trace after arrival): fa299cf LD-05 alone and c2c3d95 candidate both give 227.1 with my profile and 223.4 with an empty HOME; fps 30, 60, 90, 144 and the reduced or plain flags give the same numbers. 869a3aa and eb3cc0f (TR-08 alone) predate the sill and never open the R6 exit on foot (GN-01), so they have no arrival to compare. Same landing rule everywhere: no TR-08 effect.
+
+Fix on the test only (no geometry or movement change): `tests/ld05_boundaries.gd` now pins `speed_upgrade_level = 0` before the R6 walk and expects x 223.4 with tolerance 1.5 px. The tolerance is smaller than the old 3.0 on purpose: the run-out is deterministic (223.4 at 30, 60, 90 and 144 fps), so 1.5 px still passes any profile-independent run, and it fails on the 3.7 px Stride difference (so an unpinned profile change is caught) and on any real shift of the arrival or landing rule (door offset 107 px, floor contact, y 1089.9 are asserted by the neighbouring checks). Results with the new test: LD-05 tree clean profile 171 / 0 and candidate c2c3d95 default and clean profile 171 / 0. After rebasing onto LD-07 (b5cbc6a), which had already loosened the same check to a range (x >= arrival, <= 286), both checks are kept (the range and the pinned 223.4 +/- 1.5): 172 / 0 on a clean profile.
