@@ -1,0 +1,60 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+DOORWALK R0->R1 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 1, "pos": [223.4, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R0->R13 depth_door top=780.0 at.y=780.0 fired=0 arrival={ "room": 13, "pos": [184.0, 1200.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R1->R0 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 0, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R1->R2 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 2, "pos": [223.4, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R2->R1 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 1, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R2->R3 horizontal_walk top=850.0 at.y=850.0 fired=35 arrival={ "room": 3, "pos": [223.4, 849.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R2->R15 depth_door top=1120.0 at.y=1120.0 fired=0 arrival={ "room": 15, "pos": [184.0, 500.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R3->R2 horizontal_walk top=850.0 at.y=850.0 fired=29 arrival={ "room": 2, "pos": [2336.6, 849.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R3->R4 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 4, "pos": [223.4, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R3->R9 depth_door top=790.0 at.y=790.0 fired=-1 arrival={  }
+DOORWALK R4->R3 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 3, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R4->R5 horizontal_walk top=1080.0 at.y=1080.0 fired=38 arrival={ "room": 5, "pos": [223.4, 1079.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R5->R4 horizontal_walk top=1080.0 at.y=1080.0 fired=26 arrival={ "room": 4, "pos": [2336.6, 1079.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R5->R6 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 6, "pos": [223.4, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R5->R17 depth_door top=930.0 at.y=930.0 fired=0 arrival={ "room": 17, "pos": [184.0, 1900.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R6->R5 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 5, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R6->R7 horizontal_walk top=1110.0 at.y=1090.0 fired=-1 arrival={  }
+DOORWALK R7->R6 horizontal_walk top=1090.0 at.y=1090.0 fired=29 arrival={ "room": 6, "pos": [2336.6, 1109.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R7->R8 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 8, "pos": [223.4, 1089.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R8->R7 horizontal_walk top=1090.0 at.y=1090.0 fired=30 arrival={ "room": 7, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R8->R9 horizontal_walk top=830.0 at.y=830.0 fired=35 arrival={ "room": 9, "pos": [223.4, 829.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R8->R16 depth_door top=1110.0 at.y=1110.0 fired=0 arrival={ "room": 16, "pos": [1816.0, 760.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R8->R18 depth_door top=920.0 at.y=920.0 fired=0 arrival={ "room": 18, "pos": [1200.0, 1180.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R8->R12 depth_door top=740.0 at.y=740.0 fired=-1 arrival={  }
+DOORWALK R9->R8 horizontal_walk top=830.0 at.y=830.0 fired=38 arrival={ "room": 8, "pos": [2336.6, 829.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R9->R10 horizontal_walk top=810.0 at.y=830.0 fired=38 arrival={ "room": 10, "pos": [223.4, 829.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R9->R14 depth_door top=1040.0 at.y=1040.0 fired=0 arrival={ "room": 14, "pos": [2376.0, 830.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R9->R3 depth_door top=620.0 at.y=620.0 fired=-1 arrival={  }
+DOORWALK R10->R9 horizontal_walk top=830.0 at.y=830.0 fired=29 arrival={ "room": 9, "pos": [2336.6, 809.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R10->R11 horizontal_walk top=760.0 at.y=760.0 fired=32 arrival={ "room": 11, "pos": [223.4, 759.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R11->R10 horizontal_walk top=760.0 at.y=760.0 fired=30 arrival={ "room": 10, "pos": [2336.6, 759.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R11->R12 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 12, "pos": [223.4, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R11->R19 depth_door top=980.0 at.y=980.0 fired=0 arrival={ "room": 19, "pos": [2216.0, 980.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R12->R11 horizontal_walk top=1300.0 at.y=1300.0 fired=38 arrival={ "room": 11, "pos": [2336.6, 1299.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R12->R8 depth_door top=830.0 at.y=830.0 fired=-1 arrival={  }
+DOORWALK R13->R0 horizontal_walk top=1200.0 at.y=1200.0 fired=38 arrival={ "room": 0, "pos": [550.6, 779.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R13->R14 horizontal_walk top=560.0 at.y=560.0 fired=38 arrival={ "room": 14, "pos": [223.4, 1099.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R13->R20 wind_fold top=400.0 at.y=400.0 fired=0 arrival={ "room": 20, "pos": [600.0, 520.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R14->R13 horizontal_walk top=1100.0 at.y=1100.0 fired=38 arrival={ "room": 13, "pos": [1576.6, 559.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R14->R9 horizontal_walk top=830.0 at.y=830.0 fired=38 arrival={ "room": 9, "pos": [1139.4, 1039.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R14->R17 stair_up top=480.0 at.y=480.0 fired=0 arrival={ "room": 17, "pos": [1680.0, 1300.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R15->R2 horizontal_walk top=500.0 at.y=500.0 fired=38 arrival={ "room": 2, "pos": [430.6, 1119.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R15->R16 horizontal_walk top=1120.0 at.y=1120.0 fired=38 arrival={ "room": 16, "pos": [223.4, 1119.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R16->R15 horizontal_walk top=1120.0 at.y=1120.0 fired=38 arrival={ "room": 15, "pos": [1976.6, 1119.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R16->R8 horizontal_walk top=760.0 at.y=760.0 fired=38 arrival={ "room": 8, "pos": [589.4, 1109.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R16->R18 depth_door top=430.0 at.y=430.0 fired=0 arrival={ "room": 18, "pos": [184.0, 1000.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R17->R14 stair_down top=1300.0 at.y=1300.0 fired=0 arrival={ "room": 14, "pos": [1450.0, 480.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R17->R5 horizontal_walk top=1900.0 at.y=1900.0 fired=38 arrival={ "room": 5, "pos": [2200.6, 929.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R17->R20 depth_door top=420.0 at.y=420.0 fired=0 arrival={ "room": 20, "pos": [184.0, 760.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R18->R16 horizontal_walk top=1000.0 at.y=1000.0 fired=38 arrival={ "room": 16, "pos": [960.6, 429.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R18->R8 depth_door top=1180.0 at.y=1180.0 fired=0 arrival={ "room": 8, "pos": [1090.0, 920.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R18->R19 horizontal_walk top=760.0 at.y=760.0 fired=38 arrival={ "room": 19, "pos": [223.4, 759.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R19->R18 horizontal_walk top=760.0 at.y=760.0 fired=38 arrival={ "room": 18, "pos": [2336.6, 759.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R19->R11 horizontal_walk top=980.0 at.y=980.0 fired=38 arrival={ "room": 11, "pos": [929.4, 979.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R19->R20 depth_door top=480.0 at.y=480.0 fired=0 arrival={ "room": 20, "pos": [2016.0, 1120.0], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R20->R17 horizontal_walk top=760.0 at.y=760.0 fired=38 arrival={ "room": 17, "pos": [1460.6, 419.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R20->R19 horizontal_walk top=1120.0 at.y=1120.0 fired=38 arrival={ "room": 19, "pos": [1839.4, 479.9], "on_floor": true, "inside_solid": false, "hp": 3 }
+DOORWALK R20->R13 wind_fold top=520.0 at.y=520.0 fired=0 arrival={ "room": 13, "pos": [900.0, 400.0], "on_floor": true, "inside_solid": false, "hp": 3 }

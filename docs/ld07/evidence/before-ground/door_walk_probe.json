@@ -1,0 +1,1475 @@
+[
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1299.9
+      ],
+      "room": 1
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 0,
+    "support_top": 1300.0,
+    "target": 1
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        184.0,
+        1200.0
+      ],
+      "room": 13
+    },
+    "at": [
+      590.0,
+      780.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      590.0,
+      780.0
+    ],
+    "room": 0,
+    "support_top": 780.0,
+    "target": 13
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 0
+    },
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1299.9
+    ],
+    "room": 1,
+    "support_top": 1300.0,
+    "target": 0
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1299.9
+      ],
+      "room": 2
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 1,
+    "support_top": 1300.0,
+    "target": 2
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 1
+    },
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1299.9
+    ],
+    "room": 2,
+    "support_top": 1300.0,
+    "target": 1
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        849.9
+      ],
+      "room": 3
+    },
+    "at": [
+      2440.0,
+      850.0
+    ],
+    "fired_tick": 35,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      849.9
+    ],
+    "room": 2,
+    "support_top": 850.0,
+    "target": 3
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        184.0,
+        500.0
+      ],
+      "room": 15
+    },
+    "at": [
+      470.0,
+      1120.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      470.0,
+      1120.0
+    ],
+    "room": 2,
+    "support_top": 1120.0,
+    "target": 15
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        849.9
+      ],
+      "room": 2
+    },
+    "at": [
+      120.0,
+      850.0
+    ],
+    "fired_tick": 29,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      849.9
+    ],
+    "room": 3,
+    "support_top": 850.0,
+    "target": 2
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1299.9
+      ],
+      "room": 4
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 3,
+    "support_top": 1300.0,
+    "target": 4
+  },
+  {
+    "arrival": {
+
+    },
+    "at": [
+      2250.0,
+      790.0
+    ],
+    "fired_tick": -1,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      2250.0,
+      790.0
+    ],
+    "room": 3,
+    "support_top": 790.0,
+    "target": 9
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 3
+    },
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1299.9
+    ],
+    "room": 4,
+    "support_top": 1300.0,
+    "target": 3
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1079.9
+      ],
+      "room": 5
+    },
+    "at": [
+      2440.0,
+      1080.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1079.9
+    ],
+    "room": 4,
+    "support_top": 1080.0,
+    "target": 5
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1079.9
+      ],
+      "room": 4
+    },
+    "at": [
+      120.0,
+      1080.0
+    ],
+    "fired_tick": 26,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1079.9
+    ],
+    "room": 5,
+    "support_top": 1080.0,
+    "target": 4
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1299.9
+      ],
+      "room": 6
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 5,
+    "support_top": 1300.0,
+    "target": 6
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        184.0,
+        1900.0
+      ],
+      "room": 17
+    },
+    "at": [
+      2240.0,
+      930.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      2240.0,
+      930.0
+    ],
+    "room": 5,
+    "support_top": 930.0,
+    "target": 17
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 5
+    },
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1299.9
+    ],
+    "room": 6,
+    "support_top": 1300.0,
+    "target": 5
+  },
+  {
+    "arrival": {
+
+    },
+    "at": [
+      2440.0,
+      1090.0
+    ],
+    "fired_tick": -1,
+    "mode": "horizontal_walk",
+    "offset": 20.0,
+    "player_end": [
+      2586.0,
+      1110.0
+    ],
+    "room": 6,
+    "support_top": 1110.0,
+    "target": 7
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1109.9
+      ],
+      "room": 6
+    },
+    "at": [
+      120.0,
+      1090.0
+    ],
+    "fired_tick": 29,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1089.9
+    ],
+    "room": 7,
+    "support_top": 1090.0,
+    "target": 6
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1089.9
+      ],
+      "room": 8
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 7,
+    "support_top": 1300.0,
+    "target": 8
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 7
+    },
+    "at": [
+      120.0,
+      1090.0
+    ],
+    "fired_tick": 30,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      117.5,
+      1089.9
+    ],
+    "room": 8,
+    "support_top": 1090.0,
+    "target": 7
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        829.9
+      ],
+      "room": 9
+    },
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "fired_tick": 35,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      829.9
+    ],
+    "room": 8,
+    "support_top": 830.0,
+    "target": 9
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1816.0,
+        760.0
+      ],
+      "room": 16
+    },
+    "at": [
+      550.0,
+      1110.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      550.0,
+      1110.0
+    ],
+    "room": 8,
+    "support_top": 1110.0,
+    "target": 16
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1200.0,
+        1180.0
+      ],
+      "room": 18
+    },
+    "at": [
+      1090.0,
+      920.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1090.0,
+      920.0
+    ],
+    "room": 8,
+    "support_top": 920.0,
+    "target": 18
+  },
+  {
+    "arrival": {
+
+    },
+    "at": [
+      1470.0,
+      740.0
+    ],
+    "fired_tick": -1,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1470.0,
+      740.0
+    ],
+    "room": 8,
+    "support_top": 740.0,
+    "target": 12
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        829.9
+      ],
+      "room": 8
+    },
+    "at": [
+      120.0,
+      830.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      829.9
+    ],
+    "room": 9,
+    "support_top": 830.0,
+    "target": 8
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        829.9
+      ],
+      "room": 10
+    },
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": -20.0,
+    "player_end": [
+      2445.8,
+      809.9
+    ],
+    "room": 9,
+    "support_top": 810.0,
+    "target": 10
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2376.0,
+        830.0
+      ],
+      "room": 14
+    },
+    "at": [
+      1100.0,
+      1040.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1100.0,
+      1040.0
+    ],
+    "room": 9,
+    "support_top": 1040.0,
+    "target": 14
+  },
+  {
+    "arrival": {
+
+    },
+    "at": [
+      160.0,
+      620.0
+    ],
+    "fired_tick": -1,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      160.0,
+      620.0
+    ],
+    "room": 9,
+    "support_top": 620.0,
+    "target": 3
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        809.9
+      ],
+      "room": 9
+    },
+    "at": [
+      120.0,
+      830.0
+    ],
+    "fired_tick": 29,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      829.9
+    ],
+    "room": 10,
+    "support_top": 830.0,
+    "target": 9
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        759.9
+      ],
+      "room": 11
+    },
+    "at": [
+      2440.0,
+      760.0
+    ],
+    "fired_tick": 32,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      759.9
+    ],
+    "room": 10,
+    "support_top": 760.0,
+    "target": 11
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        759.9
+      ],
+      "room": 10
+    },
+    "at": [
+      120.0,
+      760.0
+    ],
+    "fired_tick": 30,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      117.5,
+      759.9
+    ],
+    "room": 11,
+    "support_top": 760.0,
+    "target": 10
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1299.9
+      ],
+      "room": 12
+    },
+    "at": [
+      2440.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      1299.9
+    ],
+    "room": 11,
+    "support_top": 1300.0,
+    "target": 12
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2216.0,
+        980.0
+      ],
+      "room": 19
+    },
+    "at": [
+      890.0,
+      980.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      890.0,
+      980.0
+    ],
+    "room": 11,
+    "support_top": 980.0,
+    "target": 19
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        1299.9
+      ],
+      "room": 11
+    },
+    "at": [
+      120.0,
+      1300.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1299.9
+    ],
+    "room": 12,
+    "support_top": 1300.0,
+    "target": 11
+  },
+  {
+    "arrival": {
+
+    },
+    "at": [
+      220.0,
+      830.0
+    ],
+    "fired_tick": -1,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      220.0,
+      830.0
+    ],
+    "room": 12,
+    "support_top": 830.0,
+    "target": 8
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        550.6,
+        779.9
+      ],
+      "room": 0
+    },
+    "at": [
+      120.0,
+      1200.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1199.9
+    ],
+    "room": 13,
+    "support_top": 1200.0,
+    "target": 0
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1099.9
+      ],
+      "room": 14
+    },
+    "at": [
+      1680.0,
+      560.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      1685.8,
+      559.9
+    ],
+    "room": 13,
+    "support_top": 560.0,
+    "target": 14
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        600.0,
+        520.0
+      ],
+      "room": 20
+    },
+    "at": [
+      900.0,
+      400.0
+    ],
+    "fired_tick": 0,
+    "mode": "wind_fold",
+    "offset": 0.0,
+    "player_end": [
+      900.0,
+      400.0
+    ],
+    "room": 13,
+    "support_top": 400.0,
+    "target": 20
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1576.6,
+        559.9
+      ],
+      "room": 13
+    },
+    "at": [
+      120.0,
+      1100.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1099.9
+    ],
+    "room": 14,
+    "support_top": 1100.0,
+    "target": 13
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1139.4,
+        1039.9
+      ],
+      "room": 9
+    },
+    "at": [
+      2440.0,
+      830.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      829.9
+    ],
+    "room": 14,
+    "support_top": 830.0,
+    "target": 9
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1680.0,
+        1300.0
+      ],
+      "room": 17
+    },
+    "at": [
+      1450.0,
+      480.0
+    ],
+    "fired_tick": 0,
+    "mode": "stair_up",
+    "offset": 0.0,
+    "player_end": [
+      1450.0,
+      480.0
+    ],
+    "room": 14,
+    "support_top": 480.0,
+    "target": 17
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        430.6,
+        1119.9
+      ],
+      "room": 2
+    },
+    "at": [
+      120.0,
+      500.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      499.9
+    ],
+    "room": 15,
+    "support_top": 500.0,
+    "target": 2
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        1119.9
+      ],
+      "room": 16
+    },
+    "at": [
+      2080.0,
+      1120.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2085.8,
+      1119.9
+    ],
+    "room": 15,
+    "support_top": 1120.0,
+    "target": 16
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1976.6,
+        1119.9
+      ],
+      "room": 15
+    },
+    "at": [
+      120.0,
+      1120.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1119.9
+    ],
+    "room": 16,
+    "support_top": 1120.0,
+    "target": 15
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        589.4,
+        1109.9
+      ],
+      "room": 8
+    },
+    "at": [
+      1880.0,
+      760.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      1885.8,
+      759.9
+    ],
+    "room": 16,
+    "support_top": 760.0,
+    "target": 8
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        184.0,
+        1000.0
+      ],
+      "room": 18
+    },
+    "at": [
+      1000.0,
+      430.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1000.0,
+      430.0
+    ],
+    "room": 16,
+    "support_top": 430.0,
+    "target": 18
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1450.0,
+        480.0
+      ],
+      "room": 14
+    },
+    "at": [
+      1680.0,
+      1300.0
+    ],
+    "fired_tick": 0,
+    "mode": "stair_down",
+    "offset": 0.0,
+    "player_end": [
+      1680.0,
+      1300.0
+    ],
+    "room": 17,
+    "support_top": 1300.0,
+    "target": 14
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2200.6,
+        929.9
+      ],
+      "room": 5
+    },
+    "at": [
+      120.0,
+      1900.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      1899.9
+    ],
+    "room": 17,
+    "support_top": 1900.0,
+    "target": 5
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        184.0,
+        760.0
+      ],
+      "room": 20
+    },
+    "at": [
+      1500.0,
+      420.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1500.0,
+      420.0
+    ],
+    "room": 17,
+    "support_top": 420.0,
+    "target": 20
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        960.6,
+        429.9
+      ],
+      "room": 16
+    },
+    "at": [
+      120.0,
+      1000.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      999.9
+    ],
+    "room": 18,
+    "support_top": 1000.0,
+    "target": 16
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1090.0,
+        920.0
+      ],
+      "room": 8
+    },
+    "at": [
+      1200.0,
+      1180.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1200.0,
+      1180.0
+    ],
+    "room": 18,
+    "support_top": 1180.0,
+    "target": 8
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        223.4,
+        759.9
+      ],
+      "room": 19
+    },
+    "at": [
+      2440.0,
+      760.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2445.8,
+      759.9
+    ],
+    "room": 18,
+    "support_top": 760.0,
+    "target": 19
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2336.6,
+        759.9
+      ],
+      "room": 18
+    },
+    "at": [
+      120.0,
+      760.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      759.9
+    ],
+    "room": 19,
+    "support_top": 760.0,
+    "target": 18
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        929.4,
+        979.9
+      ],
+      "room": 11
+    },
+    "at": [
+      2280.0,
+      980.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2285.8,
+      979.9
+    ],
+    "room": 19,
+    "support_top": 980.0,
+    "target": 11
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        2016.0,
+        1120.0
+      ],
+      "room": 20
+    },
+    "at": [
+      1800.0,
+      480.0
+    ],
+    "fired_tick": 0,
+    "mode": "depth_door",
+    "offset": 0.0,
+    "player_end": [
+      1800.0,
+      480.0
+    ],
+    "room": 19,
+    "support_top": 480.0,
+    "target": 20
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1460.6,
+        419.9
+      ],
+      "room": 17
+    },
+    "at": [
+      120.0,
+      760.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      114.2,
+      759.9
+    ],
+    "room": 20,
+    "support_top": 760.0,
+    "target": 17
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        1839.4,
+        479.9
+      ],
+      "room": 19
+    },
+    "at": [
+      2080.0,
+      1120.0
+    ],
+    "fired_tick": 38,
+    "mode": "horizontal_walk",
+    "offset": 0.0,
+    "player_end": [
+      2085.8,
+      1119.9
+    ],
+    "room": 20,
+    "support_top": 1120.0,
+    "target": 19
+  },
+  {
+    "arrival": {
+      "hp": 3,
+      "inside_solid": false,
+      "on_floor": true,
+      "pos": [
+        900.0,
+        400.0
+      ],
+      "room": 13
+    },
+    "at": [
+      600.0,
+      520.0
+    ],
+    "fired_tick": 0,
+    "mode": "wind_fold",
+    "offset": 0.0,
+    "player_end": [
+      600.0,
+      520.0
+    ],
+    "room": 20,
+    "support_top": 520.0,
+    "target": 13
+  }
+]

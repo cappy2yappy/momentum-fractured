@@ -1,0 +1,495 @@
+{
+	"baseline": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
+	"excluded": "platforms, gates, enemies, anchors, exits and progression remain owned by existing world code and are unchanged",
+	"rooms": [
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 0
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 1
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 2
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 3
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 4
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 5
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 6
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 7
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				},
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						1110.0,
+						920.0,
+						40.0,
+						40.0
+					],
+					"role": "door_shelf_seat_extension (continues shelf 770,920,340,40)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 8
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 9
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 10
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 11
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 12
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						1880.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				},
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						0.0,
+						1240.0,
+						360.0,
+						60.0
+					],
+					"role": "quay_footing_under_hallway_pad"
+				}
+			],
+			"bounds": [
+				1800.0,
+				1440.0
+			],
+			"room": 13
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 14
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2280.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2200.0,
+				1440.0
+			],
+			"room": 15
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2080.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2000.0,
+				1440.0
+			],
+			"room": 16
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						1880.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				1800.0,
+				2160.0
+			],
+			"room": 17
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2680.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2600.0,
+				1440.0
+			],
+			"room": 18
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2480.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2400.0,
+				1440.0
+			],
+			"room": 19
+		},
+		{
+			"added_shapes": [
+				{
+					"layer": 1,
+					"margin": 1.0,
+					"mask": 1,
+					"one_way": false,
+					"rect": [
+						-40.0,
+						-640.0,
+						2280.0,
+						696.0
+					],
+					"role": "roof_course_with_offscreen_backing (visible band y 0..56)"
+				}
+			],
+			"bounds": [
+				2200.0,
+				1440.0
+			],
+			"room": 20
+		}
+	],
+	"schema": "PR49 r18_frozen.json (rect, layer, mask, one_way, margin) + role"
+}
