@@ -19,7 +19,7 @@ var hooks_dir=""
 var expect_reduced=false
 var expect_canal=false
 var out_dir=""
-const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","capture","hook_cinematic_completion","hook_canal_containment"]
+const ALL=["start","issue42","matrix","controls","hints","endpoints","save","combat","graph","reduced","reduced_cli","capture","hook_cinematic_completion","hook_canal_containment","hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined","hook_w3_canal_stress"]
 
 func _init(): call_deferred("run")
 
@@ -231,7 +231,8 @@ func sec_matrix():
 	key(KEY_E,true);await wait_ticks(2);key(KEY_E,false)
 	for t in 400:
 		await wait_ticks(1)
-		if w.room==13 and w.transition<=0: break
+		# control must be back (a presented sequence may swap rooms before it ends): physics on and Kaze's own sprite visible
+		if w.room==13 and w.transition<=0 and w.player.is_physics_processing() and w.player.sprite.visible: break
 	await wait_ticks(20)
 	check(w.room==13 and w.player.is_on_floor(),"R0->R13 E door with Windstep arrives supported in Canal")
 	restored("R0->R13 E")
@@ -608,6 +609,8 @@ func run():
 	await new_world()
 	if want("hook_cinematic_completion"): await run_hook("hook_cinematic_completion")
 	if want("hook_canal_containment"): await run_hook("hook_canal_containment")
+	for name in ["hook_w3_stair","hook_w3_doorway","hook_w3_reach","hook_w3_selftest","hook_w3_combined","hook_w3_canal_stress"]:
+		if name in only: await new_world();await run_hook(name)
 	release_all()
 	if is_instance_valid(w): w.queue_free()
 	current_scene=null

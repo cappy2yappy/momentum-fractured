@@ -1,0 +1,68 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_w3_stair
+QA W3 STAIR-ASCEND seconds=2.36666666666667 ended=true rooms=[14, 17] requests=1 max_zoom=1.35000002384186 labels=["field:staged_stair_cinematic.gd.destination", "field:embodied_transitions.target_room(active overlay)"] swap_tick=72
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-STARTS] real E at the stair starts a presented sequence
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-DURATION] E to control back 2.37 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-ONCE] exactly one room request and one swap R14 to R17 (requests 1, rooms [14, 17])
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-ARRIVAL] arrives in R17 with feet within 12 px of (1680.0, 1300.0) (distance 0.0, feet (1680.0, 1299.998))
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-FACING] arrival facing -1 equals the PR61 ground truth -1
+QA W3 TRUTH 14:17 {"facing":-1,"room":17,"x":1680.0,"y":1299.998046875}
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-ASCEND completion
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-PROGRESSION] abilities, gates, fragments, flags, HP unchanged by the sequence
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-LABEL] destination label 'COUNTERWEIGHT SPIRE' evidence: ["field:staged_stair_cinematic.gd.destination", "field:embodied_transitions.target_room(active overlay)"] (pixel placement is a human review item)
+QA W3 STAIR-ASCEND animation={"bad_windows":[{"distinct":1.0,"frame":0.0,"leg":0.0,"t":0.3,"tex":"res://assets/art04/kaze/stair_up_key.png"},{"distinct":1.0,"frame":0.0,"leg":0.0,"t":0.45,"tex":"res://assets/art04/kaze/stair_up_key.png"},{"distinct":1.0,"frame":0.0,"leg":0.0,"t":0.6,"tex":"res://assets/art04/kaze/stair_up_key.png"}],"distinct_poses_total":8.0,"held_while_moving":3.0,"max_leg_diff_all":1.498,"moving_windows":6.0,"samples":157.0,"true_motion_fraction":0.5,"verdict":"NOT_ANIMATION"}
+FAIL: [hook_w3_stair] [W3-STAIR-ASCEND-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 50% of 6 moving windows, distinct poses 8 ()
+SKIP: [hook_w3_stair] [W3-STAIR-ASCEND-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.34 of viewport from sprite rects)
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-HELD-E] E held through the sequence and 120 ticks after: one request, no bounce (requests +1, room 17)
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-CONTROL] Kaze obeys real keys after the sequence (moved 93 px right, -85 px left)
+QA W3 STAIR-DESCEND seconds=0.66666666666667 ended=true rooms=[17, 14] requests=1 max_zoom=1.54955399036407 labels=["field:embodied_transitions.target_room(active overlay)"] swap_tick=21
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-STARTS] real E at the stair starts a presented sequence
+FAIL: [hook_w3_stair] [W3-STAIR-DESCEND-DURATION] E to control back 0.67 s (need 1.5..6.0 s; contract about 2 to 4 s plus wipe)
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-ONCE] exactly one room request and one swap R17 to R14 (requests 1, rooms [17, 14])
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-ARRIVAL] arrives in R14 with feet within 12 px of (1450.0, 480.0) (distance 0.0, feet (1450.0, 479.998))
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-FACING] arrival facing 1 equals the PR61 ground truth 1
+QA W3 TRUTH 17:14 {"facing":1,"room":14,"x":1450.0,"y":479.998046875}
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-DESCEND completion
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-PROGRESSION] abilities, gates, fragments, flags, HP unchanged by the sequence
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-LABEL] destination label 'BELLROOF WALK' evidence: ["field:embodied_transitions.target_room(active overlay)"] (pixel placement is a human review item)
+QA W3 STAIR-DESCEND animation={"bad_windows":[],"distinct_poses_total":3.0,"held_while_moving":0.0,"max_leg_diff_all":1.261,"moving_windows":5.0,"samples":55.0,"true_motion_fraction":1.0,"verdict":"NOT_ANIMATION"}
+FAIL: [hook_w3_stair] [W3-STAIR-DESCEND-TRUE-ANIM] genuine multi-pose movement: verdict NOT_ANIMATION, true-motion 100% of 5 moving windows, distinct poses 3 ()
+SKIP: [hook_w3_stair] [W3-STAIR-DESCEND-FULLSCREEN] viewport coverage needs a rendered display (xvfb + software GL); headless cannot measure it. NOT a pass. (Kaze max height 0.30 of viewport from sprite rects)
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-HELD-E] E held through the sequence and 120 ticks after: one request, no bounce (requests +1, room 14)
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-CONTROL] Kaze obeys real keys after the sequence (moved 93 px right, -85 px left)
+QA W3 STAIR-ASCEND-REDUCED seconds=0.96666666666667 ended=true rooms=[14, 17] requests=1 max_zoom=1.0 labels=["field:staged_stair_cinematic.gd.destination", "field:embodied_transitions.target_room(active overlay)"] swap_tick=30
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-FLAG] real F6 enabled reduced motion
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-COMPLETES] completes into R17 in 0.97 s
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-SHORTER] reduced 0.97 s is shorter than full 2.37 s
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-NO-ZOOM] camera never zooms in reduced motion (max 1.000)
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-LABEL] destination label kept in reduced motion: ["field:staged_stair_cinematic.gd.destination", "field:embodied_transitions.target_room(active overlay)"]
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-FRAMES] reduced motion still shows true frames or a first/last cross-fade (4 distinct frames shown)
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-ARRIVAL] arrives in R17 with feet within 12 px of (1680.0, 1300.0) (distance 0.0, feet (1680.0, 1299.998))
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-REDUCED-FACING] arrival facing -1 equals the PR61 ground truth -1
+QA W3 TRUTH 14:17 {"facing":-1,"room":17,"x":1680.0,"y":1299.998046875}
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-ASCEND-REDUCED
+QA W3 STAIR-DESCEND-REDUCED seconds=0.66666666666667 ended=true rooms=[17, 14] requests=1 max_zoom=1.0 labels=["field:embodied_transitions.target_room(active overlay)"] swap_tick=21
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-FLAG] real F6 enabled reduced motion
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-COMPLETES] completes into R14 in 0.67 s
+FAIL: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-SHORTER] reduced 0.67 s is shorter than full 0.67 s
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-NO-ZOOM] camera never zooms in reduced motion (max 1.000)
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-LABEL] destination label kept in reduced motion: ["field:embodied_transitions.target_room(active overlay)"]
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-FRAMES] reduced motion still shows true frames or a first/last cross-fade (4 distinct frames shown)
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-ARRIVAL] arrives in R14 with feet within 12 px of (1450.0, 480.0) (distance 0.0, feet (1450.0, 479.998))
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-REDUCED-FACING] arrival facing 1 equals the PR61 ground truth 1
+QA W3 TRUTH 17:14 {"facing":1,"room":14,"x":1450.0,"y":479.998046875}
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-DESCEND-REDUCED
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-CANCEL-PAUSE] pause mid-sequence then resume: control back after 0 ticks
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-ASCEND pause
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-CANCEL-DEATH] respawn mid-sequence: control, live sprite and zoom restored after 0 ticks
+PASS: [hook_w3_stair] [W3-STAIR-ASCEND-CANCEL-ROOMCHANGE] room rebuilt mid-sequence: no stuck stage, control restored after 0 ticks (room 14)
+SKIP: [hook_w3_stair] [W3-STAIR-ASCEND-CANCEL-TIMEOUT] a stall cannot be forced from outside a candidate-agnostic harness; only the 6 s ceiling in DURATION is asserted. NOT a pass.
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-CANCEL-PAUSE] pause mid-sequence then resume: control back after 15 ticks
+PASS: [hook_w3_stair] Control state restored after transition: W3 STAIR-DESCEND pause
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-CANCEL-DEATH] respawn mid-sequence: control, live sprite and zoom restored after 0 ticks
+PASS: [hook_w3_stair] [W3-STAIR-DESCEND-CANCEL-ROOMCHANGE] room rebuilt mid-sequence: no stuck stage, control restored after 15 ticks (room 17)
+SKIP: [hook_w3_stair] [W3-STAIR-DESCEND-CANCEL-TIMEOUT] a stall cannot be forced from outside a candidate-agnostic harness; only the 6 s ceiling in DURATION is asserted. NOT a pass.
+PASS: [hook_w3_stair] [W3-STAIR-LOCKED] gated stair (locked=true) starts no sequence and keeps control (room 14, requests +0)
+PASS: [hook_w3_stair] [W3-NEIGHBOUR] R13 to R14 lateral passage still completes once (room 14, requests +1)
+QA SUMMARY: 50 checks, 4 failure(s), 4 skip(s)

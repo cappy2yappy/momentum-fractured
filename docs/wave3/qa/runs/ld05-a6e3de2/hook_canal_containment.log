@@ -1,0 +1,44 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: hook_canal_containment
+QA CANAL probe pad_mid min_feet_y=1080.06652832031 min_in_hall=1080.06652832031 min_x=112.831199645996 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe pad_mouth min_feet_y=1080.06201171875 min_in_hall=1080.06201171875 min_x=86.0080718994141 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe pad_door_side min_feet_y=1080.06616210938 min_in_hall=1080.06616210938 min_x=86.0747146606445 left_room=false left_world=false inside_solid=false end=(135.0637, 1087.576)
+QA CANAL probe shelf min_feet_y=1080.06201171875 min_in_hall=1080.06201171875 min_x=86.0034866333008 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe pad_hold_left min_feet_y=1080.06787109375 min_in_hall=1080.06787109375 min_x=86.0747146606445 left_room=false left_world=false inside_solid=false end=(170.9803, 1093.932)
+QA CANAL probe pad_door_hold min_feet_y=1080.06787109375 min_in_hall=1080.06787109375 min_x=86.0747146606445 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe wall_184_left min_feet_y=1160.93371582031 min_in_hall=1160.93371582031 min_x=114.0 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe wall_282_left min_feet_y=1080.06787109375 min_in_hall=1080.06787109375 min_x=118.165054321289 left_room=true left_world=false inside_solid=false end=(590.0, 778.0)
+QA CANAL probe wall_282_right min_feet_y=116.067459106445 min_in_hall=inf min_x=282.722229003906 left_room=false left_world=false inside_solid=false end=(1716.305, 135.5681)
+QA CANAL probe pad_right_hold min_feet_y=656.431762695312 min_in_hall=1082.42541503906 min_x=250.722229003906 left_room=false left_world=false inside_solid=false end=(1736.925, 1096.758)
+PASS: [hook_canal_containment] Exit pad (0,1200,360,40) retained
+QA CANAL platform diff vs PR51 added=[[P: (0.0, 1020.0), S: (72.0, 180.0)], [P: (0.0, 0.0), S: (296.0, 1020.0)]] removed=[]
+PASS: [hook_canal_containment] No PR51 R13 platform was removed or moved (0 removed)
+PASS: [hook_canal_containment] The only added R13 colliders are the contract mass and pier, right edge x<=296
+PASS: [hook_canal_containment] Exit endpoint unchanged (120,1200), horizontal_walk, heading -1
+PASS: [hook_canal_containment] Entrance R0->R13 unchanged (depth door at (590,780))
+PASS: [hook_canal_containment] Aperture 72..168 x 1068..1200 has no collider inside it
+PASS: [hook_canal_containment] Probe pad_door_side never rises above the lintel inside the hall (min feet y 1080.1, limit 1080)
+PASS: [hook_canal_containment] Probe pad_door_side never clips into the mass or pier
+PASS: [hook_canal_containment] Probe pad_door_side never goes left of the pier face plus radius (min x 86.1)
+PASS: [hook_canal_containment] Probe pad_hold_left never rises above the lintel inside the hall (min feet y 1080.1, limit 1080)
+PASS: [hook_canal_containment] Probe pad_hold_left never clips into the mass or pier
+PASS: [hook_canal_containment] Probe pad_hold_left never goes left of the pier face plus radius (min x 86.1)
+PASS: [hook_canal_containment] Probe wall_282_right never rises above the lintel inside the hall (min feet y inf, limit 1080)
+PASS: [hook_canal_containment] Probe wall_282_right never clips into the mass or pier
+PASS: [hook_canal_containment] Probe wall_282_right never goes left of the pier face plus radius (min x 282.7)
+PASS: [hook_canal_containment] Probe pad_right_hold never rises above the lintel inside the hall (min feet y 1082.4, limit 1080)
+PASS: [hook_canal_containment] Probe pad_right_hold never clips into the mass or pier
+PASS: [hook_canal_containment] Probe pad_right_hold never goes left of the pier face plus radius (min x 250.7)
+PASS: [hook_canal_containment] Cycle 0: R0->R13 arrives at (184,1198): (184.0, 1199.998)
+PASS: [hook_canal_containment] Cycle 0: walking left through the door lands in R0 once
+PASS: [hook_canal_containment] Cycle 1: R0->R13 arrives at (184,1198): (184.0, 1199.998)
+PASS: [hook_canal_containment] Cycle 1: walking left through the door lands in R0 once
+QA CANAL route legs done=[true, true, true, true, true] end=(1601.607, 559.9334)
+PASS: [hook_canal_containment] Real-key climb from the arrival point over shelves 500/720/1010/1220/1400 reaches the R14 exit shelf (legs [true, true, true, true, true])
+PASS: [hook_canal_containment] Walking right off the top shelf takes the R13->R14 automatic passage (room 14)
+QA CANAL RESIDUAL outer_face_from_shelf_330 min_feet_y=116.062034606934 left_world=false left_room=false returned_by_fall_recovery=false end=(406.745, 126.5727)
+QA CANAL RESIDUAL outer_face_from_shelf_400 min_feet_y=116.062034606934 left_world=false left_room=false returned_by_fall_recovery=false end=(406.745, 126.5727)
+QA CANAL RESIDUAL outer_face_from_shelf_520 min_feet_y=116.066162109375 left_world=false left_room=false returned_by_fall_recovery=false end=(405.0453, 138.5841)
+PASS: [hook_canal_containment] Residual exterior-face wall-jump measured (informational, see QA CANAL RESIDUAL lines)
+QA SUMMARY: 25 checks, 0 failure(s), 0 skip(s)

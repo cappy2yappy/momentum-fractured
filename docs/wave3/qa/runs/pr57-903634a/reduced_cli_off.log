@@ -1,0 +1,5 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+SECTION: reduced_cli
+PASS: [reduced_cli] Without --tr05-reduced-motion the session starts cinematic
+QA SUMMARY: 1 checks, 0 failure(s), 0 skip(s)
