@@ -14,6 +14,7 @@ const EmbodiedTransitions = preload("res://scripts/embodied_transitions.gd")
 const CinematicTransitions = preload("res://scripts/cinematic_transitions.gd")
 const LevelGeometry = preload("res://scripts/level_geometry.gd")
 const BellroofWalk = preload("res://scripts/bellroof_walk.gd")
+const RoomCreatorPilot = preload("res://tools/ld_tools_02/runtime_pilot.gd")
 const ROOM_COUNT = 21
 const ROOM_NAMES = [
 	"CANAL HAVEN", "LANTERN MARKET", "FLOODED CISTERN", "ECHO SHRINE",
@@ -69,6 +70,10 @@ var cleared_encounters: Dictionary = {}
 var pending_arrival = Vector2.INF
 var extension = Extension.new()
 var platforms: Array[Rect2] = []
+# Default off; no save field or project-wide activation.
+var authored_r18_enabled = "--authored-r18" in OS.get_cmdline_user_args()
+var authored_r18_path = RoomCreatorPilot.DEFAULT_LAYOUT
+var authored_room_active = false
 var tether_anchors: Array[Vector2] = []
 var tether_effect_anchor = Vector2.ZERO
 var tether_effect_time = 0.0
@@ -159,6 +164,7 @@ func build_room(index):
 	kunai_gates.clear()
 	var bounds = room_size(room)
 	camera.limit_right = int(bounds.x);camera.limit_bottom = int(bounds.y)
+	RoomCreatorPilot.prepare(self)
 	for rect in [Rect2(-40, 0, 40, bounds.y), Rect2(bounds.x, 0, 40, bounds.y)]: add_platform(rect)
 	var floor_segments = [Rect2(0, bounds.y - 140, bounds.x, 140)]
 	if room == 2:
@@ -417,6 +423,8 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 		announce("Storm Keeper defeated. Attune the relay with E.", 8)
 
 func add_platform(rect: Rect2):
+	# The authored bodies already exist. Retain generator bookkeeping, create no duplicates.
+	if authored_room_active: return
 	rect = LevelGeometry.perimeter_landing(room,room_size(room),rect)
 	platforms.append(rect)
 	var body = StaticBody2D.new()
@@ -757,6 +765,7 @@ func _draw():
 		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
 	RoomPresentation.draw_background(self)
 	for rect in platforms:
+		if authored_room_active: break # Native pilot owns the single terrain draw.
 		if rect.position.x < 0 or rect.position.x >= room_size(room).x: continue
 		LevelGeometry.draw_surface(self,rect)
 	for gate in kunai_gates:

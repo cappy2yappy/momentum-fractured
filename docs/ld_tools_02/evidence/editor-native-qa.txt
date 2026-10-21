@@ -1,0 +1,24 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+ERROR: Condition "p_name.is_empty()" is true.
+   at: set_name (scene/main/node.cpp:1432)
+PASS: Editor creates and opens reusable template
+PASS: Plugin inserts rectangle in edited scene
+PASS: Editor insertion persists node ownership
+PASS: Native scene undo removes inserted rectangle
+PASS: Native redo restores rectangle and ownership
+PASS: Plugin duplication makes shape resources unique
+PASS: Native editor move/resize edits shape
+PASS: Native editor move undo
+PASS: Native editor move redo
+PASS: Plugin inserts non-solid decoration layers
+PASS: Plugin inserts metadata marker
+PASS: Actual EditorInterface saves validated edited scene
+PASS: Editor-saved platform edit survives cache-bypass reload
+PASS: Editor-saved marker survives reload
+ROOM CREATOR EDITOR: 14 passes / 0 failures
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)
+ERROR: 12 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:810)

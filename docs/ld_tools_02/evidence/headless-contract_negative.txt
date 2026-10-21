@@ -1,0 +1,28 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Reject nonrectangle collision
+PASS: Reject unsupported version
+PASS: Reject missing stable identity
+PASS: Reject root scale
+PASS: Reject ancestor rotation
+PASS: Reject negative margin
+PASS: Reject enabled slope instead of rectangle approximation
+PASS: Disabled polygon contributes no rectangle record
+PASS: Reject moving surface
+PASS: Translated geometry ancestors preserve local rectangle coordinates
+EXPECTED VALIDATION ERROR follows (wrong live room identity)
+ERROR: Room Creator: Live pilot requires room_id=18 and room_size=2600x1440; using legacy R18
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] prepare (res://tools/ld_tools_02/runtime_pilot.gd:23)
+       [1] build_room (res://scripts/world.gd:167)
+       [2] run (res://tools/ld_tools_02/contract_qa.gd:46)
+PASS: Invalid live layout fails closed to complete legacy geometry
+EXPECTED VALIDATION ERROR follows (missing resource)
+ERROR: Room Creator: missing PackedScene res://build/nonexistent-room-layout.tscn; using legacy R18
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] prepare (res://tools/ld_tools_02/runtime_pilot.gd:12)
+       [1] build_room (res://scripts/world.gd:167)
+       [2] run (res://tools/ld_tools_02/contract_qa.gd:50)
+PASS: Missing live layout fails closed to complete legacy geometry

@@ -1,0 +1,16 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ISOLATED_PROFILE=/Users/tonysantiago/Library/Application Support/Kaze-Room-Creator-QA-1c0f8df6f62b41b5bf47d66ddad670aa
+PASS: Fresh isolated profile starts at Haven with original kit
+PASS: Room 14 LD geometry survives GP sparse normalization without stale gates
+PASS: Room 14 presentation remains available and missing progression rejects route
+PASS: Room 15 LD geometry survives GP sparse normalization without stale gates
+PASS: Room 15 presentation remains available and missing progression rejects route
+PASS: Room 17 LD geometry survives GP sparse normalization without stale gates
+PASS: Room 17 presentation remains available and missing progression rejects route
+PASS: Room 19 LD geometry survives GP sparse normalization without stale gates
+PASS: Room 19 presentation remains available and missing progression rejects route
+PASS: Compact door rejects missing Windstep
+PASS: Compact door keeps original 85px interaction radius
+PASS: Compact passage accepts earned Windstep with current trigger policy
+INTEGRATION CANDIDATE: 0 failure(s)

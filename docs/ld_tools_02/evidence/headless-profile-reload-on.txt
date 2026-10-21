@@ -1,0 +1,7 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Serialized R18 checkpoint exists in a new process
+PASS: Cross-process R18 checkpoint restored
+PASS: Cross-process progression retained
+PASS: Cross-process gate/lore retained
+PASS: Save is readable with either runtime mode
