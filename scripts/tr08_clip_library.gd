@@ -11,7 +11,7 @@ const STANDIN_LABEL = "STAND-IN, ANIMATION PENDING"
 ## Provenance values that must never be presented as animation (interface hard rule).
 const NOT_ANIMATION = ["", "held", "unfinished", "scaled", "bobbed", "wipe", "skeleton"]
 const CLIPS = ["stair_ascend_enter","stair_ascend_loop","stair_ascend_exit",
-	"stair_descend_enter","stair_descend_loop","stair_descend_exit","stair_arrive_idle_settle",
+	"stair_descend_enter","stair_descend_loop","stair_descend_exit","stair_arrive_idle_settle","stair_descend_arrive_settle",
 	"door_approach_walk","door_turn_to_rear","door_cross","door_emerge","door_turn_to_side","door_walk_out"]
 const ART08_WORLD_SCALE = 0.303125
 const ART08_FIGURE_FALLBACK = 560.0
@@ -46,6 +46,7 @@ static func standins() -> Dictionary:
 	t["stair_descend_loop"]=row(RUN_REG,[0,1,2,3,4,5,6,7],14,true,down,"approved cleaned RUN cycle (not a heel-first descending stride)")
 	t["stair_descend_exit"]=row(RUN_REG,[4,5,6,7],16,false,[Vector2(run,rise),Vector2(run,rise*0.5),Vector2(run,0),Vector2(run,0)],"approved cleaned RUN strip frames 4-7 (not a bottom-step transition)")
 	t["stair_arrive_idle_settle"]=row(IDLE_REG,[0,1,2,3],12,false,[],"approved cleaned IDLE strip frames 0-3 (breathing idle, not a settle)")
+	t["stair_descend_arrive_settle"]=row(IDLE_REG,[0,1,2,3],12,false,[],"approved cleaned IDLE strip frames 0-3 (breathing idle, not a settle)")
 	var walk=0.12*f/4.0
 	var w=[];for i in 8: w.append(Vector2(walk,0))
 	t["door_approach_walk"]=row(RUN_REG,[0,1,2,3,4,5,6,7],12,true,w,"approved cleaned RUN cycle slowed (a sprint, not a walk)")
@@ -151,7 +152,7 @@ static func build(manifest_path:=MANIFEST_PATH) -> Dictionary:
 		clip.texture_left=load(clip.strip_left) if not str(clip.strip_left).is_empty() and ResourceLoader.exists(clip.strip_left) else null
 		if float(clip.figure)<=0.0: clip.figure=measure_figure(clip)
 		clip.soles=measure_soles(clip) if str(clip.bound).begins_with("art08") else []
-		if clip.root_motion.is_empty() and name.begins_with("stair_") and name!="stair_arrive_idle_settle":
+		if clip.root_motion.is_empty() and name.begins_with("stair_") and not name.ends_with("arrive_settle") and name!="stair_arrive_idle_settle":
 			# Real stair clip without root motion: drive it along the stand-in step so the
 			# feet still travel the flight. Reported as a binding note, never silently.
 			clip.root_motion=default_motion(name,clip)

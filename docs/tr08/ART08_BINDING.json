@@ -1,10 +1,17 @@
 {
  "source_branch": "art/art08-embodied-cinematic-animation",
- "source_commit": "61b321944f44df573a0d9d5d231d3d358823ef0d",
- "interface_version": "v2",
+ "source_commit": "81679650bcd0ff8ca6f4b6373b6554027264038a",
+ "previous_binding_commit": "61b321944f44df573a0d9d5d231d3d358823ef0d",
+ "interface_version": "v3",
  "copied_by": "TR-08 explicit allowlist (git show, byte-exact)",
  "manifest": "assets/art08/MANIFEST.json",
- "manifest_sha256": "a105571fa4776d04a6e99172c27f43d053f4f02e497ec23d1b1b3ec79f815847",
+ "manifest_sha256": "70e3c7eb481ae583230d07bcef8f624a72ac8b857f72941219267674f469b1ff",
+ "changed_since_previous": [
+  "assets/art08/kaze_stair_descend_enter_strip.png",
+  "assets/art08/kaze_stair_descend_loop_strip.png",
+  "assets/art08/kaze_stair_descend_exit_strip.png",
+  "assets/art08/kaze_stair_descend_arrive_settle_strip.png"
+ ],
  "not_copied": [
   "door_turn_to_side (status unfinished, no file)"
  ],
@@ -53,8 +60,8 @@
   },
   {
    "path": "assets/art08/kaze_stair_descend_enter_strip.png",
-   "sha256": "dcc736f27327ddfbc20a5592c3f7ad939b8169d2119a29f6e30ab17d8057bfa4",
-   "bytes": 280408,
+   "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+   "bytes": 245849,
    "manifest_match": true,
    "clips": [
     "stair_descend_enter"
@@ -62,13 +69,13 @@
    "status": [
     "candidate"
    ],
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "import_file": true
   },
   {
    "path": "assets/art08/kaze_stair_descend_loop_strip.png",
-   "sha256": "59672fd0bdc5d36ef751a0cff162acc0fd6d5ddb89aa4667dd230889c6c5bdd4",
-   "bytes": 514934,
+   "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+   "bytes": 455284,
    "manifest_match": true,
    "clips": [
     "stair_descend_loop"
@@ -76,13 +83,13 @@
    "status": [
     "candidate"
    ],
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "import_file": true
   },
   {
    "path": "assets/art08/kaze_stair_descend_exit_strip.png",
-   "sha256": "e4bc0cf67443d1c95cecaccb7cdf4d402234ba16b0932891945c3b91ed00b96d",
-   "bytes": 295686,
+   "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+   "bytes": 263838,
    "manifest_match": true,
    "clips": [
     "stair_descend_exit"
@@ -90,7 +97,21 @@
    "status": [
     "candidate"
    ],
-   "provenance": "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)",
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
+   "import_file": true
+  },
+  {
+   "path": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+   "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+   "bytes": 262630,
+   "manifest_match": true,
+   "clips": [
+    "stair_descend_arrive_settle"
+   ],
+   "status": [
+    "candidate"
+   ],
+   "provenance": "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts",
    "import_file": true
   },
   {

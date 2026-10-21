@@ -84,6 +84,8 @@ const TR08 = {
 		"depth_px": 8.0, "depth_scale": 0.86, "shade": 0.32,
 		"reduced_rate": 1.4,
 		"watchdog": 5.0,
+		"land_recent_ticks": 30,    # hang fix: airborne crossing within 0.5 s of being grounded
+		"land_timeout": 1.5,        # then let the real body land; else the inherited request
 	},
 }
 

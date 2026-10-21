@@ -228,6 +228,7 @@ func label(w,p:Dictionary) -> String:
 	return w.mixed_transitions.label(w,p)
 
 func present(w):
+	tr08.observe(w)
 	if tr08.owns():
 		# TR-08 owns camera, proxies and composition for its whole sequence.
 		tr08.tick(w)
