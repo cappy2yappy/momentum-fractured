@@ -1,0 +1,75 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Save-safe invocation required
+PASS: Reusable template contract (2600.0, 1440.0)
+PASS: Reject rotated collider
+PASS: Reject layer drift
+PASS: Reject decoration physics
+PASS: Template/marker save reload
+PASS: Independent layout shape resources
+PASS: Reusable template contract (1800.0, 2400.0)
+PASS: Reject rotated collider
+PASS: Reject layer drift
+PASS: Reject decoration physics
+PASS: Template/marker save reload
+PASS: Independent layout shape resources
+PASS: Reusable template contract (3200.0, 1440.0)
+PASS: Reject rotated collider
+PASS: Reject layer drift
+PASS: Reject decoration physics
+PASS: Template/marker save reload
+PASS: Independent layout shape resources
+PASS: Editable R18 version 2 contract
+PASS: Feature defaults off
+PASS: 21 rooms / 29 links retained
+PASS: R0 geometry/support/route/encounter parity enabled=false
+PASS: R0 only pilot registration enabled=false
+PASS: R1 geometry/support/route/encounter parity enabled=false
+PASS: R1 only pilot registration enabled=false
+PASS: R2 geometry/support/route/encounter parity enabled=false
+PASS: R2 only pilot registration enabled=false
+PASS: R3 geometry/support/route/encounter parity enabled=false
+PASS: R3 only pilot registration enabled=false
+PASS: R4 geometry/support/route/encounter parity enabled=false
+PASS: R4 only pilot registration enabled=false
+PASS: R5 geometry/support/route/encounter parity enabled=false
+PASS: R5 only pilot registration enabled=false
+PASS: R6 geometry/support/route/encounter parity enabled=false
+PASS: R6 only pilot registration enabled=false
+PASS: R7 geometry/support/route/encounter parity enabled=false
+PASS: R7 only pilot registration enabled=false
+PASS: R8 geometry/support/route/encounter parity enabled=false
+PASS: R8 only pilot registration enabled=false
+PASS: R9 geometry/support/route/encounter parity enabled=false
+PASS: R9 only pilot registration enabled=false
+PASS: R10 geometry/support/route/encounter parity enabled=false
+PASS: R10 only pilot registration enabled=false
+PASS: R11 geometry/support/route/encounter parity enabled=false
+PASS: R11 only pilot registration enabled=false
+PASS: R12 geometry/support/route/encounter parity enabled=false
+PASS: R12 only pilot registration enabled=false
+PASS: R13 geometry/support/route/encounter parity enabled=false
+PASS: R13 only pilot registration enabled=false
+PASS: R14 geometry/support/route/encounter parity enabled=false
+PASS: R14 only pilot registration enabled=false
+PASS: R15 geometry/support/route/encounter parity enabled=false
+PASS: R15 only pilot registration enabled=false
+PASS: R16 geometry/support/route/encounter parity enabled=false
+PASS: R16 only pilot registration enabled=false
+PASS: R17 geometry/support/route/encounter parity enabled=false
+PASS: R17 only pilot registration enabled=false
+PASS: R18 geometry/support/route/encounter parity enabled=false
+PASS: R18 only pilot registration enabled=false
+PASS: R19 geometry/support/route/encounter parity enabled=false
+PASS: R19 only pilot registration enabled=false
+PASS: R20 geometry/support/route/encounter parity enabled=false
+PASS: R20 only pilot registration enabled=false
+PASS: 18 geometry surfaces plus one independently owned electric gate
+PASS: Actual Kaze lands on R18 one-way surface enabled=false
+FAIL: R18 normal exit metadata [18, 17]
+SCRIPT ERROR: Invalid access to property or key 'at' on a base object of type 'Dictionary'.
+          at: run (res://tools/ld_tools_02/qa.gd:94)
+          GDScript backtrace (most recent call first):
+              [0] run (res://tools/ld_tools_02/qa.gd:94)

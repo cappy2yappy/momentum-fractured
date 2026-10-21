@@ -1,0 +1,12 @@
+{
+  "renderer": "Godot 4.6.1 OpenGL 4.1 Metal compatibility / Apple M4",
+  "viewport": [
+    1280,
+    720
+  ],
+  "files": {
+    "edited-authored.png": "9ca0e3a0f020ce16080a113ee681474de13713a6710b030e3b45e31756797fde",
+    "before-legacy.png": "a8bf2cfa4bb34fd89b9530aef37a7d3d52e1fcaa36539b312856ca2ed367f5db",
+    "after-authored.png": "ef5cad1fd5d97b8e59bd89bd39767f762444c6bd4066aea382a053b0c6b1287a"
+  }
+}
