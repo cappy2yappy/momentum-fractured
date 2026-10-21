@@ -70,7 +70,8 @@ var cleared_encounters: Dictionary = {}
 var pending_arrival = Vector2.INF
 var extension = Extension.new()
 var platforms: Array[Rect2] = []
-var boundary_rects: Array[Rect2] = [] # LD-05 visible roof course and footings; never part of `platforms`
+var boundary_rects: Array[Rect2] = []
+var boundary_polys: Array = [] # LD-05 visible roof course and footings; never part of `platforms`
 var tether_anchors: Array[Vector2] = []
 var tether_effect_anchor = Vector2.ZERO
 var tether_effect_time = 0.0
@@ -775,11 +776,11 @@ func _draw():
 		draw_rect(rect, color, false, 4)
 		for y in range(int(rect.position.y) + 18, int(rect.end.y), 34): draw_line(Vector2(rect.position.x, y), Vector2(rect.end.x, y + 16), Color(color, 0.75), 3)
 	if room == 2:
-		for rect in [Rect2(640, 1260, 290, 180), Rect2(1350, 1260, 330, 180), Rect2(2200, 1260, 180, 180)]: draw_water(rect)
+		for rect in [Rect2(640, 1260, 290, 180), Rect2(1350, 1260, 330, 180), Rect2(2200, 1260, 180, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	elif room == 4:
-		for rect in [Rect2(450, 1260, 550, 180), Rect2(1280, 1260, 770, 180)]: draw_water(rect)
+		for rect in [Rect2(450, 1260, 550, 180), Rect2(1280, 1260, 770, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	elif room == 5:
-		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(rect)
+		for rect in [Rect2(500, 1260, 280, 180), Rect2(1500, 1260, 350, 180)]: draw_water(RoomBoundary.pit_rect(rect))
 	for anchor in grapple_candidates():
 		var in_range = player.tether_unlocked and player.can_tether_anchor(anchor)
 		var pulse = 3.0 + sin(player.age * 7.0) * 2.0 if in_range else 0.0
