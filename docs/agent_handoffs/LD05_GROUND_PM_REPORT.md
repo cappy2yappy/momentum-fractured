@@ -37,7 +37,7 @@ Branch `feature/ld05-intentional-world-boundaries` (draft PR #63, base `candidat
 | Door arrivals grounded and not inside a solid | not measured | 54 / 54 | 54 / 54 |
 | Wall chains escaping the room (roof on) | 68 / 91 | 0 / 91 | 0 / 91 |
 | Fly and grapple probes escaping (roof on) | 4 / 46 | 0 / 46 | 0 / 46 |
-| Ground probes escaping | not run | 0 / 11,180 | 0 (R6 re-run after the sill: 0) |
+| Ground probes escaping | not run | 0 / 11,180 | 0 (R6 re-run after the sill: 0 of 348) |
 | Falls outside the 7 pits | not run | 0 | 0 |
 
 Raw data: `docs/ld05/raw/` (`door_walk_*.json`, `ground_probe_gates_*.json.gz`, `ground_findings.json`, `probe_ground_after.json`, `probe_open_top.json`).
@@ -46,7 +46,7 @@ Raw data: `docs/ld05/raw/` (`door_walk_*.json`, `ground_probe_gates_*.json.gz`, 
 
 - `tests/ld05_boundaries.gd`: **171 checks, 0 failures** (was 156). New: 39 of 39 walk exits open on foot; R6 sill solid and platforms unchanged; walk and run opens in 8 of 8 trials from four starts; R7 to R6 arrival clear of the ramp; three pit drops cost 1 HP and recover on solid ground; pit water rectangle and switches. Dash from four starts is printed as information: 3 of 4 open (GN-06).
 - Stock suites run on 658ed34 and on this change under identical conditions (headless, 60 fps), no difference in any count: approved_baseline 30 pass 2 fail, audit_intentional_space 21 / 0, automatic_passage_reliability 296 / 9, canal_geometry 172 / 1, pm_canal_left_passage 56 / 0, world_expansion 191 / 2, annex_traversal 6 / 0, annex_expansion 6 failures both when run alone (one run showed 4 under CPU load: flaky, not a regression), movement_momentum 46 / 11. `approved_combat_swing` times out and `storm_keeper` errors at script line 15 on both. These are pre-existing and are not caused by this change.
-- Not re-run at this head: the PR59 harness `run_qa.py` (issue #42 305 / 0) and the software-GL graphical subset. They were green at a6e3de25 (305 / 0, 67 / 0); the only changes since are `room_boundary.gd`, three `draw_water` call sites and an R6 sill, so rerun them before merge.
+- PR59 harness `run_qa.py --expect-canal` at head 4c8ba174: harness 488 pass / 0 fail (start 10, issue42 49, matrix 136, endpoints 157, canal containment 25), author TR06 issue #42 suite **305 / 0**, stock TR05 suites 1607 / 0, Canal hooks 25 / 0. Its overall verdict is FAIL only because of two failures that exist identically at 658ed34 and 49ae3efe: `automatic_passage_reliability` 9 failures and `verify_tr05_preservation.py` 'expansion build_room PR37 function exact' (the Canal gatehouse hook). Software-GL graphical subset not re-run at this head (it was 67 / 0 at a6e3de25; the only rendering changes are the R6 sill and pit water, captured above).
 
 ## 6. Captures (software GL, llvmpipe; before = 658ed34, after = this change)
 
