@@ -1,0 +1,23 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+GROUNDPROBE 0 surfaces=6 edges=348
+GROUNDPROBE 1 surfaces=6 edges=348
+GROUNDPROBE 2 surfaces=10 edges=360
+GROUNDPROBE 3 surfaces=6 edges=384
+GROUNDPROBE 4 surfaces=7 edges=282
+GROUNDPROBE 5 surfaces=10 edges=394
+GROUNDPROBE 6 surfaces=6 edges=348
+GROUNDPROBE 7 surfaces=6 edges=378
+GROUNDPROBE 8 surfaces=8 edges=480
+GROUNDPROBE 9 surfaces=7 edges=432
+GROUNDPROBE 10 surfaces=7 edges=442
+GROUNDPROBE 11 surfaces=7 edges=434
+GROUNDPROBE 12 surfaces=6 edges=388
+GROUNDPROBE 13 surfaces=18 edges=724
+GROUNDPROBE 14 surfaces=29 edges=1342
+GROUNDPROBE 15 surfaces=10 edges=524
+GROUNDPROBE 16 surfaces=10 edges=504
+GROUNDPROBE 17 surfaces=16 edges=754
+GROUNDPROBE 18 surfaces=16 edges=812
+GROUNDPROBE 19 surfaces=21 edges=982
+GROUNDPROBE 20 surfaces=11 edges=556

@@ -1,0 +1,26 @@
+[
+  {
+    "suite": "ld07_dash_regression",
+    "exit": 1,
+    "seconds": 0.85,
+    "passes": 1,
+    "failures": 1,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-687d9164f2ea4d6db66e804b4072c93a",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/known-dash/project-wzdhr3nm",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/known-dash/ld07_dash_regression-engine.log",
+      "--script",
+      "res://tests/ld07_dash_regression.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/known-dash/project-wzdhr3nm/ld07_dash_regression-save.json",
+      "--test"
+    ]
+  }
+]

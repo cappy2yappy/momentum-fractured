@@ -1,0 +1,54 @@
+[
+  {
+    "suite": "ground_probe",
+    "exit": 0,
+    "seconds": 287.34,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-e99379cee866441b8f6f985ae7d9f44d",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/project-r1p2km6f",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/ground_probe-engine.log",
+      "--script",
+      "res://tools/ld05/ground_probe.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/project-r1p2km6f/ground_probe-save.json",
+      "--test",
+      "--ld05-open-top",
+      "--out=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/ground_probe.json"
+    ]
+  },
+  {
+    "suite": "door_walk_probe",
+    "exit": 0,
+    "seconds": 4.19,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-ff87175b2a064fbdaa7e6e0172041caa",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/project-r1p2km6f",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/door_walk_probe-engine.log",
+      "--script",
+      "res://tools/ld05/door_walk_probe.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/project-r1p2km6f/door_walk_probe-save.json",
+      "--test",
+      "--ld05-open-top",
+      "--out=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/open-top/door_walk_probe.json"
+    ]
+  }
+]

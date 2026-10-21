@@ -1,0 +1,572 @@
+[
+  {
+    "at": [
+      2150.0,
+      850.0
+    ],
+    "double_jump": false,
+    "end": [
+      2185.0,
+      1049.9
+    ],
+    "gate": "cistern_wind_cache",
+    "height": 250.0,
+    "min_feet_y": 851.0,
+    "mode": "chain",
+    "passed": true,
+    "room": 2,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      2150.0,
+      850.0
+    ],
+    "double_jump": true,
+    "end": [
+      2185.0,
+      1049.9
+    ],
+    "gate": "cistern_wind_cache",
+    "height": 250.0,
+    "min_feet_y": 853.0,
+    "mode": "chain",
+    "passed": true,
+    "room": 2,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      2150.0,
+      850.0
+    ],
+    "double_jump": true,
+    "end": [
+      2185.9,
+      405.0
+    ],
+    "gate": "cistern_wind_cache",
+    "height": 250.0,
+    "min_feet_y": 405.0,
+    "mode": "double",
+    "passed": true,
+    "room": 2,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      1990.0,
+      1080.0
+    ],
+    "double_jump": false,
+    "end": [
+      2025.0,
+      1295.5
+    ],
+    "gate": "span_fire_cache",
+    "height": 270.0,
+    "min_feet_y": 1083.0,
+    "mode": "chain",
+    "passed": true,
+    "room": 4,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      1990.0,
+      1080.0
+    ],
+    "double_jump": true,
+    "end": [
+      2025.0,
+      1295.5
+    ],
+    "gate": "span_fire_cache",
+    "height": 270.0,
+    "min_feet_y": 1083.0,
+    "mode": "chain",
+    "passed": true,
+    "room": 4,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      1990.0,
+      1080.0
+    ],
+    "double_jump": true,
+    "end": [
+      2025.0,
+      1295.5
+    ],
+    "gate": "span_fire_cache",
+    "height": 270.0,
+    "min_feet_y": 1083.0,
+    "mode": "double",
+    "passed": true,
+    "room": 4,
+    "side": 1,
+    "supported_start": false
+  },
+  {
+    "at": [
+      2000.0,
+      1300.0
+    ],
+    "double_jump": false,
+    "end": [
+      1970.9,
+      1067.9
+    ],
+    "gate": "relay_electric_seal",
+    "height": 300.0,
+    "min_feet_y": 980.1,
+    "mode": "chain",
+    "passed": false,
+    "room": 7,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2000.0,
+      1300.0
+    ],
+    "double_jump": true,
+    "end": [
+      1947.9,
+      1024.9
+    ],
+    "gate": "relay_electric_seal",
+    "height": 300.0,
+    "min_feet_y": 980.1,
+    "mode": "chain",
+    "passed": false,
+    "room": 7,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2000.0,
+      1300.0
+    ],
+    "double_jump": true,
+    "end": [
+      1970.9,
+      1300.0
+    ],
+    "gate": "relay_electric_seal",
+    "height": 300.0,
+    "min_feet_y": 980.1,
+    "mode": "double",
+    "passed": false,
+    "room": 7,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": false,
+    "end": [
+      2144.3,
+      534.5
+    ],
+    "gate": "terrace_fire_cache",
+    "height": 280.0,
+    "min_feet_y": 354.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 9,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": true,
+    "end": [
+      2143.3,
+      352.1
+    ],
+    "gate": "terrace_fire_cache",
+    "height": 280.0,
+    "min_feet_y": 352.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 9,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": true,
+    "end": [
+      2152.9,
+      379.7
+    ],
+    "gate": "terrace_fire_cache",
+    "height": 280.0,
+    "min_feet_y": 379.7,
+    "mode": "double",
+    "passed": true,
+    "room": 9,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": false,
+    "end": [
+      2144.3,
+      534.5
+    ],
+    "gate": "skyworks_wind_intake",
+    "height": 280.0,
+    "min_feet_y": 354.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 10,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": true,
+    "end": [
+      2143.3,
+      352.1
+    ],
+    "gate": "skyworks_wind_intake",
+    "height": 280.0,
+    "min_feet_y": 352.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 10,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2110.0,
+      810.0
+    ],
+    "double_jump": true,
+    "end": [
+      2152.9,
+      379.7
+    ],
+    "gate": "skyworks_wind_intake",
+    "height": 280.0,
+    "min_feet_y": 379.7,
+    "mode": "double",
+    "passed": true,
+    "room": 10,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": false,
+    "end": [
+      2401.9,
+      430.4
+    ],
+    "gate": "foundry_electric_relay",
+    "height": 300.0,
+    "min_feet_y": 304.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 11,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": true,
+    "end": [
+      2401.9,
+      430.4
+    ],
+    "gate": "foundry_electric_relay",
+    "height": 300.0,
+    "min_feet_y": 304.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 11,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": true,
+    "end": [
+      2412.9,
+      329.7
+    ],
+    "gate": "foundry_electric_relay",
+    "height": 300.0,
+    "min_feet_y": 329.7,
+    "mode": "double",
+    "passed": true,
+    "room": 11,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      500.0,
+      500.0
+    ],
+    "double_jump": false,
+    "end": [
+      530.6,
+      167.9
+    ],
+    "gate": "lower_sluice_wind",
+    "height": 240.0,
+    "min_feet_y": 45.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 15,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      500.0,
+      500.0
+    ],
+    "double_jump": true,
+    "end": [
+      530.6,
+      167.9
+    ],
+    "gate": "lower_sluice_wind",
+    "height": 240.0,
+    "min_feet_y": 45.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 15,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      500.0,
+      500.0
+    ],
+    "double_jump": true,
+    "end": [
+      544.4,
+      69.6
+    ],
+    "gate": "lower_sluice_wind",
+    "height": 240.0,
+    "min_feet_y": 69.6,
+    "mode": "double",
+    "passed": true,
+    "room": 15,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1430.0,
+      420.0
+    ],
+    "double_jump": false,
+    "end": [
+      1460.5,
+      87.9
+    ],
+    "gate": "spire_wind_shutter",
+    "height": 240.0,
+    "min_feet_y": -34.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 17,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1430.0,
+      420.0
+    ],
+    "double_jump": true,
+    "end": [
+      1460.5,
+      87.9
+    ],
+    "gate": "spire_wind_shutter",
+    "height": 240.0,
+    "min_feet_y": -34.9,
+    "mode": "chain",
+    "passed": true,
+    "room": 17,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1430.0,
+      420.0
+    ],
+    "double_jump": true,
+    "end": [
+      1474.3,
+      -10.4
+    ],
+    "gate": "spire_wind_shutter",
+    "height": 240.0,
+    "min_feet_y": -10.4,
+    "mode": "double",
+    "passed": true,
+    "room": 17,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": false,
+    "end": [
+      2400.8,
+      427.9
+    ],
+    "gate": "pump_electric_isolator",
+    "height": 240.0,
+    "min_feet_y": 305.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 18,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": true,
+    "end": [
+      2400.8,
+      427.9
+    ],
+    "gate": "pump_electric_isolator",
+    "height": 240.0,
+    "min_feet_y": 305.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 18,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      2370.0,
+      760.0
+    ],
+    "double_jump": true,
+    "end": [
+      2414.9,
+      329.6
+    ],
+    "gate": "pump_electric_isolator",
+    "height": 240.0,
+    "min_feet_y": 329.6,
+    "mode": "double",
+    "passed": true,
+    "room": 18,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1730.0,
+      480.0
+    ],
+    "double_jump": false,
+    "end": [
+      1760.5,
+      147.9
+    ],
+    "gate": "coil_fire_service",
+    "height": 240.0,
+    "min_feet_y": 25.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 19,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1730.0,
+      480.0
+    ],
+    "double_jump": true,
+    "end": [
+      1760.5,
+      147.9
+    ],
+    "gate": "coil_fire_service",
+    "height": 240.0,
+    "min_feet_y": 25.1,
+    "mode": "chain",
+    "passed": true,
+    "room": 19,
+    "side": 1,
+    "supported_start": true
+  },
+  {
+    "at": [
+      1730.0,
+      480.0
+    ],
+    "double_jump": true,
+    "end": [
+      1774.7,
+      49.6
+    ],
+    "gate": "coil_fire_service",
+    "height": 240.0,
+    "min_feet_y": 49.6,
+    "mode": "double",
+    "passed": true,
+    "room": 19,
+    "side": 1,
+    "supported_start": true
+  }
+]

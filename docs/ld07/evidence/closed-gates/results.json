@@ -1,0 +1,29 @@
+[
+  {
+    "suite": "ground_probe",
+    "exit": 0,
+    "seconds": 320.49,
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "profile": "Kaze-LD07-QA-c706abccfa7b4adc9143bde34ff2f740",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/closed-gates/project-v68ez8pb",
+      "--fixed-fps",
+      "60",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/closed-gates/ground_probe-engine.log",
+      "--script",
+      "res://tools/ld05/ground_probe.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/closed-gates/project-v68ez8pb/ground_probe-save.json",
+      "--test",
+      "--ld05-open-top",
+      "--gates=closed",
+      "--out=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/build/ld07/closed-gates/ground_probe.json"
+    ]
+  }
+]
