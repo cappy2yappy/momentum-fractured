@@ -128,3 +128,41 @@ The regression suite's 26 pre-fix failures are:
 - The pier wall-slide stall (cause 3) remains, as in PR61.
 - `door_turn_to_side` (the TR-08 stand-in) plays in the R0 arrival as before. It is not involved in the hang.
 - ART-08's revised descent (asset commit `750e194f`, new `stair_descend_arrive_settle`) is not bound yet. That stair change is separate from this fix.
+
+## Appendix A: rendered results for the fix
+
+- **Real-time rendered probe** (xvfb, Mesa llvmpipe, no `--fixed-fps`), at `2439d05e`: 111 runs, **0 stuck.** 110 completed; the one other run is `release_at20`, an expected stop on the shelf. Log: `docs/tr08/evidence/hang/probe_after_realtime_rendered.log.txt`.
+- **Issue #42 `automatic_passage_reliability`, rendered** under xvfb at `2439d05e`: **305 / 0, exit 0.** Log: `docs/tr08/evidence/hang/rendered_xvfb_automatic_passage_reliability_2439d05.log.txt`.
+
+## Appendix B: ART-08 revised descent bound (separate commit, after the hang fix)
+
+Applied the coordinator-requested patch `/home/claude/w3-art/docs/art/art08/descent/transition_settle_patch.diff`. It applied cleanly to `tr08_clip_library.gd` and `tr08_stair_stage.gd`:
+- adds the new clip `stair_descend_arrive_settle`, with a labelled stand-in row
+- the settle name checks
+- the descent now ends on `stair_descend_arrive_settle`, the ascent on `stair_arrive_idle_settle`
+
+Assets were copied byte-exact by allowlist from ART-08 head `81679650bcd0ff8ca6f4b6373b6554027264038a` (interface v3). All 12 strips match the manifest SHA256 and bytes (`docs/tr08/ART08_BINDING.json`):
+- **Changed:** `stair_descend_enter`, `stair_descend_loop` and `stair_descend_exit`.
+- **New:** `stair_descend_arrive_settle`.
+- **Byte-identical:** all door clips, so Canal Return is unaffected.
+
+How the combination binds:
+- 12 clips are ART-08 and bound: the 3 descent clips (v2 rig), the new descent settle, the ascent clips, `door_approach_walk` / `door_walk_out`, `door_cross` and `door_emerge`.
+- `door_turn_to_rear` is an ART-08 stand-in, labelled.
+- `door_turn_to_side` is a TR-08 stand-in, labelled, because no file exists.
+
+Descent order is now enter, loop, loop, exit, `stair_descend_arrive_settle`. Ascent is unchanged. The stage builds the new, shorter descent flight from the v3 root motion; I captured and inspected it in `docs/tr08/captures/SHEET_stair_17-14.jpg`.
+
+Tests with this binding:
+
+| Suite | Result |
+| --- | --- |
+| `tr08_embodied_cinematics` | 226 / 0 |
+| `tr08_canal_hang_regression` | 53 / 0 |
+| issue #42, headless | 305 / 0 |
+| `native_cinematic_transitions` | 54 / 0 |
+| `pm_staged_stair_cinematic` | 50 / 0 |
+| `pm_canal_left_passage` | 56 / 0 |
+| `run_tr05_qa.py` | 25 suites, 0 failures |
+
+The Canal Return timeline is identical before and after (diffed).
