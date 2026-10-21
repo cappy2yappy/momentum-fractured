@@ -79,7 +79,7 @@ var afterimages_spawned = 0
 var metsys_progress: Dictionary = {}
 var metsys
 var hud
-var message = "The rooftop relay is dark. Follow the canal route east."
+var message = "The refuge was attacked. I have to find the others."
 var message_time = 7.0
 var transition = 0.0
 var pending_room = -1
@@ -274,14 +274,14 @@ func gate_label(target_room: int) -> String:
 	return "OPEN"
 
 func current_objective() -> String:
-	if not player.double_jump: return "Defeat the Market sentinel and claim Windstep."
+	if not player.double_jump: return "Search for survivors. Defeat the Market sentinel for Windstep."
 	if not player.tether_unlocked: return "Reach Echo Shrine and recover Wind Tether."
 	if not player.dash_unlocked: return "Cross Broken Span and recover Gale Dash."
 	if not boss_defeated: return "Break the Tide Warden's seal."
 	if not completed: return "Restore the Relay Archive."
 	if not has_required_sigils(): return "Survey the annexes: %d / 3 relay sigils recovered." % relay_fragments.size()
 	if room == 10 and not opened_kunai_gates.get("skyworks_wind_intake", false): return "Use Wind Kunai to release the intake seal."
-	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Refuge. Open the Electric relay."
+	if room == 11 and not opened_kunai_gates.get("foundry_electric_relay", false): return "Save at Foundry Rest Station. Open the Electric relay."
 	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
 	if not cleared_encounters.get("storm_keeper", false): return "Follow Signal Terrace east. Reach SkyWorks and face the Storm Keeper."
 	if not skyworks_restored: return "Attune the Keeper Relay beyond the arena."
