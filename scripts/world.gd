@@ -53,6 +53,7 @@ var camera = Camera2D.new()
 var geometry = Node2D.new()
 var room = 0
 var visited = [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+var story = preload("res://scripts/story/story_director.gd").new()
 var expansion = Expansion.new()
 var mixed_transitions = MixedTransitions.new()
 var embodied_transitions = EmbodiedTransitions.new()
@@ -209,6 +210,7 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	story.room_loaded(self, room)
 	RoomBoundary.build(self)
 	BellroofWalk.build(self)
 	mixed_transitions.room_loaded(self)
@@ -285,6 +287,7 @@ func current_objective() -> String:
 	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
 	if not cleared_encounters.get("storm_keeper", false): return "Follow Signal Terrace east. Reach SkyWorks and face the Storm Keeper."
 	if not skyworks_restored: return "Attune the Keeper Relay beyond the arena."
+	if not story.objective_override().is_empty(): return story.objective_override()
 	return "SkyWorks restored. The Undercroft return is open."
 
 func register_metsys_progress():
@@ -605,6 +608,7 @@ func interact():
 		return
 	if expansion.interact(self): return
 	if extension.interact(self): return
+	if story.interact(self): return
 	if room >= 13: return
 	if room > 0 and not cinematic_transitions.automatic(self,room,room-1) and player.position.distance_to(left_exit_position()) < 105:
 		request_room(room - 1)
@@ -686,6 +690,7 @@ func _physics_process(dt):
 		announce("Hidden letter: the next convoy leaves before dawn. Health restored.", 7)
 	extension.update_progress(self)
 	expansion.update(self,dt)
+	story.update(self, dt)
 	if player.position.y > room_size(room).y + 70 and not fall_recovering:
 		call_deferred("recover_from_fall")
 	queue_redraw()
@@ -755,6 +760,7 @@ func load_progress():
 			if visited[i]: metsys.visit_cell(ROOM_MAP_COORDS[i])
 
 func _draw():
+	if story.world != null: story.draw_room(self)
 	if not is_instance_valid(player): return
 	draw_rect(Rect2(Vector2.ZERO,room_size(room)), ROOM_COLORS[room])
 	draw_texture_rect(DistrictBackground, Rect2(Vector2.ZERO,room_size(room)), false, Color(0.72, 0.7, 0.86, 0.92))

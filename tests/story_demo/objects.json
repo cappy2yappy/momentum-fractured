@@ -1,0 +1,70 @@
+{
+  "contract": 1,
+  "objects": [
+    {
+      "id": "disc/r0_int01_note",
+      "room": 0,
+      "at": [
+        700,
+        1300
+      ],
+      "radius": 65,
+      "kind": "read",
+      "title": "[TEST FIXTURE] Note",
+      "pages": [
+        "[TEST FIXTURE] Abandoned note. Provisional text pending ST-05 approval.",
+        "[TEST FIXTURE] The remaining ink is unreadable."
+      ],
+      "once": false,
+      "event": "evt/int01_inspect"
+    },
+    {
+      "id": "disc/r0_int01_machine",
+      "room": 0,
+      "at": [
+        940,
+        1300
+      ],
+      "radius": 65,
+      "kind": "investigate",
+      "title": "[TEST FIXTURE] Machine",
+      "pages": [
+        "[TEST FIXTURE] The casing is damaged."
+      ],
+      "once": false,
+      "event": "evt/int01_machine"
+    },
+    {
+      "id": "disc/r0_int01_memorial",
+      "room": 0,
+      "at": [
+        1180,
+        1300
+      ],
+      "radius": 65,
+      "kind": "memorial",
+      "title": "[TEST FIXTURE] Memorial",
+      "pages": [
+        "[TEST FIXTURE] A quiet place to remember. No named death is asserted."
+      ],
+      "once": false,
+      "event": "evt/int01_inspect"
+    },
+    {
+      "id": "disc/r0_int01_switch",
+      "room": 0,
+      "at": [
+        1420,
+        1300
+      ],
+      "radius": 65,
+      "kind": "activate",
+      "title": "[TEST FIXTURE] Switch",
+      "pages": [
+        "[TEST FIXTURE] The indicator lights up."
+      ],
+      "once": true,
+      "event": "evt/int01_activate"
+    }
+  ]
+}
