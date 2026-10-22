@@ -1,0 +1,14 @@
+{
+  "contract": 1,
+  "rules": [
+    {
+      "trigger": "evt/int01_activate",
+      "effects": [
+        {
+          "kind": "set_flag",
+          "id": "trap/int01_power"
+        }
+      ]
+    }
+  ]
+}
