@@ -1,0 +1,47 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: Authored metadata validates against actual arena surface
+PASS: Reject invalid type
+PASS: Reject invalid hp
+PASS: Reject invalid windup
+PASS: Reject invalid position
+PASS: Reject invalid territory
+PASS: Reject invalid persistent
+PASS: Reject invalid completion_event
+PASS: Reject invalid version
+PASS: Reject invalid speed
+PASS: Reject invalid activation
+PASS: Reject invalid story_flag
+PASS: Invalid/duplicate batch is atomic: no partial spawns
+PASS: Proximity wake cannot deal contact damage
+PASS: Spawn grace protects overlapping melee approach
+PASS: First melee attack must telegraph after activation
+PASS: Facing parry stuns prototype through real controller/damage interface
+PASS: Actual controller melee animation timing damages prototype
+PASS: Guard stays on authored patrol surface
+PASS: Territory loss returns guard toward authored home
+PASS: Ambush stays dormant outside activation radius
+PASS: Ambush gives visible anticipation on proximity trigger
+PASS: Cover blocks sight-based activation
+PASS: Ranged attacker shows a locked aim telegraph
+PASS: Actual jump clears locked projectile aim without tracking
+PASS: Jump evades the first telegraphed projectile
+PASS: Swept projectile stops at cover during 900ms step
+PASS: Actual wind kunai preserves damage behavior
+PASS: Actual fire kunai preserves damage behavior
+PASS: Actual electric kunai preserves damage behavior
+PASS: Actual dash keeps approved protection window
+PASS: Story encounter config accepted
+PASS: Missing story flag fails closed
+PASS: Story flag activates with anticipation
+PASS: Defeat uses namespaced existing save flags and emits completion once
+PASS: Cleared encounter respawn suppressed and completion not replayed
+PASS: Nonpersistent entry respawns despite stored flag
+PASS: Room exit removes owned enemies and projectiles
+PASS: Combined arena registers all three reusable behaviors
+PASS: Combined completion waits for member 1
+PASS: Combined completion waits for member 2
+PASS: Combined completion waits for member 3
+PASS: Actual controller kunai can clear every combined arena member
+EN01 FRAMEWORK: 0 failure(s)

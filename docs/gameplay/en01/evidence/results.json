@@ -1,0 +1,86 @@
+[
+  {
+    "suite": "approved_baseline",
+    "passes": 32,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "approved_baseline.txt"
+  },
+  {
+    "suite": "approved_combat_swing",
+    "passes": 7,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "approved_combat_swing.txt"
+  },
+  {
+    "suite": "en01_framework",
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "en01_framework.txt"
+  },
+  {
+    "suite": "expansion_gates_save",
+    "passes": 17,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "expansion_gates_save.txt"
+  },
+  {
+    "suite": "gameplay_stabilization",
+    "passes": 16,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "gameplay_stabilization.txt"
+  },
+  {
+    "suite": "integration_candidate",
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "integration_candidate.txt"
+  },
+  {
+    "suite": "movement_momentum",
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "movement_momentum.txt"
+  },
+  {
+    "suite": "native_framework",
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "native_framework.txt"
+  },
+  {
+    "suite": "persistence",
+    "passes": 5,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "persistence.txt"
+  },
+  {
+    "suite": "preservation",
+    "passes": 0,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "preservation.txt"
+  },
+  {
+    "suite": "save_compatibility",
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "save_compatibility.txt"
+  },
+  {
+    "suite": "sprite_integration",
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "log": "sprite_integration.txt"
+  }
+]
