@@ -1,0 +1,53 @@
+[
+  {
+    "version": 1,
+    "id": "demo/combined/guard",
+    "type": "guard",
+    "position": [
+      700,
+      620
+    ],
+    "territory": [
+      500,
+      900
+    ],
+    "activation": "proximity",
+    "activation_distance": 500,
+    "completion_event": "demo/combined/clear",
+    "persistent": false
+  },
+  {
+    "version": 1,
+    "id": "demo/combined/ranged",
+    "type": "ranged",
+    "position": [
+      1300,
+      620
+    ],
+    "territory": [
+      1150,
+      1500
+    ],
+    "activation": "proximity",
+    "activation_distance": 500,
+    "completion_event": "demo/combined/clear",
+    "persistent": false
+  },
+  {
+    "version": 1,
+    "id": "demo/combined/ambush",
+    "type": "ambush",
+    "position": [
+      1900,
+      620
+    ],
+    "territory": [
+      1700,
+      2100
+    ],
+    "activation": "proximity",
+    "activation_distance": 220,
+    "completion_event": "demo/combined/clear",
+    "persistent": false
+  }
+]

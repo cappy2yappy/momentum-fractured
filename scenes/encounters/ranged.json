@@ -1,0 +1,19 @@
+[
+  {
+    "version": 1,
+    "id": "demo/ranged/ranged",
+    "type": "ranged",
+    "position": [
+      1400,
+      620
+    ],
+    "territory": [
+      1200,
+      1600
+    ],
+    "activation": "proximity",
+    "activation_distance": 500,
+    "completion_event": "demo/ranged/clear",
+    "persistent": false
+  }
+]

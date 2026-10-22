@@ -1,0 +1,8 @@
+{
+  "scripts/player.gd": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+  "scripts/world.gd": "cb5b0786496c47d1f1e6df1bcb810388c11ee4868ce17afb816acdb819e7b1f2",
+  "scripts/guard.gd": "1bd5e21f384e4a20222d14fad6ba5919d2a72afcee575ff1e2bada1d8a8a0ef1",
+  "scripts/kunai.gd": "e2ee684aef6deefae79d500ff7262647339d235aba99a00b9a32e5df0c035d5a",
+  "scripts/world_expansion.gd": "b458b8df69344b07a96c6f6b22a6b82cb786c349d9f1f1a1ed51419be93be32c",
+  "project.godot": "d2fc5649f8a21d2ccda03ef36a6417bcb4775ce239435e62037997b66bfe52cb"
+}
