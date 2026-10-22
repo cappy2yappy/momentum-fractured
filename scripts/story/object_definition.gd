@@ -5,7 +5,7 @@ const KINDS = ["examine", "read", "investigate", "activate", "memorial"]
 static func valid_id(value) -> bool:
 	if not value is String or value.length() > 48: return false
 	var pattern = RegEx.new()
-	pattern.compile("^(disc|evt|trap|enc|obj)/[a-z][a-z0-9_]*$")
+	pattern.compile("^(disc|evt|trap|enc|obj)/[a-z][a-z0-9_]*(/[a-z][a-z0-9_]*)*$")
 	return pattern.search(value) != null
 
 static func validate(data) -> Array[String]:
@@ -51,3 +51,34 @@ static func validate(data) -> Array[String]:
 
 static func position(row: Dictionary) -> Vector2:
 	return Vector2(row.at[0], row.at[1])
+
+static func validate_rules(data, consumers: Dictionary = {}) -> Array[String]:
+	var errors: Array[String] = []
+	if not data is Dictionary or data.get("contract") != 1 or not data.get("rules") is Array:
+		return ["Expected contract 1 and rules array"]
+	for rule in data.rules:
+		if not rule is Dictionary or not valid_id(rule.get("trigger", "")):
+			errors.append("Rule needs valid event trigger"); continue
+		if not rule.get("requires", []) is Array:
+			errors.append("Rule requires must be an array"); continue
+		for flag in rule.get("requires", []):
+			if not flag is String or flag.is_empty(): errors.append("Invalid required flag")
+		if not rule.get("effects") is Array:
+			errors.append("Rule needs effects array"); continue
+		for effect in rule.effects:
+			if not effect is Dictionary:
+				errors.append("Effect must be an object"); continue
+			var kind = effect.get("kind", "")
+			if not kind in ["set_flag","announce","objective","spawn_encounter","arm_hazard","request_cutin"]:
+				errors.append("Unknown effect: " + str(kind)); continue
+			if kind in ["set_flag","objective"] and not valid_id(effect.get("id", "")):
+				errors.append("Invalid effect flag")
+			if kind == "objective" and not str(effect.get("id", "")).begins_with("obj/"):
+				errors.append("Objective must own an obj/ flag")
+			if kind in ["announce","objective"] and not effect.get("text") is String:
+				errors.append("Effect needs text")
+			if kind in ["spawn_encounter","arm_hazard","request_cutin"] and (not effect.get("id") is String or effect.id.is_empty()):
+				errors.append("Effect needs consumer ID")
+			if kind in ["spawn_encounter","arm_hazard"] and not consumers.get(kind, {}).has(effect.get("id", "")):
+				errors.append("Unknown consumer: " + str(effect.get("id", "")))
+	return errors
