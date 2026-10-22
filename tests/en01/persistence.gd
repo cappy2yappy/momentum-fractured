@@ -17,6 +17,7 @@ func run():
 	var c={"version":1,"id":"regression/disk","type":"guard","position":[700,1300],"territory":[500,900],"persistent":true,"activation":"immediate","completion_event":"regression/complete"}
 	var runtime=Encounter.new(); w.add_child(runtime)
 	check(runtime.configure(w,[c]).is_empty(),"Persistent prototype attaches to actual campaign host")
+	w.player.set_physics_process(true)
 	var e=runtime.members[0]; e.state="patrol"; e.receive_hit(100)
 	await process_frame
 	var saved=JSON.parse_string(FileAccess.get_file_as_string(w.save_path))
