@@ -12,6 +12,7 @@ var heading: Label
 var body: RichTextLabel
 var counter: Label
 var next_button: Button
+var opening_release = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -55,6 +56,7 @@ func _ready():
 	visible = false
 
 func inspect(w, row: Dictionary):
+	if opened: close()
 	world = w
 	pages = row.get("pages", []).duplicate()
 	if pages.is_empty(): pages = [row.get("description", "No readable content is available.")]
@@ -66,6 +68,7 @@ func inspect(w, row: Dictionary):
 	prior_pause = get_tree().paused
 	prior_hud_input = world.hud.is_processing_input()
 	world.hud.set_process_input(false)
+	opening_release = Input.is_action_pressed("interact")
 	opened = true
 	visible = true
 	get_tree().paused = true
@@ -76,7 +79,7 @@ func refresh():
 	body.text = pages[page]
 	body.scroll_to_line(0)
 	counter.text = "%d / %d   ·   ↑↓ scroll   ·   ←→ choose control" % [page + 1, pages.size()]
-	next_button.text = "Continue  ·  E / A" if page + 1 < pages.size() else "Done  ·  E / A"
+	next_button.text = "Continue  ·  E / X / A" if page + 1 < pages.size() else "Done  ·  E / X / A"
 
 func advance():
 	if not opened: return
@@ -107,7 +110,9 @@ func _input(event):
 	if event is InputEventKey and event.echo:
 		get_viewport().set_input_as_handled(); return
 	if event.is_action_released("pause") or event.is_action_released("ui_cancel"): close()
-	elif event.is_action_released("interact"): advance()
+	elif event.is_action_released("interact"):
+		if opening_release: opening_release = false
+		else: advance()
 	elif event.is_action_released("ui_accept"):
 		var focused = get_viewport().gui_get_focus_owner()
 		if focused is Button: focused.pressed.emit()

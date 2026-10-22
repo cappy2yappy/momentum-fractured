@@ -8,9 +8,33 @@ var rules: Array = []
 var pending: Array = []
 var dirty = false
 var lines: Array[String] = []
+var pending_encounters: Dictionary = {}
+var effect_consumers: Dictionary = {"spawn_encounter": {}, "arm_hazard": {}}
+var cutin_presenter
+
+func control_ready() -> bool:
+	return world.transition <= 0 and not world.get_tree().paused and world.player.hp > 0 and world.player.is_physics_processing()
+
+func register_effect_consumer(kind: String, id: String, handler: Callable) -> bool:
+	if not effect_consumers.has(kind) or id.is_empty() or not handler.is_valid(): return false
+	if effect_consumers[kind].has(id): return false
+	effect_consumers[kind][id] = handler
+	return true
+
+func request_cutin(id: String) -> void:
+	if is_instance_valid(cutin_presenter): cutin_presenter.request_cutin(id)
 
 func configure(w):
 	world = w
+	# Explicit gamepad bindings avoid platform-dependent built-in UI defaults.
+	var buttons = {"interact": JOY_BUTTON_X, "ui_accept": JOY_BUTTON_A,
+		"ui_cancel": JOY_BUTTON_B, "ui_left": JOY_BUTTON_DPAD_LEFT,
+		"ui_right": JOY_BUTTON_DPAD_RIGHT, "ui_up": JOY_BUTTON_DPAD_UP,
+		"ui_down": JOY_BUTTON_DPAD_DOWN}
+	for action in buttons:
+		var button = InputEventJoypadButton.new()
+		button.button_index = buttons[action]
+		InputMap.action_add_event(action, button)
 	panel = InspectionPanel.new()
 	world.add_child(panel)
 	load_data("res://data/story/objects.json", "res://data/story/rules.json")
@@ -19,7 +43,7 @@ func load_data(objects_path: String, rules_path: String) -> bool:
 	var data = JSON.parse_string(FileAccess.get_file_as_string(objects_path))
 	if not Definition.validate(data).is_empty(): return false
 	var rule_data = JSON.parse_string(FileAccess.get_file_as_string(rules_path))
-	if not rule_data is Dictionary or rule_data.get("contract") != 1 or not rule_data.get("rules") is Array: return false
+	if not Definition.validate_rules(rule_data, effect_consumers).is_empty(): return false
 	objects = data.objects
 	rules = rule_data.rules
 	return true
@@ -34,14 +58,29 @@ func set_flag(flag_id: String) -> bool:
 	flush_save()
 	return true
 
+func record_encounter(id: String) -> void:
+	# Retain only an ID: defeated enemy nodes may be freed before control returns.
+	if not world.cleared_encounters.get(id, false): pending_encounters[id] = true
+	flush_encounters()
+
+func flush_encounters() -> void:
+	if not control_ready(): return
+	for id in pending_encounters:
+		if not world.cleared_encounters.get(id, false):
+			world.cleared_encounters[id] = true
+			dirty = true
+	pending_encounters.clear()
+	flush_save()
+
 func flush_save():
-	if dirty and world.transition <= 0 and not world.test_mode:
+	if dirty and control_ready() and not world.test_mode:
 		dirty = not world.save_progress()
 
 func report(event_id: String, context: Dictionary = {}) -> void:
 	if not Definition.valid_id(event_id): return
-	if world.transition > 0:
+	if not control_ready():
 		pending.append([event_id, context.duplicate(true)]); return
+	var cutins: Array[String] = []
 	for rule in rules:
 		if rule.get("trigger") != event_id or not meets(rule.get("requires", [])): continue
 		for effect in rule.get("effects", []):
@@ -49,7 +88,14 @@ func report(event_id: String, context: Dictionary = {}) -> void:
 				"set_flag", "objective": set_flag(effect.get("id", ""))
 				"announce":
 					if lines.size() < 3: lines.append(effect.get("text", ""))
-				"request_cutin": pass # Presentation never owns progression.
+				"spawn_encounter", "arm_hazard":
+					var kind = effect.kind
+					var consumer = effect_consumers[kind].get(effect.get("id", ""), Callable())
+					if consumer.is_valid(): consumer.call(context.duplicate(true))
+					else: push_error("Missing story effect consumer: " + str(effect))
+				"request_cutin": cutins.append(effect.get("id", ""))
+	# State is committed before presentation, regardless of data row ordering.
+	for id in cutins: request_cutin(id)
 
 func meets(flags: Array) -> bool:
 	for flag in flags:
@@ -66,15 +112,16 @@ func objective_override() -> String:
 func room_loaded(w, _room: int) -> void:
 	if world == null: configure(w)
 	if is_instance_valid(panel): panel.close()
+	if is_instance_valid(cutin_presenter): cutin_presenter.cancel("room_loaded")
 
 func safe_placement(row: Dictionary) -> bool:
 	var at = Definition.position(row)
 	var radius = row.get("radius", 65)
-	for portal in world.cinematic_transitions.endpoints(world, row.room):
+	for portal in world.cinematic_transitions.endpoints(world, int(row.room)):
 		if at.distance_to(portal.at) <= radius + 200: return false
 	var checkpoints = {0:[Vector2(220,1300),95],3:[Vector2(1320,1300),115],7:[Vector2(2200,1300),140],8:[Vector2(2060,1300),100],11:[Vector2(1720,1300),100],12:[Vector2(2220,1300),120],16:[Vector2(420,1120),85],20:[Vector2(600,520),85]}
-	if row.room in checkpoints:
-		var c = checkpoints[row.room]
+	if int(row.room) in checkpoints:
+		var c = checkpoints[int(row.room)]
 		if at.distance_to(c[0]) <= radius + c[1]: return false
 	return true
 
@@ -90,7 +137,7 @@ func candidate() -> Dictionary:
 	return selected
 
 func interact(_w) -> bool:
-	if world.transition > 0 or world.get_tree().paused or world.player.hp <= 0: return false
+	if world.transition > 0 or world.get_tree().paused or world.player.hp <= 0 or panel.opened: return false
 	var row = candidate()
 	if row.is_empty(): return false
 	if row.get("persistent", true): set_flag(row.id)
@@ -99,9 +146,11 @@ func interact(_w) -> bool:
 	return true
 
 func update(_w, _dt) -> void:
-	if world.transition > 0: return
+	if is_instance_valid(cutin_presenter): cutin_presenter.update(world, _dt)
+	if not control_ready(): return
 	var queued = pending.duplicate(); pending.clear()
 	for item in queued: report(item[0], item[1])
+	flush_encounters()
 	flush_save()
 	if world.message_time <= 0 and not lines.is_empty(): world.announce(lines.pop_front())
 
@@ -112,4 +161,4 @@ func draw_room(w):
 		w.draw_rect(Rect2(at - Vector2(18,36), Vector2(36,36)), Color("74baa4") if has(row.id) else Color("c6a876"))
 	var row = candidate()
 	if not row.is_empty():
-		w.draw_string(ThemeDB.fallback_font, Definition.position(row) + Vector2(-60,-55), row.get("prompt", row.kind.capitalize()) + " · E", HORIZONTAL_ALIGNMENT_LEFT, -1, 20)
+		w.draw_string(ThemeDB.fallback_font, Definition.position(row) + Vector2(-60,-55), row.get("prompt", row.kind.capitalize()) + " · E / X", HORIZONTAL_ALIGNMENT_LEFT, -1, 20)

@@ -404,8 +404,11 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 	enemies.erase(enemy)
 	var encounter_id = str(enemy.get_meta("persistent_id", ""))
 	if not encounter_id.is_empty():
-		cleared_encounters[encounter_id] = true
-		save_progress()
+		if enemy.get_meta("story_managed_encounter", false):
+			story.record_encounter(encounter_id)
+		else:
+			cleared_encounters[encounter_id] = true
+			save_progress()
 	if active_enemy == enemy: active_enemy = null
 	if guard == enemy: guard = null
 	if is_boss and enemy.get_meta("progression_boss", "tide_warden") == "tide_warden":
@@ -755,7 +758,6 @@ func load_progress():
 			if visited[i]: metsys.visit_cell(ROOM_MAP_COORDS[i])
 
 func _draw():
-	if story.world != null: story.draw_room(self)
 	if not is_instance_valid(player): return
 	draw_rect(Rect2(Vector2.ZERO,room_size(room)), ROOM_COLORS[room])
 	draw_texture_rect(DistrictBackground, Rect2(Vector2.ZERO,room_size(room)), false, Color(0.72, 0.7, 0.86, 0.92))
@@ -816,6 +818,7 @@ func _draw():
 		draw_string(ThemeDB.fallback_font, Vector2(2080, 1035), "RELAY CONTROL", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("e6dcc4"))
 	extension.draw_room(self)
 	expansion.draw_room(self)
+	if story.world != null: story.draw_room(self)
 	draw_string(ThemeDB.fallback_font, Vector2(980, 260), ROOM_NAMES[room], HORIZONTAL_ALIGNMENT_CENTER, 640, 32, Color(0.9, 0.84, 0.75, 0.55))
 
 func draw_tether_effect():
