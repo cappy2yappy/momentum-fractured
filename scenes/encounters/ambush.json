@@ -1,0 +1,19 @@
+[
+  {
+    "version": 1,
+    "id": "demo/ambush/ambush",
+    "type": "ambush",
+    "position": [
+      700,
+      620
+    ],
+    "territory": [
+      500,
+      900
+    ],
+    "activation": "proximity",
+    "activation_distance": 220,
+    "completion_event": "demo/ambush/clear",
+    "persistent": false
+  }
+]

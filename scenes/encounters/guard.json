@@ -1,0 +1,19 @@
+[
+  {
+    "version": 1,
+    "id": "demo/guard/guard",
+    "type": "guard",
+    "position": [
+      700,
+      620
+    ],
+    "territory": [
+      500,
+      900
+    ],
+    "activation": "proximity",
+    "activation_distance": 500,
+    "completion_event": "demo/guard/clear",
+    "persistent": false
+  }
+]
