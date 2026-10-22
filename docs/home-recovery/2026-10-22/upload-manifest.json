@@ -1,0 +1,148 @@
+{
+  "destination": "https://github.com/cappy2yappy/momentum-fractured.git",
+  "public": true,
+  "connected_account_has_admin_and_push": true,
+  "new_blob_count": 23,
+  "new_blobs": [
+    {
+      "path": "docs/HOME_HANDOFF_2026-10-22.md",
+      "sha": "0a2911859e3b84716b4acf7c003905f13f136d1c",
+      "bytes": 1011,
+      "flags": []
+    },
+    {
+      "path": "docs/int01/README.md",
+      "sha": "b1325f1ab20eba8ad5034b8b557b4eb0dfbedd3e",
+      "bytes": 4876,
+      "flags": []
+    },
+    {
+      "path": "scripts/story/inspection_panel.gd.uid",
+      "sha": "f3bda992e739be62ea4f8ebcf567e5ea81c613dc",
+      "bytes": 20,
+      "flags": []
+    },
+    {
+      "path": "scripts/story/object_definition.gd.uid",
+      "sha": "02aea2fa96a2be1a7b3ff25c18ce40d680bc2550",
+      "bytes": 20,
+      "flags": []
+    },
+    {
+      "path": "scripts/story/story_director.gd.uid",
+      "sha": "a77cb3b01ca06decfe2258f6d8d87b2ec29df66a",
+      "bytes": 20,
+      "flags": []
+    },
+    {
+      "path": "tests/story_demo/demo.gd.uid",
+      "sha": "c0a900f423f0ce974172c19b29d76c63296f57f2",
+      "bytes": 20,
+      "flags": []
+    },
+    {
+      "path": ".github/workflows/parity-playtest-build.yml",
+      "sha": "9f333bcbfc6511866debb4cab54857da6ba4b172",
+      "bytes": 5656,
+      "flags": []
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "sha": "a327eca4400d4662ba9db31a1c64b6f70e7c8b22",
+      "bytes": 5035,
+      "flags": []
+    },
+    {
+      "path": "README.md",
+      "sha": "3ef6336ad0ec71f5fb70176230fc632c55363b33",
+      "bytes": 5807,
+      "flags": []
+    },
+    {
+      "path": "RECOVERY_REPORT.md",
+      "sha": "4ad425140fa0dbd6ebe103d08b324f1ad2481cdd",
+      "bytes": 7521,
+      "flags": []
+    },
+    {
+      "path": "docs/HOME_HANDOFF_2026-10-22.md",
+      "sha": "b286a1f38ff44051865005aedb1b4cf5a265a352",
+      "bytes": 1003,
+      "flags": []
+    },
+    {
+      "path": "scripts/systems/game_state.gd",
+      "sha": "062fc7f1d5f59d5f7603c1151f190d4e76fe5a58",
+      "bytes": 9996,
+      "flags": []
+    },
+    {
+      "path": "docs/HOME_HANDOFF_2026-10-22.md",
+      "sha": "05fa6f9830d960a876eab45133e1d0ee290e0492",
+      "bytes": 1012,
+      "flags": []
+    },
+    {
+      "path": "docs/alpha07/integration_qa/REPORT.md",
+      "sha": "f6cf7aa510f3323e0fe98919c0db0990bd4a93d7",
+      "bytes": 9088,
+      "flags": []
+    },
+    {
+      "path": "docs/int01/README.md",
+      "sha": "44ccdecd041ce5ae65ecf076a04d9427d93c8167",
+      "bytes": 4521,
+      "flags": []
+    },
+    {
+      "path": "export_presets.cfg",
+      "sha": "2c60675b06a35d3182116c9d5175651502804433",
+      "bytes": 1499,
+      "flags": []
+    },
+    {
+      "path": "scripts/story/inspection_panel.gd",
+      "sha": "8a7c584f0d1aa82f160203912af01ecf0df2a066",
+      "bytes": 4520,
+      "flags": []
+    },
+    {
+      "path": "scripts/story/story_director.gd",
+      "sha": "962235c9c86138c05b698b4a729be8796304b7d9",
+      "bytes": 6471,
+      "flags": []
+    },
+    {
+      "path": "scripts/world.gd",
+      "sha": "65df179e2e1db6a5cdba34386c3dff5a38fb108d",
+      "bytes": 39733,
+      "flags": []
+    },
+    {
+      "path": "tests/alpha07_qa/run_regressions.py",
+      "sha": "bd1a873aee0e160d834c2e56728622c557b31d45",
+      "bytes": 2344,
+      "flags": []
+    },
+    {
+      "path": "tests/story_demo/contracts.gd",
+      "sha": "1941ac9946c1b90fded689b20399a40974fe6409",
+      "bytes": 5443,
+      "flags": []
+    },
+    {
+      "path": "docs/HOME_HANDOFF_2026-10-22.md",
+      "sha": "8702a4ef17b275cc192e1fdcfb678009e7cb404f",
+      "bytes": 1130,
+      "flags": []
+    },
+    {
+      "path": "scripts/world.gd",
+      "sha": "38bcca3ef89cfb5fff783a092c4e5c4d0c70e464",
+      "bytes": 39628,
+      "flags": []
+    }
+  ],
+  "blocked": [],
+  "new_binary_payloads": 0
+}

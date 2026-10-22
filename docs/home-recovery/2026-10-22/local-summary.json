@@ -1,0 +1,242 @@
+{
+  "timestamp_utc": "2026-10-22T21:37:33.849670+00:00",
+  "scope": [
+    "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/st05-narrative",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/art03-recovery",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/narrative",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-qa",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ci02-default",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-readiness",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/build-int-tr03-art04",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/coordination",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance-before",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/en01-enemy-encounters",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/interaction",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld-tools-02",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/repository",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01",
+    "/Users/tonysantiago/Documents/Playground/momentum-fractured",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ci01-alpha061",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/art02-validation",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-01",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-interactables",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01-comparison",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-alpha061",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/art05-animation",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/haz01-toolkit",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/asset01",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-qa-authoritative",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04",
+    "/Users/tonysantiago/Documents/Playground/momentum-fractured/momentum-fractured",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01-remote-followup",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/output",
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/tmp",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/outputs",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work",
+    "/Users/tonysantiago/Downloads/Packs",
+    "/Users/tonysantiago/Documents/Playground/recovery-archives",
+    "/Users/tonysantiago/momentum-fractured-main",
+    "/Users/tonysantiago/m-0m-3-ntum-godot-(1)",
+    "/Users/tonysantiago/m-0m-3-ntum-godot-(2)",
+    "/Users/tonysantiago/m-0m-3-ntum-godot-(3)",
+    "/Users/tonysantiago/m-0m-3-ntum-godot-(4)",
+    "/Users/tonysantiago/Documents/Codex/2026-10-13/files-pasted-by-the-user-kaze",
+    "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative"
+  ],
+  "counts": {
+    "local-report-or-other": 2237,
+    "local-profile-or-save": 753,
+    "generated-preview-build-or-art-reference": 6982,
+    "generated-import-metadata": 1752,
+    "reproducible-disposable-test": 19,
+    "local-helper-source": 385,
+    "local-recording": 3,
+    "source-or-third-party-staging-do-not-publish": 2235
+  },
+  "bytes": {
+    "local-report-or-other": 1353530488,
+    "local-profile-or-save": 18741092,
+    "generated-preview-build-or-art-reference": 13159746894,
+    "generated-import-metadata": 1703622,
+    "reproducible-disposable-test": 89112,
+    "local-helper-source": 1845637,
+    "local-recording": 9586772,
+    "source-or-third-party-staging-do-not-publish": 536612073
+  },
+  "cache_directories": [
+    {
+      "path": "/Users/tonysantiago/Documents/Playground/momentum-fractured-recovery/.godot",
+      "files": 103,
+      "bytes": 13335982
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/narrative/.godot",
+      "files": 672,
+      "bytes": 100835527
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-qa/.godot",
+      "files": 787,
+      "bytes": 104768688
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ci02-default/.godot",
+      "files": 71,
+      "bytes": 546950
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/build-int-tr03-art04/build/game-source/.godot",
+      "files": 537,
+      "bytes": 38295614
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance-before/.godot",
+      "files": 352,
+      "bytes": 18273968
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int-tr03-art04-live/.godot",
+      "files": 789,
+      "bytes": 94317634
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/en01-enemy-encounters/.godot",
+      "files": 352,
+      "bytes": 18272066
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation/.godot",
+      "files": 672,
+      "bytes": 100835175
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld-tools-02/.godot",
+      "files": 497,
+      "bytes": 44830579
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01/.godot",
+      "files": 640,
+      "bytes": 91343068
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Playground/momentum-fractured/.godot",
+      "files": 115,
+      "bytes": 3110508
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ci01-alpha061/.godot",
+      "files": 425,
+      "bytes": 18389741
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-01/.godot",
+      "files": 660,
+      "bytes": 97304636
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-interactables/.godot",
+      "files": 640,
+      "bytes": 91343003
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-alpha061/.godot",
+      "files": 537,
+      "bytes": 48578663
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/art05-animation/.godot",
+      "files": 524,
+      "bytes": 46873724
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/haz01-toolkit/.godot",
+      "files": 652,
+      "bytes": 88548492
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/asset01/tools/asset01/gallery/.godot",
+      "files": 6,
+      "bytes": 643
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/tr01-alpha061/.godot",
+      "files": 649,
+      "bytes": 66352316
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-qa-authoritative/.godot",
+      "files": 672,
+      "bytes": 100841390
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/ld07-recovery/.godot",
+      "files": 586,
+      "bytes": 67344667
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance/.godot",
+      "files": 352,
+      "bytes": 18272712
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/aud01-alpha061/.godot",
+      "files": 499,
+      "bytes": 20912793
+    },
+    {
+      "path": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01-remote-followup/.godot",
+      "files": 640,
+      "bytes": 91343736
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/art04-level-reference/.godot",
+      "files": 466,
+      "bytes": 39226825
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/build05-integrated-macos/build/game-source/.godot",
+      "files": 553,
+      "bytes": 42811092
+    },
+    {
+      "path": "/Users/tonysantiago/momentum-fractured-main/.godot",
+      "files": 115,
+      "bytes": 3070956
+    },
+    {
+      "path": "/Users/tonysantiago/m-0m-3-ntum-godot-(1)/.godot",
+      "files": 109,
+      "bytes": 3062101
+    },
+    {
+      "path": "/Users/tonysantiago/m-0m-3-ntum-godot-(2)/.godot",
+      "files": 105,
+      "bytes": 3013819
+    },
+    {
+      "path": "/Users/tonysantiago/m-0m-3-ntum-godot-(3)/.godot",
+      "files": 105,
+      "bytes": 3012170
+    },
+    {
+      "path": "/Users/tonysantiago/m-0m-3-ntum-godot-(4)/.godot",
+      "files": 105,
+      "bytes": 3013878
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Cache contents aggregated by directory; not hashed.",
+    "Concurrent asset01-controlled session excluded here and audited in the final session snapshot.",
+    "Standalone old exports inventoried, not asserted to be canonical or safe to integrate."
+  ]
+}

@@ -1,0 +1,17 @@
+# ASSET-01 controlled pilot handoff
+
+Goal: controlled adoption readiness for six creator-supplied itch.io packs in Alpha 0.7. No production placements or merge. Owner: Codex, isolated `codex/asset01-controlled-pilots`; base remote PR92 `2dd5c4f671a34424e65c8399013d3a44e50b1350` (local identical tree at `9439b1f7db804745463f3103a83981daae8e24b4`).
+
+Done: inspect PR92 and exact staged originals; retain all six archive and 1,106 file pins; record project creator attestation separately from publisher evidence; preserve no standalone redistribution, including modified assets; prepare seven exact local review selections; add optional presentation-only companions to the existing EN-01/HAZ-01 labs. See [CONTROLLED_PILOTS.md](CONTROLLED_PILOTS.md), [pilot-plan.json](pilot-plan.json) and [LICENSES.md](LICENSES.md).
+
+Files: license JSON/CSV and LICENSES; compatibility/readme/handoff; pilot plan and controlled-pilot instructions; review launcher, gallery selection arguments, external host presentation script; follow-up inventory and textual validation evidence. Original payloads, editable files and native captures remain local. The existing intake evidence/inventories remain unchanged.
+
+Deviation from the former handoff: the Kaze creator's explicit shared-conditions attestation now authorizes controlled pilots for the DarkCave pair as well. Their remaining publisher terms are still independently unverified; no Maaot-authenticated grant or screenshot transcription is claimed. Production placement needs explicit creator approval for every selected treatment and room/anchor.
+
+Environment: Python 3; Godot 4.6.1; the six original hash-pinned archives and extracted local staging, with gallery.json matching the tracked inventory. Optional host labs require a separate clean checkout of compliance PR87 `5172db6898f3efc35b74f3c134293049165b9bf7`, already imported by Godot. Host launch refuses Candidate 3 or a different/dirty tracked checkout. Explicit logs are under ignored build/asset01 to avoid user-log permissions. Native window access may be needed in a sandbox.
+
+Next owners: Art Mane reviews FOL-01/FOL-02/SCN-01 first, SCN-02 next, and accepts or rejects slicing/scale/pivots/edges. Level reviews exact creator-marked room anchors against unchanged colliders, occlusion, safe floors, doors/checkpoints/interactables and frame budget. Gameplay retains EN-01/HAZ-01 state/timing/damage ownership and supplies missing action cue requirements; current Slime/Poison loops are companion comparisons only. Claude retains provenance and owns a later integration draft. Creator approval precedes production placements; all room/anchor fields remain null.
+
+Risks: painted style and large canvases; unknown timing/pivots; missing Slime combat poses; Poison name supplies no new mechanic; HAZ course has its pre-existing isolated collapse prototype, which remains excluded from production adoption. No performance approval, campaign save/reload acceptance, physical-controller result, Windows result or complete playthrough is claimed. No raw/derivative asset publication is permitted by this handoff.
+
+Verification and exact changed-file inventory: see follow-up evidence and FOLLOWUP_CHANGED_FILES.json. Existing PR92's 49 captures and 2,533-check results remain historical evidence; follow-up reruns are labelled separately. Commit before publishing; publish the metadata/tools-only draft, retain dirty/uncommitted work disclosure if any, and request owner review without merging.
