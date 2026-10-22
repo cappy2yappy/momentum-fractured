@@ -1,0 +1,30 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: opening_review suspends input once
+PASS: opening_review completes and restores control
+PASS: opening_review preserves progression and gameplay camera
+PASS: opening_review leaves save bytes intact
+PASS: record_review suspends input once
+PASS: record_review completes and restores control
+PASS: record_review preserves progression and gameplay camera
+PASS: record_review leaves save bytes intact
+PASS: fallen_clan_review suspends input once
+PASS: fallen_clan_review completes and restores control
+PASS: fallen_clan_review preserves progression and gameplay camera
+PASS: fallen_clan_review leaves save bytes intact
+PASS: keyboard skip restores control
+PASS: synthetic gamepad B skip restores control
+PASS: focus loss restores lease
+PASS: pause releases input lease before resume
+PASS: request defers throughout loader
+PASS: zero timer alone does not imply restored control
+PASS: queued request begins after control restored
+PASS: interrupt leaves transition input ownership intact
+PASS: reduced presentation completes
+PASS: disabled presentation has identical gameplay state
+PASS: unknown cut-in rejected safely
+PASS: integration owner room-rebuild cancellation releases lease
+PASS: all interruption paths preserve progression
+STORY CINEMATICS: 25 checks, 0 failure(s)

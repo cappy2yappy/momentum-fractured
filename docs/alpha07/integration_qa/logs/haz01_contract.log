@@ -1,0 +1,22 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Reject warning below 0.6 seconds
+PASS: Reject warning below 0.6 seconds
+PASS: Accept 0.6 second warning
+PASS: Surveyed damage volume valid
+PASS: Reject surveyed exclusion overlap
+PASS: Reject surveyed exclusion overlap
+PASS: Reject surveyed exclusion overlap
+PASS: Reject surveyed exclusion overlap
+PASS: Reject new unsupported geometry
+PASS: Reject unproven only route
+PASS: Reject collider-producing collapse from production
+PASS: Missing enabling flag fails closed
+PASS: Enable waits while occupied
+PASS: Enable applies after player clears
+PASS: Disable also waits while occupied
+PASS: Disable applies after player clears
+PASS: Adapter does not mutate flag storage
+HAZ01 CONTRACT: 0 failures

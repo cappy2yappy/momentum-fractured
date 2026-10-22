@@ -1,0 +1,335 @@
+{
+  "base": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+  "checks": [
+    {
+      "pass": true,
+      "label": "configure_input exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "can_enter exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "world_edges exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "room_size exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "left_exit_position exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "right_exit_position exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "save_progress exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "load_progress exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "recover_from_fall exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "add_platform exact PR78 body"
+    },
+    {
+      "pass": true,
+      "label": "scripts/player.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/guard.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/world_expansion.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/route_extension.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/skyworks_region.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/level_geometry.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/cinematic_transitions.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "scripts/bellroof_walk.gd byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "world/MapData.txt byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "project.godot byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "47 approved/candidate art files byte-exact PR78"
+    },
+    {
+      "pass": true,
+      "label": "export only two exact contract-required include-filter extensions"
+    },
+    {
+      "pass": true,
+      "label": "world.gd entire file equals PR78 after only the six hooks plus director declaration are removed"
+    }
+  ],
+  "asset_hashes": [
+    {
+      "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+      "sha256": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+      "same": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+      "sha256": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+      "same": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_run_strip.png",
+      "sha256": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+      "same": true
+    },
+    {
+      "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+      "sha256": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+      "same": true
+    },
+    {
+      "path": "assets/kaze/cleaned/source_boundary_manifest.json",
+      "sha256": "2802c4da483618abce586c792bea367364db4dc9feeec826047ccd57cd40ba47",
+      "same": true
+    },
+    {
+      "path": "assets/kaze/cleaned/source_final_manifest.json",
+      "sha256": "1350d9b225ab7054fccf8ce34461c9bc21d6c27f83c51b543ce24825b236eb6c",
+      "same": true
+    },
+    {
+      "path": "assets/web/area-atlas.png",
+      "sha256": "7177e1a96a17157c26c18161b68bef47fffc8a45a1c2f1d03092f14611e44a0f",
+      "same": true
+    },
+    {
+      "path": "assets/web/bosses_strip.png",
+      "sha256": "d526a63f9ae568fa762518350d65269aefa67dc0e298a28eda0c7f4df5c9b1ba",
+      "same": true
+    },
+    {
+      "path": "assets/web/district-fidelity.png",
+      "sha256": "ad85520ea52c1024781d44cadbae3b21c0fe8b4474c1c060eef2b2ba88076afa",
+      "same": true
+    },
+    {
+      "path": "assets/web/kaze_combat_strip.png",
+      "sha256": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b",
+      "same": true
+    },
+    {
+      "path": "assets/web/kaze_idle_strip.png",
+      "sha256": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762",
+      "same": true
+    },
+    {
+      "path": "assets/web/kaze_manifest.json",
+      "sha256": "284c5f4b72dd7bd9b1501490efe045548a12a8c95e9826fc9d5efa6bdb278286",
+      "same": true
+    },
+    {
+      "path": "assets/web/kaze_run_strip.png",
+      "sha256": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80",
+      "same": true
+    },
+    {
+      "path": "assets/web/kaze_traversal_strip.png",
+      "sha256": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751",
+      "same": true
+    },
+    {
+      "path": "assets/web/sentinels_strip.png",
+      "sha256": "65622dacd0ea7bc5333da972383dae12b8ba5cff8cb001d45dbe3a1391f95dba",
+      "same": true
+    },
+    {
+      "path": "assets/web/terrain-materials.png",
+      "sha256": "4e1467905844cc25b3f464933f3cbebe3a3a120217d457362b30fcea0233d721",
+      "same": true
+    },
+    {
+      "path": "assets/art04/ART04_ASSETS.json",
+      "sha256": "26215967d56335734644702a342f7b36bcc85df38d853522116885da5b652085",
+      "same": true
+    },
+    {
+      "path": "assets/art04/MANIFEST.json",
+      "sha256": "5b6f84347a140e45be55a1e88593f9b2d507eb680d5252ff1a329e9ffeee4065",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/door_combined.png",
+      "sha256": "0685b67ad7960e913f4e231e95e929f0a0ad7942b68e65baa3457fe54ebb9963",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/r14_door_back.png",
+      "sha256": "71364e0a504c983243bbd1f5ade39b55f4e25a5af17be949b2b94ab014948819",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/r14_door_front.png",
+      "sha256": "0184433a0ecded9253b8b4adb316f4276e61a7ceb871fc4be532f337212022b3",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/r14_door_interior.png",
+      "sha256": "5df710af0a37840910d76aaf15b34b00adc6dde4dbfff47e7bf6af3fe0b66e57",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/r14_roof_support.png",
+      "sha256": "f07ab1d8cd92ffd7d4a2fa8a0ae1db313405407c1a68621fac60e4914b4c021a",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/r15_masonry_support.png",
+      "sha256": "a130dcb3d596d7a004caf6231eccb3318fe172600b5a75ec5c76a0281dd1a756",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/stair_flight_right.png",
+      "sha256": "27b8a288790c5426baece3622a2fa929fc0a6599dd493147f62b0e0e74046af5",
+      "same": true
+    },
+    {
+      "path": "assets/art04/environment/stair_front_lip.png",
+      "sha256": "e58900f5fc2cf386bdcfada47fb0114731cab9b3531b0290348c60ceaccfd0de",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/ART04_key_poses.tres",
+      "sha256": "dcb87a0d26f676909337ac00925f1284abf4e5c529156db19053dbbaf57626c0",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/enter_depth_key.png",
+      "sha256": "42fb6eb7ca51528fef1c3599aa95e2e4774171712ca79131f3cc244d07f9a147",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/key_pose_atlas.png",
+      "sha256": "b8ea9028cd93c83b22a0217d5369a21f410da660a0cf5cbd770eda2612f5a368",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/stair_down_key.png",
+      "sha256": "1d170617d1957440d9eb2ecf15c133d93fb0935b2b28528c211cd0ecd509cf24",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/stair_up_key.png",
+      "sha256": "87e161915266e18ec7225fcca5b173b35e94abe1537e91972f27102af1ee7deb",
+      "same": true
+    },
+    {
+      "path": "assets/art04/kaze/turn_depth_key.png",
+      "sha256": "878ee13ed80dec5a9cfbc32f9720d7a1a7531b36c629f5f9748bffa6a73cbbaa",
+      "same": true
+    },
+    {
+      "path": "assets/art04/prefabs/doorway.tscn",
+      "sha256": "c23efc26989e4bebd1143895675b49f38e8b6f7448436ca74f082be55b7f09f7",
+      "same": true
+    },
+    {
+      "path": "assets/art04/prefabs/kaze_key_preview.tscn",
+      "sha256": "ff0f20094ed8f0d72bd824df86ed5b23f94f03b5800beb42f692c5e727d77bdb",
+      "same": true
+    },
+    {
+      "path": "assets/art08/MANIFEST.json",
+      "sha256": "9d69cf58269c8853452c823ec482408a2538019c6ebbdc244dbf62b57e5b304c",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_door_approach_walk_strip.png",
+      "sha256": "07bc3ebc51f2643c639d6adc5126f503e8daeacf4132f29dba418bc63ceb16bd",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_door_cross_strip.png",
+      "sha256": "11a7561739a7c09bfbd92e08630ed9c43b3d2c01e0e1aa342d902066acf5b6eb",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_door_emerge_strip.png",
+      "sha256": "c323db56f3c6b33419d245aefb3822889bb31080449e2a70ee66c2724ea58a2e",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_door_turn_to_rear_strip.png",
+      "sha256": "3a96c2b3a76bb88ee4dc170f266531a9a5ac49f65f1b27a54c5ebfa3a921241a",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
+      "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_ascend_enter_strip.png",
+      "sha256": "67f27fb5397faa0e24cc979109917d41f31e946ccb6b84485dbec6e9b8eadcda",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_ascend_exit_strip.png",
+      "sha256": "59e9643a4b0b75f0d2021171b64ccafab0153e1f6ea005baed4206980d1f4006",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_ascend_loop_strip.png",
+      "sha256": "e18a4fb55dcc2359ace06224ee338e350799561e410c33d9bd7b28047d3c06f6",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+      "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_descend_enter_strip.png",
+      "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_descend_exit_strip.png",
+      "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+      "same": true
+    },
+    {
+      "path": "assets/art08/kaze_stair_descend_loop_strip.png",
+      "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+      "same": true
+    }
+  ],
+  "failures": 0
+}

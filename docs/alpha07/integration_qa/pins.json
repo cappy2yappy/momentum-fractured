@@ -1,0 +1,28 @@
+{
+  "status": "isolated review only",
+  "original_int01_remote": "2fa6cd6a03de599b7f9098e8bf61f8d770784091",
+  "original_int01_pr": 88,
+  "followup_int01_remote": "3dc433cd7b537391f218864abeb2398dc671ccb0",
+  "followup_int01_tree": "0d07593f282dfd704d598b7bab1e12c7314e027f",
+  "followup_int01_pr": 89,
+  "foundation": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+  "b_presenter_local_source": "835d01952bb523e552a762eac8d67c97ea868eef",
+  "d_original_en": "5265e6c6182d883432215f4e9beab50255e48b5e",
+  "d_original_haz": "e7a94185a6e76b12516bfeb9f175d4b03b1ace1a",
+  "d_correction": "125c6db1598aacebf2f9f96055631e35cdd801ce",
+  "d_test_correction": "6aa9e84ce6d80611b7210c47a4d8cbf2bd056433",
+  "d_final_identifier_validation": "6f7c5129c8532effdc8b9e9eff6ff65454312c33",
+  "broad_491_checks_source_commit": "fd41c9dfc4247a37657d9836ce4bf538d7884ea7",
+  "broad_491_checks_source_tree": "7e16b503f6e2f155e87154c1ef10e9b8aff7765f",
+  "final_targeted_source_commit": "892b1ea29ab459d6e6ece1edba0cb88d3ec24972",
+  "final_targeted_source_tree": "bbd3c06f77c8672d1823f1a6b157923706eda457",
+  "final_results": {
+    "real_director_identifier_checks": 4,
+    "consumer_contract_checks": 31,
+    "headless_combined_checks": 41,
+    "native_combined_checks": 41,
+    "failures": 0
+  },
+  "qa_source_branch": "codex/alpha07-integration-qa-authoritative",
+  "review_only_branch": "codex/alpha07-integration-readiness"
+}

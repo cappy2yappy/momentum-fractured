@@ -1,0 +1,24 @@
+PASS: configure_input exact PR78 body
+PASS: can_enter exact PR78 body
+PASS: world_edges exact PR78 body
+PASS: room_size exact PR78 body
+PASS: left_exit_position exact PR78 body
+PASS: right_exit_position exact PR78 body
+PASS: save_progress exact PR78 body
+PASS: load_progress exact PR78 body
+PASS: recover_from_fall exact PR78 body
+PASS: add_platform exact PR78 body
+PASS: scripts/player.gd byte-exact PR78
+PASS: scripts/guard.gd byte-exact PR78
+PASS: scripts/world_expansion.gd byte-exact PR78
+PASS: scripts/route_extension.gd byte-exact PR78
+PASS: scripts/skyworks_region.gd byte-exact PR78
+PASS: scripts/level_geometry.gd byte-exact PR78
+PASS: scripts/cinematic_transitions.gd byte-exact PR78
+PASS: scripts/bellroof_walk.gd byte-exact PR78
+PASS: world/MapData.txt byte-exact PR78
+PASS: project.godot byte-exact PR78
+PASS: 47 approved/candidate art files byte-exact PR78
+PASS: export only two exact contract-required include-filter extensions
+PASS: world.gd entire file equals PR78 after only the six hooks plus director declaration are removed
+QA PRESERVATION: 0 failure(s)
