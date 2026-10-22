@@ -1,0 +1,119 @@
+[
+  {
+    "source": "tests/approved_baseline.gd",
+    "source_sha256": "56156a791bc65192fcd5711706e3678c8bf908f5931af4e8b4f4f1d8bfac5d4f",
+    "executed": "tests/approved_baseline.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 32
+  },
+  {
+    "source": "tests/approved_combat_swing.gd",
+    "source_sha256": "0c15d0b53afb0650ebbe09c9eff4346e0a0714723803c1934a9dc2d82b55f98f",
+    "executed": "tests/approved_combat_swing.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 7
+  },
+  {
+    "source": "tests/movement_momentum.gd",
+    "source_sha256": "fad68ca8e0de73e2a1eeff03652a9f7fcf38cbc3156a1cdfc6dc7672fb6874b0",
+    "executed": "tests/alpha07_qa/disposable_movement_momentum.gd",
+    "substitutions": {
+      "user://momentum_regression_only.json": "res://build/alpha07_qa/momentum.json"
+    },
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 53
+  },
+  {
+    "source": "tests/sprite_integration.gd",
+    "source_sha256": "cbdba8a9a092cd2d21a34a1eae55c149ab5d0f9117d2742a28a4bbae2effa2aa",
+    "executed": "tests/sprite_integration.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 43
+  },
+  {
+    "source": "tests/save_compatibility.gd",
+    "source_sha256": "707a7b2dc739fae1133115474446ceabf4b133dc708b9a4fa5487fd65a25d552",
+    "executed": "tests/alpha07_qa/disposable_save_compatibility.gd",
+    "substitutions": {
+      "user://alpha05_regression_only.json": "res://build/alpha07_qa/compatibility.json",
+      "user://missing_folder/cannot_save.json": "res://build/alpha07_qa/missing_folder/cannot_save.json"
+    },
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 11
+  },
+  {
+    "source": "tests/tr08_canal_hang_regression.gd",
+    "source_sha256": "08c6d6083cfa35e4a23efa09e5e172775919649089ab2eed4f3e1faf79e5dbb9",
+    "executed": "tests/alpha07_qa/disposable_hang_regression.gd",
+    "substitutions": {
+      "test inheritance": "disposable_hang_probe.gd sets explicit save_path before adding unchanged campaign scene to tree"
+    },
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 53
+  },
+  {
+    "source": "tests/story_cinematics/runtime.gd",
+    "source_sha256": "573bc0b6da3c106789c9c2db08948466d9e5c38d67f71c67ca11cf6305729a81",
+    "executed": "tests/story_cinematics/runtime.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 25
+  },
+  {
+    "source": "tests/story_demo/contracts.gd",
+    "source_sha256": "4d88104bf10a729b6711225113baec86531c3385cd399407dcc67211e4a30f3a",
+    "executed": "tests/alpha07_qa/disposable_contracts.gd",
+    "substitutions": {
+      "res://../int01-evidence/disk-roundtrip.json": "res://build/alpha07_qa/interaction-roundtrip.json"
+    },
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 36
+  },
+  {
+    "source": "tests/en01/framework.gd",
+    "source_sha256": "af5f06f2cd2ab23bb28c20d305c2f1880e0ff44785f5c696f6892f85dd4baf1f",
+    "executed": "tests/en01/framework.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 52
+  },
+  {
+    "source": "tests/en01/persistence.gd",
+    "source_sha256": "5b59893492fbb31e6daae6ad3040f81591cbf04ee4791b2c100659376a2e617f",
+    "executed": "tests/en01/persistence.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 6
+  },
+  {
+    "source": "tests/haz01_toolkit.gd",
+    "source_sha256": "e481eb628597529e2815a75cbf2863db964781ac7807620a3807e05ed0c7eef5",
+    "executed": "tests/haz01_toolkit.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 56
+  },
+  {
+    "source": "tests/haz01_contract.gd",
+    "source_sha256": "9b35447a9da142dd0a11dc03ee6241ac992c106a1ff58f7815d6be163484ee29",
+    "executed": "tests/haz01_contract.gd",
+    "substitutions": {},
+    "exit": 0,
+    "failed_lines": [],
+    "pass_count": 17
+  }
+]
