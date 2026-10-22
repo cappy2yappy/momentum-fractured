@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/hazards/hazard_placement.gd" id="1"]
+[resource]
+script = ExtResource("1")
+placement_id = "course_collapse"
+kind = "collapse"
+at = Vector2(230, 480)
+dimensions = Vector2(180, 24)
+reset_rule = "persist_disabled"
