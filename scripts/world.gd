@@ -53,6 +53,7 @@ var camera = Camera2D.new()
 var geometry = Node2D.new()
 var room = 0
 var visited = [true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+var story = preload("res://scripts/story/story_director.gd").new()
 var expansion = Expansion.new()
 var mixed_transitions = MixedTransitions.new()
 var embodied_transitions = EmbodiedTransitions.new()
@@ -209,6 +210,7 @@ func build_room(index):
 		8, 9, 10, 11, 12:
 			extension.build_room(self, room)
 	expansion.build_room(self,room)
+	story.room_loaded(self, room)
 	RoomBoundary.build(self)
 	BellroofWalk.build(self)
 	mixed_transitions.room_loaded(self)
@@ -285,6 +287,7 @@ func current_objective() -> String:
 	if room == 12 and not cleared_encounters.get("storm_keeper", false): return "Storm Keeper: parry the sweep; jump the ground pulse."
 	if not cleared_encounters.get("storm_keeper", false): return "Follow Signal Terrace east. Reach SkyWorks and face the Storm Keeper."
 	if not skyworks_restored: return "Attune the Keeper Relay beyond the arena."
+	if not story.objective_override().is_empty(): return story.objective_override()
 	return "SkyWorks restored. The Undercroft return is open."
 
 func register_metsys_progress():
@@ -406,8 +409,11 @@ func on_enemy_defeated(enemy, is_boss: bool, is_required: bool):
 	enemies.erase(enemy)
 	var encounter_id = str(enemy.get_meta("persistent_id", ""))
 	if not encounter_id.is_empty():
-		cleared_encounters[encounter_id] = true
-		save_progress()
+		if enemy.get_meta("story_managed_encounter", false):
+			story.record_encounter(encounter_id)
+		else:
+			cleared_encounters[encounter_id] = true
+			save_progress()
 	if active_enemy == enemy: active_enemy = null
 	if guard == enemy: guard = null
 	if is_boss and enemy.get_meta("progression_boss", "tide_warden") == "tide_warden":
@@ -605,6 +611,7 @@ func interact():
 		return
 	if expansion.interact(self): return
 	if extension.interact(self): return
+	if story.interact(self): return
 	if room >= 13: return
 	if room > 0 and not cinematic_transitions.automatic(self,room,room-1) and player.position.distance_to(left_exit_position()) < 105:
 		request_room(room - 1)
@@ -686,6 +693,7 @@ func _physics_process(dt):
 		announce("Hidden letter: the next convoy leaves before dawn. Health restored.", 7)
 	extension.update_progress(self)
 	expansion.update(self,dt)
+	story.update(self, dt)
 	if player.position.y > room_size(room).y + 70 and not fall_recovering:
 		call_deferred("recover_from_fall")
 	queue_redraw()
@@ -816,6 +824,7 @@ func _draw():
 		draw_string(ThemeDB.fallback_font, Vector2(2080, 1035), "RELAY CONTROL", HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color("e6dcc4"))
 	extension.draw_room(self)
 	expansion.draw_room(self)
+	if story.world != null: story.draw_room(self)
 	draw_string(ThemeDB.fallback_font, Vector2(980, 260), ROOM_NAMES[room], HORIZONTAL_ALIGNMENT_CENTER, 640, 32, Color(0.9, 0.84, 0.75, 0.55))
 
 func draw_tether_effect():
