@@ -1,0 +1,15 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS four definitions
+PASS read opens
+PASS inspection suspends gameplay
+PASS multiple pages
+PASS input restored
+PASS repeat inspection
+PASS activate opens
+PASS activation flag
+PASS once only
+PASS reentry preserves state
+PASS checkpoint yields to legacy
