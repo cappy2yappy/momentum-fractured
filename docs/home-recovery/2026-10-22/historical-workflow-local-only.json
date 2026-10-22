@@ -1,0 +1,11 @@
+{
+  "original_repository": "/Users/tonysantiago/Documents/Playground/momentum-fractured",
+  "local_source_commit": "84f82ee66a9618dd94ca5bfaa6ef16110bb8e8a0",
+  "path": ".github/workflows/parity-playtest-build.yml",
+  "bytes": 5656,
+  "sha256": "2bf2cc64268c9ee30648a48a39290fb32939bc97160240ee63b666f5bf69cbd3",
+  "git_blob": "9f333bcbfc6511866debb4cab54857da6ba4b172",
+  "not_synced": true,
+  "reason": "GitHub OAuth connection lacks workflow scope; workflow delta intentionally omitted from published source recovery",
+  "mac_recovery_command": "git -C /Users/tonysantiago/Documents/Playground/momentum-fractured show 84f82ee66a9618dd94ca5bfaa6ef16110bb8e8a0:.github/workflows/parity-playtest-build.yml"
+}

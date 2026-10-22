@@ -26,7 +26,7 @@ git worktree add ../kaze-alpha07-qa --track -b home/alpha07-qa origin/recovery/a
 git worktree add ../kaze-art09 --track -b home/art09 origin/codex/alpha07-animation
 git worktree add ../kaze-story --track -b home/story origin/codex/alpha07-story-cinematics
 git worktree add ../kaze-int01 --track -b home/int01 origin/codex/alpha07-int01-remote-followup
-git worktree add ../kaze-assets --track -b home/assets origin/codex/asset01-intake
+git worktree add ../kaze-assets --track -b home/assets origin/codex/asset01-controlled-pilots
 ```
 
 Run `git rev-parse HEAD`, `git rev-parse '@{upstream}'` and `git status --short` in each fresh worktree. Heads should match the pin tables at this cutoff; later intentional owner commits may advance remote branches. `git diff --exit-code HEAD '@{upstream}'` verifies tree equivalence when histories differ. The three snapshot branches use handoff notes rather than integration PRs to avoid suggesting that duplicate experimental implementations should merge.
@@ -63,6 +63,10 @@ Dependencies matter: #88 is the incomplete original checkpoint; #89 is its separ
 | `recovery/legacy-fire-source-20261022` | `350b5c7ccbb2b7fcc40d1ef07ab63ea19321a640` | Historical source; original workflow unchanged; raw historical validation logs retain whitespace |
 
 The original historical `recovery/legacy-fire-20261022` push was rejected by GitHub because the OAuth connection lacks `workflow` scope. Its local tip is `142eec554239d076e0c9fd8c85e690fad5882796`, original local source `84f82ee66a9618dd94ca5bfaa6ef16110bb8e8a0`. The separate `recovery/legacy-fire-source-20261022` preserves the source changes against the already-remote parent while retaining that parent's workflow unchanged. The unpublished workflow delta remains local; it was not uploaded via another API or embedded in a patch.
+
+## Final controlled-pilot publication
+
+The concurrent asset owner finished publishing **draft PR #94**, stacked on #92, at `815bceb98e2560a2869a5534a34cd155c15b0dc1`. Its local commit `688d8e6e6e0829f086051d588fb4f7bd2a13d4e3` has an identical complete tree and a clean checkout. The local origin is a shared source clone, so use the actual GitHub remote pin on the home machine. The earlier `active-asset01/files/` snapshot is now superseded by this published source. PR94 contains text metadata/tools only; it does not distribute the source packs. The separate detached host lab is pinned to PR87 at `5172db6898f3efc35b74f3c134293049165b9bf7` and has generated import/UID files only. These two concurrent checkouts bring the source audit to **37 checkouts**; `active-asset01/final-publication.json` records their final states and cache totals. Supplemental `inventory/concurrent-asset01.jsonl` lists 38 additional generated capture/log/import files that remain local. Later owner messages may finish coordination, but the feature source is already recoverable.
 
 ## Original Mac worktree state
 
@@ -112,7 +116,7 @@ Helper copies are archival source; this audit did not execute/retest them. They 
 
 ## ASSET01 staging and rights
 
-The six raw ZIPs total **98,829,985 bytes**, located in `/Users/tonysantiago/Downloads/Packs`. Their audited hashes, publisher provenance and per-file manifests are in #92. The raw archives, extracted PNG/PSD/AEP sources, 49 rendered gallery captures and duplicate staging trees are **not** published. The creator's permission to use/modify commercially does not authorize standalone asset redistribution into a public repository. The separate active controlled-pilot session records that attestation while preserving source-verification distinctions; consult `active-asset01/` and the final session snapshot.
+The six raw ZIPs total **98,829,985 bytes**, located in `/Users/tonysantiago/Downloads/Packs`. Their audited hashes, publisher provenance and per-file manifests are in #92. The raw archives, extracted PNG/PSD/AEP sources, 49 rendered gallery captures and duplicate staging trees are **not** published. The creator's permission to use/modify commercially does not authorize standalone asset redistribution into a public repository. The final controlled-pilot draft #94 records that attestation while preserving source-verification distinctions; consult `active-asset01/final-publication.json` and PR94.
 
 Transfer legitimately acquired packs privately to the home machine or re-download from the identified publishers under their terms. Keep acquisition/permission records. On the ASSET01 checkout:
 
@@ -135,7 +139,7 @@ Remaining payloads include the six source packs and extracted staging, generated
 
 No caches, credentials, oversized new binaries, source asset ZIPs or local-only rendered previews were added by this task. New-object comparison confirmed inherited screenshot/art blobs were already present on GitHub; source recovery introduced text only. Credential-pattern checks are a bounded check, not a guarantee about every historical repository object.
 
-Codex chat UI state, unsaved editor buffers, live Godot state and Claude application memory are not Git data. Local session metadata and process working-directory checks were inspected without exporting logs/credentials or process arguments. Active sessions can continue producing changes after this timestamp: the final asset-session snapshot defines this audit's recoverable cutoff.
+Codex chat UI state, unsaved editor buffers, live Godot state and Claude application memory are not Git data. Local session metadata and process working-directory checks were inspected without exporting logs/credentials or process arguments. The controlled-pilot source was subsequently verified published in PR94 with a clean checkout. UI coordination messages after that source cutoff do not change the recorded Git pins.
 
 ## Verification and next owner
 

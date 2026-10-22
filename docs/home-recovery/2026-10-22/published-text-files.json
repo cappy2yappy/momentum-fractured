@@ -12,6 +12,10 @@
     "sha256": "bff18af7b4931a7a01ef53c207fb8f87af69b3a80a02b0ea7d955852ab11d630"
   },
   {
+    "path": "docs/home-recovery/2026-10-22/historical-workflow-local-only.json",
+    "sha256": "1651c55a9ab92ae4fca4b70a4115eac5c77d3b33b8adf6bef8e662bdf23ae829"
+  },
+  {
     "path": "docs/home-recovery/2026-10-22/inventory_local.py",
     "sha256": "ef76642a0a7f0568577abd23e03a7687875cc5ae0fa6ac87a9f5de021496c13e"
   },
@@ -25,7 +29,7 @@
   },
   {
     "path": "docs/home-recovery/2026-10-22/README.md",
-    "sha256": "b8bfc8530a3978694f9a09b56f1499d0fd94964dc53b3446536814c5a06420a7"
+    "sha256": "6cfb906ebf0018828f4fb84f90ab236343169e3b600af8884056fdf31b704e1b"
   },
   {
     "path": "docs/home-recovery/2026-10-22/compared-repos.json",
@@ -41,11 +45,19 @@
   },
   {
     "path": "docs/home-recovery/2026-10-22/verification.json",
-    "sha256": "c9f23c1f955ed9d7d038d533651258d43022c41ba67ff08223617b0a501cdc60"
+    "sha256": "5efcbe6465abf2a47e9b6617f7f948777d77eb96c37419d19489eefb9c89fe80"
+  },
+  {
+    "path": "docs/home-recovery/2026-10-22/publication.json",
+    "sha256": "78b0daf1aee0af10f5a6df11aa918a5bf75fd33fccca8a61c21045e6b68185d9"
   },
   {
     "path": "docs/home-recovery/2026-10-22/pr-pins.json",
     "sha256": "23fa51bf3940b2a40a55c53fb270dab9cb048bca96c637e4b7a4546577c4cce4"
+  },
+  {
+    "path": "docs/home-recovery/2026-10-22/active-asset01/final-publication.json",
+    "sha256": "02e37d2e0eefd4106a867d539bac87d34deff4bb30337cba61ce53a9906d872d"
   },
   {
     "path": "docs/home-recovery/2026-10-22/active-asset01/snapshot.json",
