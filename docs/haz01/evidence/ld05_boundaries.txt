@@ -1,0 +1,181 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: R0 has a wall-to-wall roof course whose underside is y=56
+PASS: R0 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R1 has a wall-to-wall roof course whose underside is y=56
+PASS: R1 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R2 has a wall-to-wall roof course whose underside is y=56
+PASS: R2 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R3 has a wall-to-wall roof course whose underside is y=56
+PASS: R3 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R4 has a wall-to-wall roof course whose underside is y=56
+PASS: R4 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R5 has a wall-to-wall roof course whose underside is y=56
+PASS: R5 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R6 has a wall-to-wall roof course whose underside is y=56
+PASS: R6 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R7 has a wall-to-wall roof course whose underside is y=56
+PASS: R7 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R8 has a wall-to-wall roof course whose underside is y=56
+PASS: R8 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R9 has a wall-to-wall roof course whose underside is y=56
+PASS: R9 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R10 has a wall-to-wall roof course whose underside is y=56
+PASS: R10 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R11 has a wall-to-wall roof course whose underside is y=56
+PASS: R11 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R12 has a wall-to-wall roof course whose underside is y=56
+PASS: R12 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R13 has a wall-to-wall roof course whose underside is y=56
+PASS: R13 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R14 has a wall-to-wall roof course whose underside is y=56
+PASS: R14 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R15 has a wall-to-wall roof course whose underside is y=56
+PASS: R15 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R16 has a wall-to-wall roof course whose underside is y=56
+PASS: R16 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R17 has a wall-to-wall roof course whose underside is y=56
+PASS: R17 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R18 has a wall-to-wall roof course whose underside is y=56
+PASS: R18 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R19 has a wall-to-wall roof course whose underside is y=56
+PASS: R19 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: R20 has a wall-to-wall roof course whose underside is y=56
+PASS: R20 platform list is identical to candidate 49ae3efe (no rectangle added, moved or resized)
+PASS: No ledge top is above y=380 (min 400): the roof removes nothing legitimate
+PASS: No grapple anchor is above y=240 (min 250): swings never reach the roof
+PASS: R0 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R0 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R1 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R1 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R1 right wall ledge start (2440,718): chain tops out at feet y 116.0 under the roof, never leaves the room
+PASS: R2 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R2 right wall floor start (2585,1298): chain tops out at feet y 950.1 under the roof, never leaves the room
+PASS: R2 right wall ledge start (2585,848): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R3 left wall floor start (14,1298): chain tops out at feet y 950.1 under the roof, never leaves the room
+PASS: R3 left wall ledge start (14,848): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R3 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R4 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R4 right wall floor start (2585,1298): chain tops out at feet y 1180.0 under the roof, never leaves the room
+PASS: R4 right wall ledge start (2585,1078): chain tops out at feet y 116.0 under the roof, never leaves the room
+PASS: R5 left wall floor start (14,1298): chain tops out at feet y 1180.1 under the roof, never leaves the room
+PASS: R5 left wall ledge start (14,1078): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R5 right wall floor start (2585,1298): chain tops out at feet y 1030.1 under the roof, never leaves the room
+PASS: R5 right wall ledge start (2585,928): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R6 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R6 right wall floor start (2585,1298): chain tops out at feet y 1210.0 under the roof, never leaves the room
+PASS: R6 right wall ledge start (2585,1108): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R7 left wall floor start (14,1298): chain tops out at feet y 1190.1 under the roof, never leaves the room
+PASS: R7 left wall ledge start (14,1088): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R7 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R8 left wall floor start (14,1298): chain tops out at feet y 1190.1 under the roof, never leaves the room
+PASS: R8 left wall ledge start (14,1088): chain tops out at feet y 116.0 under the roof, never leaves the room
+PASS: R8 right wall floor start (2585,1298): chain tops out at feet y 930.1 under the roof, never leaves the room
+PASS: R8 right wall ledge start (2585,828): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R9 left wall floor start (14,1298): chain tops out at feet y 930.1 under the roof, never leaves the room
+PASS: R9 left wall ledge start (14,828): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R9 left wall ledge start (100,618): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R9 right wall floor start (2585,1298): chain tops out at feet y 910.0 under the roof, never leaves the room
+PASS: R9 right wall ledge start (2585,808): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R10 left wall floor start (14,1298): chain tops out at feet y 930.1 under the roof, never leaves the room
+PASS: R10 left wall ledge start (14,828): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R10 right wall floor start (2585,1298): chain tops out at feet y 860.0 under the roof, never leaves the room
+PASS: R10 right wall ledge start (2585,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R11 left wall floor start (14,1298): chain tops out at feet y 860.0 under the roof, never leaves the room
+PASS: R11 left wall ledge start (14,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R11 right wall floor start (2585,1298): chain tops out at feet y 860.0 under the roof, never leaves the room
+PASS: R11 right wall ledge start (2585,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R12 left wall floor start (14,1298): chain tops out at feet y 930.1 under the roof, never leaves the room
+PASS: R12 left wall ledge start (100,828): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R12 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R12 right wall ledge start (2460,878): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R13 left wall floor start (14,1298): chain tops out at feet y 1298.0 under the roof, never leaves the room
+PASS: R13 left wall ledge start (220,1158): chain tops out at feet y 1119.0 under the roof, never leaves the room
+PASS: R13 left wall ledge start (14,1198): chain tops out at feet y 1198.0 under the roof, never leaves the room
+PASS: R13 left wall ledge start (14,1018): chain tops out at feet y 1018.0 under the roof, never leaves the room
+PASS: R13 right wall floor start (1785,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R13 right wall ledge start (1600,718): chain tops out at feet y 516.9 under the roof, never leaves the room
+PASS: R13 right wall ledge start (1785,558): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 left wall ledge start (220,1198): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 left wall ledge start (14,1098): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 right wall ledge start (2585,828): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 right wall ledge start (2460,1038): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 right wall ledge start (2520,928): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R14 right wall ledge start (2585,1198): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R15 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R15 left wall ledge start (14,498): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R15 right wall floor start (2185,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R15 right wall ledge start (2185,1118): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R16 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R16 left wall ledge start (14,1118): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R16 right wall floor start (1985,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R16 right wall ledge start (1985,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 left wall floor start (14,2018): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 left wall ledge start (14,1898): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 right wall floor start (1785,2018): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 right wall ledge start (1785,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 right wall ledge start (1720,588): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R17 right wall ledge start (1630,418): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R18 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R18 left wall ledge start (14,998): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R18 right wall floor start (2585,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R18 right wall ledge start (2585,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R19 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R19 left wall ledge start (14,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R19 right wall floor start (2385,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R19 right wall ledge start (2230,1138): chain tops out at feet y 116.0 under the roof, never leaves the room
+PASS: R19 right wall ledge start (2385,978): chain tops out at feet y 116.0 under the roof, never leaves the room
+PASS: R20 left wall floor start (14,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R20 left wall ledge start (14,758): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R20 right wall floor start (2185,1298): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: R20 right wall ledge start (2185,1118): chain tops out at feet y 116.1 under the roof, never leaves the room
+PASS: All 87 wall chains stop at the roof underside (feet y 116.0; expected 116)
+PASS: R13 gatehouse outer face (x=296): wall jumps stop at feet y 116.1 (was -164.6, left the world)
+PASS: R13 right wall from (1785,1298) stops at feet y 116.1 (was -144)
+PASS: R13 right wall from (1785,558) stops at feet y 116.1 (was -144)
+PASS: R13 jump + double jump + dash from (324,438): feet y never above 254.1, no exit
+PASS: R17 jump + double jump + dash from (1626,418): feet y never above 266.1, no exit
+PASS: R13 jump + double jump + dash from (1776,558): feet y never above 126.6, no exit
+PASS: R13 full double jump from (324,438) toward the wall bumps the roof underside at feet y 116.1 and cannot leave (base: above the room, on top of the wall)
+PASS: R17 full double jump from (1626,418) toward the wall bumps the roof underside at feet y 116.1 and cannot leave (base: above the room, on top of the wall)
+PASS: R13 gatehouse mass and back pier rectangles unchanged
+PASS: Canal aperture, door x and ceiling constants unchanged
+PASS: Canal endpoint (120,1200) unchanged
+PASS: No LD-05 solid enters the hallway envelope (x 0..360, y 1020..1240)
+PASS: Real key A from the hallway mouth still triggers the Canal passage exactly once
+PASS: R13: walking left along the quay floor stops at the plinth (x 374.0), the 60 px nook under the hallway pad is closed
+PASS: R8 depth door to R18: all 96 px of the door span (1042..1138) have a walkable top at y=920 (was 68 of 96)
+PASS: R8: Kaze stands at x 1126.7, 17+ px past the old shelf end (1110), on the shelf at y 920
+PASS: R8: walking back across the seam is smooth (x 826.7, y 919.9)
+PASS: Door seating shifts only R9->R10 (-20); R6->R7 is now seated by the LD-05 sill (offset 0); got { "9->10": -20.0 }
+PASS: R6->R7 endpoint (2440,1090) unchanged
+PASS: R9->R10 endpoint (2440,830) unchanged
+PASS: R5 wall jumps still gain real height (feet y 116 in 5 s): wall jumping is untouched
+PASS: player.gd is byte-identical to the approved controller
+PASS: ROOF_ENABLED=false restores the open-top rooms (A/B switch)
+PASS: ORIGINAL_ROOMS_ENABLED=false leaves R0..R7 untouched and keeps R8+ closed
+PASS: All 39 walk-through exits open for a walking Kaze on their own shelf (39 / 39; failing: [])
+PASS: R6 has exactly one sill solid (bounding rect 2390,1090,210x26)
+PASS: R6 platform list unchanged by the sill (approved geometry untouched)
+PASS: R6->R7 endpoint still (2440,1090)
+PASS: R6: walking right along the shelf opens the R7 exit (tick 35; before the sill it never opened)
+PASS: R6->R7 stops on the reciprocal shelf, inward of arrival (223.4,1089.9)
+PASS: R6->R7 arrival in R7 at (223.4,1089.9), Stride level 0 expects x 223.4 +/- 1.5
+PASS: R7->R6 arrival at (2336.6,1109.9) stands on the shelf clear of the sill ramp
+INFO R6 dash from x 2060: exit opened
+INFO R6 dash from x 2200: exit opened
+INFO R6 dash from x 2300: exit not opened (walk back and cross again)
+INFO R6 dash from x 2384: exit opened
+PASS: R6 exit opens in 8 / 8 approach trials (walk and double-tap run from four starts)
+PASS: R6: ramp is climbed by walking (x 2431.7, y 1091.0)
+PASS: Pit water is drawn from y 1372 (was 1260, 40 px above the 1300 lip)
+PASS: PIT_WATER_ALIGNED=false restores the legacy water rectangle
+PASS: R2 pit at x 640..930: Kaze drops through the drawn water (collider unchanged), loses 1 HP and is returned to solid ground at (232,1300)
+PASS: R4 pit at x 450..1000: Kaze drops through the drawn water (collider unchanged), loses 1 HP and is returned to solid ground at (232,1300)
+PASS: R5 pit at x 500..780: Kaze drops through the drawn water (collider unchanged), loses 1 HP and is returned to solid ground at (232,1080)
+PASS: SILLS_ENABLED=false restores the pre-LD-05 shelf and door seat
+LD05 BOUNDARIES: 172 checks, 0 failure(s)
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)

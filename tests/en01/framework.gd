@@ -9,7 +9,11 @@ func check(ok, label):
 	print("PASS: " if ok else "FAIL: ", label)
 	if not ok: failures += 1
 func ticks(n):
-	for i in n: await physics_frame
+	for i in n:
+		await physics_frame
+		# Demo freezes the world; drive its sole director as the real world would.
+		if is_instance_valid(w) and not w.is_physics_processing() and w.get("story") != null:
+			w.story.update(w, 1.0/60.0)
 func fresh(mode):
 	if is_instance_valid(w):
 		w.free(); await process_frame
@@ -21,7 +25,7 @@ func run():
 	await fresh("guard")
 	var c = JSON.parse_string(FileAccess.get_file_as_string("res://scenes/encounters/guard.json"))[0]
 	check(Config.validate(c,w.platforms).errors.is_empty(), "Authored metadata validates against actual arena surface")
-	for pair in [["type","unknown"],["hp","six"],["windup",0.1],["position",[700]],["territory",[0,100]],["persistent","true"],["completion_event",42],["version",2],["speed",INF],["activation","unknown"],["story_flag",false]]:
+	for pair in [["type","unknown"],["hp","six"],["hp",3],["hp",9],["windup",0.49],["windup",0.1],["position",[700]],["territory",[0,100]],["persistent","true"],["completion_event",42],["version",2],["speed",INF],["activation","unknown"],["story_flag",false]]:
 		var bad = c.duplicate(true); bad[pair[0]]=pair[1]
 		check(not Config.validate(bad,w.platforms).errors.is_empty(), "Reject invalid " + pair[0])
 	var batch = Encounter.new(); w.add_child(batch)
@@ -93,10 +97,24 @@ func run():
 	var runtime=Encounter.new(); w.add_child(runtime); check(runtime.configure(w,[c]).is_empty(),"Story encounter config accepted")
 	e=runtime.members[0]; await ticks(3)
 	check(e.state=="dormant","Missing story flag fails closed")
-	w.expansion_flags[c.story_flag]=true; await ticks(2)
+	w.player.position=Vector2(200,618); w.player.velocity=Vector2.ZERO
+	w.expansion_flags[c.story_flag]=true
+	w.transition=0.4; await ticks(2)
+	check(e.state=="dormant","Story activation defers during transition")
+	w.transition=0; w.player.set_physics_process(false); await ticks(2)
+	check(e.state=="dormant","Story activation waits for control restoration")
+	w.player.set_physics_process(true); w.player.position=Vector2(650,618); await ticks(3)
+	check(e.state=="dormant","Story activation requires 400px clearance")
+	w.player.position=Vector2(200,400); w.player.velocity=Vector2.ZERO; await ticks(2)
+	check(e.state=="dormant","Story activation waits for grounded player")
+	w.player.position=Vector2(200,618); w.player.velocity=Vector2.ZERO; await ticks(4)
 	check(e.state=="awakening","Story flag activates with anticipation")
 	runtime.completed.connect(func(event): events.append(event))
-	await ticks(65); e.receive_hit(100); await process_frame
+	await ticks(65); w.transition=0.5; e.receive_hit(100); await process_frame
+	check(not w.cleared_encounters.get("en01/test/persistent",false) and events.is_empty(),"Defeat state and completion deferred through transition")
+	w.transition=0; w.player.set_physics_process(false); await ticks(2)
+	check(events.is_empty(),"Completion waits for control restoration")
+	w.player.set_physics_process(true); await ticks(2)
 	check(w.cleared_encounters.get("en01/test/persistent",false) and events.size()==1,"Defeat uses namespaced existing save flags and emits completion once")
 	runtime.dispose(); await process_frame
 	runtime=Encounter.new(); w.add_child(runtime); runtime.completed.connect(func(event):events.append(event))
