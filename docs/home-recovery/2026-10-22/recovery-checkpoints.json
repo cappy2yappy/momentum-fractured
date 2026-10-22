@@ -1,0 +1,41 @@
+[
+  {
+    "branch": "recovery/alpha07-qa-authoritative-20261022",
+    "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/alpha07-qa-authoritative-20261022",
+    "source_commit": "78d9736077ff16dd7c9cbeb7ae2c99cab1da212b",
+    "head": "2d08adfc242debc62451f30a8de1aeaeb4842d7a",
+    "purpose": "Authoritative combined QA composition. Recover this snapshot for isolated testing; PR90 publishes its reports but not the composed source. This snapshot has existing specialist changes composed locally before this audit. It is not an approved integration candidate."
+  },
+  {
+    "branch": "recovery/alpha07-qa-provisional-20261022",
+    "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/alpha07-qa-provisional-20261022",
+    "source_commit": "0d39aa2b837397ad2316a5b76112cc1171ff9fde",
+    "head": "8fb4a75da08ab53a6d209d5806d51ed584324361",
+    "purpose": "Earlier provisional combined QA. Superseded by recovery/alpha07-qa-authoritative-20261022. Retain only for reproduction of earlier reported failures."
+  },
+  {
+    "branch": "recovery/alpha07-int01-experiment-20261022",
+    "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/alpha07-int01-experiment-20261022",
+    "source_commit": "0375ff9b74662c25602d1804966881cfb664812b",
+    "head": "0a8e6afff3d589cc5eb371863c54e987cb20dc8f",
+    "purpose": "Earlier INT01 reconstruction experiment. Superseded by original PR88 and audited follow-up PR89. Do not integrate this alternative implementation."
+  },
+  {
+    "branch": "recovery/legacy-fire-20261022",
+    "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/legacy-fire-20261022",
+    "source_commit": "84f82ee66a9618dd94ca5bfaa6ef16110bb8e8a0",
+    "head": "142eec554239d076e0c9fd8c85e690fad5882796",
+    "purpose": "Historical October12 alternate-foundation Fire-return checkpoint. This is not the approved purple-outfit Alpha foundation. Retain for archaeology only.",
+    "push_status": "rejected: OAuth connection lacks workflow scope; exact original remains local"
+  },
+  {
+    "branch": "recovery/legacy-fire-source-20261022",
+    "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/legacy-fire-source-20261022",
+    "head": "350b5c7ccbb2b7fcc40d1ef07ab63ea19321a640",
+    "source_commit": "84f82ee66a9618dd94ca5bfaa6ef16110bb8e8a0",
+    "excluded": [
+      ".github/workflows/parity-playtest-build.yml"
+    ],
+    "purpose": "Historical source; original workflow unchanged; raw historical validation logs retain whitespace"
+  }
+]

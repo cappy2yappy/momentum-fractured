@@ -1,0 +1,106 @@
+[
+  {
+    "id": "01a16069-d200-7730-90a7-ee7af84dee95",
+    "title": "Build reusable room creator",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792678596
+  },
+  {
+    "id": "01a16584-965b-7ff0-a2c1-b329703f66d3",
+    "title": "Audit Kaze worktrees and sync",
+    "status": "active",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792705033
+  },
+  {
+    "id": "01a16582-f1e1-79a0-902f-425f33d29227",
+    "title": "Integrate six itch.io asset packs",
+    "status": "active",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792705032
+  },
+  {
+    "id": "01a16525-311d-7881-b2b1-5e387eadf32d",
+    "title": "Coordinate Alpha 0.7 production",
+    "status": "idle",
+    "cwd": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative",
+    "hostId": "local",
+    "updatedAt": 1792703989
+  },
+  {
+    "id": "01a16473-6c41-7f41-be23-3a92ef56a509",
+    "title": "Implement interactable object system",
+    "status": "idle",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792699072
+  },
+  {
+    "id": "01a16470-8be3-7e70-8c60-9f6a79eadd3e",
+    "title": "Add enemy encounter framework",
+    "status": "idle",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792692038
+  },
+  {
+    "id": "01a16476-bca5-7150-a026-b16d88bbc754",
+    "title": "Add room traversal master sheet",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792690756
+  },
+  {
+    "id": "01a16471-3eef-7612-abdb-f948d9461e36",
+    "title": "Build environmental hazard toolkit",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792688324
+  },
+  {
+    "id": "01a16471-9cfd-7a30-898f-1d481404f825",
+    "title": "Develop ST-05 narrative beats",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792688054
+  },
+  {
+    "id": "01a1606a-2ab6-72d3-9cfc-fe7b2bcc14b3",
+    "title": "Build cinematic Cut-In Maker",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792676511
+  },
+  {
+    "id": "01a15f15-df78-7fb2-ad53-aa6abd510b5c",
+    "title": "Audit and repair ground geometry",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792676488
+  },
+  {
+    "id": "01a14612-2361-7043-8ff0-f800a2c69f52",
+    "title": "Build animation pipeline",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792178302
+  },
+  {
+    "id": "01a13a81-5320-7d00-9495-0285e3174b16",
+    "title": "Kaze Integration, Build & QA specialist",
+    "status": "notLoaded",
+    "cwd": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970",
+    "hostId": "local",
+    "updatedAt": 1792100013
+  }
+]

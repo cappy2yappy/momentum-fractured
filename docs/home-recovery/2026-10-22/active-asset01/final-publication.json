@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-10-22T21:44:57.087359+00:00",
+  "pr": 94,
+  "url": "https://github.com/cappy2yappy/momentum-fractured/pull/94",
+  "draft": true,
+  "merged": false,
+  "branch": "codex/asset01-controlled-pilots",
+  "remote_head": "815bceb98e2560a2869a5534a34cd155c15b0dc1",
+  "local_head": "688d8e6e6e0829f086051d588fb4f7bd2a13d4e3",
+  "identical_trees": true,
+  "local_status_clean": true,
+  "additional_checkouts": [
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/asset01-controlled",
+      "branch": "codex/asset01-controlled-pilots",
+      "head": "688d8e6e6e0829f086051d588fb4f7bd2a13d4e3",
+      "origin": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/asset01",
+      "status": ""
+    },
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/asset01-host-lab",
+      "branch": "",
+      "head": "5172db6898f3efc35b74f3c134293049165b9bf7",
+      "origin": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance",
+      "status": "?? docs/agent_handoffs/int01_evidence/exits_0.jpg.import\n?? docs/agent_handoffs/int01_evidence/exits_1.jpg.import\n?? docs/agent_handoffs/int01_evidence/exits_2.jpg.import\n?? docs/level_design/alpha061/room_14_comparison.jpg.import\n?? docs/level_design/alpha061/room_15_comparison.jpg.import\n?? docs/level_design/alpha061/room_17_comparison.jpg.import\n?? docs/level_design/alpha061/room_19_comparison.jpg.import\n?? scripts/encounters/story_consumers.gd.uid\n?? scripts/grapple_anchor.gd.uid\n?? scripts/hazards/production_placement.gd.uid\n?? scripts/hazards/story_hazard_adapter.gd.uid\n?? scripts/momentum_profile.gd.uid\n?? scripts/room_presentation.gd.uid\n?? tests/capture_dev06.gd.uid\n?? tests/en01/capture.gd.uid\n?? tests/en01/consumer_contract.gd.uid\n?? tests/en01/framework.gd.uid\n?? tests/en01/persistence.gd.uid\n?? tests/expansion_gates_save.gd.uid\n?? tests/expansion_traversal.gd.uid\n?? tests/fixtures/player_alpha052.gd.uid\n?? tests/gameplay_stabilization.gd.uid\n?? tests/haz01_contract.gd.uid\n?? tests/haz01_toolkit.gd.uid\n?? tests/integration_candidate.gd.uid\n?? tests/integration_descent.gd.uid\n?? tests/integration_profile.gd.uid\n?? tests/measure_sprite_size.gd.uid\n?? tests/movement_momentum.gd.uid\n?? tests/traversal_transitions.gd.uid\n?? tests/world_cohesion_traversal.gd.uid\n?? tests/world_expansion.gd.uid\n?? tools/alpha07/capture_compliance.gd.uid\n"
+    }
+  ],
+  "cache_directories": [
+    {
+      "path": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/asset01-host-lab/.godot",
+      "files": 352,
+      "bytes": 18274988
+    }
+  ],
+  "local_only_files": 38
+}

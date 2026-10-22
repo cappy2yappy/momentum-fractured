@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-10-22T21:43:19.604546+00:00",
+  "documentation_branch": "docs/home-recovery-20261022",
+  "draft_pr": "https://github.com/cappy2yappy/momentum-fractured/pull/93",
+  "original_feature_pins_unchanged": true,
+  "main_unchanged": "c69efbb43aa49b71dc6c541820934487a170fa7b",
+  "candidate3_unchanged": "c2170032d08ea55268313e0020676c743251deab",
+  "runtime_tests": "not run by sync audit",
+  "inventory_payload_count": 14366,
+  "initial_guide_head": "4f3d3501bcf9522da753c0a576c533086073dc86",
+  "source_checkout_count": 37,
+  "controlled_asset_pr": 94
+}

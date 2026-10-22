@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-10-22T21:41:04.671429+00:00",
+  "branch": "codex/asset01-controlled-pilots",
+  "head": "9439b1f7db804745463f3103a83981daae8e24b4",
+  "origin": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/asset01",
+  "status": " M docs/asset01/COMPATIBILITY.md\n M docs/asset01/HANDOFF.md\n M docs/asset01/LICENSES.md\n M docs/asset01/README.md\n M docs/asset01/license-status.csv\n M docs/asset01/license-status.json\n M tools/asset01/gallery/gallery.gd\n?? docs/asset01/CONTROLLED_PILOTS.md\n?? docs/asset01/pilot-plan.json\n?? tools/asset01/host_pilot.gd\n?? tools/asset01/review_pilot.py\n",
+  "files": [
+    {
+      "path": "docs/asset01/COMPATIBILITY.md",
+      "bytes": 11315,
+      "sha256": "adc21eae14b7fb39c93bfa7e4a127598842d1993a24900e0c3a6596cb12b4fdc"
+    },
+    {
+      "path": "docs/asset01/CONTROLLED_PILOTS.md",
+      "bytes": 8625,
+      "sha256": "9008406d61e5b56a41ffc0a2e21c1dcada94fc4af14fc6dd182a7f984edc16f9"
+    },
+    {
+      "path": "docs/asset01/HANDOFF.md",
+      "bytes": 3493,
+      "sha256": "22b1e09acc0cde8736a4ccf79ee462f5c4ab8428475c49273b7f13ec667af4c0"
+    },
+    {
+      "path": "docs/asset01/LICENSES.md",
+      "bytes": 3874,
+      "sha256": "e71ea99215d174111e7fb9d68362adef02409ae755c2c6bdd054896dde9a4973"
+    },
+    {
+      "path": "docs/asset01/README.md",
+      "bytes": 5694,
+      "sha256": "01c3f8cccaaa67b7892514df9d5abe8f44fa20348a2d0b0a3a8ec2bf84356f0c"
+    },
+    {
+      "path": "docs/asset01/license-status.csv",
+      "bytes": 5972,
+      "sha256": "e50c780dc70e55392ff9ac39421b522e307ea897a188acc0605875e17fcb3b5c"
+    },
+    {
+      "path": "docs/asset01/license-status.json",
+      "bytes": 9669,
+      "sha256": "05af508b850dd56dce8f1e3ac30b11a8c298b8f29ad6eaeb5c98648a42a59d59"
+    },
+    {
+      "path": "docs/asset01/pilot-plan.json",
+      "bytes": 4962,
+      "sha256": "189c448d3252eb206960d1f812c9f61a5185bb3b7de88a3fc7c17655f5db2455"
+    },
+    {
+      "path": "tools/asset01/gallery/gallery.gd",
+      "bytes": 11047,
+      "sha256": "ff119b69531f66a4d5a3d8df73eaaa06daf2d99d8ef5711601f6015d3e292c8d"
+    },
+    {
+      "path": "tools/asset01/host_pilot.gd",
+      "bytes": 6116,
+      "sha256": "b3bcb89dfdc86f10ff72d67f655db15870f504d777958eb8c6e07fe16a500f36"
+    },
+    {
+      "path": "tools/asset01/review_pilot.py",
+      "bytes": 6202,
+      "sha256": "32ac9421ac7a710e95add5f65261e3509867ca7a2fdf75637ffdcf63b607ec6e"
+    }
+  ],
+  "session": "01a16582-f1e1-79a0-902f-425f33d29227",
+  "session_status": "active at snapshot; validation and publication pending",
+  "equivalent_published_base": "2dd5c4f671a34424e65c8399013d3a44e50b1350",
+  "base_note": "Local PR92 base has a different commit hash but an identical tree to published PR92. Use equivalent_published_base on a fresh home clone."
+}
