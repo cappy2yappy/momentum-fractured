@@ -1,0 +1,9 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: production adapter rejects completion event incompatible with StoryDirector
+PASS: production adapter rejects invalid new story flag identifier
+PASS: actual director accepts explicit and stored boolean legacy read flags
+PASS: actual director duplicate hazard registration has no hidden binding
+ADAPTER IDENTIFIER CONTRACT: 0 failure(s)
