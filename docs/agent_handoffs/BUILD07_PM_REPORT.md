@@ -173,3 +173,46 @@ See `docs/wave3/build/REBUILD_PLAN.md`: TR-08 45d66970 (native suite 54/0) with 
 Not done: no rebuild, no new pins, no change to request.json beyond the cheap smoke already there. Pushing these changes triggers the existing cheap preparation-smoke (w3-control, Windows, quick), which also exercises the new code path on a hosted runner.
 
 Hosted check of the new tooling: the cheap smoke run 39460181122 (head b953719a, w3-control, Windows, quick) succeeded and its job annotations carried the four `pmpilot facts` notices, readable through the API (identity showed head_equals_pin true, tree 2a41ac47 expected, inner archive sha256, pack_file_list_sha256; checks; inventory; launcher args). Quick mode, so it is not a package for testing.
+
+# Targeted macOS creator-playtest package: candidate 3 (PR #77)
+
+Authorised by the PM decision on PR #77. One macOS Universal package, nothing else (no Windows build, no matrix, no control rerun, no Apple Silicon smoke). Not a QA acceptance, release or merge.
+
+## Pin and run
+- Source: `c2170032d08ea55268313e0020676c743251deab` (candidate/wave3-targeted-3, PR #77), tree `56219e5bce3f2571ed8c2e26a08ffd23b6660787`. The build asserted both (annotation: head_equals_pin true, tree_equals_expected true). Replaces the stale c2c3d958 pin.
+- Controls commit (tooling, PR #69 head when pushed): `ddaa9d54a90b25fa5b424b1d0e6cda067df53b14`. Run: https://github.com/cappy2yappy/momentum-fractured/actions/runs/39815022431 (plan, macOS, success; Windows and Apple Silicon jobs skipped by design). macOS job 16:33:30Z to 16:44:55Z (about 11.5 minutes).
+- Request used: `tools/pmpilot/request.targeted-1-macos.json` copied to request.json (variants w3-targeted, comparison, platforms macos, apple_silicon false, quick false). request.json was restored to the cheap smoke in the follow-up push.
+
+## Dry checks before launch (local, Linux)
+- Allowlist: 698 changed files vs 49ae3efe, 0 violations after adding only what the diff needed: tests/gn06_dash_offsets.gd, tests/ld07_*.gd, tools/ld07/**, tools/run_ld07_qa.py (the .uid/.import stubs, scripts/cinematic_transitions.gd and the rest were already covered; the diff against the previous pin added no new stub files). Inventory 0 problems. Tree equals the pin. TR08 fixtures equal the generated seeds.
+- Real `godot --export-pack` (macOS preset, text script mode): 573 entries, 68 text scripts byte-equal to source, 0 entries under source_art, tools, docs, tests, build or art07; `assets/art08/MANIFEST.json` present; 12 `kaze_*_strip.png.import` entries present, which is one per distinct PNG (14 manifest entries = 12 PNGs + the alias door_walk_out + the unfinished door_turn_to_side with no PNG). Correction: my earlier note of "13 strip imports" counted MANIFEST.json as well; the right figure is 12 imports plus the manifest. `source_art/*` is excluded by the committed export filter and by the tracked `source_art/art08/.gdignore`; the build asserts both; there is NO build-time overlay (`build_overlays` is empty in the run's annotation).
+- Blocking tests (no informational flag anywhere in the variant): the exported-pack native input suite `native_cinematic_transitions` plus these new blocking commands: tr08_embodied_cinematics, tr08_stage_labels, tr08_canal_hang_regression, gn06_dash_offsets, ld05_boundaries, ld07_ground. Not run, on purpose: ld07_dash_regression (its own header says it is the known GN-06 reproducer, expected red on the old runtime) and ld07_before_reproduction (meaningful only against 49ae3efe). Local runs of the six: 226/0, 7/0, 53/0, 5/0, 172/0, 154/0.
+
+## Results from the run (read from job annotations through the API)
+All checks ok: import warmup and settled, baseline, preservation (62 passes, no waiver used), source regressions (25 suites, 1617 assertions), tr06 automatic passage, tr08-embodied-cinematics 226, tr08-stage-labels 7, tr08-canal-hang-regression 53, gn06-dash-offsets 5, ld05-boundaries 172, ld07-ground 154, two exports, native release startup, nine launchers isolated, native-exported-input 54, exported-intentional_space 63, audit_intentional_space 21, movement_momentum 53, save_compatibility 11, expansion_gates_save 17, skyworks_progression 33. Findings list empty. Exported assertions 252.
+Caveat: `export_bytes_identical` is false (as in earlier runs); the resource payloads are identical across the two exports (`resource_payloads_identical` true).
+
+## Artifact (verified through the API, not by download)
+| item | value |
+|---|---|
+| Artifact | PMPILOT-comparison-macos-w3-targeted, id 12443670152, 81,178,682 bytes |
+| Link | https://github.com/cappy2yappy/momentum-fractured/actions/runs/39815022431/artifacts/12443670152 |
+| GitHub digest (outer zip sha256) | `bfced5025856d214f911c42dd03b6bae8b739872f151a9076533b49a67617254` |
+| Expires | 2026-11-21T16:44:42Z (not expired) |
+| Package zip inside | Kaze-PMPILOT-w3-targeted-macos-c2170032.zip, 81,438,227 bytes, inner SHA256 `46d8fba19cbebce1a8ff75300e32f3ceddb96f5761a0940286f7ef659ab07596` (from the build's own annotation, not recomputed by me) |
+| QA artifact | PMPILOT-QA-comparison-macos-w3-targeted, id 12442103312, 134,992 bytes, digest `26639431ec045345ba35fb0acd0065303bc7b588593a5116d1e367456a984f52` |
+| Pack | 573 entries; pck sha256 `393bf6344ed8aec0dd173cf3e2766dcc1c900d32f3d1a5e5b770e6cb2b83cb65`; pack file list sha256 `4d93d47efa85471fef7b1055fac2b3e8b09545bb9d41c36e43df06d6d1924254` (equals my local export-pack list hash); canonical resource sha256 `03b52cfd932a22b83ae59df86a918393df5f839fad89165871b97327d7fe517f` |
+| ART-08 manifest sha256 | `9d69cf58269c8853452c823ec482408a2538019c6ebbdc244dbf62b57e5b304c` |
+Download limitation, disclosed: I tried again to download artifact 12443670152. The API redirects to productionresultssa16.blob.core.windows.net and the sandbox proxy refuses it (403, zero bytes). So I did NOT recompute the outer SHA-256, did NOT open the manifest or INVENTORY files, and did NOT run verify_download.py. The outer digest above is GitHub's recorded value; the source SHA, inner archive hash, pack hashes, clip hashes and check results come from the job's own annotations ("pmpilot facts"), which the build computed. The creator can verify with `shasum -a 256` on the downloaded outer zip against the digest above, then `python tools/pmpilot/verify_download.py` from a full clone that holds c2170032 (needs gh auth).
+
+## ART-08 labels in the package (exactly Art's manifest at this source)
+14 entries: candidate 12 (stair_ascend_enter/loop/exit, stair_descend_enter/loop/exit, stair_descend_arrive_settle, stair_arrive_idle_settle, door_approach_walk, door_cross, door_emerge, and door_walk_out which is an ALIAS of door_approach_walk, same file), stand-in 1 (door_turn_to_rear), unfinished 1 (door_turn_to_side, no PNG, no pack entry). None is creator-approved. Clip SHA256s are in the package INVENTORY.md and in the run annotation.
+
+## Known red, skipped or open items shipped in the package (CREATOR_TEST_NOTES.txt, README.txt, MANIFEST known_acceptance_gaps)
+Stair letterbox 7.8 percent versus the 2 percent QA gate (including dark bars); R15 base-kit route comparison pending Level evidence; door_turn_to_side unfinished and door_turn_to_rear a stand-in; Canal doorway world-camera checks informational; roof-on and --ld05-open-top both available and neither approved; no Mac or Windows graphical validation and no full campaign; QA W6 162 PASS / 8 FAIL / 6 SKIP reported by QA (not re-run by Build). None is waived.
+
+## Launchers in the package
+Play-Stair-Fullscreen (R14), Play-Stair-Return (R17), Play-Canal-Doorway (R13, hold A), Play-Canal-Return (R0, E), Play-Geometry-Test (roof on), Play-Geometry-OpenTop (`--ld05-open-top`), Play-Reduced-Stair, plus Play-Fresh and Play-Reduced-Canal. TR-08 is default-on, so no stair flag is passed. Each launcher has an isolated profile and user-data folder. Unsigned: right-click Open the first time.
+
+## Remaining risks
+Nothing here is graphically validated; the macOS Universal binary was only executed headless on a hosted Intel host (x86_64), arm64 not executed; creator playtest is the first look at the descent silhouette, bars, labels, roof and doorway feel. Outer artifact bytes unverified by me. The exported-pack native suite passed 54 checks headless only. Roof course is not approved either way. Do not merge or integrate on this evidence.
