@@ -1,0 +1,3810 @@
+{
+  "contract": 1,
+  "packs": [
+    {
+      "archive_bytes": 3888550,
+      "decoded_rgba_bytes": 100663296,
+      "editable_sources": [],
+      "embedded_license_files": [],
+      "image_count": 96,
+      "name": "BlueWizard Animations.zip",
+      "png_count": 96,
+      "sequences": [
+        {
+          "byte_unique_frames": 11,
+          "dimensions": [
+            [
+              512,
+              512,
+              20
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 20,
+          "frames": [
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00000.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00001.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00002.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00003.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00004.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00005.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00006.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00007.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00008.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00009.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00010.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00011.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00012.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00013.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00014.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00015.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00016.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00017.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00018.png",
+            "BlueWizard/2BlueWizardIdle/Chara - BlueIdle00019.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardIdle",
+          "index_range": [
+            0,
+            19
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardIdle",
+          "partial_alpha_images": 20,
+          "rgba_memory_bytes": 20971520,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 20,
+          "visible_height_range": [
+            278,
+            280
+          ],
+          "visible_width_range": [
+            154,
+            155
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 8,
+          "dimensions": [
+            [
+              512,
+              512,
+              8
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 8,
+          "frames": [
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00000.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00001.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00002.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00003.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00004.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00005.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00006.png",
+            "BlueWizard/2BlueWizardJump/CharaWizardJump_00007.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardJump",
+          "index_range": [
+            0,
+            7
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardJump",
+          "partial_alpha_images": 8,
+          "rgba_memory_bytes": 8388608,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 8,
+          "visible_height_range": [
+            270,
+            278
+          ],
+          "visible_width_range": [
+            153,
+            155
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 16,
+          "dimensions": [
+            [
+              512,
+              512,
+              16
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 16,
+          "frames": [
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00000.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00001.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00002.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00003.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00004.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00005.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00006.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00007.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00008.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00009.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00010.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00011.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00012.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00013.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00014.png",
+            "BlueWizard/2BlueWizardJump/Dash2/DashBlue_00015.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardJump/Dash2",
+          "index_range": [
+            0,
+            15
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardJump/Dash2",
+          "partial_alpha_images": 16,
+          "rgba_memory_bytes": 16777216,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 16,
+          "visible_height_range": [
+            251,
+            288
+          ],
+          "visible_width_range": [
+            154,
+            272
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 16,
+          "dimensions": [
+            [
+              512,
+              512,
+              16
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 16,
+          "frames": [
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00000.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00001.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00002.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00003.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00004.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00005.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00006.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00007.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00008.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00009.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00010.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00011.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00012.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00013.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00014.png",
+            "BlueWizard/2BlueWizardJump/Dash3/Dash3_00015.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardJump/Dash3",
+          "index_range": [
+            0,
+            15
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardJump/Dash3",
+          "partial_alpha_images": 16,
+          "rgba_memory_bytes": 16777216,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 16,
+          "visible_height_range": [
+            275,
+            300
+          ],
+          "visible_width_range": [
+            155,
+            199
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 16,
+          "dimensions": [
+            [
+              512,
+              512,
+              16
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 16,
+          "frames": [
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00000.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00001.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00002.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00003.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00004.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00005.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00006.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00007.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00008.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00009.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00010.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00011.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00012.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00013.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00014.png",
+            "BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00015.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardJump/DashEffect",
+          "index_range": [
+            0,
+            15
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardJump/DashEffect",
+          "partial_alpha_images": 16,
+          "rgba_memory_bytes": 16777216,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 16,
+          "visible_height_range": [
+            252,
+            294
+          ],
+          "visible_width_range": [
+            155,
+            199
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 20,
+          "dimensions": [
+            [
+              512,
+              512,
+              20
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 20,
+          "frames": [
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00000.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00001.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00002.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00003.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00004.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00005.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00006.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00007.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00008.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00009.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00010.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00011.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00012.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00013.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00014.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00015.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00016.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00017.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00018.png",
+            "BlueWizard/2BlueWizardWalk/Chara_BlueWalk00019.png"
+          ],
+          "id": "bluewizard-animations/BlueWizard/2BlueWizardWalk",
+          "index_range": [
+            0,
+            19
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "BlueWizard/2BlueWizardWalk",
+          "partial_alpha_images": 20,
+          "rgba_memory_bytes": 20971520,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 20,
+          "visible_height_range": [
+            263,
+            278
+          ],
+          "visible_width_range": [
+            150,
+            155
+          ],
+          "regions": []
+        }
+      ],
+      "sha256": "6ede017d0f66ce51d083892f74d130c741744df107a3ae906460a0a775c6f094",
+      "slug": "bluewizard-animations"
+    },
+    {
+      "archive_bytes": 4970584,
+      "decoded_rgba_bytes": 63963136,
+      "editable_sources": [],
+      "embedded_license_files": [],
+      "image_count": 6,
+      "name": "CaveAssetsMaaot.zip",
+      "png_count": 5,
+      "sequences": [
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              1024,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Assets 1024 Cave/Cave - BigRocks1.png"
+          ],
+          "id": "caveassetsmaaot/Assets 1024 Cave/Cave - BigRocks1.png",
+          "index_range": [
+            1,
+            1
+          ],
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Assets 1024 Cave/Cave - BigRocks1.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 8388608,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1008,
+            1008
+          ],
+          "visible_width_range": [
+            1995,
+            1995
+          ],
+          "regions": [
+            [
+              1769,
+              12,
+              249,
+              206
+            ],
+            [
+              765,
+              21,
+              387,
+              254
+            ],
+            [
+              25,
+              22,
+              729,
+              566
+            ],
+            [
+              1416,
+              58,
+              316,
+              500
+            ],
+            [
+              1777,
+              255,
+              234,
+              757
+            ],
+            [
+              809,
+              311,
+              578,
+              248
+            ],
+            [
+              402,
+              630,
+              691,
+              387
+            ],
+            [
+              25,
+              633,
+              345,
+              386
+            ],
+            [
+              1115,
+              637,
+              600,
+              380
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2048,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Assets 1024 Cave/Cave - Floor.png"
+          ],
+          "id": "caveassetsmaaot/Assets 1024 Cave/Cave - Floor.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Assets 1024 Cave/Cave - Floor.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 16777216,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1940,
+            1940
+          ],
+          "visible_width_range": [
+            2001,
+            2001
+          ],
+          "regions": [
+            [
+              1721,
+              54,
+              214,
+              352
+            ],
+            [
+              495,
+              73,
+              375,
+              73
+            ],
+            [
+              78,
+              74,
+              363,
+              72
+            ],
+            [
+              955,
+              78,
+              146,
+              60
+            ],
+            [
+              1345,
+              87,
+              214,
+              352
+            ],
+            [
+              907,
+              176,
+              425,
+              138
+            ],
+            [
+              68,
+              213,
+              363,
+              73
+            ],
+            [
+              505,
+              215,
+              375,
+              73
+            ],
+            [
+              68,
+              360,
+              991,
+              81
+            ],
+            [
+              78,
+              512,
+              791,
+              79
+            ],
+            [
+              1277,
+              534,
+              352,
+              215
+            ],
+            [
+              1663,
+              537,
+              352,
+              215
+            ],
+            [
+              748,
+              675,
+              230,
+              73
+            ],
+            [
+              79,
+              676,
+              290,
+              77
+            ],
+            [
+              412,
+              677,
+              300,
+              73
+            ],
+            [
+              1012,
+              678,
+              223,
+              72
+            ],
+            [
+              54,
+              800,
+              1468,
+              162
+            ],
+            [
+              1867,
+              859,
+              124,
+              378
+            ],
+            [
+              1668,
+              860,
+              141,
+              374
+            ],
+            [
+              66,
+              1068,
+              1424,
+              258
+            ],
+            [
+              1631,
+              1312,
+              373,
+              122
+            ],
+            [
+              854,
+              1411,
+              677,
+              159
+            ],
+            [
+              21,
+              1426,
+              706,
+              205
+            ],
+            [
+              1632,
+              1496,
+              376,
+              108
+            ],
+            [
+              822,
+              1654,
+              792,
+              308
+            ],
+            [
+              15,
+              1753,
+              792,
+              240
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              1024,
+              1024,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Assets 1024 Cave/Cave - Platforms.png"
+          ],
+          "id": "caveassetsmaaot/Assets 1024 Cave/Cave - Platforms.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Assets 1024 Cave/Cave - Platforms.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 4194304,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            989,
+            989
+          ],
+          "visible_width_range": [
+            983,
+            983
+          ],
+          "regions": [
+            [
+              233,
+              23,
+              389,
+              189
+            ],
+            [
+              22,
+              25,
+              191,
+              189
+            ],
+            [
+              669,
+              56,
+              309,
+              323
+            ],
+            [
+              28,
+              225,
+              562,
+              363
+            ],
+            [
+              616,
+              398,
+              389,
+              364
+            ],
+            [
+              48,
+              644,
+              191,
+              364
+            ],
+            [
+              274,
+              645,
+              303,
+              62
+            ],
+            [
+              293,
+              721,
+              267,
+              158
+            ],
+            [
+              628,
+              793,
+              355,
+              63
+            ],
+            [
+              722,
+              889,
+              191,
+              104
+            ],
+            [
+              268,
+              902,
+              389,
+              105
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2048,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Assets 1024 Cave/Cave - RockCombinations1.png"
+          ],
+          "id": "caveassetsmaaot/Assets 1024 Cave/Cave - RockCombinations1.png",
+          "index_range": [
+            1,
+            1
+          ],
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Assets 1024 Cave/Cave - RockCombinations1.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 16777216,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1885,
+            1885
+          ],
+          "visible_width_range": [
+            1978,
+            1978
+          ],
+          "regions": [
+            [
+              26,
+              71,
+              574,
+              342
+            ],
+            [
+              989,
+              77,
+              470,
+              358
+            ],
+            [
+              1490,
+              87,
+              390,
+              244
+            ],
+            [
+              637,
+              100,
+              310,
+              257
+            ],
+            [
+              1585,
+              371,
+              294,
+              268
+            ],
+            [
+              29,
+              455,
+              434,
+              400
+            ],
+            [
+              522,
+              458,
+              428,
+              257
+            ],
+            [
+              1279,
+              464,
+              245,
+              204
+            ],
+            [
+              992,
+              469,
+              240,
+              247
+            ],
+            [
+              1310,
+              748,
+              694,
+              373
+            ],
+            [
+              633,
+              819,
+              574,
+              373
+            ],
+            [
+              33,
+              883,
+              574,
+              290
+            ],
+            [
+              44,
+              1234,
+              575,
+              597
+            ],
+            [
+              1165,
+              1250,
+              363,
+              644
+            ],
+            [
+              701,
+              1287,
+              421,
+              668
+            ],
+            [
+              1571,
+              1300,
+              398,
+              629
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2048,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Assets 1024 Cave/Cave - SmallRocks.png"
+          ],
+          "id": "caveassetsmaaot/Assets 1024 Cave/Cave - SmallRocks.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Assets 1024 Cave/Cave - SmallRocks.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 16777216,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1950,
+            1950
+          ],
+          "visible_width_range": [
+            1980,
+            1980
+          ],
+          "regions": [
+            [
+              1828,
+              67,
+              171,
+              252
+            ],
+            [
+              1641,
+              75,
+              143,
+              344
+            ],
+            [
+              913,
+              76,
+              171,
+              166
+            ],
+            [
+              1156,
+              76,
+              187,
+              162
+            ],
+            [
+              105,
+              79,
+              132,
+              128
+            ],
+            [
+              1372,
+              83,
+              174,
+              150
+            ],
+            [
+              699,
+              98,
+              173,
+              137
+            ],
+            [
+              322,
+              118,
+              121,
+              84
+            ],
+            [
+              523,
+              134,
+              122,
+              70
+            ],
+            [
+              89,
+              276,
+              186,
+              141
+            ],
+            [
+              730,
+              284,
+              121,
+              155
+            ],
+            [
+              1170,
+              301,
+              376,
+              173
+            ],
+            [
+              919,
+              306,
+              164,
+              126
+            ],
+            [
+              540,
+              326,
+              87,
+              78
+            ],
+            [
+              323,
+              335,
+              116,
+              65
+            ],
+            [
+              1864,
+              469,
+              121,
+              178
+            ],
+            [
+              899,
+              477,
+              185,
+              269
+            ],
+            [
+              367,
+              479,
+              184,
+              265
+            ],
+            [
+              631,
+              479,
+              174,
+              265
+            ],
+            [
+              1628,
+              480,
+              171,
+              155
+            ],
+            [
+              94,
+              521,
+              195,
+              178
+            ],
+            [
+              1200,
+              559,
+              308,
+              266
+            ],
+            [
+              1664,
+              694,
+              305,
+              143
+            ],
+            [
+              826,
+              887,
+              132,
+              177
+            ],
+            [
+              1235,
+              891,
+              130,
+              169
+            ],
+            [
+              1646,
+              892,
+              132,
+              167
+            ],
+            [
+              1034,
+              896,
+              123,
+              159
+            ],
+            [
+              1442,
+              924,
+              133,
+              103
+            ],
+            [
+              38,
+              931,
+              729,
+              566
+            ],
+            [
+              1828,
+              1014,
+              188,
+              383
+            ],
+            [
+              1613,
+              1155,
+              188,
+              242
+            ],
+            [
+              812,
+              1165,
+              729,
+              408
+            ],
+            [
+              1614,
+              1427,
+              188,
+              587
+            ],
+            [
+              39,
+              1621,
+              345,
+              386
+            ],
+            [
+              1829,
+              1644,
+              188,
+              369
+            ],
+            [
+              1214,
+              1651,
+              370,
+              365
+            ],
+            [
+              838,
+              1681,
+              311,
+              326
+            ],
+            [
+              426,
+              1753,
+              387,
+              254
+            ],
+            [
+              1241,
+              1921,
+              9,
+              16
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        }
+      ],
+      "sha256": "8014e9efe9749fe2c4782db4a1d1dfd8afd69d0e846a35514dff06abf58bdb47",
+      "slug": "caveassetsmaaot"
+    },
+    {
+      "archive_bytes": 19429974,
+      "decoded_rgba_bytes": 243302400,
+      "editable_sources": [],
+      "embedded_license_files": [],
+      "image_count": 6,
+      "name": "Mossy Assets.zip",
+      "png_count": 6,
+      "sequences": [
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              4096,
+              4096,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - BackgroundDecoration.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - BackgroundDecoration.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - BackgroundDecoration.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 67108864,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            4041,
+            4041
+          ],
+          "visible_width_range": [
+            4066,
+            4066
+          ],
+          "regions": [
+            [
+              16,
+              45,
+              1050,
+              4029
+            ],
+            [
+              1193,
+              45,
+              1036,
+              2346
+            ],
+            [
+              2675,
+              126,
+              1086,
+              1002
+            ],
+            [
+              2383,
+              1410,
+              1683,
+              910
+            ],
+            [
+              2395,
+              2361,
+              1687,
+              1725
+            ],
+            [
+              1214,
+              2610,
+              923,
+              644
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              4096,
+              4096,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - Decorations&Hazards.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - Decorations&Hazards.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - Decorations&Hazards.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 67108864,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            4042,
+            4042
+          ],
+          "visible_width_range": [
+            3899,
+            3899
+          ],
+          "regions": [
+            [
+              2892,
+              9,
+              1054,
+              915
+            ],
+            [
+              232,
+              191,
+              1284,
+              707
+            ],
+            [
+              1604,
+              401,
+              1140,
+              512
+            ],
+            [
+              125,
+              961,
+              1473,
+              627
+            ],
+            [
+              2066,
+              971,
+              1226,
+              809
+            ],
+            [
+              434,
+              1634,
+              918,
+              851
+            ],
+            [
+              1664,
+              1892,
+              457,
+              424
+            ],
+            [
+              2344,
+              1892,
+              609,
+              402
+            ],
+            [
+              3164,
+              1939,
+              740,
+              316
+            ],
+            [
+              3721,
+              2547,
+              247,
+              1503
+            ],
+            [
+              3109,
+              2561,
+              421,
+              1480
+            ],
+            [
+              2608,
+              2564,
+              427,
+              1473
+            ],
+            [
+              2113,
+              2566,
+              412,
+              1466
+            ],
+            [
+              657,
+              2625,
+              274,
+              379
+            ],
+            [
+              1235,
+              2630,
+              150,
+              359
+            ],
+            [
+              97,
+              2640,
+              289,
+              258
+            ],
+            [
+              1579,
+              2735,
+              66,
+              167
+            ],
+            [
+              1799,
+              2741,
+              64,
+              163
+            ],
+            [
+              1948,
+              2761,
+              71,
+              146
+            ],
+            [
+              1729,
+              2766,
+              73,
+              149
+            ],
+            [
+              1877,
+              2772,
+              64,
+              133
+            ],
+            [
+              1643,
+              2775,
+              68,
+              127
+            ],
+            [
+              1426,
+              2936,
+              138,
+              174
+            ],
+            [
+              1600,
+              3073,
+              402,
+              448
+            ],
+            [
+              87,
+              3076,
+              335,
+              441
+            ],
+            [
+              1170,
+              3104,
+              171,
+              408
+            ],
+            [
+              618,
+              3180,
+              299,
+              227
+            ],
+            [
+              574,
+              3573,
+              255,
+              475
+            ],
+            [
+              220,
+              3586,
+              99,
+              450
+            ],
+            [
+              1662,
+              3618,
+              225,
+              399
+            ],
+            [
+              1258,
+              3633,
+              85,
+              394
+            ],
+            [
+              882,
+              3645,
+              60,
+              397
+            ],
+            [
+              1600,
+              3733,
+              139,
+              283
+            ],
+            [
+              1817,
+              3760,
+              126,
+              256
+            ],
+            [
+              1878,
+              3816,
+              87,
+              199
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2048,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - FloatingPlatforms.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - FloatingPlatforms.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - FloatingPlatforms.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 16777216,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1982,
+            1982
+          ],
+          "visible_width_range": [
+            2023,
+            2023
+          ],
+          "regions": [
+            [
+              479,
+              36,
+              1049,
+              450
+            ],
+            [
+              1594,
+              45,
+              448,
+              940
+            ],
+            [
+              116,
+              51,
+              256,
+              317
+            ],
+            [
+              497,
+              538,
+              1049,
+              450
+            ],
+            [
+              47,
+              542,
+              381,
+              368
+            ],
+            [
+              438,
+              1095,
+              1561,
+              450
+            ],
+            [
+              113,
+              1110,
+              281,
+              275
+            ],
+            [
+              20,
+              1566,
+              2013,
+              450
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2948,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - Hanging Plants.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - Hanging Plants.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - Hanging Plants.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 24150016,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            2759,
+            2759
+          ],
+          "visible_width_range": [
+            1895,
+            1895
+          ],
+          "regions": [
+            [
+              1669,
+              105,
+              266,
+              947
+            ],
+            [
+              517,
+              116,
+              363,
+              974
+            ],
+            [
+              1308,
+              117,
+              303,
+              819
+            ],
+            [
+              913,
+              119,
+              362,
+              975
+            ],
+            [
+              113,
+              122,
+              363,
+              1175
+            ],
+            [
+              1179,
+              1120,
+              759,
+              509
+            ],
+            [
+              89,
+              1400,
+              465,
+              1374
+            ],
+            [
+              718,
+              1400,
+              465,
+              1374
+            ],
+            [
+              1225,
+              1726,
+              759,
+              509
+            ],
+            [
+              1223,
+              2354,
+              759,
+              509
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              2048,
+              2048,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - MossyHills.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - MossyHills.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - MossyHills.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 16777216,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            1968,
+            1968
+          ],
+          "visible_width_range": [
+            1933,
+            1933
+          ],
+          "regions": [
+            [
+              689,
+              38,
+              1156,
+              487
+            ],
+            [
+              137,
+              83,
+              256,
+              317
+            ],
+            [
+              68,
+              574,
+              381,
+              368
+            ],
+            [
+              647,
+              616,
+              1239,
+              857
+            ],
+            [
+              134,
+              1142,
+              281,
+              275
+            ],
+            [
+              63,
+              1510,
+              1324,
+              451
+            ],
+            [
+              1456,
+              1581,
+              534,
+              423
+            ]
+          ],
+          "region_kind": "candidate alpha components, not verified sprite identities"
+        },
+        {
+          "byte_unique_frames": 1,
+          "dimensions": [
+            [
+              3584,
+              3584,
+              1
+            ]
+          ],
+          "first_last_byte_identical": null,
+          "frame_count": 1,
+          "frames": [
+            "Mossy Tileset/Mossy - TileSet.png"
+          ],
+          "id": "mossy-assets/Mossy Tileset/Mossy - TileSet.png",
+          "index_range": null,
+          "kind": "static_atlas",
+          "missing_indices": [],
+          "name": "Mossy Tileset/Mossy - TileSet.png",
+          "partial_alpha_images": 1,
+          "rgba_memory_bytes": 51380224,
+          "timing": "static; no animation metadata",
+          "transparent_images": 1,
+          "visible_height_range": [
+            3584,
+            3584
+          ],
+          "visible_width_range": [
+            3584,
+            3584
+          ],
+          "regions": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              2560,
+              512,
+              512,
+              512
+            ],
+            [
+              3072,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              2560,
+              1024,
+              512,
+              512
+            ],
+            [
+              3072,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              2560,
+              1536,
+              512,
+              512
+            ],
+            [
+              3072,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ],
+            [
+              2048,
+              2048,
+              512,
+              512
+            ],
+            [
+              2560,
+              2048,
+              512,
+              512
+            ],
+            [
+              3072,
+              2048,
+              512,
+              512
+            ],
+            [
+              0,
+              2560,
+              512,
+              512
+            ],
+            [
+              512,
+              2560,
+              512,
+              512
+            ],
+            [
+              1024,
+              2560,
+              512,
+              512
+            ],
+            [
+              1536,
+              2560,
+              512,
+              512
+            ],
+            [
+              2048,
+              2560,
+              512,
+              512
+            ],
+            [
+              2560,
+              2560,
+              512,
+              512
+            ],
+            [
+              3072,
+              2560,
+              512,
+              512
+            ],
+            [
+              0,
+              3072,
+              512,
+              512
+            ],
+            [
+              512,
+              3072,
+              512,
+              512
+            ],
+            [
+              1024,
+              3072,
+              512,
+              512
+            ],
+            [
+              1536,
+              3072,
+              512,
+              512
+            ],
+            [
+              2048,
+              3072,
+              512,
+              512
+            ],
+            [
+              2560,
+              3072,
+              512,
+              512
+            ],
+            [
+              3072,
+              3072,
+              512,
+              512
+            ]
+          ],
+          "region_kind": "512px authored tile grid"
+        }
+      ],
+      "sha256": "eae4339b38a4a202b03e0524ab88084702de6cd59f5e8e2bda735a043a155de2",
+      "slug": "mossy-assets"
+    },
+    {
+      "archive_bytes": 48058384,
+      "decoded_rgba_bytes": 922746880,
+      "editable_sources": [],
+      "embedded_license_files": [],
+      "image_count": 730,
+      "name": "Plant Animations.zip",
+      "png_count": 730,
+      "sequences": [
+        {
+          "byte_unique_frames": 31,
+          "dimensions": [
+            [
+              768,
+              768,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/BlueFlower1/BlueFlower_00000.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00001.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00002.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00003.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00004.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00005.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00006.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00007.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00008.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00009.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00010.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00011.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00012.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00013.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00014.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00015.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00016.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00017.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00018.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00019.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00020.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00021.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00022.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00023.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00024.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00025.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00026.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00027.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00028.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00029.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00030.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00031.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00032.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00033.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00034.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00035.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00036.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00037.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00038.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00039.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00040.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00041.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00042.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00043.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00044.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00045.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00046.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00047.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00048.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00049.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00050.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00051.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00052.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00053.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00054.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00055.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00056.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00057.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00058.png",
+            "Plant Animations/BlueFlower1/BlueFlower_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/BlueFlower1",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/BlueFlower1",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 141557760,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            604,
+            652
+          ],
+          "visible_width_range": [
+            587,
+            622
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 58,
+          "dimensions": [
+            [
+              768,
+              768,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/BlueFlower2/BluePlantClosed_00000.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00001.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00002.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00003.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00004.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00005.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00006.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00007.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00008.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00009.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00010.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00011.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00012.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00013.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00014.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00015.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00016.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00017.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00018.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00019.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00020.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00021.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00022.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00023.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00024.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00025.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00026.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00027.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00028.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00029.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00030.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00031.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00032.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00033.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00034.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00035.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00036.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00037.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00038.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00039.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00040.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00041.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00042.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00043.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00044.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00045.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00046.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00047.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00048.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00049.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00050.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00051.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00052.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00053.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00054.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00055.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00056.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00057.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00058.png",
+            "Plant Animations/BlueFlower2/BluePlantClosed_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/BlueFlower2",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/BlueFlower2",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 141557760,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            580,
+            649
+          ],
+          "visible_width_range": [
+            587,
+            672
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 90,
+          "dimensions": [
+            [
+              512,
+              512,
+              90
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 90,
+          "frames": [
+            "Plant Animations/Plant 1/Plant1_00000.png",
+            "Plant Animations/Plant 1/Plant1_00001.png",
+            "Plant Animations/Plant 1/Plant1_00002.png",
+            "Plant Animations/Plant 1/Plant1_00003.png",
+            "Plant Animations/Plant 1/Plant1_00004.png",
+            "Plant Animations/Plant 1/Plant1_00005.png",
+            "Plant Animations/Plant 1/Plant1_00006.png",
+            "Plant Animations/Plant 1/Plant1_00007.png",
+            "Plant Animations/Plant 1/Plant1_00008.png",
+            "Plant Animations/Plant 1/Plant1_00009.png",
+            "Plant Animations/Plant 1/Plant1_00010.png",
+            "Plant Animations/Plant 1/Plant1_00011.png",
+            "Plant Animations/Plant 1/Plant1_00012.png",
+            "Plant Animations/Plant 1/Plant1_00013.png",
+            "Plant Animations/Plant 1/Plant1_00014.png",
+            "Plant Animations/Plant 1/Plant1_00015.png",
+            "Plant Animations/Plant 1/Plant1_00016.png",
+            "Plant Animations/Plant 1/Plant1_00017.png",
+            "Plant Animations/Plant 1/Plant1_00018.png",
+            "Plant Animations/Plant 1/Plant1_00019.png",
+            "Plant Animations/Plant 1/Plant1_00020.png",
+            "Plant Animations/Plant 1/Plant1_00021.png",
+            "Plant Animations/Plant 1/Plant1_00022.png",
+            "Plant Animations/Plant 1/Plant1_00023.png",
+            "Plant Animations/Plant 1/Plant1_00024.png",
+            "Plant Animations/Plant 1/Plant1_00025.png",
+            "Plant Animations/Plant 1/Plant1_00026.png",
+            "Plant Animations/Plant 1/Plant1_00027.png",
+            "Plant Animations/Plant 1/Plant1_00028.png",
+            "Plant Animations/Plant 1/Plant1_00029.png",
+            "Plant Animations/Plant 1/Plant1_00030.png",
+            "Plant Animations/Plant 1/Plant1_00031.png",
+            "Plant Animations/Plant 1/Plant1_00032.png",
+            "Plant Animations/Plant 1/Plant1_00033.png",
+            "Plant Animations/Plant 1/Plant1_00034.png",
+            "Plant Animations/Plant 1/Plant1_00035.png",
+            "Plant Animations/Plant 1/Plant1_00036.png",
+            "Plant Animations/Plant 1/Plant1_00037.png",
+            "Plant Animations/Plant 1/Plant1_00038.png",
+            "Plant Animations/Plant 1/Plant1_00039.png",
+            "Plant Animations/Plant 1/Plant1_00040.png",
+            "Plant Animations/Plant 1/Plant1_00041.png",
+            "Plant Animations/Plant 1/Plant1_00042.png",
+            "Plant Animations/Plant 1/Plant1_00043.png",
+            "Plant Animations/Plant 1/Plant1_00044.png",
+            "Plant Animations/Plant 1/Plant1_00045.png",
+            "Plant Animations/Plant 1/Plant1_00046.png",
+            "Plant Animations/Plant 1/Plant1_00047.png",
+            "Plant Animations/Plant 1/Plant1_00048.png",
+            "Plant Animations/Plant 1/Plant1_00049.png",
+            "Plant Animations/Plant 1/Plant1_00050.png",
+            "Plant Animations/Plant 1/Plant1_00051.png",
+            "Plant Animations/Plant 1/Plant1_00052.png",
+            "Plant Animations/Plant 1/Plant1_00053.png",
+            "Plant Animations/Plant 1/Plant1_00054.png",
+            "Plant Animations/Plant 1/Plant1_00055.png",
+            "Plant Animations/Plant 1/Plant1_00056.png",
+            "Plant Animations/Plant 1/Plant1_00057.png",
+            "Plant Animations/Plant 1/Plant1_00058.png",
+            "Plant Animations/Plant 1/Plant1_00059.png",
+            "Plant Animations/Plant 1/Plant1_00060.png",
+            "Plant Animations/Plant 1/Plant1_00061.png",
+            "Plant Animations/Plant 1/Plant1_00062.png",
+            "Plant Animations/Plant 1/Plant1_00063.png",
+            "Plant Animations/Plant 1/Plant1_00064.png",
+            "Plant Animations/Plant 1/Plant1_00065.png",
+            "Plant Animations/Plant 1/Plant1_00066.png",
+            "Plant Animations/Plant 1/Plant1_00067.png",
+            "Plant Animations/Plant 1/Plant1_00068.png",
+            "Plant Animations/Plant 1/Plant1_00069.png",
+            "Plant Animations/Plant 1/Plant1_00070.png",
+            "Plant Animations/Plant 1/Plant1_00071.png",
+            "Plant Animations/Plant 1/Plant1_00072.png",
+            "Plant Animations/Plant 1/Plant1_00073.png",
+            "Plant Animations/Plant 1/Plant1_00074.png",
+            "Plant Animations/Plant 1/Plant1_00075.png",
+            "Plant Animations/Plant 1/Plant1_00076.png",
+            "Plant Animations/Plant 1/Plant1_00077.png",
+            "Plant Animations/Plant 1/Plant1_00078.png",
+            "Plant Animations/Plant 1/Plant1_00079.png",
+            "Plant Animations/Plant 1/Plant1_00080.png",
+            "Plant Animations/Plant 1/Plant1_00081.png",
+            "Plant Animations/Plant 1/Plant1_00082.png",
+            "Plant Animations/Plant 1/Plant1_00083.png",
+            "Plant Animations/Plant 1/Plant1_00084.png",
+            "Plant Animations/Plant 1/Plant1_00085.png",
+            "Plant Animations/Plant 1/Plant1_00086.png",
+            "Plant Animations/Plant 1/Plant1_00087.png",
+            "Plant Animations/Plant 1/Plant1_00088.png",
+            "Plant Animations/Plant 1/Plant1_00089.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 1",
+          "index_range": [
+            0,
+            89
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 1",
+          "partial_alpha_images": 90,
+          "rgba_memory_bytes": 94371840,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 90,
+          "visible_height_range": [
+            339,
+            344
+          ],
+          "visible_width_range": [
+            148,
+            153
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 90,
+          "dimensions": [
+            [
+              512,
+              512,
+              90
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 90,
+          "frames": [
+            "Plant Animations/Plant 2/Plant2_00000.png",
+            "Plant Animations/Plant 2/Plant2_00001.png",
+            "Plant Animations/Plant 2/Plant2_00002.png",
+            "Plant Animations/Plant 2/Plant2_00003.png",
+            "Plant Animations/Plant 2/Plant2_00004.png",
+            "Plant Animations/Plant 2/Plant2_00005.png",
+            "Plant Animations/Plant 2/Plant2_00006.png",
+            "Plant Animations/Plant 2/Plant2_00007.png",
+            "Plant Animations/Plant 2/Plant2_00008.png",
+            "Plant Animations/Plant 2/Plant2_00009.png",
+            "Plant Animations/Plant 2/Plant2_00010.png",
+            "Plant Animations/Plant 2/Plant2_00011.png",
+            "Plant Animations/Plant 2/Plant2_00012.png",
+            "Plant Animations/Plant 2/Plant2_00013.png",
+            "Plant Animations/Plant 2/Plant2_00014.png",
+            "Plant Animations/Plant 2/Plant2_00015.png",
+            "Plant Animations/Plant 2/Plant2_00016.png",
+            "Plant Animations/Plant 2/Plant2_00017.png",
+            "Plant Animations/Plant 2/Plant2_00018.png",
+            "Plant Animations/Plant 2/Plant2_00019.png",
+            "Plant Animations/Plant 2/Plant2_00020.png",
+            "Plant Animations/Plant 2/Plant2_00021.png",
+            "Plant Animations/Plant 2/Plant2_00022.png",
+            "Plant Animations/Plant 2/Plant2_00023.png",
+            "Plant Animations/Plant 2/Plant2_00024.png",
+            "Plant Animations/Plant 2/Plant2_00025.png",
+            "Plant Animations/Plant 2/Plant2_00026.png",
+            "Plant Animations/Plant 2/Plant2_00027.png",
+            "Plant Animations/Plant 2/Plant2_00028.png",
+            "Plant Animations/Plant 2/Plant2_00029.png",
+            "Plant Animations/Plant 2/Plant2_00030.png",
+            "Plant Animations/Plant 2/Plant2_00031.png",
+            "Plant Animations/Plant 2/Plant2_00032.png",
+            "Plant Animations/Plant 2/Plant2_00033.png",
+            "Plant Animations/Plant 2/Plant2_00034.png",
+            "Plant Animations/Plant 2/Plant2_00035.png",
+            "Plant Animations/Plant 2/Plant2_00036.png",
+            "Plant Animations/Plant 2/Plant2_00037.png",
+            "Plant Animations/Plant 2/Plant2_00038.png",
+            "Plant Animations/Plant 2/Plant2_00039.png",
+            "Plant Animations/Plant 2/Plant2_00040.png",
+            "Plant Animations/Plant 2/Plant2_00041.png",
+            "Plant Animations/Plant 2/Plant2_00042.png",
+            "Plant Animations/Plant 2/Plant2_00043.png",
+            "Plant Animations/Plant 2/Plant2_00044.png",
+            "Plant Animations/Plant 2/Plant2_00045.png",
+            "Plant Animations/Plant 2/Plant2_00046.png",
+            "Plant Animations/Plant 2/Plant2_00047.png",
+            "Plant Animations/Plant 2/Plant2_00048.png",
+            "Plant Animations/Plant 2/Plant2_00049.png",
+            "Plant Animations/Plant 2/Plant2_00050.png",
+            "Plant Animations/Plant 2/Plant2_00051.png",
+            "Plant Animations/Plant 2/Plant2_00052.png",
+            "Plant Animations/Plant 2/Plant2_00053.png",
+            "Plant Animations/Plant 2/Plant2_00054.png",
+            "Plant Animations/Plant 2/Plant2_00055.png",
+            "Plant Animations/Plant 2/Plant2_00056.png",
+            "Plant Animations/Plant 2/Plant2_00057.png",
+            "Plant Animations/Plant 2/Plant2_00058.png",
+            "Plant Animations/Plant 2/Plant2_00059.png",
+            "Plant Animations/Plant 2/Plant2_00060.png",
+            "Plant Animations/Plant 2/Plant2_00061.png",
+            "Plant Animations/Plant 2/Plant2_00062.png",
+            "Plant Animations/Plant 2/Plant2_00063.png",
+            "Plant Animations/Plant 2/Plant2_00064.png",
+            "Plant Animations/Plant 2/Plant2_00065.png",
+            "Plant Animations/Plant 2/Plant2_00066.png",
+            "Plant Animations/Plant 2/Plant2_00067.png",
+            "Plant Animations/Plant 2/Plant2_00068.png",
+            "Plant Animations/Plant 2/Plant2_00069.png",
+            "Plant Animations/Plant 2/Plant2_00070.png",
+            "Plant Animations/Plant 2/Plant2_00071.png",
+            "Plant Animations/Plant 2/Plant2_00072.png",
+            "Plant Animations/Plant 2/Plant2_00073.png",
+            "Plant Animations/Plant 2/Plant2_00074.png",
+            "Plant Animations/Plant 2/Plant2_00075.png",
+            "Plant Animations/Plant 2/Plant2_00076.png",
+            "Plant Animations/Plant 2/Plant2_00077.png",
+            "Plant Animations/Plant 2/Plant2_00078.png",
+            "Plant Animations/Plant 2/Plant2_00079.png",
+            "Plant Animations/Plant 2/Plant2_00080.png",
+            "Plant Animations/Plant 2/Plant2_00081.png",
+            "Plant Animations/Plant 2/Plant2_00082.png",
+            "Plant Animations/Plant 2/Plant2_00083.png",
+            "Plant Animations/Plant 2/Plant2_00084.png",
+            "Plant Animations/Plant 2/Plant2_00085.png",
+            "Plant Animations/Plant 2/Plant2_00086.png",
+            "Plant Animations/Plant 2/Plant2_00087.png",
+            "Plant Animations/Plant 2/Plant2_00088.png",
+            "Plant Animations/Plant 2/Plant2_00089.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 2",
+          "index_range": [
+            0,
+            89
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 2",
+          "partial_alpha_images": 90,
+          "rgba_memory_bytes": 94371840,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 90,
+          "visible_height_range": [
+            324,
+            334
+          ],
+          "visible_width_range": [
+            351,
+            369
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 90,
+          "dimensions": [
+            [
+              512,
+              512,
+              90
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 90,
+          "frames": [
+            "Plant Animations/Plant 3/Plant3_00000.png",
+            "Plant Animations/Plant 3/Plant3_00001.png",
+            "Plant Animations/Plant 3/Plant3_00002.png",
+            "Plant Animations/Plant 3/Plant3_00003.png",
+            "Plant Animations/Plant 3/Plant3_00004.png",
+            "Plant Animations/Plant 3/Plant3_00005.png",
+            "Plant Animations/Plant 3/Plant3_00006.png",
+            "Plant Animations/Plant 3/Plant3_00007.png",
+            "Plant Animations/Plant 3/Plant3_00008.png",
+            "Plant Animations/Plant 3/Plant3_00009.png",
+            "Plant Animations/Plant 3/Plant3_00010.png",
+            "Plant Animations/Plant 3/Plant3_00011.png",
+            "Plant Animations/Plant 3/Plant3_00012.png",
+            "Plant Animations/Plant 3/Plant3_00013.png",
+            "Plant Animations/Plant 3/Plant3_00014.png",
+            "Plant Animations/Plant 3/Plant3_00015.png",
+            "Plant Animations/Plant 3/Plant3_00016.png",
+            "Plant Animations/Plant 3/Plant3_00017.png",
+            "Plant Animations/Plant 3/Plant3_00018.png",
+            "Plant Animations/Plant 3/Plant3_00019.png",
+            "Plant Animations/Plant 3/Plant3_00020.png",
+            "Plant Animations/Plant 3/Plant3_00021.png",
+            "Plant Animations/Plant 3/Plant3_00022.png",
+            "Plant Animations/Plant 3/Plant3_00023.png",
+            "Plant Animations/Plant 3/Plant3_00024.png",
+            "Plant Animations/Plant 3/Plant3_00025.png",
+            "Plant Animations/Plant 3/Plant3_00026.png",
+            "Plant Animations/Plant 3/Plant3_00027.png",
+            "Plant Animations/Plant 3/Plant3_00028.png",
+            "Plant Animations/Plant 3/Plant3_00029.png",
+            "Plant Animations/Plant 3/Plant3_00030.png",
+            "Plant Animations/Plant 3/Plant3_00031.png",
+            "Plant Animations/Plant 3/Plant3_00032.png",
+            "Plant Animations/Plant 3/Plant3_00033.png",
+            "Plant Animations/Plant 3/Plant3_00034.png",
+            "Plant Animations/Plant 3/Plant3_00035.png",
+            "Plant Animations/Plant 3/Plant3_00036.png",
+            "Plant Animations/Plant 3/Plant3_00037.png",
+            "Plant Animations/Plant 3/Plant3_00038.png",
+            "Plant Animations/Plant 3/Plant3_00039.png",
+            "Plant Animations/Plant 3/Plant3_00040.png",
+            "Plant Animations/Plant 3/Plant3_00041.png",
+            "Plant Animations/Plant 3/Plant3_00042.png",
+            "Plant Animations/Plant 3/Plant3_00043.png",
+            "Plant Animations/Plant 3/Plant3_00044.png",
+            "Plant Animations/Plant 3/Plant3_00045.png",
+            "Plant Animations/Plant 3/Plant3_00046.png",
+            "Plant Animations/Plant 3/Plant3_00047.png",
+            "Plant Animations/Plant 3/Plant3_00048.png",
+            "Plant Animations/Plant 3/Plant3_00049.png",
+            "Plant Animations/Plant 3/Plant3_00050.png",
+            "Plant Animations/Plant 3/Plant3_00051.png",
+            "Plant Animations/Plant 3/Plant3_00052.png",
+            "Plant Animations/Plant 3/Plant3_00053.png",
+            "Plant Animations/Plant 3/Plant3_00054.png",
+            "Plant Animations/Plant 3/Plant3_00055.png",
+            "Plant Animations/Plant 3/Plant3_00056.png",
+            "Plant Animations/Plant 3/Plant3_00057.png",
+            "Plant Animations/Plant 3/Plant3_00058.png",
+            "Plant Animations/Plant 3/Plant3_00059.png",
+            "Plant Animations/Plant 3/Plant3_00060.png",
+            "Plant Animations/Plant 3/Plant3_00061.png",
+            "Plant Animations/Plant 3/Plant3_00062.png",
+            "Plant Animations/Plant 3/Plant3_00063.png",
+            "Plant Animations/Plant 3/Plant3_00064.png",
+            "Plant Animations/Plant 3/Plant3_00065.png",
+            "Plant Animations/Plant 3/Plant3_00066.png",
+            "Plant Animations/Plant 3/Plant3_00067.png",
+            "Plant Animations/Plant 3/Plant3_00068.png",
+            "Plant Animations/Plant 3/Plant3_00069.png",
+            "Plant Animations/Plant 3/Plant3_00070.png",
+            "Plant Animations/Plant 3/Plant3_00071.png",
+            "Plant Animations/Plant 3/Plant3_00072.png",
+            "Plant Animations/Plant 3/Plant3_00073.png",
+            "Plant Animations/Plant 3/Plant3_00074.png",
+            "Plant Animations/Plant 3/Plant3_00075.png",
+            "Plant Animations/Plant 3/Plant3_00076.png",
+            "Plant Animations/Plant 3/Plant3_00077.png",
+            "Plant Animations/Plant 3/Plant3_00078.png",
+            "Plant Animations/Plant 3/Plant3_00079.png",
+            "Plant Animations/Plant 3/Plant3_00080.png",
+            "Plant Animations/Plant 3/Plant3_00081.png",
+            "Plant Animations/Plant 3/Plant3_00082.png",
+            "Plant Animations/Plant 3/Plant3_00083.png",
+            "Plant Animations/Plant 3/Plant3_00084.png",
+            "Plant Animations/Plant 3/Plant3_00085.png",
+            "Plant Animations/Plant 3/Plant3_00086.png",
+            "Plant Animations/Plant 3/Plant3_00087.png",
+            "Plant Animations/Plant 3/Plant3_00088.png",
+            "Plant Animations/Plant 3/Plant3_00089.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 3",
+          "index_range": [
+            0,
+            89
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 3",
+          "partial_alpha_images": 90,
+          "rgba_memory_bytes": 94371840,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 90,
+          "visible_height_range": [
+            342,
+            361
+          ],
+          "visible_width_range": [
+            396,
+            409
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 59,
+          "dimensions": [
+            [
+              512,
+              512,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/Plant 4/Plant4_00000.png",
+            "Plant Animations/Plant 4/Plant4_00001.png",
+            "Plant Animations/Plant 4/Plant4_00002.png",
+            "Plant Animations/Plant 4/Plant4_00003.png",
+            "Plant Animations/Plant 4/Plant4_00004.png",
+            "Plant Animations/Plant 4/Plant4_00005.png",
+            "Plant Animations/Plant 4/Plant4_00006.png",
+            "Plant Animations/Plant 4/Plant4_00007.png",
+            "Plant Animations/Plant 4/Plant4_00008.png",
+            "Plant Animations/Plant 4/Plant4_00009.png",
+            "Plant Animations/Plant 4/Plant4_00010.png",
+            "Plant Animations/Plant 4/Plant4_00011.png",
+            "Plant Animations/Plant 4/Plant4_00012.png",
+            "Plant Animations/Plant 4/Plant4_00013.png",
+            "Plant Animations/Plant 4/Plant4_00014.png",
+            "Plant Animations/Plant 4/Plant4_00015.png",
+            "Plant Animations/Plant 4/Plant4_00016.png",
+            "Plant Animations/Plant 4/Plant4_00017.png",
+            "Plant Animations/Plant 4/Plant4_00018.png",
+            "Plant Animations/Plant 4/Plant4_00019.png",
+            "Plant Animations/Plant 4/Plant4_00020.png",
+            "Plant Animations/Plant 4/Plant4_00021.png",
+            "Plant Animations/Plant 4/Plant4_00022.png",
+            "Plant Animations/Plant 4/Plant4_00023.png",
+            "Plant Animations/Plant 4/Plant4_00024.png",
+            "Plant Animations/Plant 4/Plant4_00025.png",
+            "Plant Animations/Plant 4/Plant4_00026.png",
+            "Plant Animations/Plant 4/Plant4_00027.png",
+            "Plant Animations/Plant 4/Plant4_00028.png",
+            "Plant Animations/Plant 4/Plant4_00029.png",
+            "Plant Animations/Plant 4/Plant4_00030.png",
+            "Plant Animations/Plant 4/Plant4_00031.png",
+            "Plant Animations/Plant 4/Plant4_00032.png",
+            "Plant Animations/Plant 4/Plant4_00033.png",
+            "Plant Animations/Plant 4/Plant4_00034.png",
+            "Plant Animations/Plant 4/Plant4_00035.png",
+            "Plant Animations/Plant 4/Plant4_00036.png",
+            "Plant Animations/Plant 4/Plant4_00037.png",
+            "Plant Animations/Plant 4/Plant4_00038.png",
+            "Plant Animations/Plant 4/Plant4_00039.png",
+            "Plant Animations/Plant 4/Plant4_00040.png",
+            "Plant Animations/Plant 4/Plant4_00041.png",
+            "Plant Animations/Plant 4/Plant4_00042.png",
+            "Plant Animations/Plant 4/Plant4_00043.png",
+            "Plant Animations/Plant 4/Plant4_00044.png",
+            "Plant Animations/Plant 4/Plant4_00045.png",
+            "Plant Animations/Plant 4/Plant4_00046.png",
+            "Plant Animations/Plant 4/Plant4_00047.png",
+            "Plant Animations/Plant 4/Plant4_00048.png",
+            "Plant Animations/Plant 4/Plant4_00049.png",
+            "Plant Animations/Plant 4/Plant4_00050.png",
+            "Plant Animations/Plant 4/Plant4_00051.png",
+            "Plant Animations/Plant 4/Plant4_00052.png",
+            "Plant Animations/Plant 4/Plant4_00053.png",
+            "Plant Animations/Plant 4/Plant4_00054.png",
+            "Plant Animations/Plant 4/Plant4_00055.png",
+            "Plant Animations/Plant 4/Plant4_00056.png",
+            "Plant Animations/Plant 4/Plant4_00057.png",
+            "Plant Animations/Plant 4/Plant4_00058.png",
+            "Plant Animations/Plant 4/Plant4_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 4",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 4",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 62914560,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            395,
+            399
+          ],
+          "visible_width_range": [
+            69,
+            114
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 60,
+          "dimensions": [
+            [
+              512,
+              512,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/Plant 5/Plant5_00000.png",
+            "Plant Animations/Plant 5/Plant5_00001.png",
+            "Plant Animations/Plant 5/Plant5_00002.png",
+            "Plant Animations/Plant 5/Plant5_00003.png",
+            "Plant Animations/Plant 5/Plant5_00004.png",
+            "Plant Animations/Plant 5/Plant5_00005.png",
+            "Plant Animations/Plant 5/Plant5_00006.png",
+            "Plant Animations/Plant 5/Plant5_00007.png",
+            "Plant Animations/Plant 5/Plant5_00008.png",
+            "Plant Animations/Plant 5/Plant5_00009.png",
+            "Plant Animations/Plant 5/Plant5_00010.png",
+            "Plant Animations/Plant 5/Plant5_00011.png",
+            "Plant Animations/Plant 5/Plant5_00012.png",
+            "Plant Animations/Plant 5/Plant5_00013.png",
+            "Plant Animations/Plant 5/Plant5_00014.png",
+            "Plant Animations/Plant 5/Plant5_00015.png",
+            "Plant Animations/Plant 5/Plant5_00016.png",
+            "Plant Animations/Plant 5/Plant5_00017.png",
+            "Plant Animations/Plant 5/Plant5_00018.png",
+            "Plant Animations/Plant 5/Plant5_00019.png",
+            "Plant Animations/Plant 5/Plant5_00020.png",
+            "Plant Animations/Plant 5/Plant5_00021.png",
+            "Plant Animations/Plant 5/Plant5_00022.png",
+            "Plant Animations/Plant 5/Plant5_00023.png",
+            "Plant Animations/Plant 5/Plant5_00024.png",
+            "Plant Animations/Plant 5/Plant5_00025.png",
+            "Plant Animations/Plant 5/Plant5_00026.png",
+            "Plant Animations/Plant 5/Plant5_00027.png",
+            "Plant Animations/Plant 5/Plant5_00028.png",
+            "Plant Animations/Plant 5/Plant5_00029.png",
+            "Plant Animations/Plant 5/Plant5_00030.png",
+            "Plant Animations/Plant 5/Plant5_00031.png",
+            "Plant Animations/Plant 5/Plant5_00032.png",
+            "Plant Animations/Plant 5/Plant5_00033.png",
+            "Plant Animations/Plant 5/Plant5_00034.png",
+            "Plant Animations/Plant 5/Plant5_00035.png",
+            "Plant Animations/Plant 5/Plant5_00036.png",
+            "Plant Animations/Plant 5/Plant5_00037.png",
+            "Plant Animations/Plant 5/Plant5_00038.png",
+            "Plant Animations/Plant 5/Plant5_00039.png",
+            "Plant Animations/Plant 5/Plant5_00040.png",
+            "Plant Animations/Plant 5/Plant5_00041.png",
+            "Plant Animations/Plant 5/Plant5_00042.png",
+            "Plant Animations/Plant 5/Plant5_00043.png",
+            "Plant Animations/Plant 5/Plant5_00044.png",
+            "Plant Animations/Plant 5/Plant5_00045.png",
+            "Plant Animations/Plant 5/Plant5_00046.png",
+            "Plant Animations/Plant 5/Plant5_00047.png",
+            "Plant Animations/Plant 5/Plant5_00048.png",
+            "Plant Animations/Plant 5/Plant5_00049.png",
+            "Plant Animations/Plant 5/Plant5_00050.png",
+            "Plant Animations/Plant 5/Plant5_00051.png",
+            "Plant Animations/Plant 5/Plant5_00052.png",
+            "Plant Animations/Plant 5/Plant5_00053.png",
+            "Plant Animations/Plant 5/Plant5_00054.png",
+            "Plant Animations/Plant 5/Plant5_00055.png",
+            "Plant Animations/Plant 5/Plant5_00056.png",
+            "Plant Animations/Plant 5/Plant5_00057.png",
+            "Plant Animations/Plant 5/Plant5_00058.png",
+            "Plant Animations/Plant 5/Plant5_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 5",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 5",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 62914560,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            460,
+            461
+          ],
+          "visible_width_range": [
+            156,
+            240
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 31,
+          "dimensions": [
+            [
+              512,
+              512,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/Plant 6/Plant6_00000.png",
+            "Plant Animations/Plant 6/Plant6_00001.png",
+            "Plant Animations/Plant 6/Plant6_00002.png",
+            "Plant Animations/Plant 6/Plant6_00003.png",
+            "Plant Animations/Plant 6/Plant6_00004.png",
+            "Plant Animations/Plant 6/Plant6_00005.png",
+            "Plant Animations/Plant 6/Plant6_00006.png",
+            "Plant Animations/Plant 6/Plant6_00007.png",
+            "Plant Animations/Plant 6/Plant6_00008.png",
+            "Plant Animations/Plant 6/Plant6_00009.png",
+            "Plant Animations/Plant 6/Plant6_00010.png",
+            "Plant Animations/Plant 6/Plant6_00011.png",
+            "Plant Animations/Plant 6/Plant6_00012.png",
+            "Plant Animations/Plant 6/Plant6_00013.png",
+            "Plant Animations/Plant 6/Plant6_00014.png",
+            "Plant Animations/Plant 6/Plant6_00015.png",
+            "Plant Animations/Plant 6/Plant6_00016.png",
+            "Plant Animations/Plant 6/Plant6_00017.png",
+            "Plant Animations/Plant 6/Plant6_00018.png",
+            "Plant Animations/Plant 6/Plant6_00019.png",
+            "Plant Animations/Plant 6/Plant6_00020.png",
+            "Plant Animations/Plant 6/Plant6_00021.png",
+            "Plant Animations/Plant 6/Plant6_00022.png",
+            "Plant Animations/Plant 6/Plant6_00023.png",
+            "Plant Animations/Plant 6/Plant6_00024.png",
+            "Plant Animations/Plant 6/Plant6_00025.png",
+            "Plant Animations/Plant 6/Plant6_00026.png",
+            "Plant Animations/Plant 6/Plant6_00027.png",
+            "Plant Animations/Plant 6/Plant6_00028.png",
+            "Plant Animations/Plant 6/Plant6_00029.png",
+            "Plant Animations/Plant 6/Plant6_00030.png",
+            "Plant Animations/Plant 6/Plant6_00031.png",
+            "Plant Animations/Plant 6/Plant6_00032.png",
+            "Plant Animations/Plant 6/Plant6_00033.png",
+            "Plant Animations/Plant 6/Plant6_00034.png",
+            "Plant Animations/Plant 6/Plant6_00035.png",
+            "Plant Animations/Plant 6/Plant6_00036.png",
+            "Plant Animations/Plant 6/Plant6_00037.png",
+            "Plant Animations/Plant 6/Plant6_00038.png",
+            "Plant Animations/Plant 6/Plant6_00039.png",
+            "Plant Animations/Plant 6/Plant6_00040.png",
+            "Plant Animations/Plant 6/Plant6_00041.png",
+            "Plant Animations/Plant 6/Plant6_00042.png",
+            "Plant Animations/Plant 6/Plant6_00043.png",
+            "Plant Animations/Plant 6/Plant6_00044.png",
+            "Plant Animations/Plant 6/Plant6_00045.png",
+            "Plant Animations/Plant 6/Plant6_00046.png",
+            "Plant Animations/Plant 6/Plant6_00047.png",
+            "Plant Animations/Plant 6/Plant6_00048.png",
+            "Plant Animations/Plant 6/Plant6_00049.png",
+            "Plant Animations/Plant 6/Plant6_00050.png",
+            "Plant Animations/Plant 6/Plant6_00051.png",
+            "Plant Animations/Plant 6/Plant6_00052.png",
+            "Plant Animations/Plant 6/Plant6_00053.png",
+            "Plant Animations/Plant 6/Plant6_00054.png",
+            "Plant Animations/Plant 6/Plant6_00055.png",
+            "Plant Animations/Plant 6/Plant6_00056.png",
+            "Plant Animations/Plant 6/Plant6_00057.png",
+            "Plant Animations/Plant 6/Plant6_00058.png",
+            "Plant Animations/Plant 6/Plant6_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 6",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 6",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 62914560,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            435,
+            447
+          ],
+          "visible_width_range": [
+            151,
+            182
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 60,
+          "dimensions": [
+            [
+              512,
+              512,
+              60
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 60,
+          "frames": [
+            "Plant Animations/Plant 7/Plant7_00000.png",
+            "Plant Animations/Plant 7/Plant7_00001.png",
+            "Plant Animations/Plant 7/Plant7_00002.png",
+            "Plant Animations/Plant 7/Plant7_00003.png",
+            "Plant Animations/Plant 7/Plant7_00004.png",
+            "Plant Animations/Plant 7/Plant7_00005.png",
+            "Plant Animations/Plant 7/Plant7_00006.png",
+            "Plant Animations/Plant 7/Plant7_00007.png",
+            "Plant Animations/Plant 7/Plant7_00008.png",
+            "Plant Animations/Plant 7/Plant7_00009.png",
+            "Plant Animations/Plant 7/Plant7_00010.png",
+            "Plant Animations/Plant 7/Plant7_00011.png",
+            "Plant Animations/Plant 7/Plant7_00012.png",
+            "Plant Animations/Plant 7/Plant7_00013.png",
+            "Plant Animations/Plant 7/Plant7_00014.png",
+            "Plant Animations/Plant 7/Plant7_00015.png",
+            "Plant Animations/Plant 7/Plant7_00016.png",
+            "Plant Animations/Plant 7/Plant7_00017.png",
+            "Plant Animations/Plant 7/Plant7_00018.png",
+            "Plant Animations/Plant 7/Plant7_00019.png",
+            "Plant Animations/Plant 7/Plant7_00020.png",
+            "Plant Animations/Plant 7/Plant7_00021.png",
+            "Plant Animations/Plant 7/Plant7_00022.png",
+            "Plant Animations/Plant 7/Plant7_00023.png",
+            "Plant Animations/Plant 7/Plant7_00024.png",
+            "Plant Animations/Plant 7/Plant7_00025.png",
+            "Plant Animations/Plant 7/Plant7_00026.png",
+            "Plant Animations/Plant 7/Plant7_00027.png",
+            "Plant Animations/Plant 7/Plant7_00028.png",
+            "Plant Animations/Plant 7/Plant7_00029.png",
+            "Plant Animations/Plant 7/Plant7_00030.png",
+            "Plant Animations/Plant 7/Plant7_00031.png",
+            "Plant Animations/Plant 7/Plant7_00032.png",
+            "Plant Animations/Plant 7/Plant7_00033.png",
+            "Plant Animations/Plant 7/Plant7_00034.png",
+            "Plant Animations/Plant 7/Plant7_00035.png",
+            "Plant Animations/Plant 7/Plant7_00036.png",
+            "Plant Animations/Plant 7/Plant7_00037.png",
+            "Plant Animations/Plant 7/Plant7_00038.png",
+            "Plant Animations/Plant 7/Plant7_00039.png",
+            "Plant Animations/Plant 7/Plant7_00040.png",
+            "Plant Animations/Plant 7/Plant7_00041.png",
+            "Plant Animations/Plant 7/Plant7_00042.png",
+            "Plant Animations/Plant 7/Plant7_00043.png",
+            "Plant Animations/Plant 7/Plant7_00044.png",
+            "Plant Animations/Plant 7/Plant7_00045.png",
+            "Plant Animations/Plant 7/Plant7_00046.png",
+            "Plant Animations/Plant 7/Plant7_00047.png",
+            "Plant Animations/Plant 7/Plant7_00048.png",
+            "Plant Animations/Plant 7/Plant7_00049.png",
+            "Plant Animations/Plant 7/Plant7_00050.png",
+            "Plant Animations/Plant 7/Plant7_00051.png",
+            "Plant Animations/Plant 7/Plant7_00052.png",
+            "Plant Animations/Plant 7/Plant7_00053.png",
+            "Plant Animations/Plant 7/Plant7_00054.png",
+            "Plant Animations/Plant 7/Plant7_00055.png",
+            "Plant Animations/Plant 7/Plant7_00056.png",
+            "Plant Animations/Plant 7/Plant7_00057.png",
+            "Plant Animations/Plant 7/Plant7_00058.png",
+            "Plant Animations/Plant 7/Plant7_00059.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 7",
+          "index_range": [
+            0,
+            59
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 7",
+          "partial_alpha_images": 60,
+          "rgba_memory_bytes": 62914560,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 60,
+          "visible_height_range": [
+            360,
+            364
+          ],
+          "visible_width_range": [
+            150,
+            155
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              512,
+              512,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "Plant Animations/Plant 8 Poison/PlantPosion_00000.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00001.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00002.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00003.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00004.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00005.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00006.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00007.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00008.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00009.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00010.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00011.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00012.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00013.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00014.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00015.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00016.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00017.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00018.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00019.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00020.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00021.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00022.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00023.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00024.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00025.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00026.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00027.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00028.png",
+            "Plant Animations/Plant 8 Poison/PlantPosion_00029.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant 8 Poison",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant 8 Poison",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 31457280,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            329,
+            339
+          ],
+          "visible_width_range": [
+            431,
+            453
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              512,
+              512,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00000.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00001.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00002.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00003.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00004.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00005.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00006.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00007.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00008.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00009.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00010.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00011.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00012.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00013.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00014.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00015.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00016.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00017.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00018.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00019.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00020.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00021.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00022.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00023.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00024.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00025.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00026.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00027.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00028.png",
+            "Plant Animations/Plant Wind 1/Plant Wind 1_00029.png"
+          ],
+          "id": "plant-animations/Plant Animations/Plant Wind 1",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/Plant Wind 1",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 31457280,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            300,
+            315
+          ],
+          "visible_width_range": [
+            294,
+            319
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 20,
+          "dimensions": [
+            [
+              512,
+              512,
+              20
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 20,
+          "frames": [
+            "Plant Animations/PlantJump/JumpPlant_00000.png",
+            "Plant Animations/PlantJump/JumpPlant_00001.png",
+            "Plant Animations/PlantJump/JumpPlant_00002.png",
+            "Plant Animations/PlantJump/JumpPlant_00003.png",
+            "Plant Animations/PlantJump/JumpPlant_00004.png",
+            "Plant Animations/PlantJump/JumpPlant_00005.png",
+            "Plant Animations/PlantJump/JumpPlant_00006.png",
+            "Plant Animations/PlantJump/JumpPlant_00007.png",
+            "Plant Animations/PlantJump/JumpPlant_00008.png",
+            "Plant Animations/PlantJump/JumpPlant_00009.png",
+            "Plant Animations/PlantJump/JumpPlant_00010.png",
+            "Plant Animations/PlantJump/JumpPlant_00011.png",
+            "Plant Animations/PlantJump/JumpPlant_00012.png",
+            "Plant Animations/PlantJump/JumpPlant_00013.png",
+            "Plant Animations/PlantJump/JumpPlant_00014.png",
+            "Plant Animations/PlantJump/JumpPlant_00015.png",
+            "Plant Animations/PlantJump/JumpPlant_00016.png",
+            "Plant Animations/PlantJump/JumpPlant_00017.png",
+            "Plant Animations/PlantJump/JumpPlant_00018.png",
+            "Plant Animations/PlantJump/JumpPlant_00019.png"
+          ],
+          "id": "plant-animations/Plant Animations/PlantJump",
+          "index_range": [
+            0,
+            19
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/PlantJump",
+          "partial_alpha_images": 20,
+          "rgba_memory_bytes": 20971520,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 20,
+          "visible_height_range": [
+            218,
+            247
+          ],
+          "visible_width_range": [
+            285,
+            330
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 20,
+          "dimensions": [
+            [
+              512,
+              512,
+              20
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 20,
+          "frames": [
+            "Plant Animations/PlantJump2/JumpPlant 2_00000.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00001.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00002.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00003.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00004.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00005.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00006.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00007.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00008.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00009.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00010.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00011.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00012.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00013.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00014.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00015.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00016.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00017.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00018.png",
+            "Plant Animations/PlantJump2/JumpPlant 2_00019.png"
+          ],
+          "id": "plant-animations/Plant Animations/PlantJump2",
+          "index_range": [
+            0,
+            19
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Plant Animations/PlantJump2",
+          "partial_alpha_images": 20,
+          "rgba_memory_bytes": 20971520,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 20,
+          "visible_height_range": [
+            218,
+            225
+          ],
+          "visible_width_range": [
+            321,
+            330
+          ],
+          "regions": []
+        }
+      ],
+      "sha256": "9eae629a9ad8690fd59cc93f6adb1337e2e62e03d53aa87ba84d061e13dcca21",
+      "slug": "plant-animations"
+    },
+    {
+      "archive_bytes": 18163329,
+      "decoded_rgba_bytes": 238551040,
+      "editable_sources": [
+        "Vegetation/Grass5/Almacenamiento autom\u00e1tico de Adobe After Effects/gr5 almacenamiento autom\u00e1tico 1.aep",
+        "Vegetation/Grass5/gr5.aep",
+        "Vegetation/Grass5/Plant4.psd"
+      ],
+      "embedded_license_files": [],
+      "image_count": 205,
+      "name": "PlantsAnimated.zip",
+      "png_count": 205,
+      "sequences": [
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              256,
+              256,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "Vegetation/Comp 1/PlantSmall_00000.png",
+            "Vegetation/Comp 1/PlantSmall_00001.png",
+            "Vegetation/Comp 1/PlantSmall_00002.png",
+            "Vegetation/Comp 1/PlantSmall_00003.png",
+            "Vegetation/Comp 1/PlantSmall_00004.png",
+            "Vegetation/Comp 1/PlantSmall_00005.png",
+            "Vegetation/Comp 1/PlantSmall_00006.png",
+            "Vegetation/Comp 1/PlantSmall_00007.png",
+            "Vegetation/Comp 1/PlantSmall_00008.png",
+            "Vegetation/Comp 1/PlantSmall_00009.png",
+            "Vegetation/Comp 1/PlantSmall_00010.png",
+            "Vegetation/Comp 1/PlantSmall_00011.png",
+            "Vegetation/Comp 1/PlantSmall_00012.png",
+            "Vegetation/Comp 1/PlantSmall_00013.png",
+            "Vegetation/Comp 1/PlantSmall_00014.png",
+            "Vegetation/Comp 1/PlantSmall_00015.png",
+            "Vegetation/Comp 1/PlantSmall_00016.png",
+            "Vegetation/Comp 1/PlantSmall_00017.png",
+            "Vegetation/Comp 1/PlantSmall_00018.png",
+            "Vegetation/Comp 1/PlantSmall_00019.png",
+            "Vegetation/Comp 1/PlantSmall_00020.png",
+            "Vegetation/Comp 1/PlantSmall_00021.png",
+            "Vegetation/Comp 1/PlantSmall_00022.png",
+            "Vegetation/Comp 1/PlantSmall_00023.png",
+            "Vegetation/Comp 1/PlantSmall_00024.png",
+            "Vegetation/Comp 1/PlantSmall_00025.png",
+            "Vegetation/Comp 1/PlantSmall_00026.png",
+            "Vegetation/Comp 1/PlantSmall_00027.png",
+            "Vegetation/Comp 1/PlantSmall_00028.png",
+            "Vegetation/Comp 1/PlantSmall_00029.png"
+          ],
+          "id": "plantsanimated/Vegetation/Comp 1",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Comp 1",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 7864320,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            175,
+            183
+          ],
+          "visible_width_range": [
+            85,
+            105
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              256,
+              256,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "Vegetation/Grass2/Grass2_00000.png",
+            "Vegetation/Grass2/Grass2_00001.png",
+            "Vegetation/Grass2/Grass2_00002.png",
+            "Vegetation/Grass2/Grass2_00003.png",
+            "Vegetation/Grass2/Grass2_00004.png",
+            "Vegetation/Grass2/Grass2_00005.png",
+            "Vegetation/Grass2/Grass2_00006.png",
+            "Vegetation/Grass2/Grass2_00007.png",
+            "Vegetation/Grass2/Grass2_00008.png",
+            "Vegetation/Grass2/Grass2_00009.png",
+            "Vegetation/Grass2/Grass2_00010.png",
+            "Vegetation/Grass2/Grass2_00011.png",
+            "Vegetation/Grass2/Grass2_00012.png",
+            "Vegetation/Grass2/Grass2_00013.png",
+            "Vegetation/Grass2/Grass2_00014.png",
+            "Vegetation/Grass2/Grass2_00015.png",
+            "Vegetation/Grass2/Grass2_00016.png",
+            "Vegetation/Grass2/Grass2_00017.png",
+            "Vegetation/Grass2/Grass2_00018.png",
+            "Vegetation/Grass2/Grass2_00019.png",
+            "Vegetation/Grass2/Grass2_00020.png",
+            "Vegetation/Grass2/Grass2_00021.png",
+            "Vegetation/Grass2/Grass2_00022.png",
+            "Vegetation/Grass2/Grass2_00023.png",
+            "Vegetation/Grass2/Grass2_00024.png",
+            "Vegetation/Grass2/Grass2_00025.png",
+            "Vegetation/Grass2/Grass2_00026.png",
+            "Vegetation/Grass2/Grass2_00027.png",
+            "Vegetation/Grass2/Grass2_00028.png",
+            "Vegetation/Grass2/Grass2_00029.png"
+          ],
+          "id": "plantsanimated/Vegetation/Grass2",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Grass2",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 7864320,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            138,
+            163
+          ],
+          "visible_width_range": [
+            121,
+            156
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 29,
+          "dimensions": [
+            [
+              256,
+              512,
+              30
+            ]
+          ],
+          "first_last_byte_identical": true,
+          "frame_count": 30,
+          "frames": [
+            "Vegetation/Grass3/Comp 1_00000.png",
+            "Vegetation/Grass3/Comp 1_00001.png",
+            "Vegetation/Grass3/Comp 1_00002.png",
+            "Vegetation/Grass3/Comp 1_00003.png",
+            "Vegetation/Grass3/Comp 1_00004.png",
+            "Vegetation/Grass3/Comp 1_00005.png",
+            "Vegetation/Grass3/Comp 1_00006.png",
+            "Vegetation/Grass3/Comp 1_00007.png",
+            "Vegetation/Grass3/Comp 1_00008.png",
+            "Vegetation/Grass3/Comp 1_00009.png",
+            "Vegetation/Grass3/Comp 1_00010.png",
+            "Vegetation/Grass3/Comp 1_00011.png",
+            "Vegetation/Grass3/Comp 1_00012.png",
+            "Vegetation/Grass3/Comp 1_00013.png",
+            "Vegetation/Grass3/Comp 1_00014.png",
+            "Vegetation/Grass3/Comp 1_00015.png",
+            "Vegetation/Grass3/Comp 1_00016.png",
+            "Vegetation/Grass3/Comp 1_00017.png",
+            "Vegetation/Grass3/Comp 1_00018.png",
+            "Vegetation/Grass3/Comp 1_00019.png",
+            "Vegetation/Grass3/Comp 1_00020.png",
+            "Vegetation/Grass3/Comp 1_00021.png",
+            "Vegetation/Grass3/Comp 1_00022.png",
+            "Vegetation/Grass3/Comp 1_00023.png",
+            "Vegetation/Grass3/Comp 1_00024.png",
+            "Vegetation/Grass3/Comp 1_00025.png",
+            "Vegetation/Grass3/Comp 1_00026.png",
+            "Vegetation/Grass3/Comp 1_00027.png",
+            "Vegetation/Grass3/Comp 1_00028.png",
+            "Vegetation/Grass3/Comp 1_00029.png"
+          ],
+          "id": "plantsanimated/Vegetation/Grass3",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Grass3",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 15728640,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            284,
+            299
+          ],
+          "visible_width_range": [
+            159,
+            189
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 29,
+          "dimensions": [
+            [
+              256,
+              512,
+              30
+            ]
+          ],
+          "first_last_byte_identical": true,
+          "frame_count": 30,
+          "frames": [
+            "Vegetation/Grass4/Grass3_00000.png",
+            "Vegetation/Grass4/Grass3_00001.png",
+            "Vegetation/Grass4/Grass3_00002.png",
+            "Vegetation/Grass4/Grass3_00003.png",
+            "Vegetation/Grass4/Grass3_00004.png",
+            "Vegetation/Grass4/Grass3_00005.png",
+            "Vegetation/Grass4/Grass3_00006.png",
+            "Vegetation/Grass4/Grass3_00007.png",
+            "Vegetation/Grass4/Grass3_00008.png",
+            "Vegetation/Grass4/Grass3_00009.png",
+            "Vegetation/Grass4/Grass3_00010.png",
+            "Vegetation/Grass4/Grass3_00011.png",
+            "Vegetation/Grass4/Grass3_00012.png",
+            "Vegetation/Grass4/Grass3_00013.png",
+            "Vegetation/Grass4/Grass3_00014.png",
+            "Vegetation/Grass4/Grass3_00015.png",
+            "Vegetation/Grass4/Grass3_00016.png",
+            "Vegetation/Grass4/Grass3_00017.png",
+            "Vegetation/Grass4/Grass3_00018.png",
+            "Vegetation/Grass4/Grass3_00019.png",
+            "Vegetation/Grass4/Grass3_00020.png",
+            "Vegetation/Grass4/Grass3_00021.png",
+            "Vegetation/Grass4/Grass3_00022.png",
+            "Vegetation/Grass4/Grass3_00023.png",
+            "Vegetation/Grass4/Grass3_00024.png",
+            "Vegetation/Grass4/Grass3_00025.png",
+            "Vegetation/Grass4/Grass3_00026.png",
+            "Vegetation/Grass4/Grass3_00027.png",
+            "Vegetation/Grass4/Grass3_00028.png",
+            "Vegetation/Grass4/Grass3_00029.png"
+          ],
+          "id": "plantsanimated/Vegetation/Grass4",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Grass4",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 15728640,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            343,
+            361
+          ],
+          "visible_width_range": [
+            137,
+            166
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 40,
+          "dimensions": [
+            [
+              1024,
+              1024,
+              40
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 40,
+          "frames": [
+            "Vegetation/Grass5/Plant5_00000.png",
+            "Vegetation/Grass5/Plant5_00001.png",
+            "Vegetation/Grass5/Plant5_00002.png",
+            "Vegetation/Grass5/Plant5_00003.png",
+            "Vegetation/Grass5/Plant5_00004.png",
+            "Vegetation/Grass5/Plant5_00005.png",
+            "Vegetation/Grass5/Plant5_00006.png",
+            "Vegetation/Grass5/Plant5_00007.png",
+            "Vegetation/Grass5/Plant5_00008.png",
+            "Vegetation/Grass5/Plant5_00009.png",
+            "Vegetation/Grass5/Plant5_00010.png",
+            "Vegetation/Grass5/Plant5_00011.png",
+            "Vegetation/Grass5/Plant5_00012.png",
+            "Vegetation/Grass5/Plant5_00013.png",
+            "Vegetation/Grass5/Plant5_00014.png",
+            "Vegetation/Grass5/Plant5_00015.png",
+            "Vegetation/Grass5/Plant5_00016.png",
+            "Vegetation/Grass5/Plant5_00017.png",
+            "Vegetation/Grass5/Plant5_00018.png",
+            "Vegetation/Grass5/Plant5_00019.png",
+            "Vegetation/Grass5/Plant5_00020.png",
+            "Vegetation/Grass5/Plant5_00021.png",
+            "Vegetation/Grass5/Plant5_00022.png",
+            "Vegetation/Grass5/Plant5_00023.png",
+            "Vegetation/Grass5/Plant5_00024.png",
+            "Vegetation/Grass5/Plant5_00025.png",
+            "Vegetation/Grass5/Plant5_00026.png",
+            "Vegetation/Grass5/Plant5_00027.png",
+            "Vegetation/Grass5/Plant5_00028.png",
+            "Vegetation/Grass5/Plant5_00029.png",
+            "Vegetation/Grass5/Plant5_00030.png",
+            "Vegetation/Grass5/Plant5_00031.png",
+            "Vegetation/Grass5/Plant5_00032.png",
+            "Vegetation/Grass5/Plant5_00033.png",
+            "Vegetation/Grass5/Plant5_00034.png",
+            "Vegetation/Grass5/Plant5_00035.png",
+            "Vegetation/Grass5/Plant5_00036.png",
+            "Vegetation/Grass5/Plant5_00037.png",
+            "Vegetation/Grass5/Plant5_00038.png",
+            "Vegetation/Grass5/Plant5_00039.png"
+          ],
+          "id": "plantsanimated/Vegetation/Grass5",
+          "index_range": [
+            0,
+            39
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Grass5",
+          "partial_alpha_images": 40,
+          "rgba_memory_bytes": 167772160,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 40,
+          "visible_height_range": [
+            877,
+            900
+          ],
+          "visible_width_range": [
+            677,
+            748
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 44,
+          "dimensions": [
+            [
+              512,
+              256,
+              45
+            ]
+          ],
+          "first_last_byte_identical": true,
+          "frame_count": 45,
+          "frames": [
+            "Vegetation/Group Plant/GroupPlants_00000.png",
+            "Vegetation/Group Plant/GroupPlants_00001.png",
+            "Vegetation/Group Plant/GroupPlants_00002.png",
+            "Vegetation/Group Plant/GroupPlants_00003.png",
+            "Vegetation/Group Plant/GroupPlants_00004.png",
+            "Vegetation/Group Plant/GroupPlants_00005.png",
+            "Vegetation/Group Plant/GroupPlants_00006.png",
+            "Vegetation/Group Plant/GroupPlants_00007.png",
+            "Vegetation/Group Plant/GroupPlants_00008.png",
+            "Vegetation/Group Plant/GroupPlants_00009.png",
+            "Vegetation/Group Plant/GroupPlants_00010.png",
+            "Vegetation/Group Plant/GroupPlants_00011.png",
+            "Vegetation/Group Plant/GroupPlants_00012.png",
+            "Vegetation/Group Plant/GroupPlants_00013.png",
+            "Vegetation/Group Plant/GroupPlants_00014.png",
+            "Vegetation/Group Plant/GroupPlants_00015.png",
+            "Vegetation/Group Plant/GroupPlants_00016.png",
+            "Vegetation/Group Plant/GroupPlants_00017.png",
+            "Vegetation/Group Plant/GroupPlants_00018.png",
+            "Vegetation/Group Plant/GroupPlants_00019.png",
+            "Vegetation/Group Plant/GroupPlants_00020.png",
+            "Vegetation/Group Plant/GroupPlants_00021.png",
+            "Vegetation/Group Plant/GroupPlants_00022.png",
+            "Vegetation/Group Plant/GroupPlants_00023.png",
+            "Vegetation/Group Plant/GroupPlants_00024.png",
+            "Vegetation/Group Plant/GroupPlants_00025.png",
+            "Vegetation/Group Plant/GroupPlants_00026.png",
+            "Vegetation/Group Plant/GroupPlants_00027.png",
+            "Vegetation/Group Plant/GroupPlants_00028.png",
+            "Vegetation/Group Plant/GroupPlants_00029.png",
+            "Vegetation/Group Plant/GroupPlants_00030.png",
+            "Vegetation/Group Plant/GroupPlants_00031.png",
+            "Vegetation/Group Plant/GroupPlants_00032.png",
+            "Vegetation/Group Plant/GroupPlants_00033.png",
+            "Vegetation/Group Plant/GroupPlants_00034.png",
+            "Vegetation/Group Plant/GroupPlants_00035.png",
+            "Vegetation/Group Plant/GroupPlants_00036.png",
+            "Vegetation/Group Plant/GroupPlants_00037.png",
+            "Vegetation/Group Plant/GroupPlants_00038.png",
+            "Vegetation/Group Plant/GroupPlants_00039.png",
+            "Vegetation/Group Plant/GroupPlants_00040.png",
+            "Vegetation/Group Plant/GroupPlants_00041.png",
+            "Vegetation/Group Plant/GroupPlants_00042.png",
+            "Vegetation/Group Plant/GroupPlants_00043.png",
+            "Vegetation/Group Plant/GroupPlants_00044.png"
+          ],
+          "id": "plantsanimated/Vegetation/Group Plant",
+          "index_range": [
+            0,
+            44
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "Vegetation/Group Plant",
+          "partial_alpha_images": 45,
+          "rgba_memory_bytes": 23592960,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 45,
+          "visible_height_range": [
+            200,
+            210
+          ],
+          "visible_width_range": [
+            252,
+            294
+          ],
+          "regions": []
+        }
+      ],
+      "sha256": "24176b7ee3c1dc3fa4274e7ce1db2f8b4b074f0687c2597d2148dc4810787447",
+      "slug": "plantsanimated"
+    },
+    {
+      "archive_bytes": 4319164,
+      "decoded_rgba_bytes": 36642720,
+      "editable_sources": [],
+      "embedded_license_files": [],
+      "image_count": 60,
+      "name": "Slimes.zip",
+      "png_count": 60,
+      "sequences": [
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              510,
+              410,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "SlimeOrange/SlimeOrange_00000.png",
+            "SlimeOrange/SlimeOrange_00001.png",
+            "SlimeOrange/SlimeOrange_00002.png",
+            "SlimeOrange/SlimeOrange_00003.png",
+            "SlimeOrange/SlimeOrange_00004.png",
+            "SlimeOrange/SlimeOrange_00005.png",
+            "SlimeOrange/SlimeOrange_00006.png",
+            "SlimeOrange/SlimeOrange_00007.png",
+            "SlimeOrange/SlimeOrange_00008.png",
+            "SlimeOrange/SlimeOrange_00009.png",
+            "SlimeOrange/SlimeOrange_00010.png",
+            "SlimeOrange/SlimeOrange_00011.png",
+            "SlimeOrange/SlimeOrange_00012.png",
+            "SlimeOrange/SlimeOrange_00013.png",
+            "SlimeOrange/SlimeOrange_00014.png",
+            "SlimeOrange/SlimeOrange_00015.png",
+            "SlimeOrange/SlimeOrange_00016.png",
+            "SlimeOrange/SlimeOrange_00017.png",
+            "SlimeOrange/SlimeOrange_00018.png",
+            "SlimeOrange/SlimeOrange_00019.png",
+            "SlimeOrange/SlimeOrange_00020.png",
+            "SlimeOrange/SlimeOrange_00021.png",
+            "SlimeOrange/SlimeOrange_00022.png",
+            "SlimeOrange/SlimeOrange_00023.png",
+            "SlimeOrange/SlimeOrange_00024.png",
+            "SlimeOrange/SlimeOrange_00025.png",
+            "SlimeOrange/SlimeOrange_00026.png",
+            "SlimeOrange/SlimeOrange_00027.png",
+            "SlimeOrange/SlimeOrange_00028.png",
+            "SlimeOrange/SlimeOrange_00029.png"
+          ],
+          "id": "slimes/SlimeOrange",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "SlimeOrange",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 25092000,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            281,
+            289
+          ],
+          "visible_width_range": [
+            447,
+            458
+          ],
+          "regions": []
+        },
+        {
+          "byte_unique_frames": 30,
+          "dimensions": [
+            [
+              376,
+              256,
+              30
+            ]
+          ],
+          "first_last_byte_identical": false,
+          "frame_count": 30,
+          "frames": [
+            "SlimeGreen/SlimeBasic_00000.png",
+            "SlimeGreen/SlimeBasic_00001.png",
+            "SlimeGreen/SlimeBasic_00002.png",
+            "SlimeGreen/SlimeBasic_00003.png",
+            "SlimeGreen/SlimeBasic_00004.png",
+            "SlimeGreen/SlimeBasic_00005.png",
+            "SlimeGreen/SlimeBasic_00006.png",
+            "SlimeGreen/SlimeBasic_00007.png",
+            "SlimeGreen/SlimeBasic_00008.png",
+            "SlimeGreen/SlimeBasic_00009.png",
+            "SlimeGreen/SlimeBasic_00010.png",
+            "SlimeGreen/SlimeBasic_00011.png",
+            "SlimeGreen/SlimeBasic_00012.png",
+            "SlimeGreen/SlimeBasic_00013.png",
+            "SlimeGreen/SlimeBasic_00014.png",
+            "SlimeGreen/SlimeBasic_00015.png",
+            "SlimeGreen/SlimeBasic_00016.png",
+            "SlimeGreen/SlimeBasic_00017.png",
+            "SlimeGreen/SlimeBasic_00018.png",
+            "SlimeGreen/SlimeBasic_00019.png",
+            "SlimeGreen/SlimeBasic_00020.png",
+            "SlimeGreen/SlimeBasic_00021.png",
+            "SlimeGreen/SlimeBasic_00022.png",
+            "SlimeGreen/SlimeBasic_00023.png",
+            "SlimeGreen/SlimeBasic_00024.png",
+            "SlimeGreen/SlimeBasic_00025.png",
+            "SlimeGreen/SlimeBasic_00026.png",
+            "SlimeGreen/SlimeBasic_00027.png",
+            "SlimeGreen/SlimeBasic_00028.png",
+            "SlimeGreen/SlimeBasic_00029.png"
+          ],
+          "id": "slimes/SlimeGreen",
+          "index_range": [
+            0,
+            29
+          ],
+          "kind": "frame_sequence",
+          "missing_indices": [],
+          "name": "SlimeGreen",
+          "partial_alpha_images": 30,
+          "rgba_memory_bytes": 11550720,
+          "timing": "unspecified; gallery review FPS only",
+          "transparent_images": 30,
+          "visible_height_range": [
+            198,
+            203
+          ],
+          "visible_width_range": [
+            256,
+            304
+          ],
+          "regions": []
+        }
+      ],
+      "sha256": "5fd1c2db9accc4c0085e70752cad96f0e752f7715b25baed8a8433ac24305ab3",
+      "slug": "slimes"
+    }
+  ]
+}
