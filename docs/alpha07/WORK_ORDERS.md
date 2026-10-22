@@ -27,3 +27,20 @@ All work orders: own branch and worktree, one writer per worktree, draft PR only
 ## Isolated demonstration rule
 
 Every system ships first with a demo that lives outside the 21-room world (`tests/story_demo/` or equivalent scene run by a test), uses neutral geometry and `[TEST FIXTURE]` text, and is not reachable from a normal game launch. Content integration into real rooms is a different PR, per room, per approved row.
+
+
+## Ownership and delegation (Gate A0 provisional, 2026-10-22)
+
+Codex leads implementation and may delegate to separate subagents. Claude coordinates, reviews against CONTRACTS v1.1, runs QA and keeps PRs draft. Nobody merges.
+
+| Stream | Lead | Delegable to | Branch | Compliance changes required |
+|---|---|---|---|---|
+| INT-01 story director + interactions | Codex | Interactions subagent | feature/int01-story-director (not yet pushed) | Push branch, open draft PR; namespace table, deferred `request_save` |
+| Cinematics (cut-in requests only) | Codex | Cinematics subagent | none yet | `request_cutin` stays a no-op until approved |
+| Animation | Codex | Animation subagent | none yet | Needs creator art approval before any asset |
+| EN-01 enemies | Codex | Enemy subagent | feature/en01-alpha07-enemy-framework (#83) | Windup 0.5 s, hp 4 to 8, `world.spawn_enemy` adapter, `request_save`, `en01/` alias |
+| HAZ-01 hazards | Codex | Hazard subagent | feature/haz01-toolkit (#82) | Telegraph 0.6 s, flag persistence adapter, placement probe, no macOS path, EX-01 tests |
+| ST-05 narrative | Creator-gated | none | narrative/st05-discoveries (#81) | Alias table only, no registration |
+| QA | Claude | QA subagent | feature branches, read-only | Compliance suite for sections 2, 3, 7, 8, 9 |
+
+Merge order is unchanged: nothing merges until the PM opens Gate A1, and integration happens only on `candidate/alpha07-integration`.
