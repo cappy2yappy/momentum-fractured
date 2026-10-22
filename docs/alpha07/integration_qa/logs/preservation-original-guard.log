@@ -1,0 +1,60 @@
+PASS: scripts/player.gd PR37 exact
+PASS: scripts/bellroof_walk.gd PR37 exact
+PASS: scripts/level_geometry.gd PR37 exact
+PASS: scripts/mixed_transitions.gd PR37 exact
+PASS: scripts/route_extension.gd PR37 exact
+PASS: scripts/skyworks_region.gd PR37 exact
+PASS: scripts/guard.gd PR37 exact
+PASS: scripts/storm_keeper.gd PR37 exact
+PASS: scripts/hud.gd PR37 exact
+PASS: scripts/momentum_profile.gd PR37 exact
+PASS: project.godot PR37 exact
+FAIL: export_presets.cfg PR37 exact
+PASS: world/MapData.txt PR37 exact
+PASS: assets/kaze/cleaned/kaze_combat_strip.png PR37 exact
+PASS: assets/kaze/cleaned/kaze_idle_strip.png PR37 exact
+PASS: assets/kaze/cleaned/kaze_run_strip.png PR37 exact
+PASS: assets/kaze/cleaned/kaze_traversal_strip.png PR37 exact
+PASS: assets/web/area-atlas.png PR37 exact
+PASS: assets/web/bosses_strip.png PR37 exact
+PASS: assets/web/district-fidelity.png PR37 exact
+PASS: assets/web/kaze_combat_strip.png PR37 exact
+PASS: assets/web/kaze_idle_strip.png PR37 exact
+PASS: assets/web/kaze_run_strip.png PR37 exact
+PASS: assets/web/kaze_traversal_strip.png PR37 exact
+PASS: assets/web/sentinels_strip.png PR37 exact
+PASS: assets/web/terrain-materials.png PR37 exact
+PASS: assets/art04/environment/door_combined.png PR37 exact
+PASS: assets/art04/environment/r14_door_back.png PR37 exact
+PASS: assets/art04/environment/r14_door_front.png PR37 exact
+PASS: assets/art04/environment/r14_door_interior.png PR37 exact
+PASS: assets/art04/environment/r14_roof_support.png PR37 exact
+PASS: assets/art04/environment/r15_masonry_support.png PR37 exact
+PASS: assets/art04/environment/stair_flight_right.png PR37 exact
+PASS: assets/art04/environment/stair_front_lip.png PR37 exact
+PASS: assets/art04/kaze/ART04_key_poses.tres PR37 exact
+PASS: assets/art04/kaze/enter_depth_key.png PR37 exact
+PASS: assets/art04/kaze/key_pose_atlas.png PR37 exact
+PASS: assets/art04/kaze/stair_down_key.png PR37 exact
+PASS: assets/art04/kaze/stair_up_key.png PR37 exact
+PASS: assets/art04/kaze/turn_depth_key.png PR37 exact
+PASS: assets/art04/prefabs/doorway.tscn PR37 exact
+PASS: assets/art04/prefabs/kaze_key_preview.tscn PR37 exact
+PASS: configure_input PR37 function exact
+PASS: can_enter PR37 function exact
+PASS: world_edges PR37 function exact
+PASS: room_size PR37 function exact
+PASS: left_exit_position PR37 function exact
+PASS: right_exit_position PR37 function exact
+PASS: save_progress PR37 function exact
+PASS: load_progress PR37 function exact
+PASS: recover_from_fall PR37 function exact
+PASS: add_platform PR37 function exact
+PASS: expansion portals PR37 function exact
+PASS: expansion allowed PR37 function exact
+PASS: expansion regional PR37 function exact
+FAIL: expansion build_room PR37 function exact
+PASS: expansion update PR37 function exact
+PASS: 0.65s loader retained
+PASS: existing hidden-swap threshold retained
+TR05 PRESERVATION: 2 failure(s)

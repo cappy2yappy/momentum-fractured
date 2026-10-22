@@ -1,0 +1,41 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS slash separated IDs supported
+PASS legacy flag writer rejected
+PASS declared encounter consumer registered
+PASS duplicate effect ownership rejected
+PASS declared consumer rule accepted
+PASS unknown consumer rejected before load
+PASS consumer waits through transition
+PASS consumer receives event context once after control restoration
+PASS gamepad X interaction registered
+PASS read accepted
+PASS gamepad UI accept advances exactly one page
+PASS gamepad cancel restores control
+PASS missing text fallback
+PASS focus interruption restores control
+PASS same room rebuild restores control
+PASS death interruption restores control
+PASS transition defers event state
+PASS event waits for restored control
+PASS restored control flushes event exactly once
+PASS activation applies before panel pauses
+PASS actual disk save written
+PASS version 8 existing flag dictionary owns activation
+PASS disk reload restores discovery and activation
+PASS once activation remains unavailable after disk reload
+PASS repeated flag is idempotent
+PASS repeated flag does not rewrite save
+PASS no disk write during transition
+PASS queued save flushes after transition
+PASS managed encounter persistence defers during transition
+PASS managed encounter persists after enemy is freed
+PASS managed encounter duplicate does not rewrite disk
+PASS legacy encounter immediate persistence preserved
+PASS isolated demonstration cannot enter campaign
+PASS checkpoint overlap rejected
+PASS door approach overlap rejected
+PASS legacy checkpoint priority retained
+INT01 CONTRACTS: 0 failure(s)

@@ -1,0 +1,46 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: opening_review event and presentation defer together
+PASS: opening_review waits for input ownership restoration
+PASS: opening_review state saved exactly once before request
+PASS: opening_review director starts real presenter
+PASS: opening_review gamepad skip preserves committed disk state
+PASS: opening_review repeated event cannot resave existing flag
+PASS: record_review event and presentation defer together
+PASS: record_review waits for input ownership restoration
+PASS: record_review state saved exactly once before request
+PASS: record_review director starts real presenter
+PASS: record_review gamepad skip preserves committed disk state
+PASS: record_review repeated event cannot resave existing flag
+PASS: fallen_clan_review event and presentation defer together
+PASS: fallen_clan_review waits for input ownership restoration
+PASS: fallen_clan_review state saved exactly once before request
+PASS: fallen_clan_review director starts real presenter
+PASS: fallen_clan_review gamepad skip preserves committed disk state
+PASS: fallen_clan_review repeated event cannot resave existing flag
+PASS: production same-room rebuild cancels presenter and restores input
+PASS: disabled presentation keeps identical progression effect
+PASS: reduced presentation restores input through director tick
+PASS: missing cinematic cannot prevent progression
+PASS: duplicate managed defeat has no transition writes
+PASS: managed defeat waits for control restoration
+PASS: managed defeat flushes exactly one real save
+PASS: replayed managed defeat does not resave
+PASS: encounter registers sole-director consumer
+PASS: duplicate encounter consumer rejected
+PASS: hazard registers sole-director consumer
+PASS: hazard consumer reads unmet authoritative flag
+PASS: unknown closed effect consumer rejected at validation
+PASS: consumer dispatch waits during transition
+PASS: director dispatch creates real encounter through shared spawn path
+PASS: actual defeated enemy freed before transition restoration
+PASS: real enemy defeat defers persistence and completion during transition
+PASS: real enemy completion waits for restored controls
+PASS: real enemy deferred defeat saves once and completion flag saves once
+PASS: real enemy completion has no replay writes
+PASS: director flag effect enables registered hazard consumer
+PASS: real version-8 disk reload restores story and encounter dictionaries
+PASS: story/presenter/save integration preserves progression snapshot
+ALPHA07 COMBINED: 41 checks, 0 failure(s)
