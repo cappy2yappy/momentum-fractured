@@ -26,6 +26,6 @@ From Terminal: `/Applications/Godot.app/Contents/MacOS/Godot --path "$PWD" --sce
 
 Tests: tests/story_demo/smoke.gd, contracts.gd; tools/story/validate_data.gd; existing gameplay suites. Native capture.gd writes actual OpenGL before-interaction/inspection/activation states. Those state captures are not a claim of a historical implementation before/after comparison. The panel is static and reduced-motion safe. New story content and production placement require separate creator approval.
 
-## Publication hold
+## Authoritative publication gate
 
-The creator clarified that the original INT-01 agent will publish the existing branch. This continuation is local only under codex/alpha07-int01-followup. No remote writes or PR creation occurred. Await and inspect the original published SHA before reconciling this reviewed follow-up patch. All integration evidence is provisional.
+The original agent published feature/int01-story-director at 2fa6cd6a03de599b7f9098e8bf61f8d770784091. This independent follow-up was recreated from exactly that published commit under codex/alpha07-int01-remote-followup, applying only the reviewed delta. The original branch, source and newer smoke-evidence files are preserved. Follow-up review targets the original feature branch as a separate draft PR. No merge or canonical placements.
