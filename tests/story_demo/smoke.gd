@@ -9,7 +9,7 @@ func run():
 	root.add_child(w)
 	current_scene = w
 	w.set_physics_process(false)
-	w.player.set_physics_process(false)
+	w.player.set_physics_process(true)
 	check(w.story.objects.size() == 4, "four definitions")
 	w.player.position = Vector2(700,1300)
 	check(w.story.interact(w), "read opens")
