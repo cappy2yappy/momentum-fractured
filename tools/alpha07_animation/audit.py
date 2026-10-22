@@ -23,6 +23,9 @@ def audit():
     result = {"base_sha": subprocess.check_output(["git", "rev-parse", "origin/tools/cin-tools-01-cutin-maker"], cwd=ROOT, text=True).strip(),
               "image4": {"status": "blocked_missing_creator_source", "supplied_path": None,
                          "replacement_generated": False}, "approved": [], "clips": [], "failures": []}
+    supplied = ROOT / "source_art/art09-image4/image4-original.png"
+    if supplied.is_file():
+        result["image4"] = {"status": "supplied_extracted_candidate_only", "supplied_path": str(supplied.relative_to(ROOT)), "sha256": hashlib.sha256(supplied.read_bytes()).hexdigest(), "replacement_generated": False}
     for item in approved["sprites"] + approved.get("previous_sprites", []):
         row = inspect(item["path"], item["frames"])
         row["matches_manifest"] = row["sha256"] == item["sha256"]
@@ -48,5 +51,5 @@ if __name__ == "__main__":
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(encoded)
     print(f"Approved sheets: {len(result['approved'])}; ART08 entries: {len(result['clips'])}; integrity failures: {len(result['failures'])}")
-    print("Image4: BLOCKED until exact creator-selected source is supplied")
+    print("Image4:", result["image4"]["status"])
     raise SystemExit(bool(result["failures"]))

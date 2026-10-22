@@ -4,7 +4,12 @@ Owner: Codex animation agent. Branch `codex/alpha07-animation`, isolated from
 Candidate 3 and the 21-room production world. Base PR78 commit
 `af18438` (full SHA in inventory.json).
 
-## Result and blocker
+## Initial recovery result (superseded source blocker)
+
+**Update:** the creator subsequently supplied the exact Image4. Its preserved source,
+alpha audit, extracted catalog and native pose studies are documented in
+[ART09](../art09-image4/README.md). The initial missing-source finding below is
+historical; finished gait/identity acceptance remains pending.
 
 Recovered existing approved artwork and audited the existing staircase candidates.
 No new ninja frames have been produced: the creator-selected **Higgsfield Image 4**

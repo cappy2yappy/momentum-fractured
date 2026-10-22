@@ -1,8 +1,9 @@
 {
   "base_sha": "af184380fb690f2c19bac69960b7aacce50f9ff2",
   "image4": {
-    "status": "blocked_missing_creator_source",
-    "supplied_path": null,
+    "status": "supplied_extracted_candidate_only",
+    "supplied_path": "source_art/art09-image4/image4-original.png",
+    "sha256": "0c9dc1eeab228a683d86cd156d02251400e7ebd7c1b1a46b1e56e8ae2d44bb09",
     "replacement_generated": false
   },
   "approved": [

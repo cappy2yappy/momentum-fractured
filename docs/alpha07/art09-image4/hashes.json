@@ -1,0 +1,862 @@
+[
+  {
+    "path": "source_art/art09-image4/image4-original.png",
+    "bytes": 2979300,
+    "sha256": "0c9dc1eeab228a683d86cd156d02251400e7ebd7c1b1a46b1e56e8ae2d44bb09"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_000.png",
+    "bytes": 23162,
+    "sha256": "39e54d6122477db00810d9036f17caa7c52d85b143e25726319af7c504c30da5"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_001.png",
+    "bytes": 21969,
+    "sha256": "052b39dac78ded46ab70ca195fdd82447e5a7ec6775788e96a32486f62dfcbab"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_002.png",
+    "bytes": 23351,
+    "sha256": "90e7a2e9256ca38f56c6f23f6384f3a6fc89e444e66d00ae3577ddd266a90173"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_003.png",
+    "bytes": 23911,
+    "sha256": "0483d57be74c4d23d476c974c566eb8766e7e05dbcea78098e9b882807426969"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_004.png",
+    "bytes": 23426,
+    "sha256": "0a2a79f4648ad1e891a37722ebb78708f2824b28fd9d80ca45df4e2947babfa2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_005.png",
+    "bytes": 22776,
+    "sha256": "17cb227461d9f7d7b449b58f75568686c9baf34f83a0a5a183e88fa4747d2a14"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_006.png",
+    "bytes": 19016,
+    "sha256": "5062374ff59c85c9b6498773cf9fac71b19b23362d2a18f3eadc04d808e91bc3"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_007.png",
+    "bytes": 20029,
+    "sha256": "ad0f6651572a24a7e813f75f00c2e4ee4aa47c86930c052c60a2694e841c7584"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_008.png",
+    "bytes": 16065,
+    "sha256": "5b3270813a8545c4d4f97c5abaf21e4aa9ddca8a00bd8af772032f645048f442"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_009.png",
+    "bytes": 9814,
+    "sha256": "916ea16f309d70d46d79920e78e21119d7129ea613513762e65ead5a2d726cf7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_010.png",
+    "bytes": 9121,
+    "sha256": "a28c4f72cd7eefbe9e6b18d62cd93539000fa3a73d7a7a59c87b29c8e8f20ed0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_011.png",
+    "bytes": 8362,
+    "sha256": "c4334dcc66c9af21d3f3cfe60c03ae1c9aee44ef110f69741e04a79ea6af3fd7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_012.png",
+    "bytes": 7716,
+    "sha256": "494370925293add55f78b99de02043883733d64dd03f1d93bf116984dce05466"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_013.png",
+    "bytes": 6893,
+    "sha256": "4a6b514eecf18ca932a762e07aa35e50f215215ff09fa0c7ed7f7176d432f513"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_014.png",
+    "bytes": 6177,
+    "sha256": "c2c4922a5320da39272e68a9822168ea172e3c78ceb96ff77e59938c6669cfe9"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_015.png",
+    "bytes": 8542,
+    "sha256": "71d63b4c14e803779e2dc3e74b13fe7089a185ae82e6f7862273a5e5933114e0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_016.png",
+    "bytes": 7775,
+    "sha256": "1bcdc700a3b652e365933f2498565ee827f98e40d4be0f6f2a37dd3dcc4b71e1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_017.png",
+    "bytes": 6460,
+    "sha256": "120daad4f4df49bc4ed694cf6acf93a60528c7301e78709a5be2286133622ce5"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_018.png",
+    "bytes": 7600,
+    "sha256": "c28678b65027960688c42a24c3e8efa6f2b7775ed5e2753804b16ccf2b888197"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_019.png",
+    "bytes": 7306,
+    "sha256": "f22464e4e173c607a5a5f7af281c281aa9391400d846c8b9f78426878a3ebf31"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_020.png",
+    "bytes": 6856,
+    "sha256": "a4831bc30b77fefd32b098c26041abf3c31fdfb76cab4fb7da2b41d5f26a390a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_021.png",
+    "bytes": 8684,
+    "sha256": "9f549eee1546d457fb3490820f0f32c302befd8c95b0d78dbe087ecc9f7610b8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_022.png",
+    "bytes": 10023,
+    "sha256": "9a863291a27981f8fa54b36937e715a28b060afea24c4ff571e5c723624065ce"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_023.png",
+    "bytes": 8916,
+    "sha256": "e92fb0ada8e9c6fdd86b15d32ae13e5d62413da8be4bc86149d3ec7f3783a630"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_024.png",
+    "bytes": 8397,
+    "sha256": "a5d34db034e5ed389743d2e243153fa76c8084ed63b409b208427e61d2a3f0a1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_025.png",
+    "bytes": 8994,
+    "sha256": "43dddf53325a0f34e1547ee0a5c4155acd871ada862e9c0be951ec2b3ad601ae"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_026.png",
+    "bytes": 7640,
+    "sha256": "5db034383bcc076402c8bc423ca29c35aa64cd8ca6f97df34b3ec176870e9269"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_027.png",
+    "bytes": 10209,
+    "sha256": "d3ddfe83b342a018eeff71220ebee54e4d86de3cfa87dc30e09aec8faebf74fa"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_028.png",
+    "bytes": 10100,
+    "sha256": "cbde054b0229b59f5cf019fde22f1e05db83cd832fa55167956c619eb8ef2bca"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_029.png",
+    "bytes": 9174,
+    "sha256": "64ad4e79f740e7f234cfc44194e1d5380b0249541655ac43e67c97ff0b77017b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_030.png",
+    "bytes": 9510,
+    "sha256": "5f8a7ddf567f05fcb5b186537321fdfaf6a8e99587e635c4f34f6d8b1e4cf827"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_031.png",
+    "bytes": 9735,
+    "sha256": "fc239ba691351b23d1d411887508ee248190d674deb1b53713b059443671da3b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_032.png",
+    "bytes": 9695,
+    "sha256": "1f870d6fabeace8233ecd9b69e7ad84930c66af202fc7496c08cb689e146fe59"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_033.png",
+    "bytes": 9343,
+    "sha256": "3775630056b397e9251871df374bbedecc2182a69daa54af5ffae220ac839225"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_034.png",
+    "bytes": 7677,
+    "sha256": "b5674c9862d287dec4264c5407a8624c76d971918107380f69acf4da1b61175b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_035.png",
+    "bytes": 8429,
+    "sha256": "66419b02a5fc4cdddb20ba8b1ad4d7aeb1c4ea935e24b279757e6573fc9f6cb8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_036.png",
+    "bytes": 8058,
+    "sha256": "67cc4ba6f0f4e9fc62bd4b1def26dc2bc27181959da84ab56d19bb83dcce67f0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_037.png",
+    "bytes": 7653,
+    "sha256": "e3171ad9280249a7cc1d45076133ceb566f5034b88cba176630d7a106c0398f1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_038.png",
+    "bytes": 6929,
+    "sha256": "03b253b5980ee29e59ed8f278c9b88f789df982ce1c6fd271644a9258ad9a136"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_039.png",
+    "bytes": 6314,
+    "sha256": "3b477751493663be0a703c27fb3d5c44c4e197e6f2c50d3327a24bf1e277c8a2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_040.png",
+    "bytes": 8440,
+    "sha256": "6836eb69519fb2b72063c1de42bf437d56c13447093d9bc757bd16ae1414729c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_041.png",
+    "bytes": 7623,
+    "sha256": "3b0e574ff80f44e523b8395c62aeddd89d096c730cb7fe7e557c3386b1eecaf0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_042.png",
+    "bytes": 6037,
+    "sha256": "eac768077c55774ab8089a2f4776b265a894860df83513646357bc2aefbacc6e"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_043.png",
+    "bytes": 10229,
+    "sha256": "28eeef9cf474c45bc8ad7cfa7a9d100481c334d8a64eecf6d55d5e93fe89880a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_044.png",
+    "bytes": 10866,
+    "sha256": "4f2d16ad9c66d570534f944f501912db4d698d7d84796f7707ebf90315f58e15"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_045.png",
+    "bytes": 10282,
+    "sha256": "9407f74bd9f6374792dab53daa3f49ad9736fa0ce742aba4f686d7ad2ed3640c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_046.png",
+    "bytes": 8335,
+    "sha256": "5bc509cbe5a9b56b1beb67d775fd0a561e7ffc5789f64544bd4c81b228d45168"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_047.png",
+    "bytes": 8666,
+    "sha256": "301d6ddc1036c68875f84eee2922b81f5733fec22b823d1cdca90eb430b2ef6a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_048.png",
+    "bytes": 6942,
+    "sha256": "130aa124ffb502b837e811949d502be0b1af58fa64f41e529934ec3274237c1c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_049.png",
+    "bytes": 7225,
+    "sha256": "643b020fe2cba8adcca11442c882476b00ad62cf9c83cb74a64dbe5bd675eb36"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_050.png",
+    "bytes": 7170,
+    "sha256": "c3b26faf480cc7d062a537211d7e669653d43da8d251e7f37d89fb42220f028b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_051.png",
+    "bytes": 7158,
+    "sha256": "08443270a1c45adc4036c6709598367f5393a0d28b4466e02895dbab333632b8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_052.png",
+    "bytes": 6261,
+    "sha256": "f55df6d3115154e44993dbeda9c08c98a2d264c5ffe073fe8615fc2bbc29bec1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_053.png",
+    "bytes": 6701,
+    "sha256": "82aea3d60eda07b61a83609f8b8ede5c0883e052c61c2f20d995d64a16c4a971"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_054.png",
+    "bytes": 7823,
+    "sha256": "a86e0fe234c6eedc71558de5d6a551eb905eb4ca154062eb1d53fbee7e0d05da"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_055.png",
+    "bytes": 9957,
+    "sha256": "dbca75ebdcd133d6714457efc0ac658761751ca1f4857d265da8d11cf91db46a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_056.png",
+    "bytes": 9637,
+    "sha256": "17cfe6f119ee6802ced09067074a24f1571f9ec8d410de0a653e729c9be60546"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_057.png",
+    "bytes": 7967,
+    "sha256": "d5c180357aa42da767bc39cfe206c3adb74d10e556903629bf8e679b698b3ece"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_058.png",
+    "bytes": 7285,
+    "sha256": "9c691c0052f7fb231651f682ed5a958690b34163a44d568fdf21768672bc7e8c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_059.png",
+    "bytes": 10686,
+    "sha256": "cc9e214cc665ab0afb2b89d5b49a693406e0e540d8eed5ebb5702b95ba540290"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_060.png",
+    "bytes": 9231,
+    "sha256": "cbf9d82501a86e455f1b1e05dfc50ee176678bb190069168aff2c4b1888e4f3a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_061.png",
+    "bytes": 8483,
+    "sha256": "75a0e662c173032ee20cc4e01727216aa77c71e4bff3844085f179e44b6628b7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_062.png",
+    "bytes": 11245,
+    "sha256": "c14f1b3177a4dea35f0cc2e1e7f8db81595e33a8e09fefea4e461c25692f1e66"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_063.png",
+    "bytes": 8969,
+    "sha256": "a9f55b0735926e762979d5aa1e6c77f0bdd81f29bcf86cbb72b75883642aa36a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_064.png",
+    "bytes": 7448,
+    "sha256": "7db4f7612e19b83cc8d7904965ad268581d32ee4699792393b9cb3299711da99"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_065.png",
+    "bytes": 10264,
+    "sha256": "ef7fdc99912edd1c70d6a423c4386d30e2a463a029f4eb995e707447366de10c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_066.png",
+    "bytes": 8983,
+    "sha256": "74a8cb7a237afc060b98bd96187b6b2e63f7c5f075ca7f4ccee4e2c426ac9a85"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_067.png",
+    "bytes": 9349,
+    "sha256": "d2ad0d81f626aafb9d36d7ca9901d79d94c0b4f677307a83c448f49ffe5ad866"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_068.png",
+    "bytes": 10353,
+    "sha256": "ec3943abf3a8f63648a37646a74379b6336a0ef3a178d6e3ff456eea2548fe2f"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_069.png",
+    "bytes": 8902,
+    "sha256": "d29aba486e70bca9a03e558611e226fa00331fb7b5b9220311b39c0dfb3a225d"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_070.png",
+    "bytes": 8639,
+    "sha256": "9eb64583c8eba0995948bb5eab2d52a544cda86bbd3afc4be63b6f5a6d5920fc"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_071.png",
+    "bytes": 6934,
+    "sha256": "ba6cba1563118cf4a6b9206080f2398488baa24fadd76917cc6a15aa1c8ce8fb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_072.png",
+    "bytes": 6707,
+    "sha256": "bba0d438e1601069a7947f31839ed326a4e419359afe96a11c75c6d5ed67c673"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_073.png",
+    "bytes": 9970,
+    "sha256": "1333623ce2b7fdb8efdd6fb4946d4a91c8b898cc8219e514f41be90394979c7f"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_074.png",
+    "bytes": 8015,
+    "sha256": "7cfe78ea82e018375d491f466f3013a409b6402a19009d5691ad7e110f13b990"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_075.png",
+    "bytes": 7012,
+    "sha256": "6a9cda89b6e4c27d9cfab67edf72419e1f430519b7e7d17b97e0b507844d8c8d"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_076.png",
+    "bytes": 8779,
+    "sha256": "35f988101af2efa50fee981fc9753ed34b776a06b007b34873e5245f390f06db"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_077.png",
+    "bytes": 6639,
+    "sha256": "74c3d152aebb435a95d20ad993359cecc49f394c077f6273f7f8cf2f59388f5f"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_078.png",
+    "bytes": 6711,
+    "sha256": "a8a645bd5c51629e5bcb4eb49ea8f9c914c6c96090877620ec7dd2c5c1fc38ad"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_079.png",
+    "bytes": 6597,
+    "sha256": "575ed7307baefd96b35e93ae30b2ec9689c5bd9d47eea4b8e2b83a11b977aeb9"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_080.png",
+    "bytes": 7562,
+    "sha256": "243cdbb3c1224848d2e4554028dacf344a2b13b3da0211251d0a56465a3a91c5"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_081.png",
+    "bytes": 9892,
+    "sha256": "fd8dc0b10240eb01b136d356dbcbdfad6e1fe1dd4d0f8c5444103439670292ea"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_082.png",
+    "bytes": 10112,
+    "sha256": "d0c29f14c0cc194f1b8a940e91c9b9133764e7ae7dc5bb5cd820c095082679d2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_083.png",
+    "bytes": 9381,
+    "sha256": "5dc43c910e6760de198eeda49bc7304829ae85876a5fb5ebefaec69a301a7e8f"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_084.png",
+    "bytes": 8851,
+    "sha256": "1d276cf1b35bc4fd7a7564d57e1625eed26425bab4771e9584fcdce779b2b685"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_085.png",
+    "bytes": 6726,
+    "sha256": "0a3bf58a4fb05f50d524cf75bad21753cdbda81561075729a1417ba99070bf66"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_086.png",
+    "bytes": 7612,
+    "sha256": "31c2cb13cfed0b2025bf6e63351acc0c47bc671662ccab09981d457286a7b522"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_087.png",
+    "bytes": 6888,
+    "sha256": "0a23364e1a92e16074cd519d5eea23cc4c1585a257da473f09a6c86c19858e2d"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_088.png",
+    "bytes": 9636,
+    "sha256": "966828dfac8b403f9e8e8c07686f25d6454b24365bae12b842a0fffd21ed35d6"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_089.png",
+    "bytes": 10437,
+    "sha256": "8ab917be8eb2659bb28f7a4984eceb3b2b676838780f6a679eabbba46a67f0e5"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_090.png",
+    "bytes": 10394,
+    "sha256": "11c1c1eded471cef870dc0a5ec90f401b487d022169490bbb9b9c62eb83a3df6"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_091.png",
+    "bytes": 12124,
+    "sha256": "491cdbd6be8c556fbfaa91f0c56d51a9ce29d16fe149696ccdaa141db0ef578a"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_092.png",
+    "bytes": 10561,
+    "sha256": "8572eb474bf30c91367f8789f01fc365263f046186eefe22d42dc73e6945721e"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_093.png",
+    "bytes": 10415,
+    "sha256": "757e2d12e286fed4b1c8f1a0f591496839927ce5133e0a41d8dac0383d3db0d7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_094.png",
+    "bytes": 10426,
+    "sha256": "b0c49bdb2c090ee38f228cad0ec97064599ac47998f2e55afc83e0eaa3f272ae"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_095.png",
+    "bytes": 10351,
+    "sha256": "b90b6ffb6137c29e1dd6976348f285ca5ec44fd5514d2a2b8c2c37997b27f1a5"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_096.png",
+    "bytes": 8422,
+    "sha256": "2fbae9d8ca08d0d2f79108f2013b6c9dd29e88b7ea5f81199ae6b554671de2ea"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_097.png",
+    "bytes": 11392,
+    "sha256": "796d59c30aa56d3cd8b283234f12adb8a7133501048527dc6c01762919acaa8c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_098.png",
+    "bytes": 8419,
+    "sha256": "44a8f59fd6903bd26d452c6231ded526dbeeeb66d2cac174204dbf328b5b2d97"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_099.png",
+    "bytes": 8811,
+    "sha256": "2177ed68a4a269d60463549ca119cab25651e76b92ab5a0d15afe3cfb67bbf5c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_100.png",
+    "bytes": 7679,
+    "sha256": "7f5e82faaf9b27bddcea7ac99a9868193d11d7c888066e869c9ab93e7313023c"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_101.png",
+    "bytes": 7887,
+    "sha256": "c2145b741afc8992562c1dd3f5a53debad8ac7e19e8491ba16b30660394b12cb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_102.png",
+    "bytes": 8657,
+    "sha256": "b8284925cc5e7facf2fe35b6ea579611a7c559b5443c500c9bf578b208cab216"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_103.png",
+    "bytes": 9709,
+    "sha256": "ad832cadcf4511f2926aafdbaadd41faf7caf98b87f75badc5874c7fc5148585"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_104.png",
+    "bytes": 8352,
+    "sha256": "575c2b58272f4c07fdd05939eb3dfb4c9f7a9c45f7f8dc246f2e3f95c5555360"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_105.png",
+    "bytes": 11260,
+    "sha256": "644bbd5b7bd27441ed7446da1d17214ac9b92f790394094614e26de0e49527d0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_106.png",
+    "bytes": 10563,
+    "sha256": "b351a871a8a59ebac1f49b10ab43f8e6a53699af48c0f8ab2be357c47b16bb29"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_107.png",
+    "bytes": 8963,
+    "sha256": "82c6ac07d4c3f89908110e50004b61ad8229b36678ac3b8da0d6c5ba02b563c4"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_108.png",
+    "bytes": 8387,
+    "sha256": "6b919be0611161bc1881f419a265fbe224563d67b8c0baa5bb9192a70a2190d0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_109.png",
+    "bytes": 10205,
+    "sha256": "fac3ec33573e3c72a2fc966c2040251f639932298d46a6276d68a27d051ac6ed"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_110.png",
+    "bytes": 9156,
+    "sha256": "edc3936c2ffadcbd338e66988ba7e96284e61f8e71a143e6783b09726c6f1838"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_111.png",
+    "bytes": 10923,
+    "sha256": "76381534614da618a7fb90ca76cc3338ceaf48b6ca90dce1199dba9b564d42d2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_112.png",
+    "bytes": 9075,
+    "sha256": "b3a3f392c45275cd0de82d75539238047ca10048a5a9117c9bd303d1d0390fad"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_113.png",
+    "bytes": 10197,
+    "sha256": "896be013ad2d7a501c553c4d4f5d284c0bb71739d0c9613ca68ff5860a3436a4"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_114.png",
+    "bytes": 10832,
+    "sha256": "4bfa96bae4914a09a2b841454624be66dc6d48be06d2228d207efab2b3aedc1b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_115.png",
+    "bytes": 8733,
+    "sha256": "0ad69bb454f6b2a8581233ca0fed10ebbb16894a1228f68f16a610cfe982481b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_116.png",
+    "bytes": 10998,
+    "sha256": "419386e51104d01a6349f4cf59bd1e443a76e73f397f66777c16ac68f5a24d99"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_117.png",
+    "bytes": 11611,
+    "sha256": "a6b895d52bcec2934544a6b659fc9298990adac81d71bf637782a35ff625be92"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_118.png",
+    "bytes": 10516,
+    "sha256": "5aeccd281dc06df2ee9962df9c3798e4863f2db3bca6bbd6508de2cbbbd8c272"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_119.png",
+    "bytes": 12260,
+    "sha256": "0fe9ca3a48a53955ec506ec52b4fec3a3cd37b1efb1041899ada7727eb7ae8c4"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_120.png",
+    "bytes": 11989,
+    "sha256": "eef9c8c020301d46db4adf118f69e98702b57eb70d249c25871fa15be33d63bb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_121.png",
+    "bytes": 10192,
+    "sha256": "993f2432a0c1d3524f1058cef9e51fa36e81c0fab0e16444485c2ba86b5806d1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_122.png",
+    "bytes": 11086,
+    "sha256": "086345ef9c2347c69b24a9361ca889446a9c2c97e4d774bad218a2bbe332a6cc"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_123.png",
+    "bytes": 11639,
+    "sha256": "205293b01e44720f71352b83e450ab87f676817933e4e79fde8b3b78e8095739"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_124.png",
+    "bytes": 9085,
+    "sha256": "78252029da6a6d24830bd5002d6977e4d2351a445a58cbc672eefb7dbd25ba93"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_125.png",
+    "bytes": 9997,
+    "sha256": "e37ae979cfdd8baf21449cdca5a6e186139ec19b7f228f4ce2676d7302dda153"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_126.png",
+    "bytes": 9307,
+    "sha256": "ea7c19140d13404ea79d9f644a1e9931fcf7d839dfb367e3135f9fb3a7d51204"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_127.png",
+    "bytes": 10310,
+    "sha256": "d4a2df25c5f287cb2a88e834b107741316bfbc5597478ed0ccda2e5f2d30adb7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_128.png",
+    "bytes": 10197,
+    "sha256": "44f4aad07bd450f2893f4aa0d86d10a67dc29ed8cd6f4aa2d25d9ffa61c7d4f7"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_129.png",
+    "bytes": 9961,
+    "sha256": "b0d92057ef669953459319c993a60e542ac752ff7c2d927982b397924e437eb3"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_130.png",
+    "bytes": 8609,
+    "sha256": "7b62367b5031293a51ab2be966b24c527d1e4f9e8459e78e54255c120bb826c2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_131.png",
+    "bytes": 7788,
+    "sha256": "ee0fd9e55c87efe943491b2789e8b689eeddab79d9a699b73691f10086bcca14"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_132.png",
+    "bytes": 12271,
+    "sha256": "6bce4abdf27d82796adc9f63a1950ac319767b4c49e46d5ff49a49dbcdd9f089"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_133.png",
+    "bytes": 9220,
+    "sha256": "3a58a02e23bbdded3c87998ca26bfc05e2fcf5d1e9cc512dd1070da8fdd4ff13"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_134.png",
+    "bytes": 12283,
+    "sha256": "5f8564f39fc0ae6ade7f6a500c28249da0d24b3f98d0648a4d3377fcf8a71cbb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_135.png",
+    "bytes": 10326,
+    "sha256": "938f04527200769bd0793992b14d2f3add1348433654a5529d4948a131f37e77"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_136.png",
+    "bytes": 9410,
+    "sha256": "059a5a8cbb9cacf4941511b26cc5f1e3966cc4592f350a910e8197ddccf66925"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_137.png",
+    "bytes": 10727,
+    "sha256": "e838edb706236740a54aad7c69e38bcf631d1b95c5bc0b2f79147a65ef2e6cf8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_138.png",
+    "bytes": 9598,
+    "sha256": "17ab7413a7fdafe97a3104b9927025ed81a5a1a279062e835513699f0bfee64b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_139.png",
+    "bytes": 9873,
+    "sha256": "5bf64699d2d6d3074d2033739e7beef8663200555ae2f9306674d5d307d3f8a6"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_140.png",
+    "bytes": 10650,
+    "sha256": "ae8fcc9d6c4479946a100dfab482eb1fe19556523964adf947dc3793fd1785dc"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_141.png",
+    "bytes": 10579,
+    "sha256": "ba4c8edd476c58f2b235ad9a0cffc9f29fd70127fc8f43a34d7fc5116b130a05"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_142.png",
+    "bytes": 10529,
+    "sha256": "7a51ea909d9dd82f0441bc9b209b8311d82ed9268580a3f63a1d8f216e6380ad"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_143.png",
+    "bytes": 10538,
+    "sha256": "d555528671f28a8c1e8168c752708981c85e94c293cec4b4922bc490248a75c2"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_144.png",
+    "bytes": 9667,
+    "sha256": "39f4d9687b06e98c3bd151452e0fe2439e65cc667993463f346fc6fe7caf6592"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_145.png",
+    "bytes": 8543,
+    "sha256": "405f10b1a5172a7948032e3c35120a21a4591bcb8257821e45543745e93b7ccb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_146.png",
+    "bytes": 22999,
+    "sha256": "c4e0fba35070a94b4e7c9c1e54db2ce07ce953616277c0afc2fc6d44d39b8b37"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_147.png",
+    "bytes": 9861,
+    "sha256": "4ce24023b78c1145a7a7075e2f378dc9ffbd4bf104b324ed787062c51ab16f68"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_148.png",
+    "bytes": 10932,
+    "sha256": "650914627ff25526a9f318f90870c7a346cb0b53163f51f812cc065f597f5d48"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_149.png",
+    "bytes": 10836,
+    "sha256": "da143dd52e88b97b5795c04d095c821331ffd108072a46f821b109679bcab0f8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_150.png",
+    "bytes": 10503,
+    "sha256": "6b8607c6147085a385d4e230070868a9807524f0be46c97818821ab9de72eb0d"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_151.png",
+    "bytes": 8717,
+    "sha256": "22d48cfd0cf582fcb407e9d58f278f30d52936037469ddd8a07f5d424125f93f"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_152.png",
+    "bytes": 8531,
+    "sha256": "bea3684715bbbdc5b5b6fe7c2c86154fa8371dd90a1fe559fac940217768c6aa"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_153.png",
+    "bytes": 8996,
+    "sha256": "6759685ea12ceb2d8f742eb6b4d96cf6dcf19847af46c000ddb662fcfe7fb87d"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_154.png",
+    "bytes": 10465,
+    "sha256": "4cf86b816972ca7f38a1f7c59e1b7f13f33f3d628eb38d4d7bc1f2f2bce7bacf"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_155.png",
+    "bytes": 9360,
+    "sha256": "95e7dde99beca0cf854e2627d66416c8b556ab38c27a978de0d626fe6041ef38"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_156.png",
+    "bytes": 9956,
+    "sha256": "babbf25987afbb5da8ba2c019a9a30ef030e02d4601df565bd043ba613b5c9c1"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_157.png",
+    "bytes": 9490,
+    "sha256": "71a0035209badf4b64cb3fe149b5c82b71a5b648450829a46cac50887637a8bf"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_158.png",
+    "bytes": 8759,
+    "sha256": "b175a3a14c2285f29b95666cd4f92c8cb6434c3d1f8af76a5c810a4a4fdb5aa8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_159.png",
+    "bytes": 10816,
+    "sha256": "e69c550f496da7541bd0ddfd41e652063921ef80f5d00997b3cfaa210a7a62f4"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_160.png",
+    "bytes": 10470,
+    "sha256": "b6968c9f5139fb6046e7d27e2802cd54f82212961feb0320859b4dfefa8a95c4"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_161.png",
+    "bytes": 12230,
+    "sha256": "8f09e0a221bac91e1655aced221cbf7092028033ad3528c84324c5805fa414ff"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_162.png",
+    "bytes": 11032,
+    "sha256": "32199f51f4acdfad11fc2fe7c6b4baf13ec6596ff55294411c6d32888042f6ae"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_163.png",
+    "bytes": 11731,
+    "sha256": "a9a57c75993e93a4ea46960de70be5f244705b142a744c6933b1e781668a253b"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_164.png",
+    "bytes": 12016,
+    "sha256": "f6bdccb07508deb1a7486c7b36f2a7439dd1b02e5355ca6cc4f4be122d2eb7fb"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_165.png",
+    "bytes": 10800,
+    "sha256": "f9516bb3cac67edba24bd3625a11e1f272de353a5d1398a6574f8562bb5fd5ba"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_166.png",
+    "bytes": 10389,
+    "sha256": "71504631f317f09bdeb66949cad15c71dff50bcbda58ad7f1645fd9c006b02c8"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_167.png",
+    "bytes": 10770,
+    "sha256": "f183e2407cce2f788894bc0480be82baf6205d0ad77a36e6737fba77e1cba8cd"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_168.png",
+    "bytes": 10955,
+    "sha256": "96a3a00400882979ee9068478187c3d9eb6dbffc6943b7921b11f1dcc2167eb0"
+  },
+  {
+    "path": "assets/art09_image4/frames/pose_169.png",
+    "bytes": 10005,
+    "sha256": "b82a9b988698a52f6d8dda088097909313f59b4b384d03cc769c91f00e02a64f"
+  },
+  {
+    "path": "assets/art09_image4/sheet_keyed.png",
+    "bytes": 1696983,
+    "sha256": "9f473a24dfd5a072c6adc12c434238527c1a478dd4eaae00b59f039768fa2379"
+  }
+]

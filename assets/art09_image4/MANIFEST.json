@@ -1,0 +1,3285 @@
+{
+  "catalog_note": "170 connected foreground components >=100 px, including portrait; not 170 validated poses. Smaller detached fragments are not independently catalogued; chosen full ROIs reviewed manually.",
+  "clips": {
+    "ascent": {
+      "fps": 10,
+      "poses": [
+        138,
+        139,
+        140
+      ],
+      "status": "same sprint keys on ascent root path; no authored stair contact"
+    },
+    "braking": {
+      "durations": [
+        0.12,
+        0.16,
+        0.18,
+        0.28
+      ],
+      "poses": [
+        140,
+        141,
+        142,
+        143
+      ],
+      "status": "sprint-to-guard pose study; guard keys not sequential braking drawings"
+    },
+    "descent": {
+      "fps": 8,
+      "poses": [
+        138,
+        139,
+        140
+      ],
+      "status": "same sprint keys on descent root path; no authored landing compression"
+    },
+    "sprint": {
+      "fps": 10,
+      "poses": [
+        138,
+        139,
+        140
+      ],
+      "status": "three-key incomplete cycle study"
+    }
+  },
+  "frames": [
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 0,
+      "name": "pose_000",
+      "path": "assets/art09_image4/frames/pose_000.png",
+      "pivot": [
+        42.5,
+        184.0
+      ],
+      "pixels": 8723.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        128.0,
+        21.0,
+        85.0,
+        185.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 1,
+      "name": "pose_001",
+      "path": "assets/art09_image4/frames/pose_001.png",
+      "pivot": [
+        41.0,
+        186.0
+      ],
+      "pixels": 8382.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        244.0,
+        21.0,
+        82.0,
+        187.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 2,
+      "name": "pose_002",
+      "path": "assets/art09_image4/frames/pose_002.png",
+      "pivot": [
+        41.0,
+        185.0
+      ],
+      "pixels": 8803.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        19.0,
+        22.0,
+        82.0,
+        186.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 3,
+      "name": "pose_003",
+      "path": "assets/art09_image4/frames/pose_003.png",
+      "pivot": [
+        51.0,
+        179.0
+      ],
+      "pixels": 8743.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        347.0,
+        26.0,
+        102.0,
+        180.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 4,
+      "name": "pose_004",
+      "path": "assets/art09_image4/frames/pose_004.png",
+      "pivot": [
+        53.5,
+        164.0
+      ],
+      "pixels": 8437.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        475.0,
+        30.0,
+        107.0,
+        165.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 5,
+      "name": "pose_005",
+      "path": "assets/art09_image4/frames/pose_005.png",
+      "pivot": [
+        74.0,
+        160.0
+      ],
+      "pixels": 8627.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        598.0,
+        34.0,
+        148.0,
+        161.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 6,
+      "name": "pose_006",
+      "path": "assets/art09_image4/frames/pose_006.png",
+      "pivot": [
+        42.0,
+        154.0
+      ],
+      "pixels": 6912.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        766.0,
+        34.0,
+        84.0,
+        155.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 7,
+      "name": "pose_007",
+      "path": "assets/art09_image4/frames/pose_007.png",
+      "pivot": [
+        43.5,
+        152.0
+      ],
+      "pixels": 7234.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        883.0,
+        37.0,
+        87.0,
+        153.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, alternate run and punch keys",
+      "id": 8,
+      "name": "pose_008",
+      "path": "assets/art09_image4/frames/pose_008.png",
+      "pivot": [
+        43.5,
+        146.0
+      ],
+      "pixels": 6166.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1011.0,
+        42.0,
+        87.0,
+        147.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 9,
+      "name": "pose_009",
+      "path": "assets/art09_image4/frames/pose_009.png",
+      "pivot": [
+        41.0,
+        89.0
+      ],
+      "pixels": 3265.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        862.0,
+        240.0,
+        82.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 10,
+      "name": "pose_010",
+      "path": "assets/art09_image4/frames/pose_010.png",
+      "pivot": [
+        37.5,
+        77.0
+      ],
+      "pixels": 3029.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        777.0,
+        246.0,
+        75.0,
+        78.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 11,
+      "name": "pose_011",
+      "path": "assets/art09_image4/frames/pose_011.png",
+      "pivot": [
+        36.5,
+        63.0
+      ],
+      "pixels": 2782.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        23.0,
+        247.0,
+        73.0,
+        64.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 12,
+      "name": "pose_012",
+      "path": "assets/art09_image4/frames/pose_012.png",
+      "pivot": [
+        35.5,
+        60.0
+      ],
+      "pixels": 2618.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        123.0,
+        249.0,
+        71.0,
+        61.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 13,
+      "name": "pose_013",
+      "path": "assets/art09_image4/frames/pose_013.png",
+      "pivot": [
+        33.5,
+        58.0
+      ],
+      "pixels": 2342.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        211.0,
+        250.0,
+        67.0,
+        59.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 14,
+      "name": "pose_014",
+      "path": "assets/art09_image4/frames/pose_014.png",
+      "pivot": [
+        32.5,
+        54.0
+      ],
+      "pixels": 2068.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        296.0,
+        252.0,
+        65.0,
+        55.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 15,
+      "name": "pose_015",
+      "path": "assets/art09_image4/frames/pose_015.png",
+      "pivot": [
+        48.0,
+        63.0
+      ],
+      "pixels": 2842.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        572.0,
+        254.0,
+        96.0,
+        64.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 16,
+      "name": "pose_016",
+      "path": "assets/art09_image4/frames/pose_016.png",
+      "pivot": [
+        43.0,
+        60.0
+      ],
+      "pixels": 2594.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        462.0,
+        256.0,
+        86.0,
+        61.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 17,
+      "name": "pose_017",
+      "path": "assets/art09_image4/frames/pose_017.png",
+      "pivot": [
+        36.0,
+        56.0
+      ],
+      "pixels": 2185.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        381.0,
+        257.0,
+        72.0,
+        57.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 18,
+      "name": "pose_018",
+      "path": "assets/art09_image4/frames/pose_018.png",
+      "pivot": [
+        37.5,
+        58.0
+      ],
+      "pixels": 2595.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        681.0,
+        261.0,
+        75.0,
+        59.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 19,
+      "name": "pose_019",
+      "path": "assets/art09_image4/frames/pose_019.png",
+      "pivot": [
+        43.5,
+        51.0
+      ],
+      "pixels": 2480.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1041.0,
+        268.0,
+        87.0,
+        52.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "crouch, low attack and floor keys",
+      "id": 20,
+      "name": "pose_020",
+      "path": "assets/art09_image4/frames/pose_020.png",
+      "pivot": [
+        30.0,
+        54.0
+      ],
+      "pixels": 2408.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        960.0,
+        271.0,
+        60.0,
+        55.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 21,
+      "name": "pose_021",
+      "path": "assets/art09_image4/frames/pose_021.png",
+      "pivot": [
+        39.5,
+        75.0
+      ],
+      "pixels": 2877.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        470.0,
+        393.0,
+        79.0,
+        76.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 22,
+      "name": "pose_022",
+      "path": "assets/art09_image4/frames/pose_022.png",
+      "pivot": [
+        38.0,
+        74.0
+      ],
+      "pixels": 3354.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        576.0,
+        394.0,
+        76.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 23,
+      "name": "pose_023",
+      "path": "assets/art09_image4/frames/pose_023.png",
+      "pivot": [
+        42.0,
+        66.0
+      ],
+      "pixels": 3136.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        30.0,
+        395.0,
+        84.0,
+        67.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 24,
+      "name": "pose_024",
+      "path": "assets/art09_image4/frames/pose_024.png",
+      "pivot": [
+        41.5,
+        63.0
+      ],
+      "pixels": 2829.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        258.0,
+        400.0,
+        83.0,
+        64.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 25,
+      "name": "pose_025",
+      "path": "assets/art09_image4/frames/pose_025.png",
+      "pivot": [
+        54.0,
+        60.0
+      ],
+      "pixels": 3066.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        134.0,
+        401.0,
+        108.0,
+        61.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 26,
+      "name": "pose_026",
+      "path": "assets/art09_image4/frames/pose_026.png",
+      "pivot": [
+        33.5,
+        57.0
+      ],
+      "pixels": 2736.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        368.0,
+        410.0,
+        67.0,
+        58.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 27,
+      "name": "pose_027",
+      "path": "assets/art09_image4/frames/pose_027.png",
+      "pivot": [
+        48.5,
+        74.0
+      ],
+      "pixels": 3759.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        898.0,
+        410.0,
+        97.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 28,
+      "name": "pose_028",
+      "path": "assets/art09_image4/frames/pose_028.png",
+      "pivot": [
+        44.5,
+        74.0
+      ],
+      "pixels": 3612.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1001.0,
+        410.0,
+        89.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 29,
+      "name": "pose_029",
+      "path": "assets/art09_image4/frames/pose_029.png",
+      "pivot": [
+        38.0,
+        72.0
+      ],
+      "pixels": 3111.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        795.0,
+        411.0,
+        76.0,
+        73.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 30,
+      "name": "pose_030",
+      "path": "assets/art09_image4/frames/pose_030.png",
+      "pivot": [
+        37.5,
+        71.0
+      ],
+      "pixels": 3233.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        691.0,
+        412.0,
+        75.0,
+        72.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 31,
+      "name": "pose_031",
+      "path": "assets/art09_image4/frames/pose_031.png",
+      "pivot": [
+        39.0,
+        84.0
+      ],
+      "pixels": 3299.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        196.0,
+        489.0,
+        78.0,
+        85.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 32,
+      "name": "pose_032",
+      "path": "assets/art09_image4/frames/pose_032.png",
+      "pivot": [
+        32.0,
+        81.0
+      ],
+      "pixels": 3291.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        292.0,
+        491.0,
+        64.0,
+        82.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 33,
+      "name": "pose_033",
+      "path": "assets/art09_image4/frames/pose_033.png",
+      "pivot": [
+        31.5,
+        82.0
+      ],
+      "pixels": 3129.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        120.0,
+        493.0,
+        63.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 34,
+      "name": "pose_034",
+      "path": "assets/art09_image4/frames/pose_034.png",
+      "pivot": [
+        31.5,
+        63.0
+      ],
+      "pixels": 2610.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        33.0,
+        498.0,
+        63.0,
+        64.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 35,
+      "name": "pose_035",
+      "path": "assets/art09_image4/frames/pose_035.png",
+      "pivot": [
+        36.0,
+        74.0
+      ],
+      "pixels": 2784.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        373.0,
+        502.0,
+        72.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 36,
+      "name": "pose_036",
+      "path": "assets/art09_image4/frames/pose_036.png",
+      "pivot": [
+        30.0,
+        68.0
+      ],
+      "pixels": 2818.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        467.0,
+        505.0,
+        60.0,
+        69.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 37,
+      "name": "pose_037",
+      "path": "assets/art09_image4/frames/pose_037.png",
+      "pivot": [
+        29.0,
+        66.0
+      ],
+      "pixels": 2654.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        545.0,
+        505.0,
+        58.0,
+        67.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 38,
+      "name": "pose_038",
+      "path": "assets/art09_image4/frames/pose_038.png",
+      "pivot": [
+        35.5,
+        70.0
+      ],
+      "pixels": 2407.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        712.0,
+        508.0,
+        71.0,
+        71.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 39,
+      "name": "pose_039",
+      "path": "assets/art09_image4/frames/pose_039.png",
+      "pivot": [
+        34.5,
+        61.0
+      ],
+      "pixels": 2237.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        812.0,
+        508.0,
+        69.0,
+        62.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 40,
+      "name": "pose_040",
+      "path": "assets/art09_image4/frames/pose_040.png",
+      "pivot": [
+        37.0,
+        60.0
+      ],
+      "pixels": 2855.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        617.0,
+        511.0,
+        74.0,
+        61.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 41,
+      "name": "pose_041",
+      "path": "assets/art09_image4/frames/pose_041.png",
+      "pivot": [
+        31.5,
+        63.0
+      ],
+      "pixels": 2739.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        899.0,
+        513.0,
+        63.0,
+        64.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 42,
+      "name": "pose_042",
+      "path": "assets/art09_image4/frames/pose_042.png",
+      "pivot": [
+        52.5,
+        33.0
+      ],
+      "pixels": 2222.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        985.0,
+        541.0,
+        105.0,
+        34.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 43,
+      "name": "pose_043",
+      "path": "assets/art09_image4/frames/pose_043.png",
+      "pivot": [
+        32.0,
+        86.0
+      ],
+      "pixels": 3484.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        564.0,
+        593.0,
+        64.0,
+        87.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 44,
+      "name": "pose_044",
+      "path": "assets/art09_image4/frames/pose_044.png",
+      "pivot": [
+        56.0,
+        77.0
+      ],
+      "pixels": 3673.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        988.0,
+        593.0,
+        112.0,
+        78.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 45,
+      "name": "pose_045",
+      "path": "assets/art09_image4/frames/pose_045.png",
+      "pivot": [
+        40.5,
+        78.0
+      ],
+      "pixels": 3418.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        647.0,
+        597.0,
+        81.0,
+        79.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 46,
+      "name": "pose_046",
+      "path": "assets/art09_image4/frames/pose_046.png",
+      "pivot": [
+        31.0,
+        80.0
+      ],
+      "pixels": 2795.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        235.0,
+        598.0,
+        62.0,
+        81.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 47,
+      "name": "pose_047",
+      "path": "assets/art09_image4/frames/pose_047.png",
+      "pivot": [
+        31.0,
+        80.0
+      ],
+      "pixels": 2910.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        311.0,
+        598.0,
+        62.0,
+        81.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 48,
+      "name": "pose_048",
+      "path": "assets/art09_image4/frames/pose_048.png",
+      "pivot": [
+        31.0,
+        75.0
+      ],
+      "pixels": 2298.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        467.0,
+        607.0,
+        62.0,
+        76.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 49,
+      "name": "pose_049",
+      "path": "assets/art09_image4/frames/pose_049.png",
+      "pivot": [
+        31.5,
+        54.0
+      ],
+      "pixels": 2572.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        33.0,
+        611.0,
+        63.0,
+        55.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 50,
+      "name": "pose_050",
+      "path": "assets/art09_image4/frames/pose_050.png",
+      "pivot": [
+        33.0,
+        59.0
+      ],
+      "pixels": 2419.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        744.0,
+        613.0,
+        66.0,
+        60.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 51,
+      "name": "pose_051",
+      "path": "assets/art09_image4/frames/pose_051.png",
+      "pivot": [
+        29.5,
+        59.0
+      ],
+      "pixels": 2426.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        389.0,
+        617.0,
+        59.0,
+        60.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 52,
+      "name": "pose_052",
+      "path": "assets/art09_image4/frames/pose_052.png",
+      "pivot": [
+        31.5,
+        54.0
+      ],
+      "pixels": 2136.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        901.0,
+        621.0,
+        63.0,
+        55.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 53,
+      "name": "pose_053",
+      "path": "assets/art09_image4/frames/pose_053.png",
+      "pivot": [
+        33.5,
+        51.0
+      ],
+      "pixels": 2265.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        820.0,
+        621.0,
+        67.0,
+        52.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 54,
+      "name": "pose_054",
+      "path": "assets/art09_image4/frames/pose_054.png",
+      "pivot": [
+        48.5,
+        47.0
+      ],
+      "pixels": 2813.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        116.0,
+        622.0,
+        97.0,
+        48.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 55,
+      "name": "pose_055",
+      "path": "assets/art09_image4/frames/pose_055.png",
+      "pivot": [
+        38.0,
+        103.0
+      ],
+      "pixels": 3344.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        500.0,
+        690.0,
+        76.0,
+        104.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 56,
+      "name": "pose_056",
+      "path": "assets/art09_image4/frames/pose_056.png",
+      "pivot": [
+        36.0,
+        98.0
+      ],
+      "pixels": 3247.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        412.0,
+        694.0,
+        72.0,
+        99.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 57,
+      "name": "pose_057",
+      "path": "assets/art09_image4/frames/pose_057.png",
+      "pivot": [
+        32.0,
+        82.0
+      ],
+      "pixels": 2826.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        171.0,
+        697.0,
+        64.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 58,
+      "name": "pose_058",
+      "path": "assets/art09_image4/frames/pose_058.png",
+      "pivot": [
+        21.0,
+        87.0
+      ],
+      "pixels": 2461.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        354.0,
+        700.0,
+        42.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 59,
+      "name": "pose_059",
+      "path": "assets/art09_image4/frames/pose_059.png",
+      "pivot": [
+        44.5,
+        89.0
+      ],
+      "pixels": 3637.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        750.0,
+        700.0,
+        89.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 60,
+      "name": "pose_060",
+      "path": "assets/art09_image4/frames/pose_060.png",
+      "pivot": [
+        30.0,
+        87.0
+      ],
+      "pixels": 3122.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        599.0,
+        702.0,
+        60.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 61,
+      "name": "pose_061",
+      "path": "assets/art09_image4/frames/pose_061.png",
+      "pivot": [
+        27.0,
+        88.0
+      ],
+      "pixels": 2931.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        679.0,
+        702.0,
+        54.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 62,
+      "name": "pose_062",
+      "path": "assets/art09_image4/frames/pose_062.png",
+      "pivot": [
+        59.0,
+        79.0
+      ],
+      "pixels": 3729.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        28.0,
+        704.0,
+        118.0,
+        80.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 63,
+      "name": "pose_063",
+      "path": "assets/art09_image4/frames/pose_063.png",
+      "pivot": [
+        29.5,
+        86.0
+      ],
+      "pixels": 2934.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        856.0,
+        706.0,
+        59.0,
+        87.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 64,
+      "name": "pose_064",
+      "path": "assets/art09_image4/frames/pose_064.png",
+      "pivot": [
+        37.0,
+        73.0
+      ],
+      "pixels": 2456.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        261.0,
+        710.0,
+        74.0,
+        74.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 65,
+      "name": "pose_065",
+      "path": "assets/art09_image4/frames/pose_065.png",
+      "pivot": [
+        43.0,
+        82.0
+      ],
+      "pixels": 3465.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        997.0,
+        710.0,
+        86.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 66,
+      "name": "pose_066",
+      "path": "assets/art09_image4/frames/pose_066.png",
+      "pivot": [
+        18.5,
+        143.0
+      ],
+      "pixels": 3148.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        475.0,
+        807.0,
+        37.0,
+        144.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 67,
+      "name": "pose_067",
+      "path": "assets/art09_image4/frames/pose_067.png",
+      "pivot": [
+        41.5,
+        82.0
+      ],
+      "pixels": 3099.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        31.0,
+        808.0,
+        83.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 68,
+      "name": "pose_068",
+      "path": "assets/art09_image4/frames/pose_068.png",
+      "pivot": [
+        41.0,
+        82.0
+      ],
+      "pixels": 3473.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        123.0,
+        808.0,
+        82.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 69,
+      "name": "pose_069",
+      "path": "assets/art09_image4/frames/pose_069.png",
+      "pivot": [
+        22.0,
+        140.0
+      ],
+      "pixels": 3094.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        415.0,
+        808.0,
+        44.0,
+        141.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 70,
+      "name": "pose_070",
+      "path": "assets/art09_image4/frames/pose_070.png",
+      "pivot": [
+        36.5,
+        79.0
+      ],
+      "pixels": 2939.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        313.0,
+        812.0,
+        73.0,
+        80.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 71,
+      "name": "pose_071",
+      "path": "assets/art09_image4/frames/pose_071.png",
+      "pivot": [
+        28.5,
+        62.0
+      ],
+      "pixels": 2355.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        233.0,
+        815.0,
+        57.0,
+        63.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 72,
+      "name": "pose_072",
+      "path": "assets/art09_image4/frames/pose_072.png",
+      "pivot": [
+        32.0,
+        61.0
+      ],
+      "pixels": 2291.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        852.0,
+        825.0,
+        64.0,
+        62.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 73,
+      "name": "pose_073",
+      "path": "assets/art09_image4/frames/pose_073.png",
+      "pivot": [
+        35.0,
+        100.0
+      ],
+      "pixels": 3367.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        530.0,
+        830.0,
+        70.0,
+        101.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 74,
+      "name": "pose_074",
+      "path": "assets/art09_image4/frames/pose_074.png",
+      "pivot": [
+        42.0,
+        54.0
+      ],
+      "pixels": 2800.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        937.0,
+        831.0,
+        84.0,
+        55.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 75,
+      "name": "pose_075",
+      "path": "assets/art09_image4/frames/pose_075.png",
+      "pivot": [
+        47.5,
+        48.0
+      ],
+      "pixels": 2364.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        734.0,
+        832.0,
+        95.0,
+        49.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 76,
+      "name": "pose_076",
+      "path": "assets/art09_image4/frames/pose_076.png",
+      "pivot": [
+        32.5,
+        85.0
+      ],
+      "pixels": 2925.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1043.0,
+        839.0,
+        65.0,
+        86.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 77,
+      "name": "pose_077",
+      "path": "assets/art09_image4/frames/pose_077.png",
+      "pivot": [
+        41.5,
+        43.0
+      ],
+      "pixels": 2317.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        625.0,
+        847.0,
+        83.0,
+        44.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 78,
+      "name": "pose_078",
+      "path": "assets/art09_image4/frames/pose_078.png",
+      "pivot": [
+        36.0,
+        65.0
+      ],
+      "pixels": 2280.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        741.0,
+        898.0,
+        72.0,
+        66.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 79,
+      "name": "pose_079",
+      "path": "assets/art09_image4/frames/pose_079.png",
+      "pivot": [
+        48.5,
+        43.0
+      ],
+      "pixels": 2253.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        623.0,
+        905.0,
+        97.0,
+        44.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 80,
+      "name": "pose_080",
+      "path": "assets/art09_image4/frames/pose_080.png",
+      "pivot": [
+        41.0,
+        72.0
+      ],
+      "pixels": 2620.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        846.0,
+        909.0,
+        82.0,
+        73.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 81,
+      "name": "pose_081",
+      "path": "assets/art09_image4/frames/pose_081.png",
+      "pivot": [
+        53.0,
+        90.0
+      ],
+      "pixels": 3335.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        159.0,
+        918.0,
+        106.0,
+        91.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 82,
+      "name": "pose_082",
+      "path": "assets/art09_image4/frames/pose_082.png",
+      "pivot": [
+        52.5,
+        91.0
+      ],
+      "pixels": 3369.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        29.0,
+        922.0,
+        105.0,
+        92.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 83,
+      "name": "pose_083",
+      "path": "assets/art09_image4/frames/pose_083.png",
+      "pivot": [
+        35.5,
+        87.0
+      ],
+      "pixels": 3125.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        287.0,
+        933.0,
+        71.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 84,
+      "name": "pose_084",
+      "path": "assets/art09_image4/frames/pose_084.png",
+      "pivot": [
+        32.5,
+        87.0
+      ],
+      "pixels": 2930.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1044.0,
+        997.0,
+        65.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 85,
+      "name": "pose_085",
+      "path": "assets/art09_image4/frames/pose_085.png",
+      "pivot": [
+        29.5,
+        72.0
+      ],
+      "pixels": 2338.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        776.0,
+        997.0,
+        59.0,
+        73.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 86,
+      "name": "pose_086",
+      "path": "assets/art09_image4/frames/pose_086.png",
+      "pivot": [
+        37.5,
+        79.0
+      ],
+      "pixels": 2500.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        956.0,
+        1010.0,
+        75.0,
+        80.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 87,
+      "name": "pose_087",
+      "path": "assets/art09_image4/frames/pose_087.png",
+      "pivot": [
+        44.5,
+        49.0
+      ],
+      "pixels": 2305.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        848.0,
+        1025.0,
+        89.0,
+        50.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 88,
+      "name": "pose_088",
+      "path": "assets/art09_image4/frames/pose_088.png",
+      "pivot": [
+        41.0,
+        95.0
+      ],
+      "pixels": 3345.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        492.0,
+        1039.0,
+        82.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "kick / acrobatics / possible flip keys",
+      "id": 89,
+      "name": "pose_089",
+      "path": "assets/art09_image4/frames/pose_089.png",
+      "pivot": [
+        37.0,
+        94.0
+      ],
+      "pixels": 3496.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        589.0,
+        1039.0,
+        74.0,
+        95.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 90,
+      "name": "pose_090",
+      "path": "assets/art09_image4/frames/pose_090.png",
+      "pivot": [
+        35.0,
+        94.0
+      ],
+      "pixels": 3523.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        670.0,
+        1040.0,
+        70.0,
+        95.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 91,
+      "name": "pose_091",
+      "path": "assets/art09_image4/frames/pose_091.png",
+      "pivot": [
+        37.5,
+        100.0
+      ],
+      "pixels": 4046.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        27.0,
+        1042.0,
+        75.0,
+        101.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 92,
+      "name": "pose_092",
+      "path": "assets/art09_image4/frames/pose_092.png",
+      "pivot": [
+        33.5,
+        95.0
+      ],
+      "pixels": 3620.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        412.0,
+        1042.0,
+        67.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 93,
+      "name": "pose_093",
+      "path": "assets/art09_image4/frames/pose_093.png",
+      "pivot": [
+        35.0,
+        89.0
+      ],
+      "pixels": 3519.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        223.0,
+        1050.0,
+        70.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 94,
+      "name": "pose_094",
+      "path": "assets/art09_image4/frames/pose_094.png",
+      "pivot": [
+        38.0,
+        87.0
+      ],
+      "pixels": 3504.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        316.0,
+        1052.0,
+        76.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 95,
+      "name": "pose_095",
+      "path": "assets/art09_image4/frames/pose_095.png",
+      "pivot": [
+        37.0,
+        89.0
+      ],
+      "pixels": 3510.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        121.0,
+        1053.0,
+        74.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 96,
+      "name": "pose_096",
+      "path": "assets/art09_image4/frames/pose_096.png",
+      "pivot": [
+        40.5,
+        65.0
+      ],
+      "pixels": 2717.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        770.0,
+        1083.0,
+        81.0,
+        66.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 97,
+      "name": "pose_097",
+      "path": "assets/art09_image4/frames/pose_097.png",
+      "pivot": [
+        43.0,
+        107.0
+      ],
+      "pixels": 3859.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        461.0,
+        1147.0,
+        86.0,
+        108.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 98,
+      "name": "pose_098",
+      "path": "assets/art09_image4/frames/pose_098.png",
+      "pivot": [
+        35.5,
+        104.0
+      ],
+      "pixels": 2706.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        556.0,
+        1153.0,
+        71.0,
+        105.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 99,
+      "name": "pose_099",
+      "path": "assets/art09_image4/frames/pose_099.png",
+      "pivot": [
+        42.5,
+        110.0
+      ],
+      "pixels": 2796.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        645.0,
+        1153.0,
+        85.0,
+        111.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 100,
+      "name": "pose_100",
+      "path": "assets/art09_image4/frames/pose_100.png",
+      "pivot": [
+        46.5,
+        75.0
+      ],
+      "pixels": 2615.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        743.0,
+        1163.0,
+        93.0,
+        76.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 101,
+      "name": "pose_101",
+      "path": "assets/art09_image4/frames/pose_101.png",
+      "pivot": [
+        24.0,
+        98.0
+      ],
+      "pixels": 2677.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1050.0,
+        1163.0,
+        48.0,
+        99.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 102,
+      "name": "pose_102",
+      "path": "assets/art09_image4/frames/pose_102.png",
+      "pivot": [
+        28.5,
+        88.0
+      ],
+      "pixels": 2943.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        380.0,
+        1167.0,
+        57.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 103,
+      "name": "pose_103",
+      "path": "assets/art09_image4/frames/pose_103.png",
+      "pivot": [
+        42.0,
+        70.0
+      ],
+      "pixels": 3322.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        201.0,
+        1169.0,
+        84.0,
+        71.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 104,
+      "name": "pose_104",
+      "path": "assets/art09_image4/frames/pose_104.png",
+      "pivot": [
+        27.5,
+        88.0
+      ],
+      "pixels": 2787.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        307.0,
+        1171.0,
+        55.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 105,
+      "name": "pose_105",
+      "path": "assets/art09_image4/frames/pose_105.png",
+      "pivot": [
+        42.5,
+        89.0
+      ],
+      "pixels": 3767.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        936.0,
+        1178.0,
+        85.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 106,
+      "name": "pose_106",
+      "path": "assets/art09_image4/frames/pose_106.png",
+      "pivot": [
+        37.0,
+        87.0
+      ],
+      "pixels": 3553.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        844.0,
+        1180.0,
+        74.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 107,
+      "name": "pose_107",
+      "path": "assets/art09_image4/frames/pose_107.png",
+      "pivot": [
+        34.5,
+        77.0
+      ],
+      "pixels": 3044.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        24.0,
+        1183.0,
+        69.0,
+        78.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "acrobatics / possible frontflip keys",
+      "id": 108,
+      "name": "pose_108",
+      "path": "assets/art09_image4/frames/pose_108.png",
+      "pivot": [
+        38.0,
+        59.0
+      ],
+      "pixels": 2914.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        107.0,
+        1189.0,
+        76.0,
+        60.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 109,
+      "name": "pose_109",
+      "path": "assets/art09_image4/frames/pose_109.png",
+      "pivot": [
+        49.0,
+        92.0
+      ],
+      "pixels": 3437.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        144.0,
+        1284.0,
+        98.0,
+        93.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 110,
+      "name": "pose_110",
+      "path": "assets/art09_image4/frames/pose_110.png",
+      "pivot": [
+        35.0,
+        93.0
+      ],
+      "pixels": 3054.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        264.0,
+        1285.0,
+        70.0,
+        94.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 111,
+      "name": "pose_111",
+      "path": "assets/art09_image4/frames/pose_111.png",
+      "pivot": [
+        55.0,
+        95.0
+      ],
+      "pixels": 3703.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        19.0,
+        1287.0,
+        110.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 112,
+      "name": "pose_112",
+      "path": "assets/art09_image4/frames/pose_112.png",
+      "pivot": [
+        29.5,
+        90.0
+      ],
+      "pixels": 3010.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        363.0,
+        1289.0,
+        59.0,
+        91.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 113,
+      "name": "pose_113",
+      "path": "assets/art09_image4/frames/pose_113.png",
+      "pivot": [
+        30.5,
+        95.0
+      ],
+      "pixels": 3555.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        527.0,
+        1292.0,
+        61.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 114,
+      "name": "pose_114",
+      "path": "assets/art09_image4/frames/pose_114.png",
+      "pivot": [
+        33.0,
+        99.0
+      ],
+      "pixels": 3642.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        760.0,
+        1292.0,
+        66.0,
+        100.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 115,
+      "name": "pose_115",
+      "path": "assets/art09_image4/frames/pose_115.png",
+      "pivot": [
+        33.0,
+        88.0
+      ],
+      "pixels": 2875.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        441.0,
+        1294.0,
+        66.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 116,
+      "name": "pose_116",
+      "path": "assets/art09_image4/frames/pose_116.png",
+      "pivot": [
+        31.5,
+        96.0
+      ],
+      "pixels": 3733.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        609.0,
+        1296.0,
+        63.0,
+        97.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 117,
+      "name": "pose_117",
+      "path": "assets/art09_image4/frames/pose_117.png",
+      "pivot": [
+        33.0,
+        98.0
+      ],
+      "pixels": 3894.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        684.0,
+        1300.0,
+        66.0,
+        99.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 118,
+      "name": "pose_118",
+      "path": "assets/art09_image4/frames/pose_118.png",
+      "pivot": [
+        39.5,
+        86.0
+      ],
+      "pixels": 3532.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        836.0,
+        1305.0,
+        79.0,
+        87.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 119,
+      "name": "pose_119",
+      "path": "assets/art09_image4/frames/pose_119.png",
+      "pivot": [
+        54.0,
+        88.0
+      ],
+      "pixels": 4199.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        925.0,
+        1309.0,
+        108.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 120,
+      "name": "pose_120",
+      "path": "assets/art09_image4/frames/pose_120.png",
+      "pivot": [
+        51.0,
+        87.0
+      ],
+      "pixels": 4157.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1041.0,
+        1312.0,
+        102.0,
+        88.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 121,
+      "name": "pose_121",
+      "path": "assets/art09_image4/frames/pose_121.png",
+      "pivot": [
+        27.0,
+        103.0
+      ],
+      "pixels": 3421.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        107.0,
+        1417.0,
+        54.0,
+        104.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 122,
+      "name": "pose_122",
+      "path": "assets/art09_image4/frames/pose_122.png",
+      "pivot": [
+        43.0,
+        84.0
+      ],
+      "pixels": 3728.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        5.0,
+        1434.0,
+        86.0,
+        85.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 123,
+      "name": "pose_123",
+      "path": "assets/art09_image4/frames/pose_123.png",
+      "pivot": [
+        45.5,
+        85.0
+      ],
+      "pixels": 3989.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        499.0,
+        1436.0,
+        91.0,
+        86.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 124,
+      "name": "pose_124",
+      "path": "assets/art09_image4/frames/pose_124.png",
+      "pivot": [
+        47.0,
+        74.0
+      ],
+      "pixels": 2993.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        298.0,
+        1439.0,
+        94.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 125,
+      "name": "pose_125",
+      "path": "assets/art09_image4/frames/pose_125.png",
+      "pivot": [
+        41.0,
+        81.0
+      ],
+      "pixels": 3413.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        609.0,
+        1442.0,
+        82.0,
+        82.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 126,
+      "name": "pose_126",
+      "path": "assets/art09_image4/frames/pose_126.png",
+      "pivot": [
+        41.5,
+        82.0
+      ],
+      "pixels": 3172.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        716.0,
+        1445.0,
+        83.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 127,
+      "name": "pose_127",
+      "path": "assets/art09_image4/frames/pose_127.png",
+      "pivot": [
+        42.0,
+        82.0
+      ],
+      "pixels": 3501.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        1022.0,
+        1447.0,
+        84.0,
+        83.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 128,
+      "name": "pose_128",
+      "path": "assets/art09_image4/frames/pose_128.png",
+      "pivot": [
+        42.0,
+        76.0
+      ],
+      "pixels": 3432.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        819.0,
+        1450.0,
+        84.0,
+        77.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 129,
+      "name": "pose_129",
+      "path": "assets/art09_image4/frames/pose_129.png",
+      "pivot": [
+        42.0,
+        76.0
+      ],
+      "pixels": 3308.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        920.0,
+        1454.0,
+        84.0,
+        77.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 130,
+      "name": "pose_130",
+      "path": "assets/art09_image4/frames/pose_130.png",
+      "pivot": [
+        45.5,
+        60.0
+      ],
+      "pixels": 2819.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        189.0,
+        1457.0,
+        91.0,
+        61.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 131,
+      "name": "pose_131",
+      "path": "assets/art09_image4/frames/pose_131.png",
+      "pivot": [
+        32.5,
+        58.0
+      ],
+      "pixels": 2620.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        410.0,
+        1459.0,
+        65.0,
+        59.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 132,
+      "name": "pose_132",
+      "path": "assets/art09_image4/frames/pose_132.png",
+      "pivot": [
+        44.0,
+        96.0
+      ],
+      "pixels": 4115.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        129.0,
+        1541.0,
+        88.0,
+        97.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 133,
+      "name": "pose_133",
+      "path": "assets/art09_image4/frames/pose_133.png",
+      "pivot": [
+        26.5,
+        94.0
+      ],
+      "pixels": 3104.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        244.0,
+        1544.0,
+        53.0,
+        95.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 134,
+      "name": "pose_134",
+      "path": "assets/art09_image4/frames/pose_134.png",
+      "pivot": [
+        41.0,
+        92.0
+      ],
+      "pixels": 4208.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        22.0,
+        1548.0,
+        82.0,
+        93.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 135,
+      "name": "pose_135",
+      "path": "assets/art09_image4/frames/pose_135.png",
+      "pivot": [
+        31.5,
+        93.0
+      ],
+      "pixels": 3479.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        771.0,
+        1564.0,
+        63.0,
+        94.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 136,
+      "name": "pose_136",
+      "path": "assets/art09_image4/frames/pose_136.png",
+      "pivot": [
+        34.5,
+        86.0
+      ],
+      "pixels": 3312.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        676.0,
+        1565.0,
+        69.0,
+        87.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "combat / locomotion mixed keys",
+      "id": 137,
+      "name": "pose_137",
+      "path": "assets/art09_image4/frames/pose_137.png",
+      "pivot": [
+        27.0,
+        98.0
+      ],
+      "pixels": 3620.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        849.0,
+        1566.0,
+        54.0,
+        99.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "arms-back sprint priority keys (incomplete cycle)",
+      "id": 138,
+      "name": "pose_138",
+      "path": "assets/art09_image4/frames/pose_138.png",
+      "pivot": [
+        43.0,
+        74.0
+      ],
+      "pixels": 3303.0,
+      "review": "priority manually reviewed ROI: full running silhouette; sparse keys, face/ribbon identity needs creator acceptance",
+      "source_bbox": [
+        322.0,
+        1566.0,
+        86.0,
+        75.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "arms-back sprint priority keys (incomplete cycle)",
+      "id": 139,
+      "name": "pose_139",
+      "path": "assets/art09_image4/frames/pose_139.png",
+      "pivot": [
+        49.0,
+        71.0
+      ],
+      "pixels": 3493.0,
+      "review": "priority manually reviewed ROI: full running silhouette; sparse keys, face/ribbon identity needs creator acceptance",
+      "source_bbox": [
+        425.0,
+        1570.0,
+        98.0,
+        72.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "arms-back sprint priority keys (incomplete cycle)",
+      "id": 140,
+      "name": "pose_140",
+      "path": "assets/art09_image4/frames/pose_140.png",
+      "pivot": [
+        54.0,
+        72.0
+      ],
+      "pixels": 3735.0,
+      "review": "priority manually reviewed ROI: full running silhouette; sparse keys, face/ribbon identity needs creator acceptance",
+      "source_bbox": [
+        540.0,
+        1570.0,
+        108.0,
+        73.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "guard keys selected for braking pose study",
+      "id": 141,
+      "name": "pose_141",
+      "path": "assets/art09_image4/frames/pose_141.png",
+      "pivot": [
+        29.5,
+        95.0
+      ],
+      "pixels": 3594.0,
+      "review": "manually reviewed guard ROI; not an authored braking sequence",
+      "source_bbox": [
+        922.0,
+        1571.0,
+        59.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "guard keys selected for braking pose study",
+      "id": 142,
+      "name": "pose_142",
+      "path": "assets/art09_image4/frames/pose_142.png",
+      "pivot": [
+        29.0,
+        92.0
+      ],
+      "pixels": 3549.0,
+      "review": "manually reviewed guard ROI; not an authored braking sequence",
+      "source_bbox": [
+        996.0,
+        1571.0,
+        58.0,
+        93.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "guard keys selected for braking pose study",
+      "id": 143,
+      "name": "pose_143",
+      "path": "assets/art09_image4/frames/pose_143.png",
+      "pivot": [
+        34.5,
+        90.0
+      ],
+      "pixels": 3570.0,
+      "review": "manually reviewed guard ROI; not an authored braking sequence",
+      "source_bbox": [
+        1058.0,
+        1575.0,
+        69.0,
+        91.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 144,
+      "name": "pose_144",
+      "path": "assets/art09_image4/frames/pose_144.png",
+      "pivot": [
+        25.5,
+        106.0
+      ],
+      "pixels": 3373.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        24.0,
+        1681.0,
+        51.0,
+        107.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 145,
+      "name": "pose_145",
+      "path": "assets/art09_image4/frames/pose_145.png",
+      "pivot": [
+        22.0,
+        104.0
+      ],
+      "pixels": 2974.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        89.0,
+        1684.0,
+        44.0,
+        105.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 146,
+      "name": "pose_146",
+      "path": "assets/art09_image4/frames/pose_146.png",
+      "pivot": [
+        53.0,
+        119.0
+      ],
+      "pixels": 11352.0,
+      "review": "PORTRAIT ONLY: not a sprite pose or cycle frame",
+      "source_bbox": [
+        806.0,
+        1686.0,
+        106.0,
+        120.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 147,
+      "name": "pose_147",
+      "path": "assets/art09_image4/frames/pose_147.png",
+      "pivot": [
+        38.0,
+        95.0
+      ],
+      "pixels": 3309.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        155.0,
+        1687.0,
+        76.0,
+        96.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 148,
+      "name": "pose_148",
+      "path": "assets/art09_image4/frames/pose_148.png",
+      "pivot": [
+        28.5,
+        107.0
+      ],
+      "pixels": 3797.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        463.0,
+        1689.0,
+        57.0,
+        108.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 149,
+      "name": "pose_149",
+      "path": "assets/art09_image4/frames/pose_149.png",
+      "pivot": [
+        29.0,
+        107.0
+      ],
+      "pixels": 3728.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        392.0,
+        1691.0,
+        58.0,
+        108.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 150,
+      "name": "pose_150",
+      "path": "assets/art09_image4/frames/pose_150.png",
+      "pivot": [
+        29.0,
+        101.0
+      ],
+      "pixels": 3626.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        247.0,
+        1692.0,
+        58.0,
+        102.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 151,
+      "name": "pose_151",
+      "path": "assets/art09_image4/frames/pose_151.png",
+      "pivot": [
+        23.0,
+        99.0
+      ],
+      "pixels": 3108.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        581.0,
+        1696.0,
+        46.0,
+        100.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 152,
+      "name": "pose_152",
+      "path": "assets/art09_image4/frames/pose_152.png",
+      "pivot": [
+        24.5,
+        100.0
+      ],
+      "pixels": 2915.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        526.0,
+        1697.0,
+        49.0,
+        101.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 153,
+      "name": "pose_153",
+      "path": "assets/art09_image4/frames/pose_153.png",
+      "pivot": [
+        24.5,
+        99.0
+      ],
+      "pixels": 3173.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        632.0,
+        1697.0,
+        49.0,
+        100.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "standing, guard and portrait",
+      "id": 154,
+      "name": "pose_154",
+      "path": "assets/art09_image4/frames/pose_154.png",
+      "pivot": [
+        30.5,
+        98.0
+      ],
+      "pixels": 3526.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        319.0,
+        1699.0,
+        61.0,
+        99.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 155,
+      "name": "pose_155",
+      "path": "assets/art09_image4/frames/pose_155.png",
+      "pivot": [
+        25.0,
+        93.0
+      ],
+      "pixels": 3230.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        25.0,
+        1818.0,
+        50.0,
+        94.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 156,
+      "name": "pose_156",
+      "path": "assets/art09_image4/frames/pose_156.png",
+      "pivot": [
+        26.0,
+        91.0
+      ],
+      "pixels": 3454.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        418.0,
+        1818.0,
+        52.0,
+        92.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 157,
+      "name": "pose_157",
+      "path": "assets/art09_image4/frames/pose_157.png",
+      "pivot": [
+        24.5,
+        91.0
+      ],
+      "pixels": 3271.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        158.0,
+        1819.0,
+        49.0,
+        92.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 158,
+      "name": "pose_158",
+      "path": "assets/art09_image4/frames/pose_158.png",
+      "pivot": [
+        21.0,
+        93.0
+      ],
+      "pixels": 3005.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        100.0,
+        1820.0,
+        42.0,
+        94.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 159,
+      "name": "pose_159",
+      "path": "assets/art09_image4/frames/pose_159.png",
+      "pivot": [
+        38.5,
+        85.0
+      ],
+      "pixels": 3633.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        481.0,
+        1826.0,
+        77.0,
+        86.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 160,
+      "name": "pose_160",
+      "path": "assets/art09_image4/frames/pose_160.png",
+      "pivot": [
+        38.0,
+        85.0
+      ],
+      "pixels": 3477.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        220.0,
+        1827.0,
+        76.0,
+        86.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 161,
+      "name": "pose_161",
+      "path": "assets/art09_image4/frames/pose_161.png",
+      "pivot": [
+        37.5,
+        88.0
+      ],
+      "pixels": 4128.0,
+      "review": "REJECT FROM PILOT: exposed tan torso / widened body variant diverges from PR30 jacket silhouette",
+      "source_bbox": [
+        576.0,
+        1827.0,
+        75.0,
+        89.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 162,
+      "name": "pose_162",
+      "path": "assets/art09_image4/frames/pose_162.png",
+      "pivot": [
+        38.0,
+        84.0
+      ],
+      "pixels": 3607.0,
+      "review": "REJECT FROM PILOT: exposed tan torso / widened body variant diverges from PR30 jacket silhouette",
+      "source_bbox": [
+        314.0,
+        1831.0,
+        76.0,
+        85.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 163,
+      "name": "pose_163",
+      "path": "assets/art09_image4/frames/pose_163.png",
+      "pivot": [
+        38.5,
+        84.0
+      ],
+      "pixels": 4158.0,
+      "review": "REJECT FROM PILOT: exposed tan torso / widened body variant diverges from PR30 jacket silhouette",
+      "source_bbox": [
+        672.0,
+        1831.0,
+        77.0,
+        85.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 164,
+      "name": "pose_164",
+      "path": "assets/art09_image4/frames/pose_164.png",
+      "pivot": [
+        39.0,
+        85.0
+      ],
+      "pixels": 4370.0,
+      "review": "REJECT FROM PILOT: exposed tan torso / widened body variant diverges from PR30 jacket silhouette",
+      "source_bbox": [
+        764.0,
+        1831.0,
+        78.0,
+        86.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 165,
+      "name": "pose_165",
+      "path": "assets/art09_image4/frames/pose_165.png",
+      "pivot": [
+        30.5,
+        96.0
+      ],
+      "pixels": 3708.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        26.0,
+        1934.0,
+        61.0,
+        97.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 166,
+      "name": "pose_166",
+      "path": "assets/art09_image4/frames/pose_166.png",
+      "pivot": [
+        33.0,
+        94.0
+      ],
+      "pixels": 3477.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        105.0,
+        1941.0,
+        66.0,
+        95.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 167,
+      "name": "pose_167",
+      "path": "assets/art09_image4/frames/pose_167.png",
+      "pivot": [
+        35.5,
+        90.0
+      ],
+      "pixels": 3593.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        179.0,
+        1945.0,
+        71.0,
+        91.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 168,
+      "name": "pose_168",
+      "path": "assets/art09_image4/frames/pose_168.png",
+      "pivot": [
+        33.5,
+        90.0
+      ],
+      "pixels": 3777.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        259.0,
+        1945.0,
+        67.0,
+        91.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    },
+    {
+      "category": "front/back turnaround and combat variants",
+      "id": 169,
+      "name": "pose_169",
+      "path": "assets/art09_image4/frames/pose_169.png",
+      "pivot": [
+        33.5,
+        89.0
+      ],
+      "pixels": 3322.0,
+      "review": "catalog only; source anatomy and identity unapproved",
+      "source_bbox": [
+        339.0,
+        1946.0,
+        67.0,
+        90.0
+      ],
+      "status": "extracted candidate, creator acceptance pending"
+    }
+  ],
+  "identity_reference_pr": 30,
+  "identity_reference_sha": "a6b76b9938825307bdcd4efb687c7198ea0d8681",
+  "retained_pixels": 586205,
+  "retained_rgb_changes": 0,
+  "source": "source_art/art09-image4/image4-original.png",
+  "source_sha256": "0c9dc1eeab228a683d86cd156d02251400e7ebd7c1b1a46b1e56e8ae2d44bb09"
+}
