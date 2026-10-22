@@ -46,4 +46,13 @@ Native captures use the same gallery with `--capture=/absolute/local/captures` a
 
 - Art Mane: choose specific asset/sequence IDs; review palette, line style, alpha fringes, filters, pivots and scale beside approved Kaze. Add missing combat and hazard timing poses rather than stretching the current loops.
 - Level Masta: place approved visuals against existing colliders; run room placement/door/checkpoint/recovery safety probes. DarkCave silhouettes do not define new floors or collision. No room layout changes belong in this PR.
-- Claude: retain source/license evidence, approve selected usage and contract consumers, then commission a separate placement/integration draft. DarkCave's incomplete terms and all per-room approvals remain gates. No canonical faction, character, species identity, location or story event is established by these packs.
+- Claude: retain source/license evidence, approve selected usage and contract consumers, then commission a separate placement/integration draft. Creator-attested permission authorizes isolated pilots for all six packs; DarkCave's independent source verification remains open, and all production placements require creator approval. No canonical faction, character, species identity, location or story event is established by these packs.
+
+## Controlled pilot follow-up (2026-10-22)
+
+See [CONTROLLED_PILOTS.md](CONTROLLED_PILOTS.md). The creator attestation is recorded separately from publisher verification in the license register. Curated selections open in the existing isolated gallery. Optional companion pilots open the existing EN-01/HAZ-01 labs in a separate pinned compliance checkout. They add presentation children only; no campaign placement or damage adapter is installed. Art acceptance and production integration remain separately reviewed next steps.
+
+```sh
+python3 tools/asset01/review_pilot.py --stage /absolute/local/asset01-staging --check
+python3 tools/asset01/review_pilot.py --stage /absolute/local/asset01-staging --pilot FOL-01
+```

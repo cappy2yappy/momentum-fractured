@@ -1,0 +1,22 @@
+{
+  "base_pr": 92,
+  "base_remote": "2dd5c4f671a34424e65c8399013d3a44e50b1350",
+  "base_tree": "5421f0a8e4aed72f964fd89dc17e6ae5a05536b1",
+  "scope": "creator attestation, selected local companion pilots, textual evidence and owner handoff; no production edits or raw assets",
+  "files": [
+    "docs/asset01/COMPATIBILITY.md",
+    "docs/asset01/CONTROLLED_PILOTS.md",
+    "docs/asset01/FOLLOWUP_CHANGED_FILES.json",
+    "docs/asset01/FOLLOWUP_VERIFICATION.md",
+    "docs/asset01/HANDOFF.md",
+    "docs/asset01/LICENSES.md",
+    "docs/asset01/README.md",
+    "docs/asset01/evidence/followup-results.json",
+    "docs/asset01/license-status.csv",
+    "docs/asset01/license-status.json",
+    "docs/asset01/pilot-plan.json",
+    "tools/asset01/gallery/gallery.gd",
+    "tools/asset01/host_pilot.gd",
+    "tools/asset01/review_pilot.py"
+  ]
+}

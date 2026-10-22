@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-22",
+  "engine": "Godot 4.6.1 stable official 14d19694e",
+  "renderer": "Apple M4 OpenGL Compatibility",
+  "intake_head": "2dd5c4f671a34424e65c8399013d3a44e50b1350",
+  "host_head": "5172db6898f3efc35b74f3c134293049165b9bf7",
+  "archive_hashes_verified": 6,
+  "extracted_hashes_verified": 1106,
+  "gallery_assertions_passed": 2533,
+  "gallery_assertions_failed": 0,
+  "curated_valid_selection_smokes": 7,
+  "invalid_selection_rejected": true,
+  "invalid_region_rejected": true,
+  "wrong_host_rejected": true,
+  "prior_publisher_fields_and_pins_preserved": true,
+  "json_csv_consistent": true,
+  "approved_baseline_failures": 0,
+  "host_results": [
+    {
+      "collision_topology_unchanged": true,
+      "mode": "enemy",
+      "observed_states": {
+        "EN-VIS-01 COMPARE": [
+          "awakening",
+          "patrol",
+          "windup",
+          "strike",
+          "recover",
+          "pursue"
+        ]
+      },
+      "production_placements": 0,
+      "state_cycle_observed": true,
+      "native_capture_sha256": "87c7f966f098a428df8b7b2eeb257903484822c9eabb366469456467cd6bcbe0"
+    },
+    {
+      "collision_topology_unchanged": true,
+      "mode": "hazard",
+      "observed_states": {
+        "HAZ-VIS-01 COMPARE": [
+          "idle",
+          "warning",
+          "active",
+          "recovery"
+        ]
+      },
+      "production_placements": 0,
+      "state_cycle_observed": true,
+      "native_capture_sha256": "fb5ecf1d3f5f1bb9161d6575017e7c2843e39a96c7551c442221e2a7a276ab54"
+    }
+  ],
+  "third_party_payload_uploads": 0,
+  "production_placements": 0,
+  "limitations": [
+    "companions read state labels only; no accepted combat/hazard skin",
+    "no campaign placement or campaign save/reload acceptance",
+    "no mixed-world performance approval",
+    "no Windows, physical-controller or complete playthrough claim",
+    "initial sandbox launches failed before scene startup; native runs required app access",
+    "initial enemy probe observed only awakening/patrol; test player approach was corrected without changing behavior/timing"
+  ]
+}

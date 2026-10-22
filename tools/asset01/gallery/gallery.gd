@@ -33,14 +33,27 @@ var captures: Array = []
 var capture_plan: Array = []
 var telemetry: Array = []
 func _ready():
+	var requested_selection = ""
+	var requested_region = -1
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--stage="): stage = arg.trim_prefix("--stage=")
 		if arg.begins_with("--capture="): capture_root = arg.trim_prefix("--capture="); native_capture = true
+		if arg.begins_with("--selection="): requested_selection = arg.trim_prefix("--selection=")
+		if arg.begins_with("--region="): requested_region = int(arg.trim_prefix("--region="))
 	if stage.is_empty():
 		push_error("Pass -- --stage=/absolute/asset01-staging"); return
 	var parsed = JSON.parse_string(FileAccess.get_file_as_string(stage.path_join("gallery.json")))
 	if not parsed is Dictionary or not parsed.get("packs") is Array: push_error("Invalid intake manifest"); return
 	packs = parsed.packs
+	if not requested_selection.is_empty():
+		var found = false
+		for pi in packs.size():
+			for si in packs[pi].sequences.size():
+				if packs[pi].sequences[si].id == requested_selection:
+					pack_index = pi; sequence_index = si; found = true
+		if not found or requested_region < -1 or requested_region >= selection().get("regions", []).size():
+			push_error("Invalid curated selection or region"); get_tree().quit(1); return
+		region_index = requested_region
 	# Read approved idle artwork without import or modifying it. Same runtime frame/scale.
 	var path = ProjectSettings.globalize_path("res://../../../assets/kaze/cleaned/kaze_idle_strip.png")
 	var image = Image.load_from_file(path)
