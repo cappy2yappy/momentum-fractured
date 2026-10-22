@@ -1,0 +1,61 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: steam deterministic 30 Hz
+PASS: steam deterministic 60 Hz
+PASS: steam deterministic 120 Hz
+PASS: steam deterministic 144 Hz
+PASS: electric deterministic 30 Hz
+PASS: electric deterministic 60 Hz
+PASS: electric deterministic 120 Hz
+PASS: electric deterministic 144 Hz
+PASS: collapse deterministic 30 Hz
+PASS: collapse deterministic 60 Hz
+PASS: collapse deterministic 120 Hz
+PASS: collapse deterministic 144 Hz
+PASS: warning begins exactly at idle boundary
+PASS: active begins exactly after warning
+PASS: recovery follows active
+PASS: disabled clock is safe and stopped
+PASS: enable restarts safe cycle
+PASS: disabled event survives JSON save restoration
+PASS: room-entry rule discards old phase and disable
+PASS: foreign save ID rejected
+PASS: invalid zero warning rejected
+PASS: safe spawn rests on permanent floor
+PASS: walk through safe approach
+PASS: sprint uses existing controller
+PASS: jump clears hazard-height zone
+PASS: dash preserves travel and immunity
+PASS: capsule outside damage boundary is safe
+PASS: capsule edge overlap takes damage
+PASS: continuous overlap respects i-frames
+PASS: warning never deals damage
+PASS: dash immunity applies to hazards
+PASS: disabled hazard cannot damage
+PASS: unmet existing prerequisite disables danger
+PASS: steam active catches walk once through i-frames
+PASS: steam active catches sprint once through i-frames
+PASS: steam safely crossed by jump
+PASS: steam safely crossed by dash
+PASS: electric active catches walk once through i-frames
+PASS: electric active catches sprint once through i-frames
+PASS: electric safely crossed by jump
+PASS: electric safely crossed by dash
+PASS: lethal hazard hit respawns at clear checkpoint
+PASS: death resets hazard cycle before control resumes
+PASS: collapse surface supports real player
+PASS: standing triggers predictable collapse warning
+PASS: collapse removes solid collision
+PASS: collapsed platform lands on safe escape floor
+PASS: occupied reset volume delays rematerialization
+PASS: clear reset restores collision
+PASS: existing grapple attaches to course anchor
+PASS: grapple swing remains clear of danger zone
+PASS: course writes isolated save
+PASS: load restores disable and safe checkpoint
+PASS: load resets active cycles with recovery immunity
+PASS: fresh room re-entry restores default enable state
+PASS: exit area remains safely standable
+HAZ01: 56 checks, 0 failures
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)

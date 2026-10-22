@@ -1,0 +1,30 @@
+[
+  {
+    "suite": "movement_momentum",
+    "exit": 0,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0
+  },
+  {
+    "suite": "save_compatibility",
+    "exit": 0,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0
+  },
+  {
+    "suite": "ld05_boundaries",
+    "exit": 0,
+    "passes": 172,
+    "failures": 0,
+    "script_errors": 0
+  },
+  {
+    "suite": "haz01_toolkit",
+    "exit": 0,
+    "passes": 56,
+    "failures": 0,
+    "script_errors": 0
+  }
+]
