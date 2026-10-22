@@ -1,0 +1,1681 @@
+[
+  {
+    "owner": "Agent A",
+    "branch": "codex/alpha07-animation",
+    "worktree": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation",
+    "base_sha": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+    "tested_local_sha": "378b86ca47130ede1663674d82f3cfe6bd00511f",
+    "tree_sha": "3e5a29b4cee0248ad1bf3ed2edd986125464cacd",
+    "draft_pr": 85,
+    "changed_files": [
+      {
+        "status": "A",
+        "path": "assets/art09_image4/MANIFEST.json"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_000.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_001.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_002.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_003.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_004.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_005.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_006.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_007.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_008.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_009.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_010.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_011.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_012.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_013.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_014.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_015.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_016.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_017.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_018.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_019.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_020.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_021.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_022.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_023.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_024.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_025.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_026.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_027.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_028.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_029.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_030.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_031.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_032.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_033.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_034.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_035.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_036.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_037.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_038.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_039.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_040.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_041.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_042.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_043.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_044.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_045.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_046.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_047.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_048.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_049.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_050.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_051.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_052.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_053.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_054.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_055.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_056.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_057.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_058.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_059.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_060.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_061.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_062.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_063.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_064.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_065.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_066.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_067.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_068.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_069.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_070.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_071.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_072.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_073.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_074.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_075.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_076.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_077.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_078.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_079.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_080.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_081.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_082.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_083.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_084.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_085.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_086.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_087.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_088.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_089.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_090.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_091.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_092.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_093.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_094.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_095.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_096.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_097.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_098.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_099.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_100.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_101.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_102.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_103.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_104.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_105.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_106.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_107.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_108.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_109.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_110.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_111.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_112.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_113.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_114.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_115.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_116.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_117.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_118.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_119.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_120.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_121.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_122.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_123.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_124.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_125.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_126.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_127.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_128.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_129.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_130.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_131.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_132.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_133.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_134.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_135.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_136.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_137.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_138.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_139.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_140.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_141.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_142.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_143.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_144.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_145.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_146.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_147.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_148.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_149.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_150.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_151.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_152.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_153.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_154.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_155.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_156.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_157.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_158.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_159.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_160.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_161.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_162.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_163.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_164.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_165.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_166.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_167.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_168.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/frames/pose_169.png"
+      },
+      {
+        "status": "A",
+        "path": "assets/art09_image4/sheet_keyed.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/inventory.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/qa/native-capture.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/qa/results.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/qa/sprite_integration.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/animation/qa/tr08_embodied_cinematics.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/catalog.html"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/components.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/hashes.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/baseline.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/integrity.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/native-capture.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/results.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/sprite_integration.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/study.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/art09-image4/qa/tr08_embodied_cinematics.log.txt"
+      },
+      {
+        "status": "A",
+        "path": "source_art/art09-image4/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "source_art/art09-image4/image4-original.png"
+      },
+      {
+        "status": "A",
+        "path": "tools/alpha07_animation/audit.py"
+      },
+      {
+        "status": "A",
+        "path": "tools/alpha07_animation/launch_existing_staircase.command"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/build_frames.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/demo.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/demo.tscn"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/extract.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/inspect.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/launch.command"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/test_study.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/art09_image4/verify.gd"
+      }
+    ],
+    "published_sha": "378b86ca47130ede1663674d82f3cfe6bd00511f",
+    "published_draft_url": "https://github.com/cappy2yappy/momentum-fractured/pull/85"
+  },
+  {
+    "owner": "Agent B",
+    "branch": "codex/alpha07-story-cinematics",
+    "worktree": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/narrative",
+    "base_sha": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+    "tested_local_sha": "835d01952bb523e552a762eac8d67c97ea868eef",
+    "tree_sha": "d71075f9a0e7a75d9282b9ade7496f3d77f0872e",
+    "draft_pr": 86,
+    "changed_files": [
+      {
+        "status": "A",
+        "path": "docs/story_cinematics/README.md"
+      },
+      {
+        "status": "A",
+        "path": "scripts/story/cutin_presenter.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_cinematics/capture.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_cinematics/runtime.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/story_cinematics/demo.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/story_cinematics/demo.tscn"
+      }
+    ],
+    "published_sha": "2d459743bce4a11a2d6bed1ae75d0c6d3adf3d5f",
+    "published_draft_url": "https://github.com/cappy2yappy/momentum-fractured/pull/86"
+  },
+  {
+    "owner": "Agent C",
+    "branch": "codex/alpha07-int01-remote-followup",
+    "worktree": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/int01-remote-followup",
+    "base_sha": "2fa6cd6a03de599b7f9098e8bf61f8d770784091",
+    "tested_local_sha": "a8993c544feaafc56f11fe24d1e55c40d602bf20",
+    "tree_sha": "0d07593f282dfd704d598b7bab1e12c7314e027f",
+    "draft_pr": 89,
+    "changed_files": [
+      {
+        "status": "A",
+        "path": "docs/int01/README.md"
+      },
+      {
+        "status": "M",
+        "path": "export_presets.cfg"
+      },
+      {
+        "status": "M",
+        "path": "scripts/story/inspection_panel.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/story/object_definition.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/story/story_director.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/world.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/capture.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/contracts.gd"
+      },
+      {
+        "status": "M",
+        "path": "tests/story_demo/demo.gd"
+      },
+      {
+        "status": "M",
+        "path": "tests/story_demo/smoke.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/smoke.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "tools/story/validate_data.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/story/verify_int01_preservation.py"
+      }
+    ],
+    "published_sha": "3dc433cd7b537391f218864abeb2398dc671ccb0",
+    "published_draft_url": "https://github.com/cappy2yappy/momentum-fractured/pull/89"
+  },
+  {
+    "owner": "Agent D",
+    "branch": "codex/alpha07-compliance",
+    "worktree": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/compliance",
+    "base_sha": "5265e6c6182d883432215f4e9beab50255e48b5e",
+    "tested_local_sha": "5172db6898f3efc35b74f3c134293049165b9bf7",
+    "tree_sha": "435118c6300803d001419fd783adda729505bd88",
+    "draft_pr": 87,
+    "changed_files": [
+      {
+        "status": "A",
+        "path": "docs/haz01/ALPHA07_COMPLIANCE.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/PM_HANDOFF.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_1.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_2.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_3.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/haz01_toolkit.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/ld05_boundaries.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/movement_momentum.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/preservation.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/results.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/save_compatibility.txt"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/collapse.tres"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/course.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/electric.tres"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/hazard.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/steam.tres"
+      },
+      {
+        "status": "M",
+        "path": "scripts/encounters/config.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/encounters/encounter.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/encounters/enemy.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/story_consumers.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/environmental_hazard.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/environmental_hazard.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_course.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_course.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_placement.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_placement.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/production_placement.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/story_hazard_adapter.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/en01/consumer_contract.gd"
+      },
+      {
+        "status": "M",
+        "path": "tests/en01/framework.gd"
+      },
+      {
+        "status": "M",
+        "path": "tests/en01/persistence.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/haz01_contract.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/haz01_toolkit.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/alpha07/capture_compliance.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/haz01/run_qa.py"
+      }
+    ],
+    "published_sha": "5172db6898f3efc35b74f3c134293049165b9bf7",
+    "published_draft_url": "https://github.com/cappy2yappy/momentum-fractured/pull/87"
+  },
+  {
+    "owner": "Agent E",
+    "branch": "codex/alpha07-integration-qa-authoritative",
+    "worktree": "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/integration-qa-authoritative",
+    "base_sha": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+    "tested_local_sha": "78d9736077ff16dd7c9cbeb7ae2c99cab1da212b",
+    "tree_sha": "410886581e5dd06fd5f31270cb398623c3ade15f",
+    "draft_pr": 90,
+    "changed_files": [
+      {
+        "status": "A",
+        "path": "data/story/objects.json"
+      },
+      {
+        "status": "A",
+        "path": "data/story/rules.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/REPORT.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/changed-files.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/adapter_ids-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/adapter_ids.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/approved_baseline.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/approved_combat_swing.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/baseline-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/combined-headless-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/combined-headless.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/combined-native-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/combined-native.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/consumer_contract-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/contracts.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/framework.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/haz01_contract.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/haz01_toolkit.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/movement_momentum.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/persistence.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/preservation-final.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/preservation-independent.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/preservation-original-guard.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/regressions.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/runtime.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/save_compatibility.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/sprite_integration.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/logs/tr08_canal_hang_regression.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/owner-resolution.patch"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/pins.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/alpha07/integration_qa/preservation.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/PM_HANDOFF.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ambush_approach.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ambush_dash.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ambush_telegraph.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/approved_baseline.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/approved_combat_swing.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/combined_approach.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/combined_dash.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/combined_overview.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/combined_telegraph.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/en01_framework.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/expansion_gates_save.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/gameplay_stabilization.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/guard_approach.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/guard_dash.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/guard_telegraph.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/integration_candidate.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/movement_momentum.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/native_framework.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/persistence.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/preservation.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/preserved_sha256.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ranged_approach.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ranged_jump_dodge.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/ranged_telegraph.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/results.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/save_compatibility.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/gameplay/en01/evidence/sprite_integration.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/PM_HANDOFF.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/.gdignore"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_1.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_2.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/course_3.png"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/haz01_toolkit.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/ld05_boundaries.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/movement_momentum.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/preservation.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/results.json"
+      },
+      {
+        "status": "A",
+        "path": "docs/haz01/evidence/save_compatibility.txt"
+      },
+      {
+        "status": "A",
+        "path": "docs/int01/PM_HANDOFF.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/int01/README.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/int01/SMOKE.log"
+      },
+      {
+        "status": "A",
+        "path": "docs/story_cinematics/README.md"
+      },
+      {
+        "status": "M",
+        "path": "export_presets.cfg"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/ambush.json"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/ambush.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/combined.json"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/combined.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/guard.json"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/guard.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/ranged.json"
+      },
+      {
+        "status": "A",
+        "path": "scenes/encounters/ranged.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/collapse.tres"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/course.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/electric.tres"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/hazard.tscn"
+      },
+      {
+        "status": "A",
+        "path": "scenes/haz01/steam.tres"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/config.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/config.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/demo.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/demo.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/encounter.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/encounter.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/enemy.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/enemy.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/projectile.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/projectile.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/encounters/story_consumers.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/environmental_hazard.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/environmental_hazard.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_course.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_course.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_placement.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/hazard_placement.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/production_placement.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/hazards/story_hazard_adapter.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/story/cutin_presenter.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/story/inspection_panel.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/story/object_definition.gd"
+      },
+      {
+        "status": "A",
+        "path": "scripts/story/story_director.gd"
+      },
+      {
+        "status": "M",
+        "path": "scripts/world.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/alpha07_qa/adapter_ids.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/alpha07_qa/combined.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/alpha07_qa/counting_world.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/alpha07_qa/preservation.py"
+      },
+      {
+        "status": "A",
+        "path": "tests/alpha07_qa/run_regressions.py"
+      },
+      {
+        "status": "A",
+        "path": "tests/en01/capture.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/en01/consumer_contract.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/en01/framework.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/en01/persistence.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/haz01_contract.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/haz01_toolkit.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_cinematics/capture.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_cinematics/runtime.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/capture.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/contracts.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/demo.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/demo.tscn"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/objects.json"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/rules.json"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/smoke.gd"
+      },
+      {
+        "status": "A",
+        "path": "tests/story_demo/smoke.gd.uid"
+      },
+      {
+        "status": "A",
+        "path": "tools/haz01/run_qa.py"
+      },
+      {
+        "status": "A",
+        "path": "tools/run_en01_qa.py"
+      },
+      {
+        "status": "A",
+        "path": "tools/story/validate_data.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/story/verify_int01_preservation.py"
+      },
+      {
+        "status": "A",
+        "path": "tools/story_cinematics/demo.gd"
+      },
+      {
+        "status": "A",
+        "path": "tools/story_cinematics/demo.tscn"
+      }
+    ],
+    "published_sha": "95fe0a3694dfa6fda01806c269f7ee9d7de0903c",
+    "published_draft_url": "https://github.com/cappy2yappy/momentum-fractured/pull/90",
+    "publication_scope": "Separate report/test-only draft; combined fixture source remains local",
+    "published_artifact_branch": "codex/alpha07-integration-readiness",
+    "runtime_source_sha": "892b1ea29ab459d6e6ece1edba0cb88d3ec24972",
+    "runtime_tree_sha": "bbd3c06f77c8672d1823f1a6b157923706eda457",
+    "published_artifact_tree_sha": "e7b739b5f9c93f6230fd8eb103030e1170b5b1fe",
+    "authoritative_report": "outputs/integration-qa-authoritative/REPORT.md"
+  }
+]

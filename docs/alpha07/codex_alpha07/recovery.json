@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-22",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "sources": [
+    {
+      "pr": 77,
+      "branch": "candidate/wave3-targeted-3",
+      "sha": "c2170032d08ea55268313e0020676c743251deab",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/77"
+    },
+    {
+      "pr": 78,
+      "branch": "tools/cin-tools-01-cutin-maker",
+      "sha": "af184380fb690f2c19bac69960b7aacce50f9ff2",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/78"
+    },
+    {
+      "pr": 80,
+      "branch": "docs/alpha07-production-plan",
+      "sha": "e56177538cece2c07dc2228692263ac4e77b0efd",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/80"
+    },
+    {
+      "pr": 81,
+      "branch": "narrative/st05-discoveries",
+      "sha": "1d157f4b7014ad1c05e231a8787594d57b5e33a3",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/81"
+    },
+    {
+      "pr": 82,
+      "branch": "feature/haz01-toolkit",
+      "sha": "33e70874cd938200f47bcabc1283c7581f17696b",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/82"
+    },
+    {
+      "pr": 83,
+      "branch": "feature/en01-alpha07-enemy-framework",
+      "sha": "5265e6c6182d883432215f4e9beab50255e48b5e",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/83"
+    },
+    {
+      "pr": 62,
+      "branch": "art/art08-embodied-cinematic-animation",
+      "sha": "98d639f32c34d862bbe6ecf1fb4a8c70e1736414",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/62"
+    },
+    {
+      "pr": 64,
+      "branch": "feature/tr08-fullscreen-embodied-cinematics",
+      "sha": "ed1875307e21f057add025ebebdec1e3f371e90f",
+      "state": "open draft",
+      "url": "https://github.com/cappy2yappy/momentum-fractured/pull/64"
+    }
+  ],
+  "protected_candidate3": "c2170032d08ea55268313e0020676c743251deab",
+  "int01_remote_branch": true,
+  "int01_recovered_local_source": "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/int01-interactables",
+  "image4": {
+    "source": "Creator attachment codex-clipboard-7615d26f-38e3-495b-bbf3-d2de333d720c.png",
+    "sha256": "0c9dc1eeab228a683d86cd156d02251400e7ebd7c1b1a46b1e56e8ae2d44bb09",
+    "dimensions": [
+      1143,
+      2048
+    ],
+    "all_pixels_opaque": true,
+    "original_preserved": "source_art/art09-image4/image4-original.png"
+  },
+  "int01_original_remote_sha": "2fa6cd6a03de599b7f9098e8bf61f8d770784091",
+  "int01_original_pr": 88,
+  "int01_followup_pr": 89
+}
