@@ -26,10 +26,15 @@ func request_cutin(id: String) -> void:
 
 func configure(w):
 	world = w
-	# Add only the new story inspection binding; legacy configure_input stays byte-locked.
-	var inspect_button = InputEventJoypadButton.new()
-	inspect_button.button_index = JOY_BUTTON_X
-	InputMap.action_add_event("interact", inspect_button)
+	# Explicit gamepad bindings avoid platform-dependent built-in UI defaults.
+	var buttons = {"interact": JOY_BUTTON_X, "ui_accept": JOY_BUTTON_A,
+		"ui_cancel": JOY_BUTTON_B, "ui_left": JOY_BUTTON_DPAD_LEFT,
+		"ui_right": JOY_BUTTON_DPAD_RIGHT, "ui_up": JOY_BUTTON_DPAD_UP,
+		"ui_down": JOY_BUTTON_DPAD_DOWN}
+	for action in buttons:
+		var button = InputEventJoypadButton.new()
+		button.button_index = buttons[action]
+		InputMap.action_add_event(action, button)
 	panel = InspectionPanel.new()
 	world.add_child(panel)
 	load_data("res://data/story/objects.json", "res://data/story/rules.json")

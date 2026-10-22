@@ -6,8 +6,8 @@ func check(value, label):
 	print(("PASS " if value else "FAIL ") + label)
 	if not value: failures += 1
 func key_release(action):
-	var event = InputEventAction.new()
-	event.action = action
+	var event = InputEventJoypadButton.new()
+	event.button_index = JOY_BUTTON_A if action == "ui_accept" else JOY_BUTTON_B
 	event.pressed = false
 	w.story.panel._input(event)
 func run():
@@ -20,6 +20,18 @@ func run():
 	var story = w.story
 	check(story.Definition.valid_id("evt/int01/nested_event"), "slash separated IDs supported")
 	check(not story.set_flag("junction_return"), "legacy flag writer rejected")
+	var consumed: Array = []
+	check(story.register_effect_consumer("spawn_encounter", "int01_probe", func(context): consumed.append(context.get("probe"))), "declared encounter consumer registered")
+	check(not story.register_effect_consumer("spawn_encounter", "int01_probe", func(_c): pass), "duplicate effect ownership rejected")
+	var consumer_rules = {"contract":1,"rules":[{"trigger":"evt/int01_consumer", "effects":[{"kind":"spawn_encounter","id":"int01_probe"}]}]}
+	check(story.Definition.validate_rules(consumer_rules, story.effect_consumers).is_empty(), "declared consumer rule accepted")
+	check(not story.Definition.validate_rules(consumer_rules).is_empty(), "unknown consumer rejected before load")
+	story.rules = consumer_rules.rules
+	w.transition = 0.5; story.report("evt/int01_consumer", {"probe":"deferred"})
+	check(consumed.is_empty(), "consumer waits through transition")
+	w.transition = 0; story.update(w,0)
+	check(consumed == ["deferred"], "consumer receives event context once after control restoration")
+	story.load_data("res://tests/story_demo/objects.json", "res://tests/story_demo/rules.json")
 	var controls = InputMap.action_get_events("interact")
 	check(controls.any(func(e): return e is InputEventJoypadButton and e.button_index == JOY_BUTTON_X), "gamepad X interaction registered")
 	w.player.position = Vector2(700,1300)
@@ -60,8 +72,9 @@ func run():
 	check(story.has("trap/int01_power") and story.has("disc/r0_int01_switch"), "disk reload restores discovery and activation")
 	check(not story.interact(w), "once activation remains unavailable after disk reload")
 	var before = FileAccess.get_file_as_bytes(w.save_path)
+	var save_attempts = w.save_attempts
 	check(not story.set_flag("trap/int01_power"), "repeated flag is idempotent")
-	check(before == FileAccess.get_file_as_bytes(w.save_path), "repeated flag does not rewrite save")
+	check(before == FileAccess.get_file_as_bytes(w.save_path) and w.save_attempts == save_attempts, "repeated flag does not rewrite save")
 	w.transition = 0.5
 	story.set_flag("evt/int01_save_deferred")
 	check(before == FileAccess.get_file_as_bytes(w.save_path), "no disk write during transition")
@@ -77,14 +90,17 @@ func run():
 	w.transition = 0; story.update(w,0)
 	check(w.cleared_encounters.get("int01_managed_probe",false), "managed encounter persists after enemy is freed")
 	before = FileAccess.get_file_as_bytes(w.save_path)
+	save_attempts = w.save_attempts
 	story.record_encounter("int01_managed_probe")
-	check(before == FileAccess.get_file_as_bytes(w.save_path), "managed encounter duplicate does not rewrite disk")
+	check(before == FileAccess.get_file_as_bytes(w.save_path) and w.save_attempts == save_attempts, "managed encounter duplicate does not rewrite disk")
 	enemy = Node2D.new()
 	enemy.set_meta("persistent_id", "int01_legacy_probe")
 	w.on_enemy_defeated(enemy, false, false)
 	check(w.cleared_encounters.get("int01_legacy_probe",false), "legacy encounter immediate persistence preserved")
 	enemy.free()
 	w.test_mode = true
+	w.request_room(1)
+	check(w.room == 0 and w.pending_room < 0, "isolated demonstration cannot enter campaign")
 	var row = story.objects[0].duplicate(true)
 	row.at = [220,1300]
 	check(not story.safe_placement(row), "checkpoint overlap rejected")

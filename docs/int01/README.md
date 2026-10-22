@@ -25,3 +25,7 @@ Godot 4.6.1: open this branch's project.godot, then run tests/story_demo/demo.ts
 From Terminal: `/Applications/Godot.app/Contents/MacOS/Godot --path "$PWD" --scene res://tests/story_demo/demo.tscn --log-file /tmp/int01-demo.log -- --test`. `--test` suppresses disk writes. Omit it only to test the separate laboratory save.
 
 Tests: tests/story_demo/smoke.gd, contracts.gd; tools/story/validate_data.gd; existing gameplay suites. Native capture.gd writes actual OpenGL before-interaction/inspection/activation states. Those state captures are not a claim of a historical implementation before/after comparison. The panel is static and reduced-motion safe. New story content and production placement require separate creator approval.
+
+## Publication hold
+
+The creator clarified that the original INT-01 agent will publish the existing branch. This continuation is local only under codex/alpha07-int01-followup. No remote writes or PR creation occurred. Await and inspect the original published SHA before reconciling this reviewed follow-up patch. All integration evidence is provisional.

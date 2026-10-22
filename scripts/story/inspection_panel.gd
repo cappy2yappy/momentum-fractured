@@ -56,6 +56,7 @@ func _ready():
 	visible = false
 
 func inspect(w, row: Dictionary):
+	if opened: close()
 	world = w
 	pages = row.get("pages", []).duplicate()
 	if pages.is_empty(): pages = [row.get("description", "No readable content is available.")]
