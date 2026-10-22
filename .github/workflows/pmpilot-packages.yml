@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       variants:
-        description: 'Comma list of pins.json variants (baseline-pr39, pr51-control, transitions, geometry, art, combined)'
+        description: 'Comma list of pins.json variants (baseline-pr39, pr51-control, transitions, geometry, art, combined, w3-control, w3-transition, w3-level, w3-art, w3-combined)'
         required: true
         default: 'baseline-pr39'
       purpose:
@@ -29,7 +29,7 @@ on:
         type: boolean
         default: false
   pull_request:
-    branches: [fix/tr06-automatic-passage]
+    branches: [fix/tr06-automatic-passage, ci/pm-pilot-comparisons]
     paths:
       - 'tools/pmpilot/**'
       - '!tools/pmpilot/PROVENANCE.json'
@@ -129,6 +129,8 @@ jobs:
             game-source/build/pmpilot/${{ matrix.variant }}/MANIFEST.json
             game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
             game-source/build/pmpilot/${{ matrix.variant }}/SHA256SUMS.txt
+            game-source/build/pmpilot/${{ matrix.variant }}/INVENTORY.json
+            game-source/build/pmpilot/${{ matrix.variant }}/INVENTORY.md
           if-no-files-found: error
           retention-days: 30
       - uses: actions/upload-artifact@v4
@@ -192,6 +194,8 @@ jobs:
             game-source/build/pmpilot/${{ matrix.variant }}/MANIFEST.json
             game-source/build/pmpilot/${{ matrix.variant }}/QA_RESULTS.json
             game-source/build/pmpilot/${{ matrix.variant }}/SHA256SUMS.txt
+            game-source/build/pmpilot/${{ matrix.variant }}/INVENTORY.json
+            game-source/build/pmpilot/${{ matrix.variant }}/INVENTORY.md
           if-no-files-found: error
           retention-days: 30
       - uses: actions/upload-artifact@v4

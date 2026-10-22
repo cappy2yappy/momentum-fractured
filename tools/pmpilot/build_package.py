@@ -18,6 +18,7 @@ import argparse, datetime, fnmatch, hashlib, importlib.util, json, os, platform,
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import pins as pinlib  # noqa: E402
+import w3_inventory  # noqa: E402
 
 VERSION = '4.6.1.stable.official.14d19694e'
 SAVE_NAME = 'silent_district_alpha_v3.json'  # ordinary save identity (scripts/world.gd)
@@ -112,6 +113,72 @@ def launcher_text(host, exe_name, variant, demo, seeded):
             'exec "$HERE/' + exe_name + '/Contents/MacOS/EXECUTABLE" "$@" -- ' + flags + ' "--tr05-save=$HERE/profiles/' + profile_name + '"\n')
 
 
+def resolve_demos(demos_doc, spec):
+    """Launcher set for a variant: 'default' (pilot), a named list in demos.json ('w3'), or an inline list.
+    Per-variant flags: `flags` apply everywhere, `flags_no_tr08` are used instead when the variant has no TR-08
+    (spec tr08 false), so the control shows the previous staged stair rather than silently showing nothing."""
+    sel = spec.get('demos', 'default')
+    base = sel if isinstance(sel, list) else demos_doc[sel]
+    has_tr08 = spec.get('tr08')
+    out = []
+    for demo in base:
+        d = dict(demo)
+        if has_tr08 is False and 'flags_no_tr08' in d:
+            d['flags'] = list(d['flags_no_tr08'])
+        out.append(d)
+    return out
+
+
+def wave3_readme(spec, inv, demos):
+    L = ['\n==== WAVE 3 PACKAGE NOTES ====\n',
+         'Validation level: ' + w3_inventory.VALIDATION_STATEMENT + '\n',
+         'NATIVE GRAPHICAL VALIDATION: NOT PERFORMED by the build. Export success is not visual approval.\n']
+    art = inv['art08']
+    if art['present']:
+        m = art['manifest']
+        L.append(w3_inventory.NOT_APPROVED_SENTENCE + '\n'
+                 'The ART-08 clips are labelled in INVENTORY.md: %s. "candidate" means a real multi-frame animation whose creator visual acceptance is still pending; '
+                 '"stand-in" is usable but not final art; "unfinished" means no frames exist. Held poses, scaling, bobbing and wipes are not animation.\n'
+                 'Clips shipped: %d entries, %d distinct PNG files. Whether this build PLAYS them: %s\n' % (
+                     m['label_counts'], m['clip_count'], m['distinct_png_files'],
+                     'game code references assets/art08' if art['code_references']['art08_path_mentioned_in_scripts'] else
+                     'no. The strips are packaged but nothing in this variant draws them.'))
+    else:
+        L.append('This build contains no ART-08 clips. ' + w3_inventory.NOT_APPROVED_SENTENCE + '\n')
+    L.append('ART-07 (PR #53) is excluded from source, pack and package and the build fails if it is present.\n')
+    if inv['ld05']:
+        sw = inv['ld05']['switches']
+        L.append('LD-05 switches: roof course default %s (original rooms R0 to R7 default %s). Launch argument %s turns the roof course off. See GEOMETRY_TEST.txt.\n' % (
+            sw['ROOF_ENABLED'], sw['ORIGINAL_ROOMS_ENABLED'], ', '.join(sw['command_line_flags']) or '(none)'))
+    L.append('Launchers and their exact arguments:')
+    for d in demos:
+        L.append('  Play-%s: %s [args: %s]%s' % (d['name'], d.get('describe', ''), ' '.join(d.get('flags', [])) or 'none',
+                                              ' (PROVISIONAL)' if d.get('status') == 'provisional' else ''))
+    L.append('')
+    return '\n'.join(L)
+
+
+def geometry_text(inv):
+    ra = inv['ld05']['room_audit']
+    L = ['LD-05 GEOMETRY TEST (variant ' + inv['variant'] + ', source ' + inv['source_head'] + ')', '',
+         'Launch Play-Geometry-Test (roof course on) and Play-Geometry-OpenTop (roof course off) to compare. All 21 rooms are already on your map.',
+         'Intent: the level should guide progression and not allow unintended areas. Try to wall-jump, double-jump and dash out of the top and sides of each room.',
+         'Judge by feel: scripted probes cannot decide whether a space is acceptable. Known residual items are listed in docs/ld05/ROOM_AUDIT.md (not shipped).', '',
+         'Every room (0 to %d) has the roof course when it is on. Rooms with a specific non-roof fix:' % (ra['rooms'] - 1)]
+    for r in ra['rooms_with_fixes']:
+        L.append('  R%d %s: %s' % (r['room'], r['name'], ', '.join(r['fixed_findings'])))
+    L += ['', 'Rooms with before/after captures in the LD-05 evidence: R1, R6, R8, R9, R13 (footing, gatehouse top, right wall, trusses, Canal door unchanged), R14, R15, R16, R17, R19.',
+          'Totals from the LD-05 audit (scripted, one bot per probe, not exhaustive): ' + json.dumps(ra.get('totals')), '']
+    return '\n'.join(L)
+
+
+def first_existing(root, spec_value):
+    for rel in ([spec_value] if isinstance(spec_value, str) else spec_value):
+        if (root / rel).is_file():
+            return rel
+    return None
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--godot', required=True)
@@ -129,7 +196,7 @@ def main():
     assert not problems, problems
     spec = pins['variants'][a.variant]
     demos_doc = json.loads((HERE / 'demos.json').read_text(encoding='utf-8'))
-    demos = demos_doc['default'] if spec.get('demos', 'default') == 'default' else spec['demos']
+    demos = resolve_demos(demos_doc, spec)
     root = Path(os.environ['PMPILOT_SOURCE_ROOT']).resolve()
     sysname = platform.system()
     host = {'Windows': 'windows', 'Darwin': 'macos', 'Linux': 'linux'}[sysname]
@@ -157,6 +224,18 @@ def main():
         assert tree == spec['expected_tree']
     assert not git(root, 'status', '--porcelain', '--untracked-files=no').strip(), 'Source must start clean'
     assert subprocess.check_output([a.godot, '--version'], text=True).strip() == VERSION
+    # Build-time packaging exclusions: a .gdignore in a source-art folder keeps it out of the project resource set (and so out of
+    # the pack). Untracked, not part of the pinned tree, recorded in the manifest. The owner should commit it.
+    overlays = []
+    for pat in spec.get('require_export_exclude', []):  # the export filter itself must cover it (committed in export_presets.cfg)
+        assert all(pat in line for line in (root / 'export_presets.cfg').read_text(encoding='utf-8').splitlines() if line.startswith('exclude_filter=')), 'export_presets.cfg exclude_filter must contain ' + pat
+    for rel in spec.get('require_gdignore', []):  # the owner committed it: assert, never create
+        tracked = git(root, 'ls-files', '--', rel + '/.gdignore').decode().strip()
+        assert tracked == rel + '/.gdignore', 'Pinned source must TRACK %s/.gdignore (no build-time overlay in this mode)' % rel
+    for rel in spec.get('build_gdignore', []):
+        if (root / rel).is_dir() and not (root / rel / '.gdignore').exists():
+            (root / rel / '.gdignore').write_text('', encoding='utf-8')
+            overlays.append(rel + '/.gdignore')
     before = snapshot(root)
     out = root / 'build/pmpilot' / a.variant
     if out.exists():
@@ -202,7 +281,8 @@ def main():
         save_results()
         print(label, 'PASS' if ok else 'FAIL', row['passes'], flush=True)
         if gate:
-            assert ok, text[-5000:]
+            fails = [l for l in text.splitlines() if l.startswith('FAIL')]
+            assert ok, 'FAIL-LINES(%d): %s || TAIL: %s' % (len(fails), ' // '.join(fails[:40]), text[-1500:])
         return text, row
 
     def save_results():
@@ -273,7 +353,7 @@ def main():
             if reg['tr06'].get('passes') is not None:
                 assert tr06['passes'] == reg['tr06']['passes'], tr06
         for extra in reg.get('extra', []):
-            argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant) for x in extra['argv']]
+            argv = [x.format(godot=a.godot, root=root, python=sys.executable, harness=harness, variant=a.variant, head=head) for x in extra['argv']]
             _, qrow = run('extra-' + extra['name'], argv, timeout=extra.get('timeout', 900), regex=extra.get('pass_regex'), gate=not extra.get('informational'))
             if extra.get('informational') and not qrow['passed']:
                 findings.append('informational command %s did not pass (exit %s); recorded, not gating (QA pending)' % (extra['name'], qrow['exit']))
@@ -335,6 +415,7 @@ def main():
     records_a, scripts = pack_records(packed.read_bytes(), root)
     records_b, _ = pack_records(repeat.read_bytes() if target == 'windows' else repeat_pack, root)
     differences = [n for n in sorted(records_a.keys() | records_b.keys()) if records_a.get(n) != records_b.get(n)]
+    pack_file_list_sha256 = digest('\n'.join(sorted(records_a)).encode())
     reproducibility = {'export_a_sha256': digest(raw.read_bytes()), 'export_b_sha256': digest(repeat.read_bytes()),
                        'export_bytes_identical': raw.read_bytes() == repeat.read_bytes(), 'pck_a_sha256': digest(first_pack),
                        'pck_b_sha256': digest(repeat_pack), 'pck_bytes_identical': first_pack == repeat_pack,
@@ -402,11 +483,11 @@ def main():
     fixture_checks = []
     for demo in demos:
         if demo.get('seed') is not None and demo.get('fixture_check'):
-            candidate_fixture = root / demo['fixture_check']
-            if candidate_fixture.is_file():
-                same = json.loads(candidate_fixture.read_text(encoding='utf-8')) == seed_for(demo['seed'], demos_doc['save_version'])
-                fixture_checks.append(dict(demo=demo['name'], fixture=demo['fixture_check'], equals_generated_seed=same))
-                assert same, 'Generated seed for %s differs from the candidate fixture %s' % (demo['name'], demo['fixture_check'])
+            found = first_existing(root, demo['fixture_check'])
+            if found:
+                same = json.loads((root / found).read_text(encoding='utf-8')) == seed_for(demo['seed'], demos_doc['save_version'])
+                fixture_checks.append(dict(demo=demo['name'], fixture=found, equals_generated_seed=same))
+                assert same, 'Generated seed for %s differs from the candidate fixture %s' % (demo['name'], found)
             else:
                 fixture_checks.append(dict(demo=demo['name'], fixture=demo['fixture_check'], equals_generated_seed=None, note='fixture not present in this source'))
     (evidence / 'FIXTURE_CHECKS.json').write_text(json.dumps(fixture_checks, indent=2) + '\n')
@@ -423,6 +504,27 @@ def main():
             launcher.chmod(0o755)
         launcher_names.append('Play-' + demo['name'])
     provisional = [d['name'] for d in demos if d.get('status') == 'provisional']
+    inventory = None
+    wave3_text = ''
+    if spec.get('wave3'):
+        inventory = w3_inventory.build(
+            root, a.variant, head, tree, spec, pack_records=records_a, purpose=a.purpose, export_ok=True,
+            launchers=[dict(name='Play-' + d['name'], flags=d.get('flags', []), describe=d.get('describe', ''), seeded=d.get('seed') is not None,
+                            status=d.get('status', 'confirmed')) for d in demos])
+        if a.graphical:
+            inventory['validation']['native_graphical_validation'] = 'software-GL automated fixture only; not a native desktop playtest'
+        (evidence / 'INVENTORY.json').write_text(json.dumps(inventory, indent=2) + '\n', encoding='utf-8')
+        assert not inventory['problems'], inventory['problems']
+        for dest in (stage, out):
+            (dest / 'INVENTORY.json').write_text(json.dumps(inventory, indent=2) + '\n', encoding='utf-8')
+            (dest / 'INVENTORY.md').write_text(w3_inventory.to_markdown(inventory), encoding='utf-8')
+        wave3_text = wave3_readme(spec, inventory, demos)
+        if spec.get('creator_notes_file'):
+            notes_text = (HERE.parent.parent / spec['creator_notes_file']).read_text(encoding='utf-8')
+            (stage / 'CREATOR_TEST_NOTES.txt').write_text(notes_text + '\nSource commit: ' + head + '\nSource tree: ' + tree + '\n', encoding='utf-8')
+            wave3_text += '\nKNOWN OPEN ITEMS (not waived):\n  - ' + '\n  - '.join(spec.get('known_acceptance_gaps', [])) + '\nSee CREATOR_TEST_NOTES.txt.\n'
+        if inventory['ld05'] and inventory['ld05'].get('room_audit'):
+            (stage / 'GEOMETRY_TEST.txt').write_text(geometry_text(inventory), encoding='utf-8')
     (stage / 'README.txt').write_text(
         'KAZE PM PILOT / ' + a.variant.upper() + ' / INTERNAL PLAYTEST / NO PRODUCTION RELEASE\n'
         'Purpose: ' + a.purpose + '\nVariant: ' + spec['label'] + '\nSource head: ' + head + '\nSource tree: ' + tree + '\n\n'
@@ -436,7 +538,10 @@ def main():
         '\nA/D move, double-tap run, Space jump, E meaningful interactions, Q tether, Shift dash, J attack, F parry,\n'
         'R kunai, T element, M map, I kit, Escape pause, F6 reduced motion.\n'
         'Unsigned/unnotarized. Scripted checks do not certify a human campaign, gamepad, or sustained FPS.\n'
-        'See docs/pm_pilot/build/README.md in the repository for the tester checklist and coverage limits.\n', encoding='utf-8')
+        'See docs/wave3/build/README.md in the repository for the tester checklist and coverage limits.\n' + wave3_text, encoding='utf-8')
+    if spec.get('wave3'):
+        readme = (stage / 'README.txt').read_text(encoding='utf-8')
+        assert w3_inventory.NOT_APPROVED_SENTENCE in readme and 'NATIVE GRAPHICAL VALIDATION' in readme and 'ART-07' in readme
     archive = out / (name + '-' + target + '-' + head[:8] + '.zip')
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for f in sorted(stage.rglob('*')):
@@ -499,7 +604,7 @@ def main():
     env = profile('packaged')
     env.update(BUILD06_PACK=str(export_pack), BUILD06_CAPTURE_DIR=str(evidence / 'native-captures'), BUILD06_GRAPHICAL='1' if a.graphical else '0')
     run('native-exported-input', [a.godot] + ([] if a.graphical else ['--headless']) + ['--path', root, '--fixed-fps', '60', '--script', HERE / 'packaged_native.gd', '--', '--test'],
-        env, 300, regex=reg['packaged_native_regex'])
+        env, 300, regex=reg['packaged_native_regex'])  # BLOCKING for every variant
     for suite in ['intentional_space', 'audit_intentional_space', 'movement_momentum', 'save_compatibility', 'expansion_gates_save', 'skyworks_progression']:
         method = '_run' if suite in ['movement_momentum', 'save_compatibility', 'skyworks_progression'] else 'run'
         wrapper = out / ('packaged-' + suite + '.gd')
@@ -539,6 +644,15 @@ def main():
         exported_assertions=sum(x['passes'] for x in rows if x['test'].startswith(('native-exported', 'exported-'))),
         source_files_unchanged=len(before), native_coverage=coverage, not_executed=notes, findings=findings, signing='unsigned/unnotarized',
         art07_excluded=True, pycache_and_source_art_excluded=True, qa_status=spec.get('qa_status', 'n/a'), policy=policy,
+        validation_levels=dict(
+            export_success=True,
+            native_graphical_validation=inventory['validation']['native_graphical_validation'] if inventory else 'NOT PERFORMED',
+            hosted_run_headless=native and not a.graphical, statement=w3_inventory.VALIDATION_STATEMENT),
+        inventory_sha256=digest(json.dumps(inventory, sort_keys=True).encode()) if inventory else None,
+        art08_label_counts=(inventory['art08']['manifest'] or {}).get('label_counts') if inventory else None,
+        art08_creator_approved_clips=0 if inventory else None,
+        build_overlays=overlays, pack_file_list_sha256=pack_file_list_sha256, known_acceptance_gaps=spec.get('known_acceptance_gaps'),
+        launcher_args={'Play-' + d['name']: d.get('flags', []) for d in demos},
         limitations=['No hands-on human campaign', 'No physical gamepad', 'No sustained FPS',
                      'Hosted runs are headless; graphical coverage requires a desktop host',
                      'macOS Universal contains arm64 and x86_64; hosted macOS-15-intel executes x86_64 only'])
@@ -548,12 +662,43 @@ def main():
         shutil.copy2(os.environ['PMPILOT_INSTALL'], evidence / 'INSTALL.json')
     save_results()
     print(json.dumps({k: v for k, v in manifest.items() if k not in ('members', 'policy', 'changed_files')}), flush=True)
+    emit_facts(manifest, inventory, rows, pins['variants'][a.variant], launcher_checks)
+
+
+def emit_facts(manifest, inventory, rows, spec, launcher_checks):
+    """Echo the key integrity facts into check-run annotations, which are readable through the REST API when artifacts and logs are not.
+    GitHub keeps at most 10 notices per step; this emits 4 (plus the resource-hash notice)."""
+    if not os.environ.get('GITHUB_ACTIONS'):
+        return
+    v = manifest['variant']
+    annotate('notice', 'pmpilot facts identity %s' % v, json.dumps(dict(
+        variant=v, target=manifest['target'], source_head=manifest['source_head'], source_tree=manifest['source_tree'], pinned_commit=spec.get('commit'),
+        head_equals_pin=manifest['source_head'] == spec.get('commit'), expected_tree=spec.get('expected_tree'), tree_equals_expected=(manifest['source_tree'] == spec['expected_tree']) if spec.get('expected_tree') else None,
+        controls_commit=manifest['controls_commit'], run_url=manifest['run_url'], archive=manifest['archive'], archive_sha256_inner=manifest['archive_sha256'],
+        archive_bytes=manifest['archive_bytes'], pck_sha256=manifest['pck_sha256'], pck_entries=manifest['pck_entries'],
+        pack_file_list_sha256=manifest['pack_file_list_sha256'], canonical_resource_sha256=manifest['reproducibility']['canonical_resource_sha256'],
+        export_bytes_identical=manifest['reproducibility']['export_bytes_identical'], resource_payloads_identical=manifest['reproducibility']['resource_payloads_identical'],
+        members=len(manifest['members']), compare_base=manifest['compare_base'], changed_files=len(manifest['changed_files'])), sort_keys=True))
+    checks = [dict(t=r['test'], ok=r['passed'], passes=r['passes'], exit=r['exit'], err=len(r['errors'])) for r in rows]
+    annotate('notice', 'pmpilot facts checks %s' % v, json.dumps(dict(
+        variant=v, complete_checks=manifest['complete_checks'], checks=checks, findings=manifest['findings'], not_executed=manifest['not_executed'],
+        build_overlays=manifest['build_overlays'], known_acceptance_gaps=manifest.get('known_acceptance_gaps'), launcher_isolation=[(l['launcher'], l['isolated']) for l in launcher_checks],
+        source_suites=manifest['source_suites'], source_assertions=manifest['source_assertions'], exported_assertions=manifest['exported_assertions'],
+        validation=manifest['validation_levels']['native_graphical_validation'], export_success=manifest['validation_levels']['export_success']), sort_keys=True))
+    if inventory:
+        clips = [[c['name'], c['provenance_label'], c['sha256'], c['alias_of'], c['in_exported_pack']] for c in (inventory['art08']['clips'] or [])]
+        annotate('notice', 'pmpilot facts inventory %s' % v, json.dumps(dict(
+            variant=v, art08_present=inventory['art08']['present'], art08_manifest_sha256=(inventory['art08']['manifest'] or {}).get('manifest_sha256'),
+            art08_label_counts=(inventory['art08']['manifest'] or {}).get('label_counts'), art08_creator_approved=0, clips=clips,
+            art07_excluded=inventory['art07']['excluded'], ld05=(inventory['ld05'] or {}).get('switches'), tr08_present=inventory['tr08']['tr08_present'],
+            inventory_problems=inventory['problems'], inventory_sha256=manifest['inventory_sha256']), sort_keys=True))
+    annotate('notice', 'pmpilot facts launchers %s' % v, json.dumps(manifest['launcher_args'], sort_keys=True))
 
 
 def annotate(level, title, message):
     """GitHub workflow command: surfaces in the check-run annotations API even when job logs are not readable."""
     text = message.replace('%', '%25').replace('\r', '').replace('\n', '%0A')
-    print('::%s title=%s::%s' % (level, title, text[:8000]), flush=True)
+    print('::%s title=%s::%s' % (level, title, text[:60000]), flush=True)
 
 
 if __name__ == '__main__':
