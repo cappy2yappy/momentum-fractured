@@ -1,0 +1,5 @@
+{
+  "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\nOpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4\n\n",
+  "sha256": "e82d6385a300391e9f35cb08ed75db0bdddcc2017b26ff7c323d8841bbf159c6",
+  "note": "Exact original stdout, JSON-escaped to preserve its trailing newlines"
+}

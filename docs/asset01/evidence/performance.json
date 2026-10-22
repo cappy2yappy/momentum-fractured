@@ -1,0 +1,359 @@
+{
+  "cache_budget_bytes": 50331648,
+  "cache_peak_bytes": 50331648,
+  "decode_usec": 2398231,
+  "decodes": 227,
+  "engine": "4.6.1-stable (official)",
+  "frame_dt_p50_ms": 8.33333333333333,
+  "frame_dt_p95_ms": 13.1443333333335,
+  "missing": [],
+  "preview_max_dimension": 768,
+  "renderer": "Apple M4",
+  "review_fps": 12.0,
+  "samples": [
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardIdle",
+      "region_index": -1,
+      "time": 0.229727,
+      "capture_filename": "01-bluewizard-animations-01.png"
+    },
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardJump",
+      "region_index": -1,
+      "time": 0.70713,
+      "capture_filename": "02-bluewizard-animations-02.png"
+    },
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardJump/Dash2",
+      "region_index": -1,
+      "time": 1.357674,
+      "capture_filename": "03-bluewizard-animations-03.png"
+    },
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardJump/Dash3",
+      "region_index": -1,
+      "time": 2.002643,
+      "capture_filename": "04-bluewizard-animations-04.png"
+    },
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardJump/DashEffect",
+      "region_index": -1,
+      "time": 2.661813,
+      "capture_filename": "05-bluewizard-animations-05.png"
+    },
+    {
+      "pack": "BlueWizard Animations.zip",
+      "asset": "BlueWizard/2BlueWizardWalk",
+      "region_index": -1,
+      "time": 3.305509,
+      "capture_filename": "06-bluewizard-animations-06.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - BigRocks1.png",
+      "region_index": -1,
+      "time": 4.078029,
+      "capture_filename": "07-caveassetsmaaot-01.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - BigRocks1.png",
+      "region_index": 0,
+      "time": 4.639402,
+      "capture_filename": "08-caveassetsmaaot-01.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - Floor.png",
+      "region_index": -1,
+      "time": 5.350954,
+      "capture_filename": "09-caveassetsmaaot-02.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - Floor.png",
+      "region_index": 0,
+      "time": 5.92398,
+      "capture_filename": "10-caveassetsmaaot-02.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - Platforms.png",
+      "region_index": -1,
+      "time": 6.610465,
+      "capture_filename": "11-caveassetsmaaot-03.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - Platforms.png",
+      "region_index": 0,
+      "time": 7.272352,
+      "capture_filename": "12-caveassetsmaaot-03.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - RockCombinations1.png",
+      "region_index": -1,
+      "time": 7.947089,
+      "capture_filename": "13-caveassetsmaaot-04.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - RockCombinations1.png",
+      "region_index": 0,
+      "time": 8.543503,
+      "capture_filename": "14-caveassetsmaaot-04.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - SmallRocks.png",
+      "region_index": -1,
+      "time": 9.256771,
+      "capture_filename": "15-caveassetsmaaot-05.png"
+    },
+    {
+      "pack": "CaveAssetsMaaot.zip",
+      "asset": "Assets 1024 Cave/Cave - SmallRocks.png",
+      "region_index": 0,
+      "time": 9.809868,
+      "capture_filename": "16-caveassetsmaaot-05.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - BackgroundDecoration.png",
+      "region_index": -1,
+      "time": 10.866017,
+      "capture_filename": "17-mossy-assets-01.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - BackgroundDecoration.png",
+      "region_index": 0,
+      "time": 11.116451,
+      "capture_filename": "18-mossy-assets-01.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - Decorations&Hazards.png",
+      "region_index": -1,
+      "time": 12.072759,
+      "capture_filename": "19-mossy-assets-02.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - Decorations&Hazards.png",
+      "region_index": 0,
+      "time": 12.436349,
+      "capture_filename": "20-mossy-assets-02.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - FloatingPlatforms.png",
+      "region_index": -1,
+      "time": 13.174827,
+      "capture_filename": "21-mossy-assets-03.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - FloatingPlatforms.png",
+      "region_index": 0,
+      "time": 13.75972,
+      "capture_filename": "22-mossy-assets-03.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - Hanging Plants.png",
+      "region_index": -1,
+      "time": 14.468365,
+      "capture_filename": "23-mossy-assets-04.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - Hanging Plants.png",
+      "region_index": 0,
+      "time": 15.016858,
+      "capture_filename": "24-mossy-assets-04.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - MossyHills.png",
+      "region_index": -1,
+      "time": 15.763983,
+      "capture_filename": "25-mossy-assets-05.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - MossyHills.png",
+      "region_index": 0,
+      "time": 16.328186,
+      "capture_filename": "26-mossy-assets-05.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - TileSet.png",
+      "region_index": -1,
+      "time": 17.197395,
+      "capture_filename": "27-mossy-assets-06.png"
+    },
+    {
+      "pack": "Mossy Assets.zip",
+      "asset": "Mossy Tileset/Mossy - TileSet.png",
+      "region_index": 0,
+      "time": 17.647958,
+      "capture_filename": "28-mossy-assets-06.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/BlueFlower1",
+      "region_index": -1,
+      "time": 18.257694,
+      "capture_filename": "29-plant-animations-01.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/BlueFlower2",
+      "region_index": -1,
+      "time": 18.895363,
+      "capture_filename": "30-plant-animations-02.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 1",
+      "region_index": -1,
+      "time": 19.566048,
+      "capture_filename": "31-plant-animations-03.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 2",
+      "region_index": -1,
+      "time": 20.21145,
+      "capture_filename": "32-plant-animations-04.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 3",
+      "region_index": -1,
+      "time": 20.861614,
+      "capture_filename": "33-plant-animations-05.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 4",
+      "region_index": -1,
+      "time": 21.506663,
+      "capture_filename": "34-plant-animations-06.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 5",
+      "region_index": -1,
+      "time": 22.155907,
+      "capture_filename": "35-plant-animations-07.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 6",
+      "region_index": -1,
+      "time": 22.805889,
+      "capture_filename": "36-plant-animations-08.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 7",
+      "region_index": -1,
+      "time": 23.45314,
+      "capture_filename": "37-plant-animations-09.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant 8 Poison",
+      "region_index": -1,
+      "time": 24.141266,
+      "capture_filename": "38-plant-animations-10.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/Plant Wind 1",
+      "region_index": -1,
+      "time": 24.768288,
+      "capture_filename": "39-plant-animations-11.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/PlantJump",
+      "region_index": -1,
+      "time": 25.419854,
+      "capture_filename": "40-plant-animations-12.png"
+    },
+    {
+      "pack": "Plant Animations.zip",
+      "asset": "Plant Animations/PlantJump2",
+      "region_index": -1,
+      "time": 26.06961,
+      "capture_filename": "41-plant-animations-13.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Comp 1",
+      "region_index": -1,
+      "time": 26.703217,
+      "capture_filename": "42-plantsanimated-01.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Grass2",
+      "region_index": -1,
+      "time": 27.371777,
+      "capture_filename": "43-plantsanimated-02.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Grass3",
+      "region_index": -1,
+      "time": 28.006953,
+      "capture_filename": "44-plantsanimated-03.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Grass4",
+      "region_index": -1,
+      "time": 28.658063,
+      "capture_filename": "45-plantsanimated-04.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Grass5",
+      "region_index": -1,
+      "time": 29.344174,
+      "capture_filename": "46-plantsanimated-05.png"
+    },
+    {
+      "pack": "PlantsAnimated.zip",
+      "asset": "Vegetation/Group Plant",
+      "region_index": -1,
+      "time": 29.964712,
+      "capture_filename": "47-plantsanimated-06.png"
+    },
+    {
+      "pack": "Slimes.zip",
+      "asset": "SlimeOrange",
+      "region_index": -1,
+      "time": 30.631996,
+      "capture_filename": "48-slimes-01.png"
+    },
+    {
+      "pack": "Slimes.zip",
+      "asset": "SlimeGreen",
+      "region_index": -1,
+      "time": 31.295766,
+      "capture_filename": "49-slimes-02.png"
+    }
+  ],
+  "texture_memory_bytes": 78424821
+}

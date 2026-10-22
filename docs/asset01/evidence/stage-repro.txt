@@ -1,0 +1,1 @@
+Six exact archives staged. Next run scan_images and finalize_inventory; originals remain local.

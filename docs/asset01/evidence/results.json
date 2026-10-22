@@ -1,0 +1,12 @@
+{
+  "engine": "Godot 4.6.1 official",
+  "headless_checks": 2533,
+  "failed_assertions": 0,
+  "script_errors": 0,
+  "native_captures": 49,
+  "all_images_decoded": 1103,
+  "reproducible_file_hashes": 1106,
+  "baseline_failures": 0,
+  "performance_scope": "isolated downsampled gallery, not full-resolution gameplay",
+  "physical_platforms": "Apple M4 native OpenGL; other platforms untested"
+}
