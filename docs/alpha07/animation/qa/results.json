@@ -1,0 +1,48 @@
+[
+  {
+    "suite": "tr08_embodied_cinematics",
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 9.43,
+    "passes": 226,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation",
+      "--log-file",
+      "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation/build/cin_tools_01/qa/headless/tr08_embodied_cinematics.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/headless/tr08_embodied_cinematics.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "sprite_integration",
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 2.48,
+    "passes": 43,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation",
+      "--log-file",
+      "/Users/tonysantiago/Documents/Codex/2026-10-22/kaze-codex-alpha07-coordinated-gameplay-narrative/work/animation/build/cin_tools_01/qa/headless/sprite_integration.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/headless/sprite_integration.gd",
+      "--",
+      "--test"
+    ]
+  }
+]
