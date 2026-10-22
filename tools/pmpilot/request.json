@@ -1,7 +1,7 @@
 {
-  "variants": "w3-control",
-  "purpose": "preparation-smoke",
-  "platforms": "windows",
+  "variants": "w3-targeted",
+  "purpose": "comparison",
+  "platforms": "macos",
   "apple_silicon": false,
-  "quick": true
+  "quick": false
 }

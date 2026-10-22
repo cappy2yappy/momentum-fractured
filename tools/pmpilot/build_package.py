@@ -519,6 +519,10 @@ def main():
             (dest / 'INVENTORY.json').write_text(json.dumps(inventory, indent=2) + '\n', encoding='utf-8')
             (dest / 'INVENTORY.md').write_text(w3_inventory.to_markdown(inventory), encoding='utf-8')
         wave3_text = wave3_readme(spec, inventory, demos)
+        if spec.get('creator_notes_file'):
+            notes_text = (HERE.parent.parent / spec['creator_notes_file']).read_text(encoding='utf-8')
+            (stage / 'CREATOR_TEST_NOTES.txt').write_text(notes_text + '\nSource commit: ' + head + '\nSource tree: ' + tree + '\n', encoding='utf-8')
+            wave3_text += '\nKNOWN OPEN ITEMS (not waived):\n  - ' + '\n  - '.join(spec.get('known_acceptance_gaps', [])) + '\nSee CREATOR_TEST_NOTES.txt.\n'
         if inventory['ld05'] and inventory['ld05'].get('room_audit'):
             (stage / 'GEOMETRY_TEST.txt').write_text(geometry_text(inventory), encoding='utf-8')
     (stage / 'README.txt').write_text(
@@ -647,7 +651,7 @@ def main():
         inventory_sha256=digest(json.dumps(inventory, sort_keys=True).encode()) if inventory else None,
         art08_label_counts=(inventory['art08']['manifest'] or {}).get('label_counts') if inventory else None,
         art08_creator_approved_clips=0 if inventory else None,
-        build_overlays=overlays, pack_file_list_sha256=pack_file_list_sha256,
+        build_overlays=overlays, pack_file_list_sha256=pack_file_list_sha256, known_acceptance_gaps=spec.get('known_acceptance_gaps'),
         launcher_args={'Play-' + d['name']: d.get('flags', []) for d in demos},
         limitations=['No hands-on human campaign', 'No physical gamepad', 'No sustained FPS',
                      'Hosted runs are headless; graphical coverage requires a desktop host',
@@ -678,7 +682,7 @@ def emit_facts(manifest, inventory, rows, spec, launcher_checks):
     checks = [dict(t=r['test'], ok=r['passed'], passes=r['passes'], exit=r['exit'], err=len(r['errors'])) for r in rows]
     annotate('notice', 'pmpilot facts checks %s' % v, json.dumps(dict(
         variant=v, complete_checks=manifest['complete_checks'], checks=checks, findings=manifest['findings'], not_executed=manifest['not_executed'],
-        build_overlays=manifest['build_overlays'], launcher_isolation=[(l['launcher'], l['isolated']) for l in launcher_checks],
+        build_overlays=manifest['build_overlays'], known_acceptance_gaps=manifest.get('known_acceptance_gaps'), launcher_isolation=[(l['launcher'], l['isolated']) for l in launcher_checks],
         source_suites=manifest['source_suites'], source_assertions=manifest['source_assertions'], exported_assertions=manifest['exported_assertions'],
         validation=manifest['validation_levels']['native_graphical_validation'], export_success=manifest['validation_levels']['export_success']), sort_keys=True))
     if inventory:

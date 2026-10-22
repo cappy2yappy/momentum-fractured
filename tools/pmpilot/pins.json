@@ -761,12 +761,12 @@
       ]
     },
     "w3-targeted": {
-      "label": "Wave 3 targeted candidate (candidate/wave3-targeted, PR74: TR-08 eb3cc0fa + LD-05 ground pass + ART-08 v3 descent + committed source_art exclusion)",
+      "label": "Wave 3 targeted candidate 3 (candidate/wave3-targeted-3, PR77: TR-08 + LD-05/LD-07 ground + ART-08 + GN-06 dash fix), macOS creator-playtest package",
       "kind": "combined",
       "owner": "Coordinator",
-      "branch": "candidate/wave3-targeted",
-      "pull_request": 74,
-      "commit": "c2c3d958abe8c1eb77e2851d29c00544bef63e80",
+      "branch": "candidate/wave3-targeted-3",
+      "pull_request": 77,
+      "commit": "c2170032d08ea55268313e0020676c743251deab",
       "compare_base": "49ae3efe21dea6a9eba556ce2fbc8299b00412b9",
       "allowed_paths": [
         ".gitignore",
@@ -798,8 +798,10 @@
         "tests/capture_tr08.gd",
         "tests/capture_tr08.gd.uid",
         "tests/cinematic_transitions.gd",
+        "tests/gn06_dash_offsets.gd",
         "tests/ld05_boundaries.gd",
         "tests/ld05_boundaries.gd.uid",
+        "tests/ld07_*.gd",
         "tests/level_geometry.gd",
         "tests/native_cinematic_transitions.gd",
         "tests/pm_canal_left_passage.gd",
@@ -810,7 +812,9 @@
         "tests/world_expansion.gd",
         "tools/art08/**",
         "tools/ld05/**",
+        "tools/ld07/**",
         "tools/pm_pilot_art/__pycache__/*",
+        "tools/run_ld07_qa.py",
         "tools/tr08_*.py",
         "tools/verify_tr05_preservation.py"
       ],
@@ -832,22 +836,101 @@
         },
         "extra": [
           {
-            "name": "w3-qa",
+            "name": "tr08-embodied-cinematics",
             "argv": [
-              "{python}",
-              "{harness}/tools/pm_pilot_qa/run_w3.py",
-              "--sha",
-              "{head}",
-              "--label",
-              "build07-{variant}",
-              "--only",
-              "w3",
-              "--godot",
-              "{godot}"
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/tr08_embodied_cinematics.gd",
+              "--"
             ],
-            "timeout": 900,
-            "requires": "qa_harness",
-            "informational": true
+            "timeout": 1500,
+            "pass_regex": "TR08: [1-9]\\d* checks, 0 failure\\(s\\)"
+          },
+          {
+            "name": "tr08-stage-labels",
+            "argv": [
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/tr08_stage_labels.gd",
+              "--"
+            ],
+            "timeout": 1500,
+            "pass_regex": "TR08 LABELS: [1-9]\\d* checks, 0 failure\\(s\\)"
+          },
+          {
+            "name": "tr08-canal-hang-regression",
+            "argv": [
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/tr08_canal_hang_regression.gd",
+              "--",
+              "--tr05-save={root}/build/pmpilot-hang-profile.json"
+            ],
+            "timeout": 1500,
+            "pass_regex": "TR08 HANG REGRESSION: [1-9]\\d* checks, 0 failure\\(s\\)"
+          },
+          {
+            "name": "gn06-dash-offsets",
+            "argv": [
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/gn06_dash_offsets.gd",
+              "--"
+            ],
+            "timeout": 1500,
+            "pass_regex": "GN06 DASH OFFSETS: [1-9]\\d* checks, 0 failure\\(s\\)"
+          },
+          {
+            "name": "ld05-boundaries",
+            "argv": [
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/ld05_boundaries.gd",
+              "--"
+            ],
+            "timeout": 1500,
+            "pass_regex": "LD05 BOUNDARIES: [1-9]\\d* checks, 0 failure\\(s\\)"
+          },
+          {
+            "name": "ld07-ground",
+            "argv": [
+              "{godot}",
+              "--headless",
+              "--path",
+              "{root}",
+              "--fixed-fps",
+              "60",
+              "--script",
+              "res://tests/ld07_ground.gd",
+              "--"
+            ],
+            "timeout": 1500,
+            "pass_regex": "LD07 GROUND: [1-9]\\d* checks, 0 failure\\(s\\)"
           }
         ],
         "packaged_native_regex": "\\d+ checks, 0 failure\\(s\\)"
@@ -866,12 +949,23 @@
         "scripts/tr08_embodied_cinematics.gd"
       ],
       "qa_status": "pending",
-      "expected_tree": "8eb0bb92b34e0405ab9cf689e4652a5f57f3ca53",
+      "expected_tree": "56219e5bce3f2571ed8c2e26a08ffd23b6660787",
       "require_gdignore": [
         "source_art/art08"
       ],
       "require_export_exclude": [
         "source_art/*"
+      ],
+      "blocking_native_notes": "All six extra commands are BLOCKING (no informational flag); native-exported-input (native_cinematic_transitions through the exported pack) is blocking; ld07_dash_regression is the known GN-06 reproducer (expected RED by its own header) and ld07_before_reproduction is for the pre-repair 49ae3efe only, so neither is run.",
+      "creator_notes_file": "tools/pmpilot/creator_notes_targeted.txt",
+      "known_acceptance_gaps": [
+        "Stair letterbox 7.8 percent versus 2 percent QA gate (RED, accepted for test visibility, not waived)",
+        "R15 base-kit route comparison pending Level evidence (not a certified progression failure)",
+        "door_turn_to_side UNFINISHED, no PNG; door_turn_to_rear is a STAND-IN",
+        "Canal doorway world-camera checks informational",
+        "Roof-on and --ld05-open-top both available, neither approved",
+        "No Mac or Windows graphical validation, no full campaign",
+        "QA W6: 162 PASS / 8 FAIL / 6 SKIP reported by QA, not re-run by Build"
       ]
     }
   },

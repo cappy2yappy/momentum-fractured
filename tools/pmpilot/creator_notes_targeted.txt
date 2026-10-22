@@ -1,0 +1,30 @@
+KAZE WAVE 3 TARGETED CANDIDATE 3: CREATOR PLAYTEST NOTES (macOS)
+
+This is a creator-playtest package. It is NOT a green QA acceptance, a production release, a PR merge, roof-course approval or an animation approval.
+No ART-08 clip is creator-approved. Nothing here has been graphically validated on a Mac or Windows desktop; the build ran headless. Export success is not visual acceptance.
+
+WHAT TO PLAY (launchers in this folder, .command files; unsigned: right-click Open the first time)
+  Play-Stair-Fullscreen   R14 near the stair. Press E. Ascent to R17.
+  Play-Stair-Return       R17 near the stair. Press E. Descent to R14. Look at the corrected descent silhouette.
+  Play-Canal-Doorway      R13 shelf. Hold A, no E. Repeat the approach several times (walk, run, from different spots).
+  Play-Canal-Return       R0 at the Canal door. Press E. Previously rated "Perfect": movement and this passage must be unchanged.
+  Play-Geometry-Test      All rooms on the map, roof course ON. Try to leave intended space; check travel and recovery.
+  Play-Geometry-OpenTop   Same with --ld05-open-top (roof course OFF). Compare lower negative space and unintended solid ceilings.
+  Play-Reduced-Stair      Stair with reduced motion from launch (F6 toggles).
+  (also Play-Fresh and Play-Reduced-Canal)
+
+WHAT FEEDBACK IS NEEDED
+  Corrected descent silhouette; any frozen or stuck input at the stair or doorway; room labels; letterbox bars; the roof (on versus off).
+  Movement feel must be exactly as before.
+
+KNOWN RED, SKIPPED OR OPEN ITEMS (accepted for test-only visibility, NOT waived)
+  1. Stair letterbox measured 7.8 percent versus the 2 percent QA gate, including dark bars. The creator decides aesthetics after play.
+  2. R15 base-kit route comparison needs Level evidence. It is not a certified progression failure.
+  3. door_turn_to_side is UNFINISHED: no PNG exists. door_turn_to_rear is a STAND-IN. Both are called out in INVENTORY.md; expect a visible gap or substitute in the doorway turn.
+  4. Canal doorway world-camera checks are informational (full-screen is not required by the creative brief there).
+  5. Roof-on and --ld05-open-top are both available. NEITHER is approved.
+  6. No Mac or Windows graphical validation and no full-campaign playthrough has been done.
+  QA W6 on this source reported 162 PASS, 8 FAIL, 6 SKIP, unchanged thresholds, no new hard regressions (reported by the QA lane, not re-run by Build).
+
+VERIFY THIS PACKAGE
+  INVENTORY.md lists the source SHA and every ART-08 clip with its SHA256 and label. MANIFEST.json (next to the zip in the Actions artifact) lists the source SHA, tree and package SHA256.

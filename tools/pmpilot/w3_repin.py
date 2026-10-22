@@ -22,7 +22,7 @@ def git(repo, *a):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--repo', type=Path, required=True)
-    for k in ('control', 'transition', 'level', 'art', 'combined'):
+    for k in ('control', 'transition', 'level', 'art', 'combined', 'targeted'):
         ap.add_argument('--' + k)
     ap.add_argument('--combined-tree')
     ap.add_argument('--request-variants', default='w3-combined')
@@ -35,7 +35,7 @@ def main():
     pins = json.loads(pins_path.read_text(encoding='utf-8'))
     V = pins['variants']
     change = {}
-    for key, name in (('control', 'w3-control'), ('transition', 'w3-transition'), ('level', 'w3-level'), ('art', 'w3-art'), ('combined', 'w3-combined')):
+    for key, name in (('control', 'w3-control'), ('transition', 'w3-transition'), ('level', 'w3-level'), ('art', 'w3-art'), ('combined', 'w3-combined'), ('targeted', 'w3-targeted')):
         sha = getattr(a, key)
         if not sha:
             continue
@@ -47,11 +47,11 @@ def main():
         _, tree, _ = git(a.repo, 'rev-parse', sha + '^{tree}')
         V[name]['commit'] = sha
         change[name] = dict(commit=sha, tree=tree)
-        if name == 'w3-combined':
+        if name in ('w3-combined', 'w3-targeted'):
             if a.combined_tree:
                 assert a.combined_tree == tree, 'supplied combined tree %s != actual %s' % (a.combined_tree, tree)
             V[name]['expected_tree'] = tree
-        if name in ('w3-art', 'w3-combined') and 'build_gdignore' in V[name]:
+        if name in ('w3-art', 'w3-combined', 'w3-targeted') and 'build_gdignore' in V[name]:
             V[name]['require_gdignore'] = V[name].pop('build_gdignore')
         V[name].pop('native_input_informational', None)
     print(json.dumps(change, indent=2))
