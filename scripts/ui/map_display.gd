@@ -35,7 +35,16 @@ func _draw() -> void:
 			continue
 		var from_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[from_id]) * step + room_size * 0.5
 		var to_center := origin + Vector2(ROOM_GRAPH.ROOM_POSITIONS[to_id]) * step + room_size * 0.5
-		draw_line(from_center, to_center, Color(0.23, 0.68, 0.77, 0.72), 3.0 if not compact else 1.4)
+		var gate_id := String(connection.get("gate_id", ""))
+		var locked := not gate_id.is_empty() and not GameState.is_gate_open(gate_id)
+		var link_color := Color(0.96, 0.38, 0.14, 0.9) if locked else Color(0.23, 0.68, 0.77, 0.72)
+		draw_line(from_center, to_center, link_color, 3.0 if not compact else 1.4)
+		if not connection.bidirectional:
+			var tip := from_center.lerp(to_center, 0.7)
+			var direction := (to_center - from_center).normalized()
+			var normal := direction.orthogonal()
+			var arrow_size := 4.0 if compact else 9.0
+			draw_colored_polygon(PackedVector2Array([tip, tip - direction * arrow_size + normal * arrow_size * 0.5, tip - direction * arrow_size - normal * arrow_size * 0.5]), link_color)
 
 	for key in ROOM_GRAPH.ROOM_POSITIONS:
 		var room_id := String(key)
@@ -53,4 +62,4 @@ func _draw() -> void:
 			draw_string(ThemeDB.fallback_font, room_rect.position + Vector2(12, 22), room_number, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color.WHITE)
 
 	if not compact:
-		draw_string(ThemeDB.fallback_font, Vector2(48, 288), "Cyan: current room    Blue: explored    M: close map", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color(0.64, 0.86, 0.90))
+		draw_string(ThemeDB.fallback_font, Vector2(48, 288), "Cyan: current    Blue: explored    Orange: sealed route    M: close", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color(0.64, 0.86, 0.90))

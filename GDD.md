@@ -860,3 +860,7 @@ Alpha 0.8 rebuilds the playable campaign on the retained GitHub foundation and m
 - I opens the character/loadout screen with HP, traversal tools, equipped kunai, and Guard Veil state.
 - HUD displays tether/kunai/veil controls, encounter state, and boss framing.
 - Automated Alpha 0.8 smoke coverage loads all 12 rooms, validates player systems and animation slicing, verifies grapple anchors, and exercises all three progression rewards.
+
+## October 12 benchmark reconciliation note
+
+Direct inspection of the current canonical web build (Lantern Haven, Alpha 0.3.2) shows double-tap run, F parry, Q Wind Tether after unlocking, and Shift/right-click Dash after unlocking. The Godot recovery kit described above retains its existing testable mechanics while these differences are tracked for reconciliation. These prototype decisions do not constitute accepted canonical progression/control parity. See docs/GAMEPLAY_PARITY_MATRIX.md and PROJECT_STATUS.md.

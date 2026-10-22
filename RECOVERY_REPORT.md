@@ -67,3 +67,9 @@ All five runtime suites passed in `validation/2026-10-12/stability/results.json`
 The sandboxed re-import exited 0 but failed the strict runner due to denied writes to normal Godot editor settings/ObjectDB snapshot paths. It is recorded as **failed**, not passed; the engine import is being rerun with filesystem access. Baseline asset import had succeeded in an isolated application directory. Certificate and ObjectDB teardown warnings remain documented.
 
 Godot re-import with normal filesystem access succeeded (exit 0), with no script/resource/editor-setting errors: `validation/2026-10-12/stability/import-unsandboxed.log`. The initial sandbox failure remains retained in the strict results file.
+
+Published stability increment: `84060d213ecf01d697b73c46c0aafc59484cc007` on `codex/alpha-recovery-2026-10-12`; normal HTTPS push succeeded and independent git ls-remote returned the same full SHA.
+
+## Verified development continuation
+
+Implemented the roadmap's authored Fire-Sealed Return in Room 9 without replacing current campaign progression. Added persisted opened_gates state, projectile detection shapes (the old generated seal lacked one), matching-element impact, gate-aware door lock and map rendering. Added real collision/input/persistence/death/transition regressions. Fixed overlapping UI pause ownership, including combat hit-pause expiry. All seven runtime suites and fresh import passed; logs are versioned. Export settings and native platform CI are being prepared for verified playtest builds, not an accepted Alpha release.

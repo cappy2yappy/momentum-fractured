@@ -28,10 +28,12 @@ signal checkpoint_updated(scene_path: String, spawn_marker: String)
 signal room_cleared(room_id: String)
 signal combo_changed(combo_count: int)
 signal abilities_changed(abilities: Array[String])
+signal gate_opened(gate_id: String)
 signal map_changed
 signal state_reset
 
 var cleared_rooms: Dictionary = {}
+var opened_gates: Dictionary = {}
 var cells: int = 0
 var combo_count: int = 0
 var abilities_unlocked: Array[String] = []
@@ -60,6 +62,7 @@ func _ready() -> void:
 
 func _set_defaults() -> void:
 	cleared_rooms.clear()
+	opened_gates.clear()
 	cells = 0
 	player_health = 100.0
 	player_max_health = 100.0
@@ -87,6 +90,19 @@ func visit_room(room_id: String) -> void:
 		return
 	visited_rooms.append(room_id)
 	emit_signal("map_changed")
+	save_to_disk()
+
+
+func is_gate_open(gate_id: String) -> bool:
+	return not gate_id.is_empty() and bool(opened_gates.get(gate_id, false))
+
+
+func open_gate(gate_id: String) -> void:
+	if gate_id.is_empty() or is_gate_open(gate_id):
+		return
+	opened_gates[gate_id] = true
+	gate_opened.emit(gate_id)
+	map_changed.emit()
 	save_to_disk()
 
 
@@ -246,6 +262,7 @@ func save_to_disk() -> void:
 
 	var payload := {
 		"cleared_rooms": cleared_rooms,
+		"opened_gates": opened_gates,
 		"cells": cells,
 		"player_health": player_health,
 		"player_max_health": player_max_health,
@@ -274,6 +291,8 @@ func load_from_disk() -> bool:
 
 	var data := parsed as Dictionary
 	cleared_rooms = data.get("cleared_rooms", {})
+	var saved_gates: Variant = data.get("opened_gates", {})
+	opened_gates = saved_gates if saved_gates is Dictionary else {}
 	cells = int(data.get("cells", 0))
 	player_health = float(data.get("player_health", 100.0))
 	player_max_health = float(data.get("player_max_health", 100.0))
@@ -299,6 +318,7 @@ func load_from_disk() -> bool:
 	if pending_spawn_marker.is_empty():
 		pending_spawn_marker = checkpoint_spawn_marker
 
+	map_changed.emit()
 	return true
 
 

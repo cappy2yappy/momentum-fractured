@@ -1,0 +1,16 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Leaving one overlapping volume retains swimming
+PASS: Depth below the surface identifies full submersion
+PASS: Submerged tether cannot attach even to an in-range anchor
+PASS: Neutral input settles instead of sinking indefinitely
+PASS: Down input provides controlled descent
+PASS: Ascent speed is consistent at 30 physics ticks
+PASS: Ascent speed is consistent at 60 physics ticks
+PASS: Ascent speed is consistent at 120 physics ticks
+PASS: Surface band allows an above-water tether
+PASS: Leaving the final volume restores air movement
+PASS: Respawn clears stale underwater state
+SWIMMING REGRESSION: 0 failure(s)
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)

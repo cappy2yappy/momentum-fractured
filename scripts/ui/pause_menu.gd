@@ -35,13 +35,21 @@ func _input(event: InputEvent) -> void:
 func open_menu() -> void:
 	_is_open = true
 	visible = true
-	get_tree().paused = true
+	_refresh_pause_state()
 
 
 func close_menu() -> void:
 	_is_open = false
 	visible = false
-	get_tree().paused = false
+	_refresh_pause_state()
+
+
+func _refresh_pause_state() -> void:
+	var hud := get_parent()
+	if hud and hud.has_method("refresh_pause_state"):
+		hud.call("refresh_pause_state")
+	else:
+		get_tree().paused = _is_open
 
 
 func _on_save_pressed() -> void:

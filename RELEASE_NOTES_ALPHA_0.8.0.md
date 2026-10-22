@@ -64,3 +64,13 @@ This remains a parity-slice candidate, not an accepted alpha. Current-jet art is
 - Added 43 real-collision/checkpoint/audio/feedback regression checks and an isolated-save validation runner.
 
 Alpha acceptance, canonical Kaze art, subjective feel and target-device 60 FPS remain open.
+
+## October 12 — authored Fire return and live validation
+
+- Room 9 is now an authored Fire-Sealed Return; Fire opens a saved shortcut into the Surface Approach. Canal retreat and onward campaign remain open on the intake side.
+- Elemental seals have real projectile detection, wrong-element deflection, saved open state, and physics-safe opening.
+- Map links show sealed routes and one-way direction.
+- Map/loadout/pause panels and combat hit-pause coordinate pause state.
+- Seven Godot suites pass. Rendered short-run performance on Apple M4 exceeded60FPS average, with transient frame spikes recorded.
+
+The five-room loop is structurally implemented; visual identity, direct reachability/feel approval and broader platform acceptance are still pending.

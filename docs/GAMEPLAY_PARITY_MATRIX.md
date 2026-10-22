@@ -280,3 +280,13 @@ The authored loop is ready to propagate only when:
 - Gate state, visited rooms, checkpoint state, abilities, and cleared encounters survive save/load.
 - Manual parity captures show acceptable movement, dash, tether, combat, and water behavior against the web benchmark.
 - The creative director approves room density, navigation clarity, game feel, and presentation.
+
+## October 12 recovery evidence and current benchmark
+
+Source branches and recovered fixes are detailed in RECOVERY_REPORT.md. Godot 4.6.1 runtime results are recorded in TEST_RESULTS.md and validation/2026-10-12. Actual collision tests exposed and fixed duplicate per-window melee damage, illegal lethal-enemy physics mutation, and checkpoint arrival restoration before scene_changed. Camera-scrolled damage numbers now use the viewport transform.
+
+The current web reference was directly inspected: Lantern Haven / Alpha 0.3.2 has F parry, double-tap running, Q tether after unlocking, and Shift/right-click dash after unlocking. The existing Godot GDD deliberately specifies F kunai and a baseline traversal kit. Treat those as **prototype choices awaiting reconciliation**, not confirmed web parity. No unlock or parry acceptance is claimed by the automated suite. Canonical purple/green Kaze presentation remains unimplemented in Godot.
+
+## October 12 Fire-return status
+
+Room 9 now contains the authored Fire-sealed branch; persistent opened_gates, detection shapes, wrong-element deflection, continuous partitions, gate-aware shortcut door and map edge are implemented. Seven runtime suites pass. The surface shortcut remains one-way and uses entry_shortcut. The old remaining-gap statements above about no return path or unused gate_id are historical findings superseded by this increment. Visual treatment and full player reachability still require direct acceptance; no parity-complete claim is made.

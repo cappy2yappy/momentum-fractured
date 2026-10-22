@@ -1,0 +1,376 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: GameState autoload exists
+PASS: New game includes baseline Dash
+PASS: New game includes baseline Wind Tether
+PASS: New game includes baseline Wind Kunai
+PASS: res://scenes/rooms/room_01_combat.tscn loads
+PASS: res://scenes/rooms/room_01_combat.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_01_combat.tscn has the restored survey map
+PASS: res://scenes/rooms/room_01_combat.tscn has painted environment art
+PASS: res://scenes/rooms/room_02_platforming.tscn loads
+PASS: res://scenes/rooms/room_02_platforming.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_02_platforming.tscn has the restored survey map
+PASS: res://scenes/rooms/room_02_platforming.tscn has painted environment art
+PASS: res://scenes/rooms/room_03_mixed.tscn loads
+PASS: res://scenes/rooms/room_03_mixed.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_03_mixed.tscn has the restored survey map
+PASS: res://scenes/rooms/room_03_mixed.tscn has painted environment art
+PASS: res://scenes/rooms/room_04_checkpoint.tscn loads
+PASS: res://scenes/rooms/room_04_checkpoint.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_04_checkpoint.tscn has the restored survey map
+PASS: res://scenes/rooms/room_04_checkpoint.tscn has painted environment art
+PASS: res://scenes/rooms/room_05_route.tscn loads
+PASS: res://scenes/rooms/room_05_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_05_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_05_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_05_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_05_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_06_route.tscn loads
+PASS: res://scenes/rooms/room_06_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_06_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_06_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_06_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_06_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_07_route.tscn loads
+PASS: res://scenes/rooms/room_07_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_07_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_07_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_07_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_07_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_08_route.tscn loads
+PASS: res://scenes/rooms/room_08_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_08_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_08_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_08_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_08_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_09_route.tscn loads
+PASS: res://scenes/rooms/room_09_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_09_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_09_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_09_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_09_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_10_route.tscn loads
+PASS: res://scenes/rooms/room_10_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_10_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_10_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_10_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_10_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_11_route.tscn loads
+PASS: res://scenes/rooms/room_11_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_11_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_11_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_11_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_11_route.tscn uses textured environment layers
+PASS: res://scenes/rooms/room_12_route.tscn loads
+PASS: res://scenes/rooms/room_12_route.tscn has Kaze
+PASS: Kaze has momentum tether
+PASS: Kaze has elemental kunai
+PASS: Kaze has Guard Veil
+PASS: Wind Tether range is parity-limited
+PASS: Coyote time uses the web-parity window
+PASS: Kaze run strip is sliced into frames
+PASS: res://scenes/rooms/room_12_route.tscn has the restored survey map
+PASS: res://scenes/rooms/room_12_route.tscn has painted environment art
+PASS: res://scenes/rooms/room_12_route.tscn has visible grapple anchors
+PASS: res://scenes/rooms/room_12_route.tscn uses textured environment layers
+PASS: Wind Tether cannot attach to empty space
+PASS: Wind Tether rejects an anchor when aim is clearly elsewhere
+PASS: Rejected aim leaves Wind Tether inactive
+PASS: Wind Tether attaches to an in-range authored anchor
+PASS: Wind Tether stores the authored anchor target
+PASS: Wind Tether release preserves swing momentum
+PASS: Wind Tether cannot attach through solid geometry
+PASS: Rope correction stops at blocking geometry instead of teleporting through it
+PASS: Rope constraint removes outward radial velocity after a collision-safe correction
+PASS: Wind Tether pumping still adds tangential momentum
+PASS: One hit emits one player health event
+PASS: One hit updates GameState health once
+PASS: Melee uses an explicit 0.15 second hit window
+PASS: Each combo step clears stale hit targets
+PASS: Each accepted combo input advances with a fresh window
+PASS: Dash preserves greater incoming horizontal momentum
+PASS: Dash preserves meaningful vertical momentum
+PASS: Dash exit does not snap horizontal velocity
+PASS: Locked Dash cannot start
+PASS: Locked Wind Kunai cannot be thrown
+PASS: Locked Wind Tether cannot attach
+PASS: Ability state reloads from disk
+PASS: Baseline Dash survives save/load
+PASS: Baseline Wind Tether survives save/load
+PASS: Baseline Wind Kunai survives save/load
+PASS: room_01_combat topology scene loads
+PASS: room_01_combat defines SpawnPoints
+PASS: room_01_combat defines spawn_default
+PASS: room_02_platforming topology scene loads
+PASS: room_02_platforming defines SpawnPoints
+PASS: room_02_platforming defines spawn_default
+PASS: room_03_mixed topology scene loads
+PASS: room_03_mixed defines SpawnPoints
+PASS: room_03_mixed defines spawn_default
+PASS: room_04_checkpoint topology scene loads
+PASS: room_04_checkpoint defines SpawnPoints
+PASS: room_04_checkpoint defines spawn_default
+PASS: room_05_route topology scene loads
+PASS: room_05_route defines SpawnPoints
+PASS: room_05_route defines spawn_default
+PASS: room_06_route topology scene loads
+PASS: room_06_route defines SpawnPoints
+PASS: room_06_route defines spawn_default
+PASS: room_07_route topology scene loads
+PASS: room_07_route defines SpawnPoints
+PASS: room_07_route defines spawn_default
+PASS: room_08_route topology scene loads
+PASS: room_08_route defines SpawnPoints
+PASS: room_08_route defines spawn_default
+PASS: room_09_route topology scene loads
+PASS: room_09_route defines SpawnPoints
+PASS: room_09_route defines spawn_default
+PASS: room_10_route topology scene loads
+PASS: room_10_route defines SpawnPoints
+PASS: room_10_route defines spawn_default
+PASS: room_11_route topology scene loads
+PASS: room_11_route defines SpawnPoints
+PASS: room_11_route defines spawn_default
+PASS: room_12_route topology scene loads
+PASS: room_12_route defines SpawnPoints
+PASS: room_12_route defines spawn_default
+PASS: room_01_combat exit targets a canonical room scene
+PASS: room_01_combat → room_02_platforming exists in the canonical graph
+PASS: room_01_combat → room_02_platforming uses the canonical target scene
+PASS: room_01_combat → room_02_platforming arrives at valid marker entry_from_room1
+PASS: room_02_platforming exit targets a canonical room scene
+PASS: room_02_platforming → room_01_combat exists in the canonical graph
+PASS: room_02_platforming → room_01_combat uses the canonical target scene
+PASS: room_02_platforming → room_01_combat arrives at valid marker entry_from_room2
+PASS: room_02_platforming exit targets a canonical room scene
+PASS: room_02_platforming → room_03_mixed exists in the canonical graph
+PASS: room_02_platforming → room_03_mixed uses the canonical target scene
+PASS: room_02_platforming → room_03_mixed arrives at valid marker entry_from_room2
+PASS: room_03_mixed exit targets a canonical room scene
+PASS: room_03_mixed → room_02_platforming exists in the canonical graph
+PASS: room_03_mixed → room_02_platforming uses the canonical target scene
+PASS: room_03_mixed → room_02_platforming arrives at valid marker entry_from_room3
+PASS: room_03_mixed exit targets a canonical room scene
+PASS: room_03_mixed → room_04_checkpoint exists in the canonical graph
+PASS: room_03_mixed → room_04_checkpoint uses the canonical target scene
+PASS: room_03_mixed → room_04_checkpoint arrives at valid marker entry_from_room3
+PASS: room_04_checkpoint exit targets a canonical room scene
+PASS: room_04_checkpoint → room_03_mixed exists in the canonical graph
+PASS: room_04_checkpoint → room_03_mixed uses the canonical target scene
+PASS: room_04_checkpoint → room_03_mixed arrives at valid marker entry_from_room4
+PASS: room_04_checkpoint exit targets a canonical room scene
+PASS: room_04_checkpoint → room_05_route exists in the canonical graph
+PASS: room_04_checkpoint → room_05_route uses the canonical target scene
+PASS: room_04_checkpoint → room_05_route arrives at valid marker entry_from_room4
+PASS: room_05_route exit targets a canonical room scene
+PASS: room_05_route → room_04_checkpoint exists in the canonical graph
+PASS: room_05_route → room_04_checkpoint uses the canonical target scene
+PASS: room_05_route → room_04_checkpoint arrives at valid marker entry_from_room5
+PASS: room_05_route exit targets a canonical room scene
+PASS: room_05_route → room_06_route exists in the canonical graph
+PASS: room_05_route → room_06_route uses the canonical target scene
+PASS: room_05_route → room_06_route arrives at valid marker entry_from_room5
+PASS: room_06_route exit targets a canonical room scene
+PASS: room_06_route → room_05_route exists in the canonical graph
+PASS: room_06_route → room_05_route uses the canonical target scene
+PASS: room_06_route → room_05_route arrives at valid marker entry_from_room6
+PASS: room_06_route exit targets a canonical room scene
+PASS: room_06_route → room_07_route exists in the canonical graph
+PASS: room_06_route → room_07_route uses the canonical target scene
+PASS: room_06_route → room_07_route arrives at valid marker entry_from_room6
+PASS: room_07_route exit targets a canonical room scene
+PASS: room_07_route → room_06_route exists in the canonical graph
+PASS: room_07_route → room_06_route uses the canonical target scene
+PASS: room_07_route → room_06_route arrives at valid marker entry_from_room7
+PASS: room_07_route exit targets a canonical room scene
+PASS: room_07_route → room_08_route exists in the canonical graph
+PASS: room_07_route → room_08_route uses the canonical target scene
+PASS: room_07_route → room_08_route arrives at valid marker entry_from_room7
+PASS: room_08_route exit targets a canonical room scene
+PASS: room_08_route → room_07_route exists in the canonical graph
+PASS: room_08_route → room_07_route uses the canonical target scene
+PASS: room_08_route → room_07_route arrives at valid marker entry_from_room8
+PASS: room_08_route exit targets a canonical room scene
+PASS: room_08_route → room_09_route exists in the canonical graph
+PASS: room_08_route → room_09_route uses the canonical target scene
+PASS: room_08_route → room_09_route arrives at valid marker entry_from_room8
+PASS: room_09_route exit targets a canonical room scene
+PASS: room_09_route → room_08_route exists in the canonical graph
+PASS: room_09_route → room_08_route uses the canonical target scene
+PASS: room_09_route → room_08_route arrives at valid marker entry_from_room9
+PASS: room_09_route exit targets a canonical room scene
+PASS: room_09_route → room_10_route exists in the canonical graph
+PASS: room_09_route → room_10_route uses the canonical target scene
+PASS: room_09_route → room_10_route arrives at valid marker entry_from_room9
+PASS: room_09_route exit targets a canonical room scene
+PASS: room_09_route → room_05_route exists in the canonical graph
+PASS: room_09_route → room_05_route uses the canonical target scene
+PASS: room_09_route → room_05_route arrives at valid marker entry_shortcut
+PASS: room_10_route exit targets a canonical room scene
+PASS: room_10_route → room_09_route exists in the canonical graph
+PASS: room_10_route → room_09_route uses the canonical target scene
+PASS: room_10_route → room_09_route arrives at valid marker entry_from_room10
+PASS: room_10_route exit targets a canonical room scene
+PASS: room_10_route → room_11_route exists in the canonical graph
+PASS: room_10_route → room_11_route uses the canonical target scene
+PASS: room_10_route → room_11_route arrives at valid marker entry_from_room10
+PASS: room_11_route exit targets a canonical room scene
+PASS: room_11_route → room_10_route exists in the canonical graph
+PASS: room_11_route → room_10_route uses the canonical target scene
+PASS: room_11_route → room_10_route arrives at valid marker entry_from_room11
+PASS: room_11_route exit targets a canonical room scene
+PASS: room_11_route → room_12_route exists in the canonical graph
+PASS: room_11_route → room_12_route uses the canonical target scene
+PASS: room_11_route → room_12_route arrives at valid marker entry_from_room11
+PASS: room_12_route exit targets a canonical room scene
+PASS: room_12_route → room_11_route exists in the canonical graph
+PASS: room_12_route → room_11_route uses the canonical target scene
+PASS: room_12_route → room_11_route arrives at valid marker entry_from_room12
+PASS: room_12_route exit targets a canonical room scene
+PASS: room_12_route → room_05_route exists in the canonical graph
+PASS: room_12_route → room_05_route uses the canonical target scene
+PASS: room_12_route → room_05_route arrives at valid marker entry_from_room12
+PASS: room_01_combat → room_02_platforming transition is implemented
+PASS: room_02_platforming → room_01_combat reciprocal transition is implemented
+PASS: room_02_platforming → room_03_mixed transition is implemented
+PASS: room_03_mixed → room_02_platforming reciprocal transition is implemented
+PASS: room_03_mixed → room_04_checkpoint transition is implemented
+PASS: room_04_checkpoint → room_03_mixed reciprocal transition is implemented
+PASS: room_04_checkpoint → room_05_route transition is implemented
+PASS: room_05_route → room_04_checkpoint reciprocal transition is implemented
+PASS: room_05_route → room_06_route transition is implemented
+PASS: room_06_route → room_05_route reciprocal transition is implemented
+PASS: room_06_route → room_07_route transition is implemented
+PASS: room_07_route → room_06_route reciprocal transition is implemented
+PASS: room_07_route → room_08_route transition is implemented
+PASS: room_08_route → room_07_route reciprocal transition is implemented
+PASS: room_08_route → room_09_route transition is implemented
+PASS: room_09_route → room_08_route reciprocal transition is implemented
+PASS: room_09_route → room_10_route transition is implemented
+PASS: room_10_route → room_09_route reciprocal transition is implemented
+PASS: room_10_route → room_11_route transition is implemented
+PASS: room_11_route → room_10_route reciprocal transition is implemented
+PASS: room_11_route → room_12_route transition is implemented
+PASS: room_12_route → room_11_route reciprocal transition is implemented
+PASS: room_09_route → room_05_route transition is implemented
+PASS: room_12_route → room_05_route transition is implemented
+PASS: Room 5 is the first authored parity-slice room
+PASS: Authored surface room disables the prototype environment generator
+PASS: Authored surface room uses explicit anchors
+PASS: Compact Surface Approach has dense authored collision geometry
+PASS: Compact Surface Approach has three intentional tether anchors
+PASS: Compact Surface Approach has a three-lane encounter
+PASS: Compact Surface Approach reserves the Fire-return arrival landmark
+PASS: Compact Surface Approach uses authored 1920×720 camera bounds
+PASS: Room 6 is the authored Wind Relay Shaft
+PASS: Authored shaft disables the prototype environment generator
+PASS: Authored shaft uses explicit anchors
+PASS: Wind Relay Shaft has explicit ascent, descent, and boundary geometry
+PASS: Wind Relay Shaft has seven route anchors and three recovery anchors
+PASS: shaft_anchor_01 stays within the authored tether budget
+PASS: shaft_anchor_02 stays within the authored tether budget
+PASS: shaft_anchor_03 stays within the authored tether budget
+PASS: shaft_anchor_04 stays within the authored tether budget
+PASS: shaft_anchor_05 stays within the authored tether budget
+PASS: shaft_anchor_06 stays within the authored tether budget
+PASS: shaft_anchor_07 stays within the authored tether budget
+PASS: shaft_recovery_01 stays within the authored tether budget
+PASS: shaft_recovery_02 stays within the authored tether budget
+PASS: shaft_recovery_03 stays within the authored tether budget
+PASS: Wind Relay Shaft has one authored Drone pressure enemy
+PASS: Wind Relay Shaft defines the Room 5 arrival marker
+PASS: Wind Relay Shaft defines the Room 7 arrival marker
+PASS: Wind Relay Shaft exposes four safe recovery markers
+PASS: Wind Relay Shaft authors relay and lower-hatch landmarks
+PASS: Wind Relay Shaft uses authored 1280×2160 camera bounds
+PASS: Room 7 is the authored Underground Threshold
+PASS: Underground Threshold disables the prototype environment generator
+PASS: Underground Threshold has a compressed authored descent and corridor
+PASS: Underground Threshold has three intentional tether anchors
+PASS: Underground Threshold has two grounded lanes and one aerial threat
+PASS: Underground Threshold defines the reliquary checkpoint spawn
+PASS: Underground Threshold defines both directional arrivals
+PASS: Underground Threshold separates encounter, reward, and canal progression
+PASS: Underground Threshold uses authored 1600×900 camera bounds
+PASS: Fire Reliquary rejects claims before the encounter is clear
+PASS: Fire Kunai is not granted by room entry
+PASS: Cleared Fire Reliquary accepts an explicit claim
+PASS: Explicit reliquary claim unlocks Fire Kunai
+PASS: Fire Reliquary claim activates the authored checkpoint
+PASS: Fire Reliquary claim opens the canal route
+PASS: Storm Reliquary unlocks Fire Kunai
+PASS: Hall milestone unlocks Electric Kunai
+PASS: Borrowed Face unlocks Guard Veil
+PASS: Guard Veil progression persists
+ALPHA 0.8 SMOKE TEST: 0 failure(s), 12 rooms
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2641)

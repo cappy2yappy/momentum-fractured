@@ -64,8 +64,13 @@ func hit_pause(duration: float = 0.05) -> void:
 	_hit_pause_active = true
 	get_tree().paused = true
 	await get_tree().create_timer(duration, true).timeout
-	get_tree().paused = false
 	_hit_pause_active = false
+	var scene := get_tree().current_scene
+	var hud := scene.find_child("HUD", true, false) if scene else null
+	if hud and hud.has_method("refresh_pause_state"):
+		hud.call("refresh_pause_state")
+	else:
+		get_tree().paused = false
 
 
 func _find_visual_node(target: Node) -> CanvasItem:

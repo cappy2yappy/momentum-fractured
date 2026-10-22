@@ -1,0 +1,44 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Actual player settles onto fixture collision geometry
+PASS: Right input changes velocity and position within the next physics step
+PASS: Held right input reaches the configured ground speed without overshoot
+PASS: Released ground movement stops within eight physics frames
+PASS: Opposite input responds with leftward movement
+PASS: Grounded jump input launches upward immediately (1 held frames)
+PASS: Grounded jump input launches upward immediately (30 held frames)
+PASS: A tapped grounded jump produces measurable ascent (51.70 px)
+PASS: Holding jump increases actual apex height (short 51.70, held 151.69 px)
+PASS: Held jump returns to the physical floor without a forced reset
+PASS: Real dash input starts a high-speed movement window
+PASS: Dash traverses physical space over its active frames
+PASS: Dash ends after its bounded duration
+FIXTURE: Headless cursor reports (17600.0, 4320.0); anchor placed at that world position
+PASS: Real grapple input attaches to the aimed authored anchor
+PASS: Tether stays attached while grapple input remains held
+PASS: Held directional input changes the actual tether swing angle
+PASS: Swing remains inside its rope-length constraint
+PASS: Releasing actual grapple input detaches the tether
+PASS: Tether release preserves horizontal swing momentum apart from normal air drag (before (350.4689, -19.67748), after (341.8023, 37.52252))
+MEASUREMENT: 60 headless physics frames sampled in 1.000 seconds; rendered performance unmeasured
+PASS: SceneNavigator actually loads the checkpoint room
+PASS: Actual scene entry records its surveyed room
+PASS: Minimap and full map identify the actual current room after scene loading
+PASS: HUD room-name text resolves after an actual scene transition
+PASS: HUD health bar follows actual player damage
+PASS: HUD cell counter follows progression state
+PASS: Map input opens the full map and pauses gameplay
+PASS: Expired combat hit-pause preserves the open map's gameplay pause
+PASS: Loadout input switches from map to character information while paused
+PASS: Loadout reports the current damaged health
+PASS: Closing the loadout resumes gameplay
+PASS: Escape opens the actual pause menu
+PASS: Escape closes the pause menu and resumes gameplay
+PASS: Interleaved Escape and map input cannot leave a visible overlay with gameplay unpaused
+PASS: Physical left-door overlap transitions Room 4 to Room 3
+PASS: Door transition arrives at the reciprocal authored marker (actual (1320.0, 600.352), expected (1320.0, 600.0))
+PASS: Door transition preserves health from the departing room
+PASS: Survey state preserves both rooms after backtracking
+LIVE MOTION REGRESSION: 0 failure(s), 37 checks; input/physics only, subjective feel and rendered FPS unassessed
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)

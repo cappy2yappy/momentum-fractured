@@ -32,3 +32,11 @@ All five runtime suites passed in `validation/2026-10-12/stability/results.json`
 The sandboxed re-import exited 0 but failed the strict runner due to denied writes to normal Godot editor settings/ObjectDB snapshot paths. It is recorded as **failed**, not passed; the engine import is being rerun with filesystem access. Baseline asset import had succeeded in an isolated application directory. Certificate and ObjectDB teardown warnings remain documented.
 
 Godot re-import with normal filesystem access succeeded (exit 0), with no script/resource/editor-setting errors: `validation/2026-10-12/stability/import-unsandboxed.log`. The initial sandbox failure remains retained in the strict results file.
+
+## Integrated continuation results
+
+Fresh import: exit 0, no errors (continuation-import.log). Full runtime runner: exit 0, all seven suites passed (continuation-final/results.json). Recovery 43 checks; live motion 37; Fire return 37. Tests actually drove input, collision signals, gate impacts, save/load, scene transitions and checkpoint respawns. Initial room9 textured-layer smoke failure is retained under continuation/; added a second environment layer and reran the entire suite successfully.
+
+Live movement evidence: tapped jump 51.70px, held jump151.69px; tether horizontal release350.47→341.80px/s (normal air drag), rope length and swing angle checks passed. Actual door/checkpoint arrivals match their markers within one physics tick. UI map/loadout/pause plus hit-pause overlap checks passed after reproducing/fixing an unintended unpause.
+
+Rendered performance (not headless): Apple M4, Mac16,1, Metal Forward+, 1280×720. Probe sampled180frames after40warmupframes in each of12rooms. Averages116.8–120.1FPS, p95 frame times8.6–9.9ms, worst frame53.5ms. Source test process exited0. The average60FPS target was exceeded on this machine in this short probe; sustained16.67ms frame budget and Windows target performance are unverified. Exact samples: rendered-performance.json.
