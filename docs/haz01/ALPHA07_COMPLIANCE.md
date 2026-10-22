@@ -34,3 +34,16 @@ From this worktree, Godot4.6.1:
 Enemy arena: A/D move, double tap sprint, Space jump, Shift dash, J attack, F parry, R kunai, T cycle. Hazard course: A/D, Space, Shift, hold Q tether; Backspace reset, F2 toggle, F5/F9 isolated prototype save/load, Esc exit. Demos never load campaign saves. Do not integrate course snapshot storage into production.
 
 No PR merged; Candidate3 unchanged. Future room data waits for creator markup and approved story placements.
+
+
+## Authoritative INT-01 follow-up and identifier boundary fix
+
+The original INT-01 specialist published PR88 at `2fa6`; INT-01 follow-up PR89 head `3dc433cd` retains that ancestry. Agent E recovered the authoritative composition, reporting native combined41/0 and existing suites green, then reproduced two adapter identifier failures. This is evidence from Agent E, not a claim that a clean merge proves compatibility.
+
+Narrow runtime source commit `6f7c5129c8532effdc8b9e9eff6ff65454312c33` rejects bridged completion events unless they exactly match the director contract: prefix disc/evt/trap/enc/obj, lowercase snake segments starting with a letter, slash separated, <=48 characters. Prototype member IDs, persistent IDs and effect registry keys retain their existing compatibility.
+
+Hazard flag lists reject malformed reserved namespace keys, even if an invalid key already exists in a save map. Read-only legacy access allows exactly `junction_return`, `skyworks_wind_intake`, `lore_0` through `lore_20`, and other existing boolean keys in the world's expansion_flags dictionary. Unknown legacy names and nonboolean map entries fail closed. This allows existing production reads without admitting invented identifiers.
+
+Array/batch, registry, target and resource validation all precede registration or binding. A rejected duplicate hazard consumer no longer leaves an orphaned binding. No shared world, director, save schema, production placement or story canon changes are made.
+
+The new `tests/en01/consumer_contract.gd` passed **31 checks, 0 failures** under Godot4.6.1 after the final source change. It exercises invalid events, missing/invalid list types, invalid targets, malformed reserved existing keys, legacy read compatibility, batch duplicates and side-effect-free failed registrations. Combined authoritative runtime and actual negative probe reruns after this exact source commit are assigned to Agent E; no post-fix combined result is claimed here until it reports.
