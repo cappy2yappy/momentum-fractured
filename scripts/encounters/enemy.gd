@@ -10,6 +10,10 @@ var aim = Vector2.LEFT
 var wake_elapsed = 0.0
 func _ready():
 	super._ready()
+	if config.is_empty(): return
+	initialize(config, encounter)
+func initialize(settings: Dictionary, owner_encounter):
+	config = settings; encounter = owner_encounter
 	hp = int(config.hp); max_hp = hp
 	home = position.x; patrol_min = config.territory[0]; patrol_max = config.territory[1]
 	move_speed = config.speed; attack_range = config.attack_range
@@ -27,7 +31,7 @@ func _physics_process(dt):
 	var d = player.global_position - global_position
 	var sees = visible_target()
 	if state == "dormant":
-		var active = config.activation == "immediate" or (config.activation == "proximity" and d.length() <= config.activation_distance and sees) or (config.activation == "story" and encounter.world.expansion_flags.get(config.story_flag, false) == true)
+		var active = config.activation == "immediate" or (config.activation == "proximity" and d.length() <= config.activation_distance and sees) or (config.activation == "story" and encounter.world.expansion_flags.get(config.story_flag, false) == true and encounter.control_ready() and player.is_on_floor() and d.length() >= 400.0)
 		if active:
 			wake_elapsed = elapsed
 			change("awakening", config.spawn_grace)

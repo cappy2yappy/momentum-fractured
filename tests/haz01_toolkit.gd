@@ -48,7 +48,10 @@ func run():
 	h.placement.warning_seconds = 0;check(not h.placement.validation_errors().is_empty(),"invalid zero warning rejected")
 	h.free()
 	course = load("res://scenes/haz01/course.tscn").instantiate()
-	course.save_path = "/private/tmp/haz01-course-test.json"
+	var temporary = OS.get_environment("TEMP") if OS.get_name() == "Windows" else OS.get_environment("TMPDIR")
+	if temporary.is_empty(): temporary = ProjectSettings.globalize_path("res://build")
+	DirAccess.make_dir_recursive_absolute(temporary)
+	course.save_path = temporary.path_join("haz01-course-%d.json" % OS.get_process_id())
 	root.add_child(course);current_scene = course
 	course.set_physics_process(false)
 	for hazard in course.hazards: hazard.set_physics_process(false)
@@ -144,6 +147,7 @@ func run():
 	course.restart();check(course.hazards[2].enabled,"fresh room re-entry restores default enable state")
 	player.position=Vector2(1170,620);player.set_physics_process(true);await ticks(20)
 	check(player.hp == 3 and player.is_on_floor(),"exit area remains safely standable")
+	DirAccess.remove_absolute(course.save_path)
 	course.queue_free();await process_frame
 	print("HAZ01: %d checks, %d failures" % [checks,failures])
 	quit(1 if failures else 0)

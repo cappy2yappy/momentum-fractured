@@ -11,6 +11,8 @@ var event_members: Dictionary = {}
 var finished: Dictionary = {}
 var emitted_events: Dictionary = {}
 var configured = false
+var pending_defeats: Array = []
+var leaving = false
 func configure(host, entries) -> Array:
 	if configured: return ["Encounter is already configured"]
 	if not entries is Array or entries.is_empty(): return ["Expected a nonempty encounter array"]
@@ -38,11 +40,12 @@ func configure(host, entries) -> Array:
 		if c.persistent and world.cleared_encounters.get("en01/" + c.id, false):
 			finished[c.id] = true
 			continue
-		var enemy = Enemy.new()
-		enemy.config = c; enemy.encounter = self; enemy.player = world.player
-		enemy.position = Vector2(c.position[0],c.position[1])
+		var enemy = world.spawn_enemy(Vector2(c.position[0], c.position[1]), false, false, Enemy)
+		enemy.initialize(c, self)
+		enemy.set_meta("story_managed_encounter", true)
+		if c.persistent and world.get("story") != null: enemy.set_meta("persistent_id", "en01/" + c.id)
 		enemy.defeated.connect(_defeated.bind(enemy))
-		add_child(enemy); members.append(enemy); world.enemies.append(enemy)
+		members.append(enemy)
 	# Already-complete loads restore state silently, never replay rewards/events.
 	for event in event_members:
 		if _event_done(event): emitted_events[event] = true
@@ -51,18 +54,32 @@ func _event_done(event) -> bool:
 	for id in event_members[event]:
 		if not finished.get(id, false): return false
 	return true
+func control_ready() -> bool:
+	return is_instance_valid(world) and world.transition <= 0 and is_instance_valid(world.player) and world.player.is_physics_processing()
 func _defeated(enemy):
-	var c = enemy.config
-	finished[c.id] = true
+	# Record no persistent state and emit no story effects until control returns.
+	pending_defeats.append(enemy.config.duplicate(true))
 	world.enemies.erase(enemy); members.erase(enemy)
-	if c.persistent:
-		world.cleared_encounters["en01/" + c.id] = true
-		if not world.save_progress(): persistence_failed.emit()
+	flush_defeats()
+func flush_defeats():
+	if pending_defeats.is_empty() or not control_ready(): return
+	var needs_save = false
+	for c in pending_defeats:
+		finished[c.id] = true
+		if c.persistent and world.get("story") == null:
+			world.cleared_encounters["en01/" + c.id] = true
+			needs_save = true
+	pending_defeats.clear()
+	if needs_save and not world.test_mode and not world.save_progress(): persistence_failed.emit()
 	for event in event_members:
 		if not emitted_events.get(event, false) and _event_done(event):
 			emitted_events[event] = true
 			completed.emit(event)
 func _physics_process(_dt):
+	flush_defeats()
+	if leaving:
+		if pending_defeats.is_empty(): queue_free()
+		return
 	if configured and (not is_instance_valid(world) or world.room != source_room):
 		dispose(); return
 	for enemy in members:
@@ -70,10 +87,14 @@ func _physics_process(_dt):
 			dispose(); return
 func dispose():
 	# Disable immediately, including projectiles, before deferred tree removal.
-	process_mode = Node.PROCESS_MODE_DISABLED
+	leaving = true
+	for child in get_children() + members:
+		child.process_mode = Node.PROCESS_MODE_DISABLED
+		child.queue_free()
 	if is_instance_valid(world):
 		for enemy in members: world.enemies.erase(enemy)
-	queue_free()
+	members.clear()
+	if pending_defeats.is_empty(): queue_free()
 func _exit_tree():
 	if is_instance_valid(world):
 		for enemy in members: world.enemies.erase(enemy)

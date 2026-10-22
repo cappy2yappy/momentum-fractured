@@ -34,7 +34,7 @@ static func validate(raw, surfaces: Array) -> Dictionary:
 		errors.append("Invalid completion event")
 	var bounds = {"activation_distance": [80, 1200], "aggression_distance": [80,1200],
 		"recovery_distance": [80,1600], "lose_sight_time": [0.2,5], "speed": [0,240],
-		"hp": [1,30], "attack_range": [40,130], "windup": [0.48,3], "active_time": [0.05,0.25],
+		"hp": [4,8], "attack_range": [40,130], "windup": [0.5,3], "active_time": [0.05,0.25],
 		"recovery_time": [0.7,5], "projectile_speed": [100,500], "projectile_lifetime": [0.2,5], "spawn_grace": [0.8,5]}
 	for key in bounds:
 		if not number(c[key]) or c[key] < bounds[key][0] or c[key] > bounds[key][1]: errors.append("Out of range: " + key)
