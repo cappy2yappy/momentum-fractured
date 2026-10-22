@@ -9,7 +9,11 @@ func check(ok, label):
 	print("PASS: " if ok else "FAIL: ", label)
 	if not ok: failures += 1
 func ticks(n):
-	for i in n: await physics_frame
+	for i in n:
+		await physics_frame
+		# Demo freezes the world; drive its sole director as the real world would.
+		if is_instance_valid(w) and not w.is_physics_processing() and w.get("story") != null:
+			w.story.update(w, 1.0/60.0)
 func fresh(mode):
 	if is_instance_valid(w):
 		w.free(); await process_frame

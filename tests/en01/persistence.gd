@@ -34,7 +34,13 @@ func run():
 	runtime.persistence_failed.connect(func(): failures_observed.append(true))
 	var saved_path=w.save_path; w.save_path=temporary.path_join("en01-missing-%d/save.json" % OS.get_process_id())
 	e=runtime.members[0]; e.state="patrol"; e.receive_hit(100)
-	check(failures_observed.size()==1 and w.cleared_encounters.get("en01/regression/save-failure",false),"Write failure signals caller while retaining session defeat")
+	if w.get("story") != null:
+		check(failures_observed.is_empty() and w.story.dirty and w.cleared_encounters.get("en01/regression/save-failure",false),"Shared director owns failed-save retry and retains session defeat")
+		w.save_path=saved_path; w.story.flush_save()
+		var retry=JSON.parse_string(FileAccess.get_file_as_string(saved_path))
+		check(not w.story.dirty and retry.cleared_encounters.get("en01/regression/save-failure",false),"Shared director retries failed disk write without replaying defeat")
+	else:
+		check(failures_observed.size()==1 and w.cleared_encounters.get("en01/regression/save-failure",false),"Isolated fallback signals write failure while retaining session defeat")
 	DirAccess.remove_absolute(saved_path)
 	w.free(); current_scene=null; await process_frame
 	print("EN01 PERSISTENCE: %d failure(s)" % failures)
