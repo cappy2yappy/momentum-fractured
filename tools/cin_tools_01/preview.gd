@@ -34,7 +34,7 @@ func _ready():
 	var select = OptionButton.new()
 	for item in choices: select.add_item(item.replace("_", " ").capitalize())
 	select.item_selected.connect(func(i):
-		preset = load("res://presets/cutins/" + choices[i] + ".tscn")
+		preset = load(preset_path(choices[i]))
 		open_preset())
 	row.add_child(select)
 	for item in [["Play", play], ["Pause", pause], ["Step 1/60 s", step], ["Restart", restart]]:
@@ -53,6 +53,9 @@ func _ready():
 	status = Label.new()
 	panel.add_child(status)
 	open_preset()
+
+func preset_path(choice):
+	return "res://presets/cutins/" + choice + ".tscn"
 
 func open_preset():
 	running = false

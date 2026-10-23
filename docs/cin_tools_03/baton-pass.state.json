@@ -1,0 +1,8 @@
+{
+  "state": "handed-off",
+  "last_move": "baton-pass",
+  "last_agent": "Codex CIN-TOOLS-03",
+  "next_agent": "Creator review / cinematic tooling specialist",
+  "updated_at": "2026-10-23",
+  "summary": "Isolated Cinematic Studio prototype extends PR78; draft only. See HANDOFF.md and QA.md."
+}

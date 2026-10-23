@@ -1,0 +1,290 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://tools/cin_tools_03/presentation.gd" id="1_fita3"]
+[ext_resource type="Texture2D" path="res://assets/web/district-fidelity.png" id="2_gvh74"]
+[ext_resource type="Texture2D" path="res://assets/web/terrain-materials.png" id="3_aip6e"]
+[ext_resource type="Texture2D" path="res://assets/art08/kaze_stair_arrive_idle_settle_strip.png" id="4_swgad"]
+[ext_resource type="PackedScene" path="res://presets/cutins/studio/actor.tscn" id="5_6ioou"]
+[ext_resource type="Script" path="res://tools/cin_tools_03/actor.gd" id="6_33yet"]
+[ext_resource type="Animation" path="res://presets/cutins/studio/sprint_stop.tres" id="7_lm174"]
+
+[sub_resource type="Animation" id="Animation_hv1h6"]
+resource_name = "reduced"
+length = 4.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Framing/Shake/Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Framing/Shake/Foreground:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 610), Vector2(0, 610)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:handoff")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:shake_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Framing:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Framing:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:clip_time")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.2]
+}
+metadata/art08_clip = "stair_arrive_idle_settle"
+metadata/root_motion_source_px = "[[41.25, -8.69], [15.5, 0.0], [15.5, 0.0], [0.0, 0.0]]"
+
+[sub_resource type="Animation" id="Animation_kinh8"]
+resource_name = "standard"
+length = 4.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Framing/Shake/Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(18, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Framing/Shake/Foreground:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 610), Vector2(-28, 610)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:handoff")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:shake_strength")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Framing:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Framing:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:clip_time")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 4.2]
+}
+metadata/art08_clip = "stair_arrive_idle_settle"
+metadata/root_motion_source_px = "[[41.25, -8.69], [15.5, 0.0], [15.5, 0.0], [0.0, 0.0]]"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gpi7l"]
+_data = {
+&"reduced": SubResource("Animation_hv1h6"),
+&"standard": SubResource("Animation_kinh8")
+}
+
+[node name="CharacterAnimator" type="Node2D" unique_id=1994636763]
+script = ExtResource("1_fita3")
+artwork_status = "Presentation-only prototype. ART-08 cutout candidate; approved sprite bytes unchanged."
+
+[node name="Framing" type="Node2D" parent="." unique_id=1263913117]
+
+[node name="Shake" type="Node2D" parent="Framing" unique_id=2092495984]
+
+[node name="Background" type="Sprite2D" parent="Framing/Shake" unique_id=1937437227]
+modulate = Color(0.45, 0.55, 0.7, 1)
+scale = Vector2(2.5, 1.5)
+texture = ExtResource("2_gvh74")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="Framing/Shake" unique_id=1816704713]
+position = Vector2(0, 610)
+scale = Vector2(3, 0.4)
+texture = ExtResource("3_aip6e")
+centered = false
+
+[node name="Character" type="Sprite2D" parent="Framing/Shake" unique_id=1705942100]
+visible = false
+position = Vector2(790, 590)
+scale = Vector2(0.72, 0.72)
+texture = ExtResource("4_swgad")
+offset = Vector2(0, -238)
+hframes = 4
+
+[node name="Actor" type="Node2D" parent="Framing/Shake" unique_id=820776330 instance=ExtResource("5_6ioou")]
+script = ExtResource("6_33yet")
+clip = ExtResource("7_lm174")
+
+[node name="Tint" type="ColorRect" parent="." unique_id=67851941]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.09, 0.14, 0.24, 0.35)
+
+[node name="SpeedLines" type="Node2D" parent="." unique_id=1552821064]
+modulate = Color(1, 1, 1, 0)
+
+[node name="LineA" type="Line2D" parent="SpeedLines" unique_id=222657898]
+points = PackedVector2Array(0, 110, 430, 170)
+width = 3.0
+
+[node name="LineB" type="Line2D" parent="SpeedLines" unique_id=1770070091]
+points = PackedVector2Array(1280, 570, 990, 530)
+width = 3.0
+
+[node name="Top" type="ColorRect" parent="." unique_id=1107716892]
+offset_right = 1280.0
+offset_bottom = 56.0
+mouse_filter = 2
+color = Color(0.015, 0.02, 0.03, 1)
+
+[node name="Bottom" type="ColorRect" parent="." unique_id=2033725521]
+offset_top = 652.0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.015, 0.02, 0.03, 1)
+
+[node name="Title" type="Label" parent="." unique_id=715863511]
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 41.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 30
+text = "Sprint → brake → settle"
+
+[node name="Destination" type="Label" parent="." unique_id=908546696]
+offset_left = 92.0
+offset_top = 603.0
+theme_override_font_sizes/font_size = 20
+text = "PRESENTATION STUDY / NO CAMPAIGN PLACEMENT"
+
+[node name="Status" type="Label" parent="." unique_id=1568195109]
+offset_left = 22.0
+offset_top = 17.0
+theme_override_font_sizes/font_size = 16
+text = "CANDIDATE RIG / APPROVED SPRITE — flat-art seams and pose switch visible"
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1096583871]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.02, 0.03, 0.05, 0)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1955027744]
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=482321836]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1428485872]
+libraries/ = SubResource("AnimationLibrary_gpi7l")

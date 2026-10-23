@@ -1,0 +1,52 @@
+{
+  "source_pr": 62,
+  "source_commit": "98d639f32c34d862bbe6ecf1fb4a8c70e1736414",
+  "status": "ART-08 cut-out candidate parts; not approved replacement artwork",
+  "files": [
+    {
+      "path": "assets/cin_tools_03/rig_parts/arm_tube.png",
+      "source": "source_art/art08/profile/arm_tube.png",
+      "sha256": "d2756d56e10bc2299ef73f4a0876a14a500b7c433cc98cb8c38cdea60e1d4b43"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/boot.png",
+      "source": "source_art/art08/profile/boot.png",
+      "sha256": "3d2c85b8bc56dd486d81ad0b119505b864052147a3462e2f413e557be00f05b7"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/fist.png",
+      "source": "source_art/art08/profile/fist.png",
+      "sha256": "77a1d65ea7d5356969c28957be34355d619fc2f5ca7f5ce181004cd9f39919c8"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/hair.png",
+      "source": "source_art/art08/profile/hair.png",
+      "sha256": "ef967e3dcfb343cf4c3f333e14fd07cf8f7670914b05e044289ead72b441a2e3"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/head.png",
+      "source": "source_art/art08/profile/head.png",
+      "sha256": "338787cd44fa89ce874821f7d883363ab0ebcd5a54d2667497a6bf49615678bc"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/leg_tube.png",
+      "source": "source_art/art08/profile/leg_tube.png",
+      "sha256": "469c9d6edc6f70edf3d5eafc83bc75ba1818eaa19a39ecb092ed9cbe1e3741ef"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/ribbon.png",
+      "source": "source_art/art08/profile/ribbon.png",
+      "sha256": "ddbf501fc8c92b1db2ca9134f9424808cd58fc6f60d75594c24823b80d5d12ba"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/torso.png",
+      "source": "source_art/art08/profile/torso.png",
+      "sha256": "1e09376753ab5956763699dc3f6847320e22458a96e54cbe52e5ae7a8d98414f"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/parts.json",
+      "source": "source_art/art08/profile/parts.json",
+      "sha256": "4013fa2beb5ada9a82f944c47d93b8acdde6ae6247bafdf7173e798da3cad37b"
+    }
+  ]
+}

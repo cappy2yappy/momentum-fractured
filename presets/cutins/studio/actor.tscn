@@ -1,0 +1,179 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://tools/cin_tools_03/actor.gd" id="1_fy7q8"]
+[ext_resource type="Animation" path="res://presets/cutins/studio/sprint_stop.tres" id="2_1xrb4"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/leg_tube.png" id="3_rpkm7"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/boot.png" id="4_ll78m"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/hair.png" id="5_50hsr"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/torso.png" id="6_3iuji"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/head.png" id="7_c331v"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/ribbon.png" id="8_7rfln"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/arm_tube.png" id="9_mogjk"]
+[ext_resource type="Texture2D" path="res://assets/cin_tools_03/rig_parts/fist.png" id="10_pebg2"]
+[ext_resource type="Texture2D" path="res://assets/kaze/cleaned/kaze_run_strip.png" id="11_hcytx"]
+
+[node name="Actor" type="Node2D" unique_id=820776330]
+script = ExtResource("1_fy7q8")
+clip = ExtResource("2_1xrb4")
+
+[node name="Rig" type="Node2D" parent="." unique_id=1607533646]
+position = Vector2(0, -185)
+
+[node name="LegFar" type="Node2D" parent="Rig" unique_id=438870266]
+position = Vector2(-7, 0)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegFar" unique_id=1436878892]
+position = Vector2(-14, -4)
+scale = Vector2(0.5714286, 0.875)
+texture = ExtResource("3_rpkm7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 49, 80)
+
+[node name="Shin" type="Node2D" parent="Rig/LegFar" unique_id=108596743]
+position = Vector2(0, 65)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegFar/Shin" unique_id=547094729]
+position = Vector2(-12, -4)
+scale = Vector2(0.48979592, 0.886076)
+texture = ExtResource("3_rpkm7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 70, 49, 79)
+
+[node name="Boot" type="Node2D" parent="Rig/LegFar/Shin" unique_id=1396705334]
+position = Vector2(0, 65)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegFar/Shin/Boot" unique_id=1478295225]
+position = Vector2(-28, -8)
+texture = ExtResource("4_ll78m")
+centered = false
+
+[node name="LegNear" type="Node2D" parent="Rig" unique_id=1407430035]
+position = Vector2(7, 0)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegNear" unique_id=886804033]
+position = Vector2(-14, -4)
+scale = Vector2(0.5714286, 0.875)
+texture = ExtResource("3_rpkm7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 49, 80)
+
+[node name="Shin" type="Node2D" parent="Rig/LegNear" unique_id=1654755096]
+position = Vector2(0, 65)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegNear/Shin" unique_id=403771623]
+position = Vector2(-12, -4)
+scale = Vector2(0.48979592, 0.886076)
+texture = ExtResource("3_rpkm7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 70, 49, 79)
+
+[node name="Boot" type="Node2D" parent="Rig/LegNear/Shin" unique_id=1142504506]
+position = Vector2(0, 65)
+
+[node name="Art" type="Sprite2D" parent="Rig/LegNear/Shin/Boot" unique_id=774782249]
+position = Vector2(-28, -8)
+texture = ExtResource("4_ll78m")
+centered = false
+
+[node name="Torso" type="Node2D" parent="Rig" unique_id=367259119]
+
+[node name="Hair" type="Node2D" parent="Rig/Torso" unique_id=1082256472]
+position = Vector2(11, -113)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/Hair" unique_id=1383537411]
+position = Vector2(-146, -38)
+texture = ExtResource("5_50hsr")
+centered = false
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso" unique_id=187600313]
+position = Vector2(-60, -99)
+texture = ExtResource("6_3iuji")
+centered = false
+
+[node name="Head" type="Node2D" parent="Rig/Torso" unique_id=270946091]
+position = Vector2(11, -113)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/Head" unique_id=1780420922]
+position = Vector2(-5, -38)
+texture = ExtResource("7_c331v")
+centered = false
+
+[node name="Ribbon" type="Node2D" parent="Rig/Torso" unique_id=778262508]
+position = Vector2(6, -143)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/Ribbon" unique_id=1941516037]
+position = Vector2(-79, -13)
+texture = ExtResource("8_7rfln")
+centered = false
+
+[node name="ArmFar" type="Node2D" parent="Rig/Torso" unique_id=1366098940]
+position = Vector2(-6, -90)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmFar" unique_id=278782865]
+position = Vector2(-15, -5)
+scale = Vector2(0.5660377, 0.7846154)
+texture = ExtResource("9_mogjk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 53, 65)
+
+[node name="Forearm" type="Node2D" parent="Rig/Torso/ArmFar" unique_id=384095053]
+position = Vector2(0, 46)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmFar/Forearm" unique_id=1320551866]
+position = Vector2(-12, -3)
+scale = Vector2(0.4528302, 0.86206895)
+texture = ExtResource("9_mogjk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 65, 53, 58)
+
+[node name="Hand" type="Node2D" parent="Rig/Torso/ArmFar/Forearm" unique_id=1577765070]
+position = Vector2(0, 46)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmFar/Forearm/Hand" unique_id=754214403]
+position = Vector2(-14, -4)
+texture = ExtResource("10_pebg2")
+centered = false
+
+[node name="ArmNear" type="Node2D" parent="Rig/Torso" unique_id=828939787]
+position = Vector2(4, -90)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmNear" unique_id=609350176]
+position = Vector2(-15, -5)
+scale = Vector2(0.5660377, 0.7846154)
+texture = ExtResource("9_mogjk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 53, 65)
+
+[node name="Forearm" type="Node2D" parent="Rig/Torso/ArmNear" unique_id=1583107722]
+position = Vector2(0, 46)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmNear/Forearm" unique_id=1559411319]
+position = Vector2(-12, -3)
+scale = Vector2(0.4528302, 0.86206895)
+texture = ExtResource("9_mogjk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 65, 53, 58)
+
+[node name="Hand" type="Node2D" parent="Rig/Torso/ArmNear/Forearm" unique_id=177808772]
+position = Vector2(0, 46)
+
+[node name="Art" type="Sprite2D" parent="Rig/Torso/ArmNear/Forearm/Hand" unique_id=936322225]
+position = Vector2(-14, -4)
+texture = ExtResource("10_pebg2")
+centered = false
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1536807973]
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("11_hcytx")
+offset = Vector2(0, -238)
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=174504647]

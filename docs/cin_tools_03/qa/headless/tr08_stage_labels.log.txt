@@ -1,0 +1,12 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Developer label flag is off by default
+PASS: R14 stair: no top developer clip line for bound ART-08 clips (141 samples)
+PASS: R14 stair: bottom destination plate is shown
+PASS: R17 stair: no top developer clip line for bound ART-08 clips (120 samples)
+PASS: R17 stair: bottom destination plate is shown
+PASS: A true stand-in clip keeps its STAND-IN label on the stage without the flag
+PASS: --tr08-debug-labels shows the bound ART-08 clip names
+TR08 LABELS: 7 checks, 0 failure(s)
