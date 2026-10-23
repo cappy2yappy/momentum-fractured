@@ -1,0 +1,36 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+HARNESS: initial rendered-window focus warmup; test body unchanged
+CASE hold_from_rest_d1 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Hold A from rest (start delay 1) completes with one request and control back
+FAIL: Hold A from rest (delay 1) plays the embodied doorway, not the inherited wipe
+FAIL: Hold A from rest (delay 1) hands back control by tick 200 (-1)
+CASE hold_from_rest_d4 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Hold A from rest (start delay 4) completes with one request and control back
+FAIL: Hold A from rest (delay 4) plays the embodied doorway, not the inherited wipe
+FAIL: Hold A from rest (delay 4) hands back control by tick 200 (-1)
+CASE hold_from_rest_d9 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Hold A from rest (start delay 9) completes with one request and control back
+FAIL: Hold A from rest (delay 9) plays the embodied doorway, not the inherited wipe
+FAIL: Hold A from rest (delay 9) hands back control by tick 200 (-1)
+CASE hold_from_rest_d17 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Hold A from rest (start delay 17) completes with one request and control back
+FAIL: Hold A from rest (delay 17) plays the embodied doorway, not the inherited wipe
+FAIL: Hold A from rest (delay 17) hands back control by tick 200 (-1)
+CASE pre_request_focus_off1 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Interruption focus+1 really landed before the request
+FAIL: After focus at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off6 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Interruption focus+6 really landed before the request
+FAIL: After focus at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off12 -> in_r13 start=-1 done=-1 req=0 canal= final: room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=false D=false
+   t000 room=13 phase= tr=0.000 pend=-1 phys=true floor=false pos=(330.0,1158.0) vel=(0,0) clip= f=0 armed=false cd=0.00 A=true D=false
+FAIL: Interruption focus+12 really landed before the request
+FAIL: After focus at +12 ticks with A held, the passage completes once with control back

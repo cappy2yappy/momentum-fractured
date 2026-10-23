@@ -1,0 +1,4 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: Native FK input demonstration: samples=512 wall=24.227348 playback drift=0.02468366666667 shots=[1, 2]

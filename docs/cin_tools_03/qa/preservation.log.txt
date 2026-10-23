@@ -1,0 +1,3 @@
+PASS: Draft changes confined to studio namespaces and additive preview seam
+PASS: 9 reused ART-08 files match pinned source bytes
+PASS: Gameplay, Canal Doorway, save schema, canon and approved sprite files have no changes

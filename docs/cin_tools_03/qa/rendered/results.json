@@ -1,0 +1,68 @@
+[
+  {
+    "suite": "cin_tools_03/workspace",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 0.76,
+    "passes": 29,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/qa/rendered/cin_tools_03_workspace.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_03/qa/rendered/cin_tools_03_workspace.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "cin_tools_01/authoring",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 0.8,
+    "passes": 27,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/qa/rendered/cin_tools_01_authoring.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_03/qa/rendered/cin_tools_01_authoring.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "cin_tools_01/runtime",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 1.42,
+    "passes": 103,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/qa/rendered/cin_tools_01_runtime.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_03/qa/rendered/cin_tools_01_runtime.gd",
+      "--",
+      "--test"
+    ]
+  }
+]

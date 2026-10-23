@@ -1,0 +1,4 @@
+Opening Cinematic Studio with 4.6.1.stable.official.14d19694e
+Log: /var/folders/dj/zxkz_ps506q9py3p1jmn5g2w0000gn/T//cin-tools-03-studio-501.log
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4

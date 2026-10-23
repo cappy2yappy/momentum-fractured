@@ -1,0 +1,8 @@
+{
+  "state": "handed-off",
+  "last_move": "baton-pass",
+  "last_agent": "Codex CIN-TOOLS-03 Mac launch diagnosis owner",
+  "next_agent": "Creator / PM review",
+  "updated_at": "2026-10-23",
+  "summary": "Same PR100 Mac freeze fixed: launcher omits --test, restoring NSApplication native input. OS pointer smoke and 333 headless +333 renderer checks passed; 203 Studio checks use normal Mac loop. Authored saves preserved; QA outputs isolated. Keep draft; QA101 separately awaits PM acceptance."
+}

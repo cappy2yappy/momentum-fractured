@@ -1,0 +1,111 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: All 18 FK pivots, including Hand/Boot children, have visible handles at Fit
+PASS: Input click selects .
+PASS: Input click selects Rig
+PASS: Input click selects Rig/Torso
+PASS: Input click selects Rig/Torso/Head
+PASS: Input click selects Rig/Torso/Hair
+PASS: Input click selects Rig/Torso/Ribbon
+PASS: Input click selects Rig/Torso/ArmNear
+PASS: Input click selects Rig/Torso/ArmNear/Forearm
+PASS: Input click selects Rig/Torso/ArmFar
+PASS: Input click selects Rig/Torso/ArmFar/Forearm
+PASS: Input click selects Rig/LegNear
+PASS: Input click selects Rig/LegNear/Shin
+PASS: Input click selects Rig/LegFar
+PASS: Input click selects Rig/LegFar/Shin
+PASS: Input click selects Rig/Torso/ArmNear/Forearm/Hand
+PASS: Input click selects Rig/Torso/ArmFar/Forearm/Hand
+PASS: Input click selects Rig/LegNear/Shin/Boot
+PASS: Input click selects Rig/LegFar/Shin/Boot
+PASS: No rotation-grip occlusion with selected .
+PASS: No rotation-grip occlusion with selected Rig
+PASS: No rotation-grip occlusion with selected Rig/Torso
+PASS: No rotation-grip occlusion with selected Rig/Torso/Head
+PASS: No rotation-grip occlusion with selected Rig/Torso/Hair
+PASS: No rotation-grip occlusion with selected Rig/Torso/Ribbon
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmNear
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmNear/Forearm
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmFar
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmFar/Forearm
+PASS: No rotation-grip occlusion with selected Rig/LegNear
+PASS: No rotation-grip occlusion with selected Rig/LegNear/Shin
+PASS: No rotation-grip occlusion with selected Rig/LegFar
+PASS: No rotation-grip occlusion with selected Rig/LegFar/Shin
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmNear/Forearm/Hand
+PASS: No rotation-grip occlusion with selected Rig/Torso/ArmFar/Forearm/Hand
+PASS: No rotation-grip occlusion with selected Rig/LegNear/Shin/Boot
+PASS: No rotation-grip occlusion with selected Rig/LegFar/Shin/Boot
+PASS: Selection clicks never create pose edits or undo entries
+PASS: Normal mouse motion exposes hovered joint
+PASS: Input drag moves in correct parent coordinates: Rig/Torso
+PASS: One completed drag is one unkeyed undo: Rig/Torso
+PASS: Undo restores pre-drag pose: Rig/Torso
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/Head
+PASS: One completed drag is one unkeyed undo: Rig/Torso/Head
+PASS: Undo restores pre-drag pose: Rig/Torso/Head
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/Hair
+PASS: One completed drag is one unkeyed undo: Rig/Torso/Hair
+PASS: Undo restores pre-drag pose: Rig/Torso/Hair
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/Ribbon
+PASS: One completed drag is one unkeyed undo: Rig/Torso/Ribbon
+PASS: Undo restores pre-drag pose: Rig/Torso/Ribbon
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/ArmNear
+PASS: One completed drag is one unkeyed undo: Rig/Torso/ArmNear
+PASS: Undo restores pre-drag pose: Rig/Torso/ArmNear
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/ArmFar/Forearm
+PASS: One completed drag is one unkeyed undo: Rig/Torso/ArmFar/Forearm
+PASS: Undo restores pre-drag pose: Rig/Torso/ArmFar/Forearm
+PASS: Input drag moves in correct parent coordinates: Rig/LegNear
+PASS: One completed drag is one unkeyed undo: Rig/LegNear
+PASS: Undo restores pre-drag pose: Rig/LegNear
+PASS: Input drag moves in correct parent coordinates: Rig/LegFar/Shin
+PASS: One completed drag is one unkeyed undo: Rig/LegFar/Shin
+PASS: Undo restores pre-drag pose: Rig/LegFar/Shin
+PASS: Input drag moves in correct parent coordinates: Rig/Torso/ArmNear/Forearm/Hand
+PASS: One completed drag is one unkeyed undo: Rig/Torso/ArmNear/Forearm/Hand
+PASS: Undo restores pre-drag pose: Rig/Torso/ArmNear/Forearm/Hand
+PASS: Input drag moves in correct parent coordinates: Rig/LegFar/Shin/Boot
+PASS: One completed drag is one unkeyed undo: Rig/LegFar/Shin/Boot
+PASS: Undo restores pre-drag pose: Rig/LegFar/Shin/Boot
+PASS: Unkeyed gestures add no animation tracks
+PASS: Save refuses an unkeyed pointer preview
+PASS: Explicit Key pose permits save of the dragged joint
+PASS: Keyed pointer position survives scrub
+PASS: Undo after keying restores the prior native clip
+PASS: Reload restores saved pointer-authored session
+PASS: Pointer-authored clip reused at sequence 1.9
+PASS: Pointer-authored clip reused at sequence 6.1
+PASS: Move transform correct at (1024, 640) / canvas 1.0x / rotated Director
+PASS: Move transform correct at (1024, 640) / canvas 1.5x / rotated Director
+PASS: Move transform correct at (1024, 640) / canvas 2.0x / rotated Director
+PASS: Move transform correct at (1440, 900) / canvas 1.0x / rotated Director
+PASS: Move transform correct at (1440, 900) / canvas 1.5x / rotated Director
+PASS: Move transform correct at (1440, 900) / canvas 2.0x / rotated Director
+PASS: Gold rotation grip uses the child pivot through all ancestor transforms
+PASS: Rotation gesture undo restores the whole gesture
+PASS: Alt-drag rotates a child; horizontal drag is stable at the exact pivot
+PASS: Move resolves non-uniformly scaled FK ancestors
+PASS: Escape cancels active drag without keying
+PASS: Window focus-loss signal cancels and restores active drag
+PASS: Changing canvas zoom cancels and restores a captured gesture
+PASS: Hiding handles cancels the active drag safely
+PASS: Mouse release outside canvas ends capture as one gesture
+PASS: Canvas input does not consume Play button
+PASS: Canvas input does not consume Pause button
+PASS: Native timeline receives mouse input after canvas release
+PASS: Reduced motion disables pointer handles and editing
+PASS: Scrubbing discards unkeyed properties absent from animation tracks
+PASS: UI blocks switching from pending joint preview to shot framing
+PASS: Wrong-domain numeric field cannot mutate shot framing
+PASS: Wrong-domain Key pose cannot clear joint dirtiness or enable Save
+PASS: Key confirms pending joints and clears its count
+PASS: Wrong-domain numeric edit cannot mutate a joint during a shot preview
+PASS: Wrong-domain joint key retains pending shot dirtiness
+PASS: Multiple joint previews remain explicit before Key pose
+PASS: One explicit Key commits the whole joint batch
+PASS: Editing a Studio instance never pollutes its cached seed AnimationLibrary
+PASS: Scrub discards unkeyed shot rotation even when the seed has no rotation track
+CIN-TOOLS-03 POINTER: 107 checks, 0 failure(s)

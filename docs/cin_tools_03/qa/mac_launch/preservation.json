@@ -1,0 +1,8 @@
+{
+  "existing_resources": 35,
+  "changed": [
+    "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/rendered/fresh_process_profile/studio_session.tres"
+  ],
+  "authored_resources_preserved": 11,
+  "note": "Initial legacy QA runner reset its disposable rendered/fresh_process_profile before a sandbox abort. Two exports were recovered byte-identically; only the semantically equivalent QA AnimationLibrary snapshot was regenerated. Fixed runner allocates fresh run directories."
+}

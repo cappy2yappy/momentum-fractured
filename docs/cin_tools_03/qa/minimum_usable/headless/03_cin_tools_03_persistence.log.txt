@@ -1,0 +1,12 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Writer saves native session and reusable exports
+PASS: Exact same clip object bound in shot at 1.9 s
+PASS: Authored pose at matching clip time 1.9 s
+PASS: Exact same clip object bound in shot at 6.1 s
+PASS: Authored pose at matching clip time 6.1 s
+PASS: Shot one retains independent wide framing
+PASS: Shot two retains saved pan and zoom
+CIN-TOOLS-03 PERSISTENCE: 7 checks, 0 failure(s)

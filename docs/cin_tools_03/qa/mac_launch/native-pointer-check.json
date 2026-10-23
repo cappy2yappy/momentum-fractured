@@ -1,0 +1,39 @@
+{
+  "method": "cua_repl native desktop pointer and window actions; not Input.parse_input_event",
+  "engine": "4.6.1.stable.official.14d19694e",
+  "results": [
+    {
+      "action": "No-test comparison launch, 1280x720",
+      "observed": "NSApplication event loop and accessible native window"
+    },
+    {
+      "action": "Native Play click",
+      "observed": "Timeline advanced from 0.00 to 1.78 seconds during screenshot acquisition"
+    },
+    {
+      "action": "Native Pause and timeline click",
+      "observed": "Timeline 1.90 seconds; rig handles visible"
+    },
+    {
+      "action": "Native forearm drag from (532,390) to (552,380)",
+      "observed": "Torso/ArmNear/Forearm selected, unkeyed move notice, X=23.8 / Y=17.5"
+    },
+    {
+      "action": "Native Undo and subsequent transport clicks",
+      "observed": "Forearm restored to X=0 / Y=46; timeline responded at 1.92 seconds"
+    },
+    {
+      "action": "Native window zoom and restore",
+      "observed": "Stage and controls relaid out; restored window responsive"
+    },
+    {
+      "action": "Command-Tab then native control clicks",
+      "observed": "Controls remained responsive after focus return"
+    },
+    {
+      "action": "Corrected launch.command from /private/tmp at 1024x640, disposable launcher_profile",
+      "observed": "Native Play reached 1.92 seconds; Pause and scrub returned to 1.90 seconds"
+    }
+  ],
+  "limits": "Bounded desktop smoke. No physical hardware, every display scale, controller, Windows, full campaign, or creator fidelity acceptance."
+}

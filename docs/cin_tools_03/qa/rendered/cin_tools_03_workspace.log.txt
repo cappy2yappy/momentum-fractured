@@ -1,0 +1,33 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: Animator loads native actor
+PASS: Seed clip obeys bounded property-only contract
+PASS: Sprite keys sample approved run strip
+PASS: Hybrid switches to editable cutout rig
+PASS: Pose inspector keys joint at playhead
+PASS: Edited native clip saves
+PASS: Edited key survives disk reload
+PASS: Director consumes the same session clip object
+PASS: Edited pose appears in first shot
+PASS: Same edited pose reused in second shot
+PASS: Undo replaces shared clip and updates shot
+PASS: Reload saved clip updates Director
+PASS: Remove rotation key restores interpolation
+PASS: Braking root stays fixed throughout final settle
+PASS: Reduced timeline holds pose and framing for equal duration
+PASS: Reduced Director retains standard shot duration
+PASS: Director keys shot pan and zoom in native timeline
+PASS: Shot framing edit supports undo
+PASS: Shot framing survives save and reload
+PASS: Director edit survives workspace switching
+PASS: Inherited scrub and step remain 60 Hz
+PASS: Inherited transport plays at unscaled delta
+PASS: Original preset remains connected: special_transition
+PASS: Original preset remains connected: major_biome
+PASS: Original preset remains connected: boss_intro
+PASS: Reject executable/non-property clip tracks
+PASS: Director shot persistence rejects executable tracks
+PASS: Reject nonfinite transform values
+PASS: Workspace has no gameplay scene owner
+CIN-TOOLS-03 WORKSPACE: 29 checks, 0 failure(s)

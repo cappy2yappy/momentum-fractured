@@ -1,0 +1,189 @@
+[
+  {
+    "suite": "cin_tools_03/workspace",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.52,
+    "passes": 39,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/01_cin_tools_03_workspace.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/01_cin_tools_03_workspace.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_03/layout",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.6,
+    "passes": 27,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/02_cin_tools_03_layout.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/02_cin_tools_03_layout.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_03/pointer",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 1.88,
+    "passes": 107,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/03_cin_tools_03_pointer.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/03_cin_tools_03_pointer.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_03/persistence",
+    "flags": [
+      "--write-example"
+    ],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.6,
+    "passes": 10,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/04_cin_tools_03_persistence.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/04_cin_tools_03_persistence.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile",
+      "--write-example"
+    ]
+  },
+  {
+    "suite": "cin_tools_03/persistence",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.43,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/05_cin_tools_03_persistence.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/05_cin_tools_03_persistence.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_03/pointer_example",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.42,
+    "passes": 8,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/06_cin_tools_03_pointer_example.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/06_cin_tools_03_pointer_example.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_01/authoring",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 0.51,
+    "passes": 27,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/07_cin_tools_01_authoring.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/07_cin_tools_01_authoring.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  },
+  {
+    "suite": "cin_tools_01/runtime",
+    "flags": [],
+    "mode": "headless",
+    "exit": 0,
+    "seconds": 1.18,
+    "passes": 103,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/08_cin_tools_01_runtime.engine.log",
+      "--script",
+      "res://build/cin_tools_03/minimum_usable/headless/run-506e4xqi/08_cin_tools_01_runtime.gd",
+      "--",
+      "--test",
+      "--studio-save-dir=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/cin-tools-03/build/cin_tools_03/minimum_usable/headless/run-506e4xqi/fresh_process_profile"
+    ]
+  }
+]

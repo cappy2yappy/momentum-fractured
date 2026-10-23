@@ -1,0 +1,72 @@
+Analysis of sampling Godot (pid 17366) every 10 milliseconds
+Process:         Godot [17366]
+Path:            /Applications/Godot.app/Contents/MacOS/Godot
+Load Address:    0x10493c000
+Identifier:      org.godotengine.godot
+Version:         4.6.1 (4.6.1)
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  zsh [17361]
+Target Type:     live task (Roots Present)
+
+Date/Time:       2026-10-23 17:10:15.061 -0400
+Launch Time:     2026-10-23 17:08:11.273 -0400
+OS Version:      macOS 27.0.1 (26A434)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         212.0M
+Physical footprint (peak):  275.0M
+Idle exit:                  untracked
+----
+
+Call graph:
+    209 Thread_1426601: Main Thread   DispatchQueue_<multiple>
+    + 209 start  (in dyld) + 6688  [0x189a37e80]
+    +   209 main  (in Godot) + 924  [0x10519cf98]
+    +     209 OS_MacOS_Headless::run()  (in Godot) + 292  [0x10513edc4]
+    +       204 Main::iteration()  (in Godot) + 1308  [0x1051c16c4]
+    +       ! 165 RenderingServerDefault::_draw(bool, double)  (in Godot) + 428  [0x1089f72f0]
+    +       ! : 140 RendererViewport::draw_viewports(bool)  (in Godot) + 2064  [0x10885bee4]
+    +       ! : | 140 -[NSOpenGLContext flushBuffer]  (in AppKit) + 28  [0x18e7271c4]
+    +       ! : |   140 CGLFlushDrawable  (in OpenGL) + 64  [0x217ba76e8]
+    +       ! : |     103 glSwap_Exec  (in GLEngine) + 200  [0x217d9cef0]
+    +       ! : |     + 98 NSCGLSurfaceFlush  (in AppKit) + 76  [0x18f0f1350]
+    +       ! : |     + ! 98 -[NSCGLSurface synchronize]  (in AppKit) + 140  [0x18f0f1c94]
+    +       ! : |     + !   98 NSWaitUntilHostTime  (in AppKit) + 116  [0x18e928520]
+    +       ! : |     + !     98 mach_msg  (in libsystem_kernel.dylib) + 24  [0x189dc8fac]
+    +       ! : |     + !       98 mach_msg_overwrite  (in libsystem_kernel.dylib) + 480  [0x189dd1a28]
+    +       ! : |     + !         98 mach_msg2_internal  (in libsystem_kernel.dylib) + 76  [0x189ddb8e0]
+    +       ! : |     + !           98 mach_msg2_trap  (in libsystem_kernel.dylib) + 8  [0x189dc8c20]
+    +       ! : |     + 5 NSCGLSurfaceFlush  (in AppKit) + 132  [0x18f0f1388]
+    +       ! : |     +   5 -[NSCGLSurface flushRect:]  (in AppKit) + 780  [0x18f0f1744]
+    +       ! : |     +     4 -[NSIOAccelSurface frontBuffer]  (in AppKit) + 1228  [0x18f0f2698]
+    +       ! : |     +     : 2 glDrawArrays_IMM_Exec  (in GLEngine) + 268  [0x217e41f0c]
+    +       ! : |     +     : | 2 gleDoDrawDispatchCore  (in GLEngine) + 672  [0x217e5d468]
+    +       ! : |     +     : |   1 gldUpdateDispatch  (in AppleMetalOpenGLRenderer) + 2004  [0x1230e9d4c]
+    +       ! : |     +     : |   + 1 GLDContextRec::updateTextureState(unsigned int, unsigned long long const*, unsigned int)  (in AppleMetalOpenGLRenderer) + 124  [0x1230ebbe8]
+    +       ! : |     +     : |   1 gldUpdateDispatch  (in AppleMetalOpenGLRenderer) + 2100  [0x1230e9dac]
+    +       ! : |     +     : |     1 GLDContextRec::updateTextureState(unsigned int, unsigned long long const*, unsigned int)  (in AppleMetalOpenGLRenderer) + 292  [0x1230ebc90]
+    +       ! : |     +     : |       1 GLDContextRec::updateTextureState(unsigned int, unsigned long long const*, unsigned int)::$_0::operator()(unsigned int, unsigned int) const  (in AppleMetalOpenGLRenderer) + 132  [0x1230ed248]
+    +       ! : |     +     : |         1 GLDTextureRec::isValidTexture()  (in AppleMetalOpenGLRenderer) + 172  [0x1230c10fc]
+    +       ! : |     +     : |           1 MTLPixelFormatGetInfoForDevice  (in Metal) + 60  [0x196acb8c4]
+    +       ! : |     +     : |             1 ???  (in <unknown binary>)  [0x1995d97c0]
+    +       ! : |     +     : 2 glDrawArrays_IMM_Exec  (in GLEngine) + 676  [0x217e420a4]
+    +       ! : |     +     :   2 gleDrawArraysOrElements_ExecCore  (in GLEngine) + 536  [0x217edbf18]
+    +       ! : |     +     :     2 gleBeginPrimitiveTCLFunc  (in GLEngine) + 88  [0x217e79384]
+    +       ! : |     +     :       2 gldBeginPrimitiveBuffer(GLDContextRec*, unsigned int, int*)  (in AppleMetalOpenGLRenderer) + 280  [0x1230d91c8]
+    +       ! : |     +     :         1 GLDContextRec::beginRenderPass()  (in AppleMetalOpenGLRenderer) + 68  [0x1230c8ae4]
+    +       ! : |     +     :         + 1 GLDContextRec::getCommandBuffer()  (in AppleMetalOpenGLRenderer) + 36  [0x1230c8430]
+    +       ! : |     +     :         +   1 -[AGXG16GFamilyCommandQueue commandBufferWithUnretainedReferences]  (in AGXMetalG16G_B0) + 44  [0x21ddce8a8]
+    +       ! : |     +     :         +     1 -[AGXG16GFamilyCommandBuffer initWithQueue:retainedReferences:]  (in AGXMetalG16G_B0) + 64  [0x21ddc9454]
+    +       ! : |     +     :         +       1 -[IOGPUMetalCommandBuffer initWithQueue:retainedReferences:]  (in IOGPU) + 0  [0x1b14eb0f8]
+    +       ! : |     +     :         1 GLDContextRec::beginRenderPass()  (in AppleMetalOpenGLRenderer) + 128  [0x1230c8b20]
+    +       ! : |     +     :           1 -[AGXG16GFamilyCommandBuffer renderCommandEncoderWithDescriptor:]  (in AGXMetalG16G_B0) + 160  [0x21ddc9c00]
+    +       ! : |     +     :             1 -[AGXG16GFamilyRenderContext initWithCommandBuffer:descriptor:subEncoderIndex:framebuffer:]  (in AGXMetalG16G_B0) + 2836  [0x21df66890]
+    +       ! : |     +     :               1 std::__function::__value_func<void (void*)>::swap[abi:nqn220106](std::__function::__value_func<void (void*)>&)  (in AGXMetalG16G_B0) + 184  [0x21df8667c]
+    +       ! : |     +     1 -[NSIOAccelSurface frontBuffer]  (in AppKit) + 1232  [0x18f0f269c]
+    +       ! : |     +       1 GLDContextRec::flushContext(bool)  (in AppleMetalOpenGLRenderer) + 648  [0x1230eaa48]
+    +       ! : |     +         1 -[_MTLCommandQueue submitCommandBuffer:]  (in Metal) + 144  [0x196ae7b8c]
+    +       ! : |     +           1 _dispatch_lane_barrier_sync_invoke_and_complete  (in libdispatch.dylib) + 56  [0x189c5c490]
+
+[Excerpt; full sample retained under build/cin_tools_03/freeze_diagnosis/]
