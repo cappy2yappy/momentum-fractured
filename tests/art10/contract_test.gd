@@ -1,5 +1,6 @@
 extends SceneTree
 const Contract = preload("res://tools/art10/contract.gd")
+const Raster = preload("res://tools/art10/raster_contact.gd")
 var checks := 0
 var failures := 0
 func check(value: bool, label: String):
@@ -19,6 +20,38 @@ func fixture() -> Dictionary:
 	return {"frames":frames,"treads":[[0,100,60]]}
 
 func _initialize():
+	var image = Image.create(64,64,false,Image.FORMAT_RGBA8)
+	image.fill(Color.TRANSPARENT)
+	image.fill_rect(Rect2i(16,40,20,20),Color.WHITE)
+	check(Raster.inspect(image,Vector2(32,60)).is_empty(),"transparent padded frame")
+	check(Raster.supported(image,Vector2(20,60)),"visible sole edge")
+	check(not Raster.supported(image,Vector2(50,60)),"transparent contact rejected")
+	check(not Raster.supported(image,Vector2(20,45)),"interior body pixel not sole")
+	check(not Raster.supported(image,Vector2(-1,60)),"negative contact rejected")
+	check(not Raster.supported(image,Vector2(64,60)),"outside contact rejected")
+	check("Pivot outside frame." in Raster.inspect(image,Vector2(64,60)),"pivot bounds")
+	var empty = Image.create(64,64,false,Image.FORMAT_RGBA8)
+	empty.fill(Color.TRANSPARENT)
+	check("Fully transparent frame." in Raster.inspect(empty,Vector2(32,60)),"empty frame rejected")
+	var opaque = image.duplicate()
+	opaque.fill(Color.WHITE)
+	check("Opaque artwork touches frame boundary." in Raster.inspect(opaque,Vector2(32,60)),"baked opaque background rejected")
+	var hidden_rgb = image.duplicate()
+	hidden_rgb.set_pixel(0,0,Color(1,0,0,0))
+	check(Raster.digest(image)==Raster.digest(hidden_rgb),"transparent RGB cannot defeat duplicate check")
+	hidden_rgb.set_pixel(20,40,Color.RED)
+	check(Raster.digest(image)!=Raster.digest(hidden_rgb),"real pixel change distinguished")
+	var duplicate = fixture()
+	var atlas = Image.create(768,64,false,Image.FORMAT_RGBA8)
+	atlas.fill(Color.TRANSPARENT)
+	for i in 12: atlas.blit_rect(image,Rect2i(0,0,64,64),Vector2i(i*64,0))
+	var test_path = "res://assets/art10/raster_test_tmp.png"
+	check(atlas.save_png(test_path)==OK,"write disposable raster fixture")
+	for frame in duplicate.frames: frame.asset = test_path
+	check("Fewer than twelve distinct raster drawings." in Contract.validate_clip(duplicate,true),"different atlas regions with same pixels rejected")
+	duplicate.frames[4].contacts[0].sole[0] = 50
+	check("Contact marker lacks visible sole-edge support." in Contract.validate_clip(duplicate,true),"raster check wired into contract")
+	check(DirAccess.remove_absolute(test_path)==OK,"remove disposable fixture")
 	var valid = fixture()
 	check(Contract.validate_clip(valid,false).is_empty(), "numeric fixture accepted")
 	check(not Contract.validate_clip({"frames":[],"treads":[]},false).is_empty(), "empty clips rejected")

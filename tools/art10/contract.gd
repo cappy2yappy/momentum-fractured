@@ -1,5 +1,6 @@
 extends RefCounted
 ## Review-only contract; never authorizes production activation.
+const Raster = preload("res://tools/art10/raster_contact.gd")
 const PHASES = ["approach", "sprint", "stairs", "brake", "settle"]
 static func point(value) -> bool:
 	return value is Array and value.size() == 2 and number(value[0]) and number(value[1])
@@ -22,6 +23,9 @@ static func validate_clip(clip: Dictionary, check_assets := true) -> Array:
 			return ["Tread bounds must be finite and increase."]
 	var phases: Array = []
 	var regions: Dictionary = {}
+	var pixels: Dictionary = {}
+	var images: Dictionary = {}
+	var expected_size = Vector2i.ZERO
 	var last_phase := -1
 	var planted: Dictionary = {}
 	var stair_contacts: Array = []
@@ -51,16 +55,27 @@ static func validate_clip(clip: Dictionary, check_assets := true) -> Array:
 			continue
 		if region[0] < 0 or region[1] < 0 or region[2] <= 0 or region[3] <= 0:
 			errors.append("Atlas region bounds invalid.")
+			continue
 		var asset = str(frame.get("asset", ""))
 		if not asset.begins_with("res://assets/art10/") or ".." in asset:
 			errors.append("Only isolated ART10 art may be bound.")
+			continue
 		regions[asset + str(region)] = true
+		var raster: Image
 		if check_assets:
-			var image = Image.load_from_file(asset)
+			if not images.has(asset): images[asset] = Image.load_from_file(asset)
+			var image = images[asset]
 			if image == null or image.is_empty():
 				errors.append("Missing artwork: " + asset)
-			elif region[0]+region[2] > image.get_width() or region[1]+region[3] > image.get_height():
+				continue
+			if region[0]+region[2] > image.get_width() or region[1]+region[3] > image.get_height():
 				errors.append("Atlas region exceeds image.")
+				continue
+			raster = image.get_region(Rect2i(region[0],region[1],region[2],region[3]))
+			errors.append_array(Raster.inspect(raster,Vector2(frame.pivot[0],frame.pivot[1])))
+			if expected_size == Vector2i.ZERO: expected_size = raster.get_size()
+			elif raster.get_size() != expected_size: errors.append("Inconsistent frame dimensions.")
+			pixels[Raster.digest(raster)] = true
 		var current_plants: Dictionary = {}
 		var contacts = frame.get("contacts", [])
 		if not contacts is Array:
@@ -70,6 +85,9 @@ static func validate_clip(clip: Dictionary, check_assets := true) -> Array:
 			if not contact is Dictionary or contact.get("foot", "") not in ["left", "right"] or not point(contact.get("sole")):
 				errors.append("Contact needs foot and measured sole.")
 				continue
+			if current_plants.has(contact.foot): errors.append("Duplicate foot contact.")
+			if check_assets and not Raster.supported(raster,Vector2(contact.sole[0],contact.sole[1])):
+				errors.append("Contact marker lacks visible sole-edge support.")
 			var ti = contact.get("tread", -1)
 			if not number(ti) or float(ti) != floorf(float(ti)) or ti < 0 or ti >= treads.size():
 				errors.append("Invalid contact tread.")
@@ -86,6 +104,7 @@ static func validate_clip(clip: Dictionary, check_assets := true) -> Array:
 				stair_contacts.append(foot)
 		planted = current_plants
 	if phases != PHASES: errors.append("All five production phases required.")
+	if check_assets and pixels.size() < 12: errors.append("Fewer than twelve distinct raster drawings.")
 	if regions.size() < 12: errors.append("Repeated static keys are not a production cycle.")
 	if stair_contacts.size() < 4: errors.append("At least four alternating stair contacts required.")
 	var last = frames.back()

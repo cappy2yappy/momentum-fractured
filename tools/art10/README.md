@@ -1,3 +1,19 @@
+# ART-10 current continuation status — 2026-10-23
+
+Local-only continuation completed: 15 source images audited, eight ART08 strips / 40 frames verified against their manifest; three Image4 source keys padded losslessly to a common 128x128 reference canvas. No original artwork changed.
+
+46 Godot 4.6.1 headless contract/viewer checks pass, including visible alpha-edge contact, transparent-frame/border/pivot checks and duplicate raster detection. These tests do not identify a foot anatomically or certify heel/toe clearance. Source capture: native Windows OpenGL/NVIDIA alignment review; no completed gait or new native-speed comparison video.
+
+See ART_MANE_HANDOFF.md and FRAME_SPEC.json for 40 original-key requests and required hidden surfaces. Existing repository destination verified as PR62; direct Art Mane thread lookup failed and no handoff was sent. All four production slots remain empty. QA10 remains the first integration dependency.
+
+Local aligned images and native PNG evidence remain under ignored build/art10-local-review and are not uploaded. qa/local_audit.json contains measurements/hashes only.
+
+Run audit_local.gd with three user arguments: existing local repository root, Image4 reference folder, output folder. Never point output at a source directory. The audit only pads source ROIs; it does not author or certify new poses.
+
+---
+
+## Original checkpoint record (31-check initial run)
+
 # ART-10 production staircase checkpoint
 
 Status: **incomplete; new drawings blocked**. This change supplies review tooling,

@@ -1,0 +1,823 @@
+{
+  "status": "artist specification only; all requested keys missing/unapproved for ART10",
+  "proposed_canvas": [
+    480,
+    724
+  ],
+  "proposed_pivot": [
+    240,
+    600
+  ],
+  "reference_scale": 0.303125,
+  "dimensions_note": "Use ART08 container and ART04 identity density (~308px visible standing height), NOT a 724px-tall body. No per-pose bounding-box rescaling.",
+  "directions": {
+    "ascent": "right-facing master",
+    "descent": "leftward review against approved stair_down_key; preserve ribbon handedness"
+  },
+  "candidate_variants": {
+    "grounded": "restrained body lean and overlap",
+    "expressive": "greater anticipation and secondary overlap; identical identity, limb lengths and contact obligations"
+  },
+  "keys": [
+    {
+      "id": "ascent_AP01",
+      "phase": "approach",
+      "brief": "Lead-foot contact; ordinary run, head upright",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_AP02",
+      "phase": "approach",
+      "brief": "Opposite knee passes; preserve run silhouette",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_AP03",
+      "phase": "sprint",
+      "brief": "Opposite contact; begin shoulder-led arms-back transition",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_AP04",
+      "phase": "sprint",
+      "brief": "Arms settle behind torso; first stair reach anticipated",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST01",
+      "phase": "stairs",
+      "brief": "Lead forefoot plants on next tread; trailing toe still supports",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST02",
+      "phase": "stairs",
+      "brief": "Weight moves over lead foot; trailing leg releases",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST03",
+      "phase": "stairs",
+      "brief": "Swing knee passes supporting leg; boot clears riser and nosing",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST04",
+      "phase": "stairs",
+      "brief": "Opposite boot reaches next tread; heel/forefoot angle readable",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST05",
+      "phase": "stairs",
+      "brief": "Opposite foot contact; preserve limb lengths and separate silhouettes",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST06",
+      "phase": "stairs",
+      "brief": "Opposite supporting leg extends into push",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST07",
+      "phase": "stairs",
+      "brief": "Lead knee passes; keep supporting sole stationary",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_ST08",
+      "phase": "stairs",
+      "brief": "Lead foot reaches following tread; closes stride pair",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_BR01",
+      "phase": "brake",
+      "brief": "Last rise onto landing; root vertical motion tapers",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_BR02",
+      "phase": "brake",
+      "brief": "Shorter recovery stride; torso starts rising without neck collapse",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_BR03",
+      "phase": "brake",
+      "brief": "Opposite brake contact ahead of mass; bent knee absorbs forward motion",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_BR04",
+      "phase": "brake",
+      "brief": "Weight moves over braking foot; arms recover toward sides",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_SE01",
+      "phase": "settle",
+      "brief": "Trailing foot joins landing; both feet support",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_SE02",
+      "phase": "settle",
+      "brief": "Torso reaches approved upright proportions; root stationary",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_SE03",
+      "phase": "settle",
+      "brief": "Hair, sleeves and ribbons recover with attached roots",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "ascent_SE04",
+      "phase": "settle",
+      "brief": "Match gameplay idle pose and facing; hold stable endpoint",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_AP01",
+      "phase": "approach",
+      "brief": "Lead-foot contact; ordinary run, head upright",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_AP02",
+      "phase": "approach",
+      "brief": "Opposite knee passes; preserve run silhouette",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_AP03",
+      "phase": "sprint",
+      "brief": "Opposite contact; begin shoulder-led arms-back transition",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_AP04",
+      "phase": "sprint",
+      "brief": "Arms settle behind torso; first stair reach anticipated",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST01",
+      "phase": "stairs",
+      "brief": "Lead forefoot reaches lower tread; trailing leg supports until contact",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST02",
+      "phase": "stairs",
+      "brief": "Landing compression at knee/ankle; head stays stable",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST03",
+      "phase": "stairs",
+      "brief": "Swing knee passes supporting leg; boot clears riser and nosing",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST04",
+      "phase": "stairs",
+      "brief": "Opposite boot reaches next tread; heel/forefoot angle readable",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST05",
+      "phase": "stairs",
+      "brief": "Opposite foot contact; preserve limb lengths and separate silhouettes",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST06",
+      "phase": "stairs",
+      "brief": "Opposite landing compression; avoid locked straight knee",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST07",
+      "phase": "stairs",
+      "brief": "Lead knee passes; keep supporting sole stationary",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_ST08",
+      "phase": "stairs",
+      "brief": "Lead foot reaches following tread; closes stride pair",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_BR01",
+      "phase": "brake",
+      "brief": "Last drop absorbed before horizontal brake",
+      "support": "left",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_BR02",
+      "phase": "brake",
+      "brief": "Shorter recovery stride; torso starts rising without neck collapse",
+      "support": null,
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_BR03",
+      "phase": "brake",
+      "brief": "Opposite brake contact ahead of mass; bent knee absorbs forward motion",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_BR04",
+      "phase": "brake",
+      "brief": "Weight moves over braking foot; arms recover toward sides",
+      "support": "right",
+      "authored": false,
+      "duration_seconds_proposal": 0.08333333333333333,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_SE01",
+      "phase": "settle",
+      "brief": "Trailing foot joins landing; both feet support",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_SE02",
+      "phase": "settle",
+      "brief": "Torso reaches approved upright proportions; root stationary",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_SE03",
+      "phase": "settle",
+      "brief": "Hair, sleeves and ribbons recover with attached roots",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    },
+    {
+      "id": "descent_SE04",
+      "phase": "settle",
+      "brief": "Match gameplay idle pose and facing; hold stable endpoint",
+      "support": "both",
+      "authored": false,
+      "duration_seconds_proposal": 0.1,
+      "required_measurements": [
+        "pivot",
+        "hip",
+        "head_top",
+        "heel_left",
+        "forefoot_left",
+        "heel_right",
+        "forefoot_right",
+        "contact_interval",
+        "fixed_tread_index"
+      ],
+      "note": "Key request, not an existing drawing. Add in-betweens after artist review."
+    }
+  ]
+}
