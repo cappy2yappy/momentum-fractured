@@ -102,6 +102,9 @@ func start():
 		for surface in layers[0].surfaces: report.surfaces.append([surface.position.x,surface.position.y,surface.size.x,surface.size.y])
 		report.foliage_count = layers[0].foliage.size()
 		report.protected_counts = layers[0].protected_counts
+		report.reserved_exit_plaques = layers[0].label_zones.size()
+		report.surface_art_rectangles = []
+		for rect in layers[0].surface_art: report.surface_art_rectangles.append([rect.position.x,rect.position.y,rect.size.x,rect.size.y])
 		report.backgrounds = []
 		for item in layers[0].backgrounds: report.backgrounds.append({"id":item.id,"feet":[item.at.x,item.at.y]})
 		report.rejected_exclusion_placements = layers[0].rejected
@@ -205,11 +208,15 @@ func finish():
 	if mode == "enemy": valid = valid and "windup" in report.states and "strike" in report.states and "recover" in report.states
 	if mode in ["moss","cave"]:
 		report.no_occlusion_intersections = true
+		report.native_exit_labels_uncovered = true
 		for layer in layers:
+			for rect in layer.surface_art:
+				for reserved in layer.label_zones:
+					if rect.intersects(reserved): report.native_exit_labels_uncovered = false
 			for item in layer.foliage + layer.backgrounds:
 				for zone in layer.exclusions:
 					if bank.rect(item.id,item.at).intersects(zone): report.no_occlusion_intersections = false
-		valid = valid and report.no_occlusion_intersections
+		valid = valid and report.no_occlusion_intersections and report.native_exit_labels_uncovered
 		valid = valid and report.protected_counts.anchors >= 2
 		valid = valid and (report.protected_counts.hazards >= 1 if mode=="cave" else report.protected_counts.checkpoints == 1)
 	# Detach and compare at the same phase, so a legitimate collapse transition is not a false failure.

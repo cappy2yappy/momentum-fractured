@@ -9,6 +9,8 @@ var paused_motion = false
 var overlay = false
 var art_enabled = true
 var surfaces: Array = []
+var surface_art: Array = []
+var label_zones: Array = []
 var foliage: Array = []
 var exclusions: Array = []
 var backgrounds: Array = []
@@ -37,6 +39,7 @@ func setup_room(host, style):
 			surfaces.append(surface)
 	for portal in host.expansion.portals(host.room):
 		protected_counts.doors += 1
+		label_zones.append(Rect2(portal.at+Vector2(-108,-8),Vector2(216,56)))
 		exclusions.append(Rect2(portal.at-Vector2(200,200),Vector2(400,400)))
 	for anchor in host.tether_anchors:
 		exclusions.append(Rect2(anchor-Vector2(100,100),Vector2(200,200)))
@@ -68,6 +71,17 @@ func setup_room(host, style):
 				if rect.intersects(exclusion): clear = false; break
 			if clear: foliage.append({"id":id,"at":at})
 			else: rejected += 1
+	# Leave original doorway thresholds/underfoot status labels visible.
+	for surface in surfaces:
+		var pieces = [surface]
+		for reserved in label_zones:
+			var clipped = []
+			for piece in pieces:
+				if not piece.intersects(reserved): clipped.append(piece); continue
+				if reserved.position.x > piece.position.x: clipped.append(Rect2(piece.position,Vector2(reserved.position.x-piece.position.x,piece.size.y)))
+				if reserved.end.x < piece.end.x: clipped.append(Rect2(Vector2(reserved.end.x,piece.position.y),Vector2(piece.end.x-reserved.end.x,piece.size.y)))
+			pieces = clipped
+		surface_art.append_array(pieces)
 	var proposed = [{"id":"column","at":Vector2(190,720)},{"id":"column","at":Vector2(1100,1300)},{"id":"hanging","at":Vector2(600,760)}] if mode=="moss" else [{"id":"cave_rocks","at":Vector2(730,1260)},{"id":"cave_rocks","at":Vector2(1750,1260)}]
 	for item in proposed:
 		var clear = true
@@ -93,7 +107,7 @@ func _draw():
 		if art_enabled:
 			# Recessed forms are low contrast; no art bridge spans a gameplay gap.
 			for item in backgrounds: bank.paint(self,item.id,item.at,0,Color(0.36,0.48,0.44,0.28))
-			for surface in surfaces: tile(surface,"moss_surface" if mode=="moss" else "cave_surface")
+			for surface in surface_art: tile(surface,"moss_surface" if mode=="moss" else "cave_surface")
 			for item in foliage: bank.paint(self,item.id,item.at,clock,Color("9dbba7"),paused_motion)
 		if overlay:
 			for surface in surfaces: draw_rect(surface,Color(0.35,0.94,1,0.9),false,2)

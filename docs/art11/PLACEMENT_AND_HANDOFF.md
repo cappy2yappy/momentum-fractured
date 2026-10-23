@@ -4,7 +4,7 @@
 
 The two world pilots instantiate the existing main scene at the PR94 pin, then select **R16 Root Shrine** or **R15 Lower Sluice**. They read `host.platforms` after the normal room builder finishes. No room definition, collider, gate, exit, save or controller file changes.
 
-Surface art stays inside each runtime Rect2. It tiles at native prepared size with clipped final pieces; a continuous rim marks the exact collider top. The floor retains its real rectangular body. It creates no false bridge across gaps. All platform rectangles and selected foliage/background anchors are recorded in the per-room JSON results in `evidence/`.
+Surface art stays inside each runtime Rect2. It tiles at native prepared size with clipped final pieces; a continuous rim marks the exact collider top. A 216 × 56 reserved region at each doorway keeps its original threshold and underfoot status plaque visible; surface art is clipped around it, so LOCKED/approach labels cannot be painted over. The floor retains its real rectangular body. It creates no false bridge across gaps. All platform rectangles and selected foliage/background anchors are recorded in the per-room JSON results in `evidence/`.
 
 Decorative exclusion zones are evaluated for both moving foliage and recessed architecture:
 - 200px around existing portal endpoints.

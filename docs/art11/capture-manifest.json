@@ -18,8 +18,8 @@
     },
     {
       "file": "cave_art.png",
-      "bytes": 793642,
-      "sha256": "fd22ba324550a70339bf44cdc633c8cae9dd927d26e7dd12354ccf3bd4a6f4fb",
+      "bytes": 803348,
+      "sha256": "442b69756c06132356077d13e0834613a4eaf5f5abee37d8fc19d61424a33574",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     },
@@ -32,15 +32,15 @@
     },
     {
       "file": "cave_collision.png",
-      "bytes": 794990,
-      "sha256": "cc9eb6a859a5235dcddba3d56b7bec8c2afa1a97a821523dee30f220d637497c",
+      "bytes": 804230,
+      "sha256": "124a512eb92d08328c23ca8fb81f20d4c4e544c73f19410e49c41d65d914a63e",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     },
     {
       "file": "cave_detail.png",
-      "bytes": 767449,
-      "sha256": "46783ca71a9fb75c4767c6cb45fb499d464aadb853fd83d14bc349acdf0ea22d",
+      "bytes": 773212,
+      "sha256": "738636d9fa51abe682023a6ea78425c49c79ad0e1da87b60dc9af3f768e26c5f",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     },
@@ -95,8 +95,8 @@
     },
     {
       "file": "moss_art.png",
-      "bytes": 816754,
-      "sha256": "12003b3d428f14b042ef7fe7035b8424e65b0619fae836df8d391e56b92f037f",
+      "bytes": 816885,
+      "sha256": "3aba7ce10a9952e4f16ddc74b1c374689dfc91d9ac2463c2f80a6478f0cce5ef",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     },
@@ -109,15 +109,15 @@
     },
     {
       "file": "moss_collision.png",
-      "bytes": 816794,
-      "sha256": "6e824ba05dc5ff8939850cb11a79bf4eefaee70036df5a60d4e23a25f5a3dd56",
+      "bytes": 816554,
+      "sha256": "b42e60cac23d043c6243f0d6a07f3dcc177b09cc6ea8f4e955aca899558a703a",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     },
     {
       "file": "moss_detail.png",
-      "bytes": 799557,
-      "sha256": "defc2800fbd71e3a885f322873ac2c30e0b82151a732aa844a32b84f6f9fbde3",
+      "bytes": 799884,
+      "sha256": "f39b6063a6f143d725b17ca358f4113e3f1fed9d61ac351bb3cdb951fa3e0518",
       "origin": "native Godot 4.6.1 viewport capture",
       "distribution": "creator review only; not committed as pixels"
     }

@@ -9,7 +9,7 @@
 - 185 cached textures, 3795784 decoded RGBA bytes (3.62 MiB), below the 16 MiB mixed-selection cap. No ongoing texture decoding/upload during normal playback. This is selected CPU/GPU texture payload, not total process or VRAM usage.
 - All selected loops have zero-pixel alpha-base variation. First/last-frame premultiplied color/alpha comparison error is 0.26–0.83% for animated selections at 32 × 32 sampling; this is a seam indicator, not a complete motion-quality metric. All source frames retained.
 - Four native art pilots and four art-off comparison runs pass. Collision shape identities, transforms, dimensions, layers/masks and disabled states match on attachment and immediate same-phase removal.
-- R16 protects three doors, two actual grapple anchors and the checkpoint. R15 protects two doors, two actual anchors, its gate and existing hazardous bay. Every accepted foliage/architecture rectangle clears all exclusions. Exact surfaces/anchors are in the JSON evidence.
+- R16 protects three doors, two actual grapple anchors and the checkpoint. R15 protects two doors, two actual anchors, its gate and existing hazardous bay. Every accepted foliage/architecture rectangle clears all exclusions; surface art also clears reserved doorway status plaques. Exact surfaces/anchors are in the JSON evidence.
 - Real HAZ-01 idle/warning/active/recovery and EN-01 awakening/patrol/windup/strike/recover were observed; no synthesized combat/hazard phases were used for these captures.
 - Existing HAZ-01 contract suite: zero failures. Existing toolkit suite: 56 checks, zero failures. Approved artwork/baseline verifier: zero failures.
 - Production files are unchanged; the draft adds files only under tools/art11 and docs/art11. No asset images, archives, editable projects, screenshot pixels, binaries, or caches are in the Git change.
@@ -18,8 +18,8 @@
 
 | Pilot | Baseline p95 ms | Art p95 ms | Baseline draw calls p95 | Art draw calls p95 |
 | --- | ---: | ---: | ---: | ---: |
-| moss | 7.811 | 7.641 | 64 | 105 |
-| cave | 7.677 | 7.754 | 66 | 98 |
+| moss | 7.811 | 7.949 | 64 | 114 |
+| cave | 7.677 | 7.848 | 66 | 104 |
 | hazard | 8.040 | 7.547 | 24 | 25 |
 | enemy | 7.885 | 8.104 | 12 | 12 |
 
@@ -27,7 +27,7 @@ Each run lasts 12 seconds. Wall-clock inter-frame samples use Time.get_ticks_use
 
 ## Native review and limits
 
-Inspected the candidate gallery (linear and nearest), R16/R15 art-on/off/detail/collision views, poison-plant warning/active states, and slime windup/strike views. Corrected initial oversized bodies, checkpoint-flower overlap, a proposed rock overlapping the old hazard bay, diagnostic-header overlap, and conflicting review keys before final capture. Linear filtering is the default; nearest remains a comparison option.
+Inspected the candidate gallery (linear and nearest), R16/R15 art-on/off/detail/collision views, poison-plant warning/active states, and slime windup/strike views. Corrected initial oversized bodies, checkpoint-flower overlap, a proposed rock overlapping the old hazard bay, diagnostic-header overlap, conflicting review keys, and surface art obscuring exit status plaques before final capture. Linear filtering is the default; nearest remains a comparison option.
 
 Room checks freeze movement for repeatable framing. Native enemy/hazard checks run their real behavior clocks, with the enemy test player held in approach range and invulnerable for the recording. This is not physical-controller QA, a campaign save/reload test, a full traversal/combat playthrough, or a full-world/low-end/Mac performance approval. Existing HAZ-01 save/load tests cover its isolated course. R18 production art, R13/R17 geometry, Canal Doorway and creator pending redesigns are untouched.
 

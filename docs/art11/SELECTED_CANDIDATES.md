@@ -4,7 +4,7 @@ All choices are proposed for creator review. Frame order comes directly from the
 
 | ID | Exact selection | Content size (px) | Frames | Proposed treatment |
 | --- | --- | --- | --- | --- |
-| moss_surface | Mossy FloatingPlatforms, component 5 | 139 × 40 | 1 | Surface inlay tiled inside existing rectangles; continuous 2px top rim at collider Y |
+| moss_surface | Mossy FloatingPlatforms, component 5 | 139 × 40 | 1 | Surface inlay tiled inside existing rectangles; 2px top rim at collider Y; original exit thresholds retained |
 | hanging | Mossy Hanging Plants, component 0 | 29 × 104 | 1 | Recessed framing; never foreground occlusion |
 | column | Mossy BackgroundDecoration, component 1 | 212 × 480 | 1 | Low-contrast background architecture with exclusion checks |
 | grass | Vegetation/Grass2 | 43 × 38 | 30 | Sparse rear foliage, muted green |
