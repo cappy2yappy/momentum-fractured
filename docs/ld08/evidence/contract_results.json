@@ -1,0 +1,11 @@
+[
+  {
+    "suite": "ld08/contract",
+    "exit": 0,
+    "pass_lines": 93,
+    "fail_lines": 0,
+    "script_errors": 0,
+    "seconds": 2.0,
+    "log": "docs/ld08/evidence/contract_ld08_contract.log"
+  }
+]

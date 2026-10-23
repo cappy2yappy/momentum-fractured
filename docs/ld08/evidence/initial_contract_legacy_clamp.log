@@ -1,0 +1,108 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: R0 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R0 other boundary geometry unchanged
+PASS: R0 camera limit restored
+PASS: R1 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R1 other boundary geometry unchanged
+PASS: R1 camera limit restored
+PASS: R2 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R2 other boundary geometry unchanged
+PASS: R2 camera limit restored
+PASS: R3 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R3 other boundary geometry unchanged
+PASS: R3 camera limit restored
+PASS: R4 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R4 other boundary geometry unchanged
+PASS: R4 camera limit restored
+PASS: R5 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R5 other boundary geometry unchanged
+PASS: R5 camera limit restored
+PASS: R6 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R6 other boundary geometry unchanged
+PASS: R6 camera limit restored
+PASS: R7 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R7 other boundary geometry unchanged
+PASS: R7 camera limit restored
+PASS: R8 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R8 other boundary geometry unchanged
+PASS: R8 camera limit restored
+PASS: R9 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R9 other boundary geometry unchanged
+PASS: R9 camera limit restored
+PASS: R10 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R10 other boundary geometry unchanged
+PASS: R10 camera limit restored
+PASS: R11 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R11 other boundary geometry unchanged
+PASS: R11 camera limit restored
+PASS: R12 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R12 other boundary geometry unchanged
+PASS: R12 camera limit restored
+PASS: R13 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R13 open top is default with visible overhead space
+PASS: R13 wall-to-wall roof collider removed
+PASS: R13 upper structure [P: (-40.0, -240.0), S: (336.0, 240.0)] is present and does not enter existing vertical routes
+PASS: R13 upper structure [P: (-40.0, -800.0), S: (720.0, 560.0)] is present and does not enter existing vertical routes
+PASS: R13 upper structure [P: (1800.0, -240.0), S: (40.0, 240.0)] is present and does not enter existing vertical routes
+PASS: R13 upper structure [P: (1416.0, -800.0), S: (424.0, 560.0)] is present and does not enter existing vertical routes
+PASS: R13 central sky is physically open (ray from y=-1000 to y=0)
+PASS: R13 drawn rectangle [P: (-40.0, -240.0), S: (336.0, 240.0)] has real collision
+PASS: R13 drawn rectangle [P: (-40.0, -800.0), S: (720.0, 560.0)] has real collision
+PASS: R13 drawn rectangle [P: (1800.0, -240.0), S: (40.0, 240.0)] has real collision
+PASS: R13 drawn rectangle [P: (1416.0, -800.0), S: (424.0, 560.0)] has real collision
+PASS: R14 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R14 other boundary geometry unchanged
+PASS: R14 camera limit restored
+PASS: R15 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R15 other boundary geometry unchanged
+PASS: R15 camera limit restored
+PASS: R16 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R16 other boundary geometry unchanged
+PASS: R16 camera limit restored
+PASS: R17 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R17 open top is default with visible overhead space
+PASS: R17 wall-to-wall roof collider removed
+PASS: R17 upper structure [P: (-40.0, -240.0), S: (40.0, 240.0)] is present and does not enter existing vertical routes
+PASS: R17 upper structure [P: (-40.0, -800.0), S: (424.0, 560.0)] is present and does not enter existing vertical routes
+PASS: R17 upper structure [P: (1800.0, -240.0), S: (40.0, 240.0)] is present and does not enter existing vertical routes
+PASS: R17 upper structure [P: (1416.0, -800.0), S: (424.0, 560.0)] is present and does not enter existing vertical routes
+PASS: R17 central sky is physically open (ray from y=-1000 to y=0)
+PASS: R17 drawn rectangle [P: (-40.0, -240.0), S: (40.0, 240.0)] has real collision
+PASS: R17 drawn rectangle [P: (-40.0, -800.0), S: (424.0, 560.0)] has real collision
+PASS: R17 drawn rectangle [P: (1800.0, -240.0), S: (40.0, 240.0)] has real collision
+PASS: R17 drawn rectangle [P: (1416.0, -800.0), S: (424.0, 560.0)] has real collision
+PASS: R18 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R18 other boundary geometry unchanged
+PASS: R18 camera limit restored
+PASS: R19 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R19 other boundary geometry unchanged
+PASS: R19 camera limit restored
+PASS: R20 platforms, gates, anchors, enemies and endpoints unchanged
+PASS: R20 other boundary geometry unchanged
+PASS: R20 camera limit restored
+PASS: R13 checkpoint fixture serialized
+PASS: R13 startup load stages (500.0, 438.0) to (500.0, 438.0)
+PASS: Earned kit, Stride and progression survive boundary checkpoint handling
+PASS: Startup does not rewrite the saved file or its schema
+PASS: Respawn stays supported in the same room
+PASS: Restored capsule is clear of solids
+PASS: R17 checkpoint fixture serialized
+PASS: R17 startup load stages (1300.0, 418.0) to (1300.0, 418.0)
+PASS: Earned kit, Stride and progression survive boundary checkpoint handling
+PASS: Startup does not rewrite the saved file or its schema
+PASS: Respawn stays supported in the same room
+PASS: Restored capsule is clear of solids
+PASS: R13 checkpoint fixture serialized
+FAIL: R13 startup load stages (172.0, -2.0) to (340.0, 1198.0)
+PASS: Earned kit, Stride and progression survive boundary checkpoint handling
+PASS: Startup does not rewrite the saved file or its schema
+FAIL: Respawn stays supported in the same room
+FAIL: Restored capsule is clear of solids
+PASS: R17 checkpoint fixture serialized
+FAIL: R17 startup load stages (1825.0, -44.0) to (260.0, 1898.0)
+PASS: Earned kit, Stride and progression survive boundary checkpoint handling
+PASS: Startup does not rewrite the saved file or its schema
+FAIL: Respawn stays supported in the same room
+PASS: Restored capsule is clear of solids
+LD08 CONTRACT: 105 checks, 5 failure(s)

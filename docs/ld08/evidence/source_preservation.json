@@ -1,0 +1,17 @@
+{
+  "base": "c2170032d08ea55268313e0020676c743251deab",
+  "checks": {
+    "only_two_existing_source_files_changed": true,
+    "world_only_adds_scoped_background_draw": true,
+    "controller_identical": true,
+    "room_graph_and_shelves_identical": true,
+    "Canal_gatehouse_identical": true
+  },
+  "unexpected": [],
+  "runtime_sha256": {
+    "scripts/world.gd": "9a82fced57347d86743c5501447597487367fe694e9bd7d9241a81db65ff31c0",
+    "scripts/room_boundary.gd": "776b73794d1fc2526899aa9088bda29bcc1604f10cb6f8596ea274afc474ef18",
+    "scripts/open_top_boundary.gd": "a045fe6d16a0ec650786bf910f56b64bbfde9716439a375b76d01f847ba1b1f2",
+    "scripts/player.gd": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4"
+  }
+}

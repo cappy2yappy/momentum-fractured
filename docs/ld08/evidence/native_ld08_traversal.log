@@ -1,0 +1,70 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS: R13 historical dash from [541.0, 458.0] closed=false stays inside: [310.1, 249.1]
+PASS: R13 historical dash from [675.0, 458.0] closed=false stays inside: [310.1, 243.7]
+PASS: R13 historical dash from [500.0, 438.0] closed=false stays inside: [310.1, 233.4]
+PASS: R13 historical dash from [684.0, 438.0] closed=false stays inside: [310.1, 229.1]
+PASS: R13 historical dash from [566.0, 418.0] closed=false stays inside: [310.1, 213.4]
+PASS: R13 historical dash from [700.0, 418.0] closed=false stays inside: [310.1, 213.4]
+PASS: R13 historical dash from [756.0, 398.0] closed=false stays inside: [310.1, 193.4]
+PASS: R13 historical dash from [1044.0, 398.0] closed=false stays inside: [1785.9, 219.3]
+PASS: R17 historical dash from [1216.0, 418.0] closed=false stays inside: [1785.9, 213.4]
+PASS: R17 historical double from [1425.0, 418.0] closed=false stays inside: [1785.9, 230.1]
+PASS: R17 historical dash from [1425.0, 418.0] closed=false stays inside: [1785.9, 213.4]
+PASS: R17 historical dash from [1634.0, 418.0] closed=false stays inside: [1785.9, 223.4]
+PASS: R13 historical dash from [541.0, 458.0] closed=true stays inside: [310.1, 249.1]
+PASS: R13 historical dash from [675.0, 458.0] closed=true stays inside: [310.1, 243.7]
+PASS: R13 historical dash from [500.0, 438.0] closed=true stays inside: [310.1, 233.4]
+PASS: R13 historical dash from [684.0, 438.0] closed=true stays inside: [310.1, 229.1]
+PASS: R13 historical dash from [566.0, 418.0] closed=true stays inside: [310.1, 213.4]
+PASS: R13 historical dash from [700.0, 418.0] closed=true stays inside: [310.1, 213.4]
+PASS: R13 historical dash from [756.0, 398.0] closed=true stays inside: [310.1, 193.4]
+PASS: R13 historical dash from [1044.0, 398.0] closed=true stays inside: [1785.9, 219.3]
+PASS: R17 historical dash from [1216.0, 418.0] closed=true stays inside: [1785.9, 213.4]
+PASS: R17 historical double from [1425.0, 418.0] closed=true stays inside: [1637.2, 419.9]
+PASS: R17 historical dash from [1425.0, 418.0] closed=true stays inside: [1785.9, 288.8]
+PASS: R17 historical dash from [1634.0, 418.0] closed=true stays inside: [1785.9, 223.4]
+PASS: R13 wall_chain closed=false retains wall jumps, no lateral escape; apex [400.741638183594, -179.93244934082]
+PASS: R13 cornice_evade closed=false retains wall jumps, no lateral escape; apex [1131.07507324219, -395.429840087891]
+PASS: R13 wall_chain closed=false retains wall jumps, no lateral escape; apex [1695.25842285156, -179.93244934082]
+PASS: R13 cornice_evade closed=false retains wall jumps, no lateral escape; apex [964.922607421875, -395.431579589844]
+PASS: R17 wall_chain closed=false retains wall jumps, no lateral escape; apex [104.741676330566, -179.93244934082]
+PASS: R17 cornice_evade closed=false retains wall jumps, no lateral escape; apex [843.744445800781, -395.431732177734]
+PASS: R17 wall_chain closed=false retains wall jumps, no lateral escape; apex [1695.25842285156, -179.932540893555]
+PASS: R17 cornice_evade closed=false retains wall jumps, no lateral escape; apex [957.92236328125, -395.431762695313]
+PASS: R13 wall_chain closed=true retains wall jumps, no lateral escape; apex [400.741638183594, -179.93244934082]
+PASS: R13 cornice_evade closed=true retains wall jumps, no lateral escape; apex [1131.07507324219, -395.429840087891]
+PASS: R13 wall_chain closed=true retains wall jumps, no lateral escape; apex [1695.25842285156, -179.93244934082]
+PASS: R13 cornice_evade closed=true retains wall jumps, no lateral escape; apex [964.922607421875, -395.431579589844]
+PASS: R17 wall_chain closed=true retains wall jumps, no lateral escape; apex [104.741676330566, -179.93244934082]
+PASS: R17 cornice_evade closed=true retains wall jumps, no lateral escape; apex [843.744445800781, -395.431732177734]
+PASS: R17 wall_chain closed=true retains wall jumps, no lateral escape; apex [1695.25842285156, -179.932540893555]
+PASS: R17 cornice_evade closed=true retains wall jumps, no lateral escape; apex [957.92236328125, -395.431762695313]
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction -1 stays inside
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction 1 stays inside
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction -1 stays inside
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction 1 stays inside
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction -1 stays inside
+PASS: R13 grapple/release/dash at (900.0, 690.0) direction 1 stays inside
+PASS: R13 anchor (900.0, 690.0) attaches via real Q input
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction 1 stays inside
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction 1 stays inside
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (900.0, 1400.0) direction 1 stays inside
+PASS: R17 anchor (900.0, 1400.0) attaches via real Q input
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction 1 stays inside
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction 1 stays inside
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (950.0, 780.0) direction 1 stays inside
+PASS: R17 anchor (950.0, 780.0) attaches via real Q input
+PASS: R17 grapple/release/dash at (1320.0, 250.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (1320.0, 250.0) direction 1 stays inside
+PASS: R17 grapple/release/dash at (1320.0, 250.0) direction -1 stays inside
+PASS: R17 grapple/release/dash at (1320.0, 250.0) direction 1 stays inside
+PASS: R17 anchor (1320.0, 250.0) attaches via real Q input
+LD08 TRAVERSAL: 66 checks, 0 failure(s)

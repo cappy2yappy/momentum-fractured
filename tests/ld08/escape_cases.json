@@ -1,0 +1,158 @@
+[
+  {
+    "room": 13,
+    "start": [
+      541.0,
+      458.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -26.9,
+      -0.1
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      675.0,
+      458.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -32.6,
+      -0.1
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      500.0,
+      438.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -22.6,
+      -2.1
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      684.0,
+      438.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -23.6,
+      -1.4
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      566.0,
+      418.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -35.2,
+      -22.1
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      700.0,
+      418.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -22.9,
+      -11.6
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      756.0,
+      398.0
+    ],
+    "dir": -1,
+    "kind": "dash",
+    "historical_end": [
+      -28.3,
+      -4.6
+    ]
+  },
+  {
+    "room": 13,
+    "start": [
+      1044.0,
+      398.0
+    ],
+    "dir": 1,
+    "kind": "dash",
+    "historical_end": [
+      1828.3,
+      -4.6
+    ]
+  },
+  {
+    "room": 17,
+    "start": [
+      1216.0,
+      418.0
+    ],
+    "dir": 1,
+    "kind": "dash",
+    "historical_end": [
+      1831.6,
+      -39.6
+    ]
+  },
+  {
+    "room": 17,
+    "start": [
+      1425.0,
+      418.0
+    ],
+    "dir": 1,
+    "kind": "double",
+    "historical_end": [
+      1824.6,
+      -44.1
+    ]
+  },
+  {
+    "room": 17,
+    "start": [
+      1425.0,
+      418.0
+    ],
+    "dir": 1,
+    "kind": "dash",
+    "historical_end": [
+      1825.9,
+      -44.6
+    ]
+  },
+  {
+    "room": 17,
+    "start": [
+      1634.0,
+      418.0
+    ],
+    "dir": 1,
+    "kind": "dash",
+    "historical_end": [
+      1828.9,
+      -34.6
+    ]
+  }
+]

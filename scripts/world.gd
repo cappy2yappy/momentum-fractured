@@ -761,6 +761,7 @@ func _draw():
 	draw_rect(Rect2(Vector2.ZERO,room_size(room)), Color(ROOM_COLORS[room], 0.18))
 	if room in [15,16,18,19]:
 		draw_rect(Rect2(Vector2.ZERO,room_size(room)),Color(0.025,0.045,0.05,0.64))
+	RoomBoundary.OpenTop.draw_background(self)
 	RoomPresentation.draw_background(self)
 	Expansion.CanalGatehouse.draw(self)
 	for rect in platforms:
