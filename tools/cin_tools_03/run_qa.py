@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Scoped Studio milestone QA. Native cases run serially; profiles stay under build/."""
-import argparse, json, re, shutil, subprocess, time
+import argparse, json, re, subprocess, tempfile, time
 from pathlib import Path
 p = argparse.ArgumentParser()
 p.add_argument('--godot', required=True)
@@ -8,10 +8,11 @@ p.add_argument('--rendered', action='store_true')
 a = p.parse_args()
 r = Path(__file__).resolve().parents[2]
 mode = 'rendered' if a.rendered else 'headless'
-out = r / 'build/cin_tools_03/minimum_usable' / mode
-out.mkdir(parents=True, exist_ok=True)
+base = r / 'build/cin_tools_03/minimum_usable' / mode
+base.mkdir(parents=True, exist_ok=True)
+# Retain previous QA and creator review profiles, including staged examples.
+out = Path(tempfile.mkdtemp(prefix='run-', dir=base))
 profile = out / 'fresh_process_profile'
-if profile.exists(): shutil.rmtree(profile)
 rows = []
 cases = [('cin_tools_03/workspace', []), ('cin_tools_03/layout', []), ('cin_tools_03/pointer', []),
          ('cin_tools_03/persistence', ['--write-example']),
@@ -21,11 +22,16 @@ for index, (name, flags) in enumerate(cases):
     label = f'{index + 1:02d}_' + name.replace('/', '_')
     # Legacy runtime's user:// references are redirected; production sources stay untouched.
     source = (r / 'tests' / f'{name}.gd').read_text().replace('user://', str(out / label) + '/')
+    source = source.replace('res://build/cin_tools_03/', 'res://' + str(out.relative_to(r)) + '/isolated/')
     script = out / (label + '.gd')
     script.write_text(source)
+    # macOS scans all argv for --test, even after --, and selects a headless
+    # OS loop. Studio has no gameplay save path and needs no such guard.
+    # Legacy gameplay fixtures retain their save guard and synthetic-input scope.
+    guards = [] if a.rendered and name.startswith('cin_tools_03/') else ['--test']
     cmd = [a.godot] + ([] if a.rendered else ['--headless']) + [
         '--path', str(r), '--log-file', str(out / (label + '.engine.log')),
-        '--script', 'res://' + str(script.relative_to(r)), '--', '--test',
+        '--script', 'res://' + str(script.relative_to(r)), '--', *guards,
         '--studio-save-dir=' + str(profile)] + flags
     started = time.monotonic()
     try:

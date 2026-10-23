@@ -2,6 +2,12 @@
 
 Tested on macOS Apple M4 with **Godot 4.6.1.stable.official.14d19694e**, native OpenGL. Studio is the existing Cinematic Studio 2.0 scene, extending Cut-In Maker's transport. No plugin installation or seed rebuild is needed.
 
+## Mac input freeze correction — 2026-10-23
+
+If the window draws but clicks, dragging, or resizing do nothing, close the old Studio and launch again with the corrected `launch.command`. The old launcher supplied `--test`; Godot 4.6.1 on Mac treats that flag as a request for its headless OS loop even after `--`. The corrected launcher omits it. Do not append `--test` to an interactive Mac launch. No renderer or project-setting change is needed. [Diagnosis and native-pointer results](MAC_LAUNCH_DIAGNOSIS.md).
+
+Studio starts paused at 0 s. Press **Play**; the Animator timeline should advance toward 4.2 s at 1.0×. Press **Pause**, scrub to 1.9 s, and drag a cyan joint dot. Undo should restore that drag. Press **Reload** to open an existing saved session.
+
 ## 1. Launch directly
 
 Install the Godot 4.6.1 application as `/Applications/Godot.app`. In this checkout, double-click `tools/cin_tools_03/launch.command` in Finder. It is executable and opens Studio directly. The tested Terminal equivalent, which also works when Finder does not open `.command` files in Terminal, is:

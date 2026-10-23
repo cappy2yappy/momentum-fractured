@@ -2,6 +2,10 @@
 
 **Existing draft PR #100, unmerged.** Continue branch `tools/cin-tools-03-studio` in `work/cin-tools-03`; this extends the minimum-usable authoring head `7b162dd` and preserves all its changes. The PR remains stacked on Cut-In Maker #78 at `af184380fb690f2c19bac69960b7aacce50f9ff2`.
 
+## Mac launch correction
+
+Creator freeze at 971aa408 was traced to the launcher’s `--test` flag selecting Godot 4.6.1’s headless Mac OS loop despite a visible OpenGL window. Removed that flag; verified the normal NSApplication loop, desktop-pointer Play/Pause/scrub, FK move/Undo, focus return, window zoom/restore, and the actual launcher at 1024×640. Studio native QA now omits the flag; legacy gameplay fixtures retain their save guard and injected-input scope. 333 headless and 333 renderer assertions pass (203 Studio assertions use the corrected native app loop). Launcher regression and baseline/preservation pass. [Full diagnosis](MAC_LAUNCH_DIAGNOSIS.md), raw [qa/mac_launch](qa/mac_launch/). Existing authored/staged review saves are byte-preserved. The old disposable QA runner reset its own fresh-process fixture once during diagnosis; its exports were recovered and its equivalent snapshot regenerated. QA now uses a fresh folder per run. Keep this same PR draft and unmerged.
+
 ## Delivered
 
 - Clickable, fixed-size viewport handles for all 18 existing FK pivots, including both Hands/Boots and near/far limbs. Coincident pivots get distinct dots and leader lines. Hover and selected/grip states are visible.

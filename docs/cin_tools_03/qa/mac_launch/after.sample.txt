@@ -1,0 +1,72 @@
+Analysis of sampling Godot (pid 17720) every 10 milliseconds
+Process:         Godot [17720]
+Path:            /Applications/Godot.app/Contents/MacOS/Godot
+Load Address:    0x100794000
+Identifier:      org.godotengine.godot
+Version:         4.6.1 (4.6.1)
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  codex [1303]
+Target Type:     live task (Roots Present)
+
+Date/Time:       2026-10-23 17:13:39.558 -0400
+Launch Time:     2026-10-23 17:13:08.629 -0400
+OS Version:      macOS 27.0.1 (26A434)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         207.2M
+Physical footprint (peak):  280.1M
+Idle exit:                  untracked
+----
+
+Call graph:
+    81 Thread_1449773: Main Thread   DispatchQueue_<multiple>
+    + 81 start  (in dyld) + 6688  [0x189a37e80]
+    +   81 main  (in Godot) + 924  [0x100ff4f98]
+    +     81 -[NSApplication run]  (in AppKit) + 396  [0x18e47790c]
+    +       81 -[NSApplication(NSEventRouting) nextEventMatchingMask:untilDate:inMode:dequeue:]  (in AppKit) + 292  [0x18ecfc26c]
+    +         81 -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]  (in AppKit) + 780  [0x18ecfc748]
+    +           81 _DPSNextEvent  (in AppKit) + 580  [0x18e4844fc]
+    +             81 _DPSBlockUntilNextEventMatchingListInMode  (in AppKit) + 292  [0x18e7c729c]
+    +               81 _BlockUntilNextEventMatchingListInMode  (in HIToolbox) + 48  [0x197486380]
+    +                 81 ReceiveNextEventCommon  (in HIToolbox) + 492  [0x19730391c]
+    +                   81 RunCurrentEventLoopInMode  (in HIToolbox) + 320  [0x197300590]
+    +                     81 _CFRunLoopRunSpecificWithOptions  (in CoreFoundation) + 536  [0x189fa782c]
+    +                       81 __CFRunLoopRun  (in CoreFoundation) + 908  [0x189ecd22c]
+    +                         81 __CFRunLoopDoObservers  (in CoreFoundation) + 648  [0x189ecdbbc]
+    +                           81 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__  (in CoreFoundation) + 36  [0x189ecdcc4]
+    +                             81 ???  (in Godot)  load address 0x100794000 + 0x802818  [0x100f96818]
+    +                               79 Main::iteration()  (in Godot) + 1308  [0x1010196c4]
+    +                               ! 71 RenderingServerDefault::_draw(bool, double)  (in Godot) + 428  [0x10484f2f0]
+    +                               ! : 68 RendererViewport::draw_viewports(bool)  (in Godot) + 2064  [0x1046b3ee4]
+    +                               ! : | 68 -[NSOpenGLContext flushBuffer]  (in AppKit) + 28  [0x18e7271c4]
+    +                               ! : |   68 CGLFlushDrawable  (in OpenGL) + 64  [0x217ba76e8]
+    +                               ! : |     53 glSwap_Exec  (in GLEngine) + 200  [0x217d9cef0]
+    +                               ! : |     + 52 NSCGLSurfaceFlush  (in AppKit) + 76  [0x18f0f1350]
+    +                               ! : |     + ! 52 -[NSCGLSurface synchronize]  (in AppKit) + 140  [0x18f0f1c94]
+    +                               ! : |     + !   52 NSWaitUntilHostTime  (in AppKit) + 116  [0x18e928520]
+    +                               ! : |     + !     52 mach_msg  (in libsystem_kernel.dylib) + 24  [0x189dc8fac]
+    +                               ! : |     + !       52 mach_msg_overwrite  (in libsystem_kernel.dylib) + 480  [0x189dd1a28]
+    +                               ! : |     + !         52 mach_msg2_internal  (in libsystem_kernel.dylib) + 76  [0x189ddb8e0]
+    +                               ! : |     + !           52 mach_msg2_trap  (in libsystem_kernel.dylib) + 8  [0x189dc8c20]
+    +                               ! : |     + 1 NSCGLSurfaceFlush  (in AppKit) + 132  [0x18f0f1388]
+    +                               ! : |     +   1 -[NSCGLSurface flushRect:]  (in AppKit) + 76  [0x18f0f1484]
+    +                               ! : |     +     1 CAImageQueueCollect_  (in QuartzCore) + 1160  [0x194561860]
+    +                               ! : |     +       1 release_images(_CAImageQueue*, CAImageQueueReleased*)  (in QuartzCore) + 420  [0x194592bbc]
+    +                               ! : |     +         1 CAImageQueueDidComposite  (in QuartzCore) + 48  [0x19458f7b4]
+    +                               ! : |     +           1 pthread_mutex_lock  (in libsystem_pthread.dylib) + 108  [0x189e08544]
+    +                               ! : |     15 glSwap_Exec  (in GLEngine) + 136  [0x217d9ceb0]
+    +                               ! : |       15 gldPresentFramebufferData  (in AppleMetalOpenGLRenderer) + 1196  [0x12402374c]
+    +                               ! : |         15 SLSFlushSurfaceWithOptionsAndIndex  (in SkyLight) + 292  [0x19092d850]
+    +                               ! : |           15 _CGSWindowIsOrderedIn  (in SkyLight) + 152  [0x190618e58]
+    +                               ! : |             15 mach_msg  (in libsystem_kernel.dylib) + 24  [0x189dc8fac]
+    +                               ! : |               15 mach_msg_overwrite  (in libsystem_kernel.dylib) + 480  [0x189dd1a28]
+    +                               ! : |                 15 mach_msg2_internal  (in libsystem_kernel.dylib) + 76  [0x189ddb8e0]
+    +                               ! : |                   15 mach_msg2_trap  (in libsystem_kernel.dylib) + 8  [0x189dc8c20]
+    +                               ! : 2 RendererViewport::draw_viewports(bool)  (in Godot) + 1804  [0x1046b3de0]
+    +                               ! : | 2 RendererViewport::_draw_viewport(RendererViewport::Viewport*)  (in Godot) + 6448  [0x1046b3168]
+    +                               ! : |   2 RendererCanvasCull::render_canvas(RID, RendererCanvasCull::Canvas*, Transform2D const&, RendererCanvasRender::Light*, RendererCanvasRender::Light*, Rect2 const&, RenderingServer::CanvasItemTextureFilter, RenderingServer::CanvasItemTextureRepeat, bool, bool, unsigned int, RenderingMethod::RenderInfo*)  (in Godot) + 328  [0x104680ff4]
+    +                               ! : |     1 RendererCanvasCull::_render_canvas_item_tree(RID, RendererCanvasCull::Canvas::ChildItem*, int, Transform2D const&, Rect2 const&, Color const&, RendererCanvasRender::Light*, RendererCanvasRender::Light*, RenderingServer::CanvasItemTextureFilter, RenderingServer::CanvasItemTextureRepeat, bool, unsigned int, RenderingMethod::RenderInfo*)  (in Godot) + 636  [0x10467efd8]
+
+[Excerpt; full sample retained under build/cin_tools_03/freeze_diagnosis/]

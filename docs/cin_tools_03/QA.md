@@ -2,6 +2,14 @@
 
 **Passed: 333 headless + 333 native rendered assertions**, eight serial processes per mode, on macOS Apple M4 / Godot **4.6.1.stable.official.14d19694e** / native OpenGL. This is scoped authoring validation. Creator acceptance and production animation certification remain pending.
 
+## Mac native input correction
+
+The 971aa408 launcher and historical renderer tests passed `--test`, which selects Godot 4.6.1’s headless macOS OS loop even after `--`. Those tests establish rendering and injected Godot input, **not native Mac event delivery**. The creator freeze was reproduced as this loop; it was not quarter-speed playback, paused transport, a viewport capture, or a renderer crash.
+
+The corrected launcher omits that flag. Studio rendered suites now use the normal Mac app loop: **203 Studio assertions pass**, plus **130 legacy assertions with their existing `--test` gameplay-save guard**. Full headless total remains **333**. A launcher argument/preservation regression test passes. Actual desktop pointer actions verified Play, Pause, scrub, FK move/Undo, focus return and native window zoom/restore; the corrected launcher was also checked at 1024×640 from outside the checkout. Raw new logs and commands: [qa/mac_launch](qa/mac_launch/). [Diagnosis and exact repro](MAC_LAUNCH_DIAGNOSIS.md). QA-10 remains separate.
+
+Each runner invocation now allocates a fresh `run-*` directory and redirects hardcoded Studio QA paths within it. Prior review profiles remain in place.
+
 ## Current checks
 
 | Suite / process | Headless | Native rendered | What it establishes |
@@ -16,7 +24,7 @@
 | Original Cut-In Maker runtime | 103 | 103 | Existing isolated native integration assertions preserved |
 | **Total** | **333** | **333** | Zero assertion failures, script errors or nonzero process exits |
 
-Raw stdout and command/result JSON are in [qa/direct_fk](qa/direct_fk/). The previous 212/212 authoring milestone remains retained in `qa/minimum_usable/`. The default runner selects these scoped suites and uses disposable profiles under ignored `build/cin_tools_03/`. It never edits gameplay or the shared harness. The native cases run serially. No movie/fixed-FPS flag is used for this milestone's tests or recording. Headless macOS emits the retained system CA lookup diagnostic in this sandbox; it is not a GDScript error. The final native suite logs contain no engine errors or resource leak warnings.
+Current raw stdout and command/result JSON are in [qa/mac_launch](qa/mac_launch/); historical direct-FK evidence remains in [qa/direct_fk](qa/direct_fk/). The previous 212/212 authoring milestone remains retained in `qa/minimum_usable/`. The default runner selects these scoped suites and uses disposable profiles under ignored `build/cin_tools_03/`. It never edits gameplay or the shared harness. The native cases run serially. No movie/fixed-FPS flag is used for this milestone's tests or recording. Headless macOS emits the retained system CA lookup diagnostic in this sandbox; it is not a GDScript error. The final native suite logs contain no engine errors or resource leak warnings.
 
 Validation bounds allowed property paths and resource duration. Exercised rejection checks cover executable track types, wrong value types/duration, nonfinite transforms, missing resources, and invalid on-disk sessions. A rejected Reload retains both current resources and undo history. External/script dependencies are screened before ResourceLoader instantiation. Native shot framing edits are constant within one of the two fixed shots. A second-shot rotation does not leak into shot one or reduced motion. Resource validation intentionally rejects arbitrary clip lengths and executable editor tracks.
 
@@ -38,7 +46,7 @@ Preservation and baseline checks pass: nine candidate-part/provenance files rema
 
 The demo writes only to an ignored disposable profile. Its exported resources are committed separately under `presets/cutins/studio/pointer_example`; the prior `authoring_example` bytes are unchanged. [FK timing/resources](captures/fk/timing.json), [native capture log](captures/fk/capture.log.txt), screenshots and MP4 verification accompany the recording. `tests/cin_tools_03/pointer_capture.gd` reproduces the demonstration. The existing Swift/AVFoundation encoder packages the measured timestamps without retiming.
 
-Normal event dispatch passes both headlessly and under the native renderer. Window-focus cancellation is signal-level simulation, not physical OS switching. A physical-pointer desktop check could not bind the CLI Studio process separately from Godot Project Manager; this limitation is explicit in DIRECT_FK.md. No physical hardware, touch, controller, arbitrary display-scale or full gameplay acceptance is inferred.
+The historical direct-FK recording used injected Godot input and could not bind the CLI process for desktop-pointer inspection. The Mac launch correction above supersedes that binding limitation with a bounded native desktop-pointer smoke. Automated focus cancellation remains a signal-level test. No hardware, touch, controller, arbitrary display-scale or full gameplay acceptance is inferred.
 
 ## Previous minimum-usable native review (7b162dd)
 
@@ -49,6 +57,7 @@ Normal event dispatch passes both headlessly and under the native renderer. Wind
 Reproduce from repository root:
 
 ```sh
+python3 tests/cin_tools_03/launcher.py
 python3 tools/cin_tools_03/run_qa.py --godot /Applications/Godot.app/Contents/MacOS/Godot
 python3 tools/cin_tools_03/run_qa.py --godot /Applications/Godot.app/Contents/MacOS/Godot --rendered
 python3 tools/cin_tools_03/verify_preservation.py

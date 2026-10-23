@@ -16,7 +16,9 @@ if [[ "$studio_version" != 4.6.1.* ]]; then
   exit 1
 fi
 studio_log="${TMPDIR:-/private/tmp}/cin-tools-03-studio-${UID}.log"
-studio_args=(--test)
+# Do not pass --test: Godot 4.6.1 macOS scans even user args for it
+# and selects a headless event loop that draws but cannot receive native input.
+studio_args=()
 # Optional disposable QA directory; ordinary creator launches use user://cin_tools_03.
 if [[ -n "${CIN_STUDIO_SAVE_DIR:-}" ]]; then
   studio_args+=("--studio-save-dir=$CIN_STUDIO_SAVE_DIR")
