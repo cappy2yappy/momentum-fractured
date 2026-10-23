@@ -1,0 +1,34 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: Reject malformed bridged event atomically: evt/Invalid-Event
+PASS: Reject malformed bridged event atomically: evt/no-dashes
+PASS: Reject malformed bridged event atomically: evt/no//empty
+PASS: Reject malformed bridged event atomically: evt/9digit
+PASS: Reject malformed bridged event atomically: evt/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+PASS: Reject malformed bridged event atomically: legacy_complete
+PASS: Reject malformed bridged event atomically: 42
+PASS: Reject malformed/duplicate encounter batch atomically
+PASS: Reject malformed/duplicate encounter batch atomically
+PASS: Reject malformed/duplicate encounter batch atomically
+PASS: Reject malformed/duplicate encounter batch atomically
+PASS: Reject malformed/duplicate encounter batch atomically
+PASS: Reject bad registry target or consumer key type
+PASS: Valid bridge keeps legacy member and consumer identifiers
+PASS: Duplicate consumer registration remains atomic
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Reject malformed enabling flags atomically
+PASS: Disabled flags obey same strict contract
+PASS: Existing malformed reserved key cannot bypass contract
+PASS: Unknown and nonboolean legacy flags fail closed
+PASS: Missing hazard target leaves no registration or binding
+PASS: Wrong hazard target rejected before binding
+PASS: Invalid hazard resource rejected before registration
+PASS: Valid new flags and explicit/existing boolean legacy reads accepted
+PASS: Duplicate hazard failure leaves bindings and registry unchanged
+PASS: Disabled list type validated before binding
+EN01 CONSUMER CONTRACT: 31 checks, 0 failures

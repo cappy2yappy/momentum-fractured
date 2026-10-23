@@ -1,0 +1,58 @@
+[
+  {
+    "suite": "approved_baseline",
+    "exit": 0,
+    "passes": 32,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "approved_combat_swing",
+    "exit": 0,
+    "passes": 7,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "movement_momentum",
+    "exit": 0,
+    "passes": 53,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "sprite_integration",
+    "exit": 0,
+    "passes": 43,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "en01/framework",
+    "exit": 0,
+    "passes": 52,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "en01/consumer_contract",
+    "exit": 0,
+    "passes": 31,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "haz01_toolkit",
+    "exit": 0,
+    "passes": 56,
+    "failures": 0,
+    "script_error": false
+  },
+  {
+    "suite": "haz01_contract",
+    "exit": 0,
+    "passes": 17,
+    "failures": 0,
+    "script_error": false
+  }
+]
