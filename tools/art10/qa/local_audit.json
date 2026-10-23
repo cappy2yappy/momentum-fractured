@@ -1,0 +1,1080 @@
+{
+  "aligned_references": [
+    {
+      "cell": [
+        128,
+        128
+      ],
+      "offset": [
+        21,
+        38
+      ],
+      "output": "pose_138.png",
+      "output_sha256": "e48b6975ae65946d360bfb2dbc3cf0b33eeef29b55d010e35f6067fc3b08af6b",
+      "pivot": [
+        64,
+        112
+      ],
+      "pivot_status": "PR85 bounding-box root, NOT measured sole",
+      "pixels_preserved": true,
+      "scale": 1,
+      "source": "pose_138.png",
+      "source_pivot": [
+        43,
+        74
+      ],
+      "source_sha256": "17ab7413a7fdafe97a3104b9927025ed81a5a1a279062e835513699f0bfee64b",
+      "status": "reference only; no added drawings"
+    },
+    {
+      "cell": [
+        128,
+        128
+      ],
+      "offset": [
+        15,
+        41
+      ],
+      "output": "pose_139.png",
+      "output_sha256": "4844c90e2a85e19763aeca5b11d8022deadc13a49e448d57fe6d54ffd2bcca73",
+      "pivot": [
+        64,
+        112
+      ],
+      "pivot_status": "PR85 bounding-box root, NOT measured sole",
+      "pixels_preserved": true,
+      "scale": 1,
+      "source": "pose_139.png",
+      "source_pivot": [
+        49,
+        71
+      ],
+      "source_sha256": "5bf64699d2d6d3074d2033739e7beef8663200555ae2f9306674d5d307d3f8a6",
+      "status": "reference only; no added drawings"
+    },
+    {
+      "cell": [
+        128,
+        128
+      ],
+      "offset": [
+        10,
+        40
+      ],
+      "output": "pose_140.png",
+      "output_sha256": "710e1eddda6f065a476470b4e07235d1871a263f1c771f7538bb8b24d89a7add",
+      "pivot": [
+        64,
+        112
+      ],
+      "pivot_status": "PR85 bounding-box root, NOT measured sole",
+      "pixels_preserved": true,
+      "scale": 1,
+      "source": "pose_140.png",
+      "source_pivot": [
+        54,
+        72
+      ],
+      "source_sha256": "ae8fcc9d6c4479946a100dfab482eb1fe19556523964adf947dc3793fd1785dc",
+      "status": "reference only; no added drawings"
+    }
+  ],
+  "art08_clips": [
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 16.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            101,
+            295,
+            215,
+            306
+          ],
+          "opaque": 26553,
+          "partial_alpha": 4603,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316364
+        },
+        {
+          "alpha_bbox": [
+            96,
+            286,
+            219,
+            315
+          ],
+          "opaque": 24972,
+          "partial_alpha": 3688,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 318860
+        },
+        {
+          "alpha_bbox": [
+            97,
+            296,
+            260,
+            315
+          ],
+          "opaque": 26611,
+          "partial_alpha": 4296,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316613
+        },
+        {
+          "alpha_bbox": [
+            106,
+            315,
+            245,
+            310
+          ],
+          "opaque": 26351,
+          "partial_alpha": 4375,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316794
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_ascend_enter",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 14.0,
+      "frames": 8,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            104,
+            295,
+            209,
+            296
+          ],
+          "opaque": 26404,
+          "partial_alpha": 4598,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316518
+        },
+        {
+          "alpha_bbox": [
+            99,
+            286,
+            215,
+            315
+          ],
+          "opaque": 24894,
+          "partial_alpha": 3703,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 318923
+        },
+        {
+          "alpha_bbox": [
+            98,
+            296,
+            272,
+            314
+          ],
+          "opaque": 26785,
+          "partial_alpha": 4400,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316335
+        },
+        {
+          "alpha_bbox": [
+            104,
+            315,
+            259,
+            308
+          ],
+          "opaque": 26701,
+          "partial_alpha": 4528,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316291
+        },
+        {
+          "alpha_bbox": [
+            101,
+            295,
+            217,
+            297
+          ],
+          "opaque": 26839,
+          "partial_alpha": 4701,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 315980
+        },
+        {
+          "alpha_bbox": [
+            96,
+            286,
+            216,
+            315
+          ],
+          "opaque": 25265,
+          "partial_alpha": 3764,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 318491
+        },
+        {
+          "alpha_bbox": [
+            97,
+            296,
+            271,
+            314
+          ],
+          "opaque": 26640,
+          "partial_alpha": 4318,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316562
+        },
+        {
+          "alpha_bbox": [
+            106,
+            315,
+            257,
+            308
+          ],
+          "opaque": 26383,
+          "partial_alpha": 4390,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316747
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_ascend_loop",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 16.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            104,
+            295,
+            214,
+            297
+          ],
+          "opaque": 26548,
+          "partial_alpha": 4568,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316404
+        },
+        {
+          "alpha_bbox": [
+            99,
+            286,
+            207,
+            315
+          ],
+          "opaque": 25070,
+          "partial_alpha": 3906,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 318544
+        },
+        {
+          "alpha_bbox": [
+            98,
+            296,
+            255,
+            314
+          ],
+          "opaque": 26767,
+          "partial_alpha": 4359,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316394
+        },
+        {
+          "alpha_bbox": [
+            104,
+            315,
+            247,
+            307
+          ],
+          "opaque": 26673,
+          "partial_alpha": 4521,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 316326
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_ascend_exit",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 16.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            194,
+            319
+          ],
+          "opaque": 22063,
+          "partial_alpha": 4013,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321444
+        },
+        {
+          "alpha_bbox": [
+            112,
+            276,
+            198,
+            332
+          ],
+          "opaque": 20455,
+          "partial_alpha": 3705,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 323360
+        },
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            207,
+            322
+          ],
+          "opaque": 21405,
+          "partial_alpha": 4300,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321815
+        },
+        {
+          "alpha_bbox": [
+            112,
+            297,
+            208,
+            317
+          ],
+          "opaque": 21542,
+          "partial_alpha": 4238,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321740
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_descend_enter",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 14.0,
+      "frames": 8,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            205,
+            325
+          ],
+          "opaque": 21527,
+          "partial_alpha": 4125,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321868
+        },
+        {
+          "alpha_bbox": [
+            112,
+            276,
+            198,
+            327
+          ],
+          "opaque": 21135,
+          "partial_alpha": 3679,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322706
+        },
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            209,
+            321
+          ],
+          "opaque": 21405,
+          "partial_alpha": 4052,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322063
+        },
+        {
+          "alpha_bbox": [
+            112,
+            300,
+            210,
+            316
+          ],
+          "opaque": 21473,
+          "partial_alpha": 4038,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322009
+        },
+        {
+          "alpha_bbox": [
+            110,
+            283,
+            194,
+            325
+          ],
+          "opaque": 21435,
+          "partial_alpha": 4064,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322021
+        },
+        {
+          "alpha_bbox": [
+            112,
+            276,
+            198,
+            326
+          ],
+          "opaque": 20980,
+          "partial_alpha": 3701,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322839
+        },
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            209,
+            321
+          ],
+          "opaque": 21438,
+          "partial_alpha": 4304,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321778
+        },
+        {
+          "alpha_bbox": [
+            112,
+            300,
+            210,
+            316
+          ],
+          "opaque": 21566,
+          "partial_alpha": 4231,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321723
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_descend_loop",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 16.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            110,
+            283,
+            205,
+            325
+          ],
+          "opaque": 21469,
+          "partial_alpha": 4211,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321840
+        },
+        {
+          "alpha_bbox": [
+            112,
+            276,
+            198,
+            328
+          ],
+          "opaque": 20590,
+          "partial_alpha": 3645,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 323285
+        },
+        {
+          "alpha_bbox": [
+            110,
+            282,
+            205,
+            323
+          ],
+          "opaque": 21374,
+          "partial_alpha": 4039,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322107
+        },
+        {
+          "alpha_bbox": [
+            112,
+            300,
+            208,
+            317
+          ],
+          "opaque": 21328,
+          "partial_alpha": 4035,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 322157
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_descend_exit",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 12.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            110,
+            284,
+            193,
+            324
+          ],
+          "opaque": 21484,
+          "partial_alpha": 4055,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321981
+        },
+        {
+          "alpha_bbox": [
+            115,
+            276,
+            198,
+            325
+          ],
+          "opaque": 22315,
+          "partial_alpha": 3980,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 321225
+        },
+        {
+          "alpha_bbox": [
+            117,
+            276,
+            195,
+            325
+          ],
+          "opaque": 22749,
+          "partial_alpha": 4069,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 320702
+        },
+        {
+          "alpha_bbox": [
+            117,
+            276,
+            194,
+            325
+          ],
+          "opaque": 23009,
+          "partial_alpha": 3772,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 320739
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_descend_arrive_settle",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    },
+    {
+      "cell": [
+        480.0,
+        724.0
+      ],
+      "fps": 12.0,
+      "frames": 4,
+      "frames_audit": [
+        {
+          "alpha_bbox": [
+            101,
+            295,
+            215,
+            308
+          ],
+          "opaque": 26807,
+          "partial_alpha": 4791,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 315922
+        },
+        {
+          "alpha_bbox": [
+            94,
+            284,
+            206,
+            317
+          ],
+          "opaque": 25290,
+          "partial_alpha": 4013,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 318217
+        },
+        {
+          "alpha_bbox": [
+            92,
+            284,
+            209,
+            317
+          ],
+          "opaque": 25734,
+          "partial_alpha": 4051,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 317735
+        },
+        {
+          "alpha_bbox": [
+            101,
+            278,
+            201,
+            323
+          ],
+          "opaque": 25652,
+          "partial_alpha": 4086,
+          "size": [
+            480,
+            724
+          ],
+          "transparent": 317782
+        }
+      ],
+      "manifest_hash_matches": true,
+      "name": "stair_arrive_idle_settle",
+      "pivot": [
+        240.0,
+        600.0
+      ],
+      "status": "existing ART08 candidate; not ART10 completion"
+    }
+  ],
+  "missing_local_rig_parts": true,
+  "source_preservation": true,
+  "sources": [
+    {
+      "alpha_bbox": [
+        65,
+        280,
+        162,
+        320
+      ],
+      "opaque": 21705,
+      "partial_alpha": 911,
+      "path": "assets/art04/kaze/enter_depth_key.png",
+      "sha256": "42fb6eb7ca51528fef1c3599aa95e2e4774171712ca79131f3cc244d07f9a147",
+      "size": [
+        320,
+        724
+      ],
+      "transparent": 209064
+    },
+    {
+      "alpha_bbox": [
+        33,
+        280,
+        193,
+        320
+      ],
+      "opaque": 24960,
+      "partial_alpha": 1175,
+      "path": "assets/art04/kaze/turn_depth_key.png",
+      "sha256": "878ee13ed80dec5a9cfbc32f9720d7a1a7531b36c629f5f9748bffa6a73cbbaa",
+      "size": [
+        320,
+        724
+      ],
+      "transparent": 205545
+    },
+    {
+      "alpha_bbox": [
+        42,
+        292,
+        237,
+        308
+      ],
+      "opaque": 29478,
+      "partial_alpha": 1514,
+      "path": "assets/art04/kaze/stair_up_key.png",
+      "sha256": "87e161915266e18ec7225fcca5b173b35e94abe1537e91972f27102af1ee7deb",
+      "size": [
+        320,
+        724
+      ],
+      "transparent": 200688
+    },
+    {
+      "alpha_bbox": [
+        77,
+        287,
+        193,
+        313
+      ],
+      "opaque": 23446,
+      "partial_alpha": 980,
+      "path": "assets/art04/kaze/stair_down_key.png",
+      "sha256": "1d170617d1957440d9eb2ecf15c133d93fb0935b2b28528c211cd0ecd509cf24",
+      "size": [
+        320,
+        724
+      ],
+      "transparent": 207254
+    },
+    {
+      "alpha_bbox": [
+        101,
+        286,
+        1690,
+        339
+      ],
+      "opaque": 104487,
+      "partial_alpha": 16962,
+      "path": "assets/art08/kaze_stair_ascend_enter_strip.png",
+      "sha256": "67f27fb5397faa0e24cc979109917d41f31e946ccb6b84485dbec6e9b8eadcda",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1268631
+    },
+    {
+      "alpha_bbox": [
+        104,
+        286,
+        3619,
+        337
+      ],
+      "opaque": 209911,
+      "partial_alpha": 34402,
+      "path": "assets/art08/kaze_stair_ascend_loop_strip.png",
+      "sha256": "e18a4fb55dcc2359ace06224ee338e350799561e410c33d9bd7b28047d3c06f6",
+      "size": [
+        3840,
+        724
+      ],
+      "transparent": 2535847
+    },
+    {
+      "alpha_bbox": [
+        104,
+        286,
+        1687,
+        336
+      ],
+      "opaque": 105058,
+      "partial_alpha": 17354,
+      "path": "assets/art08/kaze_stair_ascend_exit_strip.png",
+      "sha256": "59e9643a4b0b75f0d2021171b64ccafab0153e1f6ea005baed4206980d1f4006",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1267668
+    },
+    {
+      "alpha_bbox": [
+        110,
+        276,
+        1650,
+        338
+      ],
+      "opaque": 85465,
+      "partial_alpha": 16256,
+      "path": "assets/art08/kaze_stair_descend_enter_strip.png",
+      "sha256": "0cc04d4178ab677d64ff4b04d9b1105537a1d0415ca293b630f875c683ea66ad",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1288359
+    },
+    {
+      "alpha_bbox": [
+        110,
+        276,
+        3572,
+        340
+      ],
+      "opaque": 170959,
+      "partial_alpha": 32194,
+      "path": "assets/art08/kaze_stair_descend_loop_strip.png",
+      "sha256": "0c5bc6402148d30adf71765c4b818bc3f6bbb9089f00e1294c9d9bd92304b3bc",
+      "size": [
+        3840,
+        724
+      ],
+      "transparent": 2577007
+    },
+    {
+      "alpha_bbox": [
+        110,
+        276,
+        1650,
+        341
+      ],
+      "opaque": 84761,
+      "partial_alpha": 15930,
+      "path": "assets/art08/kaze_stair_descend_exit_strip.png",
+      "sha256": "f171d7e4f303270e7ec25783ec184e2e52df9a7c18613a99350eb97bede3b94e",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1289389
+    },
+    {
+      "alpha_bbox": [
+        110,
+        276,
+        1641,
+        332
+      ],
+      "opaque": 89557,
+      "partial_alpha": 15876,
+      "path": "assets/art08/kaze_stair_descend_arrive_settle_strip.png",
+      "sha256": "15d6c44529455af100f3a5531facd59e14453fd295185cabcb6139fa407dc460",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1284647
+    },
+    {
+      "alpha_bbox": [
+        101,
+        278,
+        1641,
+        325
+      ],
+      "opaque": 103483,
+      "partial_alpha": 16941,
+      "path": "assets/art08/kaze_stair_arrive_idle_settle_strip.png",
+      "sha256": "0d917aa3e07a8a44cf781f9ffa660b27e80735ac966e19fe177889dff8a49164",
+      "size": [
+        1920,
+        724
+      ],
+      "transparent": 1269656
+    },
+    {
+      "alpha_bbox": [
+        0,
+        0,
+        86,
+        75
+      ],
+      "opaque": 3303,
+      "partial_alpha": 0,
+      "path": "local-reference/pose_138.png",
+      "sha256": "17ab7413a7fdafe97a3104b9927025ed81a5a1a279062e835513699f0bfee64b",
+      "size": [
+        86,
+        75
+      ],
+      "transparent": 3147
+    },
+    {
+      "alpha_bbox": [
+        0,
+        0,
+        98,
+        72
+      ],
+      "opaque": 3493,
+      "partial_alpha": 0,
+      "path": "local-reference/pose_139.png",
+      "sha256": "5bf64699d2d6d3074d2033739e7beef8663200555ae2f9306674d5d307d3f8a6",
+      "size": [
+        98,
+        72
+      ],
+      "transparent": 3563
+    },
+    {
+      "alpha_bbox": [
+        0,
+        0,
+        108,
+        73
+      ],
+      "opaque": 3735,
+      "partial_alpha": 0,
+      "path": "local-reference/pose_140.png",
+      "sha256": "ae8fcc9d6c4479946a100dfab482eb1fe19556523964adf947dc3793fd1785dc",
+      "size": [
+        108,
+        73
+      ],
+      "transparent": 4149
+    }
+  ],
+  "status": "local audit; source pixels unchanged; no new animation"
+}
