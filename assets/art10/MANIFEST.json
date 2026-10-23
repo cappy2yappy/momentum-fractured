@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "blocked_pending_new_drawings",
+  "creator_approved": false,
+  "production_enabled": false,
+  "base_commit": "378b86ca47130ede1663674d82f3cfe6bd00511f",
+  "identity_reference_pr": 30,
+  "source_reference_pr": 85,
+  "source_sha256": "0c9dc1eeab228a683d86cd156d02251400e7ebd7c1b1a46b1e56e8ae2d44bb09",
+  "candidates": {
+    "grounded": {
+      "ascent": {
+        "frames": [],
+        "treads": []
+      },
+      "descent": {
+        "frames": [],
+        "treads": []
+      }
+    },
+    "expressive": {
+      "ascent": {
+        "frames": [],
+        "treads": []
+      },
+      "descent": {
+        "frames": [],
+        "treads": []
+      }
+    }
+  }
+}
