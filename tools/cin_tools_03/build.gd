@@ -53,6 +53,7 @@ func run():
  var clip = Animation.new(); clip.resource_name = "Sprint to stop — candidate"; clip.length = 4.2
  track(clip, ".:position", [0, .25, 1.45, 1.8, 2.15, 2.55, 4.2], [Vector2(200,610),Vector2(245,610),Vector2(665,610),Vector2(745,610),Vector2(782,610),Vector2(790,610),Vector2(790,610)])
  track(clip, ".:mode", [0, 1.5], [1, 0], true)
+ track(clip, ".:rig_blend", [0,1.42,1.58,4.2], [0.,0.,1.,1.])
  var times = []; var frames = []
  for i in 13: times.append(i / 8.0); frames.append(i % 8)
  track(clip, "Sprite:frame", times, frames, true)

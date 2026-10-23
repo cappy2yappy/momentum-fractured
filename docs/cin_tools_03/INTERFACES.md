@@ -25,3 +25,9 @@ Reserved paths: `tools/cin_tools_03/`, `assets/cin_tools_03/`, `presets/cutins/s
 ## Runtime boundary
 
 Studio loads no World/Player scene and has no world reference. Parent property tracks drive presentation-local clip time, canvas framing and existing presentation nodes. Saved clip/shot validation rejects executable track types and unknown property paths. The draft neither invokes nor changes the room loader, player controller, Canal Doorway, save schema, approved sprites, story copy or campaign placement. The original isolated Cut-In Maker/TR-08 fixture remains available unchanged and is tested as a regression.
+
+## Minimum usable continuation — 2026-10-23
+
+Continues PR #100 / original Studio head `d227b038576fc5268acc4f94324fc5fbf64244a5` on its existing branch. Tonight's delta touches only the five reserved Studio namespaces; `tools/cin_tools_01/preview.gd` and its resolver are byte-identical to that checkpoint. The subclass reparents the inherited widgets into resizable containers and retains their callbacks/transport. No new shared preview contract, CIN-04 or ART-10 change requires coordination. No messages to other owners or new agents were dispatched this turn.
+
+QA-10 PR #101 was inspected at `2b7276701f2aa7cdd85137237d06f57490bdacdc`. Its focus/pause/capture harness diagnosis compares the previous Studio head to #78. Treat it as a separate diagnosed test-only correction awaiting PM acceptance. It is not merged, cherry-picked, automatically certified or treated as validation of this updated head. Its branch and files remain untouched. The current Studio authoring checks run on the existing harness; broader gameplay certification is outside this milestone.

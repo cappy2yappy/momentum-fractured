@@ -25,7 +25,7 @@ func run():
  check(is_equal_approx(torso.rotation_degrees,27.),"Pose inspector keys joint at playhead")
  var saved_path = studio.saved_path
  # Test runner redirects user:// to an ignored disposable profile before execution.
- studio.save_clip()
+ check(studio.save_clip(),"Save returns success: "+studio.notice.text)
  check(FileAccess.file_exists(saved_path),"Edited native clip saves")
  var saved = ResourceLoader.load(saved_path,"Animation",ResourceLoader.CACHE_MODE_IGNORE)
  var index = saved.find_track(NodePath("Rig/Torso:rotation"),Animation.TYPE_VALUE)
@@ -58,7 +58,7 @@ func run():
  studio.scrub(5.)
 
  check(is_equal_approx(studio.cutin.get_node("Framing").position.x,-50.) and is_equal_approx(studio.cutin.get_node("Framing").scale.x,1.2),"Director keys shot pan and zoom in native timeline")
- studio.save_clip()
+ check(studio.save_clip(),"Framed session saves: "+studio.notice.text)
  studio.undo_pose(); studio.scrub(5.)
  check(not is_equal_approx(studio.cutin.get_node("Framing").scale.x,1.2),"Shot framing edit supports undo")
  studio.reload_clip(); studio.scrub(5.)
@@ -80,6 +80,33 @@ func run():
  var malformed = studio.session_clip.duplicate(true)
  malformed.track_insert_key(0,.5,Vector2(NAN,0))
  check(not studio.valid_clip(malformed),"Reject nonfinite transform values")
+ # Rejection must preserve BOTH resources and the undo stack.
+ var previous_clip = studio.session_clip; var previous_shot = studio.session_shot
+ var history_size = studio.history.size()
+ var invalid_bundle = AnimationLibrary.new()
+ invalid_bundle.add_animation("sprint_stop",invalid); invalid_bundle.add_animation("director_shots",studio.session_shot)
+ ResourceSaver.save(invalid_bundle,studio.session_path())
+ check(not studio.reload_clip() and studio.session_clip == previous_clip and studio.session_shot == previous_shot and studio.history.size() == history_size,"Invalid disk session preserves resources and undo history")
+ var file = FileAccess.open(studio.session_path(),FileAccess.WRITE)
+ file.store_string('[gd_resource type="AnimationLibrary" format=3]\n[ext_resource type="Script" path="res://never_execute.gd" id="1"]\n[resource]\nscript = ExtResource("1")')
+ file.close()
+ check(not studio.reload_clip() and studio.session_clip == previous_clip,"Reject external/script resource before loading it")
+ studio.saved_path = "res://build/cin_tools_03/missing_profile/sprint_stop.tres"
+ check(not studio.reload_clip() and studio.session_clip == previous_clip,"Missing resource fails safely")
+ studio.preset = load(studio.preset_path("director")); studio.open_preset(); studio.scrub(6.1)
+ studio.joint_picker.select(studio.JOINTS.size()); studio.sync_fields(); studio.angle.value = 8.; studio.key_pose()
+ studio.scrub(1.9)
+ check(is_zero_approx(studio.cutin.get_node("Framing").rotation),"Second shot rotation cannot leak into first shot")
+ studio.scrub(6.1)
+ check(is_equal_approx(studio.cutin.get_node("Framing").rotation_degrees,8.),"Second shot keeps its rotation")
+ studio.reduced_preview = true; studio.restart(); studio.scrub(6.1)
+ check(is_zero_approx(studio.cutin.get_node("Framing").rotation) and studio.key_button.disabled,"Reduced motion clears prior shot rotation and prevents invisible edits")
+ var malformed_time = studio.session_shot.duplicate(true)
+ var time_track = malformed_time.find_track(NodePath(".:clip_time"),Animation.TYPE_VALUE)
+ malformed_time.track_set_key_value(time_track,0,"bad")
+ check(not studio.valid_shot(malformed_time),"Wrong-type local clip time rejects without error")
+ var wrong_length = studio.session_clip.duplicate(true); wrong_length.length = 6.
+ check(not studio.valid_clip(wrong_length),"Reject clip duration incompatible with two fixed shots")
  check(studio.get_node_or_null("World") == null and studio.get_node_or_null("Player") == null,"Workspace has no gameplay scene owner")
  studio.queue_free()
  for i in 4: await process_frame

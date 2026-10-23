@@ -4,9 +4,9 @@
 
 - State: handed-off
 - Last move: baton-pass
-- Last agent: Codex CIN-TOOLS-03
-- Next agent: Creator review / cinematic tooling specialist
+- Last agent: Codex CIN-TOOLS-03 minimum usable milestone
+- Next agent: Creator / PM review
 - Updated: 2026-10-23
-- Summary: Review the isolated draft and native-speed evidence; follow HANDOFF.md. Keep unmerged.
+- Summary: Existing Studio authoring workflow and fresh-process persistence verified; review MAC_GUIDE.md, QA.md, saved example and 1.0× recording. Keep PR #100 draft and unmerged.
 
-Review fidelity limitations before considering production animation or campaign integration. Recheck remote specialist ownership; it was not verifiable from this host. Confirm the QA report's exact tested scope before claiming additional platforms or input certification.
+Follow the Mac guide through pose/key/save/close/reopen/reload and two independent Director framings. Decide creator usability acceptance and retain production animation limits. QA-10 #101 is a diagnosed test-harness correction awaiting PM acceptance; its pinned results do not certify this updated Studio head. No implementation task remains for tonight's scoped milestone.
