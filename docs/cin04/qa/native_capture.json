@@ -1,0 +1,23 @@
+[
+  {
+    "control_restored": true,
+    "frames": 249,
+    "outcome": "completed",
+    "seconds": 12.013118,
+    "sequence": "aftermath"
+  },
+  {
+    "control_restored": true,
+    "frames": 288,
+    "outcome": "completed",
+    "seconds": 14.0028,
+    "sequence": "resistance"
+  },
+  {
+    "control_restored": true,
+    "frames": 330,
+    "outcome": "completed",
+    "seconds": 16.010011,
+    "sequence": "fallen_defenders"
+  }
+]

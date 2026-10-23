@@ -1,0 +1,1034 @@
+[gd_scene load_steps=9 format=3]
+[ext_resource type="Script" path="res://tools/cin_tools_01/presentation.gd" id="stage"]
+[ext_resource type="Texture2D" path="res://assets/kaze/cleaned/kaze_idle_strip.png" id="idle"]
+[ext_resource type="Texture2D" path="res://assets/kaze/cleaned/kaze_run_strip.png" id="run"]
+[ext_resource type="Texture2D" path="res://assets/kaze/cleaned/kaze_traversal_strip.png" id="crouch"]
+[sub_resource type="Animation" id="standard"]
+resource_name = "standard"
+length = 16
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:handoff")
+tracks/0/interp = 0
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:shake_strength")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:sample_time")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 16]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Framing:position")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.3, 8.4, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-200, -87), Vector2(-95, -40), Vector2(-95, -40)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Framing:scale")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.3, 8.4, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.23, 1.23), Vector2(1.12, 1.12), Vector2(1.12, 1.12)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Framing/Shake/Foreground:position")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5.3, 8.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-20, 6), Vector2(-8, 2)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Framing/Shake/Character:position")
+tracks/6/interp = 1
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(375, 566), Vector2(375, 566), Vector2(605, 566), Vector2(605, 566)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Framing/Shake/Character:texture")
+tracks/7/interp = 0
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("idle"), ExtResource("run"), ExtResource("idle"), ExtResource("crouch")]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Framing/Shake/Character:hframes")
+tracks/8/interp = 0
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Framing/Shake/Character:scale")
+tracks/9/interp = 1
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.67, 0.67)]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Framing/Shake/Character:offset")
+tracks/10/interp = 0
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -229), Vector2(0, -198), Vector2(0, -229), Vector2(0, -148)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Framing/Shake/Character:frame")
+tracks/11/interp = 0
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 0]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Framing/Shake/Character:rotation")
+tracks/12/interp = 1
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Destination:text")
+tracks/13/interp = 0
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 7.8, 15.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["", "I'm sorry.", ""]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Fade:color")
+tracks/14/interp = 1
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.8, 15.2, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.0353, 0.0588, 0.0863, 1), Color(0.0353, 0.0588, 0.0863, 0), Color(0.0353, 0.0588, 0.0863, 0), Color(0.0353, 0.0588, 0.0863, 1)]
+}
+[sub_resource type="Animation" id="reduced"]
+resource_name = "reduced"
+length = 16
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:handoff")
+tracks/0/interp = 0
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:shake_strength")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:sample_time")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 16]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Framing:position")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.3, 8.4, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Framing:scale")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8, 5.3, 8.4, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Framing/Shake/Foreground:position")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5.3, 8.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Framing/Shake/Character:position")
+tracks/6/interp = 1
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(605, 566), Vector2(605, 566), Vector2(605, 566), Vector2(605, 566)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Framing/Shake/Character:texture")
+tracks/7/interp = 0
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("idle"), ExtResource("idle"), ExtResource("idle"), ExtResource("crouch")]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Framing/Shake/Character:hframes")
+tracks/8/interp = 0
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Framing/Shake/Character:scale")
+tracks/9/interp = 1
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.67, 0.67)]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Framing/Shake/Character:offset")
+tracks/10/interp = 0
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -229), Vector2(0, -229), Vector2(0, -229), Vector2(0, -148)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Framing/Shake/Character:frame")
+tracks/11/interp = 0
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 0]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Framing/Shake/Character:rotation")
+tracks/12/interp = 1
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Destination:text")
+tracks/13/interp = 0
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 7.8, 15.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["", "I'm sorry.", ""]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Fade:color")
+tracks/14/interp = 1
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.8, 15.2, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.0353, 0.0588, 0.0863, 1), Color(0.0353, 0.0588, 0.0863, 0), Color(0.0353, 0.0588, 0.0863, 0), Color(0.0353, 0.0588, 0.0863, 1)]
+}
+[sub_resource type="Animation" id="RESET"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:handoff")
+tracks/0/interp = 0
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:shake_strength")
+tracks/1/interp = 1
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:sample_time")
+tracks/2/interp = 1
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Framing:position")
+tracks/3/interp = 1
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Framing:scale")
+tracks/4/interp = 1
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Framing/Shake/Foreground:position")
+tracks/5/interp = 1
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Framing/Shake/Character:position")
+tracks/6/interp = 1
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(605, 566)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Framing/Shake/Character:texture")
+tracks/7/interp = 0
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("idle")]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Framing/Shake/Character:hframes")
+tracks/8/interp = 0
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Framing/Shake/Character:scale")
+tracks/9/interp = 1
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.67, 0.67)]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Framing/Shake/Character:offset")
+tracks/10/interp = 0
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, -229)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Framing/Shake/Character:frame")
+tracks/11/interp = 0
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Framing/Shake/Character:rotation")
+tracks/12/interp = 1
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Destination:text")
+tracks/13/interp = 0
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Fade:color")
+tracks/14/interp = 1
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0353, 0.0588, 0.0863, 1)]
+}
+[sub_resource type="AnimationLibrary" id="library"]
+_data = {&"standard": SubResource("standard"), &"reduced": SubResource("reduced"), &"RESET": SubResource("RESET")}
+[node name="StoryCutIn" type="Node2D"]
+script = ExtResource("stage")
+artwork_status = "CIN-04 review staging; approved Kaze sheets unchanged. Props and reactions are proposals."
+
+[node name="Framing" type="Node2D" parent="."]
+
+
+[node name="Shake" type="Node2D" parent="Framing"]
+
+
+[node name="Set" type="Node2D" parent="Framing/Shake"]
+
+
+[node name="Night" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-600, -500, 1800, -500, 1800, 1000, -600, 1000)
+color = Color(0.0627, 0.1059, 0.1451, 1)
+
+[node name="FarPier0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-200, 70, -145, 70, -145, 590, -200, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-155, 170, -110, 100, -50, 100, -10, 170, -10, 210, -50, 151, -105, 151, -155, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge0" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-145, 210, -145, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-20, 70, 35, 70, 35, 590, -20, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(25, 170, 70, 100, 130, 100, 170, 170, 170, 210, 130, 151, 75, 151, 25, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge1" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(35, 210, 35, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier2" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(160, 70, 215, 70, 215, 590, 160, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch2" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(205, 170, 250, 100, 310, 100, 350, 170, 350, 210, 310, 151, 255, 151, 205, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge2" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(215, 210, 215, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier3" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(340, 70, 395, 70, 395, 590, 340, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch3" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(385, 170, 430, 100, 490, 100, 530, 170, 530, 210, 490, 151, 435, 151, 385, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge3" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(395, 210, 395, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier4" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(520, 70, 575, 70, 575, 590, 520, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch4" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(565, 170, 610, 100, 670, 100, 710, 170, 710, 210, 670, 151, 615, 151, 565, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge4" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(575, 210, 575, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier5" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(700, 70, 755, 70, 755, 590, 700, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch5" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(745, 170, 790, 100, 850, 100, 890, 170, 890, 210, 850, 151, 795, 151, 745, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge5" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(755, 210, 755, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier6" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(880, 70, 935, 70, 935, 590, 880, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch6" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(925, 170, 970, 100, 1030, 100, 1070, 170, 1070, 210, 1030, 151, 975, 151, 925, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge6" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(935, 210, 935, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier7" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1060, 70, 1115, 70, 1115, 590, 1060, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch7" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1105, 170, 1150, 100, 1210, 100, 1250, 170, 1250, 210, 1210, 151, 1155, 151, 1105, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge7" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1115, 210, 1115, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier8" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1240, 70, 1295, 70, 1295, 590, 1240, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch8" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1285, 170, 1330, 100, 1390, 100, 1430, 170, 1430, 210, 1390, 151, 1335, 151, 1285, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge8" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1295, 210, 1295, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="FarPier9" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1420, 70, 1475, 70, 1475, 590, 1420, 590)
+color = Color(0.1059, 0.1882, 0.2235, 1)
+
+[node name="Arch9" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1465, 170, 1510, 100, 1570, 100, 1610, 170, 1610, 210, 1570, 151, 1515, 151, 1465, 222)
+color = Color(0.1451, 0.251, 0.2902, 1)
+
+[node name="FarEdge9" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1475, 210, 1475, 530)
+width = 2
+default_color = Color(0.2078, 0.3176, 0.3529, 1)
+
+[node name="Steps0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 480, 1450, 480, 1450, 492, -100, 492)
+color = Color(0.1608, 0.2392, 0.2706, 1)
+
+[node name="Steps1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 494, 1450, 494, 1450, 506, -100, 506)
+color = Color(0.1373, 0.2157, 0.2549, 1)
+
+[node name="Steps2" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 508, 1450, 508, 1450, 520, -100, 520)
+color = Color(0.1608, 0.2392, 0.2706, 1)
+
+[node name="Steps3" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 522, 1450, 522, 1450, 534, -100, 534)
+color = Color(0.1373, 0.2157, 0.2549, 1)
+
+[node name="Steps4" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 536, 1450, 536, 1450, 548, -100, 548)
+color = Color(0.1608, 0.2392, 0.2706, 1)
+
+[node name="Steps5" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 550, 1450, 550, 1450, 562, -100, 562)
+color = Color(0.1373, 0.2157, 0.2549, 1)
+
+[node name="Steps6" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 564, 1450, 564, 1450, 576, -100, 576)
+color = Color(0.1608, 0.2392, 0.2706, 1)
+
+[node name="Steps7" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-100, 578, 1450, 578, 1450, 590, -100, 590)
+color = Color(0.1373, 0.2157, 0.2549, 1)
+
+[node name="ColdLight" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(840, -100, 1000, -100, 730, 590, 340, 590)
+color = Color(0.5098, 0.6706, 0.6392, 0.08)
+
+[node name="ColdLightNarrow" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(990, -100, 1030, -100, 800, 590, 690, 590)
+color = Color(0.7922, 0.851, 0.7373, 0.07)
+
+[node name="Floor" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-600, 565, 1800, 565, 1800, 1025, -600, 1025)
+color = Color(0.0902, 0.1647, 0.1961, 1)
+
+[node name="FloorLip" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-400, 565, 1500, 565)
+width = 3
+default_color = Color(0.3882, 0.4784, 0.4667, 1)
+
+[node name="FloorJoint0" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-400, 565, -650, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint1" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-235, 565, -445, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint2" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-70, 565, -240, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint3" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(95, 565, -35, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint4" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(260, 565, 170, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint5" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(425, 565, 375, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint6" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(590, 565, 580, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint7" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(755, 565, 785, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint8" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(920, 565, 990, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint9" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1085, 565, 1195, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint10" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1250, 565, 1400, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorJoint11" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1415, 565, 1605, 900)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorRow0" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-600, 615, 1800, 615)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorRow1" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-600, 690, 1800, 690)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="FloorRow2" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(-600, 805, 1800, 805)
+width = 2
+default_color = Color(0.1686, 0.2588, 0.2863, 1)
+
+[node name="PierBase0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-65, 490, 75, 490, 75, 578, -65, 578)
+color = Color(0.1608, 0.2314, 0.2627, 1)
+
+[node name="Pier0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-40, 500, -40, 80, -5, 58, 10, 90, 36, 42, 51, 105, 51, 500)
+color = Color(0.2039, 0.2902, 0.3137, 1)
+
+[node name="PierFace0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-30, 130, -15, 130, -15, 490, -30, 490)
+color = Color(0.2941, 0.3843, 0.3882, 1)
+
+[node name="PierCrack0" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(25, 120, 1, 210, 29, 267, 10, 350)
+width = 4
+default_color = Color(0.0784, 0.1529, 0.1882, 1)
+
+[node name="PierFoot0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(-52, 487, 67, 487, 67, 500, -52, 500)
+color = Color(0.3882, 0.4588, 0.4588, 1)
+
+[node name="PierBase1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1150, 490, 1290, 490, 1290, 578, 1150, 578)
+color = Color(0.1608, 0.2314, 0.2627, 1)
+
+[node name="Pier1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1175, 500, 1175, 80, 1210, 58, 1225, 90, 1251, 42, 1266, 105, 1266, 500)
+color = Color(0.2039, 0.2902, 0.3137, 1)
+
+[node name="PierFace1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1185, 130, 1200, 130, 1200, 490, 1185, 490)
+color = Color(0.2941, 0.3843, 0.3882, 1)
+
+[node name="PierCrack1" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(1240, 120, 1216, 210, 1244, 267, 1225, 350)
+width = 4
+default_color = Color(0.0784, 0.1529, 0.1882, 1)
+
+[node name="PierFoot1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1163, 487, 1282, 487, 1282, 500, 1163, 500)
+color = Color(0.3882, 0.4588, 0.4588, 1)
+
+[node name="BrokenLintel" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(120, 440, 410, 365, 428, 381, 390, 393, 409, 410, 130, 465)
+color = Color(0.3373, 0.3765, 0.3569, 1)
+
+[node name="LintelRidge" type="Line2D" parent="Framing/Shake/Set"]
+points = PackedVector2Array(130, 443, 404, 376)
+width = 3
+default_color = Color(0.5843, 0.5922, 0.5137, 1)
+
+[node name="Rubble0" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(138, 587, 153, 581.0, 168, 591, 143, 595)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble1" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(354, 610, 363, 606.4, 372, 614, 359, 618)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble2" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(257, 609, 270, 603.8, 283, 613, 262, 617)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble3" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1080, 628, 1084, 626.4, 1088, 632, 1085, 636)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble4" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1112, 606, 1125, 600.8, 1138, 610, 1117, 614)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble5" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(822, 630, 834, 625.2, 846, 634, 827, 638)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble6" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(948, 601, 954, 598.6, 960, 605, 953, 609)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble7" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(178, 564, 183, 562.0, 188, 568, 183, 572)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble8" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(829, 570, 834, 568.0, 839, 574, 834, 578)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble9" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(388, 616, 399, 611.6, 410, 620, 393, 624)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble10" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(323, 600, 336, 594.8, 349, 604, 328, 608)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble11" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1097, 585, 1110, 579.8, 1123, 589, 1102, 593)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble12" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(432, 599, 437, 597.0, 442, 603, 437, 607)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble13" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(160, 625, 164, 623.4, 168, 629, 165, 633)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble14" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(442, 558, 448, 555.6, 454, 562, 447, 566)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble15" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(666, 586, 671, 584.0, 676, 590, 671, 594)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble16" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1129, 630, 1134, 628.0, 1139, 634, 1134, 638)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble17" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(185, 563, 198, 557.8, 211, 567, 190, 571)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble18" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(996, 633, 1011, 627.0, 1026, 637, 1001, 641)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble19" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(738, 593, 750, 588.2, 762, 597, 743, 601)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble20" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(958, 572, 964, 569.6, 970, 576, 963, 580)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble21" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(224, 591, 228, 589.4, 232, 595, 229, 599)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble22" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(609, 598, 624, 592.0, 639, 602, 614, 606)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble23" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(440, 637, 453, 631.8, 466, 641, 445, 645)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble24" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(204, 621, 218, 615.4, 232, 625, 209, 629)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble25" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(292, 589, 303, 584.6, 314, 593, 297, 597)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble26" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(800, 606, 804, 604.4, 808, 610, 805, 614)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble27" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(1028, 604, 1041, 598.8, 1054, 608, 1033, 612)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble28" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(231, 596, 237, 593.6, 243, 600, 236, 604)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble29" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(236, 636, 251, 630.0, 266, 640, 241, 644)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble30" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(375, 624, 383, 620.8, 391, 628, 380, 632)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble31" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(283, 619, 293, 615.0, 303, 623, 288, 627)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble32" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(967, 626, 971, 624.4, 975, 630, 972, 634)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Rubble33" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(360, 551, 365, 549.0, 370, 555, 365, 559)
+color = Color(0.3961, 0.451, 0.4196, 1)
+
+[node name="Rubble34" type="Polygon2D" parent="Framing/Shake/Set"]
+polygon = PackedVector2Array(314, 567, 329, 561.0, 344, 571, 319, 575)
+color = Color(0.2471, 0.3176, 0.3294, 1)
+
+[node name="Evidence" type="Node2D" parent="Framing/Shake"]
+
+
+[node name="CoveredDefender0" type="Polygon2D" parent="Framing/Shake/Evidence"]
+polygon = PackedVector2Array(790, 548, 798, 536, 802, 524, 813, 518, 824, 519, 832, 529, 841, 526, 854, 513, 878, 513, 912, 530, 954, 536, 973, 548)
+color = Color(0.4667, 0.5373, 0.5216, 1)
+
+[node name="ClothFold0" type="Line2D" parent="Framing/Shake/Evidence"]
+points = PackedVector2Array(814, 539, 856, 526, 906, 539, 959, 543)
+width = 2
+default_color = Color(0.698, 0.7255, 0.6471, 1)
+
+[node name="ClothHem0" type="Line2D" parent="Framing/Shake/Evidence"]
+points = PackedVector2Array(794, 548, 964, 548)
+width = 2
+default_color = Color(0.7765, 0.7804, 0.6824, 1)
+
+[node name="CoveredDefender1" type="Polygon2D" parent="Framing/Shake/Evidence"]
+polygon = PackedVector2Array(1000.0, 509.0, 1005.84, 500.24, 1008.76, 491.48, 1016.79, 487.1, 1024.82, 487.83, 1030.66, 495.13, 1037.23, 492.94, 1046.72, 483.45, 1064.24, 483.45, 1089.06, 495.86, 1119.72, 500.24, 1133.59, 509.0)
+color = Color(0.2902, 0.3961, 0.4039, 1)
+
+[node name="ClothFold1" type="Line2D" parent="Framing/Shake/Evidence"]
+points = PackedVector2Array(1017.52, 502.43, 1048.18, 492.94, 1084.68, 502.43, 1123.37, 505.35)
+width = 2
+default_color = Color(0.4549, 0.549, 0.5216, 1)
+
+[node name="ClothHem1" type="Line2D" parent="Framing/Shake/Evidence"]
+points = PackedVector2Array(1002.92, 509, 1127.02, 509)
+width = 2
+default_color = Color(0.4706, 0.5725, 0.5451, 1)
+
+[node name="DefenderGuard" type="Polygon2D" parent="Framing/Shake/Evidence"]
+polygon = PackedVector2Array(746, 551, 755, 525, 780, 529, 792, 551, 773, 565)
+color = Color(0.3608, 0.4471, 0.4627, 1)
+
+[node name="GuardEdge" type="Line2D" parent="Framing/Shake/Evidence"]
+points = PackedVector2Array(746, 551, 755, 525, 780, 529)
+width = 3
+default_color = Color(0.6392, 0.6863, 0.6314, 1)
+
+[node name="Character" type="Sprite2D" parent="Framing/Shake"]
+position = Vector2(485, 566)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("idle")
+hframes = 8
+offset = Vector2(0, -229)
+
+[node name="Foreground" type="Node2D" parent="Framing/Shake"]
+
+
+[node name="NearShadow" type="Polygon2D" parent="Framing/Shake/Foreground"]
+polygon = PackedVector2Array(-350, 680, 145, 612, 280, 673, 560, 703, 930, 651, 1380, 649, 1550, 1000, -350, 1000)
+color = Color(0.0431, 0.0902, 0.1216, 1)
+
+[node name="Top" type="ColorRect" parent="."]
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 70.0
+mouse_filter = 2
+color = Color(0.0353, 0.0588, 0.0863, 1)
+
+[node name="Bottom" type="ColorRect" parent="."]
+offset_top = 636.0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.0353, 0.0588, 0.0863, 1)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 23.0
+text = "03 / FALLEN DEFENDERS"
+theme_override_colors/font_color = Color(0.851, 0.8431, 0.749, 1)
+theme_override_font_sizes/font_size = 19
+
+[node name="Status" type="Label" parent="."]
+offset_left = 825.0
+offset_top = 25.0
+text = "PROVISIONAL / LOCATION & IDENTITIES UNASSIGNED"
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.5333, 0.6196, 0.6078, 1)
+
+[node name="Destination" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 658.0
+offset_right = 1180.0
+offset_bottom = 704.0
+horizontal_alignment = 1
+text = ""
+theme_override_font_sizes/font_size = 23
+theme_override_colors/font_color = Color(0.8902, 0.8784, 0.8118, 1)
+
+[node name="Fade" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.0353, 0.0588, 0.0863, 0)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("library")}
