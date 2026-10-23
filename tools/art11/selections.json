@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "source_commit": "815bceb98e2560a2869a5534a34cd155c15b0dc1",
+  "selections": [
+    {
+      "id": "moss_surface",
+      "sequence_id": "mossy-assets/Mossy Tileset/Mossy - FloatingPlatforms.png",
+      "region": 5,
+      "height": 40,
+      "role": "surface_inlay",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "hanging",
+      "sequence_id": "mossy-assets/Mossy Tileset/Mossy - Hanging Plants.png",
+      "region": 0,
+      "height": 104,
+      "role": "recessed_architecture",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "column",
+      "sequence_id": "mossy-assets/Mossy Tileset/Mossy - BackgroundDecoration.png",
+      "region": 1,
+      "height": 480,
+      "role": "recessed_architecture",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "grass",
+      "sequence_id": "plantsanimated/Vegetation/Grass2",
+      "region": -1,
+      "height": 38,
+      "role": "decorative_motion",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "flower",
+      "sequence_id": "plant-animations/Plant Animations/BlueFlower1",
+      "region": -1,
+      "height": 58,
+      "role": "decorative_motion",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "poison",
+      "sequence_id": "plant-animations/Plant Animations/Plant 8 Poison",
+      "region": -1,
+      "height": 88,
+      "role": "hazard_presentation",
+      "fps": 12,
+      "production_approved": false,
+      "max_width": 88
+    },
+    {
+      "id": "slime_green",
+      "sequence_id": "slimes/SlimeGreen",
+      "region": -1,
+      "height": 72,
+      "role": "enemy_comparison",
+      "fps": 12,
+      "production_approved": false,
+      "max_width": 84
+    },
+    {
+      "id": "slime_orange",
+      "sequence_id": "slimes/SlimeOrange",
+      "region": -1,
+      "height": 72,
+      "role": "enemy_alternate",
+      "fps": 12,
+      "production_approved": false,
+      "max_width": 84
+    },
+    {
+      "id": "cave_surface",
+      "sequence_id": "caveassetsmaaot/Assets 1024 Cave/Cave - Platforms.png",
+      "region": 8,
+      "height": 40,
+      "role": "surface_inlay",
+      "fps": 12,
+      "production_approved": false
+    },
+    {
+      "id": "cave_rocks",
+      "sequence_id": "caveassetsmaaot/Assets 1024 Cave/Cave - BigRocks1.png",
+      "region": 1,
+      "height": 166,
+      "role": "recessed_architecture",
+      "fps": 12,
+      "production_approved": false
+    }
+  ]
+}

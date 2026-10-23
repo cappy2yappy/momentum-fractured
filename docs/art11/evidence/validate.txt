@@ -1,0 +1,3 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ART11 VALIDATION {"assertions":580,"failures":[],"frames":185,"rgba_bytes":3795784}

@@ -1,0 +1,290 @@
+[
+  {
+    "path": "assets/kaze/cleaned/kaze_combat_strip.png",
+    "sha": "1ce98ad4dcd92cde64ba0c812c0b9c0673ff0a9f"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_combat_strip.png.import",
+    "sha": "a2e8bf8b40a6aea32000d2892e9577b0693fdf7f"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_idle_strip.png",
+    "sha": "bf30a28ec32e5d34e7536371d5a76bd7049ad48f"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_idle_strip.png.import",
+    "sha": "f6e5729623e4c796837d3e4588f1bf8c71a02861"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_run_strip.png",
+    "sha": "f7444d1ebfabab277515205a65017fa6a86bb049"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_run_strip.png.import",
+    "sha": "8d09c94c9f78cde162c5efaa10d2873d406a63db"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_traversal_strip.png",
+    "sha": "eb19bec862ea5542f133c40f5822da0acf8a96e3"
+  },
+  {
+    "path": "assets/kaze/cleaned/kaze_traversal_strip.png.import",
+    "sha": "8fe48ca61e1b4aa4983d99bb6e4fa1334f2d3b25"
+  },
+  {
+    "path": "assets/kaze/cleaned/source_boundary_manifest.json",
+    "sha": "c824e15bd8b58b35e04d07d33379fab0b195038b"
+  },
+  {
+    "path": "assets/kaze/cleaned/source_final_manifest.json",
+    "sha": "5d3528e77a13274c444dd702d07180d001d92210"
+  },
+  {
+    "path": "assets/web/KAZE_SPRITES.md",
+    "sha": "ece2c3d254f3569db4c586f4a86313c0e2d346f1"
+  },
+  {
+    "path": "assets/web/area-atlas.png",
+    "sha": "f1a06cbb79d83284c7f87650691ec9772366de7f"
+  },
+  {
+    "path": "assets/web/area-atlas.png.import",
+    "sha": "360de7e947edc8d864ff00a08d7ccb844fc43ed0"
+  },
+  {
+    "path": "assets/web/bosses_strip.png",
+    "sha": "e2f2cb4f78a9ff52d5df068274b086afaa70575d"
+  },
+  {
+    "path": "assets/web/bosses_strip.png.import",
+    "sha": "a93687f936bd70763ea2deca4256d41b4c35bcb2"
+  },
+  {
+    "path": "assets/web/district-fidelity.png",
+    "sha": "c1ae6c522283f0076388833f445929ce5a69afb2"
+  },
+  {
+    "path": "assets/web/district-fidelity.png.import",
+    "sha": "90a81fddfa183a77fd8d1557964add49b702ec03"
+  },
+  {
+    "path": "assets/web/kaze_combat_strip.png",
+    "sha": "52708172f17d877870416b08a9275df328958819"
+  },
+  {
+    "path": "assets/web/kaze_combat_strip.png.import",
+    "sha": "bd4dc8b2c2e7ffa8f62e5a2db984539ae6328db6"
+  },
+  {
+    "path": "assets/web/kaze_idle_strip.png",
+    "sha": "d41bba9fc2d76208734ec10ff01807c78a5bdac7"
+  },
+  {
+    "path": "assets/web/kaze_idle_strip.png.import",
+    "sha": "e3b50bfb5da3976e5a1c7673debf45eea0e3fb27"
+  },
+  {
+    "path": "assets/web/kaze_manifest.json",
+    "sha": "95b97d1beda9d66f3c1d0a00abfeec1a42b1510a"
+  },
+  {
+    "path": "assets/web/kaze_run_strip.png",
+    "sha": "d92fd70d62780920e226e70e98a0d9893f45299c"
+  },
+  {
+    "path": "assets/web/kaze_run_strip.png.import",
+    "sha": "190c36bf2bef892513f23c47f5408b3457e0580c"
+  },
+  {
+    "path": "assets/web/kaze_traversal_strip.png",
+    "sha": "6a7d1327db0e8389664572109806884f21c70a8d"
+  },
+  {
+    "path": "assets/web/kaze_traversal_strip.png.import",
+    "sha": "7f6ec65b774afb9e203214c92e85f78ab16fdfc2"
+  },
+  {
+    "path": "assets/web/sentinels_strip.png",
+    "sha": "978e80eb89ac609f6a2cde2a37b82e4b0842c350"
+  },
+  {
+    "path": "assets/web/sentinels_strip.png.import",
+    "sha": "734c6695b36795bc029ded77a1d512204e416b26"
+  },
+  {
+    "path": "assets/web/terrain-materials.png",
+    "sha": "43d92da8d0068efe8f88909b6c6ac7d93a58cd03"
+  },
+  {
+    "path": "assets/web/terrain-materials.png.import",
+    "sha": "77a116cf2daa6142a90e33e6c9f4ee83861dd5b6"
+  },
+  {
+    "path": "project.godot",
+    "sha": "c777b68e20f781c90d141ce2fc500d4f96cb319d"
+  },
+  {
+    "path": "scenes/main.tscn",
+    "sha": "73a3585060f3f31c3da2d9e48c8c742cf66b07ea"
+  },
+  {
+    "path": "scripts/art04_presentation.gd",
+    "sha": "3813ed3c3281e59fc0f381b14739841fd56f3631"
+  },
+  {
+    "path": "scripts/bellroof_walk.gd",
+    "sha": "4b796d4e235ba16d8658c3b6dee0e49f8562c879"
+  },
+  {
+    "path": "scripts/bellroof_walk.gd.uid",
+    "sha": "02f9ba3c75cbc807311576fb48c26c370082967f"
+  },
+  {
+    "path": "scripts/canal_gatehouse.gd",
+    "sha": "7527004f7d39e8536df0c0f24fd07516162d14bb"
+  },
+  {
+    "path": "scripts/canal_gatehouse.gd.uid",
+    "sha": "88cb2565bab4c748b455cd85327a8d6a5a59f633"
+  },
+  {
+    "path": "scripts/cinematic_transitions.gd",
+    "sha": "b048abc57bce46aa09eff402eb05d70fb4108570"
+  },
+  {
+    "path": "scripts/cinematic_transitions.gd.uid",
+    "sha": "d5bb2ec4ee236dd42ee3668773aff7bbe2a38760"
+  },
+  {
+    "path": "scripts/embodied_transitions.gd",
+    "sha": "5a5eff5868ee5ea77367c43f4761d911942d66b5"
+  },
+  {
+    "path": "scripts/embodied_transitions.gd.uid",
+    "sha": "5561a114952244ad776cc5c98b8c63e017da2ddc"
+  },
+  {
+    "path": "scripts/grapple_anchor.gd",
+    "sha": "b62ed27f078bff102c14e881fa02f716e558d5b9"
+  },
+  {
+    "path": "scripts/guard.gd",
+    "sha": "86bd272c8d595d1015983854f51676a942501135"
+  },
+  {
+    "path": "scripts/guard.gd.uid",
+    "sha": "ba6c2c98dab37fa7feb81cdc14c1074495b63b75"
+  },
+  {
+    "path": "scripts/hud.gd",
+    "sha": "972a1743c557569c0dee88272d621ecc8fe3c137"
+  },
+  {
+    "path": "scripts/hud.gd.uid",
+    "sha": "4461c912a49a86531d4807bccb2637d1a273edd3"
+  },
+  {
+    "path": "scripts/kunai.gd",
+    "sha": "c3a23466e6882a099ab0d7385940c0551a8df861"
+  },
+  {
+    "path": "scripts/kunai.gd.uid",
+    "sha": "17ee86772982c68dd97373d94cabbd3b30f179ab"
+  },
+  {
+    "path": "scripts/level_geometry.gd",
+    "sha": "d6a8775c20a5bcc6ae6e457db1e817ba64723539"
+  },
+  {
+    "path": "scripts/level_geometry.gd.uid",
+    "sha": "50d77bd2408bead6a860d9ed1f2d483d55404493"
+  },
+  {
+    "path": "scripts/mixed_transitions.gd",
+    "sha": "f56a0025be0d1de0a65a09da0e621628447568e1"
+  },
+  {
+    "path": "scripts/momentum_profile.gd",
+    "sha": "425d0d4301841b3218b203f4b7c6aa20b6b1da40"
+  },
+  {
+    "path": "scripts/player.gd",
+    "sha": "96f383d9f56ab76cd665b6ffb6fcaf9950d992ba"
+  },
+  {
+    "path": "scripts/player.gd.uid",
+    "sha": "9a3cec8b1f0377e5382541cb221fe1cb6cf444db"
+  },
+  {
+    "path": "scripts/room_presentation.gd",
+    "sha": "34cd23545283cb8a0318fa5e818df8c142b026ee"
+  },
+  {
+    "path": "scripts/route_extension.gd",
+    "sha": "a1f00b7ef1215dc5d4f3408b1f7fd587c51ba613"
+  },
+  {
+    "path": "scripts/route_extension.gd.uid",
+    "sha": "2518a4a0cd9e05a7ab2b810efb81f26a53bc5738"
+  },
+  {
+    "path": "scripts/skyworks_region.gd",
+    "sha": "f0bd61606268f1f20f108cb94e4301020ed46cda"
+  },
+  {
+    "path": "scripts/skyworks_region.gd.uid",
+    "sha": "42764cf40939c0c68a0afac67486bbb1726633dc"
+  },
+  {
+    "path": "scripts/staged_stair_cinematic.gd",
+    "sha": "cfa8d1f88b6fd61a5d408454a52aca88f9ac8426"
+  },
+  {
+    "path": "scripts/storm_keeper.gd",
+    "sha": "0eb04702ef94e7dfba87e341348b61359743506d"
+  },
+  {
+    "path": "scripts/storm_keeper.gd.uid",
+    "sha": "12a96aac6ac4eeb3009875992cacc9ce2409908e"
+  },
+  {
+    "path": "scripts/tr08_canal_doorway.gd",
+    "sha": "62d1fb9da8638ff02f40d737dbc3875f2546f0c0"
+  },
+  {
+    "path": "scripts/tr08_clip_library.gd",
+    "sha": "d6771e3c087f08c56d67f34318740defe93759b8"
+  },
+  {
+    "path": "scripts/tr08_clip_player.gd",
+    "sha": "c510e6c3e183c1ef3a1a1d145186229d2a13733c"
+  },
+  {
+    "path": "scripts/tr08_embodied_cinematics.gd",
+    "sha": "66f00ca57e5724350ea795a44cf1eee9c77a4a7c"
+  },
+  {
+    "path": "scripts/tr08_stair_stage.gd",
+    "sha": "fff3a47edaddf6cd73fa692de1fa297e3f19a12c"
+  },
+  {
+    "path": "scripts/transition_pilot_data.gd",
+    "sha": "42fb9c5d9233ddcc4d7c743916ca49879903ba5b"
+  },
+  {
+    "path": "scripts/world.gd",
+    "sha": "b99524eeb6ea6cbc2a7918a38905b482670c70e0"
+  },
+  {
+    "path": "scripts/world.gd.uid",
+    "sha": "87e458bd44e2ab4613db1e851f93c952287129c7"
+  },
+  {
+    "path": "scripts/world_expansion.gd",
+    "sha": "8a8f493ceccc356fc856823bf9b7e60e2f4a82f1"
+  },
+  {
+    "path": "scripts/world_expansion.gd.uid",
+    "sha": "f4df0cbad59194aa3ef567d1e157e2fe05afbe24"
+  }
+]

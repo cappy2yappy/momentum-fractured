@@ -1,0 +1,22 @@
+{
+	"baseline_only": true,
+	"cached_frames": 185,
+	"collision_topology_unchanged_on_attach": true,
+	"collision_topology_unchanged_on_detach": true,
+	"decode_count_stable": true,
+	"draw_calls_p95": 24.0,
+	"frame_ms_p50": 6.931,
+	"frame_ms_p95": 8.04,
+	"host_engine": "4.6.1-stable (official)",
+	"mode": "hazard",
+	"passed": true,
+	"production_placements": 0,
+	"samples": 722,
+	"states": [
+		"idle",
+		"warning",
+		"active",
+		"recovery"
+	],
+	"texture_rgba_bytes": 3795784
+}

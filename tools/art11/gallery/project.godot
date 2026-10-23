@@ -1,0 +1,12 @@
+config_version=5
+[application]
+config/name="Kaze ART-11 Environmental Review"
+run/main_scene="res://gallery.tscn"
+[display]
+window/size/viewport_width=1440
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.04,0.07,0.09,1)

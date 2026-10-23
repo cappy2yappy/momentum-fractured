@@ -1,0 +1,2981 @@
+{
+  "assets": {
+    "cave_rocks": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          253,
+          166
+        ]
+      ],
+      "canvas_size": [
+        257,
+        170
+      ],
+      "content_size": [
+        253,
+        166
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "cave_rocks_000.png",
+          "sha256": "9a44013fb87ad36fc6a8b24c4b862dc58edf02b9574ec3397595720ef9f826f7"
+        }
+      ],
+      "pivot": [
+        128.5,
+        168
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 166,
+        "id": "cave_rocks",
+        "production_approved": false,
+        "region": 1,
+        "role": "recessed_architecture",
+        "sequence_id": "caveassetsmaaot/Assets 1024 Cave/Cave - BigRocks1.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Assets 1024 Cave/Cave - BigRocks1.png",
+          "sha256": "31b523ba6b001dc84afad1e45af83728026999f8fa2779d6e8cce227c14bc867"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        387,
+        254
+      ]
+    },
+    "cave_surface": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          225,
+          40
+        ]
+      ],
+      "canvas_size": [
+        229,
+        44
+      ],
+      "content_size": [
+        225,
+        40
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "cave_surface_000.png",
+          "sha256": "da72bf4644422fb29500fc7a5373af67fcec1fc490d60bef82d79d07020a7025"
+        }
+      ],
+      "pivot": [
+        114.5,
+        42
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 40,
+        "id": "cave_surface",
+        "production_approved": false,
+        "region": 8,
+        "role": "surface_inlay",
+        "sequence_id": "caveassetsmaaot/Assets 1024 Cave/Cave - Platforms.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Assets 1024 Cave/Cave - Platforms.png",
+          "sha256": "76523e39a01f424f6e163f5eb6e5d5aa8f3c11fa6868f972cb29d3d6c714a474"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        355,
+        63
+      ]
+    },
+    "column": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          212,
+          480
+        ]
+      ],
+      "canvas_size": [
+        216,
+        484
+      ],
+      "content_size": [
+        212,
+        480
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "column_000.png",
+          "sha256": "b1b7d941d769d0108494d5456c59be9760093f50477c116f22ecf00985b97f45"
+        }
+      ],
+      "pivot": [
+        108,
+        482
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 480,
+        "id": "column",
+        "production_approved": false,
+        "region": 1,
+        "role": "recessed_architecture",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - BackgroundDecoration.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - BackgroundDecoration.png",
+          "sha256": "7695933529b6266f88c21c0a19c9224c0b3e19b687bbad77cab89f4f7bc70614"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        1036,
+        2346
+      ]
+    },
+    "flower": {
+      "alpha_bounds": [
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          4,
+          53,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          4,
+          4,
+          53,
+          56
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ]
+      ],
+      "canvas_size": [
+        59,
+        62
+      ],
+      "content_size": [
+        55,
+        58
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "flower_000.png",
+          "sha256": "f76648209c74350456a63592c0ea62d02f3214a84d3290022e5e184345e48536"
+        },
+        {
+          "path": "flower_001.png",
+          "sha256": "ab5fb23ab4bff4e37e3088d412b550c1a035f4a2ea8b484c0ad388faf2f56a85"
+        },
+        {
+          "path": "flower_002.png",
+          "sha256": "227f7b4da491a243b4c52e63275af2871b60864bf8075762f72d883f18411d1c"
+        },
+        {
+          "path": "flower_003.png",
+          "sha256": "39e0137c9270766de740dbe30ab9fa1a32d6798bb0d0f790fbe3806c63d8247c"
+        },
+        {
+          "path": "flower_004.png",
+          "sha256": "1192de5cbcda6b5fbbe37c24643a8483c8ec4a9c8c1f7bb8c8b684268b0c00f4"
+        },
+        {
+          "path": "flower_005.png",
+          "sha256": "63ca1163fc1768784240d6382817dbb878d233a46bfc0a43258bb45560deed66"
+        },
+        {
+          "path": "flower_006.png",
+          "sha256": "a03ae5734cc1d2da6aa0f890dcfae9a8f04b12628453311890ab4a76cf07dc42"
+        },
+        {
+          "path": "flower_007.png",
+          "sha256": "44123aa303c8330663cd0a2556104b88427580edb11d5ae6703c563efe0f9418"
+        },
+        {
+          "path": "flower_008.png",
+          "sha256": "5d2eedccd518de6b92e2107cc6689a4a0e8bf829c379571158c8cd52542d09d2"
+        },
+        {
+          "path": "flower_009.png",
+          "sha256": "1820d0ded21d78f2d40e5e55cc3451ecb82f5acb9bbe06d3c3e3e51b192479af"
+        },
+        {
+          "path": "flower_010.png",
+          "sha256": "84e19fb77973f0b86606947bc52c6d195347db4f5737021574485703838cf381"
+        },
+        {
+          "path": "flower_011.png",
+          "sha256": "2eca99adb933152f122d81066acd6da7bb6525a4cda76773f1be76dffdfcbbc1"
+        },
+        {
+          "path": "flower_012.png",
+          "sha256": "da9f72f8b4a7fe8aa0b7808fa267f540cb1ca4b89e28d6117f28cb178ad84bb3"
+        },
+        {
+          "path": "flower_013.png",
+          "sha256": "505048d6eb854bb56ea80983971d8be6539dcc0520e919bb7dacb046347bdce2"
+        },
+        {
+          "path": "flower_014.png",
+          "sha256": "743dec299551d97da83dfeab37bfed83362a8938d88bac766759e15c06153002"
+        },
+        {
+          "path": "flower_015.png",
+          "sha256": "34ae1fb740d1e64fd86342e9d895cdb6626991eb140f7a670e434ed5f8d58c86"
+        },
+        {
+          "path": "flower_016.png",
+          "sha256": "adc8f1ad12be3e9678ca6b586ddeb253cf80a40e7c1d375019e36f3be3cfd7b1"
+        },
+        {
+          "path": "flower_017.png",
+          "sha256": "7a95ed7c3c9574d53859b15f06f96778a13d2c6972a419ce42a349c50216babf"
+        },
+        {
+          "path": "flower_018.png",
+          "sha256": "6d5027eb17fccfa3eede7d616e5dd62ef47c48c9cfde2b743d1a6f593406af44"
+        },
+        {
+          "path": "flower_019.png",
+          "sha256": "e5973b7a523da94be29deea797fb6dfc33bdc03dd26d2b276714c3d1176aa839"
+        },
+        {
+          "path": "flower_020.png",
+          "sha256": "d9b07b4aa86ea0a1517e28479ff45c7068bcc2ba7358c4b2448fad82362be985"
+        },
+        {
+          "path": "flower_021.png",
+          "sha256": "a4e12a01545552d0518be3f552f55170e5ab4916694b55723ef6357cbd33a080"
+        },
+        {
+          "path": "flower_022.png",
+          "sha256": "3d478561108c78f0d67005cca3fc8c7f0a81b74ce8eb625dc03fddb2a5d46112"
+        },
+        {
+          "path": "flower_023.png",
+          "sha256": "e8f72e6725f650c0e2a5531f501050fb992510f5557239dbc68205e84388bca6"
+        },
+        {
+          "path": "flower_024.png",
+          "sha256": "eb4ae875436db7ba48d3d3bc1d7f85a4ff37cd3b951bd220ae1fed2f5680904f"
+        },
+        {
+          "path": "flower_025.png",
+          "sha256": "642bfb15987db005da6d5b4af7f8c34e7f698c5460e2a4f5b4cd043401dc5944"
+        },
+        {
+          "path": "flower_026.png",
+          "sha256": "312da190ee40f41e3fa365fbe6712dd13060fc377490566fbaf1a8d8039e2248"
+        },
+        {
+          "path": "flower_027.png",
+          "sha256": "5996464c61928a2fbf76116252defefa9b04a893785287b4f9cb9fad8e9d9c5e"
+        },
+        {
+          "path": "flower_028.png",
+          "sha256": "b5912cd00ee11ecf123ff1dbff7b1b086ed529f6ef4551d58bf2dbeddfdaa9d7"
+        },
+        {
+          "path": "flower_029.png",
+          "sha256": "360ffe886cb1e327bf970cc35dcace489ea7df9177359cc30565028010fbf53d"
+        },
+        {
+          "path": "flower_030.png",
+          "sha256": "51b6acf604d686d59a187d426887c42e98fa13279825d06e70ab626388be0168"
+        },
+        {
+          "path": "flower_031.png",
+          "sha256": "360ffe886cb1e327bf970cc35dcace489ea7df9177359cc30565028010fbf53d"
+        },
+        {
+          "path": "flower_032.png",
+          "sha256": "b5912cd00ee11ecf123ff1dbff7b1b086ed529f6ef4551d58bf2dbeddfdaa9d7"
+        },
+        {
+          "path": "flower_033.png",
+          "sha256": "5996464c61928a2fbf76116252defefa9b04a893785287b4f9cb9fad8e9d9c5e"
+        },
+        {
+          "path": "flower_034.png",
+          "sha256": "312da190ee40f41e3fa365fbe6712dd13060fc377490566fbaf1a8d8039e2248"
+        },
+        {
+          "path": "flower_035.png",
+          "sha256": "642bfb15987db005da6d5b4af7f8c34e7f698c5460e2a4f5b4cd043401dc5944"
+        },
+        {
+          "path": "flower_036.png",
+          "sha256": "eb4ae875436db7ba48d3d3bc1d7f85a4ff37cd3b951bd220ae1fed2f5680904f"
+        },
+        {
+          "path": "flower_037.png",
+          "sha256": "e8f72e6725f650c0e2a5531f501050fb992510f5557239dbc68205e84388bca6"
+        },
+        {
+          "path": "flower_038.png",
+          "sha256": "3d478561108c78f0d67005cca3fc8c7f0a81b74ce8eb625dc03fddb2a5d46112"
+        },
+        {
+          "path": "flower_039.png",
+          "sha256": "a4e12a01545552d0518be3f552f55170e5ab4916694b55723ef6357cbd33a080"
+        },
+        {
+          "path": "flower_040.png",
+          "sha256": "d9b07b4aa86ea0a1517e28479ff45c7068bcc2ba7358c4b2448fad82362be985"
+        },
+        {
+          "path": "flower_041.png",
+          "sha256": "e5973b7a523da94be29deea797fb6dfc33bdc03dd26d2b276714c3d1176aa839"
+        },
+        {
+          "path": "flower_042.png",
+          "sha256": "6d5027eb17fccfa3eede7d616e5dd62ef47c48c9cfde2b743d1a6f593406af44"
+        },
+        {
+          "path": "flower_043.png",
+          "sha256": "7a95ed7c3c9574d53859b15f06f96778a13d2c6972a419ce42a349c50216babf"
+        },
+        {
+          "path": "flower_044.png",
+          "sha256": "adc8f1ad12be3e9678ca6b586ddeb253cf80a40e7c1d375019e36f3be3cfd7b1"
+        },
+        {
+          "path": "flower_045.png",
+          "sha256": "34ae1fb740d1e64fd86342e9d895cdb6626991eb140f7a670e434ed5f8d58c86"
+        },
+        {
+          "path": "flower_046.png",
+          "sha256": "743dec299551d97da83dfeab37bfed83362a8938d88bac766759e15c06153002"
+        },
+        {
+          "path": "flower_047.png",
+          "sha256": "505048d6eb854bb56ea80983971d8be6539dcc0520e919bb7dacb046347bdce2"
+        },
+        {
+          "path": "flower_048.png",
+          "sha256": "da9f72f8b4a7fe8aa0b7808fa267f540cb1ca4b89e28d6117f28cb178ad84bb3"
+        },
+        {
+          "path": "flower_049.png",
+          "sha256": "2eca99adb933152f122d81066acd6da7bb6525a4cda76773f1be76dffdfcbbc1"
+        },
+        {
+          "path": "flower_050.png",
+          "sha256": "84e19fb77973f0b86606947bc52c6d195347db4f5737021574485703838cf381"
+        },
+        {
+          "path": "flower_051.png",
+          "sha256": "1820d0ded21d78f2d40e5e55cc3451ecb82f5acb9bbe06d3c3e3e51b192479af"
+        },
+        {
+          "path": "flower_052.png",
+          "sha256": "5d2eedccd518de6b92e2107cc6689a4a0e8bf829c379571158c8cd52542d09d2"
+        },
+        {
+          "path": "flower_053.png",
+          "sha256": "44123aa303c8330663cd0a2556104b88427580edb11d5ae6703c563efe0f9418"
+        },
+        {
+          "path": "flower_054.png",
+          "sha256": "a03ae5734cc1d2da6aa0f890dcfae9a8f04b12628453311890ab4a76cf07dc42"
+        },
+        {
+          "path": "flower_055.png",
+          "sha256": "63ca1163fc1768784240d6382817dbb878d233a46bfc0a43258bb45560deed66"
+        },
+        {
+          "path": "flower_056.png",
+          "sha256": "1192de5cbcda6b5fbbe37c24643a8483c8ec4a9c8c1f7bb8c8b684268b0c00f4"
+        },
+        {
+          "path": "flower_057.png",
+          "sha256": "39e0137c9270766de740dbe30ab9fa1a32d6798bb0d0f790fbe3806c63d8247c"
+        },
+        {
+          "path": "flower_058.png",
+          "sha256": "227f7b4da491a243b4c52e63275af2871b60864bf8075762f72d883f18411d1c"
+        },
+        {
+          "path": "flower_059.png",
+          "sha256": "ab5fb23ab4bff4e37e3088d412b550c1a035f4a2ea8b484c0ad388faf2f56a85"
+        }
+      ],
+      "pivot": [
+        29.5,
+        60
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 58,
+        "id": "flower",
+        "production_approved": false,
+        "region": -1,
+        "role": "decorative_motion",
+        "sequence_id": "plant-animations/Plant Animations/BlueFlower1"
+      },
+      "source_hashes": [
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00000.png",
+          "sha256": "329acabc38879e50f39e290046704d9bbf0036ea4db18c38d7b1cdc1567a2fc4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00001.png",
+          "sha256": "2321a0666916cac9be793bf99111062e0f90eccde345cb5f369db077f38f7da5"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00002.png",
+          "sha256": "03848f450044c93327e86a702fb632130b85cc648b51f97419b4c5db6aaf4916"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00003.png",
+          "sha256": "2ebcfc53b0b00bdbd2d7e2598f3ada8d8703226b25cccc6483a46fe288fc7a36"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00004.png",
+          "sha256": "fae6ea8a7e2c79474bb103a03ac550f03ea039d9a205c9ab42ff694daf4e5454"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00005.png",
+          "sha256": "9a3926bf5c68a67a7191c434f4617acd78384865cc7043069fad2bd4fafb8a4b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00006.png",
+          "sha256": "870e1344e6044223949078b4f9878e87534abaab3cbd4b3475170b76c4a38943"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00007.png",
+          "sha256": "2e632334a1d1c27badd2c24e569fbd34f713d88804d88cd7d8901c1e5063ada6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00008.png",
+          "sha256": "38d3327e9bb9c44a43572a9e733a81cce0eaaf8fb235fe5b15f2067662a3c948"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00009.png",
+          "sha256": "478dfc7959008a43f384cc97783e20b39940c914046c879411a523978775fa46"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00010.png",
+          "sha256": "1e60ad04def34f0bd30b2ad2653ab11700ea77d26497f34c17d8e365b4dde274"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00011.png",
+          "sha256": "2169dffa5e3d9df4fc114dfff5d9eaf98c154da1b6fec798c21c293ff6e43988"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00012.png",
+          "sha256": "613e8ea1c2260bb08bcc6e9740aace1c02ca572372269c2d8e1bcad0d21e875a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00013.png",
+          "sha256": "e0ca6fa8ebf7b8018331c10b05cbd31fb388a3b6209abfab7c2f7fd07aedf05b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00014.png",
+          "sha256": "e36398f95f426911ba213c33ef3b8d9e84dc1cc38e489b8ee89a29249f6936f4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00015.png",
+          "sha256": "baf7c1cf1481017ee04fb36ebae12474ab4a4d629d8775c86696facafc3b473d"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00016.png",
+          "sha256": "6ff11dbbdf74d0c68152aa8a3753857dbef69003c5874dce252dd7b1418a5a3a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00017.png",
+          "sha256": "e67ac82598c7392eb816d11cd45493df244e3d47f64d2e788136b5d37cf4f5c0"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00018.png",
+          "sha256": "fedc9b793c34c52cdb834d2f7147dc73dd81a2a4a4ec660465812f292de845d9"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00019.png",
+          "sha256": "afc556c7451ab307393a69d9a4d088dacb80787fe858db6923f99b470297ea98"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00020.png",
+          "sha256": "644a77fb3a4c31044f3c42f135bd4c09ad1c58ff39cd58f63dfcf9626a6dc1d4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00021.png",
+          "sha256": "61b9df05741979b8756fc0df1b793750e815e70c60cb8c1596fcc74453ad53f6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00022.png",
+          "sha256": "405417c138e9d7cd5e8dcba4f8f9fe1d2e9bb4be1cc418b4776e6a5472ecd794"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00023.png",
+          "sha256": "23e64fefc157138eec7022afe24b15ccbb3af82681d3f2c650d963bd7c2c4aa7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00024.png",
+          "sha256": "2d30cbfe925603e0d7776fd3933e80ceab912980a6248f4a25521b00560ece19"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00025.png",
+          "sha256": "390fc265dc0c8128e1b30a351de6862ac6e717aba7384d55eaf1d27bd9ff7f4e"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00026.png",
+          "sha256": "539829b738a84a9fa2cdab8475c2e8871aed0e4721e093d18a71540249f57346"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00027.png",
+          "sha256": "2509177b75772b82a21100e2cec24ff1593092310d1d3140a9f8631872b71c38"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00028.png",
+          "sha256": "66152bf0297bf8d6423b64ceb931bce62bee9a025e5edaab50f60cf186606211"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00029.png",
+          "sha256": "5ff969835c8b11635f75e19b282815352202c26b8c82f468e6d5236494d90ac7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00030.png",
+          "sha256": "82941bb54eb86fcf0e9013806e0950734e750ed8fced60b7b3815142e49a32b1"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00031.png",
+          "sha256": "5ff969835c8b11635f75e19b282815352202c26b8c82f468e6d5236494d90ac7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00032.png",
+          "sha256": "66152bf0297bf8d6423b64ceb931bce62bee9a025e5edaab50f60cf186606211"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00033.png",
+          "sha256": "2509177b75772b82a21100e2cec24ff1593092310d1d3140a9f8631872b71c38"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00034.png",
+          "sha256": "539829b738a84a9fa2cdab8475c2e8871aed0e4721e093d18a71540249f57346"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00035.png",
+          "sha256": "390fc265dc0c8128e1b30a351de6862ac6e717aba7384d55eaf1d27bd9ff7f4e"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00036.png",
+          "sha256": "2d30cbfe925603e0d7776fd3933e80ceab912980a6248f4a25521b00560ece19"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00037.png",
+          "sha256": "23e64fefc157138eec7022afe24b15ccbb3af82681d3f2c650d963bd7c2c4aa7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00038.png",
+          "sha256": "405417c138e9d7cd5e8dcba4f8f9fe1d2e9bb4be1cc418b4776e6a5472ecd794"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00039.png",
+          "sha256": "61b9df05741979b8756fc0df1b793750e815e70c60cb8c1596fcc74453ad53f6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00040.png",
+          "sha256": "644a77fb3a4c31044f3c42f135bd4c09ad1c58ff39cd58f63dfcf9626a6dc1d4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00041.png",
+          "sha256": "afc556c7451ab307393a69d9a4d088dacb80787fe858db6923f99b470297ea98"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00042.png",
+          "sha256": "fedc9b793c34c52cdb834d2f7147dc73dd81a2a4a4ec660465812f292de845d9"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00043.png",
+          "sha256": "e67ac82598c7392eb816d11cd45493df244e3d47f64d2e788136b5d37cf4f5c0"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00044.png",
+          "sha256": "6ff11dbbdf74d0c68152aa8a3753857dbef69003c5874dce252dd7b1418a5a3a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00045.png",
+          "sha256": "baf7c1cf1481017ee04fb36ebae12474ab4a4d629d8775c86696facafc3b473d"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00046.png",
+          "sha256": "e36398f95f426911ba213c33ef3b8d9e84dc1cc38e489b8ee89a29249f6936f4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00047.png",
+          "sha256": "e0ca6fa8ebf7b8018331c10b05cbd31fb388a3b6209abfab7c2f7fd07aedf05b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00048.png",
+          "sha256": "613e8ea1c2260bb08bcc6e9740aace1c02ca572372269c2d8e1bcad0d21e875a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00049.png",
+          "sha256": "2169dffa5e3d9df4fc114dfff5d9eaf98c154da1b6fec798c21c293ff6e43988"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00050.png",
+          "sha256": "1e60ad04def34f0bd30b2ad2653ab11700ea77d26497f34c17d8e365b4dde274"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00051.png",
+          "sha256": "478dfc7959008a43f384cc97783e20b39940c914046c879411a523978775fa46"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00052.png",
+          "sha256": "38d3327e9bb9c44a43572a9e733a81cce0eaaf8fb235fe5b15f2067662a3c948"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00053.png",
+          "sha256": "2e632334a1d1c27badd2c24e569fbd34f713d88804d88cd7d8901c1e5063ada6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00054.png",
+          "sha256": "870e1344e6044223949078b4f9878e87534abaab3cbd4b3475170b76c4a38943"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00055.png",
+          "sha256": "9a3926bf5c68a67a7191c434f4617acd78384865cc7043069fad2bd4fafb8a4b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00056.png",
+          "sha256": "fae6ea8a7e2c79474bb103a03ac550f03ea039d9a205c9ab42ff694daf4e5454"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00057.png",
+          "sha256": "2ebcfc53b0b00bdbd2d7e2598f3ada8d8703226b25cccc6483a46fe288fc7a36"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00058.png",
+          "sha256": "03848f450044c93327e86a702fb632130b85cc648b51f97419b4c5db6aaf4916"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00059.png",
+          "sha256": "2321a0666916cac9be793bf99111062e0f90eccde345cb5f369db077f38f7da5"
+        }
+      ],
+      "union_crop": [
+        117,
+        107,
+        623,
+        652
+      ]
+    },
+    "grass": {
+      "alpha_bounds": [
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          4,
+          39,
+          36
+        ],
+        [
+          3,
+          4,
+          39,
+          36
+        ],
+        [
+          4,
+          3,
+          39,
+          37
+        ],
+        [
+          6,
+          2,
+          37,
+          38
+        ],
+        [
+          8,
+          2,
+          36,
+          38
+        ],
+        [
+          9,
+          2,
+          36,
+          38
+        ],
+        [
+          11,
+          2,
+          34,
+          38
+        ],
+        [
+          12,
+          2,
+          33,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          12,
+          2,
+          33,
+          38
+        ],
+        [
+          11,
+          2,
+          34,
+          38
+        ],
+        [
+          9,
+          2,
+          35,
+          38
+        ],
+        [
+          8,
+          2,
+          35,
+          38
+        ],
+        [
+          6,
+          2,
+          37,
+          38
+        ],
+        [
+          4,
+          3,
+          38,
+          37
+        ],
+        [
+          3,
+          4,
+          39,
+          36
+        ],
+        [
+          2,
+          4,
+          39,
+          36
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ]
+      ],
+      "canvas_size": [
+        47,
+        42
+      ],
+      "content_size": [
+        43,
+        38
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "grass_000.png",
+          "sha256": "d00eb2293e6df9a8209e9e6de2ef01fa9728a7361b34b114c2ded01ee640d23a"
+        },
+        {
+          "path": "grass_001.png",
+          "sha256": "78ee73628866fa9dee2ccfc86a4a293f43375e994e88d993e752dd98c20c8c35"
+        },
+        {
+          "path": "grass_002.png",
+          "sha256": "f5ff67a9f9f3ccdaee2e69a81500fc629c7ff6d75c18ff4e4dddc98e77964736"
+        },
+        {
+          "path": "grass_003.png",
+          "sha256": "bdf2b00ce12bc62b4183d25b034717a6a221796e372860300115c834026d762c"
+        },
+        {
+          "path": "grass_004.png",
+          "sha256": "d679e394e50f0bfc1924452a32db615143db8ad592c9278987f2654f13f16b3a"
+        },
+        {
+          "path": "grass_005.png",
+          "sha256": "5b3d80ce59c329f20eabfe40db12cd3bd69b40b4f9c07b46889eaf164975959d"
+        },
+        {
+          "path": "grass_006.png",
+          "sha256": "7664a593039972bd710a13b49e204559e65fc849aad6ff3eb011854a66f72bfe"
+        },
+        {
+          "path": "grass_007.png",
+          "sha256": "9030f682ba6917eb24ddae4175ef1dd97e90be5a26b476ad6c5fa28aa0be125e"
+        },
+        {
+          "path": "grass_008.png",
+          "sha256": "630c837a638d48ed7f005d39f6a41c05da5d89d6039da64160b34b4a31dc5e86"
+        },
+        {
+          "path": "grass_009.png",
+          "sha256": "cbe6c3b8c80daae6d7996d78e603da49266abb4d53c3bdb366e19cd25f528bb4"
+        },
+        {
+          "path": "grass_010.png",
+          "sha256": "516c0e586f640b4b05a9d92625841599d431bc5eeb32b38baf2360e18d142a24"
+        },
+        {
+          "path": "grass_011.png",
+          "sha256": "cc2340b7753585730c5411602b04c1567dd6fbd2cffe14a93db9331e87808fb4"
+        },
+        {
+          "path": "grass_012.png",
+          "sha256": "d2874d1f0af458a8ad76b725d9e1e8270ca3b70a7eb7c5a82498e7486a415629"
+        },
+        {
+          "path": "grass_013.png",
+          "sha256": "f896f5df3d0ae99cda537efa3ae3778cf8ee0335289601476859d112f5ff8f6f"
+        },
+        {
+          "path": "grass_014.png",
+          "sha256": "28024cf5c84bd33592a8232c8b6bd2222a091423a251419fd2edafd1829cc74c"
+        },
+        {
+          "path": "grass_015.png",
+          "sha256": "9b4e56a3db737c357c31f742daebde1e22a0888b9f40fcf2287ff2dcaf3f2f42"
+        },
+        {
+          "path": "grass_016.png",
+          "sha256": "7e4b6fd91e217bdb11be8b40b94f3cc00553e0430015d963e26df632faa69ae7"
+        },
+        {
+          "path": "grass_017.png",
+          "sha256": "553023ca8388427347932bf1e2fb8070471517f912ccaff1b85a7d7625c25a37"
+        },
+        {
+          "path": "grass_018.png",
+          "sha256": "406a7581a9dc9a7790ff4c8fc97ad8f2e9e0c7fae1a7d4cc9716ba2bf4e1c96d"
+        },
+        {
+          "path": "grass_019.png",
+          "sha256": "d273b98a798dc395d1aa2406bff051239e8f20709cc9311a7c1532e4b5319684"
+        },
+        {
+          "path": "grass_020.png",
+          "sha256": "f3e4abab2f3c098b55cefa0024587776b22173c5d55abe8c891a650cfa402191"
+        },
+        {
+          "path": "grass_021.png",
+          "sha256": "3a1cc0ba3d95a5da7a28d68f90ed1167ad66bbf1c76a579777f2a5ad70a99168"
+        },
+        {
+          "path": "grass_022.png",
+          "sha256": "9d423bc3d31afc2e7448df0cabbc6e885691030a6717a9218f58767f5287fd3d"
+        },
+        {
+          "path": "grass_023.png",
+          "sha256": "56b194de13206fb5edaf3a6c813cdf881bfd01e0c4629d28255d9f435aceba6e"
+        },
+        {
+          "path": "grass_024.png",
+          "sha256": "13bf576fe40697fc05ad7e9084c512559cbb738efbe6bc73072c3181baaa84ff"
+        },
+        {
+          "path": "grass_025.png",
+          "sha256": "37b4a0bc753a052d888260660cc1c1c857a02154d65a8c30e90d5220e04e20cf"
+        },
+        {
+          "path": "grass_026.png",
+          "sha256": "f7d5a54a7f825884ed4ac19c61108d825fe57fec0aed688413d74ffe2c0f437c"
+        },
+        {
+          "path": "grass_027.png",
+          "sha256": "82e4d246eff94a1674b2cf1093a2fb349512f2ab3071b6dc257535ed169b4088"
+        },
+        {
+          "path": "grass_028.png",
+          "sha256": "74e8149d6f1c350c95256e2c906df4d70418cc382d98c3e0223ef1e42a040eb6"
+        },
+        {
+          "path": "grass_029.png",
+          "sha256": "f227493aa6f31407eea6fbc0a00ce3fd261c43b004c22eb1dcb32ad7e8c4695e"
+        }
+      ],
+      "pivot": [
+        23.5,
+        40
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 38,
+        "id": "grass",
+        "production_approved": false,
+        "region": -1,
+        "role": "decorative_motion",
+        "sequence_id": "plantsanimated/Vegetation/Grass2"
+      },
+      "source_hashes": [
+        {
+          "path": "Vegetation/Grass2/Grass2_00000.png",
+          "sha256": "2ee06b657c54b3694754d3331b15c5a0e80a0f01e6eefd96c0196c5b27767ceb"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00001.png",
+          "sha256": "cbab70636ec71a5614a487a4aa2b0b3fd623119da131aa31a8202bc68322eb4d"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00002.png",
+          "sha256": "342ed2bed9c5a17a2a66f114810689230ac5893a72ed8da3825f3e678d28d49a"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00003.png",
+          "sha256": "6e624f06a0b6ec783807319daffc7939a0d39689c74f9bf50e6c0dc8b2ceea9c"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00004.png",
+          "sha256": "f3af3546ad77dcdfd34f0e7a7b72c636fc7fad88c030ac55d20c673e985de521"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00005.png",
+          "sha256": "6f5278989cd578a42295633f3cf36413dfc3c81e833d3fd9eba3047cdb2cb52d"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00006.png",
+          "sha256": "2bd07fe8f107493ca8e69a772ef8f21c1db2ef503491a5e86479ae568ddc736f"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00007.png",
+          "sha256": "c5338325145f97dee3fab4f96ecbdef8bce46d9719660ed73f2905fe98f13451"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00008.png",
+          "sha256": "828650442c0638370be00c4a895f2914c49b1c8bdf3f7d198545465c58020b3f"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00009.png",
+          "sha256": "b9de11fb1449b115e09c573faf3e1a4ef0858be1dfbb2f9d6232fdb439ce07f6"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00010.png",
+          "sha256": "171344b15ef51337a79cd4a436caecbf99b27e98b6123ce58e79ea7eea7f5204"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00011.png",
+          "sha256": "a6ee200ded2a7162d96fb90cb188431c87fbd30956c40ec54d32e6c5c769cda4"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00012.png",
+          "sha256": "8055c8a24aa0c8a35d0f452ab4c30b9e804df4357385d0336ec81eee35d711f9"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00013.png",
+          "sha256": "b5db25a007d2f1450c58db6ed8f5c27725330d8551da2d90bf2c7b4d68222071"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00014.png",
+          "sha256": "230c04b888417382080b6a88d918c167fdfe119ea39d7f19206d80f252c64e80"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00015.png",
+          "sha256": "862a31b7b778061f2cf810f555addde28e2ac89de65e9751c61815deaa888487"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00016.png",
+          "sha256": "3736ae9860940664778b55f7634edba6101a89e5d37c8e3d9fd5df629b2bdc49"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00017.png",
+          "sha256": "72b7a524a983fb74994efe0394ff340ae4ff114d2ca51b50470bc9461961039e"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00018.png",
+          "sha256": "cc4f4da2ae42afce0c2c87b34e7ea5485f7344b25552e407cf1cd6dd127b6286"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00019.png",
+          "sha256": "67ded21d9e44e38d1c1f50bd022c41e078cbe583fd4924a082c729fb71a90c13"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00020.png",
+          "sha256": "e55b032bc86eb888ad312fbebc2df1e2d872ca06a0a153fe08f497c5fbda13ca"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00021.png",
+          "sha256": "5d7b2f306fded5cfeec53e24c2d6d15decb1c82eeb6e62282061fc8276a6c060"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00022.png",
+          "sha256": "52ab3989f19391629764671d773eee626f5767d3889c5fe3caa4445e18d8eb33"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00023.png",
+          "sha256": "a54e925678c67838df15ab21ae7a18d83c82b4d508cf525b66a09a86bc390a3e"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00024.png",
+          "sha256": "eaff38ecf557613f29b471ca5e4810fbab2e872435ef4e442a7c6fa48aa13df9"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00025.png",
+          "sha256": "2847edce37c1bee82b1f892a7a40b716c727db9c732dbcd04cafeb5902782693"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00026.png",
+          "sha256": "7922a474e549e2806a5311013b65ed3658581fbcc03746fd77f865a7e17c458b"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00027.png",
+          "sha256": "ec3ccd8e8a81dd69cc3494382b6dea51505244365b5831ec00666bd758872a32"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00028.png",
+          "sha256": "137e29bb7c911bc684211fbaa7fafa00d63b1d5ea00e9443617dd05b35797c5b"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00029.png",
+          "sha256": "5023512e4d099632b6fec51caf4a11f56b06b8b652fa9bcfada8e9eac0dbb5e7"
+        }
+      ],
+      "union_crop": [
+        41,
+        46,
+        184,
+        163
+      ]
+    },
+    "hanging": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          29,
+          104
+        ]
+      ],
+      "canvas_size": [
+        33,
+        108
+      ],
+      "content_size": [
+        29,
+        104
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "hanging_000.png",
+          "sha256": "f39eb00a1655be1954372963f8fc3444205b0c3ae9c227da6eef9b1b08a36858"
+        }
+      ],
+      "pivot": [
+        16.5,
+        106
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 104,
+        "id": "hanging",
+        "production_approved": false,
+        "region": 0,
+        "role": "recessed_architecture",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - Hanging Plants.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - Hanging Plants.png",
+          "sha256": "599a44b0b11fbe75737809eb25f60fce212f6bdba899a244b420145053474738"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        266,
+        947
+      ]
+    },
+    "moss_surface": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          139,
+          40
+        ]
+      ],
+      "canvas_size": [
+        143,
+        44
+      ],
+      "content_size": [
+        139,
+        40
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "moss_surface_000.png",
+          "sha256": "c9dacad743a36c2f57a0ba10901c35ff0a86566e955e6df1196610686592cc8d"
+        }
+      ],
+      "pivot": [
+        71.5,
+        42
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 40,
+        "id": "moss_surface",
+        "production_approved": false,
+        "region": 5,
+        "role": "surface_inlay",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - FloatingPlatforms.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - FloatingPlatforms.png",
+          "sha256": "7d8c2990071b69205fb747a21b11a3237e49a3fd495f1cf025ba8d2e78f03dfe"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        1561,
+        450
+      ]
+    },
+    "poison": {
+      "alpha_bounds": [
+        [
+          4,
+          2,
+          86,
+          66
+        ],
+        [
+          4,
+          2,
+          86,
+          66
+        ],
+        [
+          3,
+          2,
+          87,
+          66
+        ],
+        [
+          3,
+          2,
+          87,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          2,
+          2,
+          88,
+          66
+        ],
+        [
+          3,
+          2,
+          87,
+          66
+        ],
+        [
+          3,
+          2,
+          87,
+          66
+        ],
+        [
+          3,
+          2,
+          87,
+          66
+        ],
+        [
+          4,
+          2,
+          86,
+          66
+        ]
+      ],
+      "canvas_size": [
+        92,
+        70
+      ],
+      "content_size": [
+        88,
+        66
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "poison_000.png",
+          "sha256": "2b7a261bebff66eb0b1871606e7a288ea4e39251f82308efa73cdf5d69c8438d"
+        },
+        {
+          "path": "poison_001.png",
+          "sha256": "7bd4e7decf36c8b722789bcd49230263df7358bacaa8b0149207895f4fadb26d"
+        },
+        {
+          "path": "poison_002.png",
+          "sha256": "0697d0468cd5d34c167f875b7a169088c87343f522808fbfc25f4a6978b623e2"
+        },
+        {
+          "path": "poison_003.png",
+          "sha256": "f2671fdfae397cb789e5046d07d4d4a38fba6c38671618426071c76d71c0519d"
+        },
+        {
+          "path": "poison_004.png",
+          "sha256": "c6fa6cd76a39e7f9ff037ad217c062c8196495e8ce73ba6bf5a803fa22ebee25"
+        },
+        {
+          "path": "poison_005.png",
+          "sha256": "e71d087e118e9e0c030c0916c27920704306ec8fb70e4880d572607ad3f9f0db"
+        },
+        {
+          "path": "poison_006.png",
+          "sha256": "00e240b24d500d232ae60d50b6e2c28b3bbed4db01d275d05fc3fefa8f7dfca7"
+        },
+        {
+          "path": "poison_007.png",
+          "sha256": "133dafeb0b7249a136bd6fa161565e2b324ca9e385031270bd34c3332396b534"
+        },
+        {
+          "path": "poison_008.png",
+          "sha256": "f9d26694c38a30853fb75763407ddf923eb923e03b46ab68169271b973973b2b"
+        },
+        {
+          "path": "poison_009.png",
+          "sha256": "e32ca9fd029f56fcb9238c5435a3a360f602e8b0435f7fdfc6c6ca6a091abdd5"
+        },
+        {
+          "path": "poison_010.png",
+          "sha256": "cb02cb2a99520231b1a9f4e59c4c57c0154771c98586f525634344443b7a0438"
+        },
+        {
+          "path": "poison_011.png",
+          "sha256": "9a8e3a27bd91718016ee08da665d522ab4c122f450351e38e065d0bb14b9001e"
+        },
+        {
+          "path": "poison_012.png",
+          "sha256": "3cbba5a9856f8c572a77efda13569e5f52e3e042e0da695f55329e36ff2c1314"
+        },
+        {
+          "path": "poison_013.png",
+          "sha256": "9ea8472b8f7aea27e11370c96dac81a7b7f0a33da4ecade378dae0404de8b2ee"
+        },
+        {
+          "path": "poison_014.png",
+          "sha256": "ea8229c35e3e83cf62dacae19f8f2ac698005de33b09b30398383be341cebfdf"
+        },
+        {
+          "path": "poison_015.png",
+          "sha256": "02f713010b07cdb5a045fc196429ee28aaef09efe3c58cb5974c9014480d0617"
+        },
+        {
+          "path": "poison_016.png",
+          "sha256": "557dde165e1bcdcde6a27d5a9f9d2f0334a04f86a7f1ef8c15c0ed97ee7989af"
+        },
+        {
+          "path": "poison_017.png",
+          "sha256": "5c9ed9f313e6655f80928874a35821e7c8b158e9616eb184585d7ab6ee5de07e"
+        },
+        {
+          "path": "poison_018.png",
+          "sha256": "ca7e5e4e6d7396c8defef7b07affbf63c8e3e3691fd3e1fb15dce1090de33def"
+        },
+        {
+          "path": "poison_019.png",
+          "sha256": "a3a24dd77a1fc28127bb02eab9b9ec484e9f68abd52c7107ee26de64c06c9b29"
+        },
+        {
+          "path": "poison_020.png",
+          "sha256": "026778c0ad6e346882f8d78f769df77769f3880fa8240180637e5a8907cb8402"
+        },
+        {
+          "path": "poison_021.png",
+          "sha256": "67c00f6e9fe4cb4cc95c82e90af7c7865c422e5843086b2955c3abecdc2dee2d"
+        },
+        {
+          "path": "poison_022.png",
+          "sha256": "5d73e870ade442c2179da200080af5061401f1815e32e9c2cabeb7948ac79ef9"
+        },
+        {
+          "path": "poison_023.png",
+          "sha256": "4ec3ba310bba42f1429a281178242b76a1cce25c7bd96b5446246108cc3e4429"
+        },
+        {
+          "path": "poison_024.png",
+          "sha256": "a1460d7b12b63766700a95f2c23b2fa276956ab6a66f24ef714735e8ac1d2293"
+        },
+        {
+          "path": "poison_025.png",
+          "sha256": "4af986cc2b118e408e7afe49e5f98370353b135de25392565912ef7c470a9426"
+        },
+        {
+          "path": "poison_026.png",
+          "sha256": "c0392ae901ae00cde9be3579611d1bc4b26bce4f5fe6ff0af651f54913522c55"
+        },
+        {
+          "path": "poison_027.png",
+          "sha256": "478d5ce083b761c6599eadcef459dd286af0c9d86ca1f4005676d4aa640e3542"
+        },
+        {
+          "path": "poison_028.png",
+          "sha256": "91ef7dea68d5f574dde9aa0eeedd5f7e8453229ee14eee0d0872cbee67dca23b"
+        },
+        {
+          "path": "poison_029.png",
+          "sha256": "eef34c1a986d9d3c63fb4a39972e7f8b89c33f3857fb6e9550b76955530d1a55"
+        }
+      ],
+      "pivot": [
+        46,
+        68
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 88,
+        "id": "poison",
+        "max_width": 88,
+        "production_approved": false,
+        "region": -1,
+        "role": "hazard_presentation",
+        "sequence_id": "plant-animations/Plant Animations/Plant 8 Poison"
+      },
+      "source_hashes": [
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00000.png",
+          "sha256": "08a86d3abcf68811b9ae6b7715bd47151f22399e33d03f9eb8add5ba93f39804"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00001.png",
+          "sha256": "e30210a21e30bcda4b3091cb64199f4d35be077b1d859fa570741e88d9cf07ab"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00002.png",
+          "sha256": "e7119a5eafcf027a6d906579ab6f38a2f26ab96004429f95445b5530a401a766"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00003.png",
+          "sha256": "89a4517a62fcd3ade2067961bc6c2bb86f5b24d07cbbdbcb84bc02a5ed521cc4"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00004.png",
+          "sha256": "502204e1914c1bfa0c69588cdfec893d126b01a0a693c7a542c946a3e9bf192d"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00005.png",
+          "sha256": "bb1227e8832b33e7fb7118e0caf41f70717b453e50300ffdd94e6e5d42d1f159"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00006.png",
+          "sha256": "e1b1ce5523660e38b344593cc05d3311c8ed270c4843133db42d80e12412d0a2"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00007.png",
+          "sha256": "304529dfed0951ac90804218e1f225e82a0af4e8df80a22ddb559dd513555907"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00008.png",
+          "sha256": "6288dace92b138a3b60124234bbe1e11b52e2405a51f39d77167fe5bab30c4cd"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00009.png",
+          "sha256": "a267c74cee2cdc79d2bdad599e451ec0eac1acc1970913044b5ba32a53fe952d"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00010.png",
+          "sha256": "0ab8e4f14bee5bf4c4467a83153dd6787edaea064e779b3d12596a4144639c40"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00011.png",
+          "sha256": "7f6e6eabc2248d097f9d3540f1db92ff3cdf0c4b442297bb354115d1277aec7d"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00012.png",
+          "sha256": "d9bd0f0af7723e5e65f2998e17f82d8c01cd964607c8679a2689786d7c9d6bad"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00013.png",
+          "sha256": "3c73a00ddcb4bb34d37e942314f7fc65ebbd45cb89a95bff04796ddd806f0257"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00014.png",
+          "sha256": "b3ca62603a845a66849dbcc8fa39485fde18fee5fa472f5db292552f98c204a4"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00015.png",
+          "sha256": "5323192d59ce6560e9db8c258bd0ea624fe22355349cc7cdc07b12df16725b21"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00016.png",
+          "sha256": "701f87ac4847fb3611d9ac37c3aa3ab9323719576ed828fab1eab35c2481a3ba"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00017.png",
+          "sha256": "10302bdfb994439a958cdaf2f6831c7725bce49ac361b23878cabd58c22e3407"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00018.png",
+          "sha256": "36fa4454cf452b918a0f554f9448106c7ecaf03991e050019c2045db23610651"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00019.png",
+          "sha256": "4a18a17de04d6e9d7b27ce14ba9f4c5aa53726fac9c7e93de406c762562c0cfe"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00020.png",
+          "sha256": "d6672cd76daa95594a3b97ad6b48366aa002cc38ef57c2c7cc0ed1edc34a88ec"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00021.png",
+          "sha256": "dd17e4fb57e6befb7f795c6df5ed314d2c9dd5acaddc3adbf880c3544f5b8fe0"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00022.png",
+          "sha256": "bfe92159391072c5ecc08191eb1d38d623a166c55a86e4ba59e48c7f7789fcc9"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00023.png",
+          "sha256": "95b8a0ee29f3f7aa5d9a46a73f70da7b34fb9a4caee4527bcee3fe3219e78d4a"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00024.png",
+          "sha256": "d008a71095516845eca9e278480f0239db4a41969e8198e0af98b024c35b98a3"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00025.png",
+          "sha256": "7e09587f16a2383831f3026a0d981140789296f5d7655b78c62d429712bb077b"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00026.png",
+          "sha256": "a139c15cb69e815920968b16b451c62e07383d74969a6ae722c75381ab38c546"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00027.png",
+          "sha256": "d226cef8db9f47f4ca8085ce6eed576629ce799daa6b99c4fd10a8e5b86ee88a"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00028.png",
+          "sha256": "074e440cfe0d8f2f83022994c114e02b4fc192ad381b44dc70271f5220d81d01"
+        },
+        {
+          "path": "Plant Animations/Plant 8 Poison/PlantPosion_00029.png",
+          "sha256": "2e865dcaae7eaa63f82e50f297d0c381cfa54021bb51921827be31d27c3a3b14"
+        }
+      ],
+      "union_crop": [
+        19,
+        56,
+        453,
+        341
+      ]
+    },
+    "slime_green": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          3,
+          2,
+          82,
+          56
+        ],
+        [
+          3,
+          2,
+          82,
+          56
+        ],
+        [
+          4,
+          2,
+          80,
+          56
+        ],
+        [
+          4,
+          2,
+          80,
+          56
+        ],
+        [
+          5,
+          2,
+          78,
+          56
+        ],
+        [
+          5,
+          2,
+          77,
+          56
+        ],
+        [
+          6,
+          2,
+          76,
+          56
+        ],
+        [
+          6,
+          2,
+          76,
+          56
+        ],
+        [
+          6,
+          2,
+          76,
+          56
+        ],
+        [
+          7,
+          2,
+          74,
+          56
+        ],
+        [
+          7,
+          2,
+          74,
+          56
+        ],
+        [
+          7,
+          2,
+          74,
+          56
+        ],
+        [
+          6,
+          2,
+          75,
+          56
+        ],
+        [
+          6,
+          2,
+          76,
+          56
+        ],
+        [
+          6,
+          2,
+          76,
+          56
+        ],
+        [
+          5,
+          2,
+          77,
+          56
+        ],
+        [
+          5,
+          2,
+          78,
+          56
+        ],
+        [
+          5,
+          2,
+          78,
+          56
+        ],
+        [
+          4,
+          2,
+          80,
+          56
+        ],
+        [
+          4,
+          2,
+          80,
+          56
+        ],
+        [
+          3,
+          2,
+          82,
+          56
+        ],
+        [
+          2,
+          2,
+          83,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ],
+        [
+          2,
+          2,
+          84,
+          56
+        ]
+      ],
+      "canvas_size": [
+        88,
+        60
+      ],
+      "content_size": [
+        84,
+        56
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "slime_green_000.png",
+          "sha256": "f215ab36f7bd3254425ba954340c5d15724d6644721e19cbd82f495417c351ea"
+        },
+        {
+          "path": "slime_green_001.png",
+          "sha256": "08cba8ad2ba5aebadb456ae44f28f6877d6fd9c980ad2ca31295545a7e4db7be"
+        },
+        {
+          "path": "slime_green_002.png",
+          "sha256": "f631766d66837d90fdd212ceeb2566de4fb5744642e27be08e866f9bb60b1645"
+        },
+        {
+          "path": "slime_green_003.png",
+          "sha256": "fe4a47360801c6891502dbce63b8b0df424237f0d5fc932c88fbef40694d5e7c"
+        },
+        {
+          "path": "slime_green_004.png",
+          "sha256": "d86b7052256925d7fda10072c266fa9c13af0653ab5fb55771d4df31e37a5609"
+        },
+        {
+          "path": "slime_green_005.png",
+          "sha256": "2582f534edb4dbc77dc9346ff911b4a5217928326307a18813c41189f1b03e5c"
+        },
+        {
+          "path": "slime_green_006.png",
+          "sha256": "9d2ee6ea8a08e5e3fd23c70392e2b8f5cf5a4d9058609d86e9746f4b58069987"
+        },
+        {
+          "path": "slime_green_007.png",
+          "sha256": "2e313c4a706cfaa41a365443f2bf768a222b17b8d48cbfdd947ba5063a8dc556"
+        },
+        {
+          "path": "slime_green_008.png",
+          "sha256": "3f2fb9a90be31fb9874efd352de86dac8a54293325bf21bd00a24e18ec25c65b"
+        },
+        {
+          "path": "slime_green_009.png",
+          "sha256": "9e65234c455ed366207e374b94f48d245ed7787ca85751c7a1f629f87207b694"
+        },
+        {
+          "path": "slime_green_010.png",
+          "sha256": "c560aa6b6dd45a0d824a0220a31282d844a354ce84ca0c395e67e996eb80ff0f"
+        },
+        {
+          "path": "slime_green_011.png",
+          "sha256": "e59ab52f22fa5310fe96d833d1f8ba54dd53931a6cbcd47a98868282ebec0ec0"
+        },
+        {
+          "path": "slime_green_012.png",
+          "sha256": "12ef03c2a87cd90ccb1b05f2b537635619ac9409639d38f2519bed20061c9081"
+        },
+        {
+          "path": "slime_green_013.png",
+          "sha256": "25a1d620e52e24df1ae0024327cadce81df5d5cd3b5b9adcc2aa68265991ee23"
+        },
+        {
+          "path": "slime_green_014.png",
+          "sha256": "68319446029fe8faf23d23eeb0cba2601ff9b92f0e01a2809372b9bd397d8c77"
+        },
+        {
+          "path": "slime_green_015.png",
+          "sha256": "e3d6aa662412b17769c597156e6761130b4d62107f44087cd19bf565a63ae74d"
+        },
+        {
+          "path": "slime_green_016.png",
+          "sha256": "37ac97ef7b4c30c4b30f1f0b291df69eff71e6ba42b6f13352b1659452845695"
+        },
+        {
+          "path": "slime_green_017.png",
+          "sha256": "154b933ba63ce662f3ed67c9c1bb6a7a5facbca466563e32737f4851f085be43"
+        },
+        {
+          "path": "slime_green_018.png",
+          "sha256": "b95b93e072a7416626d8c6a393ee6dfe4875d32706557491cad70ced6ca521c3"
+        },
+        {
+          "path": "slime_green_019.png",
+          "sha256": "dfabf7ad808994b9ee39c449ce0da25508c76b3f5f4213bda103864dfca22e58"
+        },
+        {
+          "path": "slime_green_020.png",
+          "sha256": "6d06609c66e1e6e869e7ce615a1249da59551bf44757f03321ce5acc73b2064c"
+        },
+        {
+          "path": "slime_green_021.png",
+          "sha256": "59baf33cc331f52b9306363e467430b9ac0d716c7bdcf00044bd5f1178194bc6"
+        },
+        {
+          "path": "slime_green_022.png",
+          "sha256": "a0e99c7a6b129af515db4d3f64f834922cfb1cb4f4633c9e2bb134e7f08e3d0b"
+        },
+        {
+          "path": "slime_green_023.png",
+          "sha256": "6e990d9d5e8971a3045cda3f8ff59b2dcf77b34abe38721c7a77a99da1a978dd"
+        },
+        {
+          "path": "slime_green_024.png",
+          "sha256": "0081475830607ccdc68e38c840073c795720933ae9aaff3fde3cd7b7e977a170"
+        },
+        {
+          "path": "slime_green_025.png",
+          "sha256": "9cc917513b7f66032b08e0dafa86c70579b2878d0ab41b24e9eda011c54b0734"
+        },
+        {
+          "path": "slime_green_026.png",
+          "sha256": "9eb6d99669ec0b5ad52323e4a20fbd3af2ac63e8e87ffcbbb779f809de13267e"
+        },
+        {
+          "path": "slime_green_027.png",
+          "sha256": "ced11dacf15125f8f7e2bac0c9bfbf5985d5913bb6ff7437b7ee8bed97274d9e"
+        },
+        {
+          "path": "slime_green_028.png",
+          "sha256": "8211e2d6bcb934ab988429076a7991cef0c0d76fa272f242e7f9f6145c936f06"
+        },
+        {
+          "path": "slime_green_029.png",
+          "sha256": "113adaeaf38f6013020765f1a852a3e332ecb723145a7da4fb4d7c1cff4122a6"
+        }
+      ],
+      "pivot": [
+        44,
+        58
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 72,
+        "id": "slime_green",
+        "max_width": 84,
+        "production_approved": false,
+        "region": -1,
+        "role": "enemy_comparison",
+        "sequence_id": "slimes/SlimeGreen"
+      },
+      "source_hashes": [
+        {
+          "path": "SlimeGreen/SlimeBasic_00000.png",
+          "sha256": "09cd337267f57eda2e9c10e70bbe0f7609ab1cf3e05d14128cd2880e4af7a175"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00001.png",
+          "sha256": "40ed52e3fedaa12b0ebcc4bde478b8073ede425b4ea58f2b850beb8bdc7127b2"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00002.png",
+          "sha256": "f9fa60169c41027013d41579aeda3e5d8f0afc4d345c4c46a7f6c78edf3d92b6"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00003.png",
+          "sha256": "2d168f8140d6813d75a1b617096fa0122a5664cade2be2925be10ea6471a1db3"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00004.png",
+          "sha256": "88f1fe95cb5f5099137c5e4957b6898a2b56a0bd5e921c6ac8f7ea37aeeadbe4"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00005.png",
+          "sha256": "60fdf7f084ed799d41659ee9b1e17e120d0c51646a864fb562f6d708db94dbb4"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00006.png",
+          "sha256": "04adf3a09ffe03a617e0e7ae8ca237f67df51944a2900eb580c730012cd6e032"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00007.png",
+          "sha256": "0a6cc86345ae876a3161354d9fdd87ae7f1b6bbc3b6a05a6ff9eb3ecb66c88a9"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00008.png",
+          "sha256": "cceb54433a1e91c37b564a761c0d89f88fc2d695b32472aa2769b00df4af8aae"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00009.png",
+          "sha256": "8ebc1c5d068193b7e5fe02fe8836a1ef43a5caa09de5dc31ca89a870bd0dea6a"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00010.png",
+          "sha256": "9822cba64eae96627c6e5a6465e2cc44b3fd82cc145ad4e4cc6975c189ac6776"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00011.png",
+          "sha256": "f2e0344cac78b0cdddb5855f20f5fdac0f0d90ade053b03dfc8af141bb4bedc5"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00012.png",
+          "sha256": "9cbac32d731098e40af6f29546408e099658c996d96b24a795e2585e0c381a0b"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00013.png",
+          "sha256": "e8c89769fcf1f13bc9aeab85b3e9d0c205c12b19aae622269edfae79339b7f8e"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00014.png",
+          "sha256": "0961fc1cef0173b644a1fab4ccbb37cbfca5ea9e8b878f8d9a80f30eed453978"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00015.png",
+          "sha256": "3de1afff0dcf1bc579f14de8fadeb349057451ac5bc483bbac18fd289918b50b"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00016.png",
+          "sha256": "22b79ad86f401040a555dda131204f06993eb2f0ee5d7c62ae9c846c854204b3"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00017.png",
+          "sha256": "6b21d58b692303841823608f37a3f2ae3274a002a4e00944711b93b2c683c377"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00018.png",
+          "sha256": "87adea3189c974798859c64125082a514678eb9f86aed8ae58915790e5fde450"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00019.png",
+          "sha256": "656cf3cbe7d87a92651f54b8ee3a553182c4e6d7aa9ff7c8484f16329f8cd202"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00020.png",
+          "sha256": "fcb7520f029a5875ff112e92eaac0e057dac7c4bc15ca2ed757b108eec8d1142"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00021.png",
+          "sha256": "88fb15c2628062e1a8fbb7799d90f33926a2b6f8c3704ccb585813ece9d37fac"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00022.png",
+          "sha256": "4ca69b58e6d6370a79f01768de9c3e66f8df944b6b063038c2c8047e0037387d"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00023.png",
+          "sha256": "c22ee669e42c86a47cbd095f03ca2b4d3f1fd0c8cd7c6810b04df5f935590236"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00024.png",
+          "sha256": "4bb441c95493a3b8e6ebbfe6d0d2e884aa685d0f041e75126144107ed0aaaeaf"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00025.png",
+          "sha256": "bc5cbc408985200578ac0d7d71dd827268e922b2900d978ea0e88a33ee2afb83"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00026.png",
+          "sha256": "b579aa2edc7ef569177a6f544b43f823456fb50e9f6d1db5d9fe128ec0df3aef"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00027.png",
+          "sha256": "9e42bd49aff9894576ac910290e25a74b98e83af8e4f72efe26910a65d754eb5"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00028.png",
+          "sha256": "7cf38d266dabec5da2d224a2a8c29616bf075e5b8cbd1435cfce78ea8174760e"
+        },
+        {
+          "path": "SlimeGreen/SlimeBasic_00029.png",
+          "sha256": "05b98d94372972ea74bd412055f495462a36df7075cff8c84a2a3dc99b9d2efe"
+        }
+      ],
+      "union_crop": [
+        36,
+        27,
+        304,
+        203
+      ]
+    },
+    "slime_orange": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ],
+        [
+          2,
+          2,
+          84,
+          53
+        ]
+      ],
+      "canvas_size": [
+        88,
+        57
+      ],
+      "content_size": [
+        84,
+        53
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "slime_orange_000.png",
+          "sha256": "bcaf560bf8d5d48706529d5a1903b5e2a56d52ee08bf04c682f381c1ea866706"
+        },
+        {
+          "path": "slime_orange_001.png",
+          "sha256": "417a7f22d3df57d69eab17d74487867ef6d1d2b9e0e249b4e6ea8d3e6335163e"
+        },
+        {
+          "path": "slime_orange_002.png",
+          "sha256": "954826aa8c69375c7ebc58740034f72428cca7e32d52238373755158a4979db0"
+        },
+        {
+          "path": "slime_orange_003.png",
+          "sha256": "9bdebed4f6fd0476e2b912c040d0b24f9b3c31fc811b6eea68f4baaaacb63b26"
+        },
+        {
+          "path": "slime_orange_004.png",
+          "sha256": "956397464ac5dcc4250f8fd6a963ab214708cee7e4919fa26e207eddedcca6a0"
+        },
+        {
+          "path": "slime_orange_005.png",
+          "sha256": "36a89382fd371a4cd9670bd6ca7146aa611974c129032ce3dee12efe5d3c9b14"
+        },
+        {
+          "path": "slime_orange_006.png",
+          "sha256": "bd29f4765814f7c4231a3fbb0af29652a96cafc97a2e57cc665cca1bb67020a1"
+        },
+        {
+          "path": "slime_orange_007.png",
+          "sha256": "5aabb2b9483ffed297fd1a66b015d3ce93861809a05fddffa2a0137c21116c90"
+        },
+        {
+          "path": "slime_orange_008.png",
+          "sha256": "8bfaf7380658fd5cf1e623cfaea659096a4ac0d9966fd7515660ecc00cbf9d37"
+        },
+        {
+          "path": "slime_orange_009.png",
+          "sha256": "4d5be8bba3e8aead15f5a915bf48f0dfccb94fdad8a5bcee88c51efc36e45ac9"
+        },
+        {
+          "path": "slime_orange_010.png",
+          "sha256": "3b74095307983400f94914ca8c2db9deb7db7e67c8b3001a6cc8b06f37f8a753"
+        },
+        {
+          "path": "slime_orange_011.png",
+          "sha256": "8f77f00151490434824921d14e1e05e1d593aa4dfa53ee5569e19f59568cda9b"
+        },
+        {
+          "path": "slime_orange_012.png",
+          "sha256": "6c6015b9c889ed09f9d10dbc269cd209aed02b8a966858570f479de00260f33b"
+        },
+        {
+          "path": "slime_orange_013.png",
+          "sha256": "65cf6cb7d47c99fa3ccd5ce78b99c774898c0f44eed048f594534b76af30b378"
+        },
+        {
+          "path": "slime_orange_014.png",
+          "sha256": "4cff12695ce1b80a830bb433b83b0100dcdfe60f71c11319f54be3a2ef7c2ab0"
+        },
+        {
+          "path": "slime_orange_015.png",
+          "sha256": "8d8ff26197d2ce047fc700c5abc36639976e851574b8af29e96c04c1aa3dd7e4"
+        },
+        {
+          "path": "slime_orange_016.png",
+          "sha256": "2b430789a413244215255bd56b63dc988ffe48b42cb1d6761cf7be1f54a907a5"
+        },
+        {
+          "path": "slime_orange_017.png",
+          "sha256": "de64e5df6411a9d681864a2e65002a9f023a6ad1361fcd7dafef28df1a119507"
+        },
+        {
+          "path": "slime_orange_018.png",
+          "sha256": "d31e48205b2ab4ffbb6181d658ea9fb206132eed33b8450547c01acbd295a27f"
+        },
+        {
+          "path": "slime_orange_019.png",
+          "sha256": "175d88e31c084fb06f32d35da4c54e3e1d12d0f0e0eba60311bf545da3174bdd"
+        },
+        {
+          "path": "slime_orange_020.png",
+          "sha256": "419df8e38194e32732de26fa059f50a021223ae62b39d49d03252b021b6f320d"
+        },
+        {
+          "path": "slime_orange_021.png",
+          "sha256": "10ec22d26610b842b332e7ed23e925f8f57d841dd24f9ba8ac4e04b88f3ee963"
+        },
+        {
+          "path": "slime_orange_022.png",
+          "sha256": "6cb21aeac7040f4345350ff299bf35289e7b3848a49f3dae07bc0e9948e9bf10"
+        },
+        {
+          "path": "slime_orange_023.png",
+          "sha256": "3b4f80c62d05c7e4bfee46094184fc967429e75192830533d2904004992a2a02"
+        },
+        {
+          "path": "slime_orange_024.png",
+          "sha256": "20404fdce66d6e2f03af3f58ec2b7800df5cbf70de73d0610a8852fdd258b25b"
+        },
+        {
+          "path": "slime_orange_025.png",
+          "sha256": "6a5d50e5c73264afdb597aa035af68020f74d2e788822730e077b44f4071c9e0"
+        },
+        {
+          "path": "slime_orange_026.png",
+          "sha256": "69264b0574d15e0a00ef81df31fba75de5a749fece34f699a9dd547e1ba02740"
+        },
+        {
+          "path": "slime_orange_027.png",
+          "sha256": "eceab656f9034031defa9d79c0f2c5f97625c461f19e6affa83c27b3d551fcd2"
+        },
+        {
+          "path": "slime_orange_028.png",
+          "sha256": "79d75a57d598c37d8343dcdd922e25837a131d823903390dcf9e72661a651d18"
+        },
+        {
+          "path": "slime_orange_029.png",
+          "sha256": "ceec6f5dde661689b7278bd302f2027a0b8010cd0d2382bb0d2db77509ec06a4"
+        }
+      ],
+      "pivot": [
+        44,
+        55
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 72,
+        "id": "slime_orange",
+        "max_width": 84,
+        "production_approved": false,
+        "region": -1,
+        "role": "enemy_alternate",
+        "sequence_id": "slimes/SlimeOrange"
+      },
+      "source_hashes": [
+        {
+          "path": "SlimeOrange/SlimeOrange_00000.png",
+          "sha256": "350891a73b2c48e6f4f33e197d7e979fae8f1acefdc21ddea82d492ebe2fc9db"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00001.png",
+          "sha256": "6a859d69677791df7715657f3ae954eb40602ff1441fdaee93af110b8256571f"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00002.png",
+          "sha256": "37c8232829c28b815153feff13e0cab5fd13610e99eb273af40df89ccda56e9e"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00003.png",
+          "sha256": "3b2d5fe585c84246508dc976c7b112e01baaed6895778f5da07daa631e05874e"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00004.png",
+          "sha256": "954c196371fbafe853546a5e206d54589c89ae0a0352114bd608a1473b547c94"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00005.png",
+          "sha256": "ce98a9bbc1830ff897088b58805c69ffcbc2cffa6c42e1398dc658b8bf5b2172"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00006.png",
+          "sha256": "e4fa81cc335cff3422ce2a4a05131a809ac2e750d715a5c7d219c661d53618d2"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00007.png",
+          "sha256": "fa793655349c5e4a3d801901d77592a81f6eff21ce0f38118cb03e226c20aa78"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00008.png",
+          "sha256": "a895c3e994abf221700c12f404cb203a856db505569eb7b209c893666d0d47ee"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00009.png",
+          "sha256": "c816a6f4ef766419f9fdd1e94f262ab206b18933bfb7ce83ea66f2893720c667"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00010.png",
+          "sha256": "4dbaed73288d197629a95eae59ad3fb2fd37bc86499a3c41a14fa8fd865696dc"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00011.png",
+          "sha256": "4a55266995260690dfe57dee64e27400f6b9c20ebfae3f9ac59b2993357b2d6f"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00012.png",
+          "sha256": "8653a4c19b101970e6a1e4389ac188821102f9315d04f1ea21544a0910591739"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00013.png",
+          "sha256": "49ebf192aed3e8172639dc312e1ece922d49b9e2c731335371797333fc21310a"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00014.png",
+          "sha256": "f26fa6118d9a6b5c72af750b2f8d793af53b68dba8ed2bcb5b46bf7bde42f478"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00015.png",
+          "sha256": "475a49f29a54f042985a2176c865177d4a8e2e5f9e3b5a24a3578be186d01cfe"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00016.png",
+          "sha256": "47af5c24908586060dc834fab2fe36de8711558945495f1ff9fccec35b9d6bfa"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00017.png",
+          "sha256": "54f25d20a234a4f3c9ce523908e7ebe3dab4a61723b2ac2f631fca9cdce5707e"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00018.png",
+          "sha256": "2e285f7c7faaa9c86b6f1f8946e0de8c81a21f20ff29b0e386ae3d2dbc20fbaa"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00019.png",
+          "sha256": "82496982b118275321e98eced11e38a30ef2caead2e27031f9dd675ba341e67c"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00020.png",
+          "sha256": "20de9c396dc01a25e73e01e2ad25c54859174b8441439d6346cf191a6250a9c3"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00021.png",
+          "sha256": "d735a24ea93537cd6e624966f26953e919da0b5723b317951faad835792792eb"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00022.png",
+          "sha256": "c8c22728569ddb2cff6d2a758b87baf8510ce6a6854bb6e5e63af541d7581320"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00023.png",
+          "sha256": "6f91aec414fde18ad91ec357703cdcc7de3ffab062e6d71ae854f5be6207973f"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00024.png",
+          "sha256": "6535fb691fcd169462048181aad7aab2c62a8dc5191cf785f7492fc3e5672dcd"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00025.png",
+          "sha256": "8c38db4e051a7f2de6acb3f1cbd4d321efe8612f72a76d2a85df50aca52beeab"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00026.png",
+          "sha256": "7ffd7285be694b5c3eeeb41fdb4b88d3cdac65047008f2fea9f60ae57d2a1fc4"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00027.png",
+          "sha256": "a6654b1c06796f507c8ece69b34a1695f6b3b276df88dcd8ea1c867ca5cf6409"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00028.png",
+          "sha256": "e9819dfb5b5694e062e898c9300ce104d37c8f09d4078a5c8aa6f8b3e32f3b84"
+        },
+        {
+          "path": "SlimeOrange/SlimeOrange_00029.png",
+          "sha256": "47e95083ec2e974b0d0cc0b2b45a00c6d446c717c695cb3ffc9244b969691901"
+        }
+      ],
+      "union_crop": [
+        34,
+        42,
+        459,
+        289
+      ]
+    }
+  },
+  "frame_count": 185,
+  "rgba_bytes": 3795784,
+  "source_commit": "815bceb98e2560a2869a5534a34cd155c15b0dc1",
+  "version": 1
+}
