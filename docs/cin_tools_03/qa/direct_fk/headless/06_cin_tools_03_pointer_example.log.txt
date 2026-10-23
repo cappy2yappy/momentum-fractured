@@ -1,0 +1,13 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Fresh process reloads the actual saved native FK demo
+PASS: FK demo standalone clip validates
+PASS: Native recorded Head drag persists in the exported clip
+PASS: Native demo exact clip reused at 1.9
+PASS: Native recorded pointer pose appears at 1.9
+PASS: Native demo exact clip reused at 6.1
+PASS: Native recorded pointer pose appears at 6.1
+PASS: Saved pointer demo retains static reduced-motion editing guard
+CIN-TOOLS-03 POINTER EXAMPLE: 8 checks, 0 failure(s)

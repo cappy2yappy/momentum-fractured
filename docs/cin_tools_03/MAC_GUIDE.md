@@ -21,6 +21,8 @@ An absent engine or a version other than 4.6.1 produces a specific Terminal erro
 
 ## 2. Select, pose and key
 
+**New direct controls:** [click/drag joint guide and native demo](DIRECT_FK.md). At 1.9 s, click a cyan dot, drag to move, or drag its gold grip to rotate. Alt-drag also rotates. Undo restores one drag; Key pose explicitly commits the preview. Hand and Boot child pivots are included. Fit/150%/200% changes the canvas view only. Numeric fields below remain available.
+
 1. Leave **Reduced motion** off. In **Timeline (seconds)**, enter `1.9` and press Return. You can also drag the slider or use **Step 1/60 s**. Timeline numbers show sequence time; the nearby readout also shows local clip time.
 2. In the joint selector on the right, choose **Torso**. It is an existing joint in `Rig/Torso`. The gold joint ring identifies the selection; green dots below the timeline show that joint's rotation keys.
 3. Enter `12` in **Rotation (degrees)** and press Return. This previews the pose. Press **Key pose** to store position and rotation at the playhead. The confirmation gives the local clip time. Scrubbing discards unkeyed previews; Save asks you to key them first.

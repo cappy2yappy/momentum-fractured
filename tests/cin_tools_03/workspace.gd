@@ -11,7 +11,7 @@ func run():
  var studio = load("res://tools/cin_tools_03/studio.tscn").instantiate()
  root.add_child(studio)
  studio.set_process(false)
- studio.saved_path = "res://build/cin_tools_03/test_profile/sprint_stop.tres"
+ studio.saved_path = "res://build/cin_tools_03/test_profile/"+DisplayServer.get_name()+"/sprint_stop.tres"
  check(studio.actor != null,"Animator loads native actor")
  check(studio.valid_clip(studio.session_clip),"Seed clip obeys bounded property-only contract")
  studio.scrub(.5)

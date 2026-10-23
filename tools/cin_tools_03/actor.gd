@@ -40,6 +40,9 @@ func bind_clip(value: Animation):
 		player.advance(0)
 
 func sample(time: float):
+	# Seeking must also discard unkeyed properties that have no animation track yet.
+	for path in rest_values:
+		get_node(path.get_slice(":",0)).set(path.get_slice(":",1),rest_values[path])
 	if is_instance_valid(player) and clip:
 		if player.current_animation != "sprint_stop": player.play("sprint_stop")
 		player.seek(clampf(time, 0, clip.length), true)

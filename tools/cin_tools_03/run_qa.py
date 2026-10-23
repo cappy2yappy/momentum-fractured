@@ -13,9 +13,9 @@ out.mkdir(parents=True, exist_ok=True)
 profile = out / 'fresh_process_profile'
 if profile.exists(): shutil.rmtree(profile)
 rows = []
-cases = [('cin_tools_03/workspace', []), ('cin_tools_03/layout', []),
+cases = [('cin_tools_03/workspace', []), ('cin_tools_03/layout', []), ('cin_tools_03/pointer', []),
          ('cin_tools_03/persistence', ['--write-example']),
-         ('cin_tools_03/persistence', []),
+         ('cin_tools_03/persistence', []), ('cin_tools_03/pointer_example', []),
          ('cin_tools_01/authoring', []), ('cin_tools_01/runtime', [])]
 for index, (name, flags) in enumerate(cases):
     label = f'{index + 1:02d}_' + name.replace('/', '_')

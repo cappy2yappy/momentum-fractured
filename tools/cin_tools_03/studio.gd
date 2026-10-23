@@ -2,7 +2,7 @@ extends "res://tools/cin_tools_01/preview.gd"
 ## A connected workspace using the original Cut-In Maker preview and transport.
 const CLIP = "res://presets/cutins/studio/sprint_stop.tres"
 var saved_path = "user://cin_tools_03/sprint_stop.tres"
-const JOINTS = [".", "Rig", "Rig/Torso", "Rig/Torso/Head", "Rig/Torso/Hair", "Rig/Torso/Ribbon", "Rig/Torso/ArmNear", "Rig/Torso/ArmNear/Forearm", "Rig/Torso/ArmFar", "Rig/Torso/ArmFar/Forearm", "Rig/LegNear", "Rig/LegNear/Shin", "Rig/LegFar", "Rig/LegFar/Shin"]
+const JOINTS = [".", "Rig", "Rig/Torso", "Rig/Torso/Head", "Rig/Torso/Hair", "Rig/Torso/Ribbon", "Rig/Torso/ArmNear", "Rig/Torso/ArmNear/Forearm", "Rig/Torso/ArmFar", "Rig/Torso/ArmFar/Forearm", "Rig/LegNear", "Rig/LegNear/Shin", "Rig/LegFar", "Rig/LegFar/Shin", "Rig/Torso/ArmNear/Forearm/Hand", "Rig/Torso/ArmFar/Forearm/Hand", "Rig/LegNear/Shin/Boot", "Rig/LegFar/Shin/Boot"]
 var workspace_selector: OptionButton
 var heading: Label
 var session_shot: Animation
@@ -30,6 +30,13 @@ var context_label: Label
 var storage_label: Label
 var timeline_marks: Control
 var pending_pose = false
+var pending_joints = {}
+var pending_domain = ""
+var last_joint_selection = 0
+var preview_undo: Array = []
+var handles: Control
+var canvas_zoom = 1.0
+var canvas_zoom_picker: OptionButton
 
 func preset_path(choice):
  if choice in ["animator", "director"]: return "res://presets/cutins/studio/" + choice + ".tscn"
@@ -63,16 +70,25 @@ func _ready():
  var body = HBoxContainer.new(); body.size_flags_vertical = Control.SIZE_EXPAND_FILL; layout.add_child(body)
  stage_slot = Control.new(); stage_slot.size_flags_horizontal = Control.SIZE_EXPAND_FILL; stage_slot.size_flags_vertical = Control.SIZE_EXPAND_FILL; body.add_child(stage_slot)
  preview_frame.reparent(stage_slot); stage_slot.resized.connect(fit_stage)
+ handles = load("res://tools/cin_tools_03/joint_handles.gd").new()
+ handles.editor = self; handles.z_index = 50; stage_slot.add_child(handles)
+ handles.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ canvas_zoom_picker = OptionButton.new(); canvas_zoom_picker.z_index = 60
+ for label in ["Canvas: Fit","Canvas: 150%","Canvas: 200%"]: canvas_zoom_picker.add_item(label)
+ stage_slot.add_child(canvas_zoom_picker)
+ canvas_zoom_picker.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+ canvas_zoom_picker.position = Vector2(stage_slot.size.x-150,0); canvas_zoom_picker.custom_minimum_size.x = 150
+ canvas_zoom_picker.item_selected.connect(func(i): canvas_zoom = [1.,1.5,2.][i]; fit_stage())
  var panel = PanelContainer.new(); panel.custom_minimum_size.x = 344; body.add_child(panel)
  var inner = VBoxContainer.new(); inner.add_theme_constant_override("separation",8); panel.add_child(inner)
  var scroll = ScrollContainer.new(); scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL; scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED; inner.add_child(scroll)
  var box = VBoxContainer.new(); box.size_flags_horizontal = Control.SIZE_EXPAND_FILL; box.add_theme_constant_override("separation",8); scroll.add_child(box); inspector = box
  heading = Label.new(); heading.text = "CHARACTER ANIMATOR"; box.add_child(heading)
- var help = Label.new(); help.text = "Choose joint → pose → Key pose"; box.add_child(help)
+ var help = Label.new(); help.text = "Click canvas joint → drag → Key pose"; box.add_child(help)
  joint_picker = OptionButton.new()
  for joint in JOINTS: joint_picker.add_item("Actor root" if joint == "." else joint.replace("Rig/", ""))
  joint_picker.add_item("Shot framing • Director")
- joint_picker.item_selected.connect(func(_i): sync_fields()); box.add_child(joint_picker)
+ joint_picker.item_selected.connect(selection_changed); box.add_child(joint_picker)
  pos_x = field(box,"Pivot / position X",-2000,2000)
  pos_y = field(box,"Pivot / position Y",-2000,2000)
  angle = field(box,"Rotation (degrees)",-180,180)
@@ -119,10 +135,14 @@ func _ready():
 
 func fit_stage():
  if not is_instance_valid(stage_slot) or not is_instance_valid(cutin): return
- var factor = minf(stage_slot.size.x/1280.,stage_slot.size.y/720.)
+ if is_instance_valid(handles): handles.cancel_gesture()
+ var content_size = Vector2(stage_slot.size.x,maxf(1.,stage_slot.size.y-44.))
+ var factor = minf(content_size.x/1280.,content_size.y/720.)
  preview_frame.size = Vector2(1280,720)*factor
- preview_frame.position = (stage_slot.size-preview_frame.size)/2.
- cutin.scale = Vector2.ONE*factor
+ preview_frame.position = (content_size-preview_frame.size)/2.+Vector2(0,44)
+ cutin.scale = Vector2.ONE*factor*canvas_zoom
+ cutin.position = preview_frame.size*(1.-canvas_zoom)/2.
+ if is_instance_valid(canvas_zoom_picker): canvas_zoom_picker.position = Vector2(stage_slot.size.x-150,0)
 
 func jump_shot(index):
  if cutin.name != "CinematicDirector": return
@@ -157,12 +177,15 @@ func button(parent,label,action):
  return b
 
 func open_preset():
+ discard_pose_preview()
  super.open_preset()
  fit_stage()
  if cutin.name == "CinematicDirector":
   if session_shot == null: session_shot = animation.get_animation("standard").duplicate(true)
-  var lib = animation.get_animation_library("")
+  # Never replace animations in the PackedScene's cached/shared seed library.
+  var lib = animation.get_animation_library("").duplicate(true)
   lib.remove_animation("standard"); lib.add_animation("standard",session_shot)
+  animation.remove_animation_library(""); animation.add_animation_library("",lib)
   restart()
  actor = cutin.get_node_or_null("Framing/Shake/Actor")
  if actor:
@@ -177,13 +200,13 @@ func open_preset():
 
 func apply_actor_view():
  if not is_instance_valid(actor): return
- actor.guides = show_guides
+ actor.guides = false # Studio draws constant-size, interactive handles in canvas space.
  actor.set_view(mode_override)
  if is_instance_valid(joint_picker) and joint_picker.selected < JOINTS.size(): actor.selected_joint = JOINTS[joint_picker.selected]
  actor.queue_redraw()
 
 func scrub(value):
- pending_pose = false
+ discard_pose_preview()
  if reduced_preview and is_instance_valid(cutin): cutin.get_node("Framing").rotation = 0
  super.scrub(value)
  apply_actor_view()
@@ -210,7 +233,9 @@ func sync_fields():
  var joint = target()
  for spin in [pos_x,pos_y,angle,zoom]:
   if is_instance_valid(spin): spin.editable = joint != null and not reduced_preview
- if is_instance_valid(key_button): key_button.disabled = joint == null or reduced_preview
+ if is_instance_valid(key_button):
+  key_button.disabled = joint == null or reduced_preview
+  key_button.text = "Key %d joint poses" % pending_joints.size() if pending_joints.size() > 1 else "Key pose"
  if not joint: return
  busy_ui = true
  pos_x.value = joint.position.x; pos_y.value = joint.position.y; angle.value = joint.rotation_degrees
@@ -218,16 +243,78 @@ func sync_fields():
  zoom.editable = joint_picker.selected == JOINTS.size() and not reduced_preview
  busy_ui = false
 
+func joint_label(path):
+ if path == ".": return "Actor root"
+ return path.replace("Rig/", "").replace("/", " / ").replace("Near", " near").replace("Far", " far")
+
+func selection_changed(index):
+ var domain = "shot" if index == JOINTS.size() else "joint"
+ if pending_pose and pending_domain != domain:
+  joint_picker.select(last_joint_selection)
+  notice.text = "Key the pending %s pose, Undo, or scrub before switching." % pending_domain
+  sync_fields(); return
+ last_joint_selection = index; sync_fields(); apply_actor_view()
+
+func select_canvas_joint(path):
+ joint_picker.select(JOINTS.find(path)); last_joint_selection = joint_picker.selected
+ sync_fields(); apply_actor_view()
+
+func pose_snapshot():
+ var transforms = {}
+ if is_instance_valid(actor):
+  for path in JOINTS:
+   var joint = actor.get_node(path)
+   transforms[path] = {"position":joint.position,"rotation":joint.rotation}
+ var framing = cutin.get_node("Framing")
+ return {"transforms":transforms,"pending":pending_pose,"domain":pending_domain,"joints":pending_joints.duplicate(true),"framing":{"position":framing.position,"rotation":framing.rotation,"scale":framing.scale}}
+
+func restore_pose_snapshot(snapshot):
+ if not is_instance_valid(actor) or snapshot.is_empty(): return
+ for path in snapshot.transforms:
+  var joint = actor.get_node(path); joint.position = snapshot.transforms[path].position; joint.rotation = snapshot.transforms[path].rotation
+ var framing = cutin.get_node("Framing")
+ for property in snapshot.framing: framing.set(property,snapshot.framing[property])
+ pending_pose = snapshot.pending; pending_domain = snapshot.domain; pending_joints = snapshot.joints.duplicate(true)
+ sync_fields(); apply_actor_view()
+
+func push_preview_undo(snapshot):
+ preview_undo.append(snapshot)
+ if preview_undo.size() > 32: preview_undo.pop_front()
+
+func record_pending_joint(path):
+ var joint = actor.get_node(path)
+ pending_joints[path] = {"position":joint.position,"rotation":joint.rotation}
+ pending_pose = true; pending_domain = "joint"
+
+func discard_pose_preview():
+ if is_instance_valid(handles): handles.cancel_gesture()
+ # Missing rotation tracks cannot reset a numeric shot preview on seek.
+ if pending_domain == "shot" and is_instance_valid(cutin) and is_instance_valid(animation):
+  var current = animation.get_animation(animation.current_animation) if animation.has_animation(animation.current_animation) else null
+  if current == null or current.find_track(NodePath("Framing:rotation"),Animation.TYPE_VALUE) < 0:
+   cutin.get_node("Framing").rotation = 0
+ pending_pose = false; pending_domain = ""; pending_joints.clear(); preview_undo.clear()
+
+func play():
+ if pending_pose or (is_instance_valid(handles) and not handles.drag_joint.is_empty()): scrub(slider.value)
+ super.play()
+
 func pose_changed(_value):
  if busy_ui or reduced_preview: return
  pause()
  var joint = target()
  if not joint: return
+ var domain = "shot" if joint_picker.selected == JOINTS.size() else "joint"
+ if pending_pose and pending_domain != domain:
+  notice.text = "Key the pending %s pose, Undo, or scrub first." % pending_domain
+  sync_fields(); return
+ push_preview_undo(pose_snapshot())
  joint.position = Vector2(pos_x.value,pos_y.value); joint.rotation_degrees = angle.value
  if joint_picker.selected == JOINTS.size(): joint.scale = Vector2.ONE * zoom.value
  actor.queue_redraw()
  if notice: notice.text = "Pose preview • press Key pose to keep this change."
- pending_pose = true
+ if joint_picker.selected < JOINTS.size(): record_pending_joint(JOINTS[joint_picker.selected])
+ pending_pose = true; pending_domain = domain
 
 func checkpoint():
  history.append({"clip":session_clip.duplicate(true),"shot":session_shot.duplicate(true) if session_shot else null})
@@ -247,7 +334,10 @@ func key_pose():
  if reduced_preview: return
  var joint = target()
  if not joint: return
+ if pending_pose and pending_domain != ("shot" if joint_picker.selected == JOINTS.size() else "joint"):
+  notice.text = "Key pending joint poses before editing shot framing."; return
  var position_ = joint.position; var rotation_ = joint.rotation
+ var framing_values = {"position":joint.position,"rotation":joint.rotation,"scale":joint.scale}
  checkpoint()
  pending_pose = false
  if joint_picker.selected == JOINTS.size():
@@ -258,7 +348,7 @@ func key_pose():
    var track = session_shot.find_track(NodePath(path),Animation.TYPE_VALUE)
    if track < 0: track = session_shot.add_track(Animation.TYPE_VALUE); session_shot.track_set_path(track,NodePath(path))
    # Separate constant framing per shot; a second-shot edit cannot leak into shot one.
-   var previous = cutin.get_node("Framing").get(property)
+   var previous = framing_values[property]
    if session_shot.track_get_key_count(track) == 0:
     for t in [0.,4.199,4.2,8.4]: session_shot.track_insert_key(track,t,Vector2.ONE if property == "scale" else (Vector2.ZERO if property == "position" else 0.))
    for k in range(session_shot.track_get_key_count(track)-1,-1,-1):
@@ -266,12 +356,18 @@ func key_pose():
     if t >= start-.0001 and t <= end+.0001: session_shot.track_remove_key(track,k)
    session_shot.track_insert_key(track,start,previous); session_shot.track_insert_key(track,end,previous)
    session_shot.value_track_set_update_mode(track,Animation.UPDATE_DISCRETE)
+  pending_domain = ""; pending_joints.clear(); preview_undo.clear()
   notice.text = "Shot %d framing keyed. Save keeps both shots." % (2 if start > 0 else 1)
-  return
+  sync_fields(); return
  var path = JOINTS[joint_picker.selected]
- put_key(path+":position",position_); put_key(path+":rotation",rotation_)
- actor.sample(cutin.clip_time); apply_actor_view()
- notice.text = "Pose keyed at %.2f s.\nDirector shares it. Save keeps the edit." % cutin.clip_time
+ if pending_joints.is_empty(): record_pending_joint(path)
+ var count = pending_joints.size()
+ for joint_path in pending_joints:
+  put_key(joint_path+":position",pending_joints[joint_path].position)
+  put_key(joint_path+":rotation",pending_joints[joint_path].rotation)
+ pending_domain = ""; pending_joints.clear(); preview_undo.clear(); pending_pose = false
+ actor.sample(cutin.clip_time); apply_actor_view(); sync_fields()
+ notice.text = "%d joint pose(s) keyed at %.2f s. Save keeps them." % [count,cutin.clip_time]
 
 func remove_key():
  if not target() or joint_picker.selected == JOINTS.size(): return
@@ -289,6 +385,9 @@ func replace_clip(value):
  if is_instance_valid(actor): actor.bind_clip(session_clip)
  scrub(slider.value)
 func undo_pose():
+ if is_instance_valid(handles) and not handles.drag_joint.is_empty(): handles.cancel_gesture(); return
+ if not preview_undo.is_empty():
+  restore_pose_snapshot(preview_undo.pop_back()); notice.text = "Drag / pose adjustment undone. Nothing was keyed."; return
  if history.is_empty(): return
  var previous = history.pop_back()
  session_shot = previous.shot
@@ -379,7 +478,7 @@ func atomic_save(resource,path):
 
 func save_clip():
  pause()
- if pending_pose:
+ if pending_pose or not pending_joints.is_empty() or not pending_domain.is_empty():
   notice.text = "Key pose before saving, or scrub to discard the preview."; return false
  if not valid_clip(session_clip) or not valid_shot(session_shot): notice.text = "Cannot save invalid tracks. Current edit kept."; return false
  var error = DirAccess.make_dir_recursive_absolute(saved_path.get_base_dir())

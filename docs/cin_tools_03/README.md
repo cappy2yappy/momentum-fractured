@@ -1,5 +1,7 @@
 # CIN-TOOLS-03 — Cinematic Studio 2.0
 
+**Direct FK update:** [click/drag guide](DIRECT_FK.md), [native creator demo](captures/fk-native-speed.mp4). All 18 existing pivots now support canvas selection, move and rotation gestures, one-drag undo and explicit pose keying; the numeric authoring workflow is retained.
+
 Tonight's milestone is usable native authoring: launch → select a joint → pose/key → scrub/play → save → close/reopen/reload → reuse the exact clip in two independently framed shots → preview at 1.0×.
 
 Start with the complete [Mac guide](MAC_GUIDE.md). On Godot **4.6.1**, run `tools/cin_tools_03/launch.command`. The existing `studio.tscn` extends Cut-In Maker's preview and uses its original AnimationPlayer transport. This continuation changes only the five reserved Studio namespaces; it adds no shared preview-contract edit.
