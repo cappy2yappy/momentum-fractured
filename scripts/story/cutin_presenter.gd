@@ -1,6 +1,9 @@
 extends Node
 ## Presentation sink only. INT-01 owns all rules, flags and persistence.
 const PRESETS = {
+ "cin04_aftermath": preload("res://presets/cutins/story/aftermath.tscn"),
+ "cin04_resistance": preload("res://presets/cutins/story/resistance.tscn"),
+ "cin04_fallen_defenders": preload("res://presets/cutins/story/fallen_defenders.tscn"),
  "opening_review": preload("res://presets/cutins/major_biome.tscn"),
  "record_review": preload("res://presets/cutins/special_transition.tscn"),
  "fallen_clan_review": preload("res://presets/cutins/major_biome.tscn")
@@ -12,6 +15,9 @@ const COPY = {
 }
 var world
 var pending: Array[String] = []
+var queued_room = -1
+var queued_player
+var playing_reduced = false
 var active_id = ""
 var source_room = -1
 var source_player
@@ -39,6 +45,10 @@ func request_cutin(id: String) -> void:
  if not enabled:
   last_outcome = "disabled"
   return
+ if id == active_id: return
+ if pending.is_empty():
+  queued_room = world.room
+  queued_player = world.player
  if pending.size() < 3 and not pending.has(id): pending.append(id)
 
 func control_available() -> bool:
@@ -49,6 +59,7 @@ func update(_w, dt: float) -> void:
   pending.clear()
   finish("disabled")
   return
+ if not pending.is_empty() and (world.room != queued_room or world.player != queued_player or world.player.hp <= 0): pending.clear()
  if active_id.is_empty():
   if not pending.is_empty() and control_available(): begin(pending.pop_front())
   return
@@ -60,16 +71,22 @@ func update(_w, dt: float) -> void:
   finish("transition_interrupted")
   return
  age += dt
- if age >= 8.0 or not is_instance_valid(sequence):
+ if age >= 30.0 or not is_instance_valid(sequence):
   finish("watchdog")
   return
+ if active_id.begins_with("cin04_") and playing_reduced != reduced:
+  var at = sequence.current_animation_position
+  sequence.play("reduced" if reduced else "standard")
+  sequence.seek(at, true)
+  playing_reduced = reduced
  sequence.advance(dt)
  # These labels override generic authoring-template titles, not canonical prose.
  apply_labels(active_id)
- cutin.get_node("Status").text = "ISOLATED REVIEW • approved Kaze art / ART-08 animation candidate"
+ if not active_id.begins_with("cin04_"): cutin.get_node("Status").text = "ISOLATED REVIEW • approved Kaze art / ART-08 animation candidate"
  if cutin.handoff or not sequence.is_playing(): finish("completed")
 
 func apply_labels(id: String):
+ if id.begins_with("cin04_"): return
  cutin.get_node("Title").text = COPY[id]
  cutin.get_node("Title").add_theme_font_size_override("font_size", 28)
  cutin.get_node("Destination").text = "[TEST FIXTURE] Presentation review only; no world placement approved."
@@ -85,6 +102,7 @@ func begin(id: String):
  screen.add_child(cutin)
  sequence = cutin.get_node("AnimationPlayer")
  sequence.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+ playing_reduced = reduced
  sequence.play("reduced" if reduced else "standard")
  sequence.advance(0)
  apply_labels(id)
@@ -111,13 +129,13 @@ func cancel(reason: String = "world_cancelled") -> void:
  finish(reason)
 
 func _process(_dt):
- if get_tree().paused: finish("paused")
+ if get_tree().paused: cancel("paused")
 
 func _notification(what):
- if what == NOTIFICATION_APPLICATION_FOCUS_OUT: finish("focus_lost")
+ if what == NOTIFICATION_APPLICATION_FOCUS_OUT: cancel("focus_lost")
 
 func _unhandled_input(event):
- var skip_key = event is InputEventKey and event.pressed and event.physical_keycode == KEY_SPACE
+ var skip_key = event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_SPACE
  var skip_pad = event is InputEventJoypadButton and event.pressed and event.button_index == JOY_BUTTON_B
  if (skip_key or skip_pad) and not active_id.is_empty():
   finish("skipped")

@@ -1,0 +1,25 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS: selector loads authored 0
+PASS: scrub remains read-only
+PASS: native frame step
+PASS: play
+PASS: pause
+PASS: reduced preview
+PASS: reduced retains story pacing
+PASS: selector loads authored 1
+PASS: scrub remains read-only
+PASS: native frame step
+PASS: play
+PASS: pause
+PASS: reduced preview
+PASS: reduced retains story pacing
+PASS: selector loads authored 2
+PASS: scrub remains read-only
+PASS: native frame step
+PASS: play
+PASS: pause
+PASS: reduced preview
+PASS: reduced retains story pacing
+CIN04 AUTHORING: 21 checks, 0 failures

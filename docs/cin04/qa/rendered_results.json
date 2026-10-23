@@ -1,0 +1,16 @@
+[
+  {
+    "suite": "tests/cin04/runtime.gd",
+    "mode": "rendered",
+    "exit": 0,
+    "passes": 83,
+    "failures": 0
+  },
+  {
+    "suite": "tests/cin04/authoring.gd",
+    "mode": "rendered",
+    "exit": 0,
+    "passes": 21,
+    "failures": 0
+  }
+]

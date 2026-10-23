@@ -1,0 +1,87 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS: cin04_aftermath takes control
+PASS: cin04_aftermath authored pacing
+PASS: cin04_aftermath motion policy
+PASS: cin04_aftermath active duplicate rejected
+PASS: cin04_aftermath natural restoration
+PASS: cin04_aftermath no progression/camera mutation
+PASS: cin04_aftermath no save mutation
+PASS: cin04_resistance takes control
+PASS: cin04_resistance authored pacing
+PASS: cin04_resistance motion policy
+PASS: cin04_resistance active duplicate rejected
+PASS: cin04_resistance natural restoration
+PASS: cin04_resistance no progression/camera mutation
+PASS: cin04_resistance no save mutation
+PASS: cin04_fallen_defenders takes control
+PASS: cin04_fallen_defenders authored pacing
+PASS: cin04_fallen_defenders motion policy
+PASS: cin04_fallen_defenders active duplicate rejected
+PASS: cin04_fallen_defenders natural restoration
+PASS: cin04_fallen_defenders no progression/camera mutation
+PASS: cin04_fallen_defenders no save mutation
+PASS: cin04_aftermath takes control
+PASS: cin04_aftermath authored pacing
+PASS: cin04_aftermath motion policy
+PASS: cin04_aftermath active duplicate rejected
+PASS: cin04_aftermath natural restoration
+PASS: cin04_aftermath no progression/camera mutation
+PASS: cin04_aftermath no save mutation
+PASS: cin04_resistance takes control
+PASS: cin04_resistance authored pacing
+PASS: cin04_resistance motion policy
+PASS: cin04_resistance active duplicate rejected
+PASS: cin04_resistance natural restoration
+PASS: cin04_resistance no progression/camera mutation
+PASS: cin04_resistance no save mutation
+PASS: cin04_fallen_defenders takes control
+PASS: cin04_fallen_defenders authored pacing
+PASS: cin04_fallen_defenders motion policy
+PASS: cin04_fallen_defenders active duplicate rejected
+PASS: cin04_fallen_defenders natural restoration
+PASS: cin04_fallen_defenders no progression/camera mutation
+PASS: cin04_fallen_defenders no save mutation
+PASS: cin04_aftermath skip at 0.1
+PASS: cin04_aftermath skip at 5.0
+PASS: cin04_aftermath skip at 10.0
+PASS: cin04_aftermath synthetic B skip
+PASS: cin04_resistance skip at 0.1
+PASS: cin04_resistance skip at 5.0
+PASS: cin04_resistance skip at 10.0
+PASS: cin04_resistance synthetic B skip
+PASS: cin04_fallen_defenders skip at 0.1
+PASS: cin04_fallen_defenders skip at 5.0
+PASS: cin04_fallen_defenders skip at 10.0
+PASS: cin04_fallen_defenders synthetic B skip
+PASS: live reduced switch preserves timeline position
+PASS: live reduced switch removes camera travel
+PASS: standard switch preserves timeline position
+PASS: focus clears queued playback and restores control
+PASS: pause clears queued playback and restores control
+PASS: rebuild clears queued playback and restores control
+PASS: remove clears queued playback and restores control
+PASS: loader retains control on interruption
+PASS: death does not restore dead body
+PASS: loader defers queued presentation
+PASS: room change discards stale queue
+PASS: missing sequence restores control
+PASS: watchdog restores control
+PASS: disable restores control
+PASS: unknown id rejected
+PASS: interruptions preserve campaign state
+PASS: cin04_aftermath standard has only presentation value tracks
+PASS: cin04_aftermath reduced has only presentation value tracks
+PASS: cin04_aftermath RESET has only presentation value tracks
+PASS: cin04_resistance standard has only presentation value tracks
+PASS: cin04_resistance reduced has only presentation value tracks
+PASS: cin04_resistance RESET has only presentation value tracks
+PASS: cin04_fallen_defenders standard has only presentation value tracks
+PASS: cin04_fallen_defenders reduced has only presentation value tracks
+PASS: cin04_fallen_defenders RESET has only presentation value tracks
+PASS: PR89 commits story state before presentation despite effect row order
+PASS: PR89 dispatches production presentation through existing seam
+PASS: skip does not roll back director-owned progression
+PASS: test-mode director/presentation leaves sentinel save untouched
+CIN04: 83 checks, 0 failures
