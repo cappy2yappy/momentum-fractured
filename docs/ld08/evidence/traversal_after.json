@@ -1,0 +1,1196 @@
+{
+  "checks": 66,
+  "failures": 0,
+  "samples": [
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        249.1
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -8.9,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        541.0,
+        458.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        243.7
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -14.3,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        675.0,
+        458.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        233.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -24.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        500.0,
+        438.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        229.1
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -28.9,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        684.0,
+        438.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        566.0,
+        418.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        700.0,
+        418.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        193.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -64.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        756.0,
+        398.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        219.3
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -64.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        1044.0,
+        398.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1216.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        230.1
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "double",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1425.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1425.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        223.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": false,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -34.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1634.0,
+        418.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        249.1
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -8.9,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        541.0,
+        458.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        243.7
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -14.3,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        675.0,
+        458.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        233.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -24.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        500.0,
+        438.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        229.1
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -28.9,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        684.0,
+        438.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        566.0,
+        418.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        700.0,
+        418.0
+      ]
+    },
+    {
+      "dir": -1,
+      "end": [
+        310.1,
+        193.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -64.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        756.0,
+        398.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        219.3
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -64.6,
+      "on_floor": false,
+      "room": 13.0,
+      "start": [
+        1044.0,
+        398.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        213.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -44.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1216.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1637.2,
+        419.9
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "double",
+      "landed": 15,
+      "miny": -34.5,
+      "on_floor": true,
+      "room": 17.0,
+      "start": [
+        1425.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        288.8
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -34.5,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1425.0,
+        418.0
+      ]
+    },
+    {
+      "dir": 1,
+      "end": [
+        1785.9,
+        223.4
+      ],
+      "escape": false,
+      "fell": false,
+      "fell_x": 0.0,
+      "gates_closed": true,
+      "kind": "dash",
+      "landed": -1,
+      "miny": -34.6,
+      "on_floor": false,
+      "room": 17.0,
+      "start": [
+        1634.0,
+        418.0
+      ]
+    },
+    {
+      "apex": [
+        400.741638183594,
+        -179.93244934082
+      ],
+      "dir": -1,
+      "end": [
+        391.742462158203,
+        -74.929931640625
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 13,
+      "start": [
+        314.600006103516,
+        438.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1131.07507324219,
+        -395.429840087891
+      ],
+      "dir": -1,
+      "end": [
+        398.075714111328,
+        -169.43180847168
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "cornice_evade",
+      "miny": -395.429840087891,
+      "room": 13,
+      "start": [
+        314.600006103516,
+        438.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1695.25842285156,
+        -179.93244934082
+      ],
+      "dir": 1,
+      "end": [
+        1704.25842285156,
+        -113.599258422852
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 13,
+      "start": [
+        1785.40002441406,
+        558.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        964.922607421875,
+        -395.431579589844
+      ],
+      "dir": 1,
+      "end": [
+        1686.31469726563,
+        538.100402832031
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "cornice_evade",
+      "miny": -395.431579589844,
+      "room": 13,
+      "start": [
+        1785.40002441406,
+        558.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        104.741676330566,
+        -179.93244934082
+      ],
+      "dir": -1,
+      "end": [
+        95.7428131103516,
+        -84.9309539794922
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 17,
+      "start": [
+        14.6000003814697,
+        1898.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        843.744445800781,
+        -395.431732177734
+      ],
+      "dir": -1,
+      "end": [
+        99.0750045776367,
+        -65.2573699951172
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "cornice_evade",
+      "miny": -395.431732177734,
+      "room": 17,
+      "start": [
+        14.6000003814697,
+        1898.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1695.25842285156,
+        -179.932540893555
+      ],
+      "dir": 1,
+      "end": [
+        1704.25842285156,
+        -113.599258422852
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "wall_chain",
+      "miny": -179.932540893555,
+      "room": 17,
+      "start": [
+        1785.40002441406,
+        1298.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        957.92236328125,
+        -395.431762695313
+      ],
+      "dir": 1,
+      "end": [
+        1697.92431640625,
+        -169.43180847168
+      ],
+      "escape": false,
+      "gates_closed": false,
+      "kind": "cornice_evade",
+      "miny": -395.431762695313,
+      "room": 17,
+      "start": [
+        1785.40002441406,
+        1298.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        400.741638183594,
+        -179.93244934082
+      ],
+      "dir": -1,
+      "end": [
+        391.742462158203,
+        -74.929931640625
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 13,
+      "start": [
+        314.600006103516,
+        438.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1131.07507324219,
+        -395.429840087891
+      ],
+      "dir": -1,
+      "end": [
+        398.075714111328,
+        -169.43180847168
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "cornice_evade",
+      "miny": -395.429840087891,
+      "room": 13,
+      "start": [
+        314.600006103516,
+        438.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1695.25842285156,
+        -179.93244934082
+      ],
+      "dir": 1,
+      "end": [
+        1704.25842285156,
+        -113.599258422852
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 13,
+      "start": [
+        1785.40002441406,
+        558.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        964.922607421875,
+        -395.431579589844
+      ],
+      "dir": 1,
+      "end": [
+        1686.31469726563,
+        538.100402832031
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "cornice_evade",
+      "miny": -395.431579589844,
+      "room": 13,
+      "start": [
+        1785.40002441406,
+        558.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        104.741676330566,
+        -179.93244934082
+      ],
+      "dir": -1,
+      "end": [
+        95.7428131103516,
+        -84.9309539794922
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "wall_chain",
+      "miny": -179.93244934082,
+      "room": 17,
+      "start": [
+        14.6000003814697,
+        1898.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        843.744445800781,
+        -395.431732177734
+      ],
+      "dir": -1,
+      "end": [
+        99.0750045776367,
+        -65.2573699951172
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "cornice_evade",
+      "miny": -395.431732177734,
+      "room": 17,
+      "start": [
+        14.6000003814697,
+        1898.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        1695.25842285156,
+        -179.932540893555
+      ],
+      "dir": 1,
+      "end": [
+        1704.25842285156,
+        -113.599258422852
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "wall_chain",
+      "miny": -179.932540893555,
+      "room": 17,
+      "start": [
+        1785.40002441406,
+        1298.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "apex": [
+        957.92236328125,
+        -395.431762695313
+      ],
+      "dir": 1,
+      "end": [
+        1697.92431640625,
+        -169.43180847168
+      ],
+      "escape": false,
+      "gates_closed": true,
+      "kind": "cornice_evade",
+      "miny": -395.431762695313,
+      "room": 17,
+      "start": [
+        1785.40002441406,
+        1298.0
+      ],
+      "wall_contact": true
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 851.4,
+      "room": 13,
+      "start": [
+        776.0,
+        1048.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 822.1,
+      "room": 13,
+      "start": [
+        776.0,
+        1048.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 744.9,
+      "room": 13,
+      "start": [
+        900.0,
+        938.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 744.9,
+      "room": 13,
+      "start": [
+        900.0,
+        938.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 634.9,
+      "room": 13,
+      "start": [
+        1034.0,
+        828.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        690.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 634.9,
+      "room": 13,
+      "start": [
+        1034.0,
+        828.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1529.9,
+      "room": 17,
+      "start": [
+        816.0,
+        1778.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1533.0,
+      "room": 17,
+      "start": [
+        816.0,
+        1778.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1464.9,
+      "room": 17,
+      "start": [
+        900.0,
+        1658.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1464.9,
+      "room": 17,
+      "start": [
+        900.0,
+        1658.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1284.9,
+      "room": 17,
+      "start": [
+        984.0,
+        1478.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        900.0,
+        1400.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 1284.9,
+      "room": 17,
+      "start": [
+        984.0,
+        1478.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 900.0,
+      "room": 17,
+      "start": [
+        964.0,
+        1168.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 899.9,
+      "room": 17,
+      "start": [
+        964.0,
+        1168.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 842.7,
+      "room": 17,
+      "start": [
+        950.0,
+        1038.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 842.7,
+      "room": 17,
+      "start": [
+        950.0,
+        1038.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 704.9,
+      "room": 17,
+      "start": [
+        950.0,
+        898.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        950.0,
+        780.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 704.9,
+      "room": 17,
+      "start": [
+        950.0,
+        898.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        1320.0,
+        250.0
+      ],
+      "attached": true,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 391.2,
+      "room": 17,
+      "start": [
+        1464.0,
+        588.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        1320.0,
+        250.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 392.7,
+      "room": 17,
+      "start": [
+        1464.0,
+        588.0
+      ],
+      "toward": 1
+    },
+    {
+      "anchor": [
+        1320.0,
+        250.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 224.9,
+      "room": 17,
+      "start": [
+        1320.0,
+        418.0
+      ],
+      "toward": -1
+    },
+    {
+      "anchor": [
+        1320.0,
+        250.0
+      ],
+      "attached": false,
+      "escape": false,
+      "escaped": false,
+      "kind": "grapple",
+      "min_feet_y": 224.9,
+      "room": 17,
+      "start": [
+        1320.0,
+        418.0
+      ],
+      "toward": 1
+    }
+  ]
+}

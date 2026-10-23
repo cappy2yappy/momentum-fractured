@@ -1,0 +1,11 @@
+[
+  {
+    "suite": "ld08/traversal",
+    "exit": 0,
+    "pass_lines": 1,
+    "fail_lines": 0,
+    "script_errors": 0,
+    "seconds": 16.86,
+    "log": "docs/ld08/evidence/before_ld08_traversal.log"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "R13_upper",
+    "room": 13,
+    "center": [
+      900,
+      100
+    ],
+    "zoom": 0.58,
+    "overlay": false,
+    "player": [
+      450,
+      440
+    ]
+  },
+  {
+    "name": "R13_collision",
+    "room": 13,
+    "center": [
+      900,
+      100
+    ],
+    "zoom": 0.58,
+    "overlay": true,
+    "player": [
+      450,
+      440
+    ]
+  },
+  {
+    "name": "R13_overview",
+    "room": 13,
+    "center": [
+      900,
+      450
+    ],
+    "zoom": 0.31,
+    "overlay": false,
+    "player": [
+      450,
+      440
+    ]
+  },
+  {
+    "name": "R17_upper",
+    "room": 17,
+    "center": [
+      900,
+      100
+    ],
+    "zoom": 0.58,
+    "overlay": false,
+    "player": [
+      1370,
+      420
+    ]
+  },
+  {
+    "name": "R17_collision",
+    "room": 17,
+    "center": [
+      900,
+      100
+    ],
+    "zoom": 0.58,
+    "overlay": true,
+    "player": [
+      1370,
+      420
+    ]
+  },
+  {
+    "name": "R17_overview",
+    "room": 17,
+    "center": [
+      900,
+      720
+    ],
+    "zoom": 0.23,
+    "overlay": false,
+    "player": [
+      1370,
+      420
+    ]
+  }
+]

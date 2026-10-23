@@ -12,6 +12,7 @@ extends RefCounted
 ## signature, the Canal contract rectangles and the QA r13 platform diff are unchanged.
 const LevelGeometry = preload("res://scripts/level_geometry.gd")
 const Terrain = preload("res://assets/web/terrain-materials.png")
+const OpenTop = preload("res://scripts/open_top_boundary.gd")
 const COURSE_H = 56.0
 const BACKING_TOP = -640.0
 ## Single switch. false = the pre-LD-05 open-top rooms, for A/B comparison or if the creator rejects the course.
@@ -37,6 +38,10 @@ static var SILLS_ENABLED = true
 const PIT_WATER_TOP = 1372.0
 
 static func roof_active(index:int) -> bool:
+	if index in OpenTop.ROOMS:
+		if "--ld08-before" in OS.get_cmdline_user_args(): return false
+		if "--ld08-roof-reference" in OS.get_cmdline_user_args(): return true
+		if OpenTop.active(index): return false
 	if not ROOF_ENABLED or "--ld05-open-top" in OS.get_cmdline_user_args(): return false
 	if index < 8 and not ORIGINAL_ROOMS_ENABLED: return false
 	return true
@@ -57,6 +62,7 @@ static func build_roof(w):
 	w.boundary_rects.clear()
 	w.boundary_polys.clear()
 	if roof_active(w.room): solid(w,roof_rect(w))
+	OpenTop.build(w)
 
 static func sill_active(index:int) -> bool:
 	return SILLS.has(index) and SILLS_ENABLED and not "--ld05-no-sill" in OS.get_cmdline_user_args()
@@ -97,6 +103,7 @@ static func masonry(w, rect:Rect2, tint:Color, phase:float = 0.0):
 
 static func draw(w):
 	var size = w.room_size(w.room)
+	OpenTop.draw(w)
 	for pair in EXTENSIONS.get(w.room,[]):
 		# Continue the neighbouring shelf: repaint its right edge shade, then the same masonry, cap and end shade.
 		var rect:Rect2 = pair[0]
