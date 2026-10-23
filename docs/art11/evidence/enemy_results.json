@@ -1,0 +1,23 @@
+{
+	"baseline_only": false,
+	"cached_frames": 185,
+	"collision_topology_unchanged_on_attach": true,
+	"collision_topology_unchanged_on_detach": true,
+	"decode_count_stable": true,
+	"draw_calls_p95": 12.0,
+	"frame_ms_p50": 6.942,
+	"frame_ms_p95": 8.104,
+	"host_engine": "4.6.1-stable (official)",
+	"mode": "enemy",
+	"passed": true,
+	"production_placements": 0,
+	"samples": 718,
+	"states": [
+		"awakening",
+		"patrol",
+		"windup",
+		"strike",
+		"recover"
+	],
+	"texture_rgba_bytes": 3795784
+}

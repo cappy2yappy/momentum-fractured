@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-23",
+  "renderer": "OpenGL 3.3 / NVIDIA GeForce RTX 4070 Laptop GPU / NVIDIA 591.44",
+  "captures": [
+    {
+      "file": "candidate_gallery.png",
+      "bytes": 203977,
+      "sha256": "caa6e196fbc495c7201b24a9adf2021f87a1ade517230d164daf5b92d7c9d64f",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "candidate_gallery_nearest.png",
+      "bytes": 205349,
+      "sha256": "064603d6e8d35ec314d40f9be97b8f316279d2bd967b41b2c7e6a29102422ea2",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "cave_art.png",
+      "bytes": 793642,
+      "sha256": "fd22ba324550a70339bf44cdc633c8cae9dd927d26e7dd12354ccf3bd4a6f4fb",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "cave_baseline.png",
+      "bytes": 1006092,
+      "sha256": "644aef9bd75d3f85288f1d78bf42ab3990812c8116f12a8c8340adb46c23bcd4",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "cave_collision.png",
+      "bytes": 794990,
+      "sha256": "cc9eb6a859a5235dcddba3d56b7bec8c2afa1a97a821523dee30f220d637497c",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "cave_detail.png",
+      "bytes": 767449,
+      "sha256": "46783ca71a9fb75c4767c6cb45fb499d464aadb853fd83d14bc349acdf0ea22d",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "enemy_recover.png",
+      "bytes": 48342,
+      "sha256": "ee1328a64da00f7e1ed366fdf6983ef439df5449a1f47f91b9aa31dc9b98a9c2",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "enemy_strike.png",
+      "bytes": 47401,
+      "sha256": "6a5d5b95679e442c4ed5c1be81fbe768c7744032c03cac82ae317bc1b5f82433",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "enemy_windup.png",
+      "bytes": 48638,
+      "sha256": "e885c53ee7f3fabf147740b6e3775c030111fb4877529c451e0fa2bb8dedac8d",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "hazard_active.png",
+      "bytes": 64918,
+      "sha256": "eb50d2317023b78277621f78140d1006220db73e7a284f8a336af3242777cdc5",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "hazard_idle.png",
+      "bytes": 64321,
+      "sha256": "1c237df0de0db71c2e1970a3e7a9dc858f9af686b86a93190920853b0fa8e637",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "hazard_recovery.png",
+      "bytes": 65611,
+      "sha256": "c01eaece0897f29371535f31ae4e9133474cc59fdd006aa0de958bb2ce343a67",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "hazard_warning.png",
+      "bytes": 65556,
+      "sha256": "046e6fc2f84980513b87dbc24c4a9220f94b24ab680479b85837ac5c4f02ce60",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "moss_art.png",
+      "bytes": 816754,
+      "sha256": "12003b3d428f14b042ef7fe7035b8424e65b0619fae836df8d391e56b92f037f",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "moss_baseline.png",
+      "bytes": 920001,
+      "sha256": "85ed4fbed947e018dda04a82ad2fde8bf5c7152ab3bd4528985a1c1900495cf0",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "moss_collision.png",
+      "bytes": 816794,
+      "sha256": "6e824ba05dc5ff8939850cb11a79bf4eefaee70036df5a60d4e23a25f5a3dd56",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    },
+    {
+      "file": "moss_detail.png",
+      "bytes": 799557,
+      "sha256": "defc2800fbd71e3a885f322873ac2c30e0b82151a732aa844a32b84f6f9fbde3",
+      "origin": "native Godot 4.6.1 viewport capture",
+      "distribution": "creator review only; not committed as pixels"
+    }
+  ]
+}

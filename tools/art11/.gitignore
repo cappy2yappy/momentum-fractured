@@ -1,0 +1,10 @@
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.psd
+*.aep
+*.ctex
+cache/
+originals/
+extracted/

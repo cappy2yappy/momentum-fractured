@@ -1,0 +1,109 @@
+{
+	"assertions": 580,
+	"assets": {
+		"cave_rocks": {
+			"base_variation_px": 0,
+			"content_size": [
+				253.0,
+				166.0
+			],
+			"frames": 1,
+			"loop_edge_mean_error": 0.0,
+			"unique_frames": 1
+		},
+		"cave_surface": {
+			"base_variation_px": 0,
+			"content_size": [
+				225.0,
+				40.0
+			],
+			"frames": 1,
+			"loop_edge_mean_error": 0.0,
+			"unique_frames": 1
+		},
+		"column": {
+			"base_variation_px": 0,
+			"content_size": [
+				212.0,
+				480.0
+			],
+			"frames": 1,
+			"loop_edge_mean_error": 0.0,
+			"unique_frames": 1
+		},
+		"flower": {
+			"base_variation_px": 0,
+			"content_size": [
+				55.0,
+				58.0
+			],
+			"frames": 60,
+			"loop_edge_mean_error": 0.00262742244901304,
+			"unique_frames": 31
+		},
+		"grass": {
+			"base_variation_px": 0,
+			"content_size": [
+				43.0,
+				38.0
+			],
+			"frames": 30,
+			"loop_edge_mean_error": 0.0042832647634836,
+			"unique_frames": 30
+		},
+		"hanging": {
+			"base_variation_px": 0,
+			"content_size": [
+				29.0,
+				104.0
+			],
+			"frames": 1,
+			"loop_edge_mean_error": 0.0,
+			"unique_frames": 1
+		},
+		"moss_surface": {
+			"base_variation_px": 0,
+			"content_size": [
+				139.0,
+				40.0
+			],
+			"frames": 1,
+			"loop_edge_mean_error": 0.0,
+			"unique_frames": 1
+		},
+		"poison": {
+			"base_variation_px": 0,
+			"content_size": [
+				88.0,
+				66.0
+			],
+			"frames": 30,
+			"loop_edge_mean_error": 0.00509229481769482,
+			"unique_frames": 30
+		},
+		"slime_green": {
+			"base_variation_px": 0,
+			"content_size": [
+				84.0,
+				56.0
+			],
+			"frames": 30,
+			"loop_edge_mean_error": 0.00830861337534427,
+			"unique_frames": 30
+		},
+		"slime_orange": {
+			"base_variation_px": 0,
+			"content_size": [
+				84.0,
+				53.0
+			],
+			"frames": 30,
+			"loop_edge_mean_error": 0.00540024425688032,
+			"unique_frames": 30
+		}
+	},
+	"cached_frames": 185,
+	"failures": [],
+	"passed": true,
+	"texture_rgba_bytes": 3795784
+}

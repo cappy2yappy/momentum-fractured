@@ -1,0 +1,162 @@
+{
+	"baseline_only": true,
+	"cached_frames": 185,
+	"collision_topology_unchanged_on_attach": true,
+	"collision_topology_unchanged_on_detach": true,
+	"decode_count_stable": true,
+	"draw_calls_p95": 64.0,
+	"foliage": [
+		{
+			"feet": [
+				620.0,
+				1300.0
+			],
+			"id": "grass"
+		},
+		{
+			"feet": [
+				1360.0,
+				1300.0
+			],
+			"id": "flower"
+		},
+		{
+			"feet": [
+				394.399993896484,
+				1120.0
+			],
+			"id": "flower"
+		},
+		{
+			"feet": [
+				570.5,
+				1010.0
+			],
+			"id": "grass"
+		},
+		{
+			"feet": [
+				681.5,
+				1010.0
+			],
+			"id": "flower"
+		},
+		{
+			"feet": [
+				839.5,
+				900.0
+			],
+			"id": "grass"
+		},
+		{
+			"feet": [
+				1006.0,
+				900.0
+			],
+			"id": "flower"
+		},
+		{
+			"feet": [
+				1101.33337402344,
+				853.333312988281
+			],
+			"id": "grass"
+		},
+		{
+			"feet": [
+				1212.33337402344,
+				853.333312988281
+			],
+			"id": "flower"
+		},
+		{
+			"feet": [
+				1334.66674804688,
+				806.666687011719
+			],
+			"id": "grass"
+		},
+		{
+			"feet": [
+				1270.5,
+				630.0
+			],
+			"id": "grass"
+		}
+	],
+	"foliage_count": 11,
+	"frame_ms_p50": 6.946,
+	"frame_ms_p95": 7.811,
+	"host_engine": "4.6.1-stable (official)",
+	"mode": "moss",
+	"no_occlusion_intersections": true,
+	"passed": true,
+	"production_placements": 0,
+	"rejected_exclusion_placements": 5,
+	"room": 16,
+	"samples": 721,
+	"states": [],
+	"surfaces": [
+		[
+			0.0,
+			1300.0,
+			2000.0,
+			140.0
+		],
+		[
+			0.0,
+			1120.0,
+			580.0,
+			40.0
+		],
+		[
+			477.5,
+			1010.0,
+			300.0,
+			40.0
+		],
+		[
+			700.0,
+			900.0,
+			450.0,
+			40.0
+		],
+		[
+			1008.33337402344,
+			853.333312988281,
+			300.0,
+			40.0
+		],
+		[
+			1241.66674804688,
+			806.666687011719,
+			300.0,
+			40.0
+		],
+		[
+			1300.0,
+			760.0,
+			700.0,
+			40.0
+		],
+		[
+			1177.5,
+			630.0,
+			300.0,
+			40.0
+		],
+		[
+			780.0,
+			500.0,
+			500.0,
+			40.0
+		],
+		[
+			840.0,
+			430.0,
+			320.0,
+			40.0
+		]
+	],
+	"texture_rgba_bytes": 3795784
+}
