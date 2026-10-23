@@ -1,0 +1,52 @@
+[
+  {
+    "suite": "qa10_native/automation_contract",
+    "exit": 0,
+    "seconds": 0.97,
+    "passes": 11,
+    "failures": 0,
+    "script_errors": 0,
+    "source_sha256": "f155ad58d73ba1f46597ad90b886e82cb32aceae3e9381905087e92dbba8d996",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/corrected-contract-headless/qa10_native_automation_contract.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/qa10_native/corrected-contract-headless/qa10_native_automation_contract.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/corrected-contract-headless/profile_qa10_native_automation_contract/normal_save.json"
+    ],
+    "headless": true,
+    "observe": true
+  },
+  {
+    "suite": "qa10_native/focus_lifecycle",
+    "exit": 0,
+    "seconds": 0.87,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "source_sha256": "8c9c16f528eff0ca02fa9f2f0fbd9249b42e8c471ef533a9a76d91f336c5268d",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/corrected-contract-headless/qa10_native_focus_lifecycle.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/qa10_native/corrected-contract-headless/qa10_native_focus_lifecycle.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/corrected-contract-headless/profile_qa10_native_focus_lifecycle/normal_save.json"
+    ],
+    "headless": true,
+    "observe": true
+  }
+]

@@ -1,0 +1,66 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Staged stair pilot enabled only by its explicit flag
+PASS: Exactly one meaningful entrance is staged: R14->R17
+PASS: E starts the enter phase before the inherited loader
+PASS: Render proxy replaces live sprite during staging
+PASS: Enter phase visibly climbs the R14 flight (render only)
+PASS: Enter phase frames a close-up
+PASS: Held ART-04 key is labelled FULL GAIT PENDING: ASCENT · HELD ART-04 KEY ON 3 TREADS · FULL GAIT PENDING
+STAGED duration_s=2.38333333333333 phases=["enter", "load", "arrive"] max_zoom=1.35000002384186 last=completed last_duration=2.35
+PASS: Cinematic completes in 2-3 s from the E press (2.38 s)
+PASS: Sequence clock reports 2-3 s (2.35 s)
+PASS: Phases run enter -> load -> arrive: ["enter", "load", "arrive"]
+PASS: Sequence reports completion
+PASS: Exactly one room request reaches R17
+PASS: Collision body never driven during enter staging
+PASS: Arrival feet are the unchanged reciprocal endpoint
+PASS: Live Kaze restored, proxies hidden
+PASS: Camera fully restored after the sequence
+PASS: Control restored on supported landing
+PASS: E held through the sequence and 100 ticks after arrival cannot loop
+PASS: Repeated E during the sequence never double-triggers
+PASS: Reduced motion holds the proxy still
+REDUCED duration_s=0.98333333333333 max_zoom=1.0
+PASS: Reduced motion shortens the sequence (0.98 s) and still arrives
+PASS: Reduced motion never zooms the camera
+PASS: F6 during enter switches to reduced and restores framing
+PASS: F6 mid-sequence completes sooner (1.15 s)
+PASS: F6 toggles back to cinematic motion
+INTERRUPT when=enter reason=pause room=14 result=paused waited=0
+PASS: Control restored after pause during enter
+PASS: Supported and in a valid room after pause during enter (R14)
+PASS: Pause during enter aborts in place without a room change
+INTERRUPT when=enter reason=death room=14 result=cancelled waited=1
+PASS: Control restored after death during enter
+PASS: Supported and in a valid room after death during enter (R14)
+INTERRUPT when=enter reason=rebuild room=14 result=room_changed waited=0
+PASS: Control restored after rebuild during enter
+PASS: Supported and in a valid room after rebuild during enter (R14)
+INTERRUPT when=load reason=pause room=17 result=cancelled waited=37
+PASS: Control restored after pause during load
+PASS: Supported and in a valid room after pause during load (R17)
+PASS: Pause during the loader keeps the inherited loader outcome
+INTERRUPT when=load reason=death room=14 result=cancelled waited=1
+PASS: Control restored after death during load
+PASS: Supported and in a valid room after death during load (R14)
+INTERRUPT when=load reason=rebuild room=17 result=room_changed waited=36
+PASS: Control restored after rebuild during load
+PASS: Supported and in a valid room after rebuild during load (R17)
+INTERRUPT when=arrive reason=pause room=17 result=paused waited=0
+PASS: Control restored after pause during arrive
+PASS: Supported and in a valid room after pause during arrive (R17)
+INTERRUPT when=arrive reason=death room=14 result=cancelled waited=1
+PASS: Control restored after death during arrive
+PASS: Supported and in a valid room after death during arrive (R14)
+INTERRUPT when=arrive reason=rebuild room=17 result=room_changed waited=0
+PASS: Control restored after rebuild during arrive
+PASS: Supported and in a valid room after rebuild during arrive (R17)
+PASS: A new E press after an abort runs the full sequence
+PASS: Watchdog returns control within 4.0 s
+PASS: R17->R14 keeps the inherited immediate E loader
+PASS: Plain mode bypasses staging
+PASS: R0->R13 depth door untouched by the pilot
+PM STAGED STAIR: 50 checks, 0 failure(s)

@@ -24,6 +24,7 @@ func load_fixture():
 	var f=FileAccess.open(save_path(),FileAccess.WRITE)
 	f.store_string(FileAccess.get_file_as_string(FIXTURE));f.close()
 	w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w
+	automation_hud()
 
 func snapshot() -> String:
 	var t8=w.cinematic_transitions.tr08
@@ -125,7 +126,7 @@ func run():
 			await run_case("%s_at%d"%[kind,at],4,func(t):
 				if t==0: key(KEY_A,true)
 				if t==at:
-					if kind=="focus": w.hud.notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
+					if kind=="focus": w.hud.simulated_notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
 					elif kind=="esc": key(KEY_ESCAPE,true);await process_frame;key(KEY_ESCAPE,false)
 					else: key(KEY_M,true);await process_frame;key(KEY_M,false)
 					for i in 6: await process_frame
@@ -144,7 +145,7 @@ func run():
 				if t8.owns() and not w.has_meta("s0"): w.set_meta("s0",t)
 				if w.has_meta("s0") and t==int(w.get_meta("s0"))+off and not w.has_meta("hit"):
 					w.set_meta("hit",true)
-					if kind=="focus": w.hud.notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
+					if kind=="focus": w.hud.simulated_notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
 					elif kind=="esc": key(KEY_ESCAPE,true);await process_frame;key(KEY_ESCAPE,false)
 					else: key(KEY_M,true);await process_frame;key(KEY_M,false)
 					for i in 6: await process_frame

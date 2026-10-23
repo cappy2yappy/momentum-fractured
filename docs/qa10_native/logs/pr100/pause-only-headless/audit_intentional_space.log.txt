@@ -1,0 +1,26 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Room 0 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 1 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 2 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 3 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 4 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 5 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 6 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 7 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 8 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 9 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 10 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 11 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 12 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 13 retains every PR33 rectangle and adds only the 2 Canal gatehouse rectangles
+PASS: Bellroof retains every PR33 rectangle and adds only12 authored masses/steps
+PASS: Room 15 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 16 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 17 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 18 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 19 PR33 collision signature (0.001px serialization tolerance)
+PASS: Room 20 PR33 collision signature (0.001px serialization tolerance)
+SPACE AUDIT: 0 failure(s)

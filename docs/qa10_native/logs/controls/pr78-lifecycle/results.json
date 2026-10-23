@@ -1,0 +1,26 @@
+[
+  {
+    "suite": "qa10_native/focus_lifecycle",
+    "exit": 0,
+    "seconds": 1.77,
+    "passes": 12,
+    "failures": 0,
+    "script_errors": 0,
+    "source_sha256": "593c7b9a9617cb3eee7ada66e3eb0335696c96c6af55bc4ea27ac5e113babfd9",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/qa10_native/pr78-controlled-lifecycle/qa10_native_focus_lifecycle.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/qa10_native/pr78-controlled-lifecycle/qa10_native_focus_lifecycle.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/qa10_native/pr78-controlled-lifecycle/profile_qa10_native_focus_lifecycle/normal_save.json"
+    ],
+    "headless": false,
+    "observe": true
+  }
+]

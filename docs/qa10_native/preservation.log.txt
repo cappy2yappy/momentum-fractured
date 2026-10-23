@@ -1,0 +1,4 @@
+PASS: 609 production/resource files match exact PR100 bytes
+PASS: PR78 and PR100 gameplay, routing, project settings and addons are byte-identical
+PASS: All 36 original assertion lines in edited tests remain intact
+PASS: QA10 tracked changes are confined to tests, diagnostics and evidence

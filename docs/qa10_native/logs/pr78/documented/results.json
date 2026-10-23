@@ -1,0 +1,156 @@
+[
+  {
+    "suite": "cin_tools_01/authoring",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 0.74,
+    "passes": 27,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/cin_tools_01_authoring.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/cin_tools_01_authoring.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "cin_tools_01/runtime",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 1.28,
+    "passes": 103,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/cin_tools_01_runtime.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/cin_tools_01_runtime.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "tr08_embodied_cinematics",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 10.56,
+    "passes": 226,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/tr08_embodied_cinematics.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/tr08_embodied_cinematics.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "tr08_canal_hang_regression",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 13.88,
+    "passes": 53,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/tr08_canal_hang_regression.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/tr08_canal_hang_regression.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/profile_tr08_canal_hang_regression/normal_save.json"
+    ]
+  },
+  {
+    "suite": "tr08_stage_labels",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 2.47,
+    "passes": 9,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/tr08_stage_labels.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/tr08_stage_labels.gd",
+      "--",
+      "--test"
+    ]
+  },
+  {
+    "suite": "automatic_passage_reliability",
+    "mode": "rendered",
+    "exit": 0,
+    "seconds": 39.79,
+    "passes": 305,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/automatic_passage_reliability.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/automatic_passage_reliability.gd",
+      "--",
+      "--tr05-save=/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/profile_automatic_passage_reliability/normal_save.json"
+    ]
+  },
+  {
+    "suite": "native_cinematic_transitions",
+    "mode": "rendered",
+    "exit": 124,
+    "seconds": 100.01,
+    "passes": 23,
+    "failures": 0,
+    "script_errors": 0,
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-pr78-baseline/build/cin_tools_01/qa/rendered/native_cinematic_transitions.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/cin_tools_01/qa/rendered/native_cinematic_transitions.gd",
+      "--",
+      "--test"
+    ]
+  }
+]

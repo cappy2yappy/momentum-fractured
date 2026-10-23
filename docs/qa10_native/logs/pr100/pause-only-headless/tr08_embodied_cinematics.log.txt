@@ -1,0 +1,265 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: TR-08 is the default presentation (no flag needed)
+PASS: Clip stair_ascend_enter resolves to a playable strip
+PASS: Bound clip stair_ascend_enter is multi-frame ART-08 animation
+PASS: Clip stair_ascend_loop resolves to a playable strip
+PASS: Bound clip stair_ascend_loop is multi-frame ART-08 animation
+PASS: Clip stair_ascend_exit resolves to a playable strip
+PASS: Bound clip stair_ascend_exit is multi-frame ART-08 animation
+PASS: Clip stair_descend_enter resolves to a playable strip
+PASS: Bound clip stair_descend_enter is multi-frame ART-08 animation
+PASS: Clip stair_descend_loop resolves to a playable strip
+PASS: Bound clip stair_descend_loop is multi-frame ART-08 animation
+PASS: Clip stair_descend_exit resolves to a playable strip
+PASS: Bound clip stair_descend_exit is multi-frame ART-08 animation
+PASS: Clip stair_arrive_idle_settle resolves to a playable strip
+PASS: Bound clip stair_arrive_idle_settle is multi-frame ART-08 animation
+PASS: Clip stair_descend_arrive_settle resolves to a playable strip
+PASS: Bound clip stair_descend_arrive_settle is multi-frame ART-08 animation
+PASS: Clip door_approach_walk resolves to a playable strip
+PASS: Bound clip door_approach_walk is multi-frame ART-08 animation
+PASS: Clip door_turn_to_rear resolves to a playable strip
+PASS: ART-08 stand-in clip door_turn_to_rear binds but stays labelled stand-in
+PASS: Clip door_cross resolves to a playable strip
+PASS: Bound clip door_cross is multi-frame ART-08 animation
+PASS: Clip door_emerge resolves to a playable strip
+PASS: Bound clip door_emerge is multi-frame ART-08 animation
+PASS: Clip door_turn_to_side resolves to a playable strip
+PASS: Unbound clip door_turn_to_side is labelled stand-in
+PASS: Clip door_walk_out resolves to a playable strip
+PASS: Bound clip door_walk_out is multi-frame ART-08 animation
+PASS: A valid manifest row binds by file path
+PASS: Manifest root motion drives the bound clip
+PASS: A held clip is never bound as animation
+PASS: A missing strip falls back to the labelled stand-in
+PASS: A single-frame strip is rejected
+PASS: A clip with status unfinished never binds
+PASS: An ART-08 stand_in clip binds by path but keeps the STAND-IN label
+PASS: Without a manifest every clip is a labelled stand-in
+PASS: Stair 14->17: real E opens the full-screen stage before the loader
+PASS: Stair 14->17: stage is a full-screen layer above the HUD
+TR08 STAIR 14->17 seconds=3.25 result=completed phases=["stair:open", "stair:climb", "stair:close"] shown=[[0.3, "stair_ascend_enter", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.55, "stair_ascend_loop", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [1.133, "stair_ascend_loop", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [1.717, "stair_ascend_exit", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [1.967, "stair_arrive_idle_settle", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"]]
+PASS: Stair 14->17: cinematic lasts 2.5 to 4 s (3.25 s)
+PASS: Stair 14->17: stage camera follows the climb
+PASS: Stair 14->17: clip frames advance (not a held pose), 8 distinct
+PASS: Stair 14->17: Kaze travels the flight on stage (356 px of rise)
+PASS: Stair 14->17: travel follows the authored direction (up)
+PASS: Stair 14->17: Kaze at cinematic scale (>=50 percent of the screen)
+PASS: Stair 14->17: sequence completes
+PASS: Stair 14->17: exactly one room request
+PASS: Stair 14->17: collision body never driven before the swap
+PASS: Stair 14->17: arrival feet are the unchanged reciprocal endpoint (1680.0, 1298.0)
+PASS: Stair 14->17: live Kaze restored, stage hidden
+PASS: Stair 14->17: world camera untouched
+PASS: Stair 14->17: control restored on a supported landing
+PASS: Stair 17->14: real E opens the full-screen stage before the loader
+PASS: Stair 17->14: stage is a full-screen layer above the HUD
+TR08 STAIR 17->14 seconds=2.9 result=completed phases=["stair:open", "stair:climb", "stair:close"] shown=[[0.3, "stair_descend_enter", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [0.55, "stair_descend_loop", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [1.133, "stair_descend_loop", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [1.717, "stair_descend_exit", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [1.967, "stair_descend_arrive_settle", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"]]
+PASS: Stair 17->14: cinematic lasts 2.5 to 4 s (2.90 s)
+PASS: Stair 17->14: stage camera follows the climb
+PASS: Stair 17->14: clip frames advance (not a held pose), 8 distinct
+PASS: Stair 17->14: Kaze travels the flight on stage (241 px of rise)
+PASS: Stair 17->14: travel follows the authored direction (down)
+PASS: Stair 17->14: Kaze at cinematic scale (>=50 percent of the screen)
+PASS: Stair 17->14: sequence completes
+PASS: Stair 17->14: exactly one room request
+PASS: Stair 17->14: collision body never driven before the swap
+PASS: Stair 17->14: arrival feet are the unchanged reciprocal endpoint (1450.0, 478.0)
+PASS: Stair 17->14: live Kaze restored, stage hidden
+PASS: Stair 17->14: world camera untouched
+PASS: Stair 17->14: control restored on a supported landing
+PASS: Stair 14->17 reduced: real E opens the full-screen stage before the loader
+PASS: Stair 14->17 reduced: stage is a full-screen layer above the HUD
+TR08 STAIR 14->17 reduced seconds=1.36666666666667 result=completed phases=["stair:open", "stair:climb", "stair:close"] shown=[[0.15, "stair_ascend_enter", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.35, "stair_ascend_loop", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.817, "stair_ascend_exit", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"]]
+PASS: Stair 14->17 reduced: reduced motion is short (1.37 s)
+PASS: Stair 14->17 reduced: reduced motion has no camera zoom or pan
+PASS: Stair 14->17 reduced: clip frames advance (not a held pose), 8 distinct
+PASS: Stair 14->17 reduced: Kaze travels the flight on stage (220 px of rise)
+PASS: Stair 14->17 reduced: travel follows the authored direction (up)
+PASS: Stair 14->17 reduced: Kaze at cinematic scale (>=50 percent of the screen)
+PASS: Stair 14->17 reduced: sequence completes
+PASS: Stair 14->17 reduced: exactly one room request
+PASS: Stair 14->17 reduced: collision body never driven before the swap
+PASS: Stair 14->17 reduced: arrival feet are the unchanged reciprocal endpoint (1680.0, 1298.0)
+PASS: Stair 14->17 reduced: live Kaze restored, stage hidden
+PASS: Stair 14->17 reduced: world camera untouched
+PASS: Stair 14->17 reduced: control restored on a supported landing
+PASS: Stair 17->14 reduced: real E opens the full-screen stage before the loader
+PASS: Stair 17->14 reduced: stage is a full-screen layer above the HUD
+TR08 STAIR 17->14 reduced seconds=1.36666666666667 result=completed phases=["stair:open", "stair:climb", "stair:close"] shown=[[0.15, "stair_descend_enter", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [0.35, "stair_descend_loop", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"], [0.817, "stair_descend_exit", "art08", "cut-out rig v2 (authored by script): upright rigid upper body, forearms and hair posed, cut from the approved ART-04 stair_down_key (mirrored to face right) on the foot-planted leg rig; legs and boots reuse the approved stair_up_key leg and boot parts"]]
+PASS: Stair 17->14 reduced: reduced motion is short (1.37 s)
+PASS: Stair 17->14 reduced: reduced motion has no camera zoom or pan
+PASS: Stair 17->14 reduced: clip frames advance (not a held pose), 8 distinct
+PASS: Stair 17->14 reduced: Kaze travels the flight on stage (147 px of rise)
+PASS: Stair 17->14 reduced: travel follows the authored direction (down)
+PASS: Stair 17->14 reduced: Kaze at cinematic scale (>=50 percent of the screen)
+PASS: Stair 17->14 reduced: sequence completes
+PASS: Stair 17->14 reduced: exactly one room request
+PASS: Stair 17->14 reduced: collision body never driven before the swap
+PASS: Stair 17->14 reduced: arrival feet are the unchanged reciprocal endpoint (1450.0, 478.0)
+PASS: Stair 17->14 reduced: live Kaze restored, stage hidden
+PASS: Stair 17->14 reduced: world camera untouched
+PASS: Stair 17->14 reduced: control restored on a supported landing
+PASS: Stair: E held through the cinematic and 100 ticks after cannot loop
+PASS: Stair: repeated E during the cinematic never double-triggers
+PASS: Stair: F6 mid-climb freezes framing at once
+PASS: Stair: F6 mid-sequence completes sooner (1.30 s)
+PASS: F6 toggles back to cinematic motion
+TR08 STAIR INTERRUPT when=open reason=pause reached=true room=14 result=paused
+PASS: Stair: control restored after pause during open
+PASS: Stair: supported in a valid room after pause during open (R14)
+TR08 STAIR INTERRUPT when=open reason=death reached=true room=14 result=cancelled
+PASS: Stair: control restored after death during open
+PASS: Stair: supported in a valid room after death during open (R14)
+TR08 STAIR INTERRUPT when=open reason=rebuild reached=true room=14 result=room_changed
+PASS: Stair: control restored after rebuild during open
+PASS: Stair: supported in a valid room after rebuild during open (R14)
+TR08 STAIR INTERRUPT when=climb_before_swap reason=pause reached=true room=17 result=cancelled
+PASS: Stair: control restored after pause during climb_before_swap
+PASS: Stair: supported in a valid room after pause during climb_before_swap (R17)
+TR08 STAIR INTERRUPT when=climb_before_swap reason=death reached=true room=14 result=cancelled
+PASS: Stair: control restored after death during climb_before_swap
+PASS: Stair: supported in a valid room after death during climb_before_swap (R14)
+TR08 STAIR INTERRUPT when=climb_before_swap reason=rebuild reached=true room=17 result=room_changed
+PASS: Stair: control restored after rebuild during climb_before_swap
+PASS: Stair: supported in a valid room after rebuild during climb_before_swap (R17)
+TR08 STAIR INTERRUPT when=climb_after_swap reason=pause reached=true room=17 result=cancelled
+PASS: Stair: control restored after pause during climb_after_swap
+PASS: Stair: supported in a valid room after pause during climb_after_swap (R17)
+TR08 STAIR INTERRUPT when=climb_after_swap reason=death reached=true room=14 result=cancelled
+PASS: Stair: control restored after death during climb_after_swap
+PASS: Stair: supported in a valid room after death during climb_after_swap (R14)
+TR08 STAIR INTERRUPT when=climb_after_swap reason=rebuild reached=true room=17 result=room_changed
+PASS: Stair: control restored after rebuild during climb_after_swap
+PASS: Stair: supported in a valid room after rebuild during climb_after_swap (R17)
+TR08 STAIR INTERRUPT when=close reason=pause reached=true room=17 result=paused
+PASS: Stair: control restored after pause during close
+PASS: Stair: supported in a valid room after pause during close (R17)
+TR08 STAIR INTERRUPT when=close reason=death reached=true room=14 result=cancelled
+PASS: Stair: control restored after death during close
+PASS: Stair: supported in a valid room after death during close (R14)
+TR08 STAIR INTERRUPT when=close reason=rebuild reached=true room=17 result=room_changed
+PASS: Stair: control restored after rebuild during close
+PASS: Stair: supported in a valid room after rebuild during close (R17)
+PASS: Stair: a new E press after an abort runs the full sequence
+PASS: Stair: watchdog returns control within 6.0 s
+PASS: Stair: locked climb gate never starts the cinematic
+PASS: Stair: locked gate keeps its specific hint: Route sealed: CLIMB. Consult the atlas.
+PASS: Stair: locked descent keeps its specific hint
+PASS: Stair: E outside the 85 px stair radius does nothing
+PASS: Canal 13->0: passage starts embodied, loader not yet requested
+PASS: Canal 13->0: starts at the unchanged x=120 trigger (feet x 117.5)
+TR08 CANAL 13->0 seconds=1.91666666666667 result=completed phases=["canal:turn", "canal:cross", "canal:hold", "canal:emerge", "canal:turn_out"] shown=[[0.0, "door_turn_to_rear", "art08-standin", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved"], [0.25, "door_cross", "art08", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script"], [0.933, "door_emerge", "art08", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script"], [1.417, "door_turn_to_side", "stand-in", "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)"]]
+PASS: Canal 13->0: turn, cross, emerge and turn-out all play: ["door_turn_to_rear", "door_cross", "door_emerge", "door_turn_to_side"]
+PASS: Canal 13->0: sequence completes
+PASS: Canal 13->0: exactly one room request
+PASS: Canal 13->0: duration within bounds (1.92 s)
+PASS: Canal 13->0: frames advance through the passage (8 distinct)
+PASS: Canal 13->0: collision body never driven before the swap
+PASS: Canal 13->0: arrival is the unchanged R0 door point
+PASS: Canal 13->0: live Kaze restored, doorway layer hidden
+PASS: Canal 13->0: control restored standing on a supported floor
+PASS: Canal 0->13: passage starts embodied, loader not yet requested
+TR08 CANAL 0->13 seconds=2.83333333333333 result=completed phases=["canal:approach", "canal:turn", "canal:cross", "canal:emerge", "canal:turn_out", "canal:walk_out"] shown=[[0.0, "door_approach_walk", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.45, "door_turn_to_rear", "art08-standin", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved"], [0.7, "door_cross", "art08", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script"], [1.367, "door_emerge", "art08", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script"], [1.85, "door_turn_to_side", "stand-in", "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)"], [2.1, "door_walk_out", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"]]
+PASS: Canal 0->13: turn, cross, emerge and turn-out all play: ["door_approach_walk", "door_turn_to_rear", "door_cross", "door_emerge", "door_turn_to_side", "door_walk_out"]
+PASS: Canal 0->13: Kaze walks out of the Canal opening to the arrival point
+PASS: Canal 0->13: sequence completes
+PASS: Canal 0->13: exactly one room request
+PASS: Canal 0->13: duration within bounds (2.83 s)
+PASS: Canal 0->13: frames advance through the passage (8 distinct)
+PASS: Canal 0->13: collision body never driven before the swap
+PASS: Canal 0->13: arrival is the unchanged inward point (184.0, 1198.0) facing away from the door
+PASS: Canal 0->13: live Kaze restored, doorway layer hidden
+PASS: Canal 0->13: control restored standing on a supported floor
+PASS: Canal 0->13: passage starts embodied, loader not yet requested
+TR08 CANAL 0->13 seconds=2.71666666666667 result=completed phases=["canal:approach", "canal:turn", "canal:cross", "canal:emerge", "canal:turn_out", "canal:walk_out"] shown=[[0.0, "door_approach_walk", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.333, "door_turn_to_rear", "art08-standin", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved"], [0.583, "door_cross", "art08", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script"], [1.25, "door_emerge", "art08", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script"], [1.733, "door_turn_to_side", "stand-in", "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)"], [1.983, "door_walk_out", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"]]
+PASS: Canal 0->13: turn, cross, emerge and turn-out all play: ["door_approach_walk", "door_turn_to_rear", "door_cross", "door_emerge", "door_turn_to_side", "door_walk_out"]
+PASS: Canal 0->13: Kaze walks out of the Canal opening to the arrival point
+PASS: Canal 0->13: sequence completes
+PASS: Canal 0->13: exactly one room request
+PASS: Canal 0->13: duration within bounds (2.72 s)
+PASS: Canal 0->13: frames advance through the passage (8 distinct)
+PASS: Canal 0->13: collision body never driven before the swap
+PASS: Canal 0->13: arrival is the unchanged inward point (184.0, 1198.0) facing away from the door
+PASS: Canal 0->13: live Kaze restored, doorway layer hidden
+PASS: Canal 0->13: control restored standing on a supported floor
+PASS: Canal 13->0 reduced: passage starts embodied, loader not yet requested
+PASS: Canal 13->0 reduced: starts at the unchanged x=120 trigger (feet x 117.5)
+TR08 CANAL 13->0 reduced seconds=1.45 result=completed phases=["canal:turn", "canal:cross", "canal:emerge", "canal:turn_out"] shown=[[0.0, "door_turn_to_rear", "art08-standin", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved"], [0.183, "door_cross", "art08", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script"], [0.667, "door_emerge", "art08", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script"], [1.017, "door_turn_to_side", "stand-in", "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)"]]
+PASS: Canal 13->0 reduced: turn, cross, emerge and turn-out all play: ["door_turn_to_rear", "door_cross", "door_emerge", "door_turn_to_side"]
+PASS: Canal 13->0 reduced: sequence completes
+PASS: Canal 13->0 reduced: exactly one room request
+PASS: Canal 13->0 reduced: duration within bounds (1.45 s)
+PASS: Canal 13->0 reduced: frames advance through the passage (8 distinct)
+PASS: Canal 13->0 reduced: collision body never driven before the swap
+PASS: Canal 13->0 reduced: arrival is the unchanged R0 door point
+PASS: Canal 13->0 reduced: live Kaze restored, doorway layer hidden
+PASS: Canal 13->0 reduced: control restored standing on a supported floor
+PASS: Canal 0->13 reduced: passage starts embodied, loader not yet requested
+TR08 CANAL 0->13 reduced seconds=2.05 result=completed phases=["canal:approach", "canal:turn", "canal:cross", "canal:emerge", "canal:turn_out", "canal:walk_out"] shown=[[0.0, "door_approach_walk", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"], [0.317, "door_turn_to_rear", "art08-standin", "reused approved-lineage PR #41 ART-05 turn_depth candidate frames (AI-derived, not newly authored), re-registered from 320 to 480 cell; not creator approved"], [0.5, "door_cross", "art08", "cut-out rear rig from approved ART-04 enter_depth_key and turn_depth_key (compressed stocking tubes, boot sprites, hair/arm sway); authored by script"], [0.983, "door_emerge", "art08", "cut-out front rig from the approved idle strip frame 0 (resampled 0.832); authored by script"], [1.333, "door_turn_to_side", "stand-in", "STAND-IN: approved cleaned IDLE strip frames 6,7,0,1 (not a turn)"], [1.517, "door_walk_out", "art08", "cut-out rig + skeletal pose solve (authored by script from approved ART-04 stair_up_key; limbs re-posed, joints repainted by tube warp)"]]
+PASS: Canal 0->13 reduced: turn, cross, emerge and turn-out all play: ["door_approach_walk", "door_turn_to_rear", "door_cross", "door_emerge", "door_turn_to_side", "door_walk_out"]
+PASS: Canal 0->13 reduced: Kaze walks out of the Canal opening to the arrival point
+PASS: Canal 0->13 reduced: sequence completes
+PASS: Canal 0->13 reduced: exactly one room request
+PASS: Canal 0->13 reduced: duration within bounds (2.05 s)
+PASS: Canal 0->13 reduced: frames advance through the passage (8 distinct)
+PASS: Canal 0->13 reduced: collision body never driven before the swap
+PASS: Canal 0->13 reduced: arrival is the unchanged inward point (184.0, 1198.0) facing away from the door
+PASS: Canal 0->13 reduced: live Kaze restored, doorway layer hidden
+PASS: Canal 0->13 reduced: control restored standing on a supported floor
+PASS: Canal: held direction through the passage causes no arrival loop
+PASS: Canal: stop and reverse back through the opening succeeds once
+PASS: Canal: stopping short and reversing never starts the passage
+PASS: Canal: wrong-direction walk away from the door does not trigger
+PASS: Canal: locked Windstep gate never starts the passage
+PASS: Canal: locked gate keeps its specific hint: Route sealed: WINDSTEP. Consult the atlas.
+PASS: Canal: locked R0 door keeps its specific hint
+TR08 CANAL AIRBORNE airborne=true phase=canal:land requests=0
+PASS: Canal: an airborne crossing lets the live body land first (physics on, no proxy)
+PASS: Canal: airborne approach reaches R0 with control, one request
+PASS: Canal: after landing the embodied passage completes
+TR08 CANAL INTERRUPT when=turn reason=pause reached=true room=13 result=paused owns=false tr=0 phys=true spr=true layer=false floor=true pos=(117.5002, 1199.933)
+PASS: Canal: control restored after pause during turn
+PASS: Canal: supported in a valid room after pause during turn (R13)
+TR08 CANAL INTERRUPT when=turn reason=death reached=true room=13 result=cancelled owns=false tr=0.0 phys=true spr=true layer=false floor=true pos=(330.0, 1159.998)
+PASS: Canal: control restored after death during turn
+PASS: Canal: supported in a valid room after death during turn (R13)
+TR08 CANAL INTERRUPT when=turn reason=rebuild reached=true room=13 result=room_changed owns=false tr=0 phys=true spr=true layer=false floor=true pos=(117.5002, 1199.933)
+PASS: Canal: control restored after rebuild during turn
+PASS: Canal: supported in a valid room after rebuild during turn (R13)
+TR08 CANAL INTERRUPT when=cross reason=pause reached=true room=13 result=paused owns=false tr=0 phys=true spr=true layer=false floor=true pos=(117.5002, 1199.933)
+PASS: Canal: control restored after pause during cross
+PASS: Canal: supported in a valid room after pause during cross (R13)
+TR08 CANAL INTERRUPT when=cross reason=death reached=true room=13 result=cancelled owns=false tr=0.0 phys=true spr=true layer=false floor=true pos=(330.0, 1159.998)
+PASS: Canal: control restored after death during cross
+PASS: Canal: supported in a valid room after death during cross (R13)
+TR08 CANAL INTERRUPT when=cross reason=rebuild reached=true room=13 result=room_changed owns=false tr=0 phys=true spr=true layer=false floor=true pos=(117.5002, 1199.933)
+PASS: Canal: control restored after rebuild during cross
+PASS: Canal: supported in a valid room after rebuild during cross (R13)
+TR08 CANAL INTERRUPT when=emerge reason=pause reached=true room=0 result=cancelled owns=false tr=-0.0 phys=true spr=true layer=false floor=true pos=(590.0, 779.998)
+PASS: Canal: control restored after pause during emerge
+PASS: Canal: supported in a valid room after pause during emerge (R0)
+TR08 CANAL INTERRUPT when=emerge reason=death reached=true room=13 result=cancelled owns=false tr=0.0 phys=true spr=true layer=false floor=true pos=(330.0, 1159.998)
+PASS: Canal: control restored after death during emerge
+PASS: Canal: supported in a valid room after death during emerge (R13)
+TR08 CANAL INTERRUPT when=emerge reason=rebuild reached=true room=0 result=completed owns=false tr=-0.0 phys=true spr=true layer=false floor=true pos=(590.0, 779.998)
+PASS: Canal: control restored after rebuild during emerge
+PASS: Canal: supported in a valid room after rebuild during emerge (R0)
+TR08 CANAL INTERRUPT when=turn_out reason=pause reached=true room=0 result=paused owns=false tr=-0.0 phys=true spr=true layer=false floor=true pos=(590.0, 779.998)
+PASS: Canal: control restored after pause during turn_out
+PASS: Canal: supported in a valid room after pause during turn_out (R0)
+TR08 CANAL INTERRUPT when=turn_out reason=death reached=true room=13 result=cancelled owns=false tr=0.0 phys=true spr=true layer=false floor=true pos=(330.0, 1159.998)
+PASS: Canal: control restored after death during turn_out
+PASS: Canal: supported in a valid room after death during turn_out (R13)
+TR08 CANAL INTERRUPT when=turn_out reason=rebuild reached=true room=0 result=room_changed owns=false tr=-0.0 phys=true spr=true layer=false floor=true pos=(590.0, 779.998)
+PASS: Canal: control restored after rebuild during turn_out
+PASS: Canal: supported in a valid room after rebuild during turn_out (R0)
+PASS: Canal: watchdog returns control in place
+PASS: Ordinary side passage R13->R14 stays automatic and immediate
+PASS: R20 wind-fold keeps its own E presentation
+PASS: Plain mode keeps the inherited plain stair fade
+PASS: Room graph unchanged: 21 rooms, 15 expansion links
+TR08: 226 checks, 0 failure(s)

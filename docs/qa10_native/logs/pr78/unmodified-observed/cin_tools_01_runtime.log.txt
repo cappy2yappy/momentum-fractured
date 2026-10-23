@@ -1,0 +1,109 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Overlapping/repeated triggers do not hand off early
+PASS: Normal: authorized loader request exactly once
+PASS: Normal: control and live sprite restored
+PASS: Normal: gameplay camera preserved
+PASS: Normal: checkpoint and earned progression preserved
+PASS: Normal: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Overlapping/repeated triggers do not hand off early
+PASS: Reduced sequence has fixed framing and no shake
+PASS: Reduced: authorized loader request exactly once
+PASS: Reduced: control and live sprite restored
+PASS: Reduced: gameplay camera preserved
+PASS: Reduced: checkpoint and earned progression preserved
+PASS: Reduced: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Skip opening: authorized loader request exactly once
+PASS: Skip opening: control and live sprite restored
+PASS: Skip opening: gameplay camera preserved
+PASS: Skip opening: checkpoint and earned progression preserved
+PASS: Skip opening: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Skip middle: authorized loader request exactly once
+PASS: Skip middle: control and live sprite restored
+PASS: Skip middle: gameplay camera preserved
+PASS: Skip middle: checkpoint and earned progression preserved
+PASS: Skip middle: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Skip closing: authorized loader request exactly once
+PASS: Skip closing: control and live sprite restored
+PASS: Skip closing: gameplay camera preserved
+PASS: Skip closing: checkpoint and earned progression preserved
+PASS: Skip closing: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Reached tr08_open
+PASS: Skip tr08_open: authorized loader request exactly once
+PASS: Skip tr08_open: control and live sprite restored
+PASS: Skip tr08_open: gameplay camera preserved
+PASS: Skip tr08_open: checkpoint and earned progression preserved
+PASS: Skip tr08_open: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Reached tr08_climb
+PASS: Skip tr08_climb: authorized loader request exactly once
+PASS: Skip tr08_climb: control and live sprite restored
+PASS: Skip tr08_climb: gameplay camera preserved
+PASS: Skip tr08_climb: checkpoint and earned progression preserved
+PASS: Skip tr08_climb: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Reached tr08_close
+PASS: Skip tr08_close: authorized loader request exactly once
+PASS: Skip tr08_close: control and live sprite restored
+PASS: Skip tr08_close: gameplay camera preserved
+PASS: Skip tr08_close: checkpoint and earned progression preserved
+PASS: Skip tr08_close: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0,"drawn_frames":0,"floor":false,"frame":1,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"res://scripts/hud.gd","key_events_seen":0,"paused":true,"pending_room":17,"phase":"","physical_a":false,"physical_d":false,"physics_frame":1,"player_age":0.0,"player_can_process":false,"player_physics":false,"player_process_mode":0,"position":[1450.0,478.0],"render_loop_enabled":true,"requests":9,"room":14,"transition":0.65,"velocity":[0.0,0.0],"window_focus":false,"window_mode":0,"window_visible":true,"world_can_process":false,"world_id":50415535640,"world_physics":false,"world_process_mode":0}
+PASS: Focus loss intro: authorized loader request exactly once
+PASS: Focus loss intro: control and live sprite restored
+PASS: Focus loss intro: gameplay camera preserved
+PASS: Focus loss intro: checkpoint and earned progression preserved
+PASS: Focus loss intro: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Focus loss tr08_pre_request: authorized loader request exactly once
+PASS: Focus loss tr08_pre_request: control and live sprite restored
+PASS: Focus loss tr08_pre_request: gameplay camera preserved
+PASS: Focus loss tr08_pre_request: checkpoint and earned progression preserved
+PASS: Focus loss tr08_pre_request: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Focus loss loader: authorized loader request exactly once
+PASS: Focus loss loader: control and live sprite restored
+PASS: Focus loss loader: gameplay camera preserved
+PASS: Focus loss loader: checkpoint and earned progression preserved
+PASS: Focus loss loader: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: F6 switches active cut-in to reduced timeline
+PASS: Missing preset: authorized loader request exactly once
+PASS: Missing preset: control and live sprite restored
+PASS: Missing preset: gameplay camera preserved
+PASS: Missing preset: checkpoint and earned progression preserved
+PASS: Missing preset: existing save bytes untouched
+PASS: Missing player: authorized loader request exactly once
+PASS: Missing player: control and live sprite restored
+PASS: Missing player: gameplay camera preserved
+PASS: Missing player: checkpoint and earned progression preserved
+PASS: Missing player: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Watchdog: authorized loader request exactly once
+PASS: Watchdog: control and live sprite restored
+PASS: Watchdog: gameplay camera preserved
+PASS: Watchdog: checkpoint and earned progression preserved
+PASS: Watchdog: existing save bytes untouched
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Repeated reciprocal entry R17 completes once
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Repeated reciprocal entry R14 completes once
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Repeated reciprocal entry R17 completes once
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Repeated reciprocal entry R14 completes once
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: External room rebuild supersedes stale accepted request
+PASS: Accepted E trigger suspends ordinary player physics
+PASS: Respawn supersedes stale trip and restores checkpoint control
+PASS: Automatic Canal passage keeps original routing and gate
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0,"drawn_frames":6,"floor":false,"frame":7,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"res://scripts/hud.gd","key_events_seen":0,"paused":false,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":7,"player_age":0.0,"player_can_process":true,"player_physics":false,"player_process_mode":0,"position":[220.0,1298.0],"render_loop_enabled":true,"requests":19,"room":13,"transition":0,"velocity":[0.0,0.0],"window_focus":false,"window_mode":0,"window_visible":true,"world_can_process":true,"world_id":50415535640,"world_physics":false,"world_process_mode":0}
+CIN-TOOLS-01 RUNTIME: 103 checks, 0 failure(s)

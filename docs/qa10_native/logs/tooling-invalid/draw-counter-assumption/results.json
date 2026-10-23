@@ -1,0 +1,27 @@
+[
+  {
+    "suite": "qa10_native/render_capture",
+    "exit": 1,
+    "seconds": 1.31,
+    "passes": 2,
+    "failures": 1,
+    "script_errors": 0,
+    "source_sha256": "5f1c214630f423eaa7f0efffaee26f2934b27af3407df8f6aa2172eecf484ce5",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/draw-positive-control/qa10_native_render_capture.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/qa10_native/draw-positive-control/qa10_native_render_capture.gd",
+      "--",
+      "--test"
+    ],
+    "headless": false,
+    "observe": true,
+    "started_at": "2026-10-23T15:42:54.818616+00:00"
+  }
+]
