@@ -1,0 +1,83 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: R2 (2440.0, 850.0) perimeter supports stopped capsule
+PASS: R2 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R4 (2440.0, 1080.0) perimeter supports stopped capsule
+PASS: R4 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R9 (2440.0, 810.0) perimeter supports stopped capsule
+PASS: R9 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R13 (120.0, 1200.0) perimeter supports stopped capsule
+PASS: R13 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R13 one-way extension retains upward passage
+PASS: R13 extension catches downward landing
+PASS: R13 (1680.0, 560.0) perimeter supports stopped capsule
+PASS: R13 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R13 one-way extension retains upward passage
+PASS: R13 extension catches downward landing
+PASS: R14 (120.0, 1100.0) perimeter supports stopped capsule
+PASS: R14 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R14 one-way extension retains upward passage
+PASS: R14 extension catches downward landing
+PASS: R14 (2440.0, 830.0) perimeter supports stopped capsule
+PASS: R14 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R14 one-way extension retains upward passage
+PASS: R14 extension catches downward landing
+PASS: R15 (120.0, 500.0) perimeter supports stopped capsule
+PASS: R15 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R15 one-way extension retains upward passage
+PASS: R15 extension catches downward landing
+PASS: R15 (2080.0, 1120.0) perimeter supports stopped capsule
+PASS: R15 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R15 one-way extension retains upward passage
+PASS: R15 extension catches downward landing
+PASS: R16 (120.0, 1120.0) perimeter supports stopped capsule
+PASS: R16 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R16 one-way extension retains upward passage
+PASS: R16 extension catches downward landing
+PASS: R16 (1880.0, 760.0) perimeter supports stopped capsule
+PASS: R16 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R16 one-way extension retains upward passage
+PASS: R16 extension catches downward landing
+PASS: R17 (120.0, 1900.0) perimeter supports stopped capsule
+PASS: R17 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R17 one-way extension retains upward passage
+PASS: R17 extension catches downward landing
+PASS: R17 (1680.0, 1300.0) perimeter supports stopped capsule
+PASS: R17 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R17 one-way extension retains upward passage
+PASS: R17 extension catches downward landing
+PASS: R18 (120.0, 1000.0) perimeter supports stopped capsule
+PASS: R18 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R18 one-way extension retains upward passage
+PASS: R18 extension catches downward landing
+PASS: R18 (2440.0, 760.0) perimeter supports stopped capsule
+PASS: R18 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R18 one-way extension retains upward passage
+PASS: R18 extension catches downward landing
+PASS: R19 (120.0, 760.0) perimeter supports stopped capsule
+PASS: R19 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R19 one-way extension retains upward passage
+PASS: R19 extension catches downward landing
+PASS: R19 (2280.0, 980.0) perimeter supports stopped capsule
+PASS: R19 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R19 one-way extension retains upward passage
+PASS: R19 extension catches downward landing
+PASS: R20 (120.0, 760.0) perimeter supports stopped capsule
+PASS: R20 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R20 one-way extension retains upward passage
+PASS: R20 extension catches downward landing
+PASS: R20 (2080.0, 1120.0) perimeter supports stopped capsule
+PASS: R20 walk/sprint/upgraded/inherited920 stop at perimeter
+PASS: R20 one-way extension retains upward passage
+PASS: R20 extension catches downward landing
+PASS: Real Stride pickup still collects while stopped
+PASS: Locked Canal exit keeps safe footing after stop/reapproach
+PASS: Canal left exit reapproach activates with its current passage policy
+PASS: Canal reciprocal arrival remains supported
+PASS: Terrace capsule has no solid overlap immediately after swap
+PASS: Terrace legacy arrival settles above solid shelf, not inside it
+PASS: Explicit Terrace return arrival remains untouched
+PASS: 21 rooms and 29 links preserved
+LEVEL GEOMETRY: 0 failure(s)

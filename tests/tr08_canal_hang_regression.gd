@@ -12,7 +12,9 @@ func expect(ok:bool,label:String):
 	check(ok,label)
 
 func interrupt(kind:String):
-	if kind=="focus": w.hud.notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
+	if kind=="focus":
+		w.hud.simulated_notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
+		check(paused and w.hud.pause_open and not w.player.can_process(),"Deliberate focus interruption executes production pause handler")
 	elif kind=="esc": key(KEY_ESCAPE,true);await process_frame;key(KEY_ESCAPE,false)
 	else: key(KEY_M,true);await process_frame;key(KEY_M,false)
 	for i in 6: await process_frame

@@ -1,0 +1,397 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+TR06 engine=4.6.1-stable (official) driver=opengl3
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=0 style=jump pos=(119.0584, 1229.925) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 0] jump offset=0 requests exactly once
+PASS: Real keys [1, 0] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=5 style=jump pos=(119.0584, 1229.925) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 0] jump offset=5 requests exactly once
+PASS: Real keys [1, 0] jump offset=5 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=10 style=jump pos=(119.0571, 1217.426) velocity=(-400.0, -750.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 0] jump offset=10 requests exactly once
+PASS: Real keys [1, 0] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=15 style=jump pos=(14.07286, 1299.934) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=15 requests exactly once
+PASS: Real keys [1, 0] jump offset=15 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=20 style=jump pos=(14.0001, 1299.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=20 requests exactly once
+PASS: Real keys [1, 0] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=25 style=jump pos=(14.0001, 1299.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=25 requests exactly once
+PASS: Real keys [1, 0] jump offset=25 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=30 style=jump pos=(14.07413, 1299.933) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=30 requests exactly once
+PASS: Real keys [1, 0] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=35 style=jump pos=(14.07518, 1299.933) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=35 requests exactly once
+PASS: Real keys [1, 0] jump offset=35 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Fresh normal save path, R0, no Windstep
+PASS: Fresh real-key R0->R1 traversal arrives supported
+TRACE pair=[1, 0] offset=40 style=jump pos=(14.07465, 1299.933) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 0] jump offset=40 requests exactly once
+PASS: Real keys [1, 0] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=walk pos=(114.1667, 1199.935) velocity=(0.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] walk offset=0 requests exactly once
+PASS: Real keys [13, 0] walk offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=sprint pos=(112.1113, 1199.932) velocity=(0.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] sprint offset=0 requests exactly once
+PASS: Real keys [13, 0] sprint offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=dash pos=(116.1667, 1199.934) velocity=(0.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 0] dash offset=0 requests exactly once
+PASS: Real keys [13, 0] dash offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=jump pos=(86.00002, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=0 requests exactly once
+PASS: Real keys [13, 0] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=10 style=jump pos=(86.00002, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=10 requests exactly once
+PASS: Real keys [13, 0] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=20 style=jump pos=(86.00001, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=20 requests exactly once
+PASS: Real keys [13, 0] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=30 style=jump pos=(86.00058, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=30 requests exactly once
+PASS: Real keys [13, 0] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=40 style=jump pos=(86.00002, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=40 requests exactly once
+PASS: Real keys [13, 0] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=0 style=walk pos=(1685.832, 559.9337) velocity=(400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 14] walk offset=0 requests exactly once
+PASS: Real keys [13, 14] walk offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=0 style=sprint pos=(1687.891, 559.9337) velocity=(600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 14] sprint offset=0 requests exactly once
+PASS: Real keys [13, 14] sprint offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=0 style=dash pos=(1683.834, 559.9337) velocity=(920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [13, 14] dash offset=0 requests exactly once
+PASS: Real keys [13, 14] dash offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=0 style=jump pos=(1685.836, 489.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [13, 14] jump offset=0 requests exactly once
+PASS: Real keys [13, 14] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=10 style=jump pos=(1785.924, 559.9981) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 14] jump offset=10 requests exactly once
+PASS: Real keys [13, 14] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=20 style=jump pos=(1785.999, 559.9252) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 14] jump offset=20 requests exactly once
+PASS: Real keys [13, 14] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=30 style=jump pos=(1785.924, 559.9997) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 14] jump offset=30 requests exactly once
+PASS: Real keys [13, 14] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=40 style=jump pos=(1785.924, 559.9998) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 14] jump offset=40 requests exactly once
+PASS: Real keys [13, 14] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=0 style=walk pos=(114.1663, 1099.935) velocity=(-400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [14, 13] walk offset=0 requests exactly once
+PASS: Real keys [14, 13] walk offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=0 style=sprint pos=(112.1111, 1099.936) velocity=(-600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [14, 13] sprint offset=0 requests exactly once
+PASS: Real keys [14, 13] sprint offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=0 style=dash pos=(116.1669, 1099.925) velocity=(-920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [14, 13] dash offset=0 requests exactly once
+PASS: Real keys [14, 13] dash offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=0 style=jump pos=(114.1632, 1029.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [14, 13] jump offset=0 requests exactly once
+PASS: Real keys [14, 13] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=10 style=jump pos=(14.07593, 1099.933) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [14, 13] jump offset=10 requests exactly once
+PASS: Real keys [14, 13] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=20 style=jump pos=(14.00018, 1099.925) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [14, 13] jump offset=20 requests exactly once
+PASS: Real keys [14, 13] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=30 style=jump pos=(14.07596, 1099.933) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [14, 13] jump offset=30 requests exactly once
+PASS: Real keys [14, 13] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=40 style=jump pos=(14.07596, 1099.934) velocity=(-20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [14, 13] jump offset=40 requests exactly once
+PASS: Real keys [14, 13] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=0 style=walk pos=(2445.835, 1299.934) velocity=(400.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [1, 2] walk offset=0 requests exactly once
+PASS: Real keys [1, 2] walk offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=0 style=sprint pos=(2447.888, 1299.934) velocity=(600.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [1, 2] sprint offset=0 requests exactly once
+PASS: Real keys [1, 2] sprint offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=0 style=dash pos=(2443.832, 1299.934) velocity=(920.0, 0.0) floor=true wall_stopped=false airborne=false
+PASS: Real keys [1, 2] dash offset=0 requests exactly once
+PASS: Real keys [1, 2] dash offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=0 style=jump pos=(2445.838, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 2] jump offset=0 requests exactly once
+PASS: Real keys [1, 2] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=10 style=jump pos=(2585.924, 1299.998) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 2] jump offset=10 requests exactly once
+PASS: Real keys [1, 2] jump offset=10 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=20 style=jump pos=(2585.924, 1299.998) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 2] jump offset=20 requests exactly once
+PASS: Real keys [1, 2] jump offset=20 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=30 style=jump pos=(2585.924, 1299.999) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 2] jump offset=30 requests exactly once
+PASS: Real keys [1, 2] jump offset=30 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=40 style=jump pos=(2585.924, 1300.0) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [1, 2] jump offset=40 requests exactly once
+PASS: Real keys [1, 2] jump offset=40 lands supported
+PASS: Stopped arrival cannot loop
+PASS: Locked Windstep gate blocks real walking
+PASS: Locked gate preserves authored Windstep hint: The sluice climb needs Windstep.
+PASS: Stop before threshold stays in [13, 0]
+PASS: Reverse away from [13, 0] does not activate
+CONTROL pair=[13, 0] room=0 requests=1 pos=(516.8892, 779.9337) physics=true paused=false
+PASS: Held direction through [13, 0] causes no arrival loop
+PASS: Stop before threshold stays in [13, 14]
+PASS: Reverse away from [13, 14] does not activate
+CONTROL pair=[13, 14] room=14 requests=1 pos=(463.9998, 1099.934) physics=true paused=false
+PASS: Held direction through [13, 14] causes no arrival loop
+PASS: Stop before threshold stays in [14, 13]
+PASS: Reverse away from [14, 13] does not activate
+CONTROL pair=[14, 13] room=13 requests=1 pos=(1336.002, 582.4337) physics=true paused=false
+PASS: Held direction through [14, 13] causes no arrival loop
+PASS: Stop before threshold stays in [1, 0]
+PASS: Reverse away from [1, 0] does not activate
+CONTROL pair=[1, 0] room=0 requests=1 pos=(2095.997, 1299.934) physics=true paused=false
+PASS: Held direction through [1, 0] causes no arrival loop
+PASS: Stop before threshold stays in [1, 2]
+PASS: Reverse away from [1, 2] does not activate
+CONTROL pair=[1, 2] room=2 requests=1 pos=(464.0002, 1299.934) physics=true paused=false
+PASS: Held direction through [1, 2] causes no arrival loop
+PASS: Release fixture reaches wall airborne through physics
+PASS: Airborne wall approach released to idle does not activate
+PASS: Inward key at missed wall exit does not activate
+PASS: Outward reapproach recovers missed wall exit
+PASS: Wrong-height fixture first arms at correct endpoint shelf
+PASS: Armed outward wall contact on wrong floor cannot recover
+PASS: Supported recovery rejects tether-attached state
+PASS: Gate R1->R2 retains prerequisite: The sluice climb needs Windstep.
+PASS: Gate R3->R4 retains prerequisite: The broken span needs a Wind Tether.
+PASS: Gate R5->R6 retains prerequisite: The storm gate needs Gale Dash.
+PASS: Gate R6->R7 retains prerequisite: The Tide Warden seals the archive.
+PASS: Gate R7->R8 retains prerequisite: Restore the Relay Archive before exploring its annexes.
+PASS: Gate R9->R10 retains prerequisite: Recover all three relay sigils to power the SkyWorks lift.
+PASS: Gate R10->R11 retains prerequisite: Use Wind Kunai to release the intake seal.
+PASS: Gate R11->R12 retains prerequisite: Use Electric Kunai to open the Foundry relay.
+PASS: Gate R13->R0 retains prerequisite: Route sealed: WINDSTEP. Consult the atlas.
+PASS: Gate R13->R14 retains prerequisite: Route sealed: WINDSTEP. Consult the atlas.
+PASS: Gate R14->R13 retains prerequisite: Route sealed: WINDSTEP. Consult the atlas.
+PASS: Gate R14->R9 retains prerequisite: Route sealed: RELAY. Consult the atlas.
+PASS: Gate R15->R2 retains prerequisite: Route sealed: SLUICE. Consult the atlas.
+PASS: Gate R15->R16 retains prerequisite: Route sealed: RELAY. Consult the atlas.
+PASS: Gate R16->R15 retains prerequisite: Route sealed: RELAY. Consult the atlas.
+PASS: Gate R16->R8 retains prerequisite: Route sealed: RELAY. Consult the atlas.
+PASS: Gate R17->R5 retains prerequisite: Route sealed: CLIMB. Consult the atlas.
+PASS: Gate R18->R16 retains prerequisite: Route sealed: RELAY. Consult the atlas.
+PASS: Gate R18->R19 retains prerequisite: Route sealed: PUMP. Consult the atlas.
+PASS: Gate R19->R18 retains prerequisite: Route sealed: PUMP. Consult the atlas.
+PASS: Gate R19->R11 retains prerequisite: Route sealed: REGIONAL. Consult the atlas.
+PASS: Gate R20->R17 retains prerequisite: Route sealed: SPIRE. Consult the atlas.
+PASS: Gate R20->R19 retains prerequisite: Route sealed: COIL. Consult the atlas.
+TR06 gated automatic endpoints=23
+TRACE pair=[0, 1] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [0, 1] jump offset=0 requests exactly once
+PASS: Real keys [0, 1] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 0] offset=0 style=jump pos=(114.1655, 1229.926) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 0] jump offset=0 requests exactly once
+PASS: Real keys [1, 0] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[1, 2] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [1, 2] jump offset=0 requests exactly once
+PASS: Real keys [1, 2] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[2, 1] offset=0 style=jump pos=(114.1635, 1229.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [2, 1] jump offset=0 requests exactly once
+PASS: Real keys [2, 1] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[2, 3] offset=0 style=jump pos=(2445.837, 779.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [2, 3] jump offset=0 requests exactly once
+PASS: Real keys [2, 3] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[3, 2] offset=0 style=jump pos=(114.1636, 779.9266) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [3, 2] jump offset=0 requests exactly once
+PASS: Real keys [3, 2] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[3, 4] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [3, 4] jump offset=0 requests exactly once
+PASS: Real keys [3, 4] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[4, 3] offset=0 style=jump pos=(114.1634, 1229.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [4, 3] jump offset=0 requests exactly once
+PASS: Real keys [4, 3] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[4, 5] offset=0 style=jump pos=(2445.837, 1009.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [4, 5] jump offset=0 requests exactly once
+PASS: Real keys [4, 5] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[5, 4] offset=0 style=jump pos=(114.1634, 1009.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [5, 4] jump offset=0 requests exactly once
+PASS: Real keys [5, 4] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[5, 6] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [5, 6] jump offset=0 requests exactly once
+PASS: Real keys [5, 6] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[6, 5] offset=0 style=jump pos=(114.1655, 1229.926) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [6, 5] jump offset=0 requests exactly once
+PASS: Real keys [6, 5] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[6, 7] offset=0 style=jump pos=(2443.504, 1039.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [6, 7] jump offset=0 requests exactly once
+PASS: Real keys [6, 7] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[7, 6] offset=0 style=jump pos=(114.1635, 1019.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [7, 6] jump offset=0 requests exactly once
+PASS: Real keys [7, 6] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[7, 8] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [7, 8] jump offset=0 requests exactly once
+PASS: Real keys [7, 8] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[8, 7] offset=0 style=jump pos=(114.164, 1019.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [8, 7] jump offset=0 requests exactly once
+PASS: Real keys [8, 7] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[8, 9] offset=0 style=jump pos=(2445.837, 759.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [8, 9] jump offset=0 requests exactly once
+PASS: Real keys [8, 9] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[9, 8] offset=0 style=jump pos=(114.1631, 759.9269) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [9, 8] jump offset=0 requests exactly once
+PASS: Real keys [9, 8] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[9, 10] offset=0 style=jump pos=(2585.924, 809.999) velocity=(20.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [9, 10] jump offset=0 requests exactly once
+PASS: Real keys [9, 10] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[10, 9] offset=0 style=jump pos=(114.1636, 759.9266) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [10, 9] jump offset=0 requests exactly once
+PASS: Real keys [10, 9] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[10, 11] offset=0 style=jump pos=(2445.837, 689.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [10, 11] jump offset=0 requests exactly once
+PASS: Real keys [10, 11] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[11, 10] offset=0 style=jump pos=(114.1636, 689.9266) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [11, 10] jump offset=0 requests exactly once
+PASS: Real keys [11, 10] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[11, 12] offset=0 style=jump pos=(2445.837, 1229.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [11, 12] jump offset=0 requests exactly once
+PASS: Real keys [11, 12] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[12, 11] offset=0 style=jump pos=(114.1655, 1229.926) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [12, 11] jump offset=0 requests exactly once
+PASS: Real keys [12, 11] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 0] offset=0 style=jump pos=(86.00002, 1199.925) velocity=(0.0, 0.0) floor=true wall_stopped=true airborne=true
+PASS: Real keys [13, 0] jump offset=0 requests exactly once
+PASS: Real keys [13, 0] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[13, 14] offset=0 style=jump pos=(1685.836, 489.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [13, 14] jump offset=0 requests exactly once
+PASS: Real keys [13, 14] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 13] offset=0 style=jump pos=(114.163, 1029.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [14, 13] jump offset=0 requests exactly once
+PASS: Real keys [14, 13] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[14, 9] offset=0 style=jump pos=(2445.837, 759.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [14, 9] jump offset=0 requests exactly once
+PASS: Real keys [14, 9] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[15, 2] offset=0 style=jump pos=(114.1648, 429.9264) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [15, 2] jump offset=0 requests exactly once
+PASS: Real keys [15, 2] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[15, 16] offset=0 style=jump pos=(2085.837, 1049.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [15, 16] jump offset=0 requests exactly once
+PASS: Real keys [15, 16] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[16, 15] offset=0 style=jump pos=(114.163, 1049.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [16, 15] jump offset=0 requests exactly once
+PASS: Real keys [16, 15] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[16, 8] offset=0 style=jump pos=(1885.836, 689.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [16, 8] jump offset=0 requests exactly once
+PASS: Real keys [16, 8] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[17, 5] offset=0 style=jump pos=(114.163, 1829.927) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [17, 5] jump offset=0 requests exactly once
+PASS: Real keys [17, 5] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[18, 16] offset=0 style=jump pos=(114.1639, 929.9261) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [18, 16] jump offset=0 requests exactly once
+PASS: Real keys [18, 16] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[18, 19] offset=0 style=jump pos=(2445.837, 689.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [18, 19] jump offset=0 requests exactly once
+PASS: Real keys [18, 19] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[19, 18] offset=0 style=jump pos=(114.1632, 689.9269) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [19, 18] jump offset=0 requests exactly once
+PASS: Real keys [19, 18] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[19, 11] offset=0 style=jump pos=(2285.837, 909.9266) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [19, 11] jump offset=0 requests exactly once
+PASS: Real keys [19, 11] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[20, 17] offset=0 style=jump pos=(114.1639, 689.9261) velocity=(-400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [20, 17] jump offset=0 requests exactly once
+PASS: Real keys [20, 17] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TRACE pair=[20, 19] offset=0 style=jump pos=(2085.837, 1049.927) velocity=(400.0, -780.0) floor=false wall_stopped=false airborne=true
+PASS: Real keys [20, 19] jump offset=0 requests exactly once
+PASS: Real keys [20, 19] jump offset=0 lands supported
+PASS: Stopped arrival cannot loop
+TR06 broader native endpoints=39
+TR06: 305 checks, 0 failure(s)

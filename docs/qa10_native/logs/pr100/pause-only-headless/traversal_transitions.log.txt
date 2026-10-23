@@ -1,0 +1,13 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: Airborne transition fixture accepts a clear tether
+PASS: Tether-to-dash releases rope before dash skips constraints
+PASS: Transition preserves approved dash impulse and timing
+PASS: Dash-to-tether rejects attachment while dash skips rope physics
+PASS: Availability indicator uses the same dash attachment restriction
+PASS: Finished dash permits the normal airborne tether
+PASS: Ordinary release still preserves exact incoming velocity
+PASS: Approved dash protection still rejects damage
+TRAVERSAL TRANSITIONS: 0 failure(s)

@@ -14,10 +14,6 @@ func wait_ticks(count):
 		for code in held_keys:
 			if held_keys[code] and not Input.is_physical_key_pressed(code): super.key(code,true)
 
-func automation_hud():
-	w.hud.set_script(load("res://tests/fixtures/transition_test_hud.gd"))
-	w.hud.world=w
-
 func fresh():
 	for code in [KEY_A,KEY_D,KEY_SPACE,KEY_SHIFT,KEY_E]: key(code,false)
 	if is_instance_valid(w):

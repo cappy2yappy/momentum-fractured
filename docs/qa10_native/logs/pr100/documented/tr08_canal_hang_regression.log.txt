@@ -1,0 +1,83 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+CASE hold_from_rest_d1 -> completed start=38 done=139 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 1) completes with one request and control back
+PASS: Hold A from rest (delay 1) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 1) hands back control by tick 200 (139)
+CASE hold_from_rest_d4 -> completed start=36 done=137 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 4) completes with one request and control back
+PASS: Hold A from rest (delay 4) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 4) hands back control by tick 200 (137)
+CASE hold_from_rest_d9 -> completed start=36 done=137 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 9) completes with one request and control back
+PASS: Hold A from rest (delay 9) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 9) hands back control by tick 200 (137)
+CASE hold_from_rest_d17 -> completed start=36 done=137 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Hold A from rest (start delay 17) completes with one request and control back
+PASS: Hold A from rest (delay 17) plays the embodied doorway, not the inherited wipe
+PASS: Hold A from rest (delay 17) hands back control by tick 200 (137)
+CASE pre_request_focus_off1 -> completed start=45 done=143 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+1 really landed before the request
+PASS: After focus at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off6 -> completed start=45 done=148 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+6 really landed before the request
+PASS: After focus at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off12 -> completed start=45 done=154 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+12 really landed before the request
+PASS: After focus at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off20 -> completed start=45 done=162 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+20 really landed before the request
+PASS: After focus at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off28 -> completed start=45 done=170 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+28 really landed before the request
+PASS: After focus at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_focus_off34 -> completed start=45 done=176 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption focus+34 really landed before the request
+PASS: After focus at +34 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off1 -> completed start=45 done=143 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+1 really landed before the request
+PASS: After esc at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off6 -> completed start=45 done=148 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+6 really landed before the request
+PASS: After esc at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off12 -> completed start=45 done=154 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+12 really landed before the request
+PASS: After esc at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off20 -> completed start=45 done=162 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+20 really landed before the request
+PASS: After esc at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off28 -> completed start=45 done=170 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+28 really landed before the request
+PASS: After esc at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_esc_off34 -> completed start=45 done=176 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption esc+34 really landed before the request
+PASS: After esc at +34 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off1 -> completed start=45 done=143 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+1 really landed before the request
+PASS: After map at +1 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off6 -> completed start=45 done=148 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+6 really landed before the request
+PASS: After map at +6 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off12 -> completed start=45 done=154 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+12 really landed before the request
+PASS: After map at +12 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off20 -> completed start=45 done=162 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+20 really landed before the request
+PASS: After map at +20 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off28 -> completed start=45 done=170 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+28 really landed before the request
+PASS: After map at +28 ticks with A held, the passage completes once with control back
+CASE pre_request_map_off34 -> completed start=45 done=176 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption map+34 really landed before the request
+PASS: After map at +34 ticks with A held, the passage completes once with control back
+CASE landing_focus -> completed start=36 done=133 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption (focus) while landing still completes once
+CASE landing_esc -> completed start=36 done=133 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Interruption (esc) while landing still completes once
+CASE double_retry -> completed start=45 done=152 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: Two pre-request interruptions then completion: exactly one request, control back
+CASE abort_release_then_press -> completed start=45 done=205 req=1 canal=completed final: room=0 phase= tr=-0.000 pend=-1 phys=true floor=true pos=(416.9,779.9) vel=(-400,0) clip= f=1 armed=false cd=0.00 A=false D=false
+PASS: After an aborted passage with A released, Kaze stands with control and nothing fires
+PASS: Pressing A again after the abort exits through the doorway once
+TR08 HANG REGRESSION: 53 checks, 0 failure(s)

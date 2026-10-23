@@ -1,0 +1,12 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0.0,"drawn_frames":0,"floor":false,"frame":1,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"","key_events_seen":0,"paused":false,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":1,"player_age":0.0,"player_can_process":true,"player_physics":false,"player_process_mode":0,"position":[220.0,1298.0],"render_loop_enabled":false,"requests":0,"room":0,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"window_mode":0,"window_visible":true,"world_can_process":true,"world_id":49023026679,"world_physics":false,"world_process_mode":0}
+PASS: Legacy post-draw wait remains blocked while process frames continue without drawing
+QA10_FORCED_DRAW completed=true engine_drawn_before=0 engine_drawn_after=0
+PASS: Explicit main-thread draw releases the pending post-draw signal
+PASS: Forced native frame has readable viewport pixels
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0.0,"drawn_frames":0,"floor":false,"frame":12,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"","key_events_seen":0,"paused":false,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":12,"player_age":0.0,"player_can_process":true,"player_physics":false,"player_process_mode":0,"position":[220.0,1298.0],"render_loop_enabled":false,"requests":0,"room":0,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"window_mode":0,"window_visible":true,"world_can_process":true,"world_id":49023026679,"world_physics":false,"world_process_mode":0}
+PASS: Native capture render_loop_disabled saved rendered pixels
+PASS: Corrected native capture completes without regular rendering or gameplay writes
+QA10 RENDER CAPTURE: 5 checks, 0 failure(s)

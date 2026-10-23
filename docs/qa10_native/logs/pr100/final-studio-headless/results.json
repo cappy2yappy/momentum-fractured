@@ -1,0 +1,28 @@
+[
+  {
+    "suite": "cin_tools_03/workspace",
+    "exit": 0,
+    "seconds": 0.54,
+    "passes": 29,
+    "failures": 0,
+    "script_errors": 0,
+    "source_sha256": "5d6e4c4c517d301fef976aea6fce03843c00c639859c36c5a70ffb6f9cd18f86",
+    "command": [
+      "/Applications/Godot.app/Contents/MacOS/Godot",
+      "--headless",
+      "--path",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression",
+      "--log-file",
+      "/Users/tonysantiago/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/work/qa10-native-regression/build/qa10_native/final-studio-headless/cin_tools_03_workspace.engine.log",
+      "--fixed-fps",
+      "60",
+      "--script",
+      "res://build/qa10_native/final-studio-headless/cin_tools_03_workspace.gd",
+      "--",
+      "--test"
+    ],
+    "headless": true,
+    "observe": false,
+    "started_at": "2026-10-23T15:45:08.927979+00:00"
+  }
+]

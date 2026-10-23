@@ -1,0 +1,68 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1014)
+PASS: 21 rooms /29 links retained
+PASS: Six grounded masses and six recoverable steps built
+PASS: Visible lower geometry exists in collision data: [P: (520.0, 1220.0), S: (180.0, 80.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (520.0, 1220.0)
+PASS: Visible lower geometry exists in collision data: [P: (750.0, 1110.0), S: (120.0, 190.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (750.0, 1110.0)
+PASS: Visible lower geometry exists in collision data: [P: (1030.0, 1110.0), S: (120.0, 190.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (1030.0, 1110.0)
+PASS: Visible lower geometry exists in collision data: [P: (1200.0, 1220.0), S: (200.0, 80.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (1200.0, 1220.0)
+PASS: Visible lower geometry exists in collision data: [P: (1780.0, 1220.0), S: (200.0, 80.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (1780.0, 1220.0)
+PASS: Visible lower geometry exists in collision data: [P: (2000.0, 1120.0), S: (180.0, 180.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (2000.0, 1120.0)
+PASS: Visible lower geometry exists in collision data: [P: (240.0, 1200.0), S: (240.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (240.0, 1200.0)
+PASS: Visible lower geometry exists in collision data: [P: (1420.0, 1120.0), S: (240.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (1420.0, 1120.0)
+PASS: Visible lower geometry exists in collision data: [P: (1480.0, 980.0), S: (240.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (1480.0, 980.0)
+PASS: Visible lower geometry exists in collision data: [P: (2200.0, 1040.0), S: (280.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (2200.0, 1040.0)
+PASS: Visible lower geometry exists in collision data: [P: (2280.0, 930.0), S: (260.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (2280.0, 930.0)
+PASS: Visible lower geometry exists in collision data: [P: (2340.0, 1200.0), S: (260.0, 40.0)]
+PASS: Layer/one-way policy matches masonry versus steps: (2340.0, 1200.0)
+PASS: Existing optional log registered to its lower alcove
+PASS: Base-speed live landing room 14: (300.0, 1300.0) -> (520.0, 1220.0); end=(612.5016, 1059.934)
+PASS: Base-speed live landing room 14: (520.0, 1220.0) -> (750.0, 1110.0); end=(821.834, 1019.934)
+PASS: Base-speed live landing room 14: (750.0, 1110.0) -> (1030.0, 1110.0); end=(1045.233, 864.9337)
+PASS: Base-speed live landing room 14: (1030.0, 1110.0) -> (1200.0, 1220.0); end=(1293.501, 1219.933)
+PASS: Base-speed live landing room 14: (1200.0, 1220.0) -> (1420.0, 1120.0); end=(1526.501, 979.9403)
+PASS: Base-speed live landing room 14: (1420.0, 1120.0) -> (1480.0, 980.0); end=(1600.0, 979.9894)
+PASS: Base-speed live landing room 14: (1480.0, 980.0) -> (1590.0, 830.0); end=(1750.501, 829.9337)
+PASS: Base-speed live landing room 14: (350.0, 1300.0) -> (240.0, 1200.0); end=(360.3871, 1099.934)
+PASS: Base-speed live landing room 14: (240.0, 1200.0) -> (0.0, 1100.0); end=(300.0, 1099.986)
+PASS: Base-speed live landing room 14: (2440.0, 1300.0) -> (2340.0, 1200.0); end=(2470.0, 1199.987)
+PASS: Base-speed live landing room 14: (2340.0, 1200.0) -> (2200.0, 1040.0); end=(2341.948, 1039.934)
+PASS: Base-speed live landing room 14: (2200.0, 1040.0) -> (2280.0, 930.0); end=(2410.0, 829.9744)
+PASS: Base-speed live landing room 14: (2280.0, 930.0) -> (1900.0, 830.0); end=(2252.28, 829.9337)
+PASS: Base-speed live landing room 14: (1780.0, 1220.0) -> (2000.0, 1120.0); end=(2095.721, 1119.933)
+PASS: Base-speed live landing room 14: (2000.0, 1120.0) -> (2200.0, 1040.0); end=(2351.501, 929.9331)
+PASS: Foundation is grounded at actual floor: (520.0, 1220.0)
+PASS: Foundation is grounded at actual floor: (750.0, 1110.0)
+PASS: Foundation is grounded at actual floor: (1030.0, 1110.0)
+PASS: Foundation is grounded at actual floor: (1200.0, 1220.0)
+PASS: Foundation is grounded at actual floor: (1780.0, 1220.0)
+PASS: Foundation is grounded at actual floor: (2000.0, 1120.0)
+PASS: New location collects the existing optional log flag
+PASS: Log does not award mandatory progression or open gates
+PASS: Lower route cannot bypass locked Terrace/Spire progression
+PASS: Historical structure14 fixture remains free and grounded
+PASS: Old save feet receive capsule-clear staging: (610.0, 1298.0) -> (610.0, 1218.0)
+PASS: Old save feet receive capsule-clear staging: (810.0, 1298.0) -> (810.0, 1018.0)
+PASS: Old save feet receive capsule-clear staging: (1090.0, 1298.0) -> (1090.0, 1108.0)
+PASS: Old save feet receive capsule-clear staging: (1300.0, 1298.0) -> (1300.0, 1218.0)
+PASS: Old save feet receive capsule-clear staging: (1880.0, 1298.0) -> (1880.0, 1218.0)
+PASS: Old save feet receive capsule-clear staging: (2090.0, 1298.0) -> (2090.0, 1118.0)
+PASS: Unobstructed historical Bellroof save stays exact
+PASS: Version8 Bellroof save with old lower-floor feet writes
+PASS: Reload/respawn stages old feet and preserves earned ability/lore
+PASS: Uncollected old save can discover relocated log
+PASS: Other-room checkpoint coordinates stay exact
+INTENTIONAL SPACE: 0 failure(s)

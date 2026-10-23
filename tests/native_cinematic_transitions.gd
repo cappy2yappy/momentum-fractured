@@ -1,5 +1,7 @@
 extends "res://tests/cinematic_transitions.gd"
 var output="res://build/tr05/native"
+func automation_hud():
+	load("res://tests/fixtures/native_automation_hud.gd").install(w)
 func key(code,pressed):
 	var event=InputEventKey.new();event.physical_keycode=code;event.keycode=code;event.pressed=pressed
 	Input.parse_input_event(event);Input.flush_buffered_events()
@@ -9,14 +11,28 @@ func shot(name):
 	# TR-08 reviewed change: a headless display never posts a drawn frame, so the
 	# capture is skipped there (checks still run); rendered runs capture as before.
 	if DisplayServer.get_name()=="headless": await process_frame;return
-	await process_frame;await RenderingServer.frame_post_draw
-	root.get_texture().get_image().save_png(output+"/"+name+".png")
+	await process_frame
+	# A visible native window can stop drawing in the background. Connect before
+	# forcing one real GPU draw; never wait indefinitely for an incidental frame.
+	var drawn={"done":false}
+	var mark=func(): drawn.done=true
+	RenderingServer.frame_post_draw.connect(mark,CONNECT_ONE_SHOT)
+	RenderingServer.force_draw(false)
+	for tick in 120:
+		if drawn.done: break
+		await process_frame
+	if not drawn.done:
+		RenderingServer.frame_post_draw.disconnect(mark)
+		check(false,"Native capture %s received a rendered frame"%name)
+		return
+	var image=root.get_texture().get_image()
+	check(not image.is_empty() and image.save_png(output+"/"+name+".png")==OK,"Native capture %s saved rendered pixels"%name)
 func live():
 	w.set_physics_process(true);w.player.set_physics_process(true)
 	for enemy in w.enemies: enemy.set_physics_process(false)
 func run():
 	await process_frame
-	w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w;freeze();seed_fixture()
+	w=load("res://scenes/main.tscn").instantiate();root.add_child(w);current_scene=w;automation_hud();freeze();seed_fixture()
 	DirAccess.make_dir_recursive_absolute(output)
 	print("TR05_NATIVE GPU=",RenderingServer.get_video_adapter_name()," driver=",RenderingServer.get_current_rendering_driver_name()," viewport=",root.size)
 	for running in [false,true]:

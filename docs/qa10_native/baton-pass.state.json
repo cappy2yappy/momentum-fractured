@@ -1,0 +1,8 @@
+{
+  "state": "handed-off",
+  "last_move": "baton-pass",
+  "last_agent": "Codex independent QA",
+  "next_agent": "PM/reviewer",
+  "updated_at": "2026-10-23",
+  "summary": "Native pause/capture harness mechanisms reproduced on both pinned games; test-only correction verified; draft PR review and Windows follow-up remain."
+}

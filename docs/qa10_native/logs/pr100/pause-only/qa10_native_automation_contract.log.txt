@@ -1,0 +1,26 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+QA10_EVENT {"frame":0,"notification":1005}
+QA10_EVENT {"frame":0,"notification":2017}
+PASS: New fixture starts with isolated automation HUD and unpaused tree
+PASS: Automation retains exact current production HUD body with only notification callback renamed
+QA10_STATE {"action_left":true,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":1,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"","key_events_seen":6,"paused":false,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":1,"player_age":0.0,"player_can_process":true,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"world_can_process":true,"world_id":49358571006,"world_physics":true,"world_process_mode":0}
+QA10_EVENT {"frame":7,"notification":1004}
+QA10_EVENT {"frame":7,"notification":2016}
+QA10_STATE {"action_left":true,"action_right":false,"armed":{"0":true},"cooldown":0.0,"floor":true,"frame":8,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"","key_events_seen":6,"paused":false,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":8,"player_age":0.116666666666667,"player_can_process":true,"player_physics":true,"player_process_mode":0,"position":[316.777435302734,1159.93383789062],"requests":0,"room":13,"transition":0.0,"velocity":[-233.33332824707,0.0],"window_focus":true,"world_can_process":true,"world_id":49358571006,"world_physics":true,"world_process_mode":0}
+PASS: Incidental focus notification leaves real-key player physics running
+PASS: Live fixture establishes support and arms doorway
+QA10_STATE {"action_left":true,"action_right":false,"armed":{"0":true},"cooldown":0.0,"floor":true,"frame":13,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":true,"hud_script":"","key_events_seen":6,"paused":true,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":13,"player_age":0.183333333333333,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[294.110778808594,1159.93383789062],"requests":0,"room":13,"transition":0.0,"velocity":[-400.0,0.0],"window_focus":true,"world_can_process":false,"world_id":49358571006,"world_physics":true,"world_process_mode":0}
+PASS: Deliberate focus test still pauses through exact production handler
+PASS: Incidental focus cannot clear a deliberate pause
+QA10_STATE {"action_left":true,"action_right":false,"armed":{"0":true},"cooldown":0.0,"floor":true,"frame":25,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"","key_events_seen":7,"paused":false,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":25,"player_age":0.2,"player_can_process":true,"player_physics":true,"player_process_mode":0,"position":[287.444122314453,1159.93383789062],"requests":0,"room":13,"transition":0.0,"velocity":[-400.0,0.0],"window_focus":true,"world_can_process":true,"world_id":49358571006,"world_physics":true,"world_process_mode":0}
+PASS: Existing Esc input resumes deliberate focus pause
+PASS: Incidental focus preserves deliberate map pause and HUD state
+QA10_STATE {"action_left":false,"action_right":false,"armed":{"0":true},"cooldown":0.0,"floor":true,"frame":27,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":true,"hud_pause":false,"hud_script":"","key_events_seen":13,"paused":true,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":27,"player_age":0.216666666666667,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[280.777465820312,1159.93383789062],"requests":0,"room":13,"transition":0.0,"velocity":[-400.0,0.0],"window_focus":true,"world_can_process":false,"world_id":49358571006,"world_physics":true,"world_process_mode":0}
+HARNESS: clearing inherited pause at new-world boundary
+PASS: New-world boundary clears only discarded fixture pause state
+PASS: Unchanged production HUD still auto-pauses normal gameplay
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":29,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"res://scripts/hud.gd","key_events_seen":13,"paused":false,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":29,"player_age":0.0,"player_can_process":true,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":true,"world_can_process":true,"world_id":62176364274,"world_physics":true,"world_process_mode":0}
+PASS: Production HUD resumes through its normal Esc action
+QA10 AUTOMATION: 11 checks, 0 failure(s)

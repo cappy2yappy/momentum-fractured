@@ -1,0 +1,26 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 Metal - 91.7 - Compatibility - Using Device: Apple - Apple M4
+
+QA10_STATE {"action_left":true,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":1,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":true,"hud_script":"res://scripts/hud.gd","key_events_seen":6,"paused":true,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":1,"player_age":0.0,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"world_can_process":false,"world_id":49408902657,"world_physics":true,"world_process_mode":0}
+PASS: Production focus loss pauses the tree and opens pause HUD
+PASS: Enabled player physics cannot process while tree is paused
+PASS: Physical key, action, and player held input all remain active
+PASS: Paused fixture matches stationary unsupported Canal signature
+PASS: Paused world never arms the doorway
+HARNESS: focus lost; continuing automated key/physics run
+PASS: Existing derived notification handler still invokes production base pause
+QA10_STATE {"action_left":true,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":14,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"res://scripts/hud.gd","key_events_seen":12,"paused":true,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":14,"player_age":0.0,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"world_can_process":false,"world_id":60884518528,"world_physics":true,"world_process_mode":0}
+QA10_EVENT {"frame":14,"notification":1004}
+QA10_EVENT {"frame":14,"notification":2016}
+QA10_STATE {"action_left":true,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":15,"held_left":true,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":false,"hud_script":"res://scripts/hud.gd","key_events_seen":12,"paused":true,"pending_room":-1,"phase":"","physical_a":true,"physical_d":false,"physics_frame":15,"player_age":0.0,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":true,"world_can_process":false,"world_id":60884518528,"world_physics":true,"world_process_mode":0}
+PASS: Replacing the world inherits paused tree with a fresh closed pause HUD
+PASS: Replacement fixture also never receives player physics
+QA10_EVENT {"frame":32,"notification":1005}
+QA10_EVENT {"frame":32,"notification":2017}
+HARNESS: focus lost; continuing automated key/physics run
+QA10_STATE {"action_left":false,"action_right":false,"armed":{},"cooldown":0.0,"floor":false,"frame":33,"held_left":false,"held_right":false,"hud_loadout":false,"hud_map":false,"hud_pause":true,"hud_script":"res://tests/fixtures/transition_test_hud.gd","key_events_seen":12,"paused":true,"pending_room":-1,"phase":"","physical_a":false,"physical_d":false,"physics_frame":33,"player_age":0.0,"player_can_process":false,"player_physics":true,"player_process_mode":0,"position":[330.0,1158.0],"requests":0,"room":13,"transition":0.0,"velocity":[0.0,0.0],"window_focus":false,"world_can_process":false,"world_id":60884518528,"world_physics":true,"world_process_mode":0}
+PASS: Installing the existing automation HUD does not clear inherited pause
+FAIL: First Esc opens the new HUD and leaves inherited pause in place
+FAIL: Second Esc restores actual player physics
+FAIL: Same held input moves, establishes floor support, and arms the doorway after resume
+QA10 LIFECYCLE: 12 checks, 3 failure(s)
