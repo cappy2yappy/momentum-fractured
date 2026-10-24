@@ -1,0 +1,553 @@
+{
+  "status": "PASS",
+  "executed": [
+    {
+      "check": "embedded HTML model equals editable BOARD.json",
+      "pass": true
+    },
+    {
+      "check": "eight unique fixed card IDs",
+      "pass": true
+    },
+    {
+      "check": "continuous 0-90 pacing windows",
+      "pass": true
+    },
+    {
+      "check": "P01 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P01 four layers",
+      "pass": true
+    },
+    {
+      "check": "P02 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P02 four layers",
+      "pass": true
+    },
+    {
+      "check": "P03 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P03 four layers",
+      "pass": true
+    },
+    {
+      "check": "P04 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P04 four layers",
+      "pass": true
+    },
+    {
+      "check": "P05 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P05 four layers",
+      "pass": true
+    },
+    {
+      "check": "P06 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P06 four layers",
+      "pass": true
+    },
+    {
+      "check": "P07 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P07 four layers",
+      "pass": true
+    },
+    {
+      "check": "P08 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P08 four layers",
+      "pass": true
+    },
+    {
+      "check": "21 exact room IDs",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R0-R1",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R0-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R1-R0",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R1-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R1",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R15",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R4",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R4-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R4-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R4",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R6",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R6-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R6-R7",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R7-R6",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R7-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R7",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R12",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R10",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R10-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R10-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R10",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R12",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R19",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R12-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R12-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R0",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R15-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R15-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R15",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R19",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R19",
+      "pass": true
+    },
+    {
+      "check": "29 links / 58 directed endpoints",
+      "pass": true
+    },
+    {
+      "check": "R0 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R1 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R2 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R3 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R4 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R5 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R6 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R7 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R8 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R9 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R10 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R11 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R12 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R13 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R14 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R15 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R16 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R17 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R18 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R19 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R20 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "exact approved opening",
+      "pass": true
+    },
+    {
+      "check": "exact approved objective",
+      "pass": true
+    },
+    {
+      "check": "exact Rest Station label",
+      "pass": true
+    },
+    {
+      "check": "verbatim inherited decision register",
+      "pass": true
+    },
+    {
+      "check": "retained D1",
+      "pass": true
+    },
+    {
+      "check": "retained D2",
+      "pass": true
+    },
+    {
+      "check": "retained D3",
+      "pass": true
+    },
+    {
+      "check": "retained D4",
+      "pass": true
+    },
+    {
+      "check": "retained D5",
+      "pass": true
+    },
+    {
+      "check": "retained D6a",
+      "pass": true
+    },
+    {
+      "check": "retained D6b",
+      "pass": true
+    },
+    {
+      "check": "retained D6c",
+      "pass": true
+    },
+    {
+      "check": "retained D6d",
+      "pass": true
+    },
+    {
+      "check": "retained D7",
+      "pass": true
+    },
+    {
+      "check": "retained D8",
+      "pass": true
+    },
+    {
+      "check": "retained D9",
+      "pass": true
+    },
+    {
+      "check": "retained D10",
+      "pass": true
+    },
+    {
+      "check": "retained D11",
+      "pass": true
+    },
+    {
+      "check": "retained D12",
+      "pass": true
+    },
+    {
+      "check": "retained D13",
+      "pass": true
+    },
+    {
+      "check": "retained D14",
+      "pass": true
+    },
+    {
+      "check": "no external page dependencies",
+      "pass": true
+    },
+    {
+      "check": "no duplicate static HTML IDs",
+      "pass": true
+    },
+    {
+      "check": "no page network or persistence calls",
+      "pass": true
+    },
+    {
+      "check": "no page injected HTML",
+      "pass": true
+    },
+    {
+      "check": "native keyboard controls and live status",
+      "pass": true
+    },
+    {
+      "check": "no autoplay animation",
+      "pass": true
+    },
+    {
+      "check": "reduced motion media support",
+      "pass": true
+    },
+    {
+      "check": "local Markdown links resolve",
+      "pass": true
+    },
+    {
+      "check": "Node JavaScript syntax",
+      "pass": true
+    },
+    {
+      "check": "DOM-model render/import/export/reset",
+      "pass": true
+    }
+  ],
+  "count": 131,
+  "scope": "Structural/content and JavaScript model only",
+  "not_executed": [
+    "native browser rendering/visual QA",
+    "screen-reader/accessibility audit",
+    "Godot/runtime",
+    "Windows/macOS playtest",
+    "FPS",
+    "controller/save/transition QA",
+    "actual artwork/animation review"
+  ],
+  "inherited_claims": "ST05/WD/source evidence was read; their runtime/test claims were not rerun.",
+  "model_output": "PASS: render 8 cards; locks reject six invalid imports; text-only content; export/reset handlers",
+  "sha256": {
+    "BOARD.json": "442906f3c4017d6cd60c8eba58fd7a7182ddd94de66ce26714984af8174d66ac",
+    "PM_HANDOFF.md": "414e2806b324c83f174efb2dc868991e4fcbe78a5727a5368c655825370377f9",
+    "README.md": "ae7b0fb700b68dfc9c5da027f8dd6412d52035a6d3b8fb27b868eca00c74ea87",
+    "REVIEW.html": "5c64ec724926da2ddbfc02fa34b79c1724e28527dcbe3aabaee4654e2484d72c",
+    "ROOM_VISUAL_PROGRESSION.md": "1480854064522f757cf7936edc7bc4421794a73464d6f081bf03335dd99f59f8",
+    "SOURCES_AND_DECISIONS.md": "82f00215fc56013a19072efecccceaa856a8f81269e28b982471e07638a1aac7",
+    "STORYBOARD_CARDS.md": "85e366f3bafcdb8677ee5c3594e54d26782c3dc65f66ccce8b7e017da3f8d3f1",
+    "TIMELINE_AND_ABILITIES.md": "ae95a2d5e090a7277c4a7341217cf4ced609b64dc008ba9489dac6bfd94b5439",
+    "validate.py": "a9058f5899c905ce40a0e994cca07ca42064c4effd9d5a43f4b475a1aaa5fcdc"
+  }
+}
