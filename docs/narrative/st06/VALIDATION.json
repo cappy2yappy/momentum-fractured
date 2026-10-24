@@ -1,0 +1,681 @@
+{
+  "status": "PASS",
+  "executed": [
+    {
+      "check": "embedded HTML model equals editable BOARD.json",
+      "pass": true
+    },
+    {
+      "check": "eight unique fixed card IDs",
+      "pass": true
+    },
+    {
+      "check": "continuous relative 0-90 candidate-study windows (not boot)",
+      "pass": true
+    },
+    {
+      "check": "schema v2 rejects superseded opening-board imports",
+      "pass": true
+    },
+    {
+      "check": "confirmed A-B-C-D experience order",
+      "pass": true
+    },
+    {
+      "check": "flashback trigger rooms and conditions remain unassigned",
+      "pass": true
+    },
+    {
+      "check": "chronology distinct from experience order",
+      "pass": true
+    },
+    {
+      "check": "all eight panels remain unscheduled candidates",
+      "pass": true
+    },
+    {
+      "check": "P01 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P01 four layers",
+      "pass": true
+    },
+    {
+      "check": "P02 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P02 four layers",
+      "pass": true
+    },
+    {
+      "check": "P03 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P03 four layers",
+      "pass": true
+    },
+    {
+      "check": "P04 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P04 four layers",
+      "pass": true
+    },
+    {
+      "check": "P05 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P05 four layers",
+      "pass": true
+    },
+    {
+      "check": "P06 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P06 four layers",
+      "pass": true
+    },
+    {
+      "check": "P07 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P07 four layers",
+      "pass": true
+    },
+    {
+      "check": "P08 complete review fields",
+      "pass": true
+    },
+    {
+      "check": "P08 four layers",
+      "pass": true
+    },
+    {
+      "check": "21 exact room IDs",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R0-R1",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R0-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R1-R0",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R1-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R1",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R2-R15",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R4",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R3-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R4-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R4-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R4",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R6",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R5-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R6-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R6-R7",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R7-R6",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R7-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R7",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R12",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R8-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R3",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R10",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R9-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R10-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R10-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R10",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R12",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R11-R19",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R12-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R12-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R0",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R13-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R9",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R14-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R15-R2",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R15-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R15",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R16-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R5",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R14",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R17-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R8",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R16",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R18-R19",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R11",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R18",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R19-R20",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R13",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R17",
+      "pass": true
+    },
+    {
+      "check": "reciprocal R20-R19",
+      "pass": true
+    },
+    {
+      "check": "29 links / 58 directed endpoints",
+      "pass": true
+    },
+    {
+      "check": "R0 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R1 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R2 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R3 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R4 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R5 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R6 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R7 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R8 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R9 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R10 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R11 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R12 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R13 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R14 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R15 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R16 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R17 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R18 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R19 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "R20 visual overlay complete",
+      "pass": true
+    },
+    {
+      "check": "exact approved opening",
+      "pass": true
+    },
+    {
+      "check": "exact approved objective",
+      "pass": true
+    },
+    {
+      "check": "exact Rest Station label",
+      "pass": true
+    },
+    {
+      "check": "verbatim inherited decision register",
+      "pass": true
+    },
+    {
+      "check": "retained D1",
+      "pass": true
+    },
+    {
+      "check": "retained D2",
+      "pass": true
+    },
+    {
+      "check": "retained D3",
+      "pass": true
+    },
+    {
+      "check": "retained D4",
+      "pass": true
+    },
+    {
+      "check": "retained D5",
+      "pass": true
+    },
+    {
+      "check": "retained D6a",
+      "pass": true
+    },
+    {
+      "check": "retained D6b",
+      "pass": true
+    },
+    {
+      "check": "retained D6c",
+      "pass": true
+    },
+    {
+      "check": "retained D6d",
+      "pass": true
+    },
+    {
+      "check": "retained D7",
+      "pass": true
+    },
+    {
+      "check": "retained D8",
+      "pass": true
+    },
+    {
+      "check": "retained D9",
+      "pass": true
+    },
+    {
+      "check": "retained D10",
+      "pass": true
+    },
+    {
+      "check": "retained D11",
+      "pass": true
+    },
+    {
+      "check": "retained D12",
+      "pass": true
+    },
+    {
+      "check": "retained D13",
+      "pass": true
+    },
+    {
+      "check": "retained D14",
+      "pass": true
+    },
+    {
+      "check": "no external page dependencies",
+      "pass": true
+    },
+    {
+      "check": "no duplicate static HTML IDs",
+      "pass": true
+    },
+    {
+      "check": "no page network or persistence calls",
+      "pass": true
+    },
+    {
+      "check": "no page injected HTML",
+      "pass": true
+    },
+    {
+      "check": "native keyboard controls and live status",
+      "pass": true
+    },
+    {
+      "check": "no autoplay animation",
+      "pass": true
+    },
+    {
+      "check": "reduced motion media support",
+      "pass": true
+    },
+    {
+      "check": "local Markdown links resolve",
+      "pass": true
+    },
+    {
+      "check": "V8 JavaScript syntax (Node launcher unavailable)",
+      "pass": true
+    },
+    {
+      "check": "DOM-model render/import/export/reset",
+      "pass": true
+    },
+    {
+      "check": "model rejects changed approved copy",
+      "pass": true
+    },
+    {
+      "check": "model rejects missing candidate",
+      "pass": true
+    },
+    {
+      "check": "model rejects changed candidate ID",
+      "pass": true
+    },
+    {
+      "check": "model rejects changed graph",
+      "pass": true
+    },
+    {
+      "check": "model rejects approval mark",
+      "pass": true
+    },
+    {
+      "check": "model rejects non-text pose",
+      "pass": true
+    },
+    {
+      "check": "model rejects old v1 opening board",
+      "pass": true
+    },
+    {
+      "check": "model rejects invented trigger room",
+      "pass": true
+    },
+    {
+      "check": "model rejects reordered experience",
+      "pass": true
+    },
+    {
+      "check": "model rejects non-text experience",
+      "pass": true
+    },
+    {
+      "check": "model rejects chronology reorder",
+      "pass": true
+    },
+    {
+      "check": "model rejects new-game candidate placement",
+      "pass": true
+    },
+    {
+      "check": "model rejects boot timeline",
+      "pass": true
+    },
+    {
+      "check": "model untrusted notes stay text",
+      "pass": true
+    },
+    {
+      "check": "model exports candidate and experience edits",
+      "pass": true
+    },
+    {
+      "check": "model imports review file",
+      "pass": true
+    },
+    {
+      "check": "model import handler rejects v1 without replacing edits",
+      "pass": true
+    },
+    {
+      "check": "model reset restores revised initial data",
+      "pass": true
+    },
+    {
+      "check": "model print handler requests print",
+      "pass": true
+    },
+    {
+      "check": "candidate Markdown fields match JSON",
+      "pass": true
+    },
+    {
+      "check": "experience Markdown fields match JSON",
+      "pass": true
+    },
+    {
+      "check": "HTML explicitly separates experience, chronology and candidates",
+      "pass": true
+    }
+  ],
+  "count": 158,
+  "scope": "Structural/document/HTML/JSON and actual review JavaScript against a DOM model only",
+  "runner": "V8 fallback; equivalent existing assertions plus revision/import checks. Python/Node command and Python HTMLParser not executed.",
+  "not_executed": [
+    "Python/Node validate.py invocation",
+    "native browser rendering/visual QA",
+    "screen-reader/accessibility audit",
+    "real browser download/print",
+    "Godot/runtime",
+    "Windows/macOS playtest",
+    "FPS",
+    "controller/save/transition QA",
+    "actual artwork/animation review"
+  ],
+  "inherited_claims": "Prior ST06 131-check result and ST05/WD runtime claims were not copied as current results.",
+  "model_output": "PASS: four experience phases, four chronology entries, eight candidates; 13 invalid imports rejected; edit/export/import/reset/print handlers checked in model.",
+  "environment_limit": "Local exec rejected before launch: configured file:///workspace permission path is invalid on Windows.",
+  "source_parent": "9426c7d8086bc20745fd7301fa1f318c84d0b6d3",
+  "preservation_comparisons": [
+    {
+      "name": "21-room JSON overlay unchanged",
+      "pass": true
+    },
+    {
+      "name": "approved exact strings unchanged",
+      "pass": true
+    },
+    {
+      "name": "all eight IDs/titles, original relative offsets, art layers retained",
+      "pass": true
+    },
+    {
+      "name": "all existing room Markdown sections unchanged",
+      "pass": true
+    },
+    {
+      "name": "present ability specifications unchanged",
+      "pass": true
+    },
+    {
+      "name": "exact ST05 decision register retained",
+      "pass": true
+    }
+  ]
+}
