@@ -1,0 +1,689 @@
+{
+  "assertions": 48,
+  "audit": {
+    "R16_comparison_only": false,
+    "air_cells": 46,
+    "category_C_devices": 0,
+    "faces": 6,
+    "far_details": 4,
+    "foreground_objects": 7,
+    "four_layers": 4,
+    "integration_enabled": false,
+    "new_physics_nodes": 0,
+    "protected_counts": {
+      "door_approach": 2,
+      "door_label": 2,
+      "enemy_lane": 2,
+      "gate": 1,
+      "grapple": 3,
+      "pickup": 1,
+      "player": 1,
+      "room_title": 1,
+      "water_gap": 2
+    },
+    "recesses": 4,
+    "rejected_candidates": 4,
+    "reservations": [
+      {
+        "id": "door_approach",
+        "rect": [
+          -100.0,
+          1000.0,
+          440.0,
+          360.0
+        ]
+      },
+      {
+        "id": "door_label",
+        "rect": [
+          -60.0,
+          1030.0,
+          360.0,
+          330.0
+        ]
+      },
+      {
+        "id": "door_approach",
+        "rect": [
+          2220.0,
+          780.0,
+          440.0,
+          360.0
+        ]
+      },
+      {
+        "id": "door_label",
+        "rect": [
+          2260.0,
+          810.0,
+          360.0,
+          330.0
+        ]
+      },
+      {
+        "id": "grapple",
+        "rect": [
+          670.0,
+          610.0,
+          220.0,
+          220.0
+        ]
+      },
+      {
+        "id": "grapple",
+        "rect": [
+          1260.0,
+          500.0,
+          220.0,
+          220.0
+        ]
+      },
+      {
+        "id": "grapple",
+        "rect": [
+          1830.0,
+          540.0,
+          220.0,
+          220.0
+        ]
+      },
+      {
+        "id": "room_title",
+        "rect": [
+          940.0,
+          210.0,
+          720.0,
+          90.0
+        ]
+      },
+      {
+        "id": "gate",
+        "rect": [
+          1900.0,
+          740.0,
+          180.0,
+          410.0
+        ]
+      },
+      {
+        "id": "enemy_lane",
+        "rect": [
+          780.0,
+          820.0,
+          600.0,
+          250.0
+        ]
+      },
+      {
+        "id": "enemy_lane",
+        "rect": [
+          1360.0,
+          680.0,
+          600.0,
+          250.0
+        ]
+      },
+      {
+        "id": "pickup",
+        "rect": [
+          960.0,
+          880.0,
+          240.0,
+          200.0
+        ]
+      },
+      {
+        "id": "water_gap",
+        "rect": [
+          450.0,
+          1240.0,
+          550.0,
+          200.0
+        ]
+      },
+      {
+        "id": "water_gap",
+        "rect": [
+          1280.0,
+          1240.0,
+          770.0,
+          200.0
+        ]
+      },
+      {
+        "id": "player",
+        "rect": [
+          290.0,
+          920.0,
+          180.0,
+          230.0
+        ]
+      }
+    ],
+    "room": 4,
+    "surfaces": 7,
+    "violations": []
+  },
+  "base": "250afde28517fcc05984038ac9e1487114729b78",
+  "captures": [
+    {
+      "art_on": false,
+      "camera": [
+        1300.0,
+        720.0
+      ],
+      "file": "R4_overview_baseline.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "e51caeb6c61c7b637c2864b57d081c251a96b4a5a26af5a415c40bde3d408224",
+      "width": 1280,
+      "zoom": 0.469999998807907
+    },
+    {
+      "art_on": true,
+      "camera": [
+        1300.0,
+        720.0
+      ],
+      "file": "R4_overview_art.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "d710fc1edb86be1d8bc27dbc1350d4b163b32b57996cf6a44861a6fd2ea722ea",
+      "width": 1280,
+      "zoom": 0.469999998807907
+    },
+    {
+      "art_on": true,
+      "camera": [
+        1300.0,
+        720.0
+      ],
+      "file": "R4_overview_guides.png",
+      "guides": true,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "3ff81f7a6eb50e6469953d45fd085627633eab5bcb826d68da699191a05043af",
+      "width": 1280,
+      "zoom": 0.469999998807907
+    },
+    {
+      "art_on": false,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_native_baseline.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "c06f3b7c3ccf8a0a5a049f4d40e539d58fd681058ab4f58deb16cbb544deeb48",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_native_art.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "6c5a3c881d3bd3f8ee3716a4995b3d458e9677f871a5d064c9fb7cc31f01e3f9",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_native_guides.png",
+      "guides": true,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "20a360e99622b1b9d4ee8dfe7e82b5871d6d36fa3290ab6a0cc7ed2dbeb248c3",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": false,
+      "camera": [
+        1960.0,
+        1000.0
+      ],
+      "file": "R4_exit_baseline.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "4174844b80f556713c458d13960299309e944e5d29c8d5d146c03b504cf716d5",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        1960.0,
+        1000.0
+      ],
+      "file": "R4_exit_art.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "f104f5f2ac21c589967ea4ce5175f8391cd268904dc018101f4eef5d20ba0134",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        1960.0,
+        1000.0
+      ],
+      "file": "R4_exit_guides.png",
+      "guides": true,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "760ba558670880f9f8fe0d766931673e3e77f164187a5227d9334938665a9287",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_reduced_motion.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": true,
+      "sha256": "b5e2b4844311de108f7d3ed1dd4f3112e57933ac9e90c3b80fd67f204adf6f56",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_layer_1.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "reduced_motion": false,
+      "sha256": "0a421d3b41b9888ef1223d209a914d96b23ba5f9f892f173f7efb0b7b2e650ad",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_layer_2.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "reduced_motion": false,
+      "sha256": "452c62638a595d300c72e8d96f736a462e3bb55f44c8a61c89bc4236c140eb66",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_layer_3.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "reduced_motion": false,
+      "sha256": "3cb1a3a5d47931286cac36bff434234d5538a5d3565585ccd6785cbb9f5d41ed",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_layer_4.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "c9c1200152a9181e29d5a12b50569a7d614cb713c48d2dd95f921e3fa883d23b",
+      "width": 1280,
+      "zoom": 1.0
+    },
+    {
+      "art_on": true,
+      "camera": [
+        640.0,
+        1030.0
+      ],
+      "file": "R4_cosmetic_B.png",
+      "guides": false,
+      "height": 720,
+      "layers": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "reduced_motion": false,
+      "sha256": "95c1126de480fc50714f060c51e79bf6d45b5078e298b97517e84f8aa3162774",
+      "width": 1280,
+      "zoom": 1.0
+    }
+  ],
+  "decoded_frames": 185,
+  "engine": "4.6.1-stable (official)",
+  "failures": [],
+  "frozen_review": true,
+  "geometry": [
+    [
+      -40.0,
+      0.0,
+      40.0,
+      1440.0
+    ],
+    [
+      2600.0,
+      0.0,
+      40.0,
+      1440.0
+    ],
+    [
+      0.0,
+      1300.0,
+      450.0,
+      140.0
+    ],
+    [
+      1000.0,
+      1300.0,
+      280.0,
+      140.0
+    ],
+    [
+      2050.0,
+      1300.0,
+      550.0,
+      140.0
+    ],
+    [
+      300.0,
+      1110.0,
+      310.0,
+      40.0
+    ],
+    [
+      930.0,
+      1030.0,
+      270.0,
+      40.0
+    ],
+    [
+      1530.0,
+      890.0,
+      270.0,
+      40.0
+    ],
+    [
+      2130.0,
+      1080.0,
+      470.0,
+      40.0
+    ]
+  ],
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "initial_state": {
+    "checkpoint_position": "(220.0, 1298.0)",
+    "checkpoint_room": 0,
+    "completed": false,
+    "dash": false,
+    "double_jump": false,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        14,
+        17
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        17,
+        20
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        8
+      ],
+      [
+        16,
+        18
+      ],
+      [
+        18,
+        8
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        11
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        13
+      ]
+    ],
+    "flags": {},
+    "gates": {},
+    "kunai": {
+      "electric": false,
+      "fire": false,
+      "wind": false
+    },
+    "objective": "Defeat the Market sentinel and claim Windstep.",
+    "rooms": 21,
+    "save_path": "user://ENV12_disposable_only.json",
+    "tether": false
+  },
+  "native_traversal_tested": false,
+  "pass": true,
+  "performance": {
+    "art": {
+      "draw_calls_p95": 168.0,
+      "p50_ms": 6.94,
+      "p95_ms": 7.889,
+      "samples": 429
+    },
+    "baseline": {
+      "draw_calls_p95": 90.0,
+      "p50_ms": 6.925,
+      "p95_ms": 8.12,
+      "samples": 436
+    }
+  },
+  "room": 4,
+  "texture_bytes": 3795784,
+  "viewport": [
+    1280,
+    720
+  ]
+}

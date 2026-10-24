@@ -1,0 +1,7 @@
+.private/
+__pycache__/
+*.uid
+*.import
+*.png
+*.jpg
+*.zip

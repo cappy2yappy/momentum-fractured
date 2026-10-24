@@ -1,0 +1,11 @@
+{
+  "checks": 1850,
+  "failures": [],
+  "base_files_verified": 1631,
+  "recorded_native_assertions": 194,
+  "local_capture_pixels_verified": 61,
+  "known_base_gaps": [
+    "PR99 runtime predates the approved opening/objective and Foundry Rest Station copy. Runtime copy acceptance is NOT passed; source stays unchanged and gallery HUD is hidden."
+  ],
+  "note": "Native evidence checks do not rerun traversal, exports or ART11 alpha tests."
+}
