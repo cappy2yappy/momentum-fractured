@@ -1,0 +1,1537 @@
+{
+  "base": "250afde28517fcc05984038ac9e1487114729b78",
+  "integration_enabled": false,
+  "new_source_art": false,
+  "new_raster_derivatives": false,
+  "external_art_transfer": false,
+  "image_generation": false,
+  "darkcave_independent_rights": "UNRESOLVED",
+  "runtime_contract": {
+    "file": "tools/env12/source-contract.json",
+    "sha256": "c4abd3969c53c59b5a1c94b31ed51516b8dbc7c18cff420dbf02807d44693844",
+    "entries": 591
+  },
+  "inherited_manifests": [
+    {
+      "path": "docs/art11/derivative-lineage.json",
+      "sha256": "7a13546e7d051c9313a3ee8dce3650d0e23ac1dd430124757e3ef13fa2427e8a"
+    },
+    {
+      "path": "tools/art11/selections.json",
+      "sha256": "86aed29244f1537d80ad12d2552121d4eba856a63385aba0793513049c9a9dd4"
+    },
+    {
+      "path": "docs/asset01/license-status.json",
+      "sha256": "36b7303671886f21e4ab07ac0ac498bb9c2e4f9675ef643735d9fffd366674a6"
+    },
+    {
+      "path": "tools/art11/bank.gd",
+      "sha256": "426999aa2e7b04b24eb98a1d0f06a696306419742e94db512417877a73b02232"
+    },
+    {
+      "path": "tools/art11/presentation.gd",
+      "sha256": "a90c73986fde09162e69918d2a1a4e8a9768bc19e81fa95732c325a9a778308e"
+    }
+  ],
+  "rendered_asset_lineage": {
+    "hanging": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          29,
+          104
+        ]
+      ],
+      "canvas_size": [
+        33,
+        108
+      ],
+      "content_size": [
+        29,
+        104
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "hanging_000.png",
+          "sha256": "f39eb00a1655be1954372963f8fc3444205b0c3ae9c227da6eef9b1b08a36858"
+        }
+      ],
+      "pivot": [
+        16.5,
+        106
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 104,
+        "id": "hanging",
+        "production_approved": false,
+        "region": 0,
+        "role": "recessed_architecture",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - Hanging Plants.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - Hanging Plants.png",
+          "sha256": "599a44b0b11fbe75737809eb25f60fce212f6bdba899a244b420145053474738"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        266,
+        947
+      ]
+    },
+    "moss_surface": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          139,
+          40
+        ]
+      ],
+      "canvas_size": [
+        143,
+        44
+      ],
+      "content_size": [
+        139,
+        40
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "moss_surface_000.png",
+          "sha256": "c9dacad743a36c2f57a0ba10901c35ff0a86566e955e6df1196610686592cc8d"
+        }
+      ],
+      "pivot": [
+        71.5,
+        42
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 40,
+        "id": "moss_surface",
+        "production_approved": false,
+        "region": 5,
+        "role": "surface_inlay",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - FloatingPlatforms.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - FloatingPlatforms.png",
+          "sha256": "7d8c2990071b69205fb747a21b11a3237e49a3fd495f1cf025ba8d2e78f03dfe"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        1561,
+        450
+      ]
+    },
+    "column": {
+      "alpha_bounds": [
+        [
+          2,
+          2,
+          212,
+          480
+        ]
+      ],
+      "canvas_size": [
+        216,
+        484
+      ],
+      "content_size": [
+        212,
+        480
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "column_000.png",
+          "sha256": "b1b7d941d769d0108494d5456c59be9760093f50477c116f22ecf00985b97f45"
+        }
+      ],
+      "pivot": [
+        108,
+        482
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 480,
+        "id": "column",
+        "production_approved": false,
+        "region": 1,
+        "role": "recessed_architecture",
+        "sequence_id": "mossy-assets/Mossy Tileset/Mossy - BackgroundDecoration.png"
+      },
+      "source_hashes": [
+        {
+          "path": "Mossy Tileset/Mossy - BackgroundDecoration.png",
+          "sha256": "7695933529b6266f88c21c0a19c9224c0b3e19b687bbad77cab89f4f7bc70614"
+        }
+      ],
+      "union_crop": [
+        0,
+        0,
+        1036,
+        2346
+      ]
+    },
+    "grass": {
+      "alpha_bounds": [
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          4,
+          39,
+          36
+        ],
+        [
+          3,
+          4,
+          39,
+          36
+        ],
+        [
+          4,
+          3,
+          39,
+          37
+        ],
+        [
+          6,
+          2,
+          37,
+          38
+        ],
+        [
+          8,
+          2,
+          36,
+          38
+        ],
+        [
+          9,
+          2,
+          36,
+          38
+        ],
+        [
+          11,
+          2,
+          34,
+          38
+        ],
+        [
+          12,
+          2,
+          33,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          14,
+          2,
+          31,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          13,
+          2,
+          32,
+          38
+        ],
+        [
+          12,
+          2,
+          33,
+          38
+        ],
+        [
+          11,
+          2,
+          34,
+          38
+        ],
+        [
+          9,
+          2,
+          35,
+          38
+        ],
+        [
+          8,
+          2,
+          35,
+          38
+        ],
+        [
+          6,
+          2,
+          37,
+          38
+        ],
+        [
+          4,
+          3,
+          38,
+          37
+        ],
+        [
+          3,
+          4,
+          39,
+          36
+        ],
+        [
+          2,
+          4,
+          39,
+          36
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ],
+        [
+          2,
+          5,
+          39,
+          35
+        ]
+      ],
+      "canvas_size": [
+        47,
+        42
+      ],
+      "content_size": [
+        43,
+        38
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "grass_000.png",
+          "sha256": "d00eb2293e6df9a8209e9e6de2ef01fa9728a7361b34b114c2ded01ee640d23a"
+        },
+        {
+          "path": "grass_001.png",
+          "sha256": "78ee73628866fa9dee2ccfc86a4a293f43375e994e88d993e752dd98c20c8c35"
+        },
+        {
+          "path": "grass_002.png",
+          "sha256": "f5ff67a9f9f3ccdaee2e69a81500fc629c7ff6d75c18ff4e4dddc98e77964736"
+        },
+        {
+          "path": "grass_003.png",
+          "sha256": "bdf2b00ce12bc62b4183d25b034717a6a221796e372860300115c834026d762c"
+        },
+        {
+          "path": "grass_004.png",
+          "sha256": "d679e394e50f0bfc1924452a32db615143db8ad592c9278987f2654f13f16b3a"
+        },
+        {
+          "path": "grass_005.png",
+          "sha256": "5b3d80ce59c329f20eabfe40db12cd3bd69b40b4f9c07b46889eaf164975959d"
+        },
+        {
+          "path": "grass_006.png",
+          "sha256": "7664a593039972bd710a13b49e204559e65fc849aad6ff3eb011854a66f72bfe"
+        },
+        {
+          "path": "grass_007.png",
+          "sha256": "9030f682ba6917eb24ddae4175ef1dd97e90be5a26b476ad6c5fa28aa0be125e"
+        },
+        {
+          "path": "grass_008.png",
+          "sha256": "630c837a638d48ed7f005d39f6a41c05da5d89d6039da64160b34b4a31dc5e86"
+        },
+        {
+          "path": "grass_009.png",
+          "sha256": "cbe6c3b8c80daae6d7996d78e603da49266abb4d53c3bdb366e19cd25f528bb4"
+        },
+        {
+          "path": "grass_010.png",
+          "sha256": "516c0e586f640b4b05a9d92625841599d431bc5eeb32b38baf2360e18d142a24"
+        },
+        {
+          "path": "grass_011.png",
+          "sha256": "cc2340b7753585730c5411602b04c1567dd6fbd2cffe14a93db9331e87808fb4"
+        },
+        {
+          "path": "grass_012.png",
+          "sha256": "d2874d1f0af458a8ad76b725d9e1e8270ca3b70a7eb7c5a82498e7486a415629"
+        },
+        {
+          "path": "grass_013.png",
+          "sha256": "f896f5df3d0ae99cda537efa3ae3778cf8ee0335289601476859d112f5ff8f6f"
+        },
+        {
+          "path": "grass_014.png",
+          "sha256": "28024cf5c84bd33592a8232c8b6bd2222a091423a251419fd2edafd1829cc74c"
+        },
+        {
+          "path": "grass_015.png",
+          "sha256": "9b4e56a3db737c357c31f742daebde1e22a0888b9f40fcf2287ff2dcaf3f2f42"
+        },
+        {
+          "path": "grass_016.png",
+          "sha256": "7e4b6fd91e217bdb11be8b40b94f3cc00553e0430015d963e26df632faa69ae7"
+        },
+        {
+          "path": "grass_017.png",
+          "sha256": "553023ca8388427347932bf1e2fb8070471517f912ccaff1b85a7d7625c25a37"
+        },
+        {
+          "path": "grass_018.png",
+          "sha256": "406a7581a9dc9a7790ff4c8fc97ad8f2e9e0c7fae1a7d4cc9716ba2bf4e1c96d"
+        },
+        {
+          "path": "grass_019.png",
+          "sha256": "d273b98a798dc395d1aa2406bff051239e8f20709cc9311a7c1532e4b5319684"
+        },
+        {
+          "path": "grass_020.png",
+          "sha256": "f3e4abab2f3c098b55cefa0024587776b22173c5d55abe8c891a650cfa402191"
+        },
+        {
+          "path": "grass_021.png",
+          "sha256": "3a1cc0ba3d95a5da7a28d68f90ed1167ad66bbf1c76a579777f2a5ad70a99168"
+        },
+        {
+          "path": "grass_022.png",
+          "sha256": "9d423bc3d31afc2e7448df0cabbc6e885691030a6717a9218f58767f5287fd3d"
+        },
+        {
+          "path": "grass_023.png",
+          "sha256": "56b194de13206fb5edaf3a6c813cdf881bfd01e0c4629d28255d9f435aceba6e"
+        },
+        {
+          "path": "grass_024.png",
+          "sha256": "13bf576fe40697fc05ad7e9084c512559cbb738efbe6bc73072c3181baaa84ff"
+        },
+        {
+          "path": "grass_025.png",
+          "sha256": "37b4a0bc753a052d888260660cc1c1c857a02154d65a8c30e90d5220e04e20cf"
+        },
+        {
+          "path": "grass_026.png",
+          "sha256": "f7d5a54a7f825884ed4ac19c61108d825fe57fec0aed688413d74ffe2c0f437c"
+        },
+        {
+          "path": "grass_027.png",
+          "sha256": "82e4d246eff94a1674b2cf1093a2fb349512f2ab3071b6dc257535ed169b4088"
+        },
+        {
+          "path": "grass_028.png",
+          "sha256": "74e8149d6f1c350c95256e2c906df4d70418cc382d98c3e0223ef1e42a040eb6"
+        },
+        {
+          "path": "grass_029.png",
+          "sha256": "f227493aa6f31407eea6fbc0a00ce3fd261c43b004c22eb1dcb32ad7e8c4695e"
+        }
+      ],
+      "pivot": [
+        23.5,
+        40
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 38,
+        "id": "grass",
+        "production_approved": false,
+        "region": -1,
+        "role": "decorative_motion",
+        "sequence_id": "plantsanimated/Vegetation/Grass2"
+      },
+      "source_hashes": [
+        {
+          "path": "Vegetation/Grass2/Grass2_00000.png",
+          "sha256": "2ee06b657c54b3694754d3331b15c5a0e80a0f01e6eefd96c0196c5b27767ceb"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00001.png",
+          "sha256": "cbab70636ec71a5614a487a4aa2b0b3fd623119da131aa31a8202bc68322eb4d"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00002.png",
+          "sha256": "342ed2bed9c5a17a2a66f114810689230ac5893a72ed8da3825f3e678d28d49a"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00003.png",
+          "sha256": "6e624f06a0b6ec783807319daffc7939a0d39689c74f9bf50e6c0dc8b2ceea9c"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00004.png",
+          "sha256": "f3af3546ad77dcdfd34f0e7a7b72c636fc7fad88c030ac55d20c673e985de521"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00005.png",
+          "sha256": "6f5278989cd578a42295633f3cf36413dfc3c81e833d3fd9eba3047cdb2cb52d"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00006.png",
+          "sha256": "2bd07fe8f107493ca8e69a772ef8f21c1db2ef503491a5e86479ae568ddc736f"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00007.png",
+          "sha256": "c5338325145f97dee3fab4f96ecbdef8bce46d9719660ed73f2905fe98f13451"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00008.png",
+          "sha256": "828650442c0638370be00c4a895f2914c49b1c8bdf3f7d198545465c58020b3f"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00009.png",
+          "sha256": "b9de11fb1449b115e09c573faf3e1a4ef0858be1dfbb2f9d6232fdb439ce07f6"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00010.png",
+          "sha256": "171344b15ef51337a79cd4a436caecbf99b27e98b6123ce58e79ea7eea7f5204"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00011.png",
+          "sha256": "a6ee200ded2a7162d96fb90cb188431c87fbd30956c40ec54d32e6c5c769cda4"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00012.png",
+          "sha256": "8055c8a24aa0c8a35d0f452ab4c30b9e804df4357385d0336ec81eee35d711f9"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00013.png",
+          "sha256": "b5db25a007d2f1450c58db6ed8f5c27725330d8551da2d90bf2c7b4d68222071"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00014.png",
+          "sha256": "230c04b888417382080b6a88d918c167fdfe119ea39d7f19206d80f252c64e80"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00015.png",
+          "sha256": "862a31b7b778061f2cf810f555addde28e2ac89de65e9751c61815deaa888487"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00016.png",
+          "sha256": "3736ae9860940664778b55f7634edba6101a89e5d37c8e3d9fd5df629b2bdc49"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00017.png",
+          "sha256": "72b7a524a983fb74994efe0394ff340ae4ff114d2ca51b50470bc9461961039e"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00018.png",
+          "sha256": "cc4f4da2ae42afce0c2c87b34e7ea5485f7344b25552e407cf1cd6dd127b6286"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00019.png",
+          "sha256": "67ded21d9e44e38d1c1f50bd022c41e078cbe583fd4924a082c729fb71a90c13"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00020.png",
+          "sha256": "e55b032bc86eb888ad312fbebc2df1e2d872ca06a0a153fe08f497c5fbda13ca"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00021.png",
+          "sha256": "5d7b2f306fded5cfeec53e24c2d6d15decb1c82eeb6e62282061fc8276a6c060"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00022.png",
+          "sha256": "52ab3989f19391629764671d773eee626f5767d3889c5fe3caa4445e18d8eb33"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00023.png",
+          "sha256": "a54e925678c67838df15ab21ae7a18d83c82b4d508cf525b66a09a86bc390a3e"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00024.png",
+          "sha256": "eaff38ecf557613f29b471ca5e4810fbab2e872435ef4e442a7c6fa48aa13df9"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00025.png",
+          "sha256": "2847edce37c1bee82b1f892a7a40b716c727db9c732dbcd04cafeb5902782693"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00026.png",
+          "sha256": "7922a474e549e2806a5311013b65ed3658581fbcc03746fd77f865a7e17c458b"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00027.png",
+          "sha256": "ec3ccd8e8a81dd69cc3494382b6dea51505244365b5831ec00666bd758872a32"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00028.png",
+          "sha256": "137e29bb7c911bc684211fbaa7fafa00d63b1d5ea00e9443617dd05b35797c5b"
+        },
+        {
+          "path": "Vegetation/Grass2/Grass2_00029.png",
+          "sha256": "5023512e4d099632b6fec51caf4a11f56b06b8b652fa9bcfada8e9eac0dbb5e7"
+        }
+      ],
+      "union_crop": [
+        41,
+        46,
+        184,
+        163
+      ]
+    },
+    "flower": {
+      "alpha_bounds": [
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          4,
+          53,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          6,
+          55,
+          54
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          2,
+          5,
+          55,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          5,
+          54,
+          55
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          3,
+          4,
+          54,
+          56
+        ],
+        [
+          4,
+          4,
+          53,
+          56
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          3,
+          53,
+          57
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          4,
+          2,
+          53,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ],
+        [
+          5,
+          2,
+          52,
+          58
+        ]
+      ],
+      "canvas_size": [
+        59,
+        62
+      ],
+      "content_size": [
+        55,
+        58
+      ],
+      "fps": 12,
+      "frames": [
+        {
+          "path": "flower_000.png",
+          "sha256": "f76648209c74350456a63592c0ea62d02f3214a84d3290022e5e184345e48536"
+        },
+        {
+          "path": "flower_001.png",
+          "sha256": "ab5fb23ab4bff4e37e3088d412b550c1a035f4a2ea8b484c0ad388faf2f56a85"
+        },
+        {
+          "path": "flower_002.png",
+          "sha256": "227f7b4da491a243b4c52e63275af2871b60864bf8075762f72d883f18411d1c"
+        },
+        {
+          "path": "flower_003.png",
+          "sha256": "39e0137c9270766de740dbe30ab9fa1a32d6798bb0d0f790fbe3806c63d8247c"
+        },
+        {
+          "path": "flower_004.png",
+          "sha256": "1192de5cbcda6b5fbbe37c24643a8483c8ec4a9c8c1f7bb8c8b684268b0c00f4"
+        },
+        {
+          "path": "flower_005.png",
+          "sha256": "63ca1163fc1768784240d6382817dbb878d233a46bfc0a43258bb45560deed66"
+        },
+        {
+          "path": "flower_006.png",
+          "sha256": "a03ae5734cc1d2da6aa0f890dcfae9a8f04b12628453311890ab4a76cf07dc42"
+        },
+        {
+          "path": "flower_007.png",
+          "sha256": "44123aa303c8330663cd0a2556104b88427580edb11d5ae6703c563efe0f9418"
+        },
+        {
+          "path": "flower_008.png",
+          "sha256": "5d2eedccd518de6b92e2107cc6689a4a0e8bf829c379571158c8cd52542d09d2"
+        },
+        {
+          "path": "flower_009.png",
+          "sha256": "1820d0ded21d78f2d40e5e55cc3451ecb82f5acb9bbe06d3c3e3e51b192479af"
+        },
+        {
+          "path": "flower_010.png",
+          "sha256": "84e19fb77973f0b86606947bc52c6d195347db4f5737021574485703838cf381"
+        },
+        {
+          "path": "flower_011.png",
+          "sha256": "2eca99adb933152f122d81066acd6da7bb6525a4cda76773f1be76dffdfcbbc1"
+        },
+        {
+          "path": "flower_012.png",
+          "sha256": "da9f72f8b4a7fe8aa0b7808fa267f540cb1ca4b89e28d6117f28cb178ad84bb3"
+        },
+        {
+          "path": "flower_013.png",
+          "sha256": "505048d6eb854bb56ea80983971d8be6539dcc0520e919bb7dacb046347bdce2"
+        },
+        {
+          "path": "flower_014.png",
+          "sha256": "743dec299551d97da83dfeab37bfed83362a8938d88bac766759e15c06153002"
+        },
+        {
+          "path": "flower_015.png",
+          "sha256": "34ae1fb740d1e64fd86342e9d895cdb6626991eb140f7a670e434ed5f8d58c86"
+        },
+        {
+          "path": "flower_016.png",
+          "sha256": "adc8f1ad12be3e9678ca6b586ddeb253cf80a40e7c1d375019e36f3be3cfd7b1"
+        },
+        {
+          "path": "flower_017.png",
+          "sha256": "7a95ed7c3c9574d53859b15f06f96778a13d2c6972a419ce42a349c50216babf"
+        },
+        {
+          "path": "flower_018.png",
+          "sha256": "6d5027eb17fccfa3eede7d616e5dd62ef47c48c9cfde2b743d1a6f593406af44"
+        },
+        {
+          "path": "flower_019.png",
+          "sha256": "e5973b7a523da94be29deea797fb6dfc33bdc03dd26d2b276714c3d1176aa839"
+        },
+        {
+          "path": "flower_020.png",
+          "sha256": "d9b07b4aa86ea0a1517e28479ff45c7068bcc2ba7358c4b2448fad82362be985"
+        },
+        {
+          "path": "flower_021.png",
+          "sha256": "a4e12a01545552d0518be3f552f55170e5ab4916694b55723ef6357cbd33a080"
+        },
+        {
+          "path": "flower_022.png",
+          "sha256": "3d478561108c78f0d67005cca3fc8c7f0a81b74ce8eb625dc03fddb2a5d46112"
+        },
+        {
+          "path": "flower_023.png",
+          "sha256": "e8f72e6725f650c0e2a5531f501050fb992510f5557239dbc68205e84388bca6"
+        },
+        {
+          "path": "flower_024.png",
+          "sha256": "eb4ae875436db7ba48d3d3bc1d7f85a4ff37cd3b951bd220ae1fed2f5680904f"
+        },
+        {
+          "path": "flower_025.png",
+          "sha256": "642bfb15987db005da6d5b4af7f8c34e7f698c5460e2a4f5b4cd043401dc5944"
+        },
+        {
+          "path": "flower_026.png",
+          "sha256": "312da190ee40f41e3fa365fbe6712dd13060fc377490566fbaf1a8d8039e2248"
+        },
+        {
+          "path": "flower_027.png",
+          "sha256": "5996464c61928a2fbf76116252defefa9b04a893785287b4f9cb9fad8e9d9c5e"
+        },
+        {
+          "path": "flower_028.png",
+          "sha256": "b5912cd00ee11ecf123ff1dbff7b1b086ed529f6ef4551d58bf2dbeddfdaa9d7"
+        },
+        {
+          "path": "flower_029.png",
+          "sha256": "360ffe886cb1e327bf970cc35dcace489ea7df9177359cc30565028010fbf53d"
+        },
+        {
+          "path": "flower_030.png",
+          "sha256": "51b6acf604d686d59a187d426887c42e98fa13279825d06e70ab626388be0168"
+        },
+        {
+          "path": "flower_031.png",
+          "sha256": "360ffe886cb1e327bf970cc35dcace489ea7df9177359cc30565028010fbf53d"
+        },
+        {
+          "path": "flower_032.png",
+          "sha256": "b5912cd00ee11ecf123ff1dbff7b1b086ed529f6ef4551d58bf2dbeddfdaa9d7"
+        },
+        {
+          "path": "flower_033.png",
+          "sha256": "5996464c61928a2fbf76116252defefa9b04a893785287b4f9cb9fad8e9d9c5e"
+        },
+        {
+          "path": "flower_034.png",
+          "sha256": "312da190ee40f41e3fa365fbe6712dd13060fc377490566fbaf1a8d8039e2248"
+        },
+        {
+          "path": "flower_035.png",
+          "sha256": "642bfb15987db005da6d5b4af7f8c34e7f698c5460e2a4f5b4cd043401dc5944"
+        },
+        {
+          "path": "flower_036.png",
+          "sha256": "eb4ae875436db7ba48d3d3bc1d7f85a4ff37cd3b951bd220ae1fed2f5680904f"
+        },
+        {
+          "path": "flower_037.png",
+          "sha256": "e8f72e6725f650c0e2a5531f501050fb992510f5557239dbc68205e84388bca6"
+        },
+        {
+          "path": "flower_038.png",
+          "sha256": "3d478561108c78f0d67005cca3fc8c7f0a81b74ce8eb625dc03fddb2a5d46112"
+        },
+        {
+          "path": "flower_039.png",
+          "sha256": "a4e12a01545552d0518be3f552f55170e5ab4916694b55723ef6357cbd33a080"
+        },
+        {
+          "path": "flower_040.png",
+          "sha256": "d9b07b4aa86ea0a1517e28479ff45c7068bcc2ba7358c4b2448fad82362be985"
+        },
+        {
+          "path": "flower_041.png",
+          "sha256": "e5973b7a523da94be29deea797fb6dfc33bdc03dd26d2b276714c3d1176aa839"
+        },
+        {
+          "path": "flower_042.png",
+          "sha256": "6d5027eb17fccfa3eede7d616e5dd62ef47c48c9cfde2b743d1a6f593406af44"
+        },
+        {
+          "path": "flower_043.png",
+          "sha256": "7a95ed7c3c9574d53859b15f06f96778a13d2c6972a419ce42a349c50216babf"
+        },
+        {
+          "path": "flower_044.png",
+          "sha256": "adc8f1ad12be3e9678ca6b586ddeb253cf80a40e7c1d375019e36f3be3cfd7b1"
+        },
+        {
+          "path": "flower_045.png",
+          "sha256": "34ae1fb740d1e64fd86342e9d895cdb6626991eb140f7a670e434ed5f8d58c86"
+        },
+        {
+          "path": "flower_046.png",
+          "sha256": "743dec299551d97da83dfeab37bfed83362a8938d88bac766759e15c06153002"
+        },
+        {
+          "path": "flower_047.png",
+          "sha256": "505048d6eb854bb56ea80983971d8be6539dcc0520e919bb7dacb046347bdce2"
+        },
+        {
+          "path": "flower_048.png",
+          "sha256": "da9f72f8b4a7fe8aa0b7808fa267f540cb1ca4b89e28d6117f28cb178ad84bb3"
+        },
+        {
+          "path": "flower_049.png",
+          "sha256": "2eca99adb933152f122d81066acd6da7bb6525a4cda76773f1be76dffdfcbbc1"
+        },
+        {
+          "path": "flower_050.png",
+          "sha256": "84e19fb77973f0b86606947bc52c6d195347db4f5737021574485703838cf381"
+        },
+        {
+          "path": "flower_051.png",
+          "sha256": "1820d0ded21d78f2d40e5e55cc3451ecb82f5acb9bbe06d3c3e3e51b192479af"
+        },
+        {
+          "path": "flower_052.png",
+          "sha256": "5d2eedccd518de6b92e2107cc6689a4a0e8bf829c379571158c8cd52542d09d2"
+        },
+        {
+          "path": "flower_053.png",
+          "sha256": "44123aa303c8330663cd0a2556104b88427580edb11d5ae6703c563efe0f9418"
+        },
+        {
+          "path": "flower_054.png",
+          "sha256": "a03ae5734cc1d2da6aa0f890dcfae9a8f04b12628453311890ab4a76cf07dc42"
+        },
+        {
+          "path": "flower_055.png",
+          "sha256": "63ca1163fc1768784240d6382817dbb878d233a46bfc0a43258bb45560deed66"
+        },
+        {
+          "path": "flower_056.png",
+          "sha256": "1192de5cbcda6b5fbbe37c24643a8483c8ec4a9c8c1f7bb8c8b684268b0c00f4"
+        },
+        {
+          "path": "flower_057.png",
+          "sha256": "39e0137c9270766de740dbe30ab9fa1a32d6798bb0d0f790fbe3806c63d8247c"
+        },
+        {
+          "path": "flower_058.png",
+          "sha256": "227f7b4da491a243b4c52e63275af2871b60864bf8075762f72d883f18411d1c"
+        },
+        {
+          "path": "flower_059.png",
+          "sha256": "ab5fb23ab4bff4e37e3088d412b550c1a035f4a2ea8b484c0ad388faf2f56a85"
+        }
+      ],
+      "pivot": [
+        29.5,
+        60
+      ],
+      "production_approved": false,
+      "recipe": "fixed alpha union crop; fix_alpha_edges; Lanczos resize; 2px transparent gutter; fixed bottom-center pivot",
+      "selection": {
+        "fps": 12,
+        "height": 58,
+        "id": "flower",
+        "production_approved": false,
+        "region": -1,
+        "role": "decorative_motion",
+        "sequence_id": "plant-animations/Plant Animations/BlueFlower1"
+      },
+      "source_hashes": [
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00000.png",
+          "sha256": "329acabc38879e50f39e290046704d9bbf0036ea4db18c38d7b1cdc1567a2fc4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00001.png",
+          "sha256": "2321a0666916cac9be793bf99111062e0f90eccde345cb5f369db077f38f7da5"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00002.png",
+          "sha256": "03848f450044c93327e86a702fb632130b85cc648b51f97419b4c5db6aaf4916"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00003.png",
+          "sha256": "2ebcfc53b0b00bdbd2d7e2598f3ada8d8703226b25cccc6483a46fe288fc7a36"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00004.png",
+          "sha256": "fae6ea8a7e2c79474bb103a03ac550f03ea039d9a205c9ab42ff694daf4e5454"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00005.png",
+          "sha256": "9a3926bf5c68a67a7191c434f4617acd78384865cc7043069fad2bd4fafb8a4b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00006.png",
+          "sha256": "870e1344e6044223949078b4f9878e87534abaab3cbd4b3475170b76c4a38943"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00007.png",
+          "sha256": "2e632334a1d1c27badd2c24e569fbd34f713d88804d88cd7d8901c1e5063ada6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00008.png",
+          "sha256": "38d3327e9bb9c44a43572a9e733a81cce0eaaf8fb235fe5b15f2067662a3c948"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00009.png",
+          "sha256": "478dfc7959008a43f384cc97783e20b39940c914046c879411a523978775fa46"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00010.png",
+          "sha256": "1e60ad04def34f0bd30b2ad2653ab11700ea77d26497f34c17d8e365b4dde274"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00011.png",
+          "sha256": "2169dffa5e3d9df4fc114dfff5d9eaf98c154da1b6fec798c21c293ff6e43988"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00012.png",
+          "sha256": "613e8ea1c2260bb08bcc6e9740aace1c02ca572372269c2d8e1bcad0d21e875a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00013.png",
+          "sha256": "e0ca6fa8ebf7b8018331c10b05cbd31fb388a3b6209abfab7c2f7fd07aedf05b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00014.png",
+          "sha256": "e36398f95f426911ba213c33ef3b8d9e84dc1cc38e489b8ee89a29249f6936f4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00015.png",
+          "sha256": "baf7c1cf1481017ee04fb36ebae12474ab4a4d629d8775c86696facafc3b473d"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00016.png",
+          "sha256": "6ff11dbbdf74d0c68152aa8a3753857dbef69003c5874dce252dd7b1418a5a3a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00017.png",
+          "sha256": "e67ac82598c7392eb816d11cd45493df244e3d47f64d2e788136b5d37cf4f5c0"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00018.png",
+          "sha256": "fedc9b793c34c52cdb834d2f7147dc73dd81a2a4a4ec660465812f292de845d9"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00019.png",
+          "sha256": "afc556c7451ab307393a69d9a4d088dacb80787fe858db6923f99b470297ea98"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00020.png",
+          "sha256": "644a77fb3a4c31044f3c42f135bd4c09ad1c58ff39cd58f63dfcf9626a6dc1d4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00021.png",
+          "sha256": "61b9df05741979b8756fc0df1b793750e815e70c60cb8c1596fcc74453ad53f6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00022.png",
+          "sha256": "405417c138e9d7cd5e8dcba4f8f9fe1d2e9bb4be1cc418b4776e6a5472ecd794"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00023.png",
+          "sha256": "23e64fefc157138eec7022afe24b15ccbb3af82681d3f2c650d963bd7c2c4aa7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00024.png",
+          "sha256": "2d30cbfe925603e0d7776fd3933e80ceab912980a6248f4a25521b00560ece19"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00025.png",
+          "sha256": "390fc265dc0c8128e1b30a351de6862ac6e717aba7384d55eaf1d27bd9ff7f4e"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00026.png",
+          "sha256": "539829b738a84a9fa2cdab8475c2e8871aed0e4721e093d18a71540249f57346"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00027.png",
+          "sha256": "2509177b75772b82a21100e2cec24ff1593092310d1d3140a9f8631872b71c38"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00028.png",
+          "sha256": "66152bf0297bf8d6423b64ceb931bce62bee9a025e5edaab50f60cf186606211"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00029.png",
+          "sha256": "5ff969835c8b11635f75e19b282815352202c26b8c82f468e6d5236494d90ac7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00030.png",
+          "sha256": "82941bb54eb86fcf0e9013806e0950734e750ed8fced60b7b3815142e49a32b1"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00031.png",
+          "sha256": "5ff969835c8b11635f75e19b282815352202c26b8c82f468e6d5236494d90ac7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00032.png",
+          "sha256": "66152bf0297bf8d6423b64ceb931bce62bee9a025e5edaab50f60cf186606211"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00033.png",
+          "sha256": "2509177b75772b82a21100e2cec24ff1593092310d1d3140a9f8631872b71c38"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00034.png",
+          "sha256": "539829b738a84a9fa2cdab8475c2e8871aed0e4721e093d18a71540249f57346"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00035.png",
+          "sha256": "390fc265dc0c8128e1b30a351de6862ac6e717aba7384d55eaf1d27bd9ff7f4e"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00036.png",
+          "sha256": "2d30cbfe925603e0d7776fd3933e80ceab912980a6248f4a25521b00560ece19"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00037.png",
+          "sha256": "23e64fefc157138eec7022afe24b15ccbb3af82681d3f2c650d963bd7c2c4aa7"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00038.png",
+          "sha256": "405417c138e9d7cd5e8dcba4f8f9fe1d2e9bb4be1cc418b4776e6a5472ecd794"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00039.png",
+          "sha256": "61b9df05741979b8756fc0df1b793750e815e70c60cb8c1596fcc74453ad53f6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00040.png",
+          "sha256": "644a77fb3a4c31044f3c42f135bd4c09ad1c58ff39cd58f63dfcf9626a6dc1d4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00041.png",
+          "sha256": "afc556c7451ab307393a69d9a4d088dacb80787fe858db6923f99b470297ea98"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00042.png",
+          "sha256": "fedc9b793c34c52cdb834d2f7147dc73dd81a2a4a4ec660465812f292de845d9"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00043.png",
+          "sha256": "e67ac82598c7392eb816d11cd45493df244e3d47f64d2e788136b5d37cf4f5c0"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00044.png",
+          "sha256": "6ff11dbbdf74d0c68152aa8a3753857dbef69003c5874dce252dd7b1418a5a3a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00045.png",
+          "sha256": "baf7c1cf1481017ee04fb36ebae12474ab4a4d629d8775c86696facafc3b473d"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00046.png",
+          "sha256": "e36398f95f426911ba213c33ef3b8d9e84dc1cc38e489b8ee89a29249f6936f4"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00047.png",
+          "sha256": "e0ca6fa8ebf7b8018331c10b05cbd31fb388a3b6209abfab7c2f7fd07aedf05b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00048.png",
+          "sha256": "613e8ea1c2260bb08bcc6e9740aace1c02ca572372269c2d8e1bcad0d21e875a"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00049.png",
+          "sha256": "2169dffa5e3d9df4fc114dfff5d9eaf98c154da1b6fec798c21c293ff6e43988"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00050.png",
+          "sha256": "1e60ad04def34f0bd30b2ad2653ab11700ea77d26497f34c17d8e365b4dde274"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00051.png",
+          "sha256": "478dfc7959008a43f384cc97783e20b39940c914046c879411a523978775fa46"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00052.png",
+          "sha256": "38d3327e9bb9c44a43572a9e733a81cce0eaaf8fb235fe5b15f2067662a3c948"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00053.png",
+          "sha256": "2e632334a1d1c27badd2c24e569fbd34f713d88804d88cd7d8901c1e5063ada6"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00054.png",
+          "sha256": "870e1344e6044223949078b4f9878e87534abaab3cbd4b3475170b76c4a38943"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00055.png",
+          "sha256": "9a3926bf5c68a67a7191c434f4617acd78384865cc7043069fad2bd4fafb8a4b"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00056.png",
+          "sha256": "fae6ea8a7e2c79474bb103a03ac550f03ea039d9a205c9ab42ff694daf4e5454"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00057.png",
+          "sha256": "2ebcfc53b0b00bdbd2d7e2598f3ada8d8703226b25cccc6483a46fe288fc7a36"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00058.png",
+          "sha256": "03848f450044c93327e86a702fb632130b85cc648b51f97419b4c5db6aaf4916"
+        },
+        {
+          "path": "Plant Animations/BlueFlower1/BlueFlower_00059.png",
+          "sha256": "2321a0666916cac9be793bf99111062e0f90eccde345cb5f369db077f38f7da5"
+        }
+      ],
+      "union_crop": [
+        117,
+        107,
+        623,
+        652
+      ]
+    }
+  },
+  "private_reference_inventory": {
+    "art11_head": "4978d38457b43336cc440d4caf5033cb77539b23",
+    "status_sha256": "33ce093d4f4dc0ed190bd7b38adb0ea761fd1e960fea624d62404dcba36e3f3d",
+    "untracked_lines": 161,
+    "note": "Read-only reference guard captured before final native batch; no reference writes performed."
+  },
+  "capture_manifest": "docs/env12/capture-manifest.json"
+}
