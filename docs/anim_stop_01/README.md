@@ -37,12 +37,12 @@ The M key supplies a mirrored geometry inspection only. The source is right-faci
 
 ## Executed validation
 
-- Official Godot 4.6.1 Windows: **28 checks headless, 28 checks native OpenGL**, zero failures. See [headless log](headless.log), [native log](native.log), [results](contract_result.json).
+- Official Godot 4.6.1 Windows: **28 checks headless, 28 checks native OpenGL**, zero failures. See [headless log](headless.log.txt), [native log](native.log.txt), [results](contract_result.json).
 - The unchanged Studio validator accepts both native resources; private disposable-profile save/disk reload passes. Same native resource is reused at 2.05s and 6.25s in Studio's unchanged two-shot Director; reduced mode holds the final pose. Calibration is set only in the test instance for the calibrated case.
 - Planted-support sweeps sample 1.8–4.2s at 240 Hz, including between baked keys. Portable max x/y error: 0.003235/0.009192 px. Calibrated: 0.009644/0.022314 px. Boots remain level; far heel lands within 0.00022px by recovery. These are transform/support tests, not creator balance/anatomy approval.
-- **129 actual native draw samples over 4.506864s**, Engine.time_scale 1.0, max timeline/clock discrepancy 0.000823s. Video uses recorded wall-clock intervals; no movie mode or fixed-FPS acceleration. [Capture summary](capture_summary.json), [capture log](capture.log). Capture overhead and ~30Hz recording are not a 60fps game performance certification.
+- **129 actual native draw samples over 4.506864s**, Engine.time_scale 1.0, max timeline/clock discrepancy 0.000823s. Video uses recorded wall-clock intervals; no movie mode or fixed-FPS acceleration. [Capture summary](capture_summary.json), [capture log](capture.log.txt). Capture overhead and ~30Hz recording are not a 60fps game performance certification.
 - 28 native transparent phase captures plus two actual aligned overlays. No external services or art transfers.
-- [Approved baseline verifier](baseline.log): zero failures. [Preservation](preservation_result.json): all 14 protected initial-clone byte hashes unchanged; approved character PNGs also exactly match pinned Git blobs; no tracked changes outside reserved namespaces.
+- [Approved baseline verifier](baseline.log.txt): zero failures. [Preservation](preservation_result.json): all 14 protected initial-clone byte hashes unchanged; approved character PNGs also exactly match pinned Git blobs; no tracked changes outside reserved namespaces.
 
 The source-file Image load in the test emits an export warning; the test is a source/editor audit, not an export test. Initial editor import also emitted safe-save/cleanup diagnostics; subsequent generator, contract and native capture runs completed. No warning-free import, packaged export, macOS, hardware controller, campaign or full current-Studio certification is claimed. QA101 remains about old Studio `d227b038`, not this head.
 
