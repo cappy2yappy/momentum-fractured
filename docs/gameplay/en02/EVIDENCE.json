@@ -1,0 +1,107 @@
+{
+  "base_pr": 87,
+  "base_sha": "5172db6898f3efc35b74f3c134293049165b9bf7",
+  "godot": "4.6.1.stable.official.14d19694e",
+  "platform": "Windows OpenGL 3.3 NVIDIA RTX4070 Laptop driver591.44",
+  "tests": {
+    "en02_headless": {
+      "pass": 61,
+      "fail": 0
+    },
+    "en02_native": {
+      "pass": 61,
+      "fail": 0
+    },
+    "en01_regression": {
+      "pass": 52,
+      "fail": 0
+    },
+    "baseline_verifier_failures": 0,
+    "unchanged_pinned_tracked_files": 715
+  },
+  "capture": [
+    {
+      "mode": "skirmisher",
+      "wall_seconds": 14.029379,
+      "native_png_frames": 169,
+      "frame_ms_p50_with_readback": 6.974,
+      "frame_ms_p95_with_readback": 24.469,
+      "observed_states": [
+        "awakening",
+        "backstep",
+        "patrol",
+        "pursue",
+        "recover",
+        "strike",
+        "stunned",
+        "windup"
+      ],
+      "video_file": "private-capture/skirmisher-native.mp4",
+      "video_sha256": "1c91770296024f8373f89797711ece8132ed3975ad57fd0810ab106875de10e3",
+      "video_dimensions": [
+        1280,
+        720
+      ],
+      "video_duration_seconds": 14.08,
+      "retiming": "none; measured frame durations, MP4 timing quantization under 0.06 seconds total"
+    },
+    {
+      "mode": "slime",
+      "wall_seconds": 14.04084,
+      "native_png_frames": 169,
+      "frame_ms_p50_with_readback": 6.841,
+      "frame_ms_p95_with_readback": 40.263,
+      "observed_states": [
+        "awakening",
+        "landing",
+        "lunge",
+        "patrol",
+        "pursue",
+        "recover",
+        "stunned",
+        "windup"
+      ],
+      "video_file": "private-capture/slime-native.mp4",
+      "video_sha256": "57ecab217494f75d7a9060c6d46dd793a10e184542111bc2d2e1193f8798f870",
+      "video_dimensions": [
+        1280,
+        720
+      ],
+      "video_duration_seconds": 14.08,
+      "retiming": "none; measured frame durations, MP4 timing quantization under 0.06 seconds total"
+    }
+  ],
+  "performance_without_readback": {
+    "capture_enabled": false,
+    "frame_ms_p50": 6.919,
+    "frame_ms_p95": 8.252,
+    "mode": "skirmisher",
+    "note": "Native Windows OpenGL, scripted inputs. When capture_enabled, PNG readback overhead is included. Single-lab hardware measurement, not full-world certification.",
+    "render_draw_samples": 2029,
+    "wall_seconds": 14.006062
+  },
+  "actual_engine_process_cpu": {
+    "returncode": 0,
+    "process_wall_seconds": 15.437678699963726,
+    "process_cpu_seconds": 4.9375,
+    "average_logical_core_percent": 31.983435437165834,
+    "note": "Includes process startup. Wall/frame and CPU measurements are separate; not a GPU or full-world performance certification."
+  },
+  "source_sha256": {
+    "scripts/en02/demo.gd": "ffb8db1b7c6152b48ede7e12266914518c18a2a52d07415d48338ad092219bf8",
+    "scripts/en02/enemy.gd": "3b3b5ff234d3fb067a58b4611012da61b7ede201db087371a456a1b04f0d2fd2",
+    "scenes/en02/skirmisher.tscn": "7d97f7d0ca27590727683e380f7abe51fff9a5ece38de04862cc8e4cd7feca0e",
+    "scenes/en02/slime.tscn": "4a75c6c34eb87d5f7da306e33ac9a21fb4a72a416cc9d73eb06626654617807f",
+    "tests/en02/behavior.gd": "0e181156ae2e000efe1737e7bb2f9129f4d864baeba1afe92edcfd07666fc857",
+    "tests/en02/capture.gd": "cffbf48a7950a0cbaedbca9f49fa2e5d67b5ed840aa28ef2b458e4685b5a386d",
+    "tests/en02/encode_capture.py": "7c471fca6bac2a3d414873cfef1e4aef6759fb239fbaf6f16c0508e334b3196a",
+    "tests/en02/measure_native.py": "bfdbe3f6dff9e7dd05dd182d3d4093e22cfd865aab013c8520bfa08375e2ecba"
+  },
+  "limitations": [
+    "Scripted inputs, not human balance review",
+    "Native automation removes legacy HUD only in the test fixture; no OS-focus certification",
+    "Fixed-ground lunge only; no physical hop",
+    "No current INT01 composition or production placement certification",
+    "Private PNG/MP4 files are not uploaded"
+  ]
+}

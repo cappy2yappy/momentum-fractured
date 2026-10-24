@@ -1,0 +1,65 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS: skirmisher registered through managed encounter/world spawn
+PASS: skirmisher substitution isolated to lab factory
+PASS: skirmisher production HP and warning bounds
+PASS: skirmisher outside range remains dormant
+PASS: skirmisher wake is non-damaging
+PASS: skirmisher at least 0.8s activation grace
+PASS: skirmisher full telegraph before first attack
+PASS: skirmisher side switch cannot retarget committed attack
+PASS: skirmisher input ownership cancels attack
+PASS: skirmisher no hidden timer attack while input unavailable
+PASS: skirmisher control return gets fresh grace
+PASS: skirmisher approved facing parry stuns strike
+PASS: skirmisher actual melee signal damages candidate
+PASS: skirmisher approved dash retains protection
+PASS: skirmisher completion and persistence defer during transition
+PASS: skirmisher one managed deferred completion
+PASS: skirmisher actual serializer uses existing v8 defeat map
+PASS: skirmisher actual loader restores defeat
+PASS: skirmisher restored defeat suppresses respawn and duplicate completion
+PASS: slime registered through managed encounter/world spawn
+PASS: slime substitution isolated to lab factory
+PASS: slime production HP and warning bounds
+PASS: slime outside range remains dormant
+PASS: slime wake is non-damaging
+PASS: slime at least 0.8s activation grace
+PASS: slime full telegraph before first attack
+PASS: slime side switch cannot retarget committed attack
+PASS: slime input ownership cancels attack
+PASS: slime no hidden timer attack while input unavailable
+PASS: slime control return gets fresh grace
+PASS: slime approved facing parry stuns strike
+PASS: slime actual melee signal damages candidate
+PASS: slime approved dash retains protection
+PASS: slime completion and persistence defer during transition
+PASS: slime one managed deferred completion
+PASS: slime actual serializer uses existing v8 defeat map
+PASS: slime actual loader restores defeat
+PASS: slime restored defeat suppresses respawn and duplicate completion
+PASS: dash approach triggers one bounded backstep
+PASS: backstep at most 60px then committed recovery
+PASS: two-second cooldown forbids repeated evasions
+PASS: unsafe edge retreat falls back to recovery
+PASS: lunge is same-platform and territory constrained
+PASS: landing and recovery are non-damaging
+PASS: second lunge entered for teardown probe
+PASS: teardown during lunge removes member immediately
+PASS: skirmisher warning conservatively includes displacement plus reach and rear tolerance
+PASS: skirmisher actual inherited range boundary (129.0, -2.0)
+PASS: skirmisher observed damaging target lies within warning envelope
+PASS: skirmisher actual inherited range boundary (131.0, -2.0)
+PASS: skirmisher actual inherited range boundary (-15.0, -2.0)
+PASS: skirmisher actual inherited range boundary (50.0, -86.0)
+PASS: slime warning conservatively includes displacement plus reach and rear tolerance
+PASS: slime actual inherited range boundary (151.0, -2.0)
+PASS: slime observed damaging target lies within warning envelope
+PASS: slime actual inherited range boundary (153.0, -2.0)
+PASS: slime actual inherited range boundary (-15.0, -2.0)
+PASS: slime actual inherited range boundary (50.0, -86.0)
+PASS: long-step lunge actual outer boundary 1171.0
+PASS: committed warning contains full-travel damaging edge
+PASS: long-step lunge actual outer boundary 1173.0
+EN02: 61 checks, 0 failure(s)
