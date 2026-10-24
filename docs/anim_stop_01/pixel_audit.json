@@ -1,0 +1,397 @@
+{
+  "base": "6ab1454ea44e946265d2a65d1495d81e7aae840f",
+  "run_size": [
+    2176,
+    724
+  ],
+  "cell": [
+    272,
+    724
+  ],
+  "sprite_scale": 0.85,
+  "sprite_offset": [
+    0,
+    -238
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "alpha_boxes": {
+        "0": [
+          18,
+          67,
+          253,
+          702
+        ],
+        "32": [
+          22,
+          236,
+          249,
+          491
+        ],
+        "128": [
+          22,
+          237,
+          248,
+          491
+        ],
+        "230": [
+          23,
+          238,
+          247,
+          490
+        ]
+      },
+      "display_height_alpha128": 215.9,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 1,
+      "alpha_boxes": {
+        "0": [
+          10,
+          67,
+          271,
+          656
+        ],
+        "32": [
+          39,
+          247,
+          234,
+          492
+        ],
+        "128": [
+          39,
+          247,
+          233,
+          491
+        ],
+        "230": [
+          40,
+          248,
+          232,
+          490
+        ]
+      },
+      "display_height_alpha128": 207.4,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 2,
+      "alpha_boxes": {
+        "0": [
+          0,
+          103,
+          271,
+          618
+        ],
+        "32": [
+          28,
+          239,
+          242,
+          492
+        ],
+        "128": [
+          28,
+          239,
+          242,
+          491
+        ],
+        "230": [
+          29,
+          240,
+          241,
+          490
+        ]
+      },
+      "display_height_alpha128": 214.2,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 3,
+      "alpha_boxes": {
+        "0": [
+          0,
+          64,
+          266,
+          638
+        ],
+        "32": [
+          26,
+          246,
+          248,
+          492
+        ],
+        "128": [
+          26,
+          247,
+          247,
+          491
+        ],
+        "230": [
+          27,
+          248,
+          247,
+          490
+        ]
+      },
+      "display_height_alpha128": 207.4,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 4,
+      "alpha_boxes": {
+        "0": [
+          9,
+          71,
+          264,
+          658
+        ],
+        "32": [
+          15,
+          232,
+          259,
+          492
+        ],
+        "128": [
+          16,
+          232,
+          258,
+          491
+        ],
+        "230": [
+          16,
+          233,
+          258,
+          490
+        ]
+      },
+      "display_height_alpha128": 220.15,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 5,
+      "alpha_boxes": {
+        "0": [
+          39,
+          83,
+          267,
+          636
+        ],
+        "32": [
+          43,
+          236,
+          231,
+          492
+        ],
+        "128": [
+          43,
+          237,
+          230,
+          491
+        ],
+        "230": [
+          44,
+          238,
+          229,
+          490
+        ]
+      },
+      "display_height_alpha128": 215.9,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 6,
+      "alpha_boxes": {
+        "0": [
+          19,
+          49,
+          271,
+          628
+        ],
+        "32": [
+          26,
+          234,
+          247,
+          492
+        ],
+        "128": [
+          27,
+          235,
+          246,
+          491
+        ],
+        "230": [
+          27,
+          236,
+          246,
+          490
+        ]
+      },
+      "display_height_alpha128": 217.6,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    },
+    {
+      "frame": 7,
+      "alpha_boxes": {
+        "0": [
+          0,
+          87,
+          252,
+          607
+        ],
+        "32": [
+          28,
+          238,
+          248,
+          492
+        ],
+        "128": [
+          29,
+          239,
+          247,
+          491
+        ],
+        "230": [
+          29,
+          240,
+          247,
+          490
+        ]
+      },
+      "display_height_alpha128": 214.2,
+      "sole_baseline_actor_relative_alpha128": -93.5
+    }
+  ],
+  "parts": [
+    {
+      "path": "assets/cin_tools_03/rig_parts/arm_tube.png",
+      "size": [
+        53,
+        123
+      ],
+      "alpha128": [
+        0,
+        7,
+        42,
+        122
+      ],
+      "sha256": "d2756d56e10bc2299ef73f4a0876a14a500b7c433cc98cb8c38cdea60e1d4b43"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/boot.png",
+      "size": [
+        70,
+        63
+      ],
+      "alpha128": [
+        6,
+        2,
+        59,
+        52
+      ],
+      "sha256": "3d2c85b8bc56dd486d81ad0b119505b864052147a3462e2f413e557be00f05b7"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/fist.png",
+      "size": [
+        31,
+        24
+      ],
+      "alpha128": [
+        1,
+        2,
+        24,
+        23
+      ],
+      "sha256": "77a1d65ea7d5356969c28957be34355d619fc2f5ca7f5ce181004cd9f39919c8"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/hair.png",
+      "size": [
+        150,
+        158
+      ],
+      "alpha128": [
+        0,
+        0,
+        150,
+        158
+      ],
+      "sha256": "ef967e3dcfb343cf4c3f333e14fd07cf8f7670914b05e044289ead72b441a2e3"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/head.png",
+      "size": [
+        67,
+        61
+      ],
+      "alpha128": [
+        0,
+        0,
+        67,
+        61
+      ],
+      "sha256": "338787cd44fa89ce874821f7d883363ab0ebcd5a54d2667497a6bf49615678bc"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/leg_tube.png",
+      "size": [
+        49,
+        149
+      ],
+      "alpha128": [
+        8,
+        0,
+        46,
+        142
+      ],
+      "sha256": "469c9d6edc6f70edf3d5eafc83bc75ba1818eaa19a39ecb092ed9cbe1e3741ef"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/ribbon.png",
+      "size": [
+        93,
+        60
+      ],
+      "alpha128": [
+        0,
+        0,
+        93,
+        56
+      ],
+      "sha256": "ddbf501fc8c92b1db2ca9134f9424808cd58fc6f60d75594c24823b80d5d12ba"
+    },
+    {
+      "path": "assets/cin_tools_03/rig_parts/torso.png",
+      "size": [
+        111,
+        111
+      ],
+      "alpha128": [
+        0,
+        0,
+        111,
+        111
+      ],
+      "sha256": "1e09376753ab5956763699dc3f6847320e22458a96e54cbe52e5ae7a8d98414f"
+    }
+  ],
+  "protected_sha256": {
+    "presets/cutins/studio/actor.tscn": "5a23788d7aff6b9b34c22a375df40b4d48626696833c34e46f0dbf1b3c3c94f7",
+    "presets/cutins/studio/sprint_stop.tres": "87bd30e22abc0a8888910c2b6111887aba9e9ae46f2f392b33f80a310a6591b3",
+    "tools/cin_tools_03/actor.gd": "7310955e34c1585bbb281f52c4c30e880e5c5cc857c1b830293bee3c5b1b8c5f",
+    "tools/cin_tools_03/studio.gd": "c61d131e447cd4908a4482b9b25e0200096b0a4f711e0647c9f4503c90225f77",
+    "scripts/player.gd": "ca2ae72f72cdd976f015902d2bbee739a529d196f05086823f41ef62060fb3e4",
+    "project.godot": "8b9affc2376d4ea5db45c785f986211eee52fb04d6ad5fc3c4aaf2cff3708d1a",
+    "assets/kaze/cleaned/kaze_combat_strip.png": "88e7bbf76e8d5e4d3e3858c959b350e6502ef60e47fc4f7a000e8a58194f397d",
+    "assets/kaze/cleaned/kaze_idle_strip.png": "03db06f8670a4247bf98100b2a40e936bc3fff7ee27f90a02c7a3d47aea95697",
+    "assets/kaze/cleaned/kaze_run_strip.png": "544cf37ff21dc6f7fcce82f168d7f0f598deb2fc5b6ff3860f91e9d2932953d1",
+    "assets/kaze/cleaned/kaze_traversal_strip.png": "0ac2c8b848bbcece49f8ca3b6d2db03e42ded5eb6d33ab29da45b5b97bfedcbe",
+    "assets/web/kaze_combat_strip.png": "ad4476672faaf11d1267a45251de72dde3aace214e3659f0a14e024b2938dc7b",
+    "assets/web/kaze_idle_strip.png": "93d1720afd0f364844a4654de9ead9356a1c19aa3d5947ae1e17a106d7422762",
+    "assets/web/kaze_run_strip.png": "b056189dc041619ea21f24ee0dbbb610441fb02d62c352c3a93f66dd01f4cb80",
+    "assets/web/kaze_traversal_strip.png": "114e1e22560c59a1cd50c1b55083f573d4822450fc4565668e8fbc2cddfd6751"
+  },
+  "limits": "Alpha bounds are visible silhouette measurements, not anatomical landmarks. Scale 0.68 is a review proposal, not approved proportions. Sole markers are support pixels, not proof of heel/forefoot anatomy."
+}

@@ -1,0 +1,28 @@
+{
+  "checks": 28,
+  "failures": 0,
+  "limitations": [
+    "Numeric supports do not certify anatomy or visual acceptance.",
+    "Calibrated clip requires isolated Rig.scale=0.68; Studio does not persist that calibration.",
+    "No physical controller, macOS, campaign, old-save or production integration test."
+  ],
+  "source": "6ab1454ea44e946265d2a65d1495d81e7aae840f",
+  "variants": [
+    {
+      "boot_rotation_error": 0.000000149011611938477,
+      "name": "portable",
+      "planted_heel_x_error": 0.00323486328125,
+      "planted_heel_y_error": 0.00919189453122726,
+      "recovery_heel_y_error": 0.000219726562477263,
+      "rig_scale": 1.0
+    },
+    {
+      "boot_rotation_error": 0.000000131480845766419,
+      "name": "calibrated",
+      "planted_heel_x_error": 0.0096435546875,
+      "planted_heel_y_error": 0.0223144531249773,
+      "recovery_heel_y_error": 0.000158691406227263,
+      "rig_scale": 0.68
+    }
+  ]
+}

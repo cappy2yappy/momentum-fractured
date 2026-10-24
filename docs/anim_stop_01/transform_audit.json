@@ -1,0 +1,757 @@
+{
+  "alpha_threshold": 0.5,
+  "root_in_measurement_viewport": [
+    256,
+    420
+  ],
+  "variants": [
+    {
+      "measurements": [
+        {
+          "alpha_bbox": [
+            163,
+            120,
+            351,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_1417.png",
+          "knee_root_relative": [
+            -29.7017669677734,
+            -131.353179931641
+          ],
+          "near_forefoot_root_relative": [
+            3.316650390625,
+            -28.8701171875
+          ],
+          "near_heel_root_relative": [
+            -22.9464721679688,
+            -22.5259704589844
+          ],
+          "time": 1.417
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_1500.png",
+          "knee_root_relative": [
+            -29.7017669677734,
+            -131.353179931641
+          ],
+          "near_forefoot_root_relative": [
+            3.316650390625,
+            -28.8701171875
+          ],
+          "near_heel_root_relative": [
+            -22.9464721679688,
+            -22.5259704589844
+          ],
+          "time": 1.5
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_1583.png",
+          "knee_root_relative": [
+            -25.1278381347656,
+            -128.4951171875
+          ],
+          "near_forefoot_root_relative": [
+            5.04293823242188,
+            -25.1378479003906
+          ],
+          "near_heel_root_relative": [
+            -21.3856353759766,
+            -19.5226745605469
+          ],
+          "time": 1.583
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_1800.png",
+          "knee_root_relative": [
+            -12.2088165283203,
+            -122.903137207031
+          ],
+          "near_forefoot_root_relative": [
+            10.4134216308594,
+            -17.6357116699219
+          ],
+          "near_heel_root_relative": [
+            -16.3518524169922,
+            -13.9451904296875
+          ],
+          "time": 1.8
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_2050.png",
+          "knee_root_relative": [
+            6.07147216796875,
+            -120.006622314453
+          ],
+          "near_forefoot_root_relative": [
+            39.821044921875,
+            -17.761962890625
+          ],
+          "near_heel_root_relative": [
+            13.6039123535156,
+            -11.2304077148438
+          ],
+          "time": 2.05
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_2550.png",
+          "knee_root_relative": [
+            3.7513427734375,
+            -120.081237792969
+          ],
+          "near_forefoot_root_relative": [
+            10.3885498046875,
+            -12.6152038574219
+          ],
+          "near_heel_root_relative": [
+            -16.6276702880859,
+            -12.9659118652344
+          ],
+          "time": 2.55
+        },
+        {
+          "alpha_bbox": [
+            154,
+            107,
+            360,
+            327
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_sprite_4200.png",
+          "knee_root_relative": [
+            4.40069580078125,
+            -120.052001953125
+          ],
+          "near_forefoot_root_relative": [
+            12.1122436523438,
+            -12.65771484375
+          ],
+          "near_heel_root_relative": [
+            -14.9061584472656,
+            -12.7382507324219
+          ],
+          "time": 4.2
+        }
+      ],
+      "name": "seed_sprite"
+    },
+    {
+      "measurements": [
+        {
+          "alpha_bbox": [
+            91,
+            81,
+            396,
+            399
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_1417.png",
+          "knee_root_relative": [
+            -29.7017669677734,
+            -131.353179931641
+          ],
+          "near_forefoot_root_relative": [
+            3.316650390625,
+            -28.8701171875
+          ],
+          "near_heel_root_relative": [
+            -22.9464721679688,
+            -22.5259704589844
+          ],
+          "time": 1.417
+        },
+        {
+          "alpha_bbox": [
+            91,
+            81,
+            396,
+            399
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_1500.png",
+          "knee_root_relative": [
+            -29.7017669677734,
+            -131.353179931641
+          ],
+          "near_forefoot_root_relative": [
+            3.316650390625,
+            -28.8701171875
+          ],
+          "near_heel_root_relative": [
+            -22.9464721679688,
+            -22.5259704589844
+          ],
+          "time": 1.5
+        },
+        {
+          "alpha_bbox": [
+            101,
+            79,
+            392,
+            402
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_1583.png",
+          "knee_root_relative": [
+            -25.1278381347656,
+            -128.4951171875
+          ],
+          "near_forefoot_root_relative": [
+            5.04293823242188,
+            -25.1378479003906
+          ],
+          "near_heel_root_relative": [
+            -21.3856353759766,
+            -19.5226745605469
+          ],
+          "time": 1.583
+        },
+        {
+          "alpha_bbox": [
+            129,
+            80,
+            360,
+            407
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_1800.png",
+          "knee_root_relative": [
+            -12.2088165283203,
+            -122.903137207031
+          ],
+          "near_forefoot_root_relative": [
+            10.4134216308594,
+            -17.6357116699219
+          ],
+          "near_heel_root_relative": [
+            -16.3518524169922,
+            -13.9451904296875
+          ],
+          "time": 1.8
+        },
+        {
+          "alpha_bbox": [
+            131,
+            81,
+            344,
+            411
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_2050.png",
+          "knee_root_relative": [
+            6.07147216796875,
+            -120.006622314453
+          ],
+          "near_forefoot_root_relative": [
+            39.821044921875,
+            -17.761962890625
+          ],
+          "near_heel_root_relative": [
+            13.6039123535156,
+            -11.2304077148438
+          ],
+          "time": 2.05
+        },
+        {
+          "alpha_bbox": [
+            118,
+            79,
+            324,
+            410
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_2550.png",
+          "knee_root_relative": [
+            3.7513427734375,
+            -120.081237792969
+          ],
+          "near_forefoot_root_relative": [
+            10.3885498046875,
+            -12.6152038574219
+          ],
+          "near_heel_root_relative": [
+            -16.6276702880859,
+            -12.9659118652344
+          ],
+          "time": 2.55
+        },
+        {
+          "alpha_bbox": [
+            121,
+            79,
+            329,
+            410
+          ],
+          "hip_root_relative": [
+            7.0,
+            -185.0
+          ],
+          "image": "seed_rig_4200.png",
+          "knee_root_relative": [
+            4.40069580078125,
+            -120.052001953125
+          ],
+          "near_forefoot_root_relative": [
+            12.1122436523438,
+            -12.65771484375
+          ],
+          "near_heel_root_relative": [
+            -14.9061584472656,
+            -12.7382507324219
+          ],
+          "time": 4.2
+        }
+      ],
+      "name": "seed_rig"
+    },
+    {
+      "measurements": [
+        {
+          "alpha_bbox": [
+            97,
+            7,
+            326,
+            323
+          ],
+          "hip_root_relative": [
+            7.0,
+            -258.634979248047
+          ],
+          "image": "portable_1417.png",
+          "knee_root_relative": [
+            51.6531372070313,
+            -211.400497436523
+          ],
+          "near_forefoot_root_relative": [
+            51.0033569335938,
+            -105.643280029297
+          ],
+          "near_heel_root_relative": [
+            24.0033569335938,
+            -104.643280029297
+          ],
+          "time": 1.417
+        },
+        {
+          "alpha_bbox": [
+            105,
+            10,
+            327,
+            325
+          ],
+          "hip_root_relative": [
+            7.0,
+            -254.149993896484
+          ],
+          "image": "portable_1500.png",
+          "knee_root_relative": [
+            53.9005737304688,
+            -209.146255493164
+          ],
+          "near_forefoot_root_relative": [
+            52.0,
+            -103.649993896484
+          ],
+          "near_heel_root_relative": [
+            25.0,
+            -102.649993896484
+          ],
+          "time": 1.5
+        },
+        {
+          "alpha_bbox": [
+            112,
+            14,
+            329,
+            326
+          ],
+          "hip_root_relative": [
+            7.0,
+            -249.457107543945
+          ],
+          "image": "portable_1583.png",
+          "knee_root_relative": [
+            56.1890563964844,
+            -206.966674804688
+          ],
+          "near_forefoot_root_relative": [
+            53.9845275878906,
+            -101.537719726563
+          ],
+          "near_heel_root_relative": [
+            26.9845275878906,
+            -100.537719726563
+          ],
+          "time": 1.583
+        },
+        {
+          "alpha_bbox": [
+            132,
+            30,
+            345,
+            328
+          ],
+          "hip_root_relative": [
+            7.0,
+            -235.649993896484
+          ],
+          "image": "portable_1800.png",
+          "knee_root_relative": [
+            61.7046203613281,
+            -200.544372558594
+          ],
+          "near_forefoot_root_relative": [
+            70.0,
+            -93.6500244140625
+          ],
+          "near_heel_root_relative": [
+            43.0,
+            -92.6500244140625
+          ],
+          "time": 1.8
+        },
+        {
+          "alpha_bbox": [
+            133,
+            42,
+            350,
+            328
+          ],
+          "hip_root_relative": [
+            7.0,
+            -224.649993896484
+          ],
+          "image": "portable_2050.png",
+          "knee_root_relative": [
+            63.3937683105469,
+            -192.327514648438
+          ],
+          "near_forefoot_root_relative": [
+            43.5714111328125,
+            -93.6500244140625
+          ],
+          "near_heel_root_relative": [
+            16.5714111328125,
+            -92.6500244140625
+          ],
+          "time": 2.05
+        },
+        {
+          "alpha_bbox": [
+            119,
+            17,
+            326,
+            328
+          ],
+          "hip_root_relative": [
+            7.0,
+            -246.649993896484
+          ],
+          "image": "portable_2550.png",
+          "knee_root_relative": [
+            43.6517944335938,
+            -192.969024658203
+          ],
+          "near_forefoot_root_relative": [
+            25.0,
+            -93.6500244140625
+          ],
+          "near_heel_root_relative": [
+            -2.0,
+            -92.6500244140625
+          ],
+          "time": 2.55
+        },
+        {
+          "alpha_bbox": [
+            121,
+            11,
+            329,
+            328
+          ],
+          "hip_root_relative": [
+            7.0,
+            -252.649993896484
+          ],
+          "image": "portable_4200.png",
+          "knee_root_relative": [
+            38.1366271972656,
+            -195.592910766602
+          ],
+          "near_forefoot_root_relative": [
+            25.0,
+            -93.6500244140625
+          ],
+          "near_heel_root_relative": [
+            -2.0,
+            -92.6500244140625
+          ],
+          "time": 4.2
+        }
+      ],
+      "name": "portable"
+    },
+    {
+      "measurements": [
+        {
+          "alpha_bbox": [
+            148,
+            109,
+            311,
+            323
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -205.519790649414
+          ],
+          "image": "calibrated_1417.png",
+          "knee_root_relative": [
+            39.1885375976563,
+            -177.80126953125
+          ],
+          "near_forefoot_root_relative": [
+            42.3633422851563,
+            -105.323303222656
+          ],
+          "near_heel_root_relative": [
+            24.0033264160156,
+            -104.643310546875
+          ],
+          "time": 1.417
+        },
+        {
+          "alpha_bbox": [
+            153,
+            112,
+            312,
+            325
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -202.470001220703
+          ],
+          "image": "calibrated_1500.png",
+          "knee_root_relative": [
+            40.0264282226563,
+            -175.82568359375
+          ],
+          "near_forefoot_root_relative": [
+            43.3600158691406,
+            -103.329986572266
+          ],
+          "near_heel_root_relative": [
+            25.0,
+            -102.649993896484
+          ],
+          "time": 1.5
+        },
+        {
+          "alpha_bbox": [
+            158,
+            114,
+            314,
+            326
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -199.278839111328
+          ],
+          "image": "calibrated_1583.png",
+          "knee_root_relative": [
+            40.892822265625,
+            -173.821807861328
+          ],
+          "near_forefoot_root_relative": [
+            45.344482421875,
+            -101.217651367188
+          ],
+          "near_heel_root_relative": [
+            26.9844665527344,
+            -100.537658691406
+          ],
+          "time": 1.583
+        },
+        {
+          "alpha_bbox": [
+            172,
+            125,
+            330,
+            328
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -189.890014648438
+          ],
+          "image": "calibrated_1800.png",
+          "knee_root_relative": [
+            40.8118591308594,
+            -164.318481445313
+          ],
+          "near_forefoot_root_relative": [
+            61.3600158691406,
+            -93.3300170898438
+          ],
+          "near_heel_root_relative": [
+            43.0,
+            -92.6500244140625
+          ],
+          "time": 1.8
+        },
+        {
+          "alpha_bbox": [
+            172,
+            134,
+            320,
+            328
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -182.410003662109
+          ],
+          "image": "calibrated_2050.png",
+          "knee_root_relative": [
+            44.2215576171875,
+            -162.499542236328
+          ],
+          "near_forefoot_root_relative": [
+            34.9314270019531,
+            -93.3300170898438
+          ],
+          "near_heel_root_relative": [
+            16.5714111328125,
+            -92.6500244140625
+          ],
+          "time": 2.05
+        },
+        {
+          "alpha_bbox": [
+            163,
+            116,
+            304,
+            328
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -197.369995117188
+          ],
+          "image": "calibrated_2550.png",
+          "knee_root_relative": [
+            29.3990783691406,
+            -160.674530029297
+          ],
+          "near_forefoot_root_relative": [
+            16.3600158691406,
+            -93.3300170898438
+          ],
+          "near_heel_root_relative": [
+            -1.99998474121094,
+            -92.6500244140625
+          ],
+          "time": 2.55
+        },
+        {
+          "alpha_bbox": [
+            164,
+            112,
+            306,
+            328
+          ],
+          "hip_root_relative": [
+            4.760009765625,
+            -201.450012207031
+          ],
+          "image": "calibrated_4200.png",
+          "knee_root_relative": [
+            25.6515197753906,
+            -162.498962402344
+          ],
+          "near_forefoot_root_relative": [
+            16.3600158691406,
+            -93.3300476074219
+          ],
+          "near_heel_root_relative": [
+            -1.99998474121094,
+            -92.6500549316406
+          ],
+          "time": 4.2
+        }
+      ],
+      "name": "calibrated"
+    }
+  ]
+}
