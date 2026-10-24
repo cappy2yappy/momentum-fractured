@@ -1,0 +1,15 @@
+{
+  "engine": "4.6.1-stable (official)",
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "note": "Real native draw samples; no fixed FPS/movie flags. Root-tracking review cameras do not alter actor clip coordinates.",
+  "speed": 1.0,
+  "wall_seconds": 4.506864,
+  "samples": 129,
+  "max_timeline_vs_wall_error_seconds": 0.0008230000000000182,
+  "frame_intervals_seconds": {
+    "min": 0.034198999999999646,
+    "max": 0.041638000000000064
+  },
+  "video_sha256": "a469cfa50bea53168ddd97b2c3d21924a008b19f9c5fe2a9c86230c8b18412a3",
+  "performance_limit": "Capture overhead and 30Hz sampling are not a 60fps gameplay benchmark."
+}

@@ -1,0 +1,9 @@
+{
+  "base": "6ab1454ea44e946265d2a65d1495d81e7aae840f",
+  "protected_files": 14,
+  "changed_protected_bytes": [],
+  "approved_png_blob_mismatch": [],
+  "outside_namespace_tracked_changes": [],
+  "passed": true,
+  "note": "Text files compared to initial cloned bytes and Git normalized content; PNGs also compared byte-for-byte to Git blobs. Existing worktrees and user saves were not accessed for mutation."
+}
