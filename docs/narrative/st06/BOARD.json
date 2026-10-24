@@ -1,7 +1,7 @@
 {
-  "schema": "st06-review-1",
+  "schema": "st06-review-2",
   "base": "1d157f4b7014ad1c05e231a8787594d57b5e33a3",
-  "status": "CREATOR REVIEW — NO STORY/IMPLEMENTATION APPROVAL",
+  "status": "CREATOR REVIEW — CONFIRMED PRESENTATION ORDER; STAGING/IMPLEMENTATION PENDING",
   "exact": {
     "opening": "The refuge was attacked. I have to find the others.",
     "objective": "Search for survivors. Defeat the Market sentinel for Windstep.",
@@ -11,14 +11,14 @@
     {
       "id": "P01",
       "title": "Attack",
-      "window": "0–3 s",
+      "window": "Study +0–3 s (not game start)",
       "start": 0,
       "end": 3,
       "verb": "Home interrupted",
       "purpose": "A close fragment of the concealed refuge establishes ordinary life before danger; no wide map or clan emblem.",
       "pose": "Kaze turns toward family, weight still grounded; expression/pose is P.",
       "camera": "Fixed close framing; approaching tremor is optional. No new geographical axis is locked.",
-      "control": "Presenter owns proposed framing/input during bounded intro; no world/save access.",
+      "control": "Candidate presenter framing only if separately approved for a later memory/flashback; no current world/save access or new-game input lease.",
       "geography": "Refuge fragment only; distance to R0 unknown.",
       "layers": {
         "far": "Distant structure silhouette",
@@ -27,24 +27,27 @@
         "front": "Sparse smoke edge; never obscure the family intervention"
       },
       "audio": "Quiet room tone into low structural rumble; captions convey approaching disturbance.",
-      "entry": "New-run presentation only after approval; continue saves bypass it.",
-      "exit": "Cut on protective movement, retaining chosen screen direction.",
+      "entry": "Unscheduled later flashback or memory candidate only. Not new-run autoplay; not automatically the first scene of the powerless prologue.",
+      "exit": "Candidate cut on protective movement; precise placement and direction remain pending.",
       "reduced": "Static card: home disrupted. No camera shake or flash.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P02",
       "title": "Intervention",
-      "window": "3–6 s",
+      "window": "Study +3–6 s (not game start)",
       "start": 3,
       "end": 6,
       "verb": "Protection",
       "purpose": "Two unnamed parents move between the oncoming force and Kaze. Their protective choice is legible without explicit fatal aftermath.",
       "pose": "Parents' protective silhouettes, Kaze reaching/reacting; drawings not supplied.",
       "camera": "Human-scale medium shot; exact likeness, side and blocking await creator map.",
-      "control": "Same presenter lease; parents do not trigger abilities or scene changes.",
+      "control": "Candidate protective composition only; any later presentation lease belongs to approved owners. No ability or scene changes.",
       "geography": "Do not identify the parents as Kenji/Aria.",
       "layers": {
         "far": "Obscured damaged architecture",
@@ -53,24 +56,27 @@
         "front": "Light dust only, no body close-up"
       },
       "audio": "Brief cloth movement and impact anticipation; no new spoken dialogue.",
-      "entry": "Follow P01 or static summary; no interaction prompt.",
-      "exit": "Protective shape matches blast origin only after geography approval.",
+      "entry": "Only after a separately selected protective-action setup; P01 is a candidate predecessor, not an approved runtime sequence.",
+      "exit": "Candidate protective shape matches blast origin only after geography approval.",
       "reduced": "Held silhouettes and text description, no impact flash.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P03",
       "title": "Blast",
-      "window": "6–9 s",
+      "window": "Study +6–9 s (not game start)",
       "start": 6,
       "end": 9,
       "verb": "Separation",
       "purpose": "One bounded impact propels Kaze away and downward; intervention is the cause of escape, not a new teleport power.",
       "pose": "Readable protected-to-displaced silhouette; no stretched limbs or new completed drawing claimed.",
       "camera": "One directional composition; origin/angle/distance unresolved.",
-      "control": "Presenter shows motion only; cannot call transition, damage or save functions.",
+      "control": "Candidate motion presentation only; cannot call transition, damage, ability or save functions.",
       "geography": "Fall corridor and destination are not assigned coordinates.",
       "layers": {
         "far": "Occluded source plane",
@@ -79,24 +85,27 @@
         "front": "Restrained embers away from body outline"
       },
       "audio": "Single softened impact cue, independent volume; captioned impact.",
-      "entry": "P02 protection read must precede separation.",
-      "exit": "Match Kaze direction into P04; avoid confusing second blast.",
+      "entry": "P02 protection must read before separation if these candidates are selected together.",
+      "exit": "Candidate match into P04 if selected; avoid confusing a second blast.",
       "reduced": "Dissolve between protection/separation stills; no white flash.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P04",
       "title": "Fall",
-      "window": "9–13 s",
+      "window": "Study +9–13 s (not game start)",
       "start": 9,
       "end": 13,
       "verb": "Disorientation",
       "purpose": "Loss of elevation is understood without implying an endless gameplay pit or a known refuge-to-R0 tunnel.",
       "pose": "Controlled readable fall silhouette; hair/cloth lag needs artist review.",
       "camera": "Follow or two held levels; speed, duration and lens remain proposals.",
-      "control": "Presenter only; no controller velocity edits or punitive fall damage.",
+      "control": "Candidate fall imagery only; no controller velocity edits or punitive fall damage.",
       "geography": "No numerical fall depth, room ID, cliff/shaft shape or exact flame side.",
       "layers": {
         "far": "Abstract depth bands",
@@ -105,24 +114,27 @@
         "front": "Smoke frame with sightline preserved"
       },
       "audio": "Air movement and distant debris; no mandatory stereo-direction clue.",
-      "entry": "Continue established screen direction.",
-      "exit": "End on safe recovery framing, no hazard overlap.",
+      "entry": "Continue a separately approved memory sequence's screen direction; no boot trigger.",
+      "exit": "Candidate safe recovery framing; actual return to present remains phase D, not an implied new arrival.",
       "reduced": "Two static elevation panels with plain description; no parallax.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P05",
       "title": "Landing / recovery",
-      "window": "13–17 s",
+      "window": "Study +13–17 s (not game start)",
       "start": 13,
       "end": 17,
       "verb": "Regain agency",
       "purpose": "Kaze comes to alone in a safe pocket. Loss is felt; universal death is not asserted.",
       "pose": "Low supported recovery → stable ready pose; injury details unspecified.",
       "camera": "Widen into proposed gameplay framing; no forced camera path after handback.",
-      "control": "Proposed presenter releases input/camera once by17 s; accepted world owner validates safe state. No runtime authored here.",
+      "control": "Candidate recovery/handback composition; +17 s is only a relative study offset, never a promised game-start lock. Actual handback and return state await owner review.",
       "geography": "Landing identity/location relative to R0 stays unresolved.",
       "layers": {
         "far": "Distant district silhouette only if mapped",
@@ -131,24 +143,27 @@
         "front": "Minimal dust settling behind playable lane"
       },
       "audio": "Soft contact and breathing/room tone; no named voice.",
-      "entry": "On new run or skip, same authoritative safe state; never create/reset checkpoint.",
-      "exit": "World handback eligibility, not an animation frame, ends ownership.",
-      "reduced": "Stable recovery still and immediate safe gameplay; same information.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "entry": "Only within selected attack/aftermath memory material; never replace new-game arrival or reset a present checkpoint.",
+      "exit": "Actual completion/skip must use separately approved owner handback; this card does not define phase D's destination or reset state.",
+      "reduced": "Stable recovery still with equivalent information; no assumed boot delay, live teleport or save reset.",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P06",
       "title": "Blocked return",
-      "window": "17–45 s",
+      "window": "Study +17–45 s (not game start)",
       "start": 17,
       "end": 45,
       "verb": "Understand the boundary",
       "purpose": "Active heat/fire and ruined/unusable footholds make return dangerous. It is not a secretly disabled wall-jump/dash/grapple.",
-      "pose": "Player-driven look/approach/retreat; no forced pose.",
-      "camera": "Normal gameplay camera; optional look affordance not a control lock.",
-      "control": "World owns controls from17 s; show only abilities actually owned. No grants, temporary disabling or collision changes.",
+      "pose": "Candidate look/approach/retreat depiction; no forced pose or live controller change.",
+      "camera": "Candidate gameplay-scale composition; no new current camera lock.",
+      "control": "Candidate boundary/aftermath read; present-day controls and earned abilities stay unchanged. No collision or temporary power disabling is authorized.",
       "geography": "Creator map must place fuel/source, hot surfaces, sightlines and safe retreat; no invented dimensions.",
       "layers": {
         "far": "Return silhouette only when spatially justified",
@@ -157,24 +172,27 @@
         "front": "Smoke/embers cannot hide edges or telegraphs"
       },
       "audio": "Captioned/local heat cue; no forced sound to detect danger.",
-      "entry": "Display exact opening at17–25 s without replacing objective UI.",
-      "exit": "Player freely leaves or revisits; no required examine, no scripted turnaround.",
+      "entry": "Candidate aftermath context only. Approved opening remains at the existing present start; no forced replay at study offset +17–25 s.",
+      "exit": "No required examine or scripted turnaround. Any later depiction needs Level/creator acceptance.",
       "reduced": "Static heat contrast plus clear shape/label; no flicker needed.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P07",
       "title": "First evidence",
-      "window": "45–70 s",
+      "window": "Study +45–70 s (not game start)",
       "start": 45,
       "end": 70,
       "verb": "Questions, not answers",
       "purpose": "Everyday objects or interrupted repair suggest prior use, not a named survivor, confirmed death, dated evacuation or traitor.",
       "pose": "Optional player pause; all reaction poses/copy remain proposals.",
       "camera": "Native gameplay view; no unsolicited close-up or camera pull.",
-      "control": "World owns movement; optional examine design needs D13 and safe arbitration; omit new interaction by default.",
+      "control": "Candidate evidence/aftermath read; optional examine design still requires D13. No new interaction or campaign flag.",
       "geography": "Safe turnout and prop bounds await Level redlines; no forced passage trigger.",
       "layers": {
         "far": "Continuous district landmark",
@@ -183,24 +201,27 @@
         "front": "Quiet cloth/cable motion, stopped in reduced mode"
       },
       "audio": "Optional restrained object sound; text works silently.",
-      "entry": "Walk past freely; existing evidence remains enough.",
-      "exit": "No read completion requirement before Market approach.",
+      "entry": "Candidate neutral trace; optional in a later selected memory context. No forced present-world examination.",
+      "exit": "No read-completion gate or reward; placement relative to other memory material is pending.",
       "reduced": "Static neutral object description; no flashing affinity beacon.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     },
     {
       "id": "P08",
       "title": "Play / Market direction",
-      "window": "70–90 s",
+      "window": "Study +70–90 s (not game start)",
       "start": 70,
       "end": 90,
       "verb": "Search continues",
-      "purpose": "The existing survivor-search objective points toward Market and Windstep; player chooses pace and allowed branches.",
+      "purpose": "Retain the search-continuity concept and exact original first-objective reference. A later return preserves the then-current objective and earned Windstep state; it does not replay the initial Market task.",
       "pose": "Normal approved gameplay states, no cinematic pose lock.",
       "camera": "Normal gameplay framing, landmark toward actual route only.",
-      "control": "World owns input and progression; optional presentation cannot gate movement.",
+      "control": "Candidate search-continuity read; current world owns input/progression. Do not rewind the current objective or repeat the Market reward on return.",
       "geography": "Do not draw v1.2 connectors as existing or bypass Windstep before G1/G2 approval.",
       "layers": {
         "far": "Market silhouette only where geography supports it",
@@ -209,12 +230,15 @@
         "front": "Foreground stays off feet, prompt and enemy telegraph"
       },
       "audio": "Existing exploration ambience; no new voice or named distress call.",
-      "entry": "Preserve exact first objective; timing is pacing guidance, not a countdown.",
-      "exit": "Free exploration continues; arriving earlier/later does not retrigger intro.",
+      "entry": "Retain the approved first-objective wording as an opening reference, not a command to overwrite an advanced objective on return.",
+      "exit": "Return to the authoritative present objective/progress if this concept is selected. No replay of boot or duplicate reward.",
       "reduced": "Objective retained as text; no moving compass or cut-in required.",
-      "status": "P — composition, camera, pose and sound; canon constraints retained",
+      "status": "P — retained candidate concept; not new-game autoplay or approved flashback staging",
       "review": "pending",
-      "notes": ""
+      "notes": "",
+      "placement": "Unscheduled candidate flashback or memory material",
+      "timeline_scope": "candidate-study-only",
+      "skip": "Any future skip/cancel returns through separately approved owner handling with present unlocks, gameplay progress and saves preserved; exact resume destination/rules remain pending."
     }
   ],
   "rooms": [
@@ -611,6 +635,91 @@
       "clue": "B12 D12 pending",
       "revisit": "Actual regional/switch conditions",
       "status": "P visual overlay; E room/gates retained"
+    }
+  ],
+  "revision": "2026-10-24 presentation-order correction",
+  "presentation_contract": {
+    "order": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "game_start": "Existing trap/cave post-attack gameplay, as currently developed.",
+    "trigger": {
+      "room_ids": null,
+      "conditions": null,
+      "status": "Creator decision pending after exploration and selected room clears."
+    },
+    "flashback": "Playable earlier life before Kaze has powers; original Story Bible and ST-01 remain authoritative.",
+    "return": "Preserve existing present-day unlocks, gameplay progress and saves; resume authoritative current state.",
+    "candidates": "P01–P08 are unscheduled flashback or memory candidates, never an automatically played new-game opening.",
+    "timing": "P01–P08 offsets are inherited relative study windows only; no 17-second boot lock or first-90-second replacement.",
+    "permissions": "Documentation only. No runtime, controller, cutscene, ability, save or world-graph changes.",
+    "canon": "Kenji is Kaze's brother; Aria is Kenji's missing partner. Parents remain unnamed. Later Mizuki/Darkness revelations stay protected."
+  },
+  "experience": [
+    {
+      "id": "A",
+      "title": "Present gameplay — existing trap/cave",
+      "purpose": "Begin with the existing post-attack trap/cave sequence as currently developed. Kaze searches for survivors; approved opening and first objective stay verbatim.",
+      "control": "Existing gameplay/sequence owners retain current behavior. No added attack/fall montage or pre-powers scene at boot.",
+      "entry": "Existing new-game/load behavior. Trap/cave room identity and relationship to R0 are not assigned by this board.",
+      "exit": "Continue exploring the present world at the player's pace, with current movement and progression.",
+      "review": "pending",
+      "notes": ""
+    },
+    {
+      "id": "B",
+      "title": "Pending flashback trigger — explore and clear",
+      "purpose": "The player explores and clears selected rooms before encountering the flashback. Exact trigger rooms and conditions remain creator decisions.",
+      "control": "Present gameplay remains authoritative. No room IDs, thresholds, flags or trigger implementation are supplied.",
+      "entry": "After present exploration and creator-selected room clears; no duration or named room is assumed.",
+      "exit": "Enter the later flashback only under separately approved trigger and handoff design. Timing, interruption, skip and reentry rules are unresolved.",
+      "review": "pending",
+      "notes": ""
+    },
+    {
+      "id": "C",
+      "title": "Powerless flashback — playable earlier life",
+      "purpose": "A playable prologue explores Kaze's earlier life before she has powers, following the original Story Bible and ST-01. Clan life, relationships and training are context; exact activities, dialogue and scenes await review.",
+      "control": "Powerless is a narrative/design constraint for a separately reviewed flashback experience. Do not strip, reset or overwrite the current campaign's abilities or saves. No controller rules are implemented.",
+      "entry": "Later player experience, earlier story chronology. Kaze's trial/powers and the attack are later chronological events; the powerless segment does not declare her powerless during the attack.",
+      "exit": "Return to the present through owner-reviewed completion/cancellation handling. P01–P08 may be separately selected as flashback or memory material; no automatic sequence placement is approved.",
+      "review": "pending",
+      "notes": ""
+    },
+    {
+      "id": "D",
+      "title": "Return to present — preserve progress",
+      "purpose": "Resume the existing present-day world with earned unlocks, gameplay progress and saves preserved. No repeated reward or reset of the current objective.",
+      "control": "World/StoryDirector remains progression owner; presentation cannot write saves, grant rewards, request new routes or decide return state.",
+      "entry": "Return location, resume behavior, save/reload, skip, interruption and reentry handling require separate creator/Gameplay/INT decisions.",
+      "exit": "Normal present gameplay continues from authoritative current state. This is a documentation requirement, not implemented or tested runtime behavior.",
+      "review": "pending",
+      "notes": ""
+    }
+  ],
+  "chronology": [
+    {
+      "id": "CH1",
+      "event": "Earlier clan life before powers",
+      "scope": "Playable flashback C draws from this period; exact scenes and interactions remain pending."
+    },
+    {
+      "id": "CH2",
+      "event": "Trial reveals potential; later outside rescues expose elemental traces",
+      "scope": "Story Bible chronology retained. Exact playable coverage and transition out of the powerless period are not selected here."
+    },
+    {
+      "id": "CH3",
+      "event": "Refuge attack, unnamed parents' sacrifice, separation/fall and recovery",
+      "scope": "ST-01 and creator direction retained. P01–P08 illustrate candidate attack/aftermath material; their placement inside a later flashback or memory remains pending."
+    },
+    {
+      "id": "CH4",
+      "event": "Present post-attack survivor search",
+      "scope": "Player starts here in A, explores through B, experiences earlier life in C, then returns here in D. No later reveal is brought forward."
     }
   ]
 }

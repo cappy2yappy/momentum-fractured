@@ -10,7 +10,27 @@
       "pass": true
     },
     {
-      "check": "continuous 0-90 pacing windows",
+      "check": "continuous relative 0-90 candidate-study windows (not boot)",
+      "pass": true
+    },
+    {
+      "check": "schema v2 rejects superseded opening-board imports",
+      "pass": true
+    },
+    {
+      "check": "confirmed A-B-C-D experience order",
+      "pass": true
+    },
+    {
+      "check": "flashback trigger rooms and conditions remain unassigned",
+      "pass": true
+    },
+    {
+      "check": "chronology distinct from experience order",
+      "pass": true
+    },
+    {
+      "check": "all eight panels remain unscheduled candidates",
       "pass": true
     },
     {
@@ -518,36 +538,144 @@
       "pass": true
     },
     {
-      "check": "Node JavaScript syntax",
+      "check": "V8 JavaScript syntax (Node launcher unavailable)",
       "pass": true
     },
     {
       "check": "DOM-model render/import/export/reset",
       "pass": true
+    },
+    {
+      "check": "model rejects changed approved copy",
+      "pass": true
+    },
+    {
+      "check": "model rejects missing candidate",
+      "pass": true
+    },
+    {
+      "check": "model rejects changed candidate ID",
+      "pass": true
+    },
+    {
+      "check": "model rejects changed graph",
+      "pass": true
+    },
+    {
+      "check": "model rejects approval mark",
+      "pass": true
+    },
+    {
+      "check": "model rejects non-text pose",
+      "pass": true
+    },
+    {
+      "check": "model rejects old v1 opening board",
+      "pass": true
+    },
+    {
+      "check": "model rejects invented trigger room",
+      "pass": true
+    },
+    {
+      "check": "model rejects reordered experience",
+      "pass": true
+    },
+    {
+      "check": "model rejects non-text experience",
+      "pass": true
+    },
+    {
+      "check": "model rejects chronology reorder",
+      "pass": true
+    },
+    {
+      "check": "model rejects new-game candidate placement",
+      "pass": true
+    },
+    {
+      "check": "model rejects boot timeline",
+      "pass": true
+    },
+    {
+      "check": "model untrusted notes stay text",
+      "pass": true
+    },
+    {
+      "check": "model exports candidate and experience edits",
+      "pass": true
+    },
+    {
+      "check": "model imports review file",
+      "pass": true
+    },
+    {
+      "check": "model import handler rejects v1 without replacing edits",
+      "pass": true
+    },
+    {
+      "check": "model reset restores revised initial data",
+      "pass": true
+    },
+    {
+      "check": "model print handler requests print",
+      "pass": true
+    },
+    {
+      "check": "candidate Markdown fields match JSON",
+      "pass": true
+    },
+    {
+      "check": "experience Markdown fields match JSON",
+      "pass": true
+    },
+    {
+      "check": "HTML explicitly separates experience, chronology and candidates",
+      "pass": true
     }
   ],
-  "count": 131,
-  "scope": "Structural/content and JavaScript model only",
+  "count": 158,
+  "scope": "Structural/document/HTML/JSON and actual review JavaScript against a DOM model only",
+  "runner": "V8 fallback; equivalent existing assertions plus revision/import checks. Python/Node command and Python HTMLParser not executed.",
   "not_executed": [
+    "Python/Node validate.py invocation",
     "native browser rendering/visual QA",
     "screen-reader/accessibility audit",
+    "real browser download/print",
     "Godot/runtime",
     "Windows/macOS playtest",
     "FPS",
     "controller/save/transition QA",
     "actual artwork/animation review"
   ],
-  "inherited_claims": "ST05/WD/source evidence was read; their runtime/test claims were not rerun.",
-  "model_output": "PASS: render 8 cards; locks reject six invalid imports; text-only content; export/reset handlers",
-  "sha256": {
-    "BOARD.json": "442906f3c4017d6cd60c8eba58fd7a7182ddd94de66ce26714984af8174d66ac",
-    "PM_HANDOFF.md": "414e2806b324c83f174efb2dc868991e4fcbe78a5727a5368c655825370377f9",
-    "README.md": "ae7b0fb700b68dfc9c5da027f8dd6412d52035a6d3b8fb27b868eca00c74ea87",
-    "REVIEW.html": "5c64ec724926da2ddbfc02fa34b79c1724e28527dcbe3aabaee4654e2484d72c",
-    "ROOM_VISUAL_PROGRESSION.md": "1480854064522f757cf7936edc7bc4421794a73464d6f081bf03335dd99f59f8",
-    "SOURCES_AND_DECISIONS.md": "82f00215fc56013a19072efecccceaa856a8f81269e28b982471e07638a1aac7",
-    "STORYBOARD_CARDS.md": "85e366f3bafcdb8677ee5c3594e54d26782c3dc65f66ccce8b7e017da3f8d3f1",
-    "TIMELINE_AND_ABILITIES.md": "ae95a2d5e090a7277c4a7341217cf4ced609b64dc008ba9489dac6bfd94b5439",
-    "validate.py": "a9058f5899c905ce40a0e994cca07ca42064c4effd9d5a43f4b475a1aaa5fcdc"
-  }
+  "inherited_claims": "Prior ST06 131-check result and ST05/WD runtime claims were not copied as current results.",
+  "model_output": "PASS: four experience phases, four chronology entries, eight candidates; 13 invalid imports rejected; edit/export/import/reset/print handlers checked in model.",
+  "environment_limit": "Local exec rejected before launch: configured file:///workspace permission path is invalid on Windows.",
+  "source_parent": "9426c7d8086bc20745fd7301fa1f318c84d0b6d3",
+  "preservation_comparisons": [
+    {
+      "name": "21-room JSON overlay unchanged",
+      "pass": true
+    },
+    {
+      "name": "approved exact strings unchanged",
+      "pass": true
+    },
+    {
+      "name": "all eight IDs/titles, original relative offsets, art layers retained",
+      "pass": true
+    },
+    {
+      "name": "all existing room Markdown sections unchanged",
+      "pass": true
+    },
+    {
+      "name": "present ability specifications unchanged",
+      "pass": true
+    },
+    {
+      "name": "exact ST05 decision register retained",
+      "pass": true
+    }
+  ]
 }

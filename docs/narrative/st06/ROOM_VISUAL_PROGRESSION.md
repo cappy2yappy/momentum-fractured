@@ -1,6 +1,12 @@
 # ST-06 Visual Story Progression — 21 Rooms
 **E room names/neighbor graph; P visual overlay.** Nonlinear reading; no clue assumes another optional clue was seen. Existing ST05 beat copy/status remains authoritative. No new props/collisions placed.
 
+## Presentation-order scope
+
+This is the existing **present-world** 21-room overlay for phases A/B/D, not a flashback room list or trigger matrix. The player begins with the current trap/cave sequence, explores and clears creator-selected rooms, later plays a powerless earlier-life flashback, then returns with unlocks, gameplay progress and saves preserved. Exact trigger rooms/conditions and return location remain pending. No row below selects a flashback trigger, adds a room ID or asserts the trap/cave is R0.
+
+The eight P01–P08 attack/fall/aftermath concepts remain unscheduled flashback or memory candidates, not new-game autoplay. Existing mechanics, clues, revisit notes and ST05 decisions below are unchanged.
+
 ## R0 Canal Haven
 - **Neighbors / existing mechanics:** 1, 13; Start/checkpoint; 13 requires Windstep.
 - **First three-second read (P):** Quiet quay.

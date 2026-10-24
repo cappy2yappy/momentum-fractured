@@ -25,9 +25,14 @@ parser=ReviewParser();parser.feed(html)
 embedded=json.loads(next(s["text"] for s in parser.scripts if s["attrs"].get("id")=="initial"))
 check("embedded HTML model equals editable BOARD.json",embedded==data)
 check("eight unique fixed card IDs", [p["id"] for p in data["panels"]]==["P%02d"%i for i in range(1,9)])
-check("continuous 0-90 pacing windows", data["panels"][0]["start"]==0 and data["panels"][-1]["end"]==90 and all(a["end"]==b["start"] for a,b in zip(data["panels"],data["panels"][1:])))
+check("continuous relative 0-90 candidate-study windows (not boot)", data["panels"][0]["start"]==0 and data["panels"][-1]["end"]==90 and all(a["end"]==b["start"] for a,b in zip(data["panels"],data["panels"][1:])))
+check("schema v2 rejects superseded opening-board imports", data["schema"]=="st06-review-2")
+check("confirmed A-B-C-D experience order", [p["id"] for p in data["experience"]]==["A","B","C","D"] and data["presentation_contract"]["order"]==["A","B","C","D"])
+check("flashback trigger rooms and conditions remain unassigned", data["presentation_contract"]["trigger"]["room_ids"] is None and data["presentation_contract"]["trigger"]["conditions"] is None)
+check("chronology distinct from experience order", [p["id"] for p in data["chronology"]]==["CH1","CH2","CH3","CH4"])
+check("all eight panels remain unscheduled candidates", all(p["timeline_scope"]=="candidate-study-only" and p["placement"]=="Unscheduled candidate flashback or memory material" for p in data["panels"]))
 for p in data["panels"]:
-    check(p["id"]+" complete review fields",all(isinstance(p.get(k),str) and p[k] for k in ("purpose","pose","camera","control","geography","audio","entry","exit","reduced","status")))
+    check(p["id"]+" complete review fields",all(isinstance(p.get(k),str) and p[k] for k in ("purpose","pose","camera","control","geography","audio","entry","exit","skip","reduced","status")))
     check(p["id"]+" four layers",set(p["layers"])=={"far","mid","play","front"} and all(p["layers"].values()))
 rooms=data["rooms"]
 check("21 exact room IDs", [r["id"] for r in rooms]==list(range(21)))
@@ -75,14 +80,17 @@ class E {
  addEventListener(k,f){this.listeners[k]=f}
  click(){if(this.listeners.click)this.listeners.click()}
 }
-const initial=JSON.parse(process.env.ST06_MODEL);
-const ids={};for(const id of ['initial','cards','approved','status','export','import','print','reset'])ids[id]=new E(id);
+const payload=JSON.parse(require('fs').readFileSync(0,'utf8'));
+const initial=payload.model;
+const ids={};for(const id of ['initial','cards','experience','chronology','approved','status','export','import','print','reset'])ids[id]=new E(id);
 ids.initial.textContent=JSON.stringify(initial);
 const sandbox={document:{getElementById:id=>ids[id],createElement:t=>new E(t),querySelectorAll:()=>[]},
 structuredClone,Blob,URL:{createObjectURL:()=> 'blob:review',revokeObjectURL:()=>{}},
 setTimeout:f=>f(),window:{confirm:()=>true,print:()=>{}},console};
-vm.createContext(sandbox);vm.runInContext(process.env.ST06_JS,sandbox);
+vm.createContext(sandbox);vm.runInContext(payload.js,sandbox);
 assert.equal(ids.cards.children.length,8);
+assert.equal(ids.experience.children.length,4);
+assert.equal(ids.chronology.children.length,4);
 assert.equal(ids.approved.children.length,3);
 function exec(s){return vm.runInContext(s,sandbox)}
 assert.equal(exec('validateImport(structuredClone(initial)).panels.length'),8);
@@ -93,7 +101,14 @@ for(const change of [
 'v.panels[0].id="P99"',
 'v.rooms[0].neighbors=[]',
 'v.panels[0].review="approved"',
-'v.panels[0].pose=17']){
+'v.panels[0].pose=17',
+'v.schema="st06-review-1"',
+'v.presentation_contract.trigger.room_ids=[1]',
+'v.experience.reverse()',
+'v.experience[0].purpose=17',
+'v.chronology.reverse()',
+'v.panels[0].placement="New-game opening"',
+'v.panels[0].window="0-90 seconds at boot"']){
  exec('var v=structuredClone(initial);'+change);
  assert.throws(()=>exec('validateImport(v)'));
 }
@@ -101,13 +116,11 @@ exec('var unsafe=structuredClone(initial);unsafe.panels[0].notes="<img src=x one
 assert.equal(ids.cards.children.length,8);
 ids.export.click();assert(ids.status.textContent.includes('exported'));
 ids.reset.click();assert(ids.status.textContent.includes('restored'));
-console.log('PASS: render 8 cards; locks reject six invalid imports; text-only content; export/reset handlers');
+console.log('PASS: render 8 cards; locks reject thirteen invalid imports; text-only content; export/reset handlers');
 """
-import os
-env=dict(os.environ,ST06_MODEL=json.dumps(data),ST06_JS=js)
-model=subprocess.run(["node","-e",harness],env=env,text=True,capture_output=True)
+model=subprocess.run(["node","-e",harness],input=json.dumps({"model":data,"js":js}),text=True,capture_output=True)
 check("DOM-model render/import/export/reset",model.returncode==0)
-result={"status":"PASS","executed":[*checks],"count":len(checks),"scope":"Structural/content and JavaScript model only",
+result={"status":"PASS","executed":[*checks],"count":len(checks),"scope":"Structural/content and JavaScript model only", "runner":"Python validator with Node syntax/DOM model",
 "not_executed":["native browser rendering/visual QA","screen-reader/accessibility audit","Godot/runtime","Windows/macOS playtest","FPS","controller/save/transition QA","actual artwork/animation review"],
 "inherited_claims":"ST05/WD/source evidence was read; their runtime/test claims were not rerun.",
 "model_output":model.stdout.strip(),
