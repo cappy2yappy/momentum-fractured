@@ -41,8 +41,14 @@ Level/Art/CIN: review geography, frame composition, accessibility and future pre
 
 ## Validation and limits
 
-See VALIDATION.json for 158 executed assertions and runner provenance; validate_fallback.js reproduces those checks. Six additional before/after comparisons confirmed unchanged room data, approved strings, original candidate IDs/titles/relative offsets/art layers, room Markdown sections, ability specifications and ST05 decision register. Structural/document/HTML/JSON checks and the actual review JavaScript's DOM-model import/edit/export/reset behavior were rerun in the available V8 code runtime. The existing Python/Node command could not be launched: the host rejected execution because a configured file:///workspace permission path is invalid on Windows. The updated Python runner is supplied for a later local rerun, not claimed as executed here.
+Retry verification completed October 24, 2026 against committed revision `a6d7fb21d37e813d75dce8119a2b4bfd3707153b`. All 11 downloaded ST06 files matched their Git blob hashes before testing. The presentation-order revision had already reached PR107 before the interrupted response; this retry does not rebuild or replace it.
 
-Browser visual testing: **not run**. Native browser layout, real download/print, screen reader/accessibility and responsive rendering are not covered by the model checks. No Godot run, native playtest, controller/save/transition QA, FPS or artwork review performed. Prior 131-check results are not copied forward as current execution evidence.
+- **Passed locally:** `python docs/narrative/st06/validate.py` — 136 assertions, including HTML parsing, JSON/document structure, Node syntax validation and the actual review JavaScript's DOM-model render/import/export/reset behavior.
+- **Passed locally:** `node docs/narrative/st06/validate_fallback.js` — 158 assertions, including four experience phases, separate chronology, eight retained candidates, Markdown/model agreement and 13 invalid-import cases.
+- These suites overlap; their counts are not a combined unique-test total. Both commands exited 0 using Python 3.10.6 and Node v24.13.0. The earlier launcher failure no longer blocks this retry.
+- `VALIDATION.json` records both fresh runs, hashes of the verified documentation and the scope limits. The earlier V8 execution and six before/after preservation comparisons remain historical evidence, not newly executed comparisons.
+- Remote comparison of the narrative revision against `9426c7d8086bc20745fd7301fa1f318c84d0b6d3` confirms 11 changed files, all under `docs/narrative/st06/`. This retry updates only this handoff and validation evidence; the board and all narrative content remain as committed.
 
-Final revision SHA, draft status and docs-only remote comparison are reported in the task response after publication. Keep PR107 draft/unmerged; stop again for creator review.
+Browser visual testing: **not run**. Native browser layout, real download/print, screen reader/accessibility and responsive rendering are not covered by DOM-model checks. No Godot run, native playtest, controller/save/transition QA, FPS or artwork review performed. Prior runtime claims remain unverified by this documentation task.
+
+Keep PR107 draft/unmerged; stop again for creator review. The creator's trigger-room, earlier-life scope and return-policy decisions remain pending.
