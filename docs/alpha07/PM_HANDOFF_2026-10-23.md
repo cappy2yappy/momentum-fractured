@@ -1,4 +1,6 @@
-# KAZE PM handoff, 2026-10-23 16:50 NY (Claude coordination checkpoint)
+# KAZE PM handoff, 2026-10-23 16:50 NY, updated 2026-10-25 00:45 (Claude coordination checkpoint)
+
+**UPDATE 2026-10-25:** #100 head is now `6ab1454e` (was `7b162dd5`), and direct mouse joint manipulation is already published in #100, so sections 3 and 7 below are superseded by the update notes in them. New draft PRs seen since: #107 narrative/st06-storyboards `c5df8b49`, #108 prototype/anim-stop-01 `ea6eb475`, #109 prototype/en02-behaviors `90bdf365`, #110 art/env12-world-cohesion `e93e0b98` (not reviewed by Claude, ownership unverified). The verified Windows Candidate 3 package is the first priority for the existing BUILD-07/08 owner. Heads of #80, #101 and #95 re-verified unchanged.
 
 Purpose: let coordination continue safely if Claude's usage limit is reached. Everything here is read from GitHub (cappy2yappy/momentum-fractured). All specialist PRs are draft and unmerged. No implementation, generation, external transfer, merge or release is authorized by this note.
 
@@ -12,7 +14,7 @@ Owners: Codex leads implementation and delegates to specialists; Claude is integ
 | PR | Branch @ head | Stream |
 |---|---|---|
 | #101 | qa/qa10-cinematic-native-regression @ `2b727670` | QA-10, independent QA owner |
-| #100 | tools/cin-tools-03-studio @ `7b162dd5` | Cinematic Studio, Studio owner |
+| #100 | tools/cin-tools-03-studio @ `6ab1454e` (was `7b162dd5`) | Cinematic Studio, Studio owner |
 | #99 | codex/art11-environmental-assets @ `250afde2` | ART-11 |
 | #98 | codex/ld08-open-top-boundaries @ `2ceaf453` | LD-08 |
 | #97 | codex/gp09-narrative-vertical-slice @ `02c69c31` | GP-09 |
@@ -28,11 +30,12 @@ Owners: Codex leads implementation and delegates to specialists; Claude is integ
 | #79, #78 | tools/ld-tools-02-room-creator `7a17cb42`, tools/cin-tools-01-cutin-maker `af184380` | Tools |
 | #77, #62 | candidate/wave3-targeted-3 `c2170032`, art/art08-embodied-cinematic-animation `98d639f3` | Candidate 3, ART-08 |
 
-## 3. Cinematic Studio #100 at `7b162dd5`
-Reports a usable Mac workflow: pose and key a joint, save a native Animation, reload in a fresh process, reuse the exact clip in two Director shots at 1.0x. 212 headless plus 212 native-rendered assertions, zero failures (author-reported; Claude has not rerun). Prototype only: flat-art seams, FK limb overlap, unvalidated foot contact. Windows, controllers, exports and creator acceptance pending. Note: this head is newer than the one QA-10 tested (`d227b038`); see section 4.
+## 3. Cinematic Studio #100 (now `6ab1454e`, was `7b162dd5`)
+Update: the owner reports 333 headless plus 333 rendered assertions at this head (203 Studio assertions now use the normal Mac app loop); neither Claude nor the PM has rerun them. Raw logs: `docs/cin_tools_03/qa/mac_launch` on the branch.
+Reports a usable Mac workflow: pose and key a joint, save a native Animation, reload in a fresh process, reuse the exact clip in two Director shots at 1.0x. 212 headless plus 212 native-rendered assertions, zero failures (author-reported; Claude has not rerun). Prototype only: flat-art seams, FK limb overlap, unvalidated foot contact. Windows, controllers, exports and creator acceptance pending. Note: this head is newer than the one QA-10 tested (`d227b038`); see section 4. #100 itself states #101 is not imported and is not full certification.
 
 ## 4. QA-10 #101 at `2b727670`
-Diagnosis complete: the automation HUD still ran the production focus-pause handler, pause survived world replacement, and an unbounded native screenshot wait could stall. Same mechanisms on #78 and #100. A test-only overlay is reported to pass complete macOS native suites (#100: 855 native plus 16 contract; #78: 826 plus 16; headless 2,505; 609 production files unchanged). **Pending:** coordinator review of the #101 diff (Claude, not yet done), PM acceptance, and a rerun against #100's newer head `7b162dd5`, since #101 was validated against `d227b038`. The compositor-specific reason for suppressed draws is unresolved. macOS Godot startup crashes are a separate diagnostic, unresolved by #101. Windows native validation not done.
+Diagnosis complete: the automation HUD still ran the production focus-pause handler, pause survived world replacement, and an unbounded native screenshot wait could stall. Same mechanisms on #78 and #100. A test-only overlay is reported to pass complete macOS native suites (#100: 855 native plus 16 contract; #78: 826 plus 16; headless 2,505; 609 production files unchanged). **Pending:** coordinator review of the #101 diff (Claude, not yet done), PM acceptance, and a rerun by the existing QA-10 owner against #100's current head `6ab1454e`, since #101 was validated against `d227b038`. The compositor-specific reason for suppressed draws is unresolved. macOS Godot startup crashes are a separate diagnostic, unresolved by #101. Windows native validation not done.
 
 ## 5. CIN-04 clip-reuse prerequisites (Claude's reading, confirm with the CIN-04 owner)
 CIN-04 (#96) is stacked on #86 and #78 and uses Cut-In Maker timelines, not Studio clips. To reuse Studio clips it needs: (a) #100 persisted clips accepted by the creator and QA-10 accepted; (b) a shared interface that does not duplicate Studio code; (c) INT-01 state-before-presentation preserved (progression applied before `request_cutin`; cinematics never own flags, saves or spawns); (d) cancellation on room rebuild. CIN-04 copy for Resistance and Fallen Defenders is proposal only; no location, identity or casualty is canon.
@@ -41,7 +44,7 @@ CIN-04 (#96) is stacked on #86 and #78 and uses Cut-In Maker timelines, not Stud
 #95 audits 15 local images and 40 key specifications; all four production staircase slots (grounded and expressive, ascent and descent) are empty. Original drawings and visually validated foot contacts are missing; Image4 keys are source studies only. The artist handoff is `ART_MANE_HANDOFF.md`; the direct Art Mane thread lookup failed, so no artist message was delivered. PR #62 (ART-08) is the verified repository destination: script-authored candidates, door_turn_to_rear stand-in, door_turn_to_side unfinished, creator acceptance reserved. Standalone rig parts and a Studio scene were absent from inspected source trees.
 
 ## 7. Active Codex work: direct mouse joint manipulation
-Reported active by the PM. I found no published PR, branch or commit message for it as of 16:50, so ownership and status are unverified. It presumably extends Studio (#100). Do not start a parallel implementation; ask the Codex lead for the branch and base.
+UPDATE: it is published in #100 at `6ab1454e`, covering all 18 existing FK pivots (drag to move, gold grip or Alt-drag to rotate, explicit Key pose; one drag is one undo unit). Ownership stays with the existing Studio task. Needs review, not a new task. Earlier statement that no PR existed was true at 16:50 and is now superseded.
 
 ## 8. Open gates
 - **Creator:** Alpha 0.6.1 acceptance, roof, Level questions (pit penalty, service routes, strips), ST-05 D1 to D14, casualty options, world-design sheets (pending, authoritative on arrival), Studio and CIN-04 visual review, ART-10 originals.
