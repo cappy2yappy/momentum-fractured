@@ -21,16 +21,24 @@ var encounter_dispatched = false
 var crossing_started = false
 var reload_requested = false
 var save_attempts = 0
+var startup_started = false
+var startup_error = ""
+var fresh_pending = false
+var startup_callbacks: Array = []
+var prior_objects: Array = []
+var prior_rules: Array = []
 
 func _ready():
+	if startup_started: return
+	startup_started = true
+	initialized = false
 	save_path = "user://gp09_vertical_slice_v1.json"
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--gp09-save="): save_path = arg.trim_prefix("--gp09-save=")
-	if "--gp09-fresh" in OS.get_cmdline_user_args() and not get_tree().root.has_meta("gp09_fresh_applied"):
-		DirAccess.remove_absolute(save_path)
-		get_tree().root.set_meta("gp09_fresh_applied",true)
+	fresh_pending = "--gp09-fresh" in OS.get_cmdline_user_args() and not get_tree().root.has_meta("gp09_fresh_applied")
 	checkpoint_position = Vector2(180,618)
 	super._ready()
+	player.set_physics_process(false)
 	test_mode = false
 	checkpoint_room = 0
 	checkpoint_position = Vector2(180,618)
@@ -42,6 +50,25 @@ func _ready():
 	hud.set_process_input(false)
 	camera.limit_right = 3000; camera.limit_bottom = 760
 	camera.position_smoothing_enabled = false
+	make_hud()
+	prior_objects = story.objects.duplicate(true)
+	prior_rules = story.rules.duplicate(true)
+	if not _initialize_slice(): return
+	# Fresh startup never destroys the previous profile until all validation passes.
+	if fresh_pending:
+		if FileAccess.file_exists(save_path):
+			var removal = DirAccess.remove_absolute(save_path)
+			if removal != OK:
+				_fail_startup("fresh profile", "Could not remove isolated save: %s" % error_string(removal))
+				return
+		get_tree().root.set_meta("gp09_fresh_applied",true)
+	fresh_pending = false
+	initialized = true
+	player.set_physics_process(true)
+	steam.set_physics_process(true)
+	camera.reset_smoothing()
+
+func _initialize_slice() -> bool:
 	presenter = Presenter.new()
 	add_child(presenter); presenter.configure(self)
 	presenter.reduced = "--reduced-motion" in OS.get_cmdline_user_args()
@@ -50,7 +77,11 @@ func _ready():
 	var entries = [{"version":1,"id":"gp09_guard","type":"guard","position":[1300,620],
 		"territory":[1060,1500],"hp":4,"windup":0.85,"speed":85,
 		"activation":"immediate","persistent":true,"completion_event":"evt/gp09_guard_done"}]
-	assert(consumers.register_encounter(story,"gp09_guard",entries))
+	var encounter_ok = consumers.register_encounter(story,"gp09_guard",entries)
+	if not encounter_ok:
+		_fail_startup("encounter", "Registration rejected: gp09_guard")
+		return false
+	startup_callbacks.append(["spawn_encounter", "gp09_guard", story.effect_consumers.spawn_encounter.gp09_guard])
 	steam = Hazard.new(); steam.placement = Placement.new()
 	steam.placement.placement_id = "gp09_steam"
 	steam.placement.at = Vector2(1740,230)
@@ -61,12 +92,67 @@ func _ready():
 	steam.placement.recovery_seconds = 1.8
 	steam.placement.initially_enabled = true
 	steam.player = player; add_child(steam)
-	assert(consumers.register_hazard(story,"gp09_steam",steam,["trap/gp09_steam"],[]))
-	assert(story.load_data("res://data/gp09/objects.json","res://data/gp09/rules.json"))
+	steam.set_physics_process(false)
+	if not steam.valid:
+		_fail_startup("hazard", "Invalid placement: %s" % steam.placement.validation_errors())
+		return false
+	var hazard_ok = consumers.register_hazard(story,"gp09_steam",steam,["trap/gp09_steam"],[])
+	if not hazard_ok:
+		_fail_startup("hazard", "Registration rejected: gp09_steam")
+		return false
+	startup_callbacks.append(["arm_hazard", "gp09_steam", story.effect_consumers.arm_hazard.gp09_steam])
+	var story_ok = story.load_data("res://data/gp09/objects.json","res://data/gp09/rules.json")
+	if not story_ok:
+		_fail_startup("story", "Could not validate res://data/gp09/objects.json and res://data/gp09/rules.json")
+		return false
+	if story.objects.size() != 1 or story.objects[0].get("id") != DISC or story.rules.size() != 3:
+		_fail_startup("story", "Expected GP09 object/rule inventory missing")
+		return false
 	consumers.update()
-	make_hud()
-	initialized = true
-	camera.reset_smoothing()
+	return true
+
+func _rollback_startup():
+	for entry in startup_callbacks:
+		var registry = story.effect_consumers[entry[0]]
+		if registry.get(entry[1]) == entry[2]: registry.erase(entry[1])
+	startup_callbacks.clear()
+	if consumers != null: consumers.dispose()
+	consumers = null
+	if is_instance_valid(steam):
+		steam.set_physics_process(false)
+		steam.free()
+	steam = null
+	if is_instance_valid(presenter):
+		presenter.cancel("startup_failed")
+		if story.cutin_presenter == presenter: story.cutin_presenter = null
+		presenter.free()
+	presenter = null
+	story.objects = prior_objects
+	story.rules = prior_rules
+
+func _fail_startup(stage: String, detail: String):
+	initialized = false
+	startup_error = "GP09 startup failed [%s]: %s" % [stage, detail]
+	_rollback_startup()
+	player.set_physics_process(false)
+	player.velocity = Vector2.ZERO
+	reload_requested = false
+	exiting = false
+	status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	status.size = Vector2(1232,190)
+	status.get_parent().get_child(0).size = Vector2(1280,210)
+	status.text = startup_error + "\nGameplay and saving are disabled. Close and relaunch after correcting the error."
+	push_error(startup_error)
+	var quit_button = Button.new()
+	quit_button.text = "Quit"
+	quit_button.position = Vector2(24,220)
+	quit_button.pressed.connect(func(): get_tree().quit())
+	status.get_parent().add_child(quit_button)
+	quit_button.grab_focus()
+	queue_redraw()
+
+func load_progress():
+	if not fresh_pending: super.load_progress()
 
 func build_room(_index):
 	# Called by base setup; never invokes the production room builder.
@@ -81,6 +167,7 @@ func build_room(_index):
 func room_size(_index: int) -> Vector2: return Vector2(3000,760)
 func request_room(_target, _arrival = Vector2.INF): pass
 func save_progress():
+	if not initialized: return false
 	save_attempts += 1
 	return super.save_progress()
 
@@ -99,9 +186,10 @@ func make_hud():
 	layer.add_child(veil)
 
 func safe_to_leave() -> bool:
-	return story.control_ready() and presenter.active_id.is_empty() and presenter.pending.is_empty() and not story.panel.opened
+	return initialized and story.control_ready() and presenter.active_id.is_empty() and presenter.pending.is_empty() and not story.panel.opened
 
 func reconcile_story():
+	if not initialized: return
 	# Reconstruct pending work from existing persistent dictionaries after reload.
 	# No additional save fields or transient Node references are serialized.
 	if story.has(DISC) and not story.has("evt/gp09_discovered"):
@@ -177,6 +265,7 @@ func interact():
 	story.interact(self)
 
 func _unhandled_input(event):
+	if not initialized: return
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.physical_keycode == KEY_F5 and safe_to_leave():
 			if save_progress(): announce("Progress saved.",2)
