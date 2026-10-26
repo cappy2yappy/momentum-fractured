@@ -1,0 +1,27 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+Movie Maker mode enabled, recording movie in 1280×720 @ 30 FPS...
+RECORD stage 1
+RECORD stage 2
+RECORD stage 3
+RECORD stage 4
+RECORD stage 5
+RECORD stage 6
+RECORD stage 7
+RECORD stage 8
+RECORD stage 9
+RECORD stage 10
+RECORD stage 11
+RECORD stage 12
+RECORD stage 13
+RECORD stage 14
+RECORD stage 15
+RECORDED COMPLETE: normal movement, real combat, vent timing, recovery and exit
+--------------------------------------------------------------------------------
+Done recording movie at path: C:/Users/TonyS/.codex/.chatgpt-projects/g-p-6aa9b0443c20819186909618bb6be970/kaze-gp09-work/build/gp09/gameplay.avi
+850 frames at 30 FPS (movie length: 00:00:28:10), recorded in 00:00:16 (175% of real-time speed).
+CPU render time: 0.80 seconds (average: 0.94 ms/frame)
+GPU render time: 0.47 seconds (average: 0.55 ms/frame)
+Encoding time: 7.47 seconds (average: 8.79 ms/frame)
+--------------------------------------------------------------------------------

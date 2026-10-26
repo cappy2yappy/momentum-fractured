@@ -1,0 +1,40 @@
+{
+  "contract": 1,
+  "rules": [
+    {
+      "trigger": "evt/gp09_examined",
+      "effects": [
+        {
+          "kind": "set_flag",
+          "id": "evt/gp09_discovered"
+        }
+      ]
+    },
+    {
+      "trigger": "evt/gp09_presentation_done",
+      "effects": [
+        {
+          "kind": "spawn_encounter",
+          "id": "gp09_guard"
+        },
+        {
+          "kind": "set_flag",
+          "id": "trap/gp09_steam"
+        },
+        {
+          "kind": "arm_hazard",
+          "id": "gp09_steam"
+        }
+      ]
+    },
+    {
+      "trigger": "evt/gp09_guard_done",
+      "effects": [
+        {
+          "kind": "set_flag",
+          "id": "enc/gp09_complete"
+        }
+      ]
+    }
+  ]
+}

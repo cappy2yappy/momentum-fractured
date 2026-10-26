@@ -1,0 +1,22 @@
+{
+  "contract": 1,
+  "objects": [
+    {
+      "id": "disc/gp09_bundle",
+      "room": 0,
+      "at": [
+        850,
+        620
+      ],
+      "radius": 90,
+      "kind": "examine",
+      "title": "Abandoned bundle — provisional study",
+      "pages": [
+        "A torn wrap lies beneath the damaged arch. Dust has settled over its contents.",
+        "There is no name, no clear destination. Kaze leaves the bundle where it was found.\n\nThis room and its events are a gameplay study, not established canon."
+      ],
+      "once": false,
+      "event": "evt/gp09_examined"
+    }
+  ]
+}

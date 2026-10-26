@@ -1,0 +1,45 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+PASS: idle restores previous visible size
+PASS: idle imports with correct frame geometry
+PASS: idle frame 0 contains artwork
+PASS: idle frame 1 contains artwork
+PASS: idle frame 2 contains artwork
+PASS: idle frame 3 contains artwork
+PASS: idle frame 4 contains artwork
+PASS: idle frame 5 contains artwork
+PASS: idle frame 6 contains artwork
+PASS: idle frame 7 contains artwork
+PASS: run restores previous visible size
+PASS: run imports with correct frame geometry
+PASS: run frame 0 contains artwork
+PASS: run frame 1 contains artwork
+PASS: run frame 2 contains artwork
+PASS: run frame 3 contains artwork
+PASS: run frame 4 contains artwork
+PASS: run frame 5 contains artwork
+PASS: run frame 6 contains artwork
+PASS: run frame 7 contains artwork
+PASS: attack restores previous visible size
+PASS: attack imports with correct frame geometry
+PASS: attack frame 0 contains artwork
+PASS: attack frame 1 contains artwork
+PASS: attack frame 2 contains artwork
+PASS: attack frame 3 contains artwork
+PASS: attack frame 4 contains artwork
+PASS: attack frame 5 contains artwork
+PASS: attack frame 6 contains artwork
+PASS: attack frame 7 contains artwork
+PASS: traversal restores previous visible size
+PASS: traversal imports with correct frame geometry
+PASS: traversal frame 0 contains artwork
+PASS: traversal frame 1 contains artwork
+PASS: traversal frame 2 contains artwork
+PASS: traversal frame 3 contains artwork
+PASS: traversal frame 4 contains artwork
+PASS: traversal frame 5 contains artwork
+PASS: traversal frame 6 contains artwork
+PASS: traversal frame 7 contains artwork
+PASS: Dash retains traversal pose 7
+PASS: Left-facing cleaned art mirrors correctly
+PASS: Dash uses restored scale and preserved floor pivot

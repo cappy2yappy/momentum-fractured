@@ -1,0 +1,41 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.44 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 4070 Laptop GPU
+
+PASS approved player controller instantiated
+PASS existing StoryDirector loads validated isolated content
+PASS one managed enemy consumer registered
+PASS one HAZ01 consumer registered
+PASS no premature encounter or hazard
+INSPECT DEBUG (850.0, 619.5) safe=true candidate={ "id": "disc/gp09_bundle", "room": 0.0, "at": [850.0, 620.0], "radius": 90.0, "kind": "examine", "title": "Abandoned bundle — provisional study", "pages": ["A torn wrap lies beneath the damaged arch. Dust has settled over its contents.", "There is no name, no clear destination. Kaze leaves the bundle where it was found.\n\nThis room and its events are a gameplay study, not established canon."], "once": false, "event": "evt/gp09_examined" } transition=0.0 hp=3
+PASS existing examination panel owns pause
+PASS discovery recorded through StoryDirector
+PASS inspection precedes cinematic and encounter
+PASS real version8 disk save contains discovery
+PASS discovery survives destruction and actual reload
+PASS reload resumes uncompleted presentation
+PASS duplicate active requests cannot enqueue overlapping cinematic
+PASS interrupted presentation never advances encounter
+PASS interrupted presentation retries after controls restore
+PASS cinematic handoff commits completion and restores controller
+PASS exactly one EN01 encounter dispatched
+PASS registered HAZ01 vent armed with full warning
+PASS repeated discovery cannot repeat completed presentation or enemy
+PASS managed defeated enemy freed during transition
+PASS enemy persistence waits during transition
+PASS enemy state waits for control ownership
+PASS ID-based deferred defeat and story completion flush
+PASS safe shelter restores health outside enemy territory and vent
+PASS both story stages survive disk reload
+PASS defeated managed enemy does not respawn
+PASS completed cinematic does not replay after reload
+PASS real HAZ01 overlap damages approved controller
+PASS far recovery area remains available after hazard damage
+PASS crossing records progression
+PASS exit takes a bounded control lease
+PASS event raised during exit remains queued
+PASS exit restores normal movement control
+PASS exit drains queued event and persists completion
+PASS approved controller responds to movement after exit
+PASS death recovery preserves discovery and defeated state
+PASS unchanged serializer writes persistent enemy state
+GP09: 36 checks, 0 failures
