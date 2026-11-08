@@ -62,7 +62,16 @@ Water affinity and the later betrayal / masked-helper arc are confirmed in [ST01
 ## Full elementals, remnants and the refuge
 **CONFIRMED:** Exactly four full elementals exist in the present-day world. This is a count of full elemental people, not a count of villagers or an authorization to add four more companions. Ordinary clan members possess weaker remnants of wind power rather than the main characters' full elemental abilities.
 
-The currently named principal roster in ST-01 is Kaze (all-element potential), Mizuki (Water), Kenji (Fire) and Aria (Air). Treat these as the existing roster to reconcile with the total of four; the creator has not explicitly enumerated the four in this clarification. Do not invent another full elemental or change an established affinity to fill an assumed classical-element set. Whether Kaze is included in the stated four should be confirmed explicitly.
+**ROSTER CONFIRMED (2026-11-08):** The creator explicitly confirmed that the four are Kaze, Mizuki, Kenji and Aria. Kaze is included in the total of four.
+
+| Full elemental | Confirmed affinity or potential |
+| --- | --- |
+| Kaze | Rare all-element potential |
+| Mizuki | Water |
+| Kenji Harima | Fire |
+| Aria Zephyros | Air |
+
+Do not invent another full elemental or change an established affinity to fill an assumed classical-element set. Darkness remains the ancient antagonist; he is not an additional member of this confirmed present-day roster.
 
 Wind-remnant clan culture does not itself revoke Kenji's Fire affinity or Kaze's rare potential. The inheritance explanation for these exceptional siblings remains open. A surviving trainee, a missing practitioner or a person with elemental ancestry is not automatically another full elemental. The historical count of full elementals and the precise abilities of Mizuki's parents remain unestablished.
 
@@ -78,7 +87,6 @@ The creator's desired illustrated sequence is: ancient battle and failed sealing
 This records the current cinematic direction, not an implementation change. The montage must leave room for the rescue/exposure/infiltration causal chain without revealing Mizuki's betrayal prematurely. Keep her betrayal and masked-helper identity for their established later simultaneous reveal. A precise page/panel script, playable versus cinematic treatment and placement relative to existing exploration/flashback structure remain production decisions.
 
 Continuity still to settle:
-- Explicitly enumerate the four full elementals, including whether Kaze counts within that total.
 - Date Aria's capture relative to the modern setup in which Darkness has only Mizuki. Her disappearance and Kenji's search need not establish that she is already captive at the first modern scene.
 - Explain the earlier approximately 500-year incarnation tradition without inventing ten intervening incarnations or invalidating Darkness's continuous survival.
 - Define the restoration objective and what full-element absorption supplies that lesser remnants cannot.

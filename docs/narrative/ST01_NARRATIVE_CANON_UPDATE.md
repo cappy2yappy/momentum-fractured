@@ -17,7 +17,7 @@
 ### Kaze and the prologue
 
 - Kaze is 16, a lively, compassionate, impulsive girl with dark brown skin from a concealed elemental clan in a fictional modern-Japanese region. She wants to be a hero. Preserve her dark skin in all visual continuity.
-- Exactly four full elementals exist in the present-day world. Ordinary villagers carry weaker wind remnants and do not add to that full-elemental count. Kaze carries a rare lineage with the potential to access and combine all elements. Existing named principals are Kaze, Mizuki, Kenji and Aria; explicit confirmation that these are the intended four remains open. Public sightings are generally treated as urban legends; secret interventions reveal elemental traces.
+- Exactly four full elementals exist in the present-day world. Ordinary villagers carry weaker wind remnants and do not add to that full-elemental count. Kaze carries a rare lineage with the potential to access and combine all elements. The creator explicitly confirmed the four as Kaze (all-element potential), Mizuki (Water), Kenji (Fire) and Aria (Air), with Kaze included in that total. Public sightings are generally treated as urban legends; secret interventions reveal elemental traces.
 - The established attack events remain: Darkness overwhelms Kaze; her parents intervene, arrange her escape and die protecting her; she loses consciousness and awakens afterward. The earlier playable-prologue framing is now being adapted into the creator's illustrated opening direction: ancient battle, a 5,000-year jump, school/clan life, attack, collapse/fall and underground recovery toward light. Cinematic versus playable presentation and alignment with existing exploration/flashback placement remain to be resolved separately. Exact protective escape and landing mechanics remain **OPEN**; this document does not change runtime sequence.
 - Kaze's initial goal is to locate and rescue clan survivors, not pursue revenge. A survivor network eventually establishes a new concealed forest sanctuary while aspiring to reclaim the original refuge.
 
@@ -91,10 +91,9 @@
 5. Aria's degree of memory recovery and whether she supports missions, research/sanctuary operations, or both.
 6. Which existing room/biome can support an ArcuTech neural-control facility without disturbing approved 21-room world progression.
 7. Exact cave/temple geography, protective escape, landing and cinematic/gameplay handoff in the revised opening.
-8. Explicit enumeration of the four full elementals: does the total include Kaze alongside Mizuki, Kenji and Aria?
-9. Aria's capture date relative to Darkness's initial possession/allegiance of Mizuki alone; preserve the later Aria captivity arc.
-10. The full-element restoration objective, remnant absorption limits, and how the 500-year incarnation tradition fits the 5,000-year history.
-11. How Kenji's Fire affinity and Kaze's all-element potential relate to their wind-remnant clan; do not change their confirmed affinities to resolve this.
+8. Aria's capture date relative to Darkness's initial possession/allegiance of Mizuki alone; preserve the later Aria captivity arc.
+9. The full-element restoration objective, remnant absorption limits, and how the 500-year incarnation tradition fits the 5,000-year history.
+10. How Kenji's Fire affinity and Kaze's all-element potential relate to their wind-remnant clan; do not change their confirmed affinities to resolve this.
 
 ## 7. Source traceability
 
@@ -104,5 +103,6 @@
 - Creator conversation through 13 October 2026: revised Kaze/Kenji relationship, investigative assignment, Aria capture/bait target, romance trajectory, tech conditioning, suppressed memories, boss encounter, rescue and recruitment.
 
 - Creator intro-cutscene conversation through 8 November 2026: ancient battle and failed seal, continuous 5,000-year survival, propaganda, ArcuTech power and knowledge boundaries, four full elementals versus wind remnants, Mizuki's manipulated allegiance and eventual consumption threat, and proposed fall/cave opening. Later explicit creator clarifications supersede conflicting foundation wording.
+- Follow-up creator confirmation on 8 November 2026: the four full elementals are Kaze, Mizuki, Kenji and Aria; Kaze is included in the total.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.

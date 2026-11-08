@@ -4,7 +4,7 @@ Updated 2026-11-08. Confirmed events and creator-directed opening concept are di
 ## Established world history
 In an antiquity-like era before modern technology, Darkness kills the former all-element wielder and escapes before sealing is completed. He is believed dead, but lives continuously through the next 5,000 years. His powers help him accumulate wealth and influence; in modern times he secretly leads ArcuTech. Propaganda portraying elementals as cruel and dangerous helps drive survivors into concealment.
 
-Exactly four full elementals exist in the present-day world. Kaze's villagers have weaker wind remnants. The clan believes its community is the last left, within the limits of its knowledge. The public knows ArcuTech without knowing its hidden truth; the clan has suspicions and rumors. Initially Darkness has secured only Mizuki, whose allegiance he obtained through deception and personal manipulation.
+Exactly four full elementals exist in the present-day world: Kaze (all-element potential), Mizuki (Water), Kenji (Fire) and Aria (Air). The creator explicitly confirmed Kaze is included in this total. Kaze's villagers have weaker wind remnants. The clan believes its community is the last left, within the limits of its knowledge. The public knows ArcuTech without knowing its hidden truth; the clan has suspicions and rumors. Initially Darkness has secured only Mizuki, whose allegiance he obtained through deception and personal manipulation.
 
 ## Established causal sequence
 Kaze's clan upbringing and outside school life, trial and imposed responsibility, and secret rescues establish her compassion and conflict with clan rules. The rescues expose elemental traces and the general vicinity. Mizuki infiltrates, develops a genuine friendship and ultimately reveals the refuge location while expecting Kaze's capture rather than a massacre. Darkness attacks and overwhelms Kaze. Her parents arrange her escape and die protecting her. She loses consciousness, survives and begins looking for survivors.
@@ -27,7 +27,7 @@ This is the current cinematic concept. Page/panel count, narration, timing, what
 - Conceal Mizuki's betrayal and masked-helper identity from Kaze and the player until their later simultaneous revelation. Do not show her giving Darkness the refuge location in the opening.
 - Her parents' murder and Darkness's plan to consume her are author-facing truths; their reveal timing is not automatically the prologue.
 - Aria eventually becomes Darkness's captive and an ArcuTech-conditioned opponent used to bait Kaze. Do not establish her as a second captive in the initial modern setup, where Darkness has only Mizuki. Her disappearance can precede a confirmed capture date; the date is open.
-- Kenji remains Kaze's older brother and the Fire elemental; Aria remains Air. Reconcile the four-person total explicitly rather than inventing an additional elemental.
+- The four-person roster is confirmed: Kaze, Mizuki, Kenji and Aria. Kaze counts within the four. Kenji remains Kaze's older brother and the Fire elemental; Aria remains Air. Do not invent another full elemental to complete an assumed classical-element set.
 - The approximately 500-year incarnation tradition remains a history question within the 5,000-year span. Do not invent an intervening cast.
 - Kaze initially seeks and rescues survivors. Her eventual objective is sealing Darkness; the ritual, price, duration, success conditions and ending remain open.
 
