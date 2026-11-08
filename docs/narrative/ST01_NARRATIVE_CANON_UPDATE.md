@@ -1,8 +1,8 @@
 # Kaze / Momentum Fractured | ST-01 Narrative Canon Update
 
-**Scope:** Character continuity, Aria captivity, Kenji investigation, Darkness's neural-conditioning program  
+**Scope:** Character continuity, ancient history, elemental population, propaganda, Aria captivity, Kenji investigation and Darkness's neural-conditioning program  
 **Milestone:** Alpha 0.6 narrative planning (story documentation only)  
-**Source authority:** Creator decisions in project conversation through 13 October 2026; *The Elements: Complete Story Compilation.pdf* (13 pages), inspiration source, not automatically Kaze canon.  
+**Source authority:** Creator decisions through 13 October 2026, the 5 November age/name and visual updates, and the 8 November 2026 intro-cutscene clarification; *The Elements: Complete Story Compilation.pdf* (13 pages), inspiration source, not automatically Kaze canon. The current [KAZE_STORY_BIBLE.md](KAZE_STORY_BIBLE.md) records the reconciled world facts.  
 **Integration policy:** Narrative-only. Do not overwrite approved playable world, save flags, boss IDs, movement or progression without a separate design/implementation review.
 
 ## 1. Status legend
@@ -16,9 +16,9 @@
 
 ### Kaze and the prologue
 
-- Kaze is 16, a lively, compassionate, impulsive girl from a concealed elemental clan in a fictional modern-Japanese region. She wants to be a hero.
-- Clan practitioners generally express one affinity; Kaze carries a rare lineage with the potential to access and combine multiple elements. Public sightings are generally treated as urban legends; secret interventions reveal elemental traces.
-- A playable prologue introduces Kaze and clan life before Darkness attacks. The player witnesses the beginning of the assault. Darkness overwhelms Kaze. Her parents intervene, arrange her escape and die protecting her. She loses consciousness and awakens afterward. The precise escape technique and wake-up location are **OPEN**.
+- Kaze is 16, a lively, compassionate, impulsive girl with dark brown skin from a concealed elemental clan in a fictional modern-Japanese region. She wants to be a hero. Preserve her dark skin in all visual continuity.
+- Exactly four full elementals exist in the present-day world. Ordinary villagers carry weaker wind remnants and do not add to that full-elemental count. Kaze carries a rare lineage with the potential to access and combine all elements. Existing named principals are Kaze, Mizuki, Kenji and Aria; explicit confirmation that these are the intended four remains open. Public sightings are generally treated as urban legends; secret interventions reveal elemental traces.
+- The established attack events remain: Darkness overwhelms Kaze; her parents intervene, arrange her escape and die protecting her; she loses consciousness and awakens afterward. The earlier playable-prologue framing is now being adapted into the creator's illustrated opening direction: ancient battle, a 5,000-year jump, school/clan life, attack, collapse/fall and underground recovery toward light. Cinematic versus playable presentation and alignment with existing exploration/flashback placement remain to be resolved separately. Exact protective escape and landing mechanics remain **OPEN**; this document does not change runtime sequence.
 - Kaze's initial goal is to locate and rescue clan survivors, not pursue revenge. A survivor network eventually establishes a new concealed forest sanctuary while aspiring to reclaim the original refuge.
 
 ### Kenji Harima (Fire)
@@ -32,20 +32,24 @@
 ### Aria Zephyros (Air)
 
 - **CONFIRMED:** Aria is the Air elemental adapted from *The Elements* and Kenji's missing investigation partner. She and Kenji begin as close friends with developing romantic feelings, not an established couple.
-- **CONFIRMED:** Darkness holds Aria to bait **Kaze specifically**. Kenji searches for her.
+- **CONFIRMED:** In Aria's captivity arc, Darkness holds her to bait **Kaze specifically**. Kenji searches for her. **TIMING OPEN:** The creator's current modern setup gives Darkness only Mizuki; Aria's disappearance and eventual capture must be placed consistently with that initial state. Do not establish Aria as a simultaneous second captive at the opening by default.
 - **CONFIRMED:** Aria has been subjected to **technological brainwashing** by ArcuTech, deliberately distinguished from Mizuki's upbringing-based conditioning. Her memories of Kenji are suppressed during her boss encounter.
 - **CONFIRMED:** Aria confronts Kaze as an antagonistic boss under external conditioning and is subsequently freed and recruited as an ally. The exact deconditioning sequence, recovery timescale and subsequent hub/field role remain **OPEN**.
 - **SOURCE ADAPTATION:** Her intelligence, scientific curiosity, emotional insight, air-pressure manipulation, wind barriers, limited flight and weather influence are present in the manuscript. Gameplay implementation of any specific ability remains **PROPOSED**.
 
 ### Mizuki (Water)
 
+- **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The exact lies and her knowledge of who killed her parents remain open.
 - **CONFIRMED:** Darkness raised Mizuki through long-term psychological manipulation and false beliefs after murdering her parents, then used her as an infiltrator of Kaze's clan. She bonds genuinely with Kaze, betrays the refuge location while believing Kaze would be captured rather than the clan massacred, then flees Darkness and aids Kaze in disguise.
 - **CONFIRMED:** The masked helper's identity and Mizuki's betrayal are revealed together later. The confrontation is interrupted and leads to an uneasy alliance without automatic forgiveness.
 - **DISTINCTION:** Mizuki's choices, accountability and relational recovery must never be conflated with Aria's technologically imposed behavioral control.
 
 ### Darkness / ArcuTech
 
-- **CONFIRMED:** Darkness is the ancient antagonist, head of ArcuTech, who hunts and consumes elemental practitioners to increase his power and seeks to eliminate Kaze's bloodline.
+- **CONFIRMED:** The ancient battle occurs in a pre-modern, antiquity-like era. Darkness kills the former all-element wielder and escapes before the sealing is completed. Believed dead afterward, he survives continuously for the 5,000 years leading to modern day. The "ancient Egypt-type" reference is visual-era direction, not literal Earth geography or history.
+- **CONFIRMED:** Darkness uses his powers over that span to accumulate extraordinary wealth and worldwide influence, eventually heading **ArcuTech**. His public corporate identity is not publicly recognized as Darkness.
+- **CONFIRMED:** He hunts elusive full elementals, absorbs elemental life essence to gain power and seeks to eliminate Kaze's bloodline. He needs the remaining full elementals for a restoration objective whose exact mechanism and target state remain open. Wealth and elemental sensing have not allowed him to pinpoint the hidden refuge.
+- **CONFIRMED:** His propaganda portrays elementals as cruel and dangerous and contributes to their concealment. The public knows ArcuTech without knowing its hidden truth; clan members have suspicions and rumors about wrongdoing. They believe their refuge is the last surviving community of its kind, within the limits of their knowledge.
 - **CONFIRMED:** ArcuTech abducts elemental practitioners. Darkness's use of modern neurotechnology against Aria is a step beyond the prolonged grooming used against Mizuki.
 - **PROPOSED:** ArcuTech publicly promotes neurorehabilitation or assistive research as cover for coercive neural manipulation; this corporate cover story needs creator approval.
 
@@ -60,8 +64,8 @@
 ## 4. Proposed narrative sequence (not yet locked beat-for-beat)
 
 1. Kenji and Aria investigate elemental disappearances as a clan assignment.
-2. Aria is captured after pursuing a lead; Kenji searches for her, away when Darkness devastates the village.
-3. Kaze survives the parental sacrifice and begins survivor rescue, later reunites with Kenji.
+2. Aria disappears while following a lead; Kenji searches for her and is absent when Darkness devastates the village. Her capture happens within the broader investigation arc, but its exact placement relative to the initial modern setup is **OPEN**: Darkness has only Mizuki at that setup. The earlier proposed automatic placement of Aria's capture before the opening is no longer fixed.
+3. Kaze survives the parental sacrifice and begins survivor rescue, later reunites with Kenji. Surviving trainees and missing practitioners are not automatically additional full elementals.
 4. Darkness allows an ArcuTech lead to reach the siblings, using captive Aria to bring Kaze into his chosen facility.
 5. Kaze fights Aria, who retains her Air abilities but cannot remember Kenji.
 6. Kaze and Kenji sever the conditioning system without killing Aria.
@@ -75,6 +79,8 @@
 - Kaze remains the **sole playable protagonist** unless separately approved. Kenji and Aria are supporting story characters, not automatic switchable characters.
 - Preserve existing approved level structure and alpha implementation. Placement of Aria's facility, new boss mechanics, upgrades, quests, flags, dialogue and cutscenes requires cross-team review.
 - No forced permanent companion or mandatory elemental upgrade is approved yet.
+- The present-day full-elemental total is four. Do not count ordinary wind-remnant villagers as full elementals, add an unconfirmed fifth bearer or silently change Kenji's Fire or Aria's Air affinity. Historical populations and Mizuki's parents' exact power level are not fixed by this count.
+- The older approximately 500-year incarnation tradition requires reconciliation with the ancient battle; it is not permission to invent intermediate bearers or resurrection events.
 
 ## 6. Open decisions for ST-01 / PM
 
@@ -84,7 +90,11 @@
 4. What visibly disrupts control during the boss fight and how capture/release is prevented.
 5. Aria's degree of memory recovery and whether she supports missions, research/sanctuary operations, or both.
 6. Which existing room/biome can support an ArcuTech neural-control facility without disturbing approved 21-room world progression.
-7. Kaze's wake-up location and exact protective escape technique in the prologue.
+7. Exact cave/temple geography, protective escape, landing and cinematic/gameplay handoff in the revised opening.
+8. Explicit enumeration of the four full elementals: does the total include Kaze alongside Mizuki, Kenji and Aria?
+9. Aria's capture date relative to Darkness's initial possession/allegiance of Mizuki alone; preserve the later Aria captivity arc.
+10. The full-element restoration objective, remnant absorption limits, and how the 500-year incarnation tradition fits the 5,000-year history.
+11. How Kenji's Fire affinity and Kaze's all-element potential relate to their wind-remnant clan; do not change their confirmed affinities to resolve this.
 
 ## 7. Source traceability
 
@@ -93,4 +103,6 @@
 - pp. 12–13: Kenji/Aria friendship and complementary elemental techniques.
 - Creator conversation through 13 October 2026: revised Kaze/Kenji relationship, investigative assignment, Aria capture/bait target, romance trajectory, tech conditioning, suppressed memories, boss encounter, rescue and recruitment.
 
-**Publication status:** Prepared for review. Document creation alone does not imply it has been committed or merged into GitHub.
+- Creator intro-cutscene conversation through 8 November 2026: ancient battle and failed seal, continuous 5,000-year survival, propaganda, ArcuTech power and knowledge boundaries, four full elementals versus wind remnants, Mizuki's manipulated allegiance and eventual consumption threat, and proposed fall/cave opening. Later explicit creator clarifications supersede conflicting foundation wording.
+
+**Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.
