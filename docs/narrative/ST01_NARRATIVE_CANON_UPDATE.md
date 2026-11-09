@@ -46,7 +46,9 @@
 
 ### Darkness / ArcuTech
 
-- **CONFIRMED (creator dialogue clarification, 2026-11-08):** Before the ancient sacrifice, Darkness states that he needs to absorb the former all-element wielder. After causing the wielder's death, he realizes that he killed him before absorbing him, becomes furious about the lost power and leaves in anger. The sacrifice still saves the people, and Darkness still escapes the incomplete seal. The exact dialogue is a draft; failed absorption in this encounter is canon, while general absorption mechanics remain open.
+- **CONFIRMED (expanded creator fight direction, 2026-11-08):** The ancient fight includes hand-to-hand combat, elemental attacks and fighting above the people. The former all-element wielder states that he is fighting to seal Darkness. Darkness states his absorption goal and intends to keep the wielder alive long enough to obtain his power.
+- **CONFIRMED:** Darkness deliberately attacks or threatens the people to force the wielder to choose between protecting them and fighting at full power. The wielder chooses to save them. Diverting his strength gives Darkness the advantage, but Darkness accidentally kills his intended absorption target. The sacrifice succeeds in protecting the people.
+- **CONFIRMED:** Darkness is furious about killing the wielder before absorbing him, then resolves to bide his time until reincarnation and leaves angrily through the incomplete seal. This motivation leads into the 5,000-year jump to modern Kaze's story. The exact dialogue and combat choreography are drafts; failed absorption, the protective choice and the reincarnation vow are canon. General absorption mechanics remain open.
 - **CONFIRMED:** The ancient battle occurs in a pre-modern, antiquity-like era. The former all-element wielder deliberately sacrifices their life to save everyone threatened by Darkness's attack. The people are saved at the cost of the wielder's life. Darkness causes the lethal attack and escapes before the sealing is completed. This is a protective sacrifice, not merely a defeat in a duel; the exact protective technique and its connection to the seal remain open. Believed dead afterward, Darkness survives continuously for the 5,000 years leading to modern day. The "ancient Egypt-type" reference is visual-era direction, not literal Earth geography or history.
 - **CONFIRMED:** Darkness uses his powers over that span to accumulate extraordinary wealth and worldwide influence, eventually heading **ArcuTech**. His public corporate identity is not publicly recognized as Darkness.
 - **CONFIRMED:** He hunts elusive full elementals, absorbs elemental life essence to gain power and seeks to eliminate Kaze's bloodline. He needs the remaining full elementals for a restoration objective whose exact mechanism and target state remain open. Wealth and elemental sensing have not allowed him to pinpoint the hidden refuge.
@@ -81,7 +83,7 @@
 - Preserve existing approved level structure and alpha implementation. Placement of Aria's facility, new boss mechanics, upgrades, quests, flags, dialogue and cutscenes requires cross-team review.
 - No forced permanent companion or mandatory elemental upgrade is approved yet.
 - The present-day full-elemental total is four. Do not count ordinary wind-remnant villagers as full elementals, add an unconfirmed fifth bearer or silently change Kenji's Fire or Aria's Air affinity. Historical populations and Mizuki's parents' exact power level are not fixed by this count.
-- The older approximately 500-year incarnation tradition requires reconciliation with the ancient battle; it is not permission to invent intermediate bearers or resurrection events.
+- Darkness's stated plan to wait for reincarnation is confirmed. The older approximately 500-year incarnation tradition still requires reconciliation with the 5,000-year elapsed history; neither the vow nor the time jump authorizes an invented intervening cast or proves there were no other incarnations. Darkness himself survives continuously and is not reincarnated.
 
 ## 6. Open decisions for ST-01 / PM
 
@@ -109,5 +111,7 @@
 - Further creator clarification on 8 November 2026: the ancient wielder falls because they sacrifice themselves to save everyone. The ancient page must show that choice and its successful protection of other humans; retain shonen anime styling with a darker, less bright palette.
 
 - Further creator dialogue clarification on 8 November 2026: Darkness must express his need to absorb the ancient wielder, react angrily to killing him before absorption, and then depart. This supplements the confirmed protective sacrifice.
+
+- Expanded creator fight direction on 8 November 2026: hand-to-hand and elemental combat, an aerial view above the people, opposed sealing/absorption objectives, a deliberate forced choice, an unintended lethal outcome for Darkness, and a vow to await reincarnation before the modern-day transition.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.
