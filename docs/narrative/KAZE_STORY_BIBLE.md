@@ -84,17 +84,20 @@ Public reputation, clan suspicions, Mizuki's beliefs and the truth revealed to t
 ## Mizuki
 Mizuki is the Water elemental. Her parents left clan life; Darkness found and killed them and took her. Their precise power level is not established by the word "elemental." He raised her through lies, propaganda and psychological manipulation, secured her allegiance and uses her as an infiltrator while secretly intending to consume her eventually.
 Darkness dispatches her to the vicinity exposed by Kaze's rescues. Clan members leave the refuge, creating opportunities for contact. Her elemental presence alone does not expose allegiance.
-Her friendship with Kaze becomes genuine. Seeing Kaze help people undermines her hostile assumptions. Both girls live under choices others have made for them.
+Her friendship with Kaze becomes genuine. Seeing Kaze help people undermines her hostile assumptions, and Kaze helps her break free of the mindset instilled by the caretaker she has trusted. Both girls live under choices others have made for them.
 Water affinity and the later betrayal / masked-helper arc are confirmed in [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md), which supersedes the original open questions about her affinity, betrayal, expectations and later allegiance. Her accepted false account of her family's deaths and the danger of untrained elemental power are established below. Darkness blames air users collectively without naming an individual. The claimed circumstances of the murder and Mizuki's knowledge of Darkness's true identity remain open; accountability is not automatic forgiveness.
 
 ### Mizuki — conditioned beliefs and spy assignment
+
+**CREATOR-CONFIRMED CARETAKER RELATIONSHIP (interview, 2026-11-08):** Mizuki sees Darkness as a caretaker because he has taken care of her. He has instilled his mindset in her through that upbringing. Her relationship with Kaze helps her question and break free of the worldview he taught her. Retain the creator’s caretaker framing; a formal adoption, a father title or a particular form of affection has not been established. This perceived care does not change his concealed responsibility for her parents’ deaths or his eventual plan to consume her.
+
 **CREATOR-CONFIRMED (interview, 2026-11-08):** Darkness tells Mizuki that "the air users" killed her family. He blames that group collectively and does not name an individual culprit. This false accusation directs her grievance toward the clan. The author-facing truth remains that Darkness himself killed her parents.
 
 The creator’s clarification resolves the previous assumption that Darkness names a particular murderer. Do not substitute Kaze, her parents, a clan elder or Aria as a named accused person. "Air users" is the wording of his accusation; it does not establish additional full Air elementals or change the four-person present-day roster.
 
 He also teaches her that powers like hers can be very dangerous without proper training. That belief, combined with the grievance he has created against the clan, supplies her motivation to accept the infiltration assignment. She genuinely believes his account because it is the worldview he has raised her within. Do not depict her as knowingly collaborating with her parents' murderer at the start of the story.
 
-Her later genuine friendship with Kaze and belief that the operation will capture Kaze rather than massacre the clan remain intact. The exact promised treatment of Kaze after capture and the moment Mizuki first doubts the story remain open. This creator-facing explanation does not authorize revealing her spy role before the established later betrayal/masked-helper reveal.
+Her later genuine friendship with Kaze and belief that the operation will capture Kaze rather than massacre the clan remain intact. Kaze's role in helping her break free of Darkness's mindset is confirmed; the specific first moment of doubt, timing of her break with him and exact promised treatment of Kaze after capture remain open. This creator-facing explanation does not authorize revealing her spy role before the established later betrayal/masked-helper reveal.
 
 ### Mizuki — likes, dislikes and everyday habit
 **CREATOR-CONFIRMED (2026-11-08):** The creator approved the proposed preferences and rematch habit for her bible profile.
