@@ -46,7 +46,7 @@
 
 ### Darkness / ArcuTech
 
-- **CONFIRMED:** The ancient battle occurs in a pre-modern, antiquity-like era. Darkness kills the former all-element wielder and escapes before the sealing is completed. Believed dead afterward, he survives continuously for the 5,000 years leading to modern day. The "ancient Egypt-type" reference is visual-era direction, not literal Earth geography or history.
+- **CONFIRMED:** The ancient battle occurs in a pre-modern, antiquity-like era. The former all-element wielder deliberately sacrifices their life to save everyone threatened by Darkness's attack. The people are saved at the cost of the wielder's life. Darkness causes the lethal attack and escapes before the sealing is completed. This is a protective sacrifice, not merely a defeat in a duel; the exact protective technique and its connection to the seal remain open. Believed dead afterward, he survives continuously for the 5,000 years leading to modern day. The "ancient Egypt-type" reference is visual-era direction, not literal Earth geography or history.
 - **CONFIRMED:** Darkness uses his powers over that span to accumulate extraordinary wealth and worldwide influence, eventually heading **ArcuTech**. His public corporate identity is not publicly recognized as Darkness.
 - **CONFIRMED:** He hunts elusive full elementals, absorbs elemental life essence to gain power and seeks to eliminate Kaze's bloodline. He needs the remaining full elementals for a restoration objective whose exact mechanism and target state remain open. Wealth and elemental sensing have not allowed him to pinpoint the hidden refuge.
 - **CONFIRMED:** His propaganda portrays elementals as cruel and dangerous and contributes to their concealment. The public knows ArcuTech without knowing its hidden truth; clan members have suspicions and rumors about wrongdoing. They believe their refuge is the last surviving community of its kind, within the limits of their knowledge.
@@ -104,5 +104,7 @@
 
 - Creator intro-cutscene conversation through 8 November 2026: ancient battle and failed seal, continuous 5,000-year survival, propaganda, ArcuTech power and knowledge boundaries, four full elementals versus wind remnants, Mizuki's manipulated allegiance and eventual consumption threat, and proposed fall/cave opening. Later explicit creator clarifications supersede conflicting foundation wording.
 - Follow-up creator confirmation on 8 November 2026: the four full elementals are Kaze, Mizuki, Kenji and Aria; Kaze is included in the total.
+
+- Further creator clarification on 8 November 2026: the ancient wielder falls because they sacrifice themselves to save everyone. The ancient page must show that choice and its successful protection of other humans; retain shonen anime styling with a darker, less bright palette.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.

@@ -18,7 +18,7 @@ Open: power mastery, speech policy, exact escape protection and emotional resolu
 ## Ancient history and the 5,000-year interval
 **CONFIRMED:** The ancient battle predates modern technology. The creator's "ancient Egypt-type" comparison establishes an antiquity-like visual era, not literal Earth history or an approved Egyptian religion, location or royal dynasty.
 
-Darkness battles the former wielder of all elements, kills that wielder and escapes before the attempted sealing is completed. He is subsequently believed dead, but survives continuously across the 5,000 years leading to the modern story. The creator describes modern Darkness as 5,000 years old; do not replace this with a resurrection, successor or a new modern incarnation.
+Darkness battles the former wielder of all elements. **The wielder deliberately sacrifices their life to save everyone threatened by Darkness's attack.** Protecting the people succeeds, but costs the wielder their life; their fall is a heroic protective choice, not simply losing a duel. Darkness remains responsible for the lethal attack and escapes before the attempted sealing is completed. The exact protective technique and its relationship to the incomplete seal remain open. He is subsequently believed dead, but survives continuously across the 5,000 years leading to the modern story. The creator describes modern Darkness as 5,000 years old; do not replace this with a resurrection, successor or a new modern incarnation.
 
 Across that interval he uses his powers to accumulate extraordinary wealth and influence. Modern ArcuTech is the culmination of that rise, not an ancient technological corporation. The exact origin of his longevity, the failed sealing procedure, who attempts it and the dates of intermediate incarnations remain open.
 
@@ -82,7 +82,9 @@ The attack devastates the clan. Darkness overwhelms Kaze; her parents arrange he
 Enemy direction: ninja forces serving Darkness. Detailed recruitment and organization remain undeveloped.
 
 ## Intro-cutscene direction and unresolved continuity
-The creator's desired illustrated sequence is: ancient battle and failed sealing → 5,000-year time jump → modern ArcuTech and concealed clan context → Kaze's school/clan life → attack and parental protection → collapse and fall → battered recovery underground → movement toward light and the intended gameplay handoff.
+The creator's desired illustrated sequence is: ancient battle, the former wielder's protective sacrifice and failed sealing → 5,000-year time jump → modern ArcuTech and concealed clan context → Kaze's school/clan life → attack and parental protection → collapse and fall → battered recovery underground → movement toward light and the intended gameplay handoff.
+
+**Ancient-page art direction (creator clarification, 2026-11-08):** Use clean Naruto/MHA-inspired shonen anime linework, expressive faces and cel shading, with a subdued, darker dramatic palette rather than the overly bright color pass. The ancient setting contains other humans: defenders and civilians should visibly be present. Prehistoric-looking animals remain proposed fantasy scenery. Show the danger to the people, the wielder's deliberate decision to protect them, the fatal cost and the people surviving so the sacrifice reads through action. A multi-element shield is a staging proposal, not a finalized power mechanism.
 
 This records the current cinematic direction, not an implementation change. The montage must leave room for the rescue/exposure/infiltration causal chain without revealing Mizuki's betrayal prematurely. Keep her betrayal and masked-helper identity for their established later simultaneous reveal. A precise page/panel script, playable versus cinematic treatment and placement relative to existing exploration/flashback structure remain production decisions.
 
