@@ -48,6 +48,8 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 
 ### Mizuki (Water)
 
+- **CONFIRMED SCHOOL COLOR CORRECTION (2026-11-08):** Kaze and Mizuki wear the same purple-blazer, green-bow, white-shirt and black/charcoal school-uniform palette. This supersedes the earlier teal-uniform color direction for Mizuki while preserving both characters’ identities and personal accessories. See [school visual continuity](KAZE_STORY_BIBLE.md#school-life-and-visual-continuity--creator-update-2026-11-08). First-meeting circumstances and any shared club membership remain open.
+
 - **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The exact lies and her knowledge of who killed her parents remain open.
 - **CONFIRMED:** Darkness raised Mizuki through long-term psychological manipulation and false beliefs after murdering her parents, then used her as an infiltrator of Kaze's clan. She bonds genuinely with Kaze, betrays the refuge location while believing Kaze would be captured rather than the clan massacred, then flees Darkness and aids Kaze in disguise.
 - **CONFIRMED:** The masked helper's identity and Mizuki's betrayal are revealed together later. The confrontation is interrupted and leads to an uneasy alliance without automatic forgiveness.
@@ -128,5 +130,7 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 - Expanded creator fight direction on 8 November 2026: hand-to-hand and elemental combat, an aerial view above the people, opposed sealing/absorption objectives, a deliberate forced choice, an unintended lethal outcome for Darkness, and a vow to await reincarnation before the modern-day transition.
 
 - Creator instruction on 8 November 2026: commit Mizuki's proposed likes/dislikes and rematch habit to her bible profile, and add likes/dislikes coverage for all character profiles. Additional preference lists for the rest of the cast are labeled proposals; clear Kaze sheet details retain reference-supported status.
+
+- Creator clarification on 8 November 2026: both girls should have the same school-uniform colors. The shared purple-and-green correction replaces the older character-specific school palettes; the creator invited follow-up questions about unresolved story beats.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.
