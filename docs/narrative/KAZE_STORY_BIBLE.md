@@ -5,6 +5,13 @@ Original source baseline: 34be30436996284ec2f783269c40269d321ed427.
 
 Current authority: this file incorporates the creator's ancient-history, propaganda, elemental-population and ArcuTech clarifications from the intro-cutscene conversation through 2026-11-08. [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md) retains the detailed character arcs and has been reconciled with this update. School and Mizuki visual approvals dated 2026-11-05 remain intact. Historical interview/audit documents preserve earlier wording; they do not override these later decisions.
 
+## Character-profile standard — creator update, 2026-11-08
+Every recurring character profile should include likes, dislikes and a small everyday habit, with their evidence/status shown. These details support dialogue, acting and character sheets; they do not establish powers, quests or gameplay weaknesses.
+
+Mizuki's preferences below are **CREATOR-CONFIRMED** by the instruction to commit the proposed list. Kaze's clearly legible sheet details are **REFERENCE-SUPPORTED**. New preferences for the other profiles are **PROPOSED CHARACTERIZATION**, prepared under the creator's request to give all characters matching sections; they are not retroactively treated as approved canon. Unreadable image annotations and the superseded age 17 on Kaze's sheet are not imported. Kaze remains 16.
+
+The current coverage is Kaze, Mizuki, Kenji, Aria, Darkness and the former all-element wielder. Unnamed parents, background villagers and the provisional training instructor do not yet have individual preference profiles; add these fields when those roles receive distinct character definitions. Unreconciled legacy figures and runtime encounter names are not automatically new canon cast members.
+
 ## Approved premise
 Kaze grows up in a concealed clan refuge while attending school outside it. Ordinary villagers carry weaker remnants of wind power; they are not additional full elementals. Exactly four full elementals exist in the present-day world. Kaze carries a rare all-element potential, distinct from the villagers' remnants. The earlier approximately 500-year incarnation tradition remains recorded, but its intervening history across the 5,000-year span is unresolved. A clan trial reveals Kaze's rare nature, placing expectations on her that she initially resists.
 She wants to be a hero. Against the clan's prohibition, she wears a costume and uses her abilities outside the village to help people. These acts expose the community's general vicinity to Darkness.
@@ -14,6 +21,16 @@ Confirmed: 16-year-old girl with dark brown skin; lively, compassionate and impu
 School is backdrop. Ninja presentation expresses her interests and heroic identity; do not assume the entire clan is a conventional ninja clan.
 Her 22-year-old older brother Kenji is the Fire elemental. Her parents die arranging her escape during Darkness's attack. Her initial post-attack goal is finding and rescuing survivors.
 Open: power mastery, speech policy, exact escape protection and emotional resolution. Detailed relationships remain governed by ST-01.
+
+### Kaze — likes, dislikes and everyday habit
+**REFERENCE-SUPPORTED:** The creator-supplied character sheet clearly identifies arcade games as a like, purple as her favorite color, and early mornings as a dislike.
+
+**PROPOSED CHARACTERIZATION — additions:**
+- **Likes:** Arcade games (reference-supported); browsing street-food stalls; customizing her heroic outfits; spontaneous walks with friends; practicing a difficult movement until she gets it right.
+- **Dislikes:** Early mornings (reference-supported); long lectures with no chance to participate; seeing people bullied; having every choice made for her; broken or unresponsive game controls.
+- **Everyday habit:** Says "one more round" and loses track of time. Her enthusiasm gives Mizuki an opening for dry teasing; neither girl needs to win every game.
+
+The proposed additions expand daily life without changing her confirmed compassion, impulsiveness, heroic aspiration or resistance to imposed destiny.
 
 ## Ancient history and the 5,000-year interval
 **CONFIRMED:** The ancient battle predates modern technology. The creator's "ancient Egypt-type" comparison establishes an antiquity-like visual era, not literal Earth history or an approved Egyptian religion, location or royal dynasty.
@@ -26,6 +43,14 @@ Furious over the lost power, Darkness resolves to bide his time until the all-el
 
 Across that interval he uses his powers to accumulate extraordinary wealth and influence. Modern ArcuTech is the culmination of that rise, not an ancient technological corporation. The former wielder's sealing objective is confirmed; the exact sealing procedure, any other participants, Darkness's longevity mechanism and the dates of intermediate incarnations remain open. Darkness's vow to await reincarnation does not by itself establish a single uninterrupted 5,000-year reincarnation interval or erase the earlier approximately 500-year tradition. Do not invent an intervening cast.
 
+### Former all-element wielder — likes, dislikes and everyday habit
+**PROPOSED CHARACTERIZATION:** His name and detailed personal history remain open. These everyday traits are an ancient-era proposal, separate from his confirmed sealing objective and protective sacrifice.
+- **Likes:** Shared community meals; friendly sparring; travelers' stories; repairing familiar equipment; listening to music after training.
+- **Dislikes:** Wasted food; intimidation of weaker people; elaborate praise directed at him; broken promises; treating lives as expendable.
+- **Everyday habit:** Repairs his worn mantle instead of replacing it, taking quiet satisfaction in practical work.
+
+Do not infer a new family, rank, religion or modern-era preference from this list. This historical character does not increase the confirmed present-day total of four full elementals.
+
 ## Darkness / ArcuTech
 **CONFIRMED:** Darkness is the secret identity of ArcuTech's leader. ArcuTech has enormous worldwide reach and power; this does not yet establish literal ownership of every government or territory. Retain the established spelling **ArcuTech**.
 
@@ -34,6 +59,14 @@ He hunts elusive full elementals and absorbs elemental life essence to gain powe
 At the initial modern-day setup, Mizuki, the Water elemental, is the only full elemental he has secured on his side. He manipulates and uses her and intends eventually to consume her. Aria's established later captivity remains canon, but its timing must be reconciled with this initial state; she must not silently appear as a second captive already held in the same setup.
 
 He also seeks to eliminate Kaze's bloodline to prevent a future opponent. Kaze's eventual objective is sealing him; the proposed 10,000-year seal duration and its conditions are not finalized.
+
+### Darkness — likes, dislikes and everyday habit
+**PROPOSED CHARACTERIZATION:** These private tastes complement the established ancient antagonist and corporate persona; they do not excuse his manipulation or establish a redemption arc.
+- **Likes:** Rare antiquities; formal strategy games; listening to chamber music in private; precisely arranged rooms; carefully composed public appearances.
+- **Dislikes:** Interruptions; public embarrassment; poorly prepared reports; unpredictable acts of self-sacrifice; careless handling of valuable objects.
+- **Everyday habit:** When irritated, quietly realigns an object on his desk before continuing the conversation.
+
+His specific anger at losing the ancient wielder's power is confirmed. Turning that event into a general dislike of unpredictable sacrifice is a characterization proposal, not a new supernatural weakness.
 
 ## Propaganda and who knows what
 **CONFIRMED:** Darkness uses propaganda to depict elementals as cruel and dangerous. This false account helps drive the surviving clan into hiding. It must not be presented by an objective narrator as the elementals' actual moral nature. Fear and old stories can coexist with modern sightings being dismissed as urban legends.
@@ -53,6 +86,37 @@ Mizuki is the Water elemental. Her parents left clan life; Darkness found and ki
 Darkness dispatches her to the vicinity exposed by Kaze's rescues. Clan members leave the refuge, creating opportunities for contact. Her elemental presence alone does not expose allegiance.
 Her friendship with Kaze becomes genuine. Seeing Kaze help people undermines her hostile assumptions. Both girls live under choices others have made for them.
 Water affinity and the later betrayal / masked-helper arc are confirmed in [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md), which supersedes the original open questions about her affinity, betrayal, expectations and later allegiance. Her knowledge of her parents' fate and Darkness's exact lies remain open; accountability is not automatic forgiveness.
+
+### Mizuki — likes, dislikes and everyday habit
+**CREATOR-CONFIRMED (2026-11-08):** The creator approved the proposed preferences and rematch habit for her bible profile.
+- **Likes:** Puzzle and strategy games, at which she becomes surprisingly competitive; quiet cafés and lightly sweetened iced tea; sketching buildings and scenery in notebook margins; rainy afternoons and listening to music; sharing lunch and dry humor with Kaze as their friendship develops.
+- **Dislikes:** Unfair rules, especially losing because someone changes the rules mid-game; overly sweet drinks; people looking through her notebook or asking prying questions; crowded, noisy spaces; being put on the spot or attracting unwanted attention.
+- **Everyday habit:** Claims she does not care about winning, then immediately asks for a rematch. Kaze can tease her about this.
+- **Character-sheet shorthand:** Likes — puzzle games, sketching, iced tea, rainy afternoons, lunch with Kaze. Dislikes — prying questions, noisy crowds, overly sweet drinks, unfair rules, unwanted attention.
+
+These are personal preferences, not diagnostic symptoms, proof of allegiance or gameplay weaknesses. Her guardedness can soften as the friendship becomes genuine; the preferences do not reveal her betrayal to Kaze or the player.
+
+## Kenji Harima — character profile
+**CONFIRMED:** Kaze's 22-year-old older brother and the Fire elemental; close, protective and playful with her, focused in battle. His investigation, absence during the attack and relationship with Aria remain governed by ST-01.
+
+### Kenji — likes, dislikes and everyday habit
+**PROPOSED CHARACTERIZATION:**
+- **Likes:** Friendly sparring; cooking hearty meals for a group; playful banter with Kaze; casual ball games; quiet walks and conversation with Aria after an assignment.
+- **Dislikes:** Wasted food; unsporting behavior and belittling beginners; neglected equipment; stiff social formalities; friends hiding injuries instead of accepting help.
+- **Everyday habit:** Pretends that remembering everyone's favorite portion is no big deal, then serves it without being asked.
+
+His conversations with Aria fit their close friendship and developing feelings; this does not turn them into an already-established couple.
+
+## Aria Zephyros — character profile
+**CONFIRMED:** The Air elemental and Kenji's missing investigation partner; his close friend with developing romantic feelings. Her captivity, technological conditioning, rescue and recovery remain governed by ST-01.
+
+### Aria — likes, dislikes and everyday habit
+**PROPOSED CHARACTERIZATION:**
+- **Likes:** Taking apart and repairing household gadgets; annotated maps and logic puzzles; borrowing books on unfamiliar subjects; stargazing; discussing unusual questions with Kenji.
+- **Dislikes:** Confident explanations with no supporting reasoning; interruptions while concentrating; damaged borrowed books; sticky or cluttered work surfaces; people making personal decisions for her.
+- **Everyday habit:** Says a mechanism will take "one minute" to examine, then becomes absorbed in it and forgets her tea.
+
+These are proposed baseline preferences, not personality changes caused by captivity or guaranteed details of her recovery. They do not add research duties, abilities or gameplay mechanics.
 
 ## School life and visual continuity — creator update, 2026-11-05
 - **CONFIRMED:** Kaze and Mizuki attend the same school.

@@ -12,6 +12,9 @@
 - **PROPOSED:** Writer/developer interpretation requiring signoff.
 - **OPEN:** An unresolved narrative or implementation decision.
 
+## Character preference status — 2026-11-08
+The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-profile-standard--creator-update-2026-11-08) requires likes, dislikes and an everyday habit for recurring characters. Mizuki's list is creator-confirmed. Kaze's clearly readable reference-sheet preferences are reference-supported. Other new lists and habits are proposed characterization; their inclusion in the bible does not silently promote them to confirmed story facts.
+
 ## 2. Confirmed narrative canon
 
 ### Kaze and the prologue
@@ -21,6 +24,8 @@
 - The established attack events remain: Darkness overwhelms Kaze; her parents intervene, arrange her escape and die protecting her; she loses consciousness and awakens afterward. The earlier playable-prologue framing is now being adapted into the creator's illustrated opening direction: ancient battle, a 5,000-year jump, school/clan life, attack, collapse/fall and underground recovery toward light. Cinematic versus playable presentation and alignment with existing exploration/flashback placement remain to be resolved separately. Exact protective escape and landing mechanics remain **OPEN**; this document does not change runtime sequence.
 - Kaze's initial goal is to locate and rescue clan survivors, not pursue revenge. A survivor network eventually establishes a new concealed forest sanctuary while aspiring to reclaim the original refuge.
 
+- **PROFILE REFERENCE:** Kaze's reference-supported arcade-game interest, favorite purple and dislike of early mornings, plus proposed additions, are recorded in [her everyday profile](KAZE_STORY_BIBLE.md#kaze--likes-dislikes-and-everyday-habit). Her age remains 16 despite the older sheet's age label.
+
 ### Kenji Harima (Fire)
 
 - **CONFIRMED:** Kenji is Kaze's 22-year-old older brother, the Fire elemental adapted from the source manuscript.
@@ -28,6 +33,8 @@
 - **CONFIRMED:** He was absent from the village during the attack while carrying out clan investigative work into disappearing elementals. He is searching for his missing mission partner Aria.
 - **CONFIRMED:** He survives, operates beyond the village, and eventually reunites with Kaze and joins forces with her.
 - **CONTINUITY OVERRIDE:** The source manuscript's account of Kenji causing the childhood fire that killed his parents **does not carry over**. In Kaze, both siblings' parents die during Darkness's attack while saving Kaze. His other source traits can be adapted subject to consistency.
+
+- **PROPOSED EVERYDAY PROFILE:** Likes, dislikes and a food-sharing habit are in [Kenji's profile](KAZE_STORY_BIBLE.md#kenji--likes-dislikes-and-everyday-habit); these do not change his confirmed family or investigation arc.
 
 ### Aria Zephyros (Air)
 
@@ -37,12 +44,16 @@
 - **CONFIRMED:** Aria confronts Kaze as an antagonistic boss under external conditioning and is subsequently freed and recruited as an ally. The exact deconditioning sequence, recovery timescale and subsequent hub/field role remain **OPEN**.
 - **SOURCE ADAPTATION:** Her intelligence, scientific curiosity, emotional insight, air-pressure manipulation, wind barriers, limited flight and weather influence are present in the manuscript. Gameplay implementation of any specific ability remains **PROPOSED**.
 
+- **PROPOSED EVERYDAY PROFILE:** Likes, dislikes and a habit of getting absorbed in a mechanism are in [Aria's profile](KAZE_STORY_BIBLE.md#aria--likes-dislikes-and-everyday-habit); they remain distinct from technological conditioning and recovery.
+
 ### Mizuki (Water)
 
 - **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The exact lies and her knowledge of who killed her parents remain open.
 - **CONFIRMED:** Darkness raised Mizuki through long-term psychological manipulation and false beliefs after murdering her parents, then used her as an infiltrator of Kaze's clan. She bonds genuinely with Kaze, betrays the refuge location while believing Kaze would be captured rather than the clan massacred, then flees Darkness and aids Kaze in disguise.
 - **CONFIRMED:** The masked helper's identity and Mizuki's betrayal are revealed together later. The confrontation is interrupted and leads to an uneasy alliance without automatic forgiveness.
 - **DISTINCTION:** Mizuki's choices, accountability and relational recovery must never be conflated with Aria's technologically imposed behavioral control.
+
+- **CONFIRMED EVERYDAY PROFILE (2026-11-08):** Mizuki likes puzzle/strategy games, quiet cafés and lightly sweetened iced tea, sketching buildings/scenery, rainy afternoons and music, and sharing lunch/dry humor with Kaze. She dislikes unfair or changing rules, overly sweet drinks, intrusion into her notebook/prying questions, noisy crowds and unwanted public attention. She says winning does not matter, then asks for a rematch. See [her full profile](KAZE_STORY_BIBLE.md#mizuki--likes-dislikes-and-everyday-habit).
 
 ### Darkness / ArcuTech
 
@@ -55,6 +66,8 @@
 - **CONFIRMED:** His propaganda portrays elementals as cruel and dangerous and contributes to their concealment. The public knows ArcuTech without knowing its hidden truth; clan members have suspicions and rumors about wrongdoing. They believe their refuge is the last surviving community of its kind, within the limits of their knowledge.
 - **CONFIRMED:** ArcuTech abducts elemental practitioners. Darkness's use of modern neurotechnology against Aria is a step beyond the prolonged grooming used against Mizuki.
 - **PROPOSED:** ArcuTech publicly promotes neurorehabilitation or assistive research as cover for coercive neural manipulation; this corporate cover story needs creator approval.
+
+- **PROPOSED EVERYDAY PROFILES:** [Darkness's private tastes](KAZE_STORY_BIBLE.md#darkness--likes-dislikes-and-everyday-habit) and the [former wielder's ancient-era preferences](KAZE_STORY_BIBLE.md#former-all-element-wielder--likes-dislikes-and-everyday-habit) are characterization proposals. They do not change either character's confirmed actions or the four-person present-day elemental roster.
 
 ## 3. Project MNEMOSYNE: concept approval boundary
 
@@ -113,5 +126,7 @@
 - Further creator dialogue clarification on 8 November 2026: Darkness must express his need to absorb the ancient wielder, react angrily to killing him before absorption, and then depart. This supplements the confirmed protective sacrifice.
 
 - Expanded creator fight direction on 8 November 2026: hand-to-hand and elemental combat, an aerial view above the people, opposed sealing/absorption objectives, a deliberate forced choice, an unintended lethal outcome for Darkness, and a vow to await reincarnation before the modern-day transition.
+
+- Creator instruction on 8 November 2026: commit Mizuki's proposed likes/dislikes and rematch habit to her bible profile, and add likes/dislikes coverage for all character profiles. Additional preference lists for the rest of the cast are labeled proposals; clear Kaze sheet details retain reference-supported status.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.
