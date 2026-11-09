@@ -48,7 +48,7 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 
 ### Mizuki (Water)
 
-- **CONFIRMED SCHOOL COLOR CORRECTION (2026-11-08):** Kaze and Mizuki wear the same purple-blazer, green-bow, white-shirt and black/charcoal school-uniform palette. This supersedes the earlier teal-uniform color direction for Mizuki while preserving both characters’ identities and personal accessories. See [school visual continuity](KAZE_STORY_BIBLE.md#school-life-and-visual-continuity--creator-update-2026-11-08). First-meeting circumstances and any shared club membership remain open.
+- **CONFIRMED SCHOOL COLOR DIRECTION (latest clarification, 2026-11-08):** Kaze and Mizuki should NOT have the same uniform colors. Keep Kaze purple-and-green and Mizuki teal-and-seafoam, with a similar school-uniform style and their established personal identities/accessories. This supersedes the intervening matching-color misunderstanding and restores Mizuki's approved teal school palette. See [school visual continuity](KAZE_STORY_BIBLE.md#school-life-and-visual-continuity--creator-update-2026-11-08). Any in-world color policy, first-meeting circumstances and shared club membership remain open.
 
 - **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The exact lies and her knowledge of who killed her parents remain open.
 - **CONFIRMED:** Darkness raised Mizuki through long-term psychological manipulation and false beliefs after murdering her parents, then used her as an infiltrator of Kaze's clan. She bonds genuinely with Kaze, betrays the refuge location while believing Kaze would be captured rather than the clan massacred, then flees Darkness and aids Kaze in disguise.
@@ -131,6 +131,6 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 
 - Creator instruction on 8 November 2026: commit Mizuki's proposed likes/dislikes and rematch habit to her bible profile, and add likes/dislikes coverage for all character profiles. Additional preference lists for the rest of the cast are labeled proposals; clear Kaze sheet details retain reference-supported status.
 
-- Creator clarification on 8 November 2026: both girls should have the same school-uniform colors. The shared purple-and-green correction replaces the older character-specific school palettes; the creator invited follow-up questions about unresolved story beats.
+- Latest creator clarification on 8 November 2026: "i meant should not btw" corrects the preceding same-color wording. The girls retain different school-uniform palettes: Kaze purple-and-green; Mizuki teal-and-seafoam. The intervening matching-color revision is superseded. The invitation to interview the creator about unresolved story beats remains applicable.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.
