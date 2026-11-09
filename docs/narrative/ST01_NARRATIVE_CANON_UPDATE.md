@@ -50,8 +50,9 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 
 - **CONFIRMED SCHOOL COLOR DIRECTION (latest clarification, 2026-11-08):** Kaze and Mizuki should NOT have the same uniform colors. Keep Kaze purple-and-green and Mizuki teal-and-seafoam, with a similar school-uniform style and their established personal identities/accessories. This supersedes the intervening matching-color misunderstanding and restores Mizuki's approved teal school palette. See [school visual continuity](KAZE_STORY_BIBLE.md#school-life-and-visual-continuity--creator-update-2026-11-08). Any in-world color policy, first-meeting circumstances and shared club membership remain open.
 
-- **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The exact lies and her knowledge of who killed her parents remain open.
+- **CONFIRMED (2026-11-08):** At the initial modern setup, Mizuki is the only full elemental Darkness has secured on his side. He used propaganda, lies and personal manipulation to win her allegiance and secretly intends eventually to consume her. The core lies are now established: he blames the clan for her family's deaths, attributes the murder to an individual whose identity is still open, and emphasizes the danger of elemental powers without proper training. She believes him and does not know he killed her parents.
 - **CONFIRMED:** Darkness raised Mizuki through long-term psychological manipulation and false beliefs after murdering her parents, then used her as an infiltrator of Kaze's clan. She bonds genuinely with Kaze, betrays the refuge location while believing Kaze would be captured rather than the clan massacred, then flees Darkness and aids Kaze in disguise.
+- **CONFIRMED INFILTRATION MOTIVE (creator interview, 2026-11-08):** Her grievance against the clan and belief in the danger of untrained elemental power make Darkness's spy assignment seem justified to her. She accepts the worldview he has taught her; she is not knowingly helping the true murderer of her parents. See [Mizuki's conditioned beliefs](KAZE_STORY_BIBLE.md#mizuki--conditioned-beliefs-and-spy-assignment). The specific accused person's identity, her knowledge of Darkness's true identity, the first source of doubt and the promised treatment of Kaze after capture remain open.
 - **CONFIRMED:** The masked helper's identity and Mizuki's betrayal are revealed together later. The confrontation is interrupted and leads to an uneasy alliance without automatic forgiveness.
 - **DISTINCTION:** Mizuki's choices, accountability and relational recovery must never be conflated with Aria's technologically imposed behavioral control.
 
@@ -112,6 +113,7 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 8. Aria's capture date relative to Darkness's initial possession/allegiance of Mizuki alone; preserve the later Aria captivity arc.
 9. The full-element restoration objective, remnant absorption limits, and how the 500-year incarnation tradition fits the 5,000-year history.
 10. How Kenji's Fire affinity and Kaze's all-element potential relate to their wind-remnant clan; do not change their confirmed affinities to resolve this.
+11. Whom Darkness falsely identifies as the murderer of Mizuki's family, what she believes his true identity is, what first challenges his account, and what treatment she expects for Kaze after capture.
 
 ## 7. Source traceability
 
@@ -132,5 +134,7 @@ The [story bible's character-profile standard](KAZE_STORY_BIBLE.md#character-pro
 - Creator instruction on 8 November 2026: commit Mizuki's proposed likes/dislikes and rematch habit to her bible profile, and add likes/dislikes coverage for all character profiles. Additional preference lists for the rest of the cast are labeled proposals; clear Kaze sheet details retain reference-supported status.
 
 - Latest creator clarification on 8 November 2026: "i meant should not btw" corrects the preceding same-color wording. The girls retain different school-uniform palettes: Kaze purple-and-green; Mizuki teal-and-seafoam. The intervening matching-color revision is superseded. The invitation to interview the creator about unresolved story beats remains applicable.
+
+- Creator interview on 8 November 2026: Mizuki blames the clan for her family's deaths because Darkness falsely attributes their murder to an individual; he also emphasizes the danger of elemental powers without proper training. She believes this account and accepts the spy assignment. The accused individual's identity has not yet been supplied.
 
 **Publication scope:** Story documentation on the narrative development branch. This update does not approve a merge, implement a cutscene, or change gameplay/progression.

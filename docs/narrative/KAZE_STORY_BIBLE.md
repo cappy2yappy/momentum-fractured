@@ -3,7 +3,7 @@ Status: creator-confirmed canon with explicitly separated proposals and open dec
 Foundation date: 2026-10-12. Latest creator clarification: 2026-11-08.
 Original source baseline: 34be30436996284ec2f783269c40269d321ed427.
 
-Current authority: this file incorporates the creator's ancient-history, propaganda, elemental-population and ArcuTech clarifications from the intro-cutscene conversation through 2026-11-08. [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md) retains the detailed character arcs and has been reconciled with this update. School and Mizuki visual approvals dated 2026-11-05 remain applicable; the creator's latest 2026-11-08 clarification restores their distinct uniform palettes and supersedes the intervening matching-color misunderstanding. Historical interview/audit documents preserve earlier wording; they do not override these later decisions.
+Current authority: this file incorporates the creator's ancient-history, propaganda, elemental-population, ArcuTech and Mizuki-motivation clarifications from the intro-cutscene conversation through 2026-11-08. [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md) retains the detailed character arcs and has been reconciled with this update. School and Mizuki visual approvals dated 2026-11-05 remain applicable; the creator's latest 2026-11-08 clarification restores their distinct uniform palettes and supersedes the intervening matching-color misunderstanding. Historical interview/audit documents preserve earlier wording; they do not override these later decisions.
 
 ## Character-profile standard — creator update, 2026-11-08
 Every recurring character profile should include likes, dislikes and a small everyday habit, with their evidence/status shown. These details support dialogue, acting and character sheets; they do not establish powers, quests or gameplay weaknesses.
@@ -76,16 +76,23 @@ His specific anger at losing the ancient wielder's power is confirmed. Turning t
 | General public | Knows ArcuTech as a powerful corporation; does not know its leader is Darkness or know the full truth of its hidden crimes. |
 | Kaze's clan | Has suspicions and rumors about ArcuTech's wrongdoing. Suspicion is not proof of its leader's identity. |
 | Refuge community | Believes itself to be the last surviving community of its kind, as far as its members know. This is limited knowledge, not proof that nobody survives elsewhere. |
-| Mizuki | Has been brought onto Darkness's side through propaganda, lies and long-term personal manipulation. Her exact knowledge of his identity and her parents' murder remains open. |
+| Mizuki | Believes Darkness's false claim that the clan is responsible for her family's deaths and that an individual he blames murdered them. Accepts his warning that elemental powers are dangerous without proper training, and believes her spy assignment is justified. Does not know Darkness killed her parents. The falsely accused person's identity and her knowledge of Darkness's true identity remain open. |
 | Author-facing truth | Darkness survived the ancient battle, controls ArcuTech, killed Mizuki's parents, deceives her and plans eventually to consume her. |
 
-Public reputation, clan suspicions, Mizuki's beliefs and the truth revealed to the player are separate. The opening must not automatically expose every author-facing secret. The exact propaganda channels and claims, Darkness's public name, corporate holdings and relationship to The Architect remain open.
+Public reputation, clan suspicions, Mizuki's beliefs and the truth revealed to the player are separate. The opening must not automatically expose every author-facing secret. Mizuki's core conditioning claims are established below; their remaining details and the wider public propaganda channels, Darkness's public name, corporate holdings and relationship to The Architect remain open.
 
 ## Mizuki
 Mizuki is the Water elemental. Her parents left clan life; Darkness found and killed them and took her. Their precise power level is not established by the word "elemental." He raised her through lies, propaganda and psychological manipulation, secured her allegiance and uses her as an infiltrator while secretly intending to consume her eventually.
 Darkness dispatches her to the vicinity exposed by Kaze's rescues. Clan members leave the refuge, creating opportunities for contact. Her elemental presence alone does not expose allegiance.
 Her friendship with Kaze becomes genuine. Seeing Kaze help people undermines her hostile assumptions. Both girls live under choices others have made for them.
-Water affinity and the later betrayal / masked-helper arc are confirmed in [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md), which supersedes the original open questions about her affinity, betrayal, expectations and later allegiance. Her knowledge of her parents' fate and Darkness's exact lies remain open; accountability is not automatic forgiveness.
+Water affinity and the later betrayal / masked-helper arc are confirmed in [ST01_NARRATIVE_CANON_UPDATE.md](ST01_NARRATIVE_CANON_UPDATE.md), which supersedes the original open questions about her affinity, betrayal, expectations and later allegiance. Her accepted false account of her family's deaths and the danger of untrained elemental power are established below. The identity of the individual Darkness falsely blames, the claimed circumstances of the murder and Mizuki's knowledge of Darkness's true identity remain open; accountability is not automatic forgiveness.
+
+### Mizuki — conditioned beliefs and spy assignment
+**CREATOR-CONFIRMED (interview, 2026-11-08):** Darkness makes Mizuki blame the clan for her family's deaths. He tells her that a particular individual murdered her family; the creator has not yet identified that accused person. This is a false account: Darkness himself killed her parents.
+
+He also teaches her that powers like hers can be very dangerous without proper training. That belief, combined with the grievance he has created against the clan, supplies her motivation to accept the infiltration assignment. She genuinely believes his account because it is the worldview he has raised her within. Do not depict her as knowingly collaborating with her parents' murderer at the start of the story.
+
+Her later genuine friendship with Kaze and belief that the operation will capture Kaze rather than massacre the clan remain intact. The exact promised treatment of Kaze after capture, the falsely accused person's identity and the moment Mizuki first doubts the story remain open. This creator-facing explanation does not authorize revealing her spy role before the established later betrayal/masked-helper reveal.
 
 ### Mizuki — likes, dislikes and everyday habit
 **CREATOR-CONFIRMED (2026-11-08):** The creator approved the proposed preferences and rematch habit for her bible profile.
